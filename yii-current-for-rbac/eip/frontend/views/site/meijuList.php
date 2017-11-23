@@ -186,14 +186,12 @@ $this->params['breadcrumbs'][] = $this->title;
                             <span class="rightBtn">◂</span>
                             <div class="seasondiv">
                                 <div class="seasonitem">
-                                    <h3 class="curseason" id="5">
-                                        第5季▼
+                                    <?php foreach($season as $k=>$val){?>
+                                    <h3 class="<?=$k==0 ? 'curseason' :'' ?>" data-season="<?=$val?>">
+                                        <?=$val!=0 ? "第".$val."季":"合集";   ?>▼
                                     </h3>
                                     <div class="fenge"></div>
-                                    <h3 onclick="Ajxseason(this)" id="4">
-                                        第4季
-                                    </h3>
-                                    <div class="fenge"></div>
+                                    <?php }?>
                                 </div>
                             </div>
                         </td>
@@ -220,7 +218,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <td ectype="linklist" align="left" style="padding:0px;">
                             <?php $urls=json_decode($val['urls'],true)?>
                             <?php foreach ($urls as $k=>$v){?>
-                                <a style="" href="<?=$v?>" rel="nofollow" target="_blank" title="百度云盘下载">
+                                <a style="" href="<?=$v?>" data-mid="<?=$info['mid']?>" data-did="<?=$val['did']?>" class="download_meiju" rel="nofollow" target="_blank" title="百度云盘下载">
                                     <img ectype="downnode" src="/images/<?=$k?>.png" width="20px">
                                 </a>
                             <?php }?>
@@ -241,3 +239,5 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
 </div>
+
+

@@ -86,3 +86,16 @@ AppAsset::register($this);
 </body>
 </html>
 <?php $this->endPage() ?>
+
+<script>
+    $(".download_meiju").click(function(){
+        var mid=$(this).data("mid");
+        var did=$(this).data("did");
+        $.post("/index.php?r=site%2Fmeiju-click",
+            { mid:mid,did:did },
+            function(data, textStatus){
+                console.log(data);
+            }, "json"
+        );
+    })
+</script>

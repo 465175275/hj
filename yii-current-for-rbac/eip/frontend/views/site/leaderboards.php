@@ -92,7 +92,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="ranktop3" style="border-left:15px;border-right:15px;">
         <img src="<?=$val['img']?>">
         <div class="mjtit">
-            <a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=<?=$val['mid']?>"><?=$val['img']?>&nbsp;<?=$val['img']?></a>
+            <a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=<?=$val['mid']?>"><?=$val['title_cn']?>&nbsp;<?=$val['title_en']?></a>
         </div>
         <div class="ranknum"><?=$key+1?></div>
         <div class="mjinfo"><?=$val['type']?> / <?=$val['update_status']?> / 更新日：<?=$val['update_day']?></div>

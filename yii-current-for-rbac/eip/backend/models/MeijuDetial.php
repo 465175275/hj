@@ -57,7 +57,8 @@ class MeijuDetial extends \yii\db\ActiveRecord
             'season' => '季',
             'urls' => '下载链接json',
             'click_num' => '点击量',
-
+            "standard"=>"制式",
+            "subtitle"=>"字幕下载",
             'password' => '百度提取码',
             'size' => '大小',
             'create_time' => '发布时间',

@@ -32,9 +32,8 @@ class CollectionController extends CommonController
         $searchModel = new UserSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        // $this-> read_caij_list();
-        // $this-> file_get_caiji_last();
-        $this->read_caij_list();
+         //$this-> read_caij_list();
+        $this-> file_get_caiji_last();
         //$this->save();
         /*
             $this->read_caij_detail();
@@ -70,6 +69,9 @@ class CollectionController extends CommonController
         $meijuModel->update_time = $data['data']["update_time"];
         $meijuModel->back_status = $data['data']["back_status"];
         $meijuModel->back_time = $data['data']["back_time"];
+        $meijuModel->img = $data['data']["img"];
+        $meijuModel->subscription_num=$data['data']['subscription_num'];
+        $meijuModel->type = $data['data']["type"];
         $meijuModel->Introduction = $data['data']["Introduction"];
         $meijuModel->click_num = 0;
         $meijuModel->url = $url;
@@ -285,62 +287,67 @@ class CollectionController extends CommonController
         $pattern = "/<div class=\"hd\">(.*)<\/div>/iUs";
         preg_match_all($pattern, $html, $name);
 
-        $name = explode("-", $name[1][0]);
-        $data['title_cn'] = trim(strstr($name[0], ' '));//中文
-        $data['title_en'] = strstr($name[0], ' ', true);//英文
+        $name =$name && isset($name[1][0]) ? explode("-", $name[1][0]) :'';
+        $data['title_en'] = isset($name[0]) ? trim(strstr($name[0], ' ')) :'';//中文
+        $data['title_cn'] =  isset($name[0]) ? strstr($name[0], ' ', true):'';//英文
 
         //<script src="/index.php/user/rss_status/mid/579.html" type="text/javascript" language="javascript"></script>
         $pattern = "/<script src=\"\/index.php\/user\/rss_status\/mid\/(.*).html\" type=\"text\/javascript\" language=\"javascript\"><\/script>/iUs";
         preg_match_all($pattern, $html, $mid);
-        $data['mid'] = $mid[1][0];//天天ID
+        $data['mid'] = $mid && isset($mid[1][0])? $mid[1][0] :'';//天天ID
 
         //class="curseason" id="4">第几季
         $pattern = "/class=\"curseason\" id=\"(.*)\">/iUs";
         preg_match_all($pattern, $html, $season);
-        $data['season'] = $season[1][0];
+        $data['season'] = $season && isset($season[1][0]) ? $season[1][0]:'';
 
         //img.src = "	http://i1.piimg.com/588755/a97fc6a5220068f8.jpg";
         $pattern = "/img.src = \"(.*)\";/iUs";
         preg_match_all($pattern, $html, $img);
-        $data['img'] = $img[1][0];
+        $data['img'] =$img &&  isset($img[1][0]) ? $img[1][0]:"";
         //<span class="greybg">更新日：每周三</span>
         $pattern = "/<span class=\"greybg\">更新日：(.*)<\/span>/iUs";
         preg_match_all($pattern, $html, $update_day);
-        $data['update_day'] = $update_day[1][0];
+        $data['update_day'] = $update_day && isset($update_day[1][0]) ? $update_day[1][0]: "";
 
         //<span>状态：本季终</span>
         $pattern = "/<span>状态：(.*)<\/span>/iUs";
         preg_match_all($pattern, $html, $update_status);
-        $data['update_status'] = $update_status[1][0];
+        $data['update_status'] = $update_status && isset($update_status[1][0]) ? $update_status[1][0] :'';
 
         //<span class="greybg">分类：科幻类</span>
         $pattern = "/<span class=\"greybg\">分类：(.*)<\/span>/iUs";
         preg_match_all($pattern, $html, $type);
-        $data['type'] = $type[1][0];
+        $data['type'] = $type && isset($type[1][0]) ? $type[1][0] :'';
 
         //<span>最后更新：2017-05-20 00:36</span>
         $pattern = "/<span>最后更新：(.*)<\/span>/iUs";
         preg_match_all($pattern, $html, $update_time);
-        $data['update_time'] = strtotime($update_time[1][0]);
+        $data['update_time'] = $update_time && isset($update_time[1][0]) ? strtotime($update_time[1][0]) :'';
 
         //<span class="greybg">回归：暂无</span>
         $pattern = "/<span class=\"greybg\">回归：(.*)<\/span>/iUs";
         preg_match_all($pattern, $html, $back_status);
-        $data['back_status'] = trim($back_status[1][0]);
+        $data['back_status'] =$back_status && isset($back_status[1][0])  ? trim($back_status[1][0]) :'';
 
         //<span>倒计时：暂无</span>
         $pattern = "/<span>倒计时：(.*)<\/span>/iUs";
         preg_match_all($pattern, $html, $back_time);
-        $data['back_time'] = trim($back_time[1][0]);
+        $data['back_time'] =$back_time && isset($back_time[1][0]) ? trim($back_time[1][0]) :'';
 
         $pattern = "/<div class=\"newstxt\">(.*)<\/div>/iUs";
         preg_match_all($pattern, $html, $Introduction);
-        $data['Introduction'] = trim($Introduction[1][0]);
+        $data['Introduction'] = $Introduction && isset($Introduction[1][0]) ? trim($Introduction[1][0]) :'';
 
+
+        $pattern = "/已有<font color=\"red\">(.*)<\/font>人关注/iUs";
+        preg_match_all($pattern, $html, $subscription_num);
+        $data['subscription_num'] =$subscription_num && isset($subscription_num[1][0]) ? trim($subscription_num[1][0]) :'';
 
         $pattern = "/<tr class=\"Scontent1\" >(.*)<\/tr>/iUs";
         preg_match_all($pattern, $html, $arr);//匹配内容到arr数组
         //$this->file_put($arr[0][0],"Scontent1.html");
+        $arr[0]= isset($arr[0]) ? $arr[0] :[];
         foreach ($arr[0] as $attr_str) {
             $row = [];
             //集数  制式 字幕下载
