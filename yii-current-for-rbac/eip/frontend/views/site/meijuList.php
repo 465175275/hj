@@ -170,8 +170,10 @@ $this->params['breadcrumbs'][] = $this->title;
                                <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 						</span>
                     <span class="rssdiv">
-							<script src="/index.php/user/rss_status/mid/486.html" type="text/javascript" language="javascript"></script><a href="javascript:void()" onclick="RSS_PRO($(this),'/index.php/user/rssAjax.html','add',486);"><font color="#3d379c">订阅本剧</font></a>
-							/已有<font color="red"><?=$info['subscription_num']?></font>人关注
+                        <?php if(!$subscription){?>
+							<a href="javascript:void()" data-type="add" data-mid="<?=$info['mid']?>" class="subscription_meiju">订阅本剧，以便获得最新剧集</a>
+						<?php }?>
+                        /已有<font color="red"><?=$info['subscription_num']?></font>人关注
 						</span>
                     <div style="margin-top:10px;">
                     </div>
@@ -211,14 +213,28 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <tr class="<?=($key%2==1) ?"Scontent1":"Scontent" ?> season_<?=$val['season']?>">
                         <td align="left">
-                            <a href="/index.php?r=site%2Fmeiju-detail/<?=$val['did']?>.html">
+                            <a href="/index.php?r=site%2Fmeiju-detail&did=<?=$val['did']?>">
                                 <?=$info['title_en']?> <?=$info['title_cn']?> <?=$val['title']?>
                             </a>
                         </td>
                         <td ectype="linklist" align="left" style="padding:0px;">
                             <?php $urls=json_decode($val['urls'],true)?>
                             <?php foreach ($urls as $k=>$v){?>
-                                <a style="" href="<?=$v?>" data-mid="<?=$info['mid']?>" data-did="<?=$val['did']?>" class="download_meiju" rel="nofollow" target="_blank" title="百度云盘下载">
+                                <a style="" href="<?=$v?>" data-mid="<?=$info['mid']?>" data-did="<?=$val['did']?>" class="download_meiju" rel="nofollow" target="_blank" title="<?php
+                                if($k=='baidu'){echo "百度云盘";}
+                                elseif ($k=='mi'){
+                                    echo "小米路由器远程";
+                                }elseif ($k=='bt'){
+                                    echo "bt美剧片源";
+                                }elseif ($k=='magnet'){
+                                    echo "磁力链接美剧片源";
+                                }elseif ($k=='ed2k'){
+                                    echo "ed2k高清片源";
+                                }elseif ($k=='wy'){
+                                    echo "微云网盘";
+                                }else{
+                                    echo "其他";
+                                } ?>下载">
                                     <img ectype="downnode" src="/images/<?=$k?>.png" width="20px">
                                 </a>
                             <?php }?>

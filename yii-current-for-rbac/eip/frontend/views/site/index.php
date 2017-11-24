@@ -341,158 +341,46 @@ $this->title = '时光美剧';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
+        <h2>时光美剧</h2>
+        <p class="lead">每天更新收集最新最好看的美剧.</p>
     </div>
-
     <div class="body-content">
-
         <div class="row">
             <div class="col-lg-4 divfirsts">
                 <h2>本周热播</h2>
-
                 <p>
                 <div class="divfirst">
                 <ul class="whlist">
+                    <?php foreach ($hot as $key=>$val){?>
                     <li>
-                        <span style="margin-top: 0px; background: rgb(113, 177, 241);">1</span>
+                        <span style="margin-top: 0px; background: rgb(113, 177, 241);"><?=$key+1?></span>
                         <div style="display: block;" class="listname">
-                            <label class="cnname"><a target="_blank" href="/meiju/THE.Walking.Dead.html">行尸走肉 THE Walking Dead</a></label>
+                            <label class="cnname"><a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=<?=$val['mid']?>"><?=$val['title_cn']?> <?=$val['title_en']?></a></label>
                         </div>
                         <div style="display: none;" class="listdetail">
-                            <a target="_blank" href="/meiju/THE.Walking.Dead.html"><img src="http://i4.nbimg.com/588755/4648dd188a2122c8.jpg"></a>
+                            <a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=<?=$val['mid']?>"><img src="<?=$val['img']?>"></a>
                             <div class="detailname">
-                                <label class="cnname"><a target="_blank" href="/meiju/THE.Walking.Dead.html">行尸走肉</a></label>
-                                <label class="enname"><a target="_blank" href="/meiju/THE.Walking.Dead.html">THE Walking Dead</a></label>
+                                <label class="cnname"><a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=<?=$val['mid']?>"><?=$val['title_cn']?></a></label>
+                                <label class="enname"><a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=<?=$val['mid']?>"><?=$val['title_en']?></a></label>
                             </div>
                         </div></li>
-                    <li>
-                        <span style="background: rgb(113, 177, 241); margin-top: 0px;">2</span>
-                        <div class="listname" style="display: block;">
-                            <label class="cnname"><a target="_blank" href="/meiju/Shameless.html">无耻家庭 Shameless</a></label>
-                        </div>
-                        <div class="listdetail" style="display: none;">
-                            <a target="_blank" href="/meiju/Shameless.html"><img src="http://i4.cfimg.com/588755/0b82461504c6d9a2.jpg"></a>
-                            <div class="detailname">
-                                <label class="cnname"><a target="_blank" href="/meiju/Shameless.html">无耻家庭</a></label>
-                                <label class="enname"><a target="_blank" href="/meiju/Shameless.html">Shameless</a></label>
-                            </div>
-                        </div></li><li>
-                        <span style="background: rgb(113, 177, 241); margin-top: 0px;">3</span>
-                        <div class="listname" style="display: block;">
-                            <label class="cnname"><a target="_blank" href="/meiju/The.Gifted.html">天赋异禀 The Gifted</a></label>
-                        </div>
-                        <div class="listdetail" style="display: none;">
-                            <a target="_blank" href="/meiju/The.Gifted.html"><img src="http://i2.cfimg.com/588755/907668f930359697.jpg"></a>
-                            <div class="detailname">
-                                <label class="cnname"><a target="_blank" href="/meiju/The.Gifted.html">天赋异禀</a></label>
-                                <label class="enname"><a target="_blank" href="/meiju/The.Gifted.html">The Gifted</a></label>
-                            </div>
-                        </div></li><li>
-                        <span style="margin-top: 0px;">4</span>
-                        <div class="listname" style="display: block;">
-                            <label class="cnname"><a target="_blank" href="/meiju/Blue.Planet.html">蓝色星球 Blue Planet</a></label>
-                        </div>
-                        <div class="listdetail" style="display: none;">
-                            <a target="_blank" href="/meiju/Blue.Planet.html"><img src="http://i4.cfimg.com/588755/266d03c3220ead4b.jpg"></a>
-                            <div class="detailname">
-                                <label class="cnname"><a target="_blank" href="/meiju/Blue.Planet.html">蓝色星球</a></label>
-                                <label class="enname"><a target="_blank" href="/meiju/Blue.Planet.html">Blue Planet</a></label>
-                            </div>
-                        </div></li><li>
-                        <span style="margin-top: 0px;">5</span>
-                        <div class="listname" style="display: block;">
-                            <label class="cnname"><a target="_blank" href="/meiju/The.Big.Bang.Theory.html">生活大爆炸 The Big Bang Theory</a></label>
-                        </div>
-                        <div class="listdetail" style="display: none;">
-                            <a target="_blank" href="/meiju/The.Big.Bang.Theory.html"><img src="http://i2.cfimg.com/588755/2f0cfbe600e7a4f2.jpg"></a>
-                            <div class="detailname">
-                                <label class="cnname"><a target="_blank" href="/meiju/The.Big.Bang.Theory.html">生活大爆炸</a></label>
-                                <label class="enname"><a target="_blank" href="/meiju/The.Big.Bang.Theory.html">The Big Bang Theory</a></label>
-                            </div>
-                        </div></li><li>
-                        <span style="margin-top: 0px;">6</span>
-                        <div class="listname" style="display: block;">
-                            <label class="cnname"><a target="_blank" href="/meiju/The.Girlfriend.Experience.html">应召女友 The Girlfriend Experience</a></label>
-                        </div>
-                        <div class="listdetail" style="display: none;">
-                            <a target="_blank" href="/meiju/The.Girlfriend.Experience.html"><img src="http://i4.cfimg.com/588755/232b10dd42cfd5a4.jpg"></a>
-                            <div class="detailname">
-                                <label class="cnname"><a target="_blank" href="/meiju/The.Girlfriend.Experience.html">应召女友</a></label>
-                                <label class="enname"><a target="_blank" href="/meiju/The.Girlfriend.Experience.html">The Girlfriend Experience</a></label>
-                            </div>
-                        </div></li><li>
-                        <span style="margin-top: 0px;">7</span>
-                        <div class="listname" style="display: block;">
-                            <label class="cnname"><a target="_blank" href="/meiju/The.Flash.html">闪电侠 The Flash</a></label>
-                        </div>
-                        <div class="listdetail" style="display: none;">
-                            <a target="_blank" href="/meiju/The.Flash.html"><img src="http://i4.cfimg.com/588755/f199ddd5e0235c6b.jpg"></a>
-                            <div class="detailname">
-                                <label class="cnname"><a target="_blank" href="/meiju/The.Flash.html">闪电侠</a></label>
-                                <label class="enname"><a target="_blank" href="/meiju/The.Flash.html">The Flash</a></label>
-                            </div>
-                        </div></li>
-                    <li>
-                        <span style="margin-top: 0px;">8</span>
-                        <div class="listname" style="display: block;">
-                            <label class="cnname"><a target="_blank" href="/meiju/This.Is.Us.html">我们这一天 This Is Us</a></label>
-                        </div>
-                        <div class="listdetail" style="display: none;">
-                            <a target="_blank" href="/meiju/This.Is.Us.html"><img src="http://i1.nbimg.com/588755/0026c0a8a3b16ab2.jpg"></a>
-                            <div class="detailname">
-                                <label class="cnname"><a target="_blank" href="/meiju/This.Is.Us.html">我们这一天</a></label>
-                                <label class="enname"><a target="_blank" href="/meiju/This.Is.Us.html">This Is Us</a></label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <span style="margin-top: 0px;">8</span>
-                        <div class="listname" style="display: block;">
-                            <label class="cnname"><a target="_blank" href="/meiju/This.Is.Us.html">我们这一天 This Is Us</a></label>
-                        </div>
-                        <div class="listdetail" style="display: none;">
-                            <a target="_blank" href="/meiju/This.Is.Us.html"><img src="http://i1.nbimg.com/588755/0026c0a8a3b16ab2.jpg"></a>
-                            <div class="detailname">
-                                <label class="cnname"><a target="_blank" href="/meiju/This.Is.Us.html">我们这一天</a></label>
-                                <label class="enname"><a target="_blank" href="/meiju/This.Is.Us.html">This Is Us</a></label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <span style="margin-top: 0px;">8</span>
-                        <div class="listname" style="display: block;">
-                            <label class="cnname"><a target="_blank" href="/meiju/This.Is.Us.html">我们这一天 This Is Us</a></label>
-                        </div>
-                        <div class="listdetail" style="display: none;">
-                            <a target="_blank" href="/meiju/This.Is.Us.html"><img src="http://i1.nbimg.com/588755/0026c0a8a3b16ab2.jpg"></a>
-                            <div class="detailname">
-                                <label class="cnname"><a target="_blank" href="/meiju/This.Is.Us.html">我们这一天</a></label>
-                                <label class="enname"><a target="_blank" href="/meiju/This.Is.Us.html">This Is Us</a></label>
-                            </div>
-                        </div>
-                    </li>
+<?php }?>
                 </ul>
                 </div>
                 </p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">更多 &raquo;</a></p>
             </div>
-
             <div class="col-lg-4 trailers">
                 <p>
                 <div class="trailer">
                     <ul>
                         <li>
-                            <a target="_blank" href="http://www.ttmeiju.vip/meiju/Shameless.html">
-                                <img alt="《无耻家庭》第八季第一集高清资源已出！" src="http://i4.cfimg.com/588755/5ce3b48f4bceb0f2.jpg">
-                                <div class="tratit">《无耻家庭》第八季第一集高清资源已出！</div>
+                            <a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=1327">
+                                <img alt="《无耻家庭》第八季清资源已出！" src="http://i4.cfimg.com/588755/5ce3b48f4bceb0f2.jpg">
+                                <div class="tratit">《无耻家庭》第八季高清资源已出！</div>
                             </a>
                         </li><li>
-                            <a target="_blank" href="http://www.ttmeiju.vip/meiju/THE.Walking.Dead.html">
-                                <img alt="《行尸走肉》第八季第三集高清资源已出！" src="http://i2.cfimg.com/588755/60b52720a9c9411e.jpg">
+                            <a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=1309">
+                                <img alt="《行尸走肉》第八季高清资源已出！" src="http://i2.cfimg.com/588755/60b52720a9c9411e.jpg">
                                 <div class="tratit">《行尸走肉》第八季第三集高清资源已出！</div>
                             </a>
                         </li><li>
@@ -500,15 +388,13 @@ $this->title = '时光美剧';
                                 <img alt="Netflix年底惊悚新剧《暗黑》首曝【中字】预告片！" src="http://i2.cfimg.com/588755/38115e2ec982d94d.jpg">
                                 <div class="tratit">Netflix年底惊悚新剧《暗黑》首曝【中字】预告片！</div>
                             </a>
-                        </li>            </ul>
+                        </li> </ul>
                 </div>
-
                 </p>
             </div>
 
             <div class="col-lg-4 dailyrcmds" >
                 <h2>今日更新推荐</h2>
-
                 <p>
                     <div class="dailyrcmd">
                         <ul>

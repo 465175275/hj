@@ -4,6 +4,7 @@ namespace frontend\controllers;
 use backend\models\Meiju;
 use backend\models\MeijuClickNum;
 use backend\models\MeijuDetial;
+use backend\models\MeijuSubscription;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -70,7 +71,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
+     * 首页
      *
      * @return mixed
      */
@@ -81,7 +82,7 @@ class SiteController extends Controller
             ->join('LEFT JOIN','meiju','meiju_click_num.mid = meiju.mid')
             ->andWhere(['>=','meiju_click_num.day',date("Ymd",strtotime("-8 day"))])
             ->groupBy('meiju_click_num.mid')->orderBy("click_nums")
-            ->limit(10)->all();
+            ->limit(10)->asArray()->all();
 
         //今日下载排行
        $clickList= MeijuClickNum::find()->select(['meiju_click_num.did','meiju.title_cn','meiju.title_en','meiju.title_en','meiju_detail.title','meiju_click_num.click_num'])
@@ -141,12 +142,16 @@ class SiteController extends Controller
 
 
     /**
-     * 详情列表
+     * 美剧详情列表
      * @return string
      */
     public function actionMeijuList(){
         if(isset($_GET['mid']) && is_numeric($_GET['mid'])){
             $info = Meiju::findOne($_GET['mid']);
+            $session = Yii::$app->session;
+            $uid = $session->get('__id');
+            $subscription=MeijuSubscription::find()->where(['uid'=>$uid,'mid'=>$_GET['mid']])->count();
+            $data['subscription']=$subscription ? 1 :0;
             $list = MeijuDetial::find()->where(['mid' => $_GET['mid']])->orderBy('create_time DESC')->all();
 
             //分季
@@ -154,6 +159,7 @@ class SiteController extends Controller
             //倒序
             arsort($season);
             return $this->render('meijuList', [
+                'subscription'=>$subscription,
                 'info' => $info,
                 'season'=>$season,
                 'list' => $list,
@@ -166,24 +172,69 @@ class SiteController extends Controller
      * 单集详情
      */
     public function actionMeijuDetail(){
-
+        $did= Yii::$app->request->get("did");
+        $data=MeijuDetial::find()->select(['meiju.*',"meiju_detail.*"])
+            ->join('INNER JOIN','meiju','meiju.mid = meiju_detail.mid')
+            ->where(['meiju_detail.did'=>$did])
+            ->asArray()->one();
+        $session = Yii::$app->session;
+        $uid = $session->get('__id');
+        $subscription=MeijuSubscription::find()->where(['uid'=>$uid,'mid'=>$data['mid']])->count();
+        $data['subscription']=$subscription ? 1 :0;
+        return $this->render('meijuDetail', [
+            'info' => $data,
+        ]);
     }
 
 
     /**
-     *统计单集下载量
+     * 美剧订阅/取消
+     */
+    public function actionMeijuSubscription(){
+        if(Yii::$app->request->isPost){
+            $mid= Yii::$app->request->post("mid");
+            $type= Yii::$app->request->post("type");
+            $session = Yii::$app->session;
+            $uid = $session->get('__id');
+            $row=Meiju::find()->andWhere(['mid'=>$mid])->one();
+            $MeijuSubscription=new MeijuSubscription();
+            $tr =Yii::$app->db->beginTransaction();
+            try {
+                if($type=="add"){
+                    $row->subscription_num+=1;
+                    $MeijuSubscription->mid=$mid;
+                    $MeijuSubscription->uid=$uid;
+                    $MeijuSubscription->update_at=time();
+                    $MeijuSubscription->save();
+                }else{
+                    $row->subscription_num-=1;
+                    $MeijuSubscription->deleteAll(["uid"=>$uid,'mid'=>$mid]);
+                }
+                $row->save();
+                $tr->commit();
+                echo 1;exit;
+            } catch (\Exception $e) {
+                $tr->rollBack();
+                echo 0;exit;
+            }
+        }
+    }
+
+
+    /**
+     *单集统计下载量
      */
     public function actionMeijuClick(){
           if(Yii::$app->request->isPost){
              $mid= Yii::$app->request->post("mid");
              $did= Yii::$app->request->post("did");
              $day=date("Ymd");
-             $MeijuClickNum= new MeijuClickNum();
              $num=MeijuClickNum::find()->andWhere(['day'=>$day,'mid'=>$mid,'did'=>$did])->one();
              if($num){
                  $num->click_num+=1;
                  $num->save();
              }else{
+                 $MeijuClickNum= new MeijuClickNum();
                  $MeijuClickNum->day=$day;
                  $MeijuClickNum->click_num=1;
                  $MeijuClickNum->mid=$mid;
@@ -203,7 +254,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Logs in a user.
+     * 登录.
      *
      * @return mixed
      */
@@ -227,7 +278,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Logs out the current user.
+     * 退出
      *
      * @return mixed
      */
@@ -263,7 +314,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays about page.
+     * 关于我们
      *
      * @return mixed
      */
@@ -273,7 +324,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Signs user up.
+     * 注册
      *
      * @return mixed
      */
@@ -287,7 +338,6 @@ class SiteController extends Controller
                 }
             }
         }
-
         return $this->render('signup', [
             'model' => $model,
         ]);

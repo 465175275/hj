@@ -98,4 +98,20 @@ AppAsset::register($this);
             }, "json"
         );
     })
+
+    $(".subscription_meiju").click(function(){
+        var mid=$(this).data("mid");
+        var type=$(this).data("type");
+        $.post("/index.php?r=site%2Fmeiju-subscription",
+            { mid:mid,type:type },
+            function(data, textStatus){
+                console.log(data);
+                if(data=='1'){
+                    $(".subscription_meiju").hide();
+                }
+            }, "json"
+        );
+    })
+
+
 </script>
