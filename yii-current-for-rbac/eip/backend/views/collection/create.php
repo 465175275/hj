@@ -4,16 +4,15 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\User */
+/* @var $model backend\models\Meiju */
 
-$this->title = '创建用户';
-$this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
+$this->title = '创建';
+$this->params['breadcrumbs'][] = ['label' => 'Meiju', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <?= $this->render('_form', [
     'model' => $model,
     'type' => true,
-    'roles'=>$roles,
-    
+
 ]) ?>

@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        用户列表
+        采集列表
       </h1>
     </section>
 
@@ -23,7 +23,7 @@ use yii\widgets\ActiveForm;
 
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">搜索用户</h3>
+              <h3 class="box-title">搜索</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -33,22 +33,19 @@ use yii\widgets\ActiveForm;
                 ]); ?>
                 <div class="row">
                     <div class="col-md-2">
-                        <?= $form->field($model, 'id') ?>
+                        <?= $form->field($model, 'tid') ?>
                     </div>
                     <div class="col-md-2">
-                    <?= $form->field($model, 'username') ?>
+                    <?= $form->field($model, 'title_cn') ?>
                     </div>
                     <div class="col-md-2">
-                    <?= $form->field($model, 'email') ?>
+                    <?= $form->field($model, 'title_en') ?>
                     </div>
                     <div class="col-md-2">
-                    <?= $form->field($model, 'phone') ?>
+                        <?= $form->field($model, 'type') ?>
                     </div>
                     <div class="col-md-2">
-                    <?= $form->field($model, 'status')->dropDownList([
-                        10=>'正常',
-                        0=>'封禁',
-                    ]) ?>
+                        <?= $form->field($model, 'update_status') ?>
                     </div>
                     <div class="col-md-2">
                         <div class="form-group">
@@ -59,10 +56,7 @@ use yii\widgets\ActiveForm;
                             </div>
                         </div>
                     </div>
-
                 </div>
-                
-
                 <?php ActiveForm::end(); ?>
             </div>
             <!-- /.box-body -->

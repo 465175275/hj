@@ -6,7 +6,6 @@ use backend\models\Meiju;
 use backend\models\MeijuDetial;
 use Yii;
 use backend\models\Collection;
-use backend\models\UserSearch;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -24,39 +23,198 @@ class CollectionController extends CommonController
     /*登录才有权限访问的方法*/
     //public $loginAction = ['index','view','create','update','delete','myinfo','mypassword', 'upuserpass'];
     /**
-     * 用户列表
+     * 列表
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new UserSearch();
+        $searchModel = new Meiju();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-         //$this-> read_caij_list();
-        $this-> file_get_caiji_last();
-        //$this->save();
-        /*
-            $this->read_caij_detail();
-            exit;
-            //$this->file_get_caiji_list();
-            $url="Agents.of.S.H.I.E.L.D.html";
-
-            $detail=$this->read_caij_detail($url);
-             var_dump($detail);
-            //$this->curl($url);
-           // $this->file_get_caiji_detail($url);*/
-
         return $this->render('/Collection/index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
+
+    }
+
+    /**
+     * 详情列表
+     * @return mixed
+     */
+    public function actionMeijuList()
+    {
+
+        $mid=Yii::$app->request->get("mid");
+        $searchModel = new MeijuDetial();
+        if($mid){
+            Yii::$app->request->setQueryParams(array_merge(Yii::$app->request->queryParams,['MeijuDetial'=>['mid'=>$mid]]));
+        }
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        return $this->render('/Collection/meijuList', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+
     }
 
 
-    public function save($url)
+    /**
+     * 采集最新
+     */
+    public function actionCaijiNews(){
+        $this-> file_get_caiji_last();
+    }
+
+    /**
+     * 修改
+     * If update is successful, the browser will be redirected to the 'view' page.
+     * @param integer $mid
+     * @return mixed
+     */
+    public function actionUpdate($mid)
+    {
+        $model = $this->findModel($mid);
+        /*声明场景*/
+        $model->scenario='update';
+
+        $auth = Yii::$app->authManager;
+
+        if ($model->load(Yii::$app->request->post())&&$model->validate()){
+            /*获取数据*/
+            $post = Yii::$app->request->post();
+            $model->update_at=time();
+            if($model->save(false)) {
+                Yii::$app->session->setFlash('info','修改成功');
+                return $this->redirect(['index']);
+            }else{
+                Yii::$app->session->setFlash('error','修改失败');
+                return $this->redirect(['index']);
+            }
+        } else {
+            return $this->render('update', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    /**
+     * 修改
+     * If update is successful, the browser will be redirected to the 'view' page.
+     * @param integer $mid
+     * @return mixed
+     */
+    public function actionUpdateDetail($did)
+    {
+        $model = $this->findDModel($did);
+        /*声明场景*/
+        $model->scenario='update';
+
+        $auth = Yii::$app->authManager;
+
+        if ($model->load(Yii::$app->request->post())&&$model->validate()){
+            /*获取数据*/
+            $post = Yii::$app->request->post();
+            $model->update_at=time();
+            if($model->save(false)) {
+                Yii::$app->session->setFlash('info','修改成功');
+                return $this->redirect(['meiji-list']);
+            }else{
+                Yii::$app->session->setFlash('error','修改失败');
+                return $this->redirect(['update-detail']);
+            }
+        } else {
+            return $this->render('update-detail', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+
+    /**
+     * 删除meiju
+     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionDelete($mid)
+    {
+        $this->findModel($mid)->delete();
+
+        return $this->redirect(['index']);
+    }
+
+    /**
+     * 删除meiju
+     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * @param integer $did
+     * @return mixed
+     */
+    public function actionDeleteDetail($did)
+    {
+        $this->findDModel($did)->delete();
+
+        return $this->redirect(['index']);
+    }
+
+
+
+    public function actionCaijiList(){
+            $this->read_caij_list();
+    }
+
+
+
+    /**
+     * 采集数据并且保存数据到文件
+     * @param string $url
+     */
+    public function curl($url)
+    {
+        // 初始化一个 cURL 对象
+        $curl = curl_init();
+
+        // 设置你需要抓取的URL
+        curl_setopt($curl, CURLOPT_URL, $url);
+
+        // 设置header
+        curl_setopt($curl, CURLOPT_HEADER, 1);
+
+        // 设置cURL 参数，要求结果保存到字符串中还是输出到屏幕上。
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+        // 运行cURL，请求网页
+        $data = curl_exec($curl);
+
+        // 关闭URL请求
+        curl_close($curl);
+        return $data;
+    }
+
+
+    /**
+     * 写入文件
+     * @param $value
+     * @param $url
+     * @param bool $life
+     */
+    public function file_put($value, $url, $life = FALSE)
+    {
+        if ($life) {
+            $a = file_put_contents($url, var_export($value, true), FILE_APPEND);
+        } else {
+            $a = file_put_contents($url, var_export($value, true));
+        }
+    }
+
+    /**
+     * 采集保存入库
+     * @param $url
+     * @return bool
+     */
+    private function save($url)
     {
         $meijuModel = new Meiju();
-       // $url = "/meiju/THE.Walking.Dead.html";
+        // $url = "/meiju/THE.Walking.Dead.html";
         $data = $this->read_caij_detail($url);
         /*实例化authManager类*/
         $meijuModel->scenario = 'create';
@@ -105,52 +263,9 @@ class CollectionController extends CommonController
     }
 
     /**
-     * 采集数据并且保存数据到文件
-     * @param string $url
-     */
-    public function curl($url)
-    {
-        // 初始化一个 cURL 对象
-        $curl = curl_init();
-
-        // 设置你需要抓取的URL
-        curl_setopt($curl, CURLOPT_URL, $url);
-
-        // 设置header
-        curl_setopt($curl, CURLOPT_HEADER, 1);
-
-        // 设置cURL 参数，要求结果保存到字符串中还是输出到屏幕上。
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-
-        // 运行cURL，请求网页
-        $data = curl_exec($curl);
-
-        // 关闭URL请求
-        curl_close($curl);
-        return $data;
-    }
-
-
-    /**
-     * 写入文件
-     * @param $value
-     * @param $url
-     * @param bool $life
-     */
-    function file_put($value, $url, $life = FALSE)
-    {
-        if ($life) {
-            $a = file_put_contents($url, var_export($value, true), FILE_APPEND);
-        } else {
-            $a = file_put_contents($url, var_export($value, true));
-        }
-    }
-
-
-    /**
      * 采集列表
      */
-    public function file_get_caiji_list()
+    private function file_get_caiji_list()
     {
         set_time_limit(0);
         //采集28页
@@ -167,7 +282,7 @@ class CollectionController extends CommonController
     /**
      * 采集最近7天的
      */
-    public function file_get_caiji_last(){
+    private function file_get_caiji_last(){
         set_time_limit(0);
         //采集最近7天的
         for ($i = 0; $i < 7; $i++) {
@@ -185,10 +300,45 @@ class CollectionController extends CommonController
     }
 
 
+    /**
+     * Finds the User model based on its primary key value.
+     * If the model is not found, a 404 HTTP exception will be thrown.
+     * @param integer $mid
+     * @return User the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    protected function findModel($mid)
+    {
+        if (($model = Meiju::findOne($mid)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
+
+
+    /**
+     * Finds the User model based on its primary key value.
+     * If the model is not found, a 404 HTTP exception will be thrown.
+     * @param integer $mid
+     * @return User the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    protected function findDModel($did)
+    {
+        if (($model = MeijuDetial::findOne($did)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+    }
 
 
 
-    public function file_get_caiji_detail($url)
+
+
+
+    private function file_get_caiji_detail($url)
     {
         $file = Yii::$app->getBasePath() . $this->meiju_path . $url;
         $data = $this->curl($this->host_detail . $url);
@@ -198,13 +348,13 @@ class CollectionController extends CommonController
     /**
      * 读取下载列表
      */
-    public function read_caij_list()
+    private function read_caij_list()
     {
         set_time_limit(0);
         $n=0;
         echo 'begin...<br>';
         $data = [];
-        for ($i = 28; $i >0; $i--) {
+        for ($i = 1; $i <29; $i++) {
             $file = Yii::$app->getBasePath() . $this->meiju_path . "/list-{$i}.html";
             if (!is_file($file)) {
                 $url = $this->host_list . $i . "html";
@@ -223,13 +373,16 @@ class CollectionController extends CommonController
                     $url = $url[1][0];
 
                     if(strpos($url," ")!==false){
-                        $url=str_replace(" ","%20",$url);
+                        $urls=str_replace(" ","%20",$url);
+                    }else{
+                        $urls=$url;
                     }
 
-                    if (!is_file(Yii::$app->getBasePath() . $this->meiju_path . $url)) {
-                        $this->file_get_caiji_detail($url);
+                    if (!is_file(Yii::$app->getBasePath() . $this->meiju_path . $urls)) {
+                        $this->file_get_caiji_detail($urls);
                     }
                     //$data[] = $this->read_caij_detail($url);
+                    $this->save($urls);
                     echo $n."---".$url.'<br>';
                     $n++;
                 }
@@ -274,7 +427,7 @@ class CollectionController extends CommonController
      * 读取下载详情
      * @param string $name
      */
-    public function read_caij_detail($url = '')
+    private function read_caij_detail($url = '')
     {
         $data = [];
         $detail = [];

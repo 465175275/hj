@@ -151,8 +151,9 @@ AppAsset::register($this);
                       <span>数据采集</span>
                   </a>
                   <ul class="treeview-menu">
-                          <li ><a href="<?= Url::toRoute('collection/create') ?>"><i class="fa fa-circle-o"></i> 采集</a></li>
-                          <li ><a href="<?= Url::toRoute('collection/index') ?>"><i class="fa fa-circle-o"></i> 采集列表</a></li>
+                          <li ><a href="<?= Url::toRoute('collection/index') ?>"><i class="fa fa-circle-o"></i> 列表管理</a></li>
+                          <li ><a href="<?= Url::toRoute('collection/caiji-news') ?>"><i class="fa fa-circle-o"></i> 最新采集</a></li>
+                          <li ><a href="<?= Url::toRoute('collection/caiji-list') ?>"><i class="fa fa-circle-o"> </i>采集列表</a></li>
                   </ul>
               </li>
 
