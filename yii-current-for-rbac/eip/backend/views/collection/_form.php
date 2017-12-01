@@ -39,17 +39,17 @@ use yii\widgets\ActiveForm;
                     <div class="box-body">
 
                         <?php $form = ActiveForm::begin(); ?>
+                        <?= $form->field($model, 'title_cn')->textInput() ?>
                         <?= $form->field($model, 'title_en')->textInput() ?>
                         <?= $form->field($model, 'update_status')->textInput() ?>
                         <?= $form->field($model, 'type')->textInput() ?>
+                        <?= $form->field($model, 'img')->textInput() ?>
                         <?= $form->field($model, 'update_day')->textInput() ?>
-                        <?= $form->field($model, 'update_status')->textInput() ?>
                         <?= $form->field($model, 'back_status')->textInput() ?>
                         <?= $form->field($model, 'back_time')->textInput() ?>
                         <?= $form->field($model, 'click_num')->textInput() ?>
                         <?= $form->field($model, 'subscription_num')->textInput() ?>
                         <?= $form->field($model, 'Introduction')->textArea(['rows' => '6']) ?>
-
                         <div class="form-group">
                             <?= Html::submitButton($model->isNewRecord ? '创建' : '修改', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
                         </div>

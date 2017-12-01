@@ -89,6 +89,7 @@ class SiteController extends Controller
            ->join('LEFT JOIN','meiju','meiju_click_num.mid = meiju.mid')
            ->join('LEFT JOIN','meiju_detail','meiju_detail.did = meiju_click_num.did')
            ->andWhere(['meiju_click_num.day'=>date("Ymd")])
+           ->andFilterWhere([">=",'update_time',time()-60*60*24*20])
            ->asArray()->orderBy("meiju_click_num.click_num DESC")->limit(10)->all();
         //今日更新推荐
         $ga = date("w");
@@ -102,7 +103,9 @@ class SiteController extends Controller
             case 0 : $ga= "每周日";break;
             default : $ga= "随机";
         };
-        $tuijian=Meiju::find()->select(['mid','subscription_num','title_cn','title_en'])->andWhere(['update_day'=>$ga])->limit(15)->orderBy("subscription_num DESC")->all();
+        $tuijian=Meiju::find()->select(['mid','subscription_num','title_cn','title_en'])->andWhere(['update_day'=>$ga])
+                                ->andFilterWhere(["like","update_status",'播出中'])
+                                ->limit(15)->orderBy("subscription_num DESC")->all();
 
         $type=Meiju::find()->select(['type'])->andWhere(['!=',"type",''])->groupBy("type")->all();
         $row=[];

@@ -53,6 +53,8 @@ use yii\widgets\ActiveForm;
                             <div>
                             <?= Html::submitButton('搜索', ['class' => 'btn btn-primary']) ?>
                             <?= Html::resetButton('重置', ['class' => 'btn btn-default']) ?>
+                            <?= Html::a('新增剧', "/index.php?r=collection%2Fcreate", ['class' => 'btn btn-success createDetail']) ?>
+
                             </div>
                         </div>
                     </div>

@@ -83,7 +83,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         ],
                     ],
                     /*此处是重点：这是没有会员提示的信息*/
-                    'emptyText' => '当前没有用户',
+                    'emptyText' => '当前没有数据',
                     'emptyTextOptions' => ['style' => 'text-align:center;'],
                     /*
                     * 此处是表格的布局，原始为：{summary}\n{items}\n{pager}
