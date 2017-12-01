@@ -189,8 +189,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             <div class="seasondiv">
                                 <div class="seasonitem">
                                     <?php foreach($season as $k=>$val){?>
-                                    <h3 class="<?=$k==0 ? 'curseason' :'' ?>" data-season="<?=$val?>">
-                                        <?=$val!=0 ? "第".$val."季":"合集";   ?>▼
+                                    <h3 class="<?=$k==0 ? 'curseason' :'' ?>  season" data-season="<?=$val?>">
+                                        <?=$val!=0 ? "第".$val."季":"合集";   ?><span style="display: <?=$k==0 ? '' :'none' ?>;"  class="checked">▼</span>
                                     </h3>
                                     <div class="fenge"></div>
                                     <?php }?>
@@ -211,7 +211,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php $season=[];?>
                     <?php foreach ($list as $key=>$val){  $season[$val['season']]=$val['season']; ?>
 
-                    <tr class="<?=($key%2==1) ?"Scontent1":"Scontent" ?> season_<?=$val['season']?>">
+                    <tr style="display: none;" class="<?=($key%2==1) ?"Scontent1":"Scontent" ?> season_<?=$val['season']?>">
                         <td align="left">
                             <a href="/index.php?r=site%2Fmeiju-detail&did=<?=$val['did']?>">
                                 <?=$info['title_en']?> <?=$info['title_cn']?> <?=$val['title']?>
@@ -255,5 +255,26 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
 </div>
+
+<script>
+    $(function(){
+        var season=$(".curseason").data("season");
+        $(".season_"+season).show();
+
+        $(".season").click(function(){
+            if($(this).hasClass('curseason')==false){
+                $(".curseason").find(".checked").hide();
+                var season=$(".curseason").data("season");
+                $(".curseason").removeClass('curseason');
+                $(".season_"+season).hide();
+
+                $(this).find(".checked").show();
+                $(this).addClass('curseason');
+                season=$(this).data("season");
+                $(".season_"+season).show();
+            }
+        })
+    })
+</script>
 
 

@@ -115,6 +115,29 @@ class SiteController extends Controller
         return $this->render('index',['type'=>$type,'typeList'=>$row,'tuijian'=>$tuijian,'clickList'=>$clickList,'hot'=>$hot]);
     }
 
+    /**
+     * 分类刷新
+     */
+    public function actionReflash(){
+        $str='';
+        if(Yii::$app->request->isAjax){
+            $name= Yii::$app->request->post("name");
+            $page= Yii::$app->request->post("page");
+            $id= Yii::$app->request->post("id");
+            $row=Meiju::find()->where(["type"=>$name])->offset($page*8)->limit(8)->groupBy("mid")->all();
+            foreach ($row as $val){
+                $str.="<li model='".$id."' class='active' style='display:list-item;'>";
+                $str.="   <a target='_blank' href='/index.php?r=site%2Fmeiju-list&mid=".$val['mid']."'>";
+                $str.="    <img src='".$val['img']."' alt='".$val['title_cn']."  ".$val['title_en']."'>";
+                $str.="    <span class='cicname'>".$val['title_cn']."</span>";
+                $str.="   <span class='ciename'>".$val['title_en']."</span>";
+                $str.="    </li>";
+            }
+        }
+        echo $str;
+
+    }
+
 
     /**
      * 排行榜
@@ -156,7 +179,6 @@ class SiteController extends Controller
             $subscription=MeijuSubscription::find()->where(['uid'=>$uid,'mid'=>$_GET['mid']])->count();
             $data['subscription']=$subscription ? 1 :0;
             $list = MeijuDetial::find()->where(['mid' => $_GET['mid']])->orderBy('create_time DESC')->all();
-
             //分季
             $season=array_unique(array_column($list,"season"));
             //倒序

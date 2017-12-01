@@ -585,7 +585,9 @@ $this->title = '时光美剧';
             var name = $(this).attr('name');
             var pagenum = $(this).attr('page');
             var id = $(this).attr('id');
-            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+            $.post("/index.php?r=site%2Freflash", { name: name, page: pagenum,id:id}, function(msg) {
+                //console.log(msg);
+                //return ;
                 if (msg == '') {
                     alert('暂无更多资源');
                     $("a[ectype='reflash']").attr('page', 0);
