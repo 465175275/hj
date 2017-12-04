@@ -1,10 +1,10 @@
 <?php
 namespace frontend\controllers;
 
-use backend\models\Meiju;
-use backend\models\MeijuClickNum;
-use backend\models\MeijuDetial;
-use backend\models\MeijuSubscription;
+use common\models\Meiju;
+use common\models\MeijuClickNum;
+use common\models\MeijuDetial;
+use common\models\MeijuSubscription;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
