@@ -1,0 +1,1750 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:08:48 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d91e51a19bc1c5418a9bd3e8f9a666f3d1509534528; expires=Thu, 01-Nov-18 11:08:48 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e65f120d75390-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>热点推手 Notorious-热点推手下载-热点推手全集下载-Notorious下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="热点推手,Notorious,热点推手下载,热点推手全集下载,热点推手高清下载,热点推手迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;《热点推手Notorious》被ABC预订，灵感由现实的刑事辩护律师MarkGeragos及执行制片人WendyWalker之间的关系改篇。描述在刑法与新闻媒体互相挑衅的世界中，一个富有魅力的律师及一个富有权力的电视制作人，如何利用﹑控制媒体﹑司法系统，甚至……控制对方。&amp;nbsp;&lt;/p&gt;" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1144;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FNotorious.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FNotorious.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1144;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">热点推手 Notorious-热点推手下载-热点推手全集下载-Notorious下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i1.piimg.com/588755/364a4f9d4eb2742e.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i1.piimg.com/588755/364a4f9d4eb2742e.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周五</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：剧情类</span>						
+						<span>最后更新：2016-12-28 17:36</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1144.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">95</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>《热点推手Notorious》被ABC预订，灵感由现实的刑事辩护律师Mark Geragos 及执行制片人Wendy Walker之间的关系改篇。描述在刑法与新闻媒体互相挑衅的世界中，一个富有魅力的律师及一个富有权力的电视制作人，如何利用﹑控制媒体﹑司法系统，甚至……控制对方。&nbsp;</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="70480" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70480.html">
+																									热点推手 Notorious S01E10 720p 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pKGb8Yv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70480\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>653M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70685" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70685.html">
+																									热点推手 Notorious S01E10 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1slu9iW1" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70685\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ixd5ayh&amp;f=Notorious.S01E10.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70685\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:57284e91d9386286544833c705effda7492c2384&amp;dn=Notorious.S01E10.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" target="_blank" name=\'magnet70685\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70685\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:57284e91d9386286544833c705effda7492c2384&amp;dn=Notorious.S01E10.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E10 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70685\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.68G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70262" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70262.html">
+																									热点推手 Notorious S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o7N4YCE" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70262\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=7djq8ns&amp;f=Notorious.S01E10.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70262\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9295cec7166c244e0a492363cef13ba810988eb2&amp;dn=Notorious.S01E10.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70262\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70262\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9295cec7166c244e0a492363cef13ba810988eb2&amp;dn=Notorious.S01E10.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70262\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.16G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70261" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70261.html">
+																									热点推手 Notorious S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o8Jb6xc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70261\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=vtul1fa&amp;f=Notorious.S01E10.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70261\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:bdc844bed09de004f5fcf4e115c44eba5bec1921&amp;dn=Notorious.S01E10.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70261\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70261\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:bdc844bed09de004f5fcf4e115c44eba5bec1921&amp;dn=Notorious.S01E10.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70261\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>311M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71096" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71096.html">
+																									热点推手 Notorious S01E09 720p UnIon字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bBIXhs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71096\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:739ba8a1a0f7b840b059a035bcc422aef48a738e&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet71096\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71096\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Notorious.2016.S01E09.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.720p.TVrip.x264-UnIon%E5%AD%97%E5%B9%95%E7%BB%84.mkv|682944405|79a0763e149d93539e21cbc2c866edca|h=wjqjptrr7vqstdrrs73mqvqmcy3ol2uv|/" rel="nofollow" target="_blank" name=\'ed2k71096\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71096\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:739ba8a1a0f7b840b059a035bcc422aef48a738e&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E09 720p UnIon字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71096\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>651M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69463" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69463.html">
+																									热点推手 Notorious S01E09 720p 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8evZ7s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69463\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.acfun.tv/v/ac3272673" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'69463\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>636M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70062" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70062.html">
+																									热点推手 Notorious S01E09 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eR4OnMa" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70062\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=3rwzgud&amp;f=Notorious.S01E09.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70062\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c4f5e0fac8dee14674ac860a87220cd739f6a349&amp;dn=Notorious.S01E09.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" target="_blank" name=\'magnet70062\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70062\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c4f5e0fac8dee14674ac860a87220cd739f6a349&amp;dn=Notorious.S01E09.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E09 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70062\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.69G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68833" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68833.html">
+																									热点推手 Notorious S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSJqCU2" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68833\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=qbtvhkj&amp;f=Notorious.2016.S01E09.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68833\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0b56dc00f27b9dda1197d7264158eca0594b6499&amp;dn=Notorious.2016.S01E09.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68833\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68833\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0b56dc00f27b9dda1197d7264158eca0594b6499&amp;dn=Notorious.2016.S01E09.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68833\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>896M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68832" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68832.html">
+																									热点推手 Notorious S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jH6GZKa" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68832\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=32ms8bk&amp;f=Notorious.S01E09.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68832\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9426108c41e95bcbb0c0ec622e035aaca3e07ad8&amp;dn=Notorious.S01E09.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68832\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68832\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9426108c41e95bcbb0c0ec622e035aaca3e07ad8&amp;dn=Notorious.S01E09.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68832\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>245M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="71095" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71095.html">
+																									热点推手 Notorious S01E08 720p UnIon字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1miDGFLQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71095\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9c608a51d4a05048e8c7a983c4de8e957517ec22&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet71095\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71095\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Notorious.S01E08.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.720p.TVrip.x264-UnIon%E5%AD%97%E5%B9%95%E7%BB%84.mkv|779168134|9001705cbaa7eadbe46c9ce922e4667a|h=tdx764ualbnica5itrflh4itfxlz5sqd|/" rel="nofollow" target="_blank" name=\'ed2k71095\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71095\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:9c608a51d4a05048e8c7a983c4de8e957517ec22&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E08 720p UnIon字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71095\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>743M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68625" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68625.html">
+																									热点推手 Notorious S01E08 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8evZ7s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68625\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.acfun.tv/v/ac3256183" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'68625\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>636M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70061" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70061.html">
+																									热点推手 Notorious S01E08 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qY50cjU" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70061\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=fer13nd&amp;f=Notorious.S01E08.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70061\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3b59e815a576b1671374852208f70553dd1d0b5e&amp;dn=Notorious.S01E08.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" target="_blank" name=\'magnet70061\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70061\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3b59e815a576b1671374852208f70553dd1d0b5e&amp;dn=Notorious.S01E08.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E08 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70061\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.69G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68281" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68281.html">
+																									热点推手 Notorious S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2iM9Du" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68281\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=y74lr9a&amp;f=Notorious.S01E08.720p.HDTV.x264-SVA%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68281\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:37ee0b7b86da81db728e95924199c9726b32d2ef&amp;dn=Notorious.S01E08.720p.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68281\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68281\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:37ee0b7b86da81db728e95924199c9726b32d2ef&amp;dn=Notorious.S01E08.720p.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68281\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68280" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68280.html">
+																									热点推手 Notorious S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bpBUO3P" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68280\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=y7scer3&amp;f=Notorious.S01E08.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68280\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:75ce232107f71864138446216b16dd356a2c3dc5&amp;dn=Notorious.S01E08.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68280\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68280\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:75ce232107f71864138446216b16dd356a2c3dc5&amp;dn=Notorious.S01E08.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68280\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>286M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71261" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71261.html">
+																									热点推手 Notorious Notorious S01E07 720p UnIon字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bo0RPJx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71261\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:47177570e3c670fb3d7f7e21c8e3483a25ecb01d&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet71261\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71261\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Notorious.S01E07.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.720p.TVrip.x264-UnIon%E5%AD%97%E5%B9%95%E7%BB%84.mkv|739191166|8e9a69486de753745e76620e1ccec9d8|h=rq4m37qtx7lp6aauggdknmxxogtcurlh|/" rel="nofollow" target="_blank" name=\'ed2k71261\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71261\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:47177570e3c670fb3d7f7e21c8e3483a25ecb01d&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious Notorious S01E07 720p UnIon字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71261\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>705M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68623" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68623.html">
+																									热点推手 Notorious S01E07 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8evZ7s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68623\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.acfun.tv/v/ac3233691" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'68623\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>636M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70060" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70060.html">
+																									热点推手 Notorious S01E07 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o82gsCM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70060\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=7f28tk9&amp;f=Notorious.S01E07.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70060\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e8a1e5cb081fe9522cf52c81ec9517a7cd8a6bc3&amp;dn=Notorious.S01E07.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" target="_blank" name=\'magnet70060\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70060\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e8a1e5cb081fe9522cf52c81ec9517a7cd8a6bc3&amp;dn=Notorious.S01E07.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E07 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70060\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.69G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="67798" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67798.html">
+																									热点推手 Notorious S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1cBq8Tg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67798\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=2wd8qzy&amp;f=Notorious.S01E07.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67798\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:443cdb8a9e63ceb7c49b749db58e9beee2aeb709&amp;dn=Notorious.S01E07.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67798\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67798\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:443cdb8a9e63ceb7c49b749db58e9beee2aeb709&amp;dn=Notorious.S01E07.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67798\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>963M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67797" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67797.html">
+																									热点推手 Notorious S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nvS5dFz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67797\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=d293yxc&amp;f=Notorious.S01E07.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67797\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5f5dca9aca73dd7d3bbecb8e894a9dbc5ab48d45&amp;dn=Notorious.S01E07.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67797\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67797\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5f5dca9aca73dd7d3bbecb8e894a9dbc5ab48d45&amp;dn=Notorious.S01E07.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67797\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>266M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68926" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68926.html">
+																									热点推手 Notorious S01E06 720p UnIon字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i56trRf" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68926\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b10f99a1a88981ba924f0d97623bfea0c653544e&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" name=\'magnet68926\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68926\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Notorious.S01E06.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.720p.TVrip.x264-UnIon%E5%AD%97%E5%B9%95%E7%BB%84.mkv|793226543|d5482bb123e7f23eba8a86ad380e2c05|h=tg5ylbf67mshmz7orivb6dw3sol5kqct|/" rel="nofollow" target="_blank" name=\'ed2k68926\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'68926\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:b10f99a1a88981ba924f0d97623bfea0c653544e&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E06 720p UnIon字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68926\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>757M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67781" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67781.html">
+																									热点推手 Notorious S01E06 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8evZ7s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67781\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.acfun.tv/v/ac3218479" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'67781\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>636M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70059" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70059.html">
+																									热点推手 Notorious S01E06 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gf6yumJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70059\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=wmlandg&amp;f=Notorious.S01E06.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70059\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5506c31e74be2ba0da24ff8bf023ce0e2614aec6&amp;dn=Notorious.S01E06.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" target="_blank" name=\'magnet70059\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70059\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5506c31e74be2ba0da24ff8bf023ce0e2614aec6&amp;dn=Notorious.S01E06.1080p.WEB-DL.DD5.1.H264-GoApe%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E06 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70059\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.67G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67231" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67231.html">
+																									热点推手 Notorious S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c27iutU" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67231\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=lz4k9pn&amp;f=Notorious.S01E06.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67231\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:255d4fb800ca3c3d86323c32861d8980e8a9b62d&amp;dn=Notorious.S01E06.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67231\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67231\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:255d4fb800ca3c3d86323c32861d8980e8a9b62d&amp;dn=Notorious.S01E06.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67231\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>989M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="67230" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67230.html">
+																									热点推手 Notorious S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nuILcM1" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67230\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ik4v5gm&amp;f=Notorious.S01E06.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67230\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:22d45dfaf022ae3ea944fe85c2d7d42396b005e1&amp;dn=Notorious.S01E06.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67230\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67230\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:22d45dfaf022ae3ea944fe85c2d7d42396b005e1&amp;dn=Notorious.S01E06.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67230\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>276M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67780" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67780.html">
+																									热点推手 Notorious S01E05 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8evZ7s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67780\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.acfun.tv/v/ac3200392" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'67780\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>537M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="67016" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67016.html">
+																									热点推手 Notorious S01E05 720p UnIon字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eR2Kfiq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67016\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b7635128a0005260a717169469de1dbf3b72d062&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" name=\'magnet67016\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67016\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Notorious.S01E05.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.720p.UnIon%E5%AD%97%E5%B9%95%E7%BB%84.mkv|605483688|f01f053c9f5395449ce2ca979ed18e1c|h=dgqzhnsnejcrozwnoffuxancjao7ffo4|/" rel="nofollow" target="_blank" name=\'ed2k67016\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'67016\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:b7635128a0005260a717169469de1dbf3b72d062&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E05 720p UnIon字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67016\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>577M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-10-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="66805" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/66805.html">
+																									热点推手 Notorious S01E05 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bpFX58r" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'66805\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=8q3iu2k&amp;f=Notorious.S01E05.Missing.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'66805\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a7c27ce4ab85d4f27e1ada4a37d7b7e7d1e6c1d5&amp;dn=Notorious.S01E05.Missing.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" target="_blank" name=\'magnet66805\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'66805\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a7c27ce4ab85d4f27e1ada4a37d7b7e7d1e6c1d5&amp;dn=Notorious.S01E05.Missing.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E05 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'66805\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.69G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="66691" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/66691.html">
+																									热点推手 Notorious S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i4RGqNz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'66691\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ogp4zs5&amp;f=Notorious.S01E05.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'66691\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9bc764fb60e862970881bdf3fe3a426134a3f380&amp;dn=Notorious.S01E05.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet66691\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'66691\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9bc764fb60e862970881bdf3fe3a426134a3f380&amp;dn=Notorious.S01E05.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'66691\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>853M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="66690" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/66690.html">
+																									热点推手 Notorious S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i4Vecbr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'66690\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=3d8qmi5&amp;f=Notorious.S01E05.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'66690\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:45057a3a6ea4246badd1b7b477c3e03fa76fec87&amp;dn=Notorious.S01E05.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet66690\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'66690\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:45057a3a6ea4246badd1b7b477c3e03fa76fec87&amp;dn=Notorious.S01E05.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'66690\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>268M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="66593" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/66593.html">
+																									热点推手 Notorious S01E04 720p UnIon字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=970733643&amp;uk=2740766631" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'66593\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:dc09c4cc50e7e94a4dbf9e9127eb66dc809be1d4&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" name=\'magnet66593\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'66593\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Notorious.S01E04.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.720p.UnIon%E5%AD%97%E5%B9%95%E7%BB%84.mkv|627476374|8b6fadf9a805b0de3ffb6b53d5ce22f6|h=jhyctegs532fiih5op77ekn3nrtzmexf|/" rel="nofollow" target="_blank" name=\'ed2k66593\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'66593\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:dc09c4cc50e7e94a4dbf9e9127eb66dc809be1d4&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E04 720p UnIon字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'66593\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>599M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-10-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="66406" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/66406.html">
+																									热点推手 Notorious S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8evZ7s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'66406\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.acfun.tv/v/ac3183123" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'66406\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>618M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-10-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="66212" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/66212.html">
+																									热点推手 Notorious S01E04 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hrZjAew" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'66212\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=86hxk3v&amp;f=Notorious.S01E04.Tell.Me.a.Secret.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'66212\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:16937f6de8aec9bcbb8c24bf4d6f857911e4af1b&amp;dn=Notorious.S01E04.Tell.Me.a.Secret.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" target="_blank" name=\'magnet66212\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'66212\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:16937f6de8aec9bcbb8c24bf4d6f857911e4af1b&amp;dn=Notorious.S01E04.Tell.Me.a.Secret.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E04 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'66212\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.69G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="66086" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/66086.html">
+																									热点推手 Notorious S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dEJaCdr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'66086\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=s7x6q8k&amp;f=Notorious.S01E04.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'66086\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0327ed6108e86ed58be33f9f59c7114f24ce87cc&amp;dn=Notorious.S01E04.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet66086\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'66086\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0327ed6108e86ed58be33f9f59c7114f24ce87cc&amp;dn=Notorious.S01E04.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'66086\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>925M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="66085" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/66085.html">
+																									热点推手 Notorious S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1b0jP6I" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'66085\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=3qxna9w&amp;f=Notorious.S01E04.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'66085\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:edb8326d7ec382d1f5f189751c5bfaac0e7cc05a&amp;dn=Notorious.S01E04.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet66085\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'66085\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:edb8326d7ec382d1f5f189751c5bfaac0e7cc05a&amp;dn=Notorious.S01E04.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'66085\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>254M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="65878" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/65878.html">
+																									热点推手 Notorious S01E03 720p 大家字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8evZ7s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'65878\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.acfun.tv/v/ac3163360" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'65878\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>668.3M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-10-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="65567" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/65567.html">
+																									热点推手 Notorious S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIoEhXc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'65567\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=7w3bapl&amp;f=Notorious.S01E03.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'65567\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d3afd9e45e9977c86fa523c6b400eda46b59ce1c&amp;dn=Notorious.S01E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet65567\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'65567\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d3afd9e45e9977c86fa523c6b400eda46b59ce1c&amp;dn=Notorious.S01E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'65567\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>951M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="65695" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/65695.html">
+																									热点推手 Notorious S01E03 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1skZ6KcX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'65695\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ct6v7qu&amp;f=Notorious.S01E03.Friends.and.Other.Strangers.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'65695\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:cc88855b2c6127305072eb775fc3c66ac83c299a&amp;dn=Notorious.S01E03.Friends.and.Other.Strangers.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=" rel="nofollow" target="_blank" name=\'magnet65695\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'65695\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cc88855b2c6127305072eb775fc3c66ac83c299a&amp;dn=Notorious.S01E03.Friends.and.Other.Strangers.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E03 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'65695\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.67G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="65566" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/65566.html">
+																									热点推手 Notorious S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eS6xmJS" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'65566\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=yh9iw6v&amp;f=Notorious.S01E03.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'65566\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c36f3025e2032b437ec83bb6da9d51cdb1ce6224&amp;dn=Notorious.S01E03.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet65566\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'65566\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c36f3025e2032b437ec83bb6da9d51cdb1ce6224&amp;dn=Notorious.S01E03.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'65566\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>263M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="65577" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/65577.html">
+																									热点推手 Notorious S01E02 720p 大家字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8evZ7s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'65577\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.acfun.tv/v/ac3148025" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'65577\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>514.4M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-10-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="65168" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/65168.html">
+																									热点推手 Notorious S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jI7ADXO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'65168\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=9wnrpd4&amp;f=Notorious.S01E02.720p.HDTV.x264-SVA%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'65168\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c0a069a4084919d7d552ffcfd36d9aeef0888d12&amp;dn=Notorious.S01E02.720p.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet65168\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'65168\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c0a069a4084919d7d552ffcfd36d9aeef0888d12&amp;dn=Notorious.S01E02.720p.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'65168\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>945M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-09-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="65212" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/65212.html">
+																									热点推手 Notorious S01E02 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i5NlO4d" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'65212\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=iz463pd&amp;f=Notorious.2016.S01E02.The.Perp.Walk.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'65212\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3c4dc5b385ca6bef1e22f6722e7c53e157f0fcc3&amp;dn=Notorious.2016.S01E02.The.Perp.Walk.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F" rel="nofollow" target="_blank" name=\'magnet65212\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'65212\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3c4dc5b385ca6bef1e22f6722e7c53e157f0fcc3&amp;dn=Notorious.2016.S01E02.The.Perp.Walk.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E02 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'65212\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.68G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="65167" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/65167.html">
+																									热点推手 Notorious S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfgCx7H" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'65167\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=gydztka&amp;f=Notorious.S01E02.HDTV.x264-LOL%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'65167\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6f57a0b8d9566f4063191c35e476911bf209f90d&amp;dn=Notorious.S01E02.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet65167\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'65167\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6f57a0b8d9566f4063191c35e476911bf209f90d&amp;dn=Notorious.S01E02.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'65167\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>285M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-09-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="65385" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/65385.html">
+																									热点推手 Notorious S01E01 720p UnIon字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1miS53Kk" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'65385\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:a6791e1fad770fbc9db0c6ef6775f372d25f07d5&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" name=\'magnet65385\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'65385\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Notorious.S01E02.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.720p.UnIon%E5%AD%97%E5%B9%95%E7%BB%84.mkv|684477904|246244ae8796536191ece7b5f7cb6e4d|h=rg3i2otcqncez6mjamyqwszpqnogmpne|/" rel="nofollow" target="_blank" name=\'ed2k65385\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'65385\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:a6791e1fad770fbc9db0c6ef6775f372d25f07d5&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E01 720p UnIon字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'65385\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>652.8M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-10-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="65166" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/65166.html">
+																									热点推手 Notorious S01E01 720p 大家字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8evZ7s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'65166\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>500.4M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-09-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="64809" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/64809.html">
+																									热点推手 Notorious S01E01 720p UnIon字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hs4qBC4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'64809\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:63d5b4d8bd95c211ee90930065fdf0efa54a8e64&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" name=\'magnet64809\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'64809\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Notorious.S01E01.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.720p.TVrip.x264-UnIon%E5%AD%97%E5%B9%95%E7%BB%84.mkv|744245534|11ea18b6cfabdc8b6d424c00a49121d9|h=hygnoaqdhxkmcswhlbfyz3nuv7obql6b|/" rel="nofollow" target="_blank" name=\'ed2k64809\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'64809\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:63d5b4d8bd95c211ee90930065fdf0efa54a8e64&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E01 720p UnIon字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'64809\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>709.8M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-09-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="64734" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/64734.html">
+																									热点推手 Notorious S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVLfykv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'64734\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=v24pg35&amp;f=Notorious.S01E01.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'64734\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:814817a72ec00e17c5a28ce02d8dfd83a9467bfe&amp;dn=Notorious.S01E01.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet64734\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'64734\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:814817a72ec00e17c5a28ce02d8dfd83a9467bfe&amp;dn=Notorious.S01E01.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'64734\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>976M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-09-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="64952" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/64952.html">
+																									热点推手 Notorious S01E01 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfLTMq3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'64952\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=edfo236&amp;f=Notorious.2016.S01E01.Pilot.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'64952\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2c88c606e786b83ee99b5d0ca51612c80a383cd8&amp;dn=Notorious.2016.S01E01.Pilot.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rar" rel="nofollow" target="_blank" name=\'magnet64952\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'64952\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2c88c606e786b83ee99b5d0ca51612c80a383cd8&amp;dn=Notorious.2016.S01E01.Pilot.1080p.WEB-DL.DD5.1.H264-AG%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rar" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E01 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'64952\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.68G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-09-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="64733" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/64733.html">
+																									热点推手 Notorious S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8k18t8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'64733\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=h78u5ok&amp;f=Notorious.S01E01.HDTV.x264-LOL%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'64733\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3012d7d00df5298ca4edf9bcea1634ab0fe83c99&amp;dn=Notorious.S01E01.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet64733\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'64733\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3012d7d00df5298ca4edf9bcea1634ab0fe83c99&amp;dn=Notorious.S01E01.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="热点推手 Notorious S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'64733\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>287M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-09-23</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,1144,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1144);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1144);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1144);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

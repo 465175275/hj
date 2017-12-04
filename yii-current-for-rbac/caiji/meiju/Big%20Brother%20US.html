@@ -1,0 +1,2518 @@
+'HTTP/1.1 200 OK
+Date: Tue, 07 Nov 2017 10:45:00 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d11235c2a7ab1b47a1bfac5dc1d1d83dd1510051499; expires=Wed, 07-Nov-18 10:44:59 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b9fb351049c2882-SJC
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>老大哥 Big Brother US-老大哥下载-老大哥全集下载-Big Brother US下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="老大哥,Big Brother US,老大哥下载,老大哥全集下载,老大哥高清下载,老大哥迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;老大哥《BigBrother》是一档历久弥新的美国真人秀节目，他将一群陌生人聚集在一座华丽却又狡诈的豪宅里，房客们的一举一动都将被全天候7X24小时监控并向观众们展示。他们需要参加其中的各种比赛来赢得房主之位，否决大权，否则的话，下一个离开老大哥之家的人谁都不知道。老大哥每周淘汰一位房客，最后留下的两人将由之前淘汰的房客组成的评审团投票决定" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 203;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FBig%2520Brother%2520US.html%3FUser-Agent%3DSAMSUNG-SGH-G508E%252FG508EZCIG2%2BSHP%252FVPP%252FR5%2BNetFront%252F3.4%2BQtv5.3%2BSMM-MMS%252F1.2.0%2Bprofile%252FMIDP-2.0%2Bconfiguration%252FCLDC-1.1%250A"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FBig%2520Brother%2520US.html%3FUser-Agent%3DSAMSUNG-SGH-G508E%252FG508EZCIG2%2BSHP%252FVPP%252FR5%2BNetFront%252F3.4%2BQtv5.3%2BSMM-MMS%252F1.2.0%2Bprofile%252FMIDP-2.0%2Bconfiguration%252FCLDC-1.1%250A"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 203;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">老大哥 Big Brother US-老大哥下载-老大哥全集下载-Big Brother US下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/c6ff0e7732f25225.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/c6ff0e7732f25225.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：随机</span>
+						<span>状态：<font color="#5cb1c5">播出中</font></span>
+						<span class="greybg">分类：真人秀</span>						
+						<span>最后更新：2017-09-21 13:55</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/203.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">239</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>	老大哥《Big Brother》是一档历久弥新的美国真人秀节目，他将一群陌生人聚集在一座华丽却又狡诈的豪宅里，房客们的一举一动都将被全天候7X24小时监控并向观众们展示。他们需要参加其中的各种比赛来赢得房主之位，否决大权，否则的话，下一个离开老大哥之家的人谁都不知道。老大哥每周淘汰一位房客，最后留下的两人将由之前淘汰的房客组成的评审团投票决定谁才是老大哥之王，冠军将获得50万美元的丰厚大奖。	身处老大哥之家，房客们需要或奸诈，或狡猾，步步为营，因为你永远不知道在你背后捅刀子的总是最熟悉你的人。与谁结盟很关键，因为一旦你走错一步棋，孰去孰留也就昭然若揭了。在这个勾心斗角的大环境里你要记住，谁也不能相信，因为走到最后的往往都是那些精明少信的人。 	出自微博 @孟菲斯的小虫虫</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="19">
+																			第19季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="18">
+																			第18季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="17">
+																			第17季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="16">
+																			第16季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="15">
+																			第15季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="14">
+																			第14季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="13">
+																			第13季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="7">
+																			第7季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="88166" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88166.html">
+																									老大哥 Big Brother US  S19E39 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVHv2nl" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88166\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=psmuo4j&amp;f=Big.Brother.US.S19E39.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88166\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1e7cd1c1b9ac81c21e93c920d876cb3a82e61832&amp;dn=Big.Brother.US.S19E39.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet88166\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88166\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1e7cd1c1b9ac81c21e93c920d876cb3a82e61832&amp;dn=Big.Brother.US.S19E39.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E39 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88166\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.20G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="88165" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88165.html">
+																									老大哥 Big Brother US  S19E39 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c1WS2Ak" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88165\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=e6jmv5k&amp;f=Big.Brother.US.S19E39.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88165\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:142c0d6bd5ad162a4ace6c9b2b406ccaf515a783&amp;dn=Big.Brother.US.S19E39.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet88165\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88165\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:142c0d6bd5ad162a4ace6c9b2b406ccaf515a783&amp;dn=Big.Brother.US.S19E39.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E39 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88165\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>739M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87871" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87871.html">
+																									老大哥 Big Brother US  S19E38 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pK8joqn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87871\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=7r8h56d&amp;f=Big.Brother.US.S19E38.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87871\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a33db7cae40b95d7448f04bb3a344fd7a25144b9&amp;dn=Big.Brother.US.S19E38.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet87871\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87871\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a33db7cae40b95d7448f04bb3a344fd7a25144b9&amp;dn=Big.Brother.US.S19E38.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E38 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87871\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>925M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="87870" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87870.html">
+																									老大哥 Big Brother US  S19E38 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nuZXHah" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87870\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=538qgu9&amp;f=Big.Brother.US.S19E38.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87870\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:fda477972419e4f5573c364cd28769a0ee4fb145&amp;dn=Big.Brother.US.S19E38.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet87870\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87870\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fda477972419e4f5573c364cd28769a0ee4fb145&amp;dn=Big.Brother.US.S19E38.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E38 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87870\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>809M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87821" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87821.html">
+																									老大哥 Big Brother US  S19E37 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eRIAYOU" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87821\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=3rk6ho4&amp;f=Big.Brother.US.S19E37.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87821\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2fd7fd3847937afbac364bafb516d51a92d12a23&amp;dn=Big.Brother.US.S19E37.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet87821\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87821\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2fd7fd3847937afbac364bafb516d51a92d12a23&amp;dn=Big.Brother.US.S19E37.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E37 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87821\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.01G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="87820" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87820.html">
+																									老大哥 Big Brother US  S19E37 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mi0ygLa" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87820\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=oc5rpnb&amp;f=Big.Brother.US.S19E37.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87820\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4c048f8febb90d7c70f6c2b7acf6296fdefe1ed4&amp;dn=Big.Brother.US.S19E37.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet87820\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87820\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4c048f8febb90d7c70f6c2b7acf6296fdefe1ed4&amp;dn=Big.Brother.US.S19E37.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E37 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87820\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>813M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87757" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87757.html">
+																									老大哥 Big Brother US  S19E36 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfeT0Sr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87757\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=7zd8avc&amp;f=Big.Brother.US.S19E36.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87757\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c8bf77df68c50e539962fd2bf1d5c1f95facdc70&amp;dn=Big.Brother.US.S19E36.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet87757\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87757\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c8bf77df68c50e539962fd2bf1d5c1f95facdc70&amp;dn=Big.Brother.US.S19E36.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E36 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87757\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>934M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="87756" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87756.html">
+																									老大哥 Big Brother US  S19E36 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eRBjy1c" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87756\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=d76tpxu&amp;f=Big.Brother.US.S19E36.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87756\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d09c202a10415e98b9062d11692d827418642772&amp;dn=Big.Brother.US.S19E36.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet87756\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87756\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d09c202a10415e98b9062d11692d827418642772&amp;dn=Big.Brother.US.S19E36.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E36 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87756\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>803M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87621" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87621.html">
+																									老大哥 Big Brother US  S19E35 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1clPki6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87621\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=moypghs&amp;f=Big.Brother.US.S19E35.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87621\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4e48561a6415a24c995097b7349f76b91cd3b9da&amp;dn=Big.Brother.US.S19E35.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet87621\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87621\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4e48561a6415a24c995097b7349f76b91cd3b9da&amp;dn=Big.Brother.US.S19E35.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E35 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87621\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="87620" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87620.html">
+																									老大哥 Big Brother US  S19E35 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c1YTQi0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87620\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=srlujwi&amp;f=Big.Brother.US.S19E35.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87620\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9f8de44ffc91966114988db73adce3405d731447&amp;dn=Big.Brother.US.S19E35.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet87620\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87620\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9f8de44ffc91966114988db73adce3405d731447&amp;dn=Big.Brother.US.S19E35.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E35 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87620\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>809M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87524" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87524.html">
+																									老大哥 Big Brother US  S19E34 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c1yfXs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87524\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=xckvf48&amp;f=Big.Brother.US.S19E34.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87524\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:89184a019576113719d6120a9abac44369e4bc4d&amp;dn=Big.Brother.US.S19E34.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet87524\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87524\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:89184a019576113719d6120a9abac44369e4bc4d&amp;dn=Big.Brother.US.S19E34.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E34 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87524\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="87523" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87523.html">
+																									老大哥 Big Brother US  S19E34 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYhsNmO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87523\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=xbkqguo&amp;f=Big.Brother.US.S19E34.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87523\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b002a38d901a8229c07740bf344a2d4c3147097e&amp;dn=Big.Brother.US.S19E34.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet87523\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87523\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b002a38d901a8229c07740bf344a2d4c3147097e&amp;dn=Big.Brother.US.S19E34.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E34 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87523\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>801M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87400" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87400.html">
+																									老大哥 Big Brother US  S19E33 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i58Bnlb" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87400\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=8ol15m2&amp;f=Big.Brother.US.S19E33.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87400\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7751dd7b830cf31c8498a2e8604277ab6f59a7b5&amp;dn=Big.Brother.US.S19E33.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet87400\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87400\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7751dd7b830cf31c8498a2e8604277ab6f59a7b5&amp;dn=Big.Brother.US.S19E33.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E33 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87400\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>972M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="87399" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87399.html">
+																									老大哥 Big Brother US  S19E33 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eS2BLGQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87399\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=akry8g6&amp;f=Big.Brother.US.S19E33.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87399\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:695e2921f59aed7515f7b3bd37aa36c11bebb4d5&amp;dn=Big.Brother.US.S19E33.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet87399\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87399\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:695e2921f59aed7515f7b3bd37aa36c11bebb4d5&amp;dn=Big.Brother.US.S19E33.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E33 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87399\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>809M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87255" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87255.html">
+																									老大哥 Big Brother US  S19E32 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pKNHLzH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87255\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=k5z1gsw&amp;f=Big.Brother.US.S19E32.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87255\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c85cdb0baa4ecca7d937ccf278af5df168a44c41&amp;dn=Big.Brother.US.S19E32.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet87255\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87255\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c85cdb0baa4ecca7d937ccf278af5df168a44c41&amp;dn=Big.Brother.US.S19E32.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E32 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87255\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>963M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="87254" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87254.html">
+																									老大哥 Big Brother US  S19E32 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2GmTyC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87254\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=71hlvz8&amp;f=Big.Brother.US.S19E32.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87254\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a90604c1e83d7d29cee136be583c3f25398b9616&amp;dn=Big.Brother.US.S19E32.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet87254\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87254\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a90604c1e83d7d29cee136be583c3f25398b9616&amp;dn=Big.Brother.US.S19E32.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E32 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87254\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>806M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87119" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87119.html">
+																									老大哥 Big Brother US  S19E31 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYbSFd6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87119\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=rhfyiq1&amp;f=Big.Brother.US.S19E31.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87119\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6f2a93060b584e704e3c20c5b4a84ccb85e8567c&amp;dn=Big.Brother.US.S19E31.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet87119\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87119\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6f2a93060b584e704e3c20c5b4a84ccb85e8567c&amp;dn=Big.Brother.US.S19E31.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E31 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87119\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>952M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="87118" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87118.html">
+																									老大哥 Big Brother US  S19E31 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eSGOCim" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87118\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=cbg5uv6&amp;f=Big.Brother.US.S19E31.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87118\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c146b51a29a5425d2e457dbc00ecb9d18cb5f97b&amp;dn=Big.Brother.US.S19E31.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet87118\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87118\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c146b51a29a5425d2e457dbc00ecb9d18cb5f97b&amp;dn=Big.Brother.US.S19E31.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E31 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87118\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>804M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87059" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87059.html">
+																									老大哥 Big Brother US  S19E30 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2J9lO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87059\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=z5riev4&amp;f=Big.Brother.US.S19E30.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87059\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:90d15618e6c49ebb1953d85c083f9bc112bb9dc0&amp;dn=Big.Brother.US.S19E30.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet87059\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87059\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:90d15618e6c49ebb1953d85c083f9bc112bb9dc0&amp;dn=Big.Brother.US.S19E30.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E30 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87059\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.02G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="87058" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87058.html">
+																									老大哥 Big Brother US  S19E30 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mi1do28" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87058\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=mk6qv3l&amp;f=Big.Brother.US.S19E30.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87058\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c5110cfc6bb9997b68b3ec3dda65e070fdd86c28&amp;dn=Big.Brother.US.S19E30.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet87058\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87058\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c5110cfc6bb9997b68b3ec3dda65e070fdd86c28&amp;dn=Big.Brother.US.S19E30.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E30 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87058\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>800M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86951" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86951.html">
+																									老大哥 Big Brother US  S19E29 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1cxZErG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86951\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=rpit4wf&amp;f=Big.Brother.US.S19E29.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86951\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:10beb48681360e45895758814446bcbde07a1c11&amp;dn=Big.Brother.US.S19E29.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet86951\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86951\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:10beb48681360e45895758814446bcbde07a1c11&amp;dn=Big.Brother.US.S19E29.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E29 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86951\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86950" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86950.html">
+																									老大哥 Big Brother US  S19E29 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c8jgj8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86950\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=tmyk43l&amp;f=Big.Brother.US.S19E29.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86950\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a863b26414f6cb21eeec573470a3af4368d117b4&amp;dn=Big.Brother.US.S19E29.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet86950\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86950\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a863b26414f6cb21eeec573470a3af4368d117b4&amp;dn=Big.Brother.US.S19E29.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E29 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86950\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>313M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86801" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86801.html">
+																									老大哥 Big Brother US  S19E28 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o7EVKYQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86801\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=i6g3to1&amp;f=Big.Brother.US.S19E28.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86801\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:dfe2e3823520d2ee8e2ee4193f1b9f95c1f42bd1&amp;dn=Big.Brother.US.S19E28.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet86801\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86801\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:dfe2e3823520d2ee8e2ee4193f1b9f95c1f42bd1&amp;dn=Big.Brother.US.S19E28.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E28 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86801\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>991M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86800" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86800.html">
+																									老大哥 Big Brother US  S19E28 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dF3tgVR" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86800\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=4z137yr&amp;f=Big.Brother.US.S19E28.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86800\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9a61f6f96eb3b6be23267ede27fba0a8339ed8e4&amp;dn=Big.Brother.US.S19E28.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet86800\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86800\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9a61f6f96eb3b6be23267ede27fba0a8339ed8e4&amp;dn=Big.Brother.US.S19E28.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E28 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86800\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>807M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86733" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86733.html">
+																									老大哥 Big Brother US  S19E27 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYM9x2c" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86733\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=7v2i8dc&amp;f=Big.Brother.US.S19E27.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86733\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:94622f078ad5517149c0f07baced2453aadce721&amp;dn=Big.Brother.US.S19E27.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet86733\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86733\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:94622f078ad5517149c0f07baced2453aadce721&amp;dn=Big.Brother.US.S19E27.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E27 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86733\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.06G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86732" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86732.html">
+																									老大哥 Big Brother US  S19E27 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mhBCanQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86732\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=abgo1qy&amp;f=Big.Brother.US.S19E27.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86732\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:478b5c8cd38af81aed41304e5b4bced8eb1ea498&amp;dn=Big.Brother.US.S19E27.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet86732\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86732\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:478b5c8cd38af81aed41304e5b4bced8eb1ea498&amp;dn=Big.Brother.US.S19E27.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E27 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86732\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>342M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86588" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86588.html">
+																									老大哥 Big Brother US  S19E26 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mifxWco" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86588\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=82q4gb9&amp;f=Big.Brother.US.S19E26.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86588\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1dce994405ba277e0e125f98f512eacbf826dfde&amp;dn=Big.Brother.US.S19E26.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet86588\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86588\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1dce994405ba277e0e125f98f512eacbf826dfde&amp;dn=Big.Brother.US.S19E26.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E26 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86588\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86587" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86587.html">
+																									老大哥 Big Brother US  S19E26 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hr6unPE" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86587\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=y61sgr8&amp;f=Big.Brother.US.S19E26.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86587\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:733ca62d141c6d0ec832c2e77f2ac08c7961ad36&amp;dn=Big.Brother.US.S19E26.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet86587\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86587\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:733ca62d141c6d0ec832c2e77f2ac08c7961ad36&amp;dn=Big.Brother.US.S19E26.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E26 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86587\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>825M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86431" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86431.html">
+																									老大哥 Big Brother US  S19E25 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o7Epyye" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86431\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=h84v9fe&amp;f=Big.Brother.US.S19E25.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86431\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:171f714089b06e33613f13e446fc34cc7ec8affa&amp;dn=Big.Brother.US.S19E25.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet86431\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86431\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:171f714089b06e33613f13e446fc34cc7ec8affa&amp;dn=Big.Brother.US.S19E25.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E25 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86431\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>995M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86430" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86430.html">
+																									老大哥 Big Brother US  S19E25 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jHNlhWy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86430\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=w37n62g&amp;f=Big.Brother.US.S19E25.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86430\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f05d3456ae35747606e439290ce1cff1192cab56&amp;dn=Big.Brother.US.S19E25.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet86430\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86430\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f05d3456ae35747606e439290ce1cff1192cab56&amp;dn=Big.Brother.US.S19E25.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E25 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86430\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>308M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86389" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86389.html">
+																									老大哥 Big Brother US  S19E24 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c26c7ew" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86389\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=zqv3h2l&amp;f=Big.Brother.US.S19E24.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86389\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:812e7a487b09c374401631055981a03e231bf5e7&amp;dn=Big.Brother.US.S19E24.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet86389\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86389\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:812e7a487b09c374401631055981a03e231bf5e7&amp;dn=Big.Brother.US.S19E24.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E24 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86389\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.03G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86388" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86388.html">
+																									老大哥 Big Brother US  S19E24 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYBdHSS" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86388\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=oxb5ug3&amp;f=Big.Brother.US.S19E24.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86388\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:bd83bd459cbe883ed3ef1b7ad84e6f7d36e7d58e&amp;dn=Big.Brother.US.S19E24.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet86388\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86388\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:bd83bd459cbe883ed3ef1b7ad84e6f7d36e7d58e&amp;dn=Big.Brother.US.S19E24.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E24 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86388\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>804M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86328" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86328.html">
+																									老大哥 Big Brother US  S19E23 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hrBdKCs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86328\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=axbghok&amp;f=Big.Brother.US.S19E23.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86328\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:635f77e353046451923e06a47d0672ebbf801363&amp;dn=Big.Brother.US.S19E23.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet86328\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86328\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:635f77e353046451923e06a47d0672ebbf801363&amp;dn=Big.Brother.US.S19E23.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E23 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86328\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.02G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86327" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86327.html">
+																									老大哥 Big Brother US  S19E23 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jHLPaRG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86327\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=oylvr8s&amp;f=Big.Brother.US.S19E23.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86327\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6cc2cc83fd8a18cf4266fae5d5769d1e6854bcaa&amp;dn=Big.Brother.US.S19E23.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet86327\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86327\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6cc2cc83fd8a18cf4266fae5d5769d1e6854bcaa&amp;dn=Big.Brother.US.S19E23.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E23 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86327\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>809M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86151" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86151.html">
+																									老大哥 Big Brother US  S19E22 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c0aGFG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86151\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=9szmlc2&amp;f=Big.Brother.US.S19E22.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86151\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c4e89e995a366f6f0dd87ddaa576e542177afcdb&amp;dn=Big.Brother.US.S19E22.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet86151\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86151\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c4e89e995a366f6f0dd87ddaa576e542177afcdb&amp;dn=Big.Brother.US.S19E22.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E22 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86151\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>964M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86150" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86150.html">
+																									老大哥 Big Brother US  S19E22 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jI3OkeE" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86150\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=7fp8yba&amp;f=Big.Brother.US.S19E22.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86150\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:187c8de20c2da35c07f6a3035dd5ad7092081cfa&amp;dn=Big.Brother.US.S19E22.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet86150\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86150\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:187c8de20c2da35c07f6a3035dd5ad7092081cfa&amp;dn=Big.Brother.US.S19E22.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E22 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86150\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>808M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85991" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85991.html">
+																									老大哥 Big Brother US  S19E21 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jImTbP8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85991\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=c6ih2yp&amp;f=Big.Brother.US.S19E21.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85991\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2a822fec2b470228cb44a8509847dc029892db85&amp;dn=Big.Brother.US.S19E21.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet85991\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85991\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2a822fec2b470228cb44a8509847dc029892db85&amp;dn=Big.Brother.US.S19E21.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E21 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85991\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.04G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="85990" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85990.html">
+																									老大哥 Big Brother US  S19E21 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mhQ4okC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85990\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=21qtkax&amp;f=Big.Brother.US.S19E21.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85990\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9adf85fa7e9a32dda97ab7ffdf4dfa25d815d104&amp;dn=Big.Brother.US.S19E21.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet85990\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85990\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9adf85fa7e9a32dda97ab7ffdf4dfa25d815d104&amp;dn=Big.Brother.US.S19E21.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E21 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85990\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>809M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85939" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85939.html">
+																									老大哥 Big Brother US  S19E20 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1miwYrKc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85939\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=78rhm3b&amp;f=Big.Brother.US.S19E20.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85939\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:14c8856ff64d839330d8f2524861a256f9134a03&amp;dn=Big.Brother.US.S19E20.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet85939\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85939\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:14c8856ff64d839330d8f2524861a256f9134a03&amp;dn=Big.Brother.US.S19E20.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E20 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85939\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.05G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="85938" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85938.html">
+																									老大哥 Big Brother US  S19E20 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1slTYaPv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85938\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=85zujhk&amp;f=Big.Brother.US.S19E20.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85938\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:86205c534b37157d5b82676a29b2cbd621d7f4b9&amp;dn=Big.Brother.US.S19E20.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet85938\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85938\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:86205c534b37157d5b82676a29b2cbd621d7f4b9&amp;dn=Big.Brother.US.S19E20.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E20 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85938\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>330M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85772" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85772.html">
+																									老大哥 Big Brother US  S19E19 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dEUMaDr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85772\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=51i8xfm&amp;f=Big.Brother.US.S19E19.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85772\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e5d91f55b2a21f5b86354a020364c6959c25d362&amp;dn=Big.Brother.US.S19E19.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet85772\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85772\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e5d91f55b2a21f5b86354a020364c6959c25d362&amp;dn=Big.Brother.US.S19E19.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E19 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85772\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.40G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="85771" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85771.html">
+																									老大哥 Big Brother US  S19E19 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dFoyQ6t" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85771\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=f9rtqko&amp;f=Big.Brother.US.S19E19.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85771\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f8cfcddb33f6fb04cd725719fc01e5e8a280ccc5&amp;dn=Big.Brother.US.S19E19.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet85771\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85771\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f8cfcddb33f6fb04cd725719fc01e5e8a280ccc5&amp;dn=Big.Brother.US.S19E19.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E19 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85771\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>371M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85600" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85600.html">
+																									老大哥 Big Brother US  S19E18 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1b7lwZ0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85600\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=koqnm8a&amp;f=Big.Brother.US.S19E18.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85600\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:30cd3612731420ee21e6037a4adef6f98c5c2ea3&amp;dn=Big.Brother.US.S19E18.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet85600\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85600\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:30cd3612731420ee21e6037a4adef6f98c5c2ea3&amp;dn=Big.Brother.US.S19E18.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E18 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85600\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="85599" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85599.html">
+																									老大哥 Big Brother US  S19E18 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hsEGWE4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85599\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=bghcvxs&amp;f=Big.Brother.US.S19E18.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85599\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:cd9faeaf36641c9236230d6a0a658ffa453c1d4a&amp;dn=Big.Brother.US.S19E18.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet85599\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85599\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cd9faeaf36641c9236230d6a0a658ffa453c1d4a&amp;dn=Big.Brother.US.S19E18.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E18 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85599\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>330M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85552" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85552.html">
+																									老大哥 Big Brother US  S19E17 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hsxLU1e" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85552\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=687x2ij&amp;f=Big.Brother.US.S19E17.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85552\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b30956be6a5eb622b90f3951cbb1dfc2c268603d&amp;dn=Big.Brother.US.S19E17.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet85552\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85552\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b30956be6a5eb622b90f3951cbb1dfc2c268603d&amp;dn=Big.Brother.US.S19E17.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E17 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85552\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.02G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="85551" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85551.html">
+																									老大哥 Big Brother US  S19E17 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dFlGK6H" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85551\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=x54ipyb&amp;f=Big.Brother.US.S19E17.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85551\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:82d5a909815df92addaa5f9dfaa02fe166a0a58a&amp;dn=Big.Brother.US.S19E17.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet85551\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85551\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:82d5a909815df92addaa5f9dfaa02fe166a0a58a&amp;dn=Big.Brother.US.S19E17.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E17 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85551\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>313M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85443" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85443.html">
+																									老大哥 Big Brother US  S19E16 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i53jsVF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85443\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=rpj824a&amp;f=Big.Brother.US.S19E16.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85443\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d2971b6da6ed6b9282318db9f8f396b69f2edcc3&amp;dn=Big.Brother.US.S19E16.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet85443\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85443\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d2971b6da6ed6b9282318db9f8f396b69f2edcc3&amp;dn=Big.Brother.US.S19E16.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E16 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85443\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>789M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="85442" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85442.html">
+																									老大哥 Big Brother US  S19E16 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1boShPeB" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85442\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=172zltw&amp;f=Big.Brother.US.S19E16.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85442\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9541867a69b2d799208289bf9e5ce26dbf31b078&amp;dn=Big.Brother.US.S19E16.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet85442\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85442\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9541867a69b2d799208289bf9e5ce26dbf31b078&amp;dn=Big.Brother.US.S19E16.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E16 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85442\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>821M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85258" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85258.html">
+																									老大哥 Big Brother US  S19E15 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hsCE8mw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85258\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=l1gtumj&amp;f=Big.Brother.US.S19E15.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85258\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:85e678b3ec9ab3e750bee95c21bd78a783eb6f2a&amp;dn=Big.Brother.US.S19E15.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet85258\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85258\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:85e678b3ec9ab3e750bee95c21bd78a783eb6f2a&amp;dn=Big.Brother.US.S19E15.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E15 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85258\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>978M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="85257" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85257.html">
+																									老大哥 Big Brother US  S19E15 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pKZkH1x" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85257\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=gjfskm4&amp;f=Big.Brother.US.S19E15.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85257\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:31787aefb1b08e20722cd6d57f6d09235204e82b&amp;dn=Big.Brother.US.S19E15.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet85257\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85257\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:31787aefb1b08e20722cd6d57f6d09235204e82b&amp;dn=Big.Brother.US.S19E15.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E15 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85257\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>802M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85209" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85209.html">
+																									老大哥 Big Brother US  S19E14 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o8wTpfs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85209\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=9gsywbm&amp;f=Big.Brother.US.S19E14.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85209\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0772eddf2c33d76d1d8fd4253bdb17ad0a046c59&amp;dn=Big.Brother.US.S19E14.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet85209\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85209\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0772eddf2c33d76d1d8fd4253bdb17ad0a046c59&amp;dn=Big.Brother.US.S19E14.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E14 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85209\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>931M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="85208" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85208.html">
+																									老大哥 Big Brother US  S19E14 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>1M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85105" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85105.html">
+																									老大哥 Big Brother US  S19E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kU9AnhP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85105\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=gpc3hjf&amp;f=Big.Brother.US.S19E13.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85105\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:149ffb9afa38e7965cc63d9c5dc80abecaa16e15&amp;dn=Big.Brother.US.S19E13.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet85105\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85105\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:149ffb9afa38e7965cc63d9c5dc80abecaa16e15&amp;dn=Big.Brother.US.S19E13.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85105\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="85104" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85104.html">
+																									老大哥 Big Brother US  S19E13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nvLXAHj" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85104\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=96wvcz1&amp;f=Big.Brother.US.S19E13.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85104\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4b06eca47365edf6762559cd577762154ca14998&amp;dn=Big.Brother.US.S19E13.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet85104\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85104\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4b06eca47365edf6762559cd577762154ca14998&amp;dn=Big.Brother.US.S19E13.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E13 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85104\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>825M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85037" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85037.html">
+																									老大哥 Big Brother US  S19E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i53iKJz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85037\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=wznjtc9&amp;f=Big.Brother.US.S19E12.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85037\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:889a2fc1703da17891fb3388f370386b13f642b9&amp;dn=Big.Brother.US.S19E12.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet85037\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85037\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:889a2fc1703da17891fb3388f370386b13f642b9&amp;dn=Big.Brother.US.S19E12.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85037\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.04G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="85036" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85036.html">
+																									老大哥 Big Brother US  S19E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1cztmkm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85036\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=hzxkl84&amp;f=Big.Brother.US.S19E12.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85036\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ebbe89d31a882d898500f8c3688932249e84f41c&amp;dn=Big.Brother.US.S19E12.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet85036\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85036\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ebbe89d31a882d898500f8c3688932249e84f41c&amp;dn=Big.Brother.US.S19E12.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85036\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>808M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="84928" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84928.html">
+																									老大哥 Big Brother US  S19E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pLDfSuB" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84928\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=97vwxit&amp;f=Big.Brother.US.S19E11.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84928\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:876b15702c6cf2b300b5f2b5fd560e80ea28c459&amp;dn=Big.Brother.US.S19E11.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet84928\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84928\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:876b15702c6cf2b300b5f2b5fd560e80ea28c459&amp;dn=Big.Brother.US.S19E11.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84928\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.02G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84927" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84927.html">
+																									老大哥 Big Brother US  S19E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1boA6qa7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84927\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=4nrcozh&amp;f=Big.Brother.US.S19E11.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84927\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e854b4a13c1c4612550a3f2d6f88fad850dc0737&amp;dn=Big.Brother.US.S19E11.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84927\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84927\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e854b4a13c1c4612550a3f2d6f88fad850dc0737&amp;dn=Big.Brother.US.S19E11.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84927\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>803M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="84916" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84916.html">
+																									老大哥 Big Brother US  S19E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1skD159r" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84916\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=piulhgt&amp;f=Big.Brother.US.S19E10.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84916\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5e06033f70aaee63c8c6ae8123a6a193c887c150&amp;dn=Big.Brother.US.S19E10.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet84916\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84916\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5e06033f70aaee63c8c6ae8123a6a193c887c150&amp;dn=Big.Brother.US.S19E10.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84916\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84915" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84915.html">
+																									老大哥 Big Brother US  S19E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=9twdv72&amp;f=Big.Brother.US.S19E10.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84915\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4eb048a31a0515b38ea036c7d35140357a170706&amp;dn=Big.Brother.US.S19E10.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84915\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84915\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4eb048a31a0515b38ea036c7d35140357a170706&amp;dn=Big.Brother.US.S19E10.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84915\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>804M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="84773" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84773.html">
+																									老大哥 Big Brother US  S19E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1slFd2qx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84773\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=38kaobp&amp;f=Big.Brother.US.S19E09.720p.HDTV.x264-BAJSKORV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84773\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b2e1a98f4f447b067ad243fe6b465a4ee4f0b58e&amp;dn=Big.Brother.US.S19E09.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet84773\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84773\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b2e1a98f4f447b067ad243fe6b465a4ee4f0b58e&amp;dn=Big.Brother.US.S19E09.720p.HDTV.x264-BAJSKORV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84773\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>837M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84772" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84772.html">
+																									老大哥 Big Brother US  S19E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pLblUen" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84772\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=oygz3ts&amp;f=Big.Brother.US.S19E09.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84772\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b0a110ba67c802486a013727bbf6f65461a22f74&amp;dn=Big.Brother.US.S19E09.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84772\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84772\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b0a110ba67c802486a013727bbf6f65461a22f74&amp;dn=Big.Brother.US.S19E09.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84772\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>296M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="84694" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84694.html">
+																									老大哥 Big Brother US  S19E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dFCdZdZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84694\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=742wfrp&amp;f=Big.Brother.US.S19E08.720p.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84694\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7e5ff19c8213983fa2e6b9ecd03934955b1e33a0&amp;dn=Big.Brother.US.S19E08.720p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84694\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84694\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7e5ff19c8213983fa2e6b9ecd03934955b1e33a0&amp;dn=Big.Brother.US.S19E08.720p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84694\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.09G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84693" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84693.html">
+																									老大哥 Big Brother US  S19E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bpNDqjX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84693\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=3cj1kbo&amp;f=Big.Brother.US.S19E08.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84693\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e59d88d188443550dd5250cc495b427dfde00413&amp;dn=Big.Brother.US.S19E08.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84693\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84693\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e59d88d188443550dd5250cc495b427dfde00413&amp;dn=Big.Brother.US.S19E08.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84693\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>804M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="84568" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84568.html">
+																									老大哥 Big Brother US  S19E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dEI9n3r" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84568\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=nk2ugv7&amp;f=Big.Brother.US.S19E07.720p.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84568\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a093e43dd411fc973daa60f51f97f32c5965c898&amp;dn=Big.Brother.US.S19E07.720p.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84568\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84568\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a093e43dd411fc973daa60f51f97f32c5965c898&amp;dn=Big.Brother.US.S19E07.720p.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84568\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.05G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84567" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84567.html">
+																									老大哥 Big Brother US  S19E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVQKHqn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84567\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=pva68dt&amp;f=Big.Brother.US.S19E07.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84567\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5d16b3ceed79e7dfb274404793a6d9a2dfcee384&amp;dn=Big.Brother.US.S19E07.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84567\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84567\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5d16b3ceed79e7dfb274404793a6d9a2dfcee384&amp;dn=Big.Brother.US.S19E07.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84567\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>315M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="84397" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84397.html">
+																									老大哥 Big Brother US  S19E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c16zQwS" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84397\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=f9qgemd&amp;f=Big.Brother.US.S19E06.720p.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84397\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:aa573b788aeb073ccdcd6e0138e8081f6ddcb603&amp;dn=Big.Brother.US.S19E06.720p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84397\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84397\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:aa573b788aeb073ccdcd6e0138e8081f6ddcb603&amp;dn=Big.Brother.US.S19E06.720p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84397\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.14G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84396" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84396.html">
+																									老大哥 Big Brother US  S19E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dEOELsX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84396\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=hdr7kzc&amp;f=Big.Brother.US.S19E06.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84396\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ea27046af321dd48699e74f25525bf4ef1390328&amp;dn=Big.Brother.US.S19E06.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84396\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84396\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ea27046af321dd48699e74f25525bf4ef1390328&amp;dn=Big.Brother.US.S19E06.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84396\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>841M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="84308" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84308.html">
+																									老大哥 Big Brother US  S19E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIgft1k" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84308\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=8dgxzkb&amp;f=Big.Brother.US.S19E05.720p.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84308\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5a3bdfcc358850befdafa25f9cc59654e08fe030&amp;dn=Big.Brother.US.S19E05.720p.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84308\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84308\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5a3bdfcc358850befdafa25f9cc59654e08fe030&amp;dn=Big.Brother.US.S19E05.720p.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84308\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.12G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84307" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84307.html">
+																									老大哥 Big Brother US  S19E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dEFRf4t" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84307\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=lq6yja5&amp;f=Big.Brother.US.S19E05.HDTV.x264-W4F%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84307\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:842726ffb497134e611c21276fe99c877fb62aed&amp;dn=Big.Brother.US.S19E05.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84307\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84307\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:842726ffb497134e611c21276fe99c877fb62aed&amp;dn=Big.Brother.US.S19E05.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84307\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>349M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="84279" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84279.html">
+																									老大哥 Big Brother US  S19E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>1M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84278" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84278.html">
+																									老大哥 Big Brother US  S19E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVMaG2j" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84278\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=ujhad84&amp;f=Big.Brother.US.S19E04.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84278\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5cf088ad9cf8179c643be1a5a71d6edf9a8f0c98&amp;dn=Big.Brother.US.S19E04.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84278\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84278\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5cf088ad9cf8179c643be1a5a71d6edf9a8f0c98&amp;dn=Big.Brother.US.S19E04.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84278\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>804M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="84061" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84061.html">
+																									老大哥 Big Brother US  S19E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hs1hQnU" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84061\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=1rgu5fa&amp;f=Big.Brother.US.S19E03.720p.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84061\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ff2e50d7c1d05939e0713f4f8016d71d5993a9cc&amp;dn=Big.Brother.US.S19E03.720p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84061\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84061\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ff2e50d7c1d05939e0713f4f8016d71d5993a9cc&amp;dn=Big.Brother.US.S19E03.720p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84061\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.09G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84060" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84060.html">
+																									老大哥 Big Brother US  S19E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eRLo7NO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84060\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=fqkjosh&amp;f=Big.Brother.US.S19E03.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84060\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0e2bc4595f22080229845de3a818ff064066b75f&amp;dn=Big.Brother.US.S19E03.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84060\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84060\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0e2bc4595f22080229845de3a818ff064066b75f&amp;dn=Big.Brother.US.S19E03.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84060\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>803M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="83963" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83963.html">
+																									老大哥 Big Brother US  S19E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfuyi5d" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83963\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=8g1nseu&amp;f=Big.Brother.US.S19E02.720p.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83963\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c9714f7aa4ff903a1935c348ed3e0fe134b6befc&amp;dn=Big.Brother.US.S19E02.720p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83963\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83963\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c9714f7aa4ff903a1935c348ed3e0fe134b6befc&amp;dn=Big.Brother.US.S19E02.720p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83963\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.07G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-06-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="83962" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83962.html">
+																									老大哥 Big Brother US  S19E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bpKUFgV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83962\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=lt2jy1s&amp;f=Big.Brother.US.S19E02.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83962\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2a62a19bd38dc638a71277c473ae615cee69b88a&amp;dn=Big.Brother.US.S19E02.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83962\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83962\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2a62a19bd38dc638a71277c473ae615cee69b88a&amp;dn=Big.Brother.US.S19E02.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83962\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>794M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-06-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="83920" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83920.html">
+																									老大哥 Big Brother US  S19E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kV83kTD" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83920\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=zv24myp&amp;f=Big.Brother.US.S19E01.720p.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83920\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:8f3347dc905609cf93b2ae557179600e80a9a63a&amp;dn=Big.Brother.US.S19E01.720p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83920\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83920\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8f3347dc905609cf93b2ae557179600e80a9a63a&amp;dn=Big.Brother.US.S19E01.720p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83920\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.19G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-06-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="83919" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83919.html">
+																									老大哥 Big Brother US  S19E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nvwnMIX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83919\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=7awzhoc&amp;f=Big.Brother.US.S19E01.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83919\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:52f857c869d6a54f0eadac24176cfa725364b0d5&amp;dn=Big.Brother.US.S19E01.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83919\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83919\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:52f857c869d6a54f0eadac24176cfa725364b0d5&amp;dn=Big.Brother.US.S19E01.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="老大哥 Big Brother US  S19E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83919\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.59G</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-06-29</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,203,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,203);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,203);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,203);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

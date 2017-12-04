@@ -1,0 +1,1522 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 09:26:17 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d343f6ec7d20fb89a83a527b0df8208a61509528377; expires=Thu, 01-Nov-18 09:26:17 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6dcfc4a1c42828-SJC
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>亿万 Billions-亿万下载-亿万全集下载-Billions下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="亿万,Billions,亿万下载,亿万全集下载,亿万高清下载,亿万迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;《财富之战Billions》是一个大胆的现代戏，通过描绘两个雄心勃勃但对立角色的人物性格来讲述关于财富、影响力和腐败的问题。精明、强硬的检察官ChuckRhodes（PaulGiamatti）和才华横溢、极具野心的对冲基金大亨Bobby“Axe”Axelrod（DamianLewis）。剧集设定包括了纽约的强权政治和金融活动的权谋诡计，通过" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 953;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FBillions.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FBillions.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 953;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">亿万 Billions-亿万下载-亿万全集下载-Billions下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/d1d39309c974267d.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/d1d39309c974267d.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周六</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：剧情类</span>						
+						<span>最后更新：2017-05-09 08:25</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/953.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">1303</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>《财富之战 Billions》是一个大胆的现代戏，通过描绘两个雄心勃勃但对立角色的人物性格来讲述关于财富、影响力和腐败的问题。精明、强硬的检察官Chuck Rhodes（Paul Giamatti）和才华横溢、极具野心的对冲基金大亨Bobby “Axe” Axelrod（Damian Lewis）。剧集设定包括了纽约的强权政治和金融活动的权谋诡计，通过错综复杂的叙事特色来编织一个高风险的追捕游戏。此外Maggie Siff、Malin Akerman、Toby Leonard Moore、David Costabile和Condola Rashad联合主演</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="2">
+																			第2季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="1">
+																			第1季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="81024" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81024.html">
+																									亿万 Billions  S02E12 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=enaklq8&amp;f=Billions.S02E12.1080p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'81024\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1254514e3a4aea40764acf8ec09d847e1e8a3d44&amp;dn=Billions.S02E12.1080p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet81024\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81024\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1254514e3a4aea40764acf8ec09d847e1e8a3d44&amp;dn=Billions.S02E12.1080p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E12 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81024\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.17G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80893" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80893.html">
+																									亿万 Billions  S02E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pLg8acr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80893\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=l52bn7i&amp;f=Billions.S02E12.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80893\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b894d916ad34b7f0a7a5ec7d393d0dae37ab0295&amp;dn=Billions.S02E12.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80893\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80893\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b894d916ad34b7f0a7a5ec7d393d0dae37ab0295&amp;dn=Billions.S02E12.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80893\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>905M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80892" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80892.html">
+																									亿万 Billions  S02E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eR4qE0y" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80892\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=9hucz6p&amp;f=Billions.S02E12.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80892\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6f829624cd45e3055b5d8fbeb3fad87aafecbcad&amp;dn=Billions.S02E12.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80892\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80892\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6f829624cd45e3055b5d8fbeb3fad87aafecbcad&amp;dn=Billions.S02E12.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80892\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>267M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80726" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80726.html">
+																									亿万 Billions  S02E11 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=dutqio2&amp;f=Billions.S02E11.1080p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80726\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:47d5d438c6bebcd219a17a8a12889b60fbf86410&amp;dn=Billions.S02E11.1080p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80726\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80726\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:47d5d438c6bebcd219a17a8a12889b60fbf86410&amp;dn=Billions.S02E11.1080p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E11 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80726\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.00G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80337" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80337.html">
+																									亿万 Billions  S02E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c9y1pc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80337\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=xq2o4g8&amp;f=Billions.S02E11.PROPER.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80337\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:622ae0c3520da2bc34cb0ef3ee34dc8b86ad6efc&amp;dn=Billions.S02E11.PROPER.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80337\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80337\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:622ae0c3520da2bc34cb0ef3ee34dc8b86ad6efc&amp;dn=Billions.S02E11.PROPER.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80337\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>818M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80336" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80336.html">
+																									亿万 Billions  S02E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYx061u" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80336\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=o2rxyjq&amp;f=Billions.S02E11.PROPER.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80336\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b86dbf45632e6b7a97b74f1b4024c74f61fd9061&amp;dn=Billions.S02E11.PROPER.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80336\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80336\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b86dbf45632e6b7a97b74f1b4024c74f61fd9061&amp;dn=Billions.S02E11.PROPER.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80336\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>239M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80725" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80725.html">
+																									亿万 Billions  S02E10 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=rtx2a67&amp;f=Billions.S02E10.1080p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80725\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:674c96ec1692122bdea5b48de9c4dd200b0bff92&amp;dn=Billions.S02E10.1080p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80725\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80725\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:674c96ec1692122bdea5b48de9c4dd200b0bff92&amp;dn=Billions.S02E10.1080p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E10 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80725\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.03G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79765" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79765.html">
+																									亿万 Billions  S02E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eRVusi2" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79765\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=s2epcur&amp;f=Billions.S02E10.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79765\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f3d5004b272f2a50c6b8821ce3c5b9bfad00f121&amp;dn=Billions.S02E10.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79765\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79765\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f3d5004b272f2a50c6b8821ce3c5b9bfad00f121&amp;dn=Billions.S02E10.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79765\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>771M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79764" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79764.html">
+																									亿万 Billions  S02E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pLfRsCz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79764\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=2wpcu8a&amp;f=Billions.S02E10.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79764\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ee5d558f4732ddbc57296eecf291613fdcf87012&amp;dn=Billions.S02E10.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79764\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79764\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ee5d558f4732ddbc57296eecf291613fdcf87012&amp;dn=Billions.S02E10.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79764\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>229M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79363" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79363.html">
+																									亿万 Billions  S02E09 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=fw7r8pt&amp;f=Billions.S02E09.1080p.HDTV.x264-aAF%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79363\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a1d4692b8cd427cfb826ed580235182af5300ed5&amp;dn=Billions.S02E09.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79363\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79363\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a1d4692b8cd427cfb826ed580235182af5300ed5&amp;dn=Billions.S02E09.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E09 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79363\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.46G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79237" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79237.html">
+																									亿万 Billions  S02E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dEBJiTz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79237\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=98vklei&amp;f=Billions.S02E09.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79237\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1225d676eaa9ad25af9eb7754483e1ec2d3f5f24&amp;dn=Billions.S02E09.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79237\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79237\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1225d676eaa9ad25af9eb7754483e1ec2d3f5f24&amp;dn=Billions.S02E09.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79237\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>876M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79236" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79236.html">
+																									亿万 Billions  S02E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIQIrrC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79236\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=kh8swtj&amp;f=Billions.S02E09.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79236\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:51248e7d9f757fdfd93a7041f562050c45126e3e&amp;dn=Billions.S02E09.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79236\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79236\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:51248e7d9f757fdfd93a7041f562050c45126e3e&amp;dn=Billions.S02E09.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79236\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>256M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="78911" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78911.html">
+																									亿万 Billions  S02E08 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=64k9ty2&amp;f=Billions.S02E08.1080p.HDTV.x264-aAF%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78911\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:544301093f265ff6cef00104e5281756c2c2c0d5&amp;dn=Billions.S02E08.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet78911\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78911\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:544301093f265ff6cef00104e5281756c2c2c0d5&amp;dn=Billions.S02E08.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E08 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78911\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.28G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="78759" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78759.html">
+																									亿万 Billions  S02E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jI80YYM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78759\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=rcivpy2&amp;f=Billions.S02E08.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78759\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ce6e151644e8aeeea0999503313df1ca85013046&amp;dn=Billions.S02E08.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet78759\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78759\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ce6e151644e8aeeea0999503313df1ca85013046&amp;dn=Billions.S02E08.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78759\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>785M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="78758" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78758.html">
+																									亿万 Billions  S02E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1miFi16o" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78758\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=fzw5l4k&amp;f=Billions.S02E08.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78758\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:015efc512a9b3050164f5b1a5f71538e9221ca1d&amp;dn=Billions.S02E08.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet78758\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78758\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:015efc512a9b3050164f5b1a5f71538e9221ca1d&amp;dn=Billions.S02E08.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78758\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>233M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="78910" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78910.html">
+																									亿万 Billions  S02E07 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=qh3984a&amp;f=Billions.S02E07.1080p.HDTV.x264-aAF%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78910\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1ca0aa542b26dd3b75eaaa7ec68e9eb13a380f9e&amp;dn=Billions.S02E07.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet78910\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78910\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1ca0aa542b26dd3b75eaaa7ec68e9eb13a380f9e&amp;dn=Billions.S02E07.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E07 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78910\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.07G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="78147" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78147.html">
+																									亿万 Billions  S02E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1miuPukS" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78147\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=y8hiek4&amp;f=Billions.S02E07.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78147\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:66776805fbb0093b7f8ae0aef852554b49fc3782&amp;dn=Billions.S02E07.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet78147\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78147\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:66776805fbb0093b7f8ae0aef852554b49fc3782&amp;dn=Billions.S02E07.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78147\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>824M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="78146" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78146.html">
+																									亿万 Billions  S02E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nvuhwFZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78146\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=fd6nhk7&amp;f=Billions.S02E07.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78146\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b5c54becd9c6b221d0ce059370244a4f4a751e4a&amp;dn=Billions.S02E07.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet78146\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78146\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b5c54becd9c6b221d0ce059370244a4f4a751e4a&amp;dn=Billions.S02E07.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78146\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>238M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="78642" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78642.html">
+																									亿万 Billions  S02E06 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=nyilrdw&amp;f=Billions.S02E06.1080p.HDTV.x264-aAF%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78642\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1183297aa863f3d5db78af90a37dfd7e173c2526&amp;dn=Billions.S02E06.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet78642\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78642\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1183297aa863f3d5db78af90a37dfd7e173c2526&amp;dn=Billions.S02E06.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E06 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78642\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.25G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77539" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77539.html">
+																									亿万 Billions  S02E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hsLv1SK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77539\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=13ehdc9&amp;f=Billions.S02E06.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77539\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c61fbbfa209ed521c3967a7ab5d6834d9b376a12&amp;dn=Billions.S02E06.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77539\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77539\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c61fbbfa209ed521c3967a7ab5d6834d9b376a12&amp;dn=Billions.S02E06.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77539\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>826M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="77538" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77538.html">
+																									亿万 Billions  S02E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1geJf1sR" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77538\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=exmni8d&amp;f=Billions.S02E06.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77538\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f2de52dfdf698b1ea0a28321409b004120a6b7d4&amp;dn=Billions.S02E06.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77538\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77538\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f2de52dfdf698b1ea0a28321409b004120a6b7d4&amp;dn=Billions.S02E06.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77538\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>236M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77288" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77288.html">
+																									亿万 Billions  S02E05 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=3k289hz&amp;f=Billions.S02E05.1080p.HDTV.x264-aAF%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77288\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1198d248adbafd8f2049e02d7839ea7fc7d10648&amp;dn=Billions.S02E05.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77288\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77288\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1198d248adbafd8f2049e02d7839ea7fc7d10648&amp;dn=Billions.S02E05.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E05 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77288\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.65G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="77017" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77017.html">
+																									亿万 Billions  S02E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nuLAENn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77017\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=owezusn&amp;f=Billions.S02E05.PROPER.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77017\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0e5059961831c2975f967dfe212ee4312454411e&amp;dn=Billions.S02E05.PROPER.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet77017\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77017\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0e5059961831c2975f967dfe212ee4312454411e&amp;dn=Billions.S02E05.PROPER.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77017\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>881M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77016" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77016.html">
+																									亿万 Billions  S02E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c1QCJtA" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77016\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=rogi1v9&amp;f=Billions.S02E05.PROPER.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77016\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:089e60a932e554f6381b05c277d4b3da92dbfdf6&amp;dn=Billions.S02E05.PROPER.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77016\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77016\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:089e60a932e554f6381b05c277d4b3da92dbfdf6&amp;dn=Billions.S02E05.PROPER.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77016\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>261M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="77287" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77287.html">
+																									亿万 Billions  S02E04 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=l39ryfo&amp;f=Billions.S02E04.1080p.HDTV.x264-aAF%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77287\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:59c0f1eea2e1d4dfdb886cad8745260ec21c9d80&amp;dn=Billions.S02E04.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77287\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77287\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:59c0f1eea2e1d4dfdb886cad8745260ec21c9d80&amp;dn=Billions.S02E04.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E04 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77287\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.51G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="76457" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76457.html">
+																									亿万 Billions  S02E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nva3qvn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'76457\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=etai963&amp;f=Billions.S02E04.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'76457\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3702b6dab1664810d5a100e25b4d11485eff065d&amp;dn=Billions.S02E04.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet76457\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76457\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3702b6dab1664810d5a100e25b4d11485eff065d&amp;dn=Billions.S02E04.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76457\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>889M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="76456" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76456.html">
+																									亿万 Billions  S02E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1sl8liAL" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'76456\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=vz74gxf&amp;f=Billions.S02E04.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'76456\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c23f3809d072a45a231e97e44d2ae239287097dc&amp;dn=Billions.S02E04.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet76456\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76456\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c23f3809d072a45a231e97e44d2ae239287097dc&amp;dn=Billions.S02E04.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76456\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>257M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77286" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77286.html">
+																									亿万 Billions  S02E03 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=qwvdfsl&amp;f=Billions.S02E03.1080p.HDTV.x264-aAF%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77286\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e613f51947243c79d4bdfc8db5ab33ad0c89897e&amp;dn=Billions.S02E03.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77286\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77286\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e613f51947243c79d4bdfc8db5ab33ad0c89897e&amp;dn=Billions.S02E03.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E03 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77286\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.39G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="75926" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75926.html">
+																									亿万 Billions  S02E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qY98Goc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75926\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=rtjdihk&amp;f=Billions.S02E03.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75926\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1b07a075c060dbc5bf387734ef1d45968b1b341f&amp;dn=Billions.S02E03.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet75926\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75926\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1b07a075c060dbc5bf387734ef1d45968b1b341f&amp;dn=Billions.S02E03.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75926\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>830M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="75925" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75925.html">
+																									亿万 Billions  S02E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1slRN67j" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75925\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=frkja2z&amp;f=Billions.S02E03.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75925\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:10b6446b2740efca950415e58603398626f79c3e&amp;dn=Billions.S02E03.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet75925\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75925\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:10b6446b2740efca950415e58603398626f79c3e&amp;dn=Billions.S02E03.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75925\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>242M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="75995" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75995.html">
+																									亿万 Billions  S02E02 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=srbx98g&amp;f=Billions.S02E02.1080p.HDTV.x264-aAF%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75995\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f0b2f2e20e14abf3b7d40a249963ffc9414eb1c1&amp;dn=Billions.S02E02.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet75995\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75995\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f0b2f2e20e14abf3b7d40a249963ffc9414eb1c1&amp;dn=Billions.S02E02.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E02 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75995\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.76G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="75056" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75056.html">
+																									亿万 Billions  S02E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bo7GvRx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75056\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=jtsvgq4&amp;f=Billions.S02E02.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75056\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:886422b3cf5db0a0cf6a1ee52b91348aa66ef44c&amp;dn=Billions.S02E02.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet75056\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75056\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:886422b3cf5db0a0cf6a1ee52b91348aa66ef44c&amp;dn=Billions.S02E02.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75056\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.32G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="75055" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75055.html">
+																									亿万 Billions  S02E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1miykQxE" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75055\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=tbrywlj&amp;f=Billions.S02E02.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75055\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:eeac056071cd4ba5eaec1d3cf1765041fa893f16&amp;dn=Billions.S02E02.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet75055\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75055\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:eeac056071cd4ba5eaec1d3cf1765041fa893f16&amp;dn=Billions.S02E02.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75055\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>338M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="74786" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74786.html">
+																									亿万 Billions  S02E01 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=9no4lpy&amp;f=Billions.S02E01.1080p.HDTV.x264-aAF%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'74786\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:aaf4e7f836dd71b3dfbea96e10c86490901d1d2a&amp;dn=Billions.S02E01.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet74786\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74786\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:aaf4e7f836dd71b3dfbea96e10c86490901d1d2a&amp;dn=Billions.S02E01.1080p.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E01 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74786\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.65G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="74183" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74183.html">
+																									亿万 Billions  S02E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o7WvQbg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'74183\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ixykzd7&amp;f=Billions.S02E01.720p.HDTV.x264-BATV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'74183\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:851c2583bf633fee012460df625197ee1810bcec&amp;dn=Billions.S02E01.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet74183\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74183\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:851c2583bf633fee012460df625197ee1810bcec&amp;dn=Billions.S02E01.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74183\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>976M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="74167" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74167.html">
+																									亿万 Billions  S02E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c289VOW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'74167\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=gdvwniu&amp;f=Billions.S02E01.HDTV.x264-BATV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'74167\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:50b753bd8c58e7be3ab7efaced65987824d2ab6a&amp;dn=Billions.S02E01.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet74167\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74167\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:50b753bd8c58e7be3ab7efaced65987824d2ab6a&amp;dn=Billions.S02E01.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="亿万 Billions  S02E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74167\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>256M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-11</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,953,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,953);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,953);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,953);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

@@ -1,0 +1,2105 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 10:59:50 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d0245e9d9fcd8333867b6f5d4b3394d081509533989; expires=Thu, 01-Nov-18 10:59:49 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e58cba04a7838-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>信使 The Messengers-信使下载-信使全集下载-The Messengers下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="信使,The Messengers,信使下载,信使全集下载,信使高清下载,信使迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;《信使》该剧由电影制片人BasilIwanyk开发，来自《少狼》的一名编剧执笔创作，来自《傲骨贤妻》的一名执行制片人监制。故事描述一个神秘物体从天而降，掉落在地球的某个地方。它释放出巨大的能量冲击波，一群看似相互毫无关联的陌生人因此死去。他们随后醒来，发现自己成了阻止即将到来的「天劫」的最后希望。「当第五位天使吹响号角，我看见一颗星从天堂落" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 809;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FThe.Messengers.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FThe.Messengers.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 809;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">信使 The Messengers-信使下载-信使全集下载-The Messengers下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i1.piimg.com/588755/c22f85e58c9af1c1.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i1.piimg.com/588755/c22f85e58c9af1c1.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周六</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：科幻类</span>						
+						<span>最后更新：2015-07-28 09:49</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/809.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">336</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>《信使》该剧由电影制片人Basil Iwanyk开发，来自《少狼》的一名编剧执笔创作，来自《傲骨贤妻》的一名执行制片人监制。故事描述一个神秘物体从天而降，掉落在地球的某个地方。它释放出巨大的能量冲击波，一群看似相互毫无关联的陌生人因此死去。他们随后醒来，发现自己成了阻止即将到来的「天劫」的最后希望。
+
+「当第五位天使吹响号角，我看见一颗星从天堂落到人间，赐给他无底坑的钥匙。」——《新约圣经-启示录》第九章。
+
+在艳阳高照的新墨西哥州沙漠里，科学家Vera Ivanov（Shantel VanSanten）亲眼目睹一个令人着迷的神秘物体从天而降，坠落在地球表面。那东西坠地后发生爆炸，随即产生耀眼的闪光，一股超强的能量波从中心向外快速扩展。Vera被能量波击中，她的心跳一度短暂停止……但她很快又活了过来。
+
+但Vera不是唯一受能量波冲击影响的人——她因为这件事与四个从未见面的陌生人产生了持续不断的神秘连接，他们全都在那一刻「死亡」，然后又在数小时之后奇迹般地苏醒。这四个神秘人包括：年轻的母亲Erin（Sofia Black-D’Elia），正拼死保护7岁大女儿免遭虐待成性的前夫伤害；问题缠身的高中学生Peter（Joel Courtney），因为无法继续忍受校园恶霸的欺凌而突然爆发，向对手发动反击；联邦探员Raul（JD Pardo），试图逃离自己正在执行卧底任务的墨西哥贩毒集团；个性迷人的Joshua Jr.（Jon Fletcher），继承父亲的衣钵做了一名电视福音传道者。
+
+当这些人醒来之后，他们发现自己身上突然出现了令人难以置信的超能力，包括无与伦比的力量和快速治愈他人的能力。一个代号「此人」（The Man，Diogo Morgado）的神秘无名氏承诺帮助Vera实现最大的愿望——与遭绑架的儿子团聚——但Vera首先要帮助他完成一项充满道德挑战的艰巨任务。这项任务导致Vera与Rose Arvale护士（Anna Diop）直接相遇。Arvale护士因为一起看似随机的暴力事件而陷入昏迷整整七年时间，最近突然有了知觉。
+
+一切正如Joshua, Jr.所预言的那样，《启示录》的车轮已经开始滚动，这群陌生人是阻止即将到来的天劫的唯一希望……但他们也很可能直接导致天劫的发生。 &nbsp; 转自天涯小筑</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="-1">
+																			其它																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="43153" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/43153.html">
+																									信使 The Messengers S01E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWom5mG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'43153\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ff9a3665a63c5a98c72dada45e54b0948bf6fe66&amp;dn=The.Messengers.2015.S01E13.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" target="_blank" name=\'magnet43153\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'43153\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ff9a3665a63c5a98c72dada45e54b0948bf6fe66&amp;dn=The.Messengers.2015.S01E13.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'43153\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.04G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-07-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="43282" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/43282.html">
+																									信使 The Messengers S01E13 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E13.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|517173588|C6080F0DCA754444AEC8778877A2310D|h=ZHNGYP5455ZNT2TOLFLB5BROZ4THJGER|/" rel="nofollow" target="_blank" name=\'ed2k43282\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'43282\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E13.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|517173588|C6080F0DCA754444AEC8778877A2310D|h=ZHNGYP5455ZNT2TOLFLB5BROZ4THJGER|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E13 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'43282\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>493M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-07-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="43281" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/43281.html">
+																									信使 The Messengers S01E13 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E13.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|517173588|C6080F0DCA754444AEC8778877A2310D|h=ZHNGYP5455ZNT2TOLFLB5BROZ4THJGER|/" rel="nofollow" target="_blank" name=\'ed2k43281\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'43281\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E13.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|517173588|C6080F0DCA754444AEC8778877A2310D|h=ZHNGYP5455ZNT2TOLFLB5BROZ4THJGER|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E13 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'43281\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>493M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-07-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="43280" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/43280.html">
+																									信使 The Messengers S01E13 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E13.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|230462614|4AF5EE8377ECAB9ACE97C696ED4EB8D3|h=454ZDSLSHFRDMPRZZN2QGYLWDJUQBOK5|/" rel="nofollow" target="_blank" name=\'ed2k43280\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'43280\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E13.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|230462614|4AF5EE8377ECAB9ACE97C696ED4EB8D3|h=454ZDSLSHFRDMPRZZN2QGYLWDJUQBOK5|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E13 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'43280\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>219M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-07-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="43197" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/43197.html">
+																									信使 The Messengers S01E13 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqIpkeK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'43197\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e59a0275829097d4af9dbb454eecd735caf6ce57&amp;dn=The.Messengers.S01E13.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet43197\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'43197\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e59a0275829097d4af9dbb454eecd735caf6ce57&amp;dn=The.Messengers.S01E13.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E13 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'43197\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.51G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-07-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="43152" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/43152.html">
+																									信使 The Messengers S01E13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjICFdr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'43152\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:692e002277b9b1dcbbca796244cd44f5a7730681&amp;dn=The+Messengers+2015+S01E13+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet43152\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'43152\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:692e002277b9b1dcbbca796244cd44f5a7730681&amp;dn=The+Messengers+2015+S01E13+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E13 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'43152\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>318M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-07-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="42796" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/42796.html">
+																									信使 The Messengers S01E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTowngb" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'42796\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1eb764a442105ee91b0e99706be1d2939a2a2352&amp;dn=The.Messengers.2015.S01E12.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet42796\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'42796\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1eb764a442105ee91b0e99706be1d2939a2a2352&amp;dn=The.Messengers.2015.S01E12.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'42796\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.05G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-07-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="42896" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/42896.html">
+																									信使 The Messengers S01E12 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E12.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|504967045|FB27FBD76F4A749D8075DDC4C52FE671|h=OZJSOPXHKYDKVVZWZVFCYDUMIDUDNFO3|/" rel="nofollow" target="_blank" name=\'ed2k42896\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'42896\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E12.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|504967045|FB27FBD76F4A749D8075DDC4C52FE671|h=OZJSOPXHKYDKVVZWZVFCYDUMIDUDNFO3|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E12 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'42896\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>481M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-07-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="42895" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/42895.html">
+																									信使 The Messengers S01E12 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E12.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|225041448|796B417A5956A835C47AA7BDFCA9CA93|h=3Z36NJ2PLTEHZY2O6LYC2K4A3X5EMWB2|/" rel="nofollow" target="_blank" name=\'ed2k42895\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'42895\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E12.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|225041448|796B417A5956A835C47AA7BDFCA9CA93|h=3Z36NJ2PLTEHZY2O6LYC2K4A3X5EMWB2|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E12 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'42895\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>214M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-07-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="42868" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/42868.html">
+																									信使 The Messengers S01E12 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qW7OW5u" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'42868\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ba8fe68d6f861ca05f8d05a9ce66e3ff7df9b35a&amp;dn=The.Messengers.S01E12.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet42868\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'42868\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ba8fe68d6f861ca05f8d05a9ce66e3ff7df9b35a&amp;dn=The.Messengers.S01E12.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E12 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'42868\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.53G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-07-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="42795" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/42795.html">
+																									信使 The Messengers S01E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sj82KPJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'42795\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:30833933c9d2af62570231730335f1869bcfca3f&amp;dn=The.Messengers.2015.S01E12.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet42795\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'42795\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:30833933c9d2af62570231730335f1869bcfca3f&amp;dn=The.Messengers.2015.S01E12.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'42795\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>267M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-07-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="42521" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/42521.html">
+																									信使 The Messengers S01E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQnQgme" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'42521\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:156780e39fbad5d3ec96c7fb8b6ded6197dadfe2&amp;dn=The.Messengers.2015.S01E11.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" target="_blank" name=\'magnet42521\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'42521\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:156780e39fbad5d3ec96c7fb8b6ded6197dadfe2&amp;dn=The.Messengers.2015.S01E11.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'42521\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.02G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-07-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="42894" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/42894.html">
+																									信使 The Messengers S01E11 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E11.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|512032003|7AE731F28D28E2BF1D1AA6B1F3E5E6E6|h=2NTX6QHRYF2ZUZIXMUBOVCUHH454DXNA|/" rel="nofollow" target="_blank" name=\'ed2k42894\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'42894\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E11.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|512032003|7AE731F28D28E2BF1D1AA6B1F3E5E6E6|h=2NTX6QHRYF2ZUZIXMUBOVCUHH454DXNA|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E11 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'42894\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>488M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-07-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="42893" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/42893.html">
+																									信使 The Messengers S01E11 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E11.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|228188195|0A2B87AF9CAE43B84D6D616173A0C49C|h=JFQJVHZ2O4NFICJTR7SBP7CCOKVDBIJH|/" rel="nofollow" target="_blank" name=\'ed2k42893\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'42893\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E11.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|228188195|0A2B87AF9CAE43B84D6D616173A0C49C|h=JFQJVHZ2O4NFICJTR7SBP7CCOKVDBIJH|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E11 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'42893\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>217M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-07-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="42540" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/42540.html">
+																									信使 The Messengers S01E11 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jG5sLMm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'42540\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8fee8e76361162a0bbda291d47a2789ec234d895&amp;dn=The.Messengers.S01E11.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet42540\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'42540\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8fee8e76361162a0bbda291d47a2789ec234d895&amp;dn=The.Messengers.S01E11.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E11 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'42540\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.49G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-07-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="42520" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/42520.html">
+																									信使 The Messengers S01E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3F4qax" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'42520\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e70e7c145bea161b50a53dd85fc3e9066751c2a1&amp;dn=The.Messengers.2015.S01E11.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet42520\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'42520\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e70e7c145bea161b50a53dd85fc3e9066751c2a1&amp;dn=The.Messengers.2015.S01E11.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'42520\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>287M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-07-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="41752" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41752.html">
+																									信使 The Messengers S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJ3ftd5" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'41752\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:70c279bb17c74712cbf902df6925b3976528a042&amp;dn=The.Messengers.S01E10.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet41752\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'41752\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:70c279bb17c74712cbf902df6925b3976528a042&amp;dn=The.Messengers.S01E10.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41752\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.30G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-06-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="42025" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/42025.html">
+																									信使 The Messengers S01E10 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E10.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|532637988|FDA5FEDB9DE0D3CED98D08BDF459FEFA|h=PISTDMBSFBATSMTXPDXHEO6ECCQCODQV|/" rel="nofollow" target="_blank" name=\'ed2k42025\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'42025\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E10.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|532637988|FDA5FEDB9DE0D3CED98D08BDF459FEFA|h=PISTDMBSFBATSMTXPDXHEO6ECCQCODQV|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E10 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'42025\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>507M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-06-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="42024" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/42024.html">
+																									信使 The Messengers S01E10 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E10.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|237372985|FAB982DF53D713522B1EBD372E71C0C4|h=C3IVAKZLPTOMFIJARWMDCLCGPGKHYDCJ|/" rel="nofollow" target="_blank" name=\'ed2k42024\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'42024\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E10.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|237372985|FAB982DF53D713522B1EBD372E71C0C4|h=C3IVAKZLPTOMFIJARWMDCLCGPGKHYDCJ|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E10 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'42024\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>226M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-06-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="41801" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41801.html">
+																									信使 The Messengers S01E10 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQlgKMI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'41801\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:04f42cdf82c832e36f786792b1cbf2c008b22245&amp;dn=The.Messengers.S01E10.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet41801\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'41801\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:04f42cdf82c832e36f786792b1cbf2c008b22245&amp;dn=The.Messengers.S01E10.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E10 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41801\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.56G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-06-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="41751" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41751.html">
+																									信使 The Messengers S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDrUv8d" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'41751\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:15f44a1dc867f1b3197c33d054c0f20c98c02288&amp;dn=The.Messengers.S01E10.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet41751\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'41751\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:15f44a1dc867f1b3197c33d054c0f20c98c02288&amp;dn=The.Messengers.S01E10.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41751\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>356M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-06-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="41480" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41480.html">
+																									信使 The Messengers S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sj7K7aH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'41480\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:52f142b0d0b507c5e5d23366a89b8692f497b0ea&amp;dn=The.Messengers.2015.S01E09.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet41480\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'41480\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:52f142b0d0b507c5e5d23366a89b8692f497b0ea&amp;dn=The.Messengers.2015.S01E09.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41480\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.18G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-06-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="41701" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41701.html">
+																									信使 The Messengers S01E09 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E09.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|518517790|8D10D55231BFCCA1CA7256E273F16EEC|h=WNUWH77P434EQG2CWNVPZLJMXEBRB5V6|/" rel="nofollow" target="_blank" name=\'ed2k41701\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'41701\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E09.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|518517790|8D10D55231BFCCA1CA7256E273F16EEC|h=WNUWH77P434EQG2CWNVPZLJMXEBRB5V6|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E09 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41701\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>495M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-06-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="41699" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41699.html">
+																									信使 The Messengers S01E09 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E09.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|231052020|3B37E353DB1ED6AB2EE2D203151E648F|h=VD46EKQJLGWGMNA7LJBSAOENLOBPUBNH|/" rel="nofollow" target="_blank" name=\'ed2k41699\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'41699\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E09.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|231052020|3B37E353DB1ED6AB2EE2D203151E648F|h=VD46EKQJLGWGMNA7LJBSAOENLOBPUBNH|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E09 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41699\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>220M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-06-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="41531" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41531.html">
+																									信使 The Messengers S01E09 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQrlXYi" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'41531\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fa5a8bb93fcd86976f2c885b5c15b4373f5c721e&amp;dn=The.Messengers.S01E09.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet41531\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'41531\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fa5a8bb93fcd86976f2c885b5c15b4373f5c721e&amp;dn=The.Messengers.S01E09.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E09 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41531\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.52G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-06-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="41479" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41479.html">
+																									信使 The Messengers S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQrRSNC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'41479\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:17197ab81a66eaf50bfb8795d3c9ac41ef629705&amp;dn=The.Messengers.2015.S01E09.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet41479\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'41479\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:17197ab81a66eaf50bfb8795d3c9ac41ef629705&amp;dn=The.Messengers.2015.S01E09.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41479\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>275M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-06-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="41181" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41181.html">
+																									信使 The Messengers S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6GDG9O" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'41181\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d73c3b4a570fcba7395a9917a79c82718c5668b2&amp;dn=The.Messengers.2015.S01E08.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" target="_blank" name=\'magnet41181\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'41181\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d73c3b4a570fcba7395a9917a79c82718c5668b2&amp;dn=The.Messengers.2015.S01E08.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41181\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.02G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-06-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="41700" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41700.html">
+																									信使 The Messengers S01E08 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E08.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|528775060|65A4CB83143A8FD02E032B4039BA070B|h=UAD65VYAJCXYL3QZISHNZHYPOTZVBETS|/" rel="nofollow" target="_blank" name=\'ed2k41700\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'41700\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E08.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|528775060|65A4CB83143A8FD02E032B4039BA070B|h=UAD65VYAJCXYL3QZISHNZHYPOTZVBETS|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E08 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41700\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>504M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-06-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="41698" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41698.html">
+																									信使 The Messengers S01E08 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E08.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|235644239|027BBAC2A4AEDDC4112E68230B4F6F2A|h=DKMUF7BZFPFZSJDVSP33T54HNVBUSOE4|/" rel="nofollow" target="_blank" name=\'ed2k41698\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'41698\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E08.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|235644239|027BBAC2A4AEDDC4112E68230B4F6F2A|h=DKMUF7BZFPFZSJDVSP33T54HNVBUSOE4|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E08 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41698\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>224M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-06-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="41239" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41239.html">
+																									信使 The Messengers S01E08 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntGFMh7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'41239\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e17abe6fe7e37431b899301d56b0a6919eb067d4&amp;dn=The.Messengers.S01E08.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet41239\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'41239\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e17abe6fe7e37431b899301d56b0a6919eb067d4&amp;dn=The.Messengers.S01E08.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E08 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41239\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.56G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-06-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="41180" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41180.html">
+																									信使 The Messengers S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqEifpq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'41180\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:cc4e4a7959029be0aa5bfbfc255bd79c8f904264&amp;dn=The.Messengers.2015.S01E08.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet41180\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'41180\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cc4e4a7959029be0aa5bfbfc255bd79c8f904264&amp;dn=The.Messengers.2015.S01E08.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41180\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>292M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-06-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40928" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40928.html">
+																									信使 The Messengers S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnzyMXx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40928\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:63e3ccf92e4f587806ad33077d3309974b7012df&amp;dn=The.Messengers.2015.S01E07.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" target="_blank" name=\'magnet40928\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40928\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:63e3ccf92e4f587806ad33077d3309974b7012df&amp;dn=The.Messengers.2015.S01E07.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40928\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="41170" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41170.html">
+																									信使 The Messengers S01E07 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E07.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|507697732|241FC0A68DCACC1C3DE7C0D078947EE9|h=N2QBBQ2EI65PIZLJQX3I2GO6NVJUVQ7X|/" rel="nofollow" target="_blank" name=\'ed2k41170\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'41170\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E07.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|507697732|241FC0A68DCACC1C3DE7C0D078947EE9|h=N2QBBQ2EI65PIZLJQX3I2GO6NVJUVQ7X|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E07 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41170\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>484M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-06-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="41169" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41169.html">
+																									信使 The Messengers S01E07 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E07.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|226253459|D82F8998028DE3474B3D7226FFDDF1C2|h=XKVZ6ELJJ3AI7SULN6EB6TFHIZFJDHGA|/" rel="nofollow" target="_blank" name=\'ed2k41169\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'41169\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E07.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|226253459|D82F8998028DE3474B3D7226FFDDF1C2|h=XKVZ6ELJJ3AI7SULN6EB6TFHIZFJDHGA|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E07 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41169\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>215M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-06-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40948" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40948.html">
+																									信使 The Messengers S01E07 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nt1gvzV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40948\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6700130db176a8e9594c6510a7184fc38bfdc12a&amp;dn=The.Messengers.S01E07.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet40948\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40948\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6700130db176a8e9594c6510a7184fc38bfdc12a&amp;dn=The.Messengers.S01E07.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E07 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40948\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.53G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40927" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40927.html">
+																									信使 The Messengers S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdtlbX5" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40927\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:22ec118a55f14ede03adabcc6c7d90b8fdbdf181&amp;dn=The.Messengers.2015.S01E07.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40927\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40927\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:22ec118a55f14ede03adabcc6c7d90b8fdbdf181&amp;dn=The.Messengers.2015.S01E07.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40927\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>284M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40713" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40713.html">
+																									信使 The Messengers S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnrWZsN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40713\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:cb3ceea537e1a72f173c69075413887005a361a5&amp;dn=The.Messengers.2015.S01E06.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" target="_blank" name=\'magnet40713\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40713\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cb3ceea537e1a72f173c69075413887005a361a5&amp;dn=The.Messengers.2015.S01E06.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40713\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.02M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40886" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40886.html">
+																									信使 The Messengers S01E06 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E06.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|485714163|35A50C899478C73145DADA1113F6A96B|h=BDOBYVXEVK3SJMYX5TTMMQ6POVYONNJ3|/" rel="nofollow" target="_blank" name=\'ed2k40886\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'40886\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E06.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|485714163|35A50C899478C73145DADA1113F6A96B|h=BDOBYVXEVK3SJMYX5TTMMQ6POVYONNJ3|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E06 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40886\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>463M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40885" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40885.html">
+																									信使 The Messengers S01E06 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E06.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|216467028|7BC399EB4B0CCC038421EDAAF6A1748A|h=4AZHIXSIYPBRLFCA75HUZYGMFIJLLEWU|/" rel="nofollow" target="_blank" name=\'ed2k40885\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'40885\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E06.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|216467028|7BC399EB4B0CCC038421EDAAF6A1748A|h=4AZHIXSIYPBRLFCA75HUZYGMFIJLLEWU|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E06 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40885\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>206M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40747" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40747.html">
+																									信使 The Messengers S01E06 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGzQrau" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40747\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c1b3197ae7b8934423e99c564418418aba5764b4&amp;dn=The.Messengers.S01E06.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet40747\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40747\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c1b3197ae7b8934423e99c564418418aba5764b4&amp;dn=The.Messengers.S01E06.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E06 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40747\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.44G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40712" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40712.html">
+																									信使 The Messengers S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqzov0S" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40712\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4cf7200a5de084c9b8738b57b3816852e0c9ae41&amp;dn=The.Messengers.2015.S01E06.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40712\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40712\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4cf7200a5de084c9b8738b57b3816852e0c9ae41&amp;dn=The.Messengers.2015.S01E06.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40712\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>259M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40405" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40405.html">
+																									信使 The Messengers S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgDtabu" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40405\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2ba3e8514b47dc84e6326286884bee53c4e47997&amp;dn=The.Messengers.2015.S01E05.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" target="_blank" name=\'magnet40405\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40405\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2ba3e8514b47dc84e6326286884bee53c4e47997&amp;dn=The.Messengers.2015.S01E05.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40405\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>986M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40513" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40513.html">
+																									信使 The Messengers S01E05 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E05.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|492738496|353A5323F3950F74CF3C7ABB7D596EBF|h=LILRABM3TUNYQGHEBND5LSIKMHEDUTYZ|/" rel="nofollow" target="_blank" name=\'ed2k40513\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'40513\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E05.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|492738496|353A5323F3950F74CF3C7ABB7D596EBF|h=LILRABM3TUNYQGHEBND5LSIKMHEDUTYZ|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E05 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40513\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>496M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40512" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40512.html">
+																									信使 The Messengers S01E05 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E05.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|219588936|8781A71CDCF95D8421AEDB47D42C56AB|h=UUVDIWBKFMUFKSQ7KPVT3K7CFIBG5QD7|/" rel="nofollow" target="_blank" name=\'ed2k40512\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'40512\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E05.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|219588936|8781A71CDCF95D8421AEDB47D42C56AB|h=UUVDIWBKFMUFKSQ7KPVT3K7CFIBG5QD7|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E05 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40512\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>209M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40456" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40456.html">
+																									信使 The Messengers S01E05 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqoyLt6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40456\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:365ee65c43b2750d4825fe8cf6e19e23f206fa03&amp;dn=The.Messengers.S01E05.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet40456\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40456\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:365ee65c43b2750d4825fe8cf6e19e23f206fa03&amp;dn=The.Messengers.S01E05.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E05 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40456\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.49G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40404" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40404.html">
+																									信使 The Messengers S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgxJZK0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40404\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:504fa172bec302ac342b307c5dc7b1eb727d5915&amp;dn=The.Messengers.2015.S01E05.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40404\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40404\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:504fa172bec302ac342b307c5dc7b1eb727d5915&amp;dn=The.Messengers.2015.S01E05.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40404\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>274M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39979" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39979.html">
+																									信使 The Messengers S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdxTRYN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39979\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f196e9e10b26fd8dd6a90073003490b162ae85cb&amp;dn=The.Messengers.2015.S01E04.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" target="_blank" name=\'magnet39979\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39979\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f196e9e10b26fd8dd6a90073003490b162ae85cb&amp;dn=The.Messengers.2015.S01E04.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39979\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>977M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40160" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40160.html">
+																									信使 The Messengers S01E04 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E04.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|500176692|C331E93DC419CD8B9C7A902BA0DA97C9|h=KG2QLCGST2VZ6XQX4PGX3JHQ2U3HYXDO|/" rel="nofollow" target="_blank" name=\'ed2k40160\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'40160\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E04.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|500176692|C331E93DC419CD8B9C7A902BA0DA97C9|h=KG2QLCGST2VZ6XQX4PGX3JHQ2U3HYXDO|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E04 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40160\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>477M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40159" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40159.html">
+																									信使 The Messengers S01E04 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E04.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|222898883|4B02D0F3D7E7BDC86335FBD8BC3B0214|h=WOZ4NGDJPKS6HBQMIMWUZAQFGRVDY65A|/" rel="nofollow" target="_blank" name=\'ed2k40159\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'40159\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E04.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|222898883|4B02D0F3D7E7BDC86335FBD8BC3B0214|h=WOZ4NGDJPKS6HBQMIMWUZAQFGRVDY65A|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E04 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40159\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>212M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40035" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40035.html">
+																									信使 The Messengers S01E04 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjG6t8T" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40035\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:190153599e6ce72a3bf9f554a9ced23d507ae819&amp;dn=The.Messengers.S01E04.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet40035\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40035\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:190153599e6ce72a3bf9f554a9ced23d507ae819&amp;dn=The.Messengers.S01E04.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E04 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40035\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.46G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39978" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39978.html">
+																									信使 The Messengers S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjmelg5" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39978\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:38e25d808f96c930851368123856c563f5489ae6&amp;dn=The.Messengers.2015.S01E04.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&a" rel="nofollow" target="_blank" name=\'magnet39978\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39978\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:38e25d808f96c930851368123856c563f5489ae6&amp;dn=The.Messengers.2015.S01E04.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&a" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39978\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>220M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39572" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39572.html">
+																									信使 The Messengers S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgLzVc8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39572\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4e12b887ef6e3c0a8036c6f014f8068d1e58f6a5&amp;dn=The.Messengers.2015.S01E03.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet39572\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39572\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4e12b887ef6e3c0a8036c6f014f8068d1e58f6a5&amp;dn=The.Messengers.2015.S01E03.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39572\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>666M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39678" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39678.html">
+																									信使 The Messengers S01E03 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDGU82d" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39678\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8d03c53bb78156c09983e3d74113a6d2e3be258a&amp;dn=The.Messengers.S01E03.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet39678\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39678\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8d03c53bb78156c09983e3d74113a6d2e3be258a&amp;dn=The.Messengers.S01E03.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E03 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39678\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.40G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39619" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39619.html">
+																									信使 The Messengers S01E03 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E03.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|470186452|E597F4FF24B2FE52F5FC211BDDB33FE9|h=RX4MCCFTR63R7WIVQ3ENNVVFEPPOC5FL|/" rel="nofollow" target="_blank" name=\'ed2k39619\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39619\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E03.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|470186452|E597F4FF24B2FE52F5FC211BDDB33FE9|h=RX4MCCFTR63R7WIVQ3ENNVVFEPPOC5FL|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E03 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39619\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>448M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39618" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39618.html">
+																									信使 The Messengers S01E03 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E03.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|209525802|5C1D66E1EBF51FCE3589CCD103A72B01|h=IDRHWPBH3MHETE34ABABRYYCFLVTMAX5|/" rel="nofollow" target="_blank" name=\'ed2k39618\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39618\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E03.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|209525802|5C1D66E1EBF51FCE3589CCD103A72B01|h=IDRHWPBH3MHETE34ABABRYYCFLVTMAX5|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E03 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39618\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>199M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39571" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39571.html">
+																									信使 The Messengers S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnASW83" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39571\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9f45cd2c422e4354c29608c9b1bf20ec833197ca&amp;dn=The.Messengers.2015.S01E03.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&a" rel="nofollow" target="_blank" name=\'magnet39571\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39571\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9f45cd2c422e4354c29608c9b1bf20ec833197ca&amp;dn=The.Messengers.2015.S01E03.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&a" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39571\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>212M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39169" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39169.html">
+																									信使 The Messengers S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kT02SR1" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39169\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9a53f79cdbec5052879627c10081f4c55ed2fe42&amp;dn=The.Messengers.2015.S01E02.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" target="_blank" name=\'magnet39169\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39169\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9a53f79cdbec5052879627c10081f4c55ed2fe42&amp;dn=The.Messengers.2015.S01E02.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39169\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.03G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39279" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39279.html">
+																									信使 The Messengers S01E02 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E02.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|481564898|369DF42848EF463377D8C29DD1AAB816|h=WXYAZEPDDPPX75DYG73UXWKUSQEB5VT6|/" rel="nofollow" target="_blank" name=\'ed2k39279\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39279\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E02.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|481564898|369DF42848EF463377D8C29DD1AAB816|h=WXYAZEPDDPPX75DYG73UXWKUSQEB5VT6|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E02 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39279\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>459M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39278" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39278.html">
+																									信使 The Messengers S01E02 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E02.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|214612484|58FFACCA81C4AC07D438583E291913A5|h=OVMM3XRO5N7RNEOLPQL4ORSLTI22Y2PX|/" rel="nofollow" target="_blank" name=\'ed2k39278\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39278\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E02.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|214612484|58FFACCA81C4AC07D438583E291913A5|h=OVMM3XRO5N7RNEOLPQL4ORSLTI22Y2PX|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E02 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39278\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>204M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39221" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39221.html">
+																									信使 The Messengers S01E02 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6sVuPk" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39221\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d474e7dbd824f573478da1adfc43d8edcb445cc4&amp;dn=The.Messengers.S01E02.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet39221\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39221\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d474e7dbd824f573478da1adfc43d8edcb445cc4&amp;dn=The.Messengers.S01E02.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E02 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39221\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.40G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39168" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39168.html">
+																									信使 The Messengers S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWBOapI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39168\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5bdaa63b0f220caec5c7b133c2ea0c7374fee4f5&amp;dn=The.Messengers.2015.S01E02.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&a" rel="nofollow" target="_blank" name=\'magnet39168\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39168\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5bdaa63b0f220caec5c7b133c2ea0c7374fee4f5&amp;dn=The.Messengers.2015.S01E02.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&a" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39168\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>270M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38758" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38758.html">
+																									信使 The Messengers S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWn1lFm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38758\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6bc0911c6a7ce2c54b830ebb8b7ee75020d81b22&amp;dn=The.Messengers.2015.S01E01.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet38758\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38758\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6bc0911c6a7ce2c54b830ebb8b7ee75020d81b22&amp;dn=The.Messengers.2015.S01E01.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38758\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.11G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38816" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38816.html">
+																									信使 The Messengers S01E01 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTmV3KV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38816\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:864f57dfd9aa39e90e29206193cae75f2067346a&amp;dn=The.Messengers.S01E01.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet38816\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38816\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:864f57dfd9aa39e90e29206193cae75f2067346a&amp;dn=The.Messengers.S01E01.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E01 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38816\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.55G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38815" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38815.html">
+																									信使 The Messengers S01E01 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E01.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|524970582|E56E0D0AAC40B968D2E932A9B1E1EBDC|h=GMKHXCLPZAAXLF7QA47KDN3SXO7MWPBI|/" rel="nofollow" target="_blank" name=\'ed2k38815\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'38815\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E01.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|524970582|E56E0D0AAC40B968D2E932A9B1E1EBDC|h=GMKHXCLPZAAXLF7QA47KDN3SXO7MWPBI|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E01 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38815\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>500M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38814" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38814.html">
+																									信使 The Messengers S01E01 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E01.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|233952439|EBFEEC89ED056ED61ED66C6B7F0BB0A4|h=VDUHB7GDEHTDWVG6QMSRILKCIFKP3CKI|/" rel="nofollow" target="_blank" name=\'ed2k38814\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'38814\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E4%BF%A1%E4%BD%BF.The.Messengers.S01E01.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|233952439|EBFEEC89ED056ED61ED66C6B7F0BB0A4|h=VDUHB7GDEHTDWVG6QMSRILKCIFKP3CKI|/" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E01 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38814\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>233M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38780" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38780.html">
+																									信使 The Messengers S01E01 HR-HDTV 极光字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQrPth4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38780\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>439M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38757" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38757.html">
+																									信使 The Messengers S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWqjc4G" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38757\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:33d7882f3c1113d08efad8a403da9a0a3e1d789b&amp;dn=The+Messengers+2015+S01E01+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&am" rel="nofollow" target="_blank" name=\'magnet38757\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38757\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:33d7882f3c1113d08efad8a403da9a0a3e1d789b&amp;dn=The+Messengers+2015+S01E01+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&am" rel="nofollow" name=\'miurl\' filename="信使 The Messengers S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38757\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>326M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-18</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=570621&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(570621,809,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,809);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,809);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,809);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

@@ -1,0 +1,1001 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:03:19 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d3a710d90ba23a7d14ac77853ac2564921509534199; expires=Thu, 01-Nov-18 11:03:19 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e5de810397772-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>造物小百科 How Its Made-造物小百科下载-造物小百科全集下载-How Its Made下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="造物小百科,How Its Made,造物小百科下载,造物小百科全集下载,造物小百科高清下载,造物小百科迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;&lt;spanstyle=&quot;font-size:14px;&quot;&gt;年代：2001&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;spanstyle=&quot;font-size:14px;&quot;&gt;类型：纪录&amp;nbsp;&lt;/span&gt;&lt;" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1086;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FHow.Its.Made.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FHow.Its.Made.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1086;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">造物小百科 How Its Made-造物小百科下载-造物小百科全集下载-How Its Made下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i2.muimg.com/588755/b1a63d084d0fe6cd.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i2.muimg.com/588755/b1a63d084d0fe6cd.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周二</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：纪录片</span>						
+						<span>最后更新：2017-10-15 18:20</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1086.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">185</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p><span style="font-size: 14px;">年代：2001&nbsp;</span></p><p><span style="font-size: 14px;">类型：纪录&nbsp;</span></p><p><span style="font-size: 14px;">地区：美国&nbsp;</span></p><p><span style="font-size: 14px;">电视台：探索频道&nbsp;</span></p><p><span style="font-size: 14px;">语言：英语&nbsp;</span></p><p><span style="font-size: 14px;">首播日期：2001-07-01 周日&nbsp;</span></p><p><span style="font-size: 14px;">英文：Discovery How Its Made&nbsp;</span></p><p><br/></p><p><span style="font-size: 14px;">简介：这是探索频道正在播出的一套介绍各种日常生活用品的制作生产过程的系列片。极富娱乐性和知识性。</span></p><p><span style="font-size: 14px;">当我们的日常生活因琳琅满目的各类产品而变得更加丰富多彩的同时，你有没有想过，这些产品是如何制造出来的呢？</span></p><p><span style="font-size: 14px;">这套节目是在加拿大录制的。加拿大是一个独立性很强的工业化国家，我们可以透过节目了解到几乎所有行业的产品；加拿大同时是一个自主性很强的工业化国家，不像我国的工业结构那样偏向简单的来料加工，加拿大的工厂更多的是一气呵成，从产品设计研发到包装出厂基本是一厂包办。这使我们能更深入了解产品的生产流程。由于国情的不同，节目还会介绍少量我们闻所未闻的产品。</span></p><p><span style="font-size: 14px;">俗语说得好，百闻不如一见。你不需要拥有制造业的专业知识，通过观看该节目就能了解这些产品的来龙去脉。当中的宏大的生产场面，运转流畅无阻的流水线，精确无误的装配，鬼斧神工的技术，妙不可言的构思，绝对令人叹为观止，获益良多。</span></p><p><span style="font-size: 14px;">这套节目极富娱乐性和知识性，全面的展示制造业的魅力，其对众多行业的各种产品的介绍绝对能开阔您的视野，启发你的灵感。</span></p><p><span style="font-size: 14px;">该套节目生动易懂，适合所有人群观看。小朋友观看这套节目，能激发他们的好奇心，启发他们的创造力，增强他们的发散思维能力。当然，他们需要家长的指导。如果你对制造业有一定研究，那就更加不能错过这套节目了。</span></p><p><span style="font-size: 14px;">外行看热闹，内行看门道。这套节目绝对能让你感受到什么叫 “师夷长技以自强”！</span></p><p style="text-align: left;"><br/></p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="24">
+																			第24季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="23">
+																			第23季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="22">
+																			第22季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="21">
+																			第21季																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="71342" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71342.html">
+																									造物小百科 How Its Made  S24E13 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/share/link?shareid=3008236387&amp;uk=2808485736" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71342\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:76CD8448A19FDC9B9C626F04F19D057935B94401" rel="nofollow" target="_blank" name=\'magnet71342\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71342\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E9%80%A0%E7%89%A9%E5%B0%8F%E7%99%BE%E7%A7%91.How.Its.Made.S24E13.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|412508890|b764169f51373f3a4eecf5107942905e|h=yisibkv2ng5lb5xr74ki4pfgypfu6d5d|/" rel="nofollow" target="_blank" name=\'ed2k71342\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71342\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:76CD8448A19FDC9B9C626F04F19D057935B94401" rel="nofollow" name=\'miurl\' filename="造物小百科 How Its Made  S24E13 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71342\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>393M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-01-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="71191" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71191.html">
+																									造物小百科 How Its Made S24E12 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nu6Iaff" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71191\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:C0950E1F7991CB2BC4D5C00D80FFB99A0B7648A2" rel="nofollow" target="_blank" name=\'magnet71191\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71191\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E9%80%A0%E7%89%A9%E5%B0%8F%E7%99%BE%E7%A7%91.How.Its.Made.S24E12.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|413788510|723affaf952a2b8064c8b0d5108c3950|h=6goqq5qwci2xm7rhjzfm2pxmluihb2at|/" rel="nofollow" target="_blank" name=\'ed2k71191\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71191\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:C0950E1F7991CB2BC4D5C00D80FFB99A0B7648A2" rel="nofollow" name=\'miurl\' filename="造物小百科 How Its Made S24E12 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71191\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>394M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71190" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71190.html">
+																									造物小百科 How Its Made S24E11 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o7H5uRK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71190\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:F2A2216763E43E4E31E3E2B83C46302E498A6BA6" rel="nofollow" target="_blank" name=\'magnet71190\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71190\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E9%80%A0%E7%89%A9%E5%B0%8F%E7%99%BE%E7%A7%91.How.Its.Made.S24E11.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|414387273|113ad8ccd9bfc49745383a680a4d3343|h=uhy4ecnkmv2pbspxf2so6p3xo6r4twle|/" rel="nofollow" target="_blank" name=\'ed2k71190\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71190\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:F2A2216763E43E4E31E3E2B83C46302E498A6BA6" rel="nofollow" name=\'miurl\' filename="造物小百科 How Its Made S24E11 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71190\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>395M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70528" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70528.html">
+																									造物小百科 How Its Made S24E10 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dF3QINv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70528\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:B0390491DD36773E703DE1A0ADF5F11BE90809C1" rel="nofollow" target="_blank" name=\'magnet70528\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70528\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E9%80%A0%E7%89%A9%E5%B0%8F%E7%99%BE%E7%A7%91.How.Its.Made.S24E10.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|721209610|0c92a348c1126458849091384fa7cc09|h=cbjuatuvk7bxy2fmlbemlkhz3l5tm5ki|/" rel="nofollow" target="_blank" name=\'ed2k70528\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'70528\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:B0390491DD36773E703DE1A0ADF5F11BE90809C1" rel="nofollow" name=\'miurl\' filename="造物小百科 How Its Made S24E10 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70528\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>687M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="69996" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69996.html">
+																									造物小百科 How Its Made S24E09 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1geWCE0V" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69996\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:125D510C06DECD51A470D12F0CFCB857CA524BF2" rel="nofollow" target="_blank" name=\'magnet69996\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69996\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E9%80%A0%E7%89%A9%E5%B0%8F%E7%99%BE%E7%A7%91.How.Its.Made.S24E09.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|411978614|705b80490f5cdd7fb411cd359b331aee|h=lsljplb777qcj5jkznbwbfl6jeht633q|/" rel="nofollow" target="_blank" name=\'ed2k69996\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'69996\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:125D510C06DECD51A470D12F0CFCB857CA524BF2" rel="nofollow" name=\'miurl\' filename="造物小百科 How Its Made S24E09 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69996\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>392M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69408" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69408.html">
+																									造物小百科 How Its Made S24E08 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1slawePf" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69408\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NTA1NzF8NjIyMTRmYTB8MTQ4MDMzNTE2MHwwfDI4NzEz" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69408\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9DA4B39FBABB051442ADF5A8AAEE5962414F9079" rel="nofollow" target="_blank" name=\'magnet69408\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69408\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E9%80%A0%E7%89%A9%E5%B0%8F%E7%99%BE%E7%A7%91.How.Its.Made.S24E08.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|414108490|ee720c578447972fe77c7c5eb0f92a1b|h=6idk3x2fu4ct4qyme5sb5rv7gkcldlw2|/" rel="nofollow" target="_blank" name=\'ed2k69408\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'69408\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:9DA4B39FBABB051442ADF5A8AAEE5962414F9079" rel="nofollow" name=\'miurl\' filename="造物小百科 How Its Made S24E08 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69408\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>395M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="69382" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69382.html">
+																									造物小百科 How Its Made S24E07 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSac7Nc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69382\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NTA1Njl8MTRkYTJlMGJ8MTQ4MDMzNTE2MHwwfDI4NzEz" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69382\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:F900668EB980B4F994499C217580E5D33D9A7576" rel="nofollow" target="_blank" name=\'magnet69382\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69382\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:F900668EB980B4F994499C217580E5D33D9A7576" rel="nofollow" name=\'miurl\' filename="造物小百科 How Its Made S24E07 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69382\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>393M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69381" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69381.html">
+																									造物小百科 How Its Made S24E06 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gfNz2U3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69381\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NTA1NjR8OTFhY2QxYTF8MTQ4MDMzNTE2MHwwfDI4NzEz" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69381\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:D4F75EC9C6BFDC6B277371C4D20B042D3DF1F507" rel="nofollow" target="_blank" name=\'magnet69381\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69381\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:D4F75EC9C6BFDC6B277371C4D20B042D3DF1F507" rel="nofollow" name=\'miurl\' filename="造物小百科 How Its Made S24E06 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69381\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>394M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67205" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67205.html">
+																									造物小百科 How Its Made S24E05 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i4Kxxxb" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67205\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDk3NDd8Y2UyY2NlOWF8MTQ3OTQ3MDE2MnwwfDI4NzEz" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67205\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1657B54CCC30CCB0807C27014CE2115F51227DA3" rel="nofollow" target="_blank" name=\'magnet67205\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67205\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1657B54CCC30CCB0807C27014CE2115F51227DA3" rel="nofollow" name=\'miurl\' filename="造物小百科 How Its Made S24E05 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67205\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>393M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-10-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="67204" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67204.html">
+																									造物小百科 How Its Made S24E04 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/share/link?shareid=549966706&amp;uk=3257347117&amp;fid=1015408195422503" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67204\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDk2MjR8ZGU5NDU3YmR8MTQ3NzgxMDAzOXwwfDI4NzEz" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67204\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:AD6460DD3DEA8F513D41A2663DAEBF570A73FE9B" rel="nofollow" target="_blank" name=\'magnet67204\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67204\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:AD6460DD3DEA8F513D41A2663DAEBF570A73FE9B" rel="nofollow" name=\'miurl\' filename="造物小百科 How Its Made S24E04 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67204\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>393M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-10-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="65423" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/65423.html">
+																									造物小百科 How It\'s Made S24E03 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/share/link?shareid=549966706&amp;uk=3257347117&amp;fid=673895225437915" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'65423\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg5NTR8NTQzZDYwNjl8MTQ3NjMyODE4OHwwfDI4NzEz" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'65423\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6D323178B0C6B413BFDD7DC4D99BD917AE680CF7" rel="nofollow" target="_blank" name=\'magnet65423\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'65423\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6D323178B0C6B413BFDD7DC4D99BD917AE680CF7" rel="nofollow" name=\'miurl\' filename="造物小百科 How It\'s Made S24E03 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'65423\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>385M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-10-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="64905" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/64905.html">
+																									造物小百科 How It\'s Made S24E02 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/share/link?shareid=549966706&amp;uk=3257347117&amp;fid=863737966419586" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'64905\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg2MTJ8OWRhNGJiYjd8MTQ3NTQ4NDI3N3w0MzYwNzN8Mjg3MTM%3D" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'64905\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:586CB0B8DCEC2C6DEC8CDD071E11A4253E67B298" rel="nofollow" target="_blank" name=\'magnet64905\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'64905\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:586CB0B8DCEC2C6DEC8CDD071E11A4253E67B298" rel="nofollow" name=\'miurl\' filename="造物小百科 How It\'s Made S24E02 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'64905\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>393M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-09-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="64514" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/64514.html">
+																									造物小百科 How It\'s Made S24E01 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/share/link?shareid=549966706&amp;uk=3257347117&amp;fid=454798868360760" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'64514\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg2MTF8ZmY5ODA3MTd8MTQ3NTQ4NDI3N3w0MzYwNzN8Mjg3MTM%3D" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'64514\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:DEDF441C84D0E5D65DCFD881E4FCF864C06A97BF" rel="nofollow" target="_blank" name=\'magnet64514\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'64514\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:DEDF441C84D0E5D65DCFD881E4FCF864C06A97BF" rel="nofollow" name=\'miurl\' filename="造物小百科 How It\'s Made S24E01 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'64514\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>393M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-09-19</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,1086,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1086);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1086);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1086);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

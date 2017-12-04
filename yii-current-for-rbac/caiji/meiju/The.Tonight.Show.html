@@ -1,0 +1,1117 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:19:08 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=db28e2f3575a6627fafa8aed86517c6471509535147; expires=Thu, 01-Nov-18 11:19:07 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e7511e1575390-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>今夜秀 The Tonight Show  with Jay Leno-今夜秀下载-今夜秀全集下载-The Tonight Show下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="今夜秀,The Tonight Show,今夜秀下载,今夜秀全集下载,今夜秀高清下载,今夜秀迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;&amp;nbsp;“TheTonightShowwithJayLeno”是一档诙谐的晚间脱口秀节目。由美国家喻户晓的“大下巴”脱口秀主持jayleno主持，在每晚11：30于nbc台播出。每一期节目都大致分为主持人独白、采访嘉宾和乐队演唱三部分。主持人jayleno可谓是nbc的常青树，他的幽默虽不像jonstewart等人尖酸、辛辣，但" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 211;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FThe.Tonight.Show.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FThe.Tonight.Show.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 211;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">今夜秀 The Tonight Show  with Jay Leno-今夜秀下载-今夜秀全集下载-The Tonight Show下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i2.muimg.com/588755/7b8638878bd4a343.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i2.muimg.com/588755/7b8638878bd4a343.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：随机</span>
+						<span>状态：<font color="#5cb1c5">播出中</font></span>
+						<span class="greybg">分类：</span>						
+						<span>最后更新：2013-09-26 01:04</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/211.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">23</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>&nbsp; “The Tonight Show with Jay Leno”是一档诙谐的晚间脱口秀节目。由美国家喻户晓的“大下巴”脱口秀主持jay leno主持，在每晚11：30于nbc台播出。每一期节目都大致分为主持人独白、采访嘉宾和乐队演唱三部分。主持人jay leno可谓是nbc的常青树，他的幽默虽不像jon stewart等人尖酸、辛辣，但也正是因为他的随和与智慧赢得了美国无数观众的心。在他的带领下，the tonight show一直保持着脱口秀节目大哥大的地位，并吸引来无数重量级嘉宾.</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+																		<td id="seasoninfo" colspan="8"></td>							</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="26942" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26942.html">
+																									今夜秀 Jay Leno 2013 09 24 Olivia Wilde											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kluPx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26942\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/762CBFBDC8ACE8B91083AACA3E7AC39DC7A1CB21.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'26942\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:OYWL7POIVTULSEEDVLFD46WDTXD2DSZB&amp;dn=Jay.Leno.2013.09.24.Olivia.Wilde.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&" rel="nofollow" target="_blank" name=\'magnet26942\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26942\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:OYWL7POIVTULSEEDVLFD46WDTXD2DSZB&amp;dn=Jay.Leno.2013.09.24.Olivia.Wilde.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 24 Olivia Wilde" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26942\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>406M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26768" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26768.html">
+																									今夜秀 Jay Leno 2013 09 20 Jimmy Fallon											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=313579366&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26768\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/813969FD9ACE59F32065AF50D5F5967E396D4CBB.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'26768\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:QE4WT7M2ZZM7GIDFV5INL5MWPY4W2TF3&amp;dn=Jay.Leno.2013.09.20.Jimmy.Fallon.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&" rel="nofollow" target="_blank" name=\'magnet26768\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26768\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:QE4WT7M2ZZM7GIDFV5INL5MWPY4W2TF3&amp;dn=Jay.Leno.2013.09.20.Jimmy.Fallon.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 20 Jimmy Fallon" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26768\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>365M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26756" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26756.html">
+																									今夜秀 Jay Leno 2013 09 19 Tim Allen											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2034590973&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26756\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fc327b605615daa4a51ad33dee94d1b4e13043b6&amp;dn=Jay.Leno.2013.09.19.Tim.Allen.480p.HDTV.x264-mSD&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A69" rel="nofollow" target="_blank" name=\'magnet26756\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26756\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fc327b605615daa4a51ad33dee94d1b4e13043b6&amp;dn=Jay.Leno.2013.09.19.Tim.Allen.480p.HDTV.x264-mSD&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A69" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 19 Tim Allen" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26756\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>227M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26718" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26718.html">
+																									今夜秀 Jay Leno 2013 09 18  Christina Aguilera											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=874263615&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26718\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/1CB3AF9B3C3BD837FEAB32A36F197DE36554D4D8.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'26718\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1cb3af9b3c3bd837feab32a36f197de36554d4d8&amp;dn=Jay.Leno.2013.09.18.+Christina+Aguilera+%2B+Joy+Behar+.x264+mkv&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker" rel="nofollow" target="_blank" name=\'magnet26718\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26718\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1cb3af9b3c3bd837feab32a36f197de36554d4d8&amp;dn=Jay.Leno.2013.09.18.+Christina+Aguilera+%2B+Joy+Behar+.x264+mkv&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 18  Christina Aguilera" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26718\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>288M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26686" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26686.html">
+																									今夜秀 Jay Leno 2013 09 16 Chris Hemsworth											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=839409571&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26686\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:24017a6fbcc3e44d5ed2ff572d32ef4165e6782c&amp;dn=Jay.Leno.2013.09.16.+Chris+Hemsworth+%2B+Kristen+Schaal+.x264+mkv&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrack" rel="nofollow" target="_blank" name=\'magnet26686\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26686\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:24017a6fbcc3e44d5ed2ff572d32ef4165e6782c&amp;dn=Jay.Leno.2013.09.16.+Chris+Hemsworth+%2B+Kristen+Schaal+.x264+mkv&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrack" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 16 Chris Hemsworth" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26686\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>295M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26680" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26680.html">
+																									今夜秀 Jay Leno 2013 09 17 Neil Patrick Harris											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=671007224&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26680\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:96919b5b45ac82b7d9d3d4b25352495f7b8d1ecb&amp;dn=Jay.Leno.2013.09.17.+Neil+Patrick+Harris+%2B+Demi+Lovato+.x264+mkv&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" target="_blank" name=\'magnet26680\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26680\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:96919b5b45ac82b7d9d3d4b25352495f7b8d1ecb&amp;dn=Jay.Leno.2013.09.17.+Neil+Patrick+Harris+%2B+Demi+Lovato+.x264+mkv&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 17 Neil Patrick Harris" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26680\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>268M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26501" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26501.html">
+																									今夜秀 Jay Leno 2013 09 13 Zooey Deschanel											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2722866085&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26501\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c98eb9215679db6a7c08dded335d79251d060c21&amp;dn=Jay.Leno.2013.09.13+-+Zooey+Deschanel+%2B+Terry+Crews+-+x264.mkv&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracke" rel="nofollow" target="_blank" name=\'magnet26501\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26501\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c98eb9215679db6a7c08dded335d79251d060c21&amp;dn=Jay.Leno.2013.09.13+-+Zooey+Deschanel+%2B+Terry+Crews+-+x264.mkv&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracke" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 13 Zooey Deschanel" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26501\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>274M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26482" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26482.html">
+																									今夜秀 Jay Leno 2013 09 11 Charlie Sheen											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1026566167&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26482\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8c64b8b2c80e049c6f0e9bf968c34e287b0763f4&amp;dn=Jay.Leno.2013.09.11.Charlie.Sheen.WEBRip.BYTE&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&" rel="nofollow" target="_blank" name=\'magnet26482\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26482\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8c64b8b2c80e049c6f0e9bf968c34e287b0763f4&amp;dn=Jay.Leno.2013.09.11.Charlie.Sheen.WEBRip.BYTE&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 11 Charlie Sheen" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26482\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>275M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26378" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26378.html">
+																									今夜秀 Jay Leno 2013 09 10 Rose Byrne											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3660309967&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26378\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/37EFFDDA6A679E056FDBFD2E80F2800FDC503843.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'26378\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:G7X73WTKM6PAK3637UXIB4UAB7OFAOCD&amp;dn=Jay.Leno.2013.09.10.Rose.Byrne.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&am" rel="nofollow" target="_blank" name=\'magnet26378\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26378\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:G7X73WTKM6PAK3637UXIB4UAB7OFAOCD&amp;dn=Jay.Leno.2013.09.10.Rose.Byrne.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&am" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 10 Rose Byrne" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26378\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>318M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26377" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26377.html">
+																									今夜秀 Jay Leno 2013 09 06  Simon Cowell - Adam Carolla											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3633578211&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26377\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c189000bdea52b8e46c7ed3c7514a38b70ca68bb&amp;dn=Jay.Leno.2013.09.06.+Simon+Cowell+%2B+Adam+Carolla+.x264+mkv&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.is" rel="nofollow" target="_blank" name=\'magnet26377\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26377\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c189000bdea52b8e46c7ed3c7514a38b70ca68bb&amp;dn=Jay.Leno.2013.09.06.+Simon+Cowell+%2B+Adam+Carolla+.x264+mkv&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.is" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 06  Simon Cowell - Adam Carolla" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26377\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>255M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26376" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26376.html">
+																									今夜秀 Jay Leno 2013 09 05 Vince Vaughn - Olivia Munn											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3704403367&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26376\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4447134c56941c1eb7f94cfc3c8b9c390e91b11c&amp;dn=Jay.Leno.2013.09.05.+Vince+Vaughn+.+Olivia+Munn+.+x264+mkv&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.isto" rel="nofollow" target="_blank" name=\'magnet26376\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26376\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4447134c56941c1eb7f94cfc3c8b9c390e91b11c&amp;dn=Jay.Leno.2013.09.05.+Vince+Vaughn+.+Olivia+Munn+.+x264+mkv&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.isto" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 05 Vince Vaughn - Olivia Munn" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26376\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>297M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26375" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26375.html">
+																									今夜秀 Jay Leno 2013 09 03 Bill Maher											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3632101707&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26375\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9bacc197f48011a5de6e143fb0a5750ae6d41ecb&amp;dn=Jay.Leno.2013.09.03.Bill.Maher.WEBRip.BYTE&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp" rel="nofollow" target="_blank" name=\'magnet26375\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26375\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9bacc197f48011a5de6e143fb0a5750ae6d41ecb&amp;dn=Jay.Leno.2013.09.03.Bill.Maher.WEBRip.BYTE&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 03 Bill Maher" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26375\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>269M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26351" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26351.html">
+																									今夜秀 Jay Leno 2013 09 09 Martin Short											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=529194226&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26351\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/2F38B562A39098B68501D39C51690955731EFBFB.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'26351\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:F44LKYVDSCMLNBIB2OOFC2IJKVZR5673&amp;dn=Jay.Leno.2013.09.09.Martin.Short.HDTV.x264-MOMENTUM&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.co" rel="nofollow" target="_blank" name=\'magnet26351\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26351\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:F44LKYVDSCMLNBIB2OOFC2IJKVZR5673&amp;dn=Jay.Leno.2013.09.09.Martin.Short.HDTV.x264-MOMENTUM&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.co" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 09 Martin Short" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26351\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>340M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26205" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26205.html">
+																									今夜秀 Jay Leno 2013 09 04 Christina Applegate											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1670108375&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26205\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/2EE34D6B23ECC0D9D18FDAC408ABDB3DDFEE6613.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'26205\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:F3RU22ZD5TANTUMP3LCARK63HXP64ZQT&amp;dn=Jay.Leno.2013.09.04.Christina.Applegate.HDTV.x264-MOMENTUM&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.dem" rel="nofollow" target="_blank" name=\'magnet26205\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26205\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:F3RU22ZD5TANTUMP3LCARK63HXP64ZQT&amp;dn=Jay.Leno.2013.09.04.Christina.Applegate.HDTV.x264-MOMENTUM&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.dem" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 09 04 Christina Applegate" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26205\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>340M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26016" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26016.html">
+																									今夜秀 Jay Leno 2013 08 30 John McCain											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3562203406&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26016\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/076FE33E9942DBB0E623E1485B56ECC95BB4C486.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'26016\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:076fe33e9942dbb0e623e1485b56ecc95bb4c486&amp;dn=Jay.Leno.2013.08.30.John.McCain.480p.HDTV.x264-mSD&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A" rel="nofollow" target="_blank" name=\'magnet26016\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26016\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:076fe33e9942dbb0e623e1485b56ecc95bb4c486&amp;dn=Jay.Leno.2013.08.30.John.McCain.480p.HDTV.x264-mSD&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 08 30 John McCain" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26016\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>203M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26015" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26015.html">
+																									今夜秀 Jay Leno 2013 08 29 Rod Stewart											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3569396301&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26015\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/E864C3EE7B68E5A8A682D4587859D6AF49227529.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'26015\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e864c3ee7b68e5a8a682d4587859d6af49227529&amp;dn=Jay+Leno+2013+08+29+Rod+Stewart+HDTV+x264-MOMENTUM+%5Beztv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.i" rel="nofollow" target="_blank" name=\'magnet26015\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'26015\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e864c3ee7b68e5a8a682d4587859d6af49227529&amp;dn=Jay+Leno+2013+08+29+Rod+Stewart+HDTV+x264-MOMENTUM+%5Beztv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.i" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 08 29 Rod Stewart" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'26015\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>318M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="25992" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25992.html">
+																									今夜秀 Jay Leno 2013 08 28 Matt LeBlanc											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=314740751&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25992\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/9F5854EE2660C77B63B2B9F8DE99C96F66863BFF.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'25992\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9f5854ee2660c77b63b2b9f8de99c96f66863bff&amp;dn=Jay.Leno.2013.08.28.Matt.LeBlanc.WEBRip.BYTE&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&a" rel="nofollow" target="_blank" name=\'magnet25992\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'25992\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9f5854ee2660c77b63b2b9f8de99c96f66863bff&amp;dn=Jay.Leno.2013.08.28.Matt.LeBlanc.WEBRip.BYTE&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&a" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 08 28 Matt LeBlanc" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'25992\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>271M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25991" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25991.html">
+																									今夜秀 Jay Leno 2013 08 27 Josh Duhamel											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=371586792&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25991\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/0C6DFB69398AF42A692144E5DBFD3AA79C8877F2.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'25991\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0c6dfb69398af42a692144e5dbfd3aa79c8877f2&amp;dn=Jay.Leno.2013.08.27.Josh.Duhamel.WEBRip.BYTE&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&a" rel="nofollow" target="_blank" name=\'magnet25991\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'25991\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0c6dfb69398af42a692144e5dbfd3aa79c8877f2&amp;dn=Jay.Leno.2013.08.27.Josh.Duhamel.WEBRip.BYTE&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&a" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 08 27 Josh Duhamel" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'25991\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>138M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="25990" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25990.html">
+																									今夜秀 Jay Leno 2013 08 26 Jeff Daniels											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=394175686&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25990\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/AF3B6D26BE280E095268118C496CDCB9CF884067.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'25990\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:af3b6d26be280e095268118c496cdcb9cf884067&amp;dn=Jay.Leno.2013.08.26+-+Jeff+Daniels+%2B+Sherri+Shepherd++XviD&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.is" rel="nofollow" target="_blank" name=\'magnet25990\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'25990\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:af3b6d26be280e095268118c496cdcb9cf884067&amp;dn=Jay.Leno.2013.08.26+-+Jeff+Daniels+%2B+Sherri+Shepherd++XviD&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.is" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 08 26 Jeff Daniels" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'25990\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>378M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25989" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25989.html">
+																									今夜秀 Jay Leno 2013 08 09 Jason Sudeikis											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1106799145&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25989\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/F2079039652D2B1F293CF1E2D565BB4486142F87.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'25989\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f2079039652d2b1f293cf1e2d565bb4486142f87&amp;dn=Jay.Leno.2013.08.09.Jason.Sudeikis.480p.HDTV.x264-mSD&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it" rel="nofollow" target="_blank" name=\'magnet25989\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'25989\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f2079039652d2b1f293cf1e2d565bb4486142f87&amp;dn=Jay.Leno.2013.08.09.Jason.Sudeikis.480p.HDTV.x264-mSD&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it" rel="nofollow" name=\'miurl\' filename="今夜秀 Jay Leno 2013 08 09 Jason Sudeikis" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'25989\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>224M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-31</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+									<tr bgcolor="#ffffff">
+												<td colspan="8"  height="30" style="padding-top:8px;"><ul class="pagination">  <li class="active"><span>1</span><li><li><a class="num" href="/index.php/meiju/index/engename/The.Tonight.Show/p/2.html">2</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Tonight.Show/p/3.html">3</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Tonight.Show/p/4.html">4</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Tonight.Show/p/5.html">5</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Tonight.Show/p/6.html">6</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Tonight.Show/p/7.html">7</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Tonight.Show/p/8.html">8</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Tonight.Show/p/9.html">9</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Tonight.Show/p/10.html">10</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Tonight.Show/p/11.html">11</a></li> <li><a class="next" href="/index.php/meiju/index/engename/The.Tonight.Show/p/2.html">>></a></li> <li><a class="end" href="/index.php/meiju/index/engename/The.Tonight.Show/p/14.html">14</a></li></ul></td>
+											</tr>					</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,211,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,211);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,211);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,211);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

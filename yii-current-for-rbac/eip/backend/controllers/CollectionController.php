@@ -2,10 +2,9 @@
 
 namespace backend\controllers;
 
-use backend\models\Meiju;
-use backend\models\MeijuDetial;
+use common\models\Meiju;
+use common\models\MeijuDetial;
 use Yii;
-use backend\models\Collection;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 

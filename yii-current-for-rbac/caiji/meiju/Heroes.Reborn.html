@@ -1,0 +1,1723 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 10:56:38 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=de160f059e653f2f8870811462efb62691509533798; expires=Thu, 01-Nov-18 10:56:38 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e5420c35e7838-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>英雄重生 Heroes Reborn-英雄重生下载-英雄重生全集下载-Heroes Reborn下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="英雄重生,Heroes Reborn,英雄重生下载,英雄重生全集下载,英雄重生高清下载,英雄重生迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;NBC的正式新闻稿只提到了两条有价值的信息……呃，其实是三条。第一，该剧定性为「迷你剧」；第二，该剧的订数为13集；第三，剧情描述「普通人一觉醒来之后突然发现自己拥有独特的超能力」。&lt;/p&gt;" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 869;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FHeroes.Reborn.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FHeroes.Reborn.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 869;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">英雄重生 Heroes Reborn-英雄重生下载-英雄重生全集下载-Heroes Reborn下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i2.muimg.com/588755/39585233731e2169.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i2.muimg.com/588755/39585233731e2169.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周五</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：奇幻类</span>						
+						<span>最后更新：2016-01-25 09:07</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/869.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">668</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>NBC的正式新闻稿只提到了两条有价值的信息……呃，其实是三条。第一，该剧定性为「迷你剧」；第二，该剧的订数为13集；第三，剧情描述「普通人一觉醒来之后突然发现自己拥有独特的超能力」。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="52006" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/52006.html">
+																									英雄重生 Heroes Reborn S01E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hrxrNLy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'52006\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:077fcea18498d5f5e096a80b408b1373f3200f22&amp;dn=Heroes.Reborn.S01E13.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet52006\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'52006\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:077fcea18498d5f5e096a80b408b1373f3200f22&amp;dn=Heroes.Reborn.S01E13.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'52006\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.17G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-01-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="52201" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/52201.html">
+																									英雄重生 Heroes Reborn S01E13 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c1a05HI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'52201\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4684bb6e0a2932df48e2fbefdd5c6e16297c2b79&amp;dn=Heroes.Reborn.S01E13.Project.Reborn.1080p.WEB-DL.DD5.1.H264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%" rel="nofollow" target="_blank" name=\'magnet52201\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'52201\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4684bb6e0a2932df48e2fbefdd5c6e16297c2b79&amp;dn=Heroes.Reborn.S01E13.Project.Reborn.1080p.WEB-DL.DD5.1.H264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E13 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'52201\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.65G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-01-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="52005" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/52005.html">
+																									英雄重生 Heroes Reborn S01E13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bowgb2B" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'52005\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:99d9760d6a8e17f3954f852629e5d6b24b82cf55&amp;dn=Heroes.Reborn.S01E13.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet52005\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'52005\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:99d9760d6a8e17f3954f852629e5d6b24b82cf55&amp;dn=Heroes.Reborn.S01E13.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E13 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'52005\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>403M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-01-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="51663" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/51663.html">
+																									英雄重生 Heroes Reborn S01E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGPuNGi" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'51663\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:df6db61dc42db6a344c7a169daa5e975e6993d2a&amp;dn=Heroes.Reborn.S01E12.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet51663\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'51663\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:df6db61dc42db6a344c7a169daa5e975e6993d2a&amp;dn=Heroes.Reborn.S01E12.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'51663\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>0.99G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-01-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="51788" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/51788.html">
+																									英雄重生 Heroes Reborn S01E12 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kUtfXfp" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'51788\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3bf7bd371aeea31bfa0b3f75e9986c33f36329cf&amp;dn=Heroes.Reborn.S01E12.Company.Woman.1080p.WEB-DL.DD5.1.H264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2" rel="nofollow" target="_blank" name=\'magnet51788\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'51788\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3bf7bd371aeea31bfa0b3f75e9986c33f36329cf&amp;dn=Heroes.Reborn.S01E12.Company.Woman.1080p.WEB-DL.DD5.1.H264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E12 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'51788\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.61G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-01-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="51662" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/51662.html">
+																									英雄重生 Heroes Reborn S01E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pKzc24F" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'51662\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9eefe8942d083985153f39bc6df0159bb63c0c4b&amp;dn=Heroes.Reborn.S01E12.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet51662\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'51662\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9eefe8942d083985153f39bc6df0159bb63c0c4b&amp;dn=Heroes.Reborn.S01E12.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'51662\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>332M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-01-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="51530" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/51530.html">
+																									英雄重生 Heroes Reborn S01E11 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bdNcSI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'51530\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:61B0DE9F3AAB0263DFA95B578C1D8CB04D9628ED&amp;dn=Heroes.Reborn.S01E11.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet51530\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'51530\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:61B0DE9F3AAB0263DFA95B578C1D8CB04D9628ED&amp;dn=Heroes.Reborn.S01E11.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E11 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'51530\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>644M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-01-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="51358" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/51358.html">
+																									英雄重生 Heroes Reborn S01E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hrpKzli" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'51358\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c37c9c5c1e4011ea625f7ab442417d56a140b1b7&amp;dn=Heroes.Reborn.S01E11.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet51358\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'51358\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c37c9c5c1e4011ea625f7ab442417d56a140b1b7&amp;dn=Heroes.Reborn.S01E11.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'51358\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>0.99G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-01-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="51539" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/51539.html">
+																									英雄重生 Heroes Reborn S01E11 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjXmRNZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'51539\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0a1e4046400ca31e220b8c670edc7650a62a0be7&amp;dn=Heroes.Reborn.S01E11.Send.in.the.Clones.1080p.WEB-DL.DD5.1.H264-HR%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3" rel="nofollow" target="_blank" name=\'magnet51539\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'51539\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0a1e4046400ca31e220b8c670edc7650a62a0be7&amp;dn=Heroes.Reborn.S01E11.Send.in.the.Clones.1080p.WEB-DL.DD5.1.H264-HR%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E11 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'51539\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.62G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-01-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="51357" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/51357.html">
+																									英雄重生 Heroes Reborn S01E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1skqhXoh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'51357\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:bb63e28e59377b444d4307de3cb5b402d23ae200&amp;dn=Heroes.Reborn.S01E11.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet51357\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'51357\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:bb63e28e59377b444d4307de3cb5b402d23ae200&amp;dn=Heroes.Reborn.S01E11.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'51357\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>327M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-01-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="49466" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/49466.html">
+																									英雄重生 Heroes Reborn S01E10 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgIV9kk" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'49466\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:041B1AEEC815A1C2365D66251C5BE0D3F2F24C50&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E10.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet49466\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'49466\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:041B1AEEC815A1C2365D66251C5BE0D3F2F24C50&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E10.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E10 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'49466\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>636M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-11-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="49198" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/49198.html">
+																									英雄重生 Heroes Reborn S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1cClky" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'49198\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0d1c559d5fc8a9295837be03aaf3bdf0e634b744&amp;dn=Heroes.Reborn.S01E10.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet49198\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'49198\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0d1c559d5fc8a9295837be03aaf3bdf0e634b744&amp;dn=Heroes.Reborn.S01E10.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'49198\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>901M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-11-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="49375" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/49375.html">
+																									英雄重生 Heroes Reborn S01E10 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTHB6YV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'49375\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8e5a7360c571f3213b25f0f4b1bc84a0e263967b&amp;dn=Heroes.Reborn.S01E10.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet49375\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'49375\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8e5a7360c571f3213b25f0f4b1bc84a0e263967b&amp;dn=Heroes.Reborn.S01E10.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E10 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'49375\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.58G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-11-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="49197" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/49197.html">
+																									英雄重生 Heroes Reborn S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sj04izr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'49197\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:a3e2c4cc1d984c5d64a6cb0944ba364e032cd7c1&amp;dn=Heroes.Reborn.S01E10.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet49197\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'49197\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a3e2c4cc1d984c5d64a6cb0944ba364e032cd7c1&amp;dn=Heroes.Reborn.S01E10.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'49197\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>293M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-11-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="48883" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/48883.html">
+																									英雄重生 Heroes Reborn S01E09 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqDDrgw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'48883\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9654120F49D7EDA4EE991208E7BF74572041BE61&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E09.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet48883\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'48883\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9654120F49D7EDA4EE991208E7BF74572041BE61&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E09.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E09 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'48883\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>658M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-11-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="48765" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/48765.html">
+																									英雄重生 Heroes Reborn S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTuAl3h" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'48765\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fdd7eee69ec29386534f06b328589873d8a3d2dd&amp;dn=Heroes.Reborn.S01E09.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet48765\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'48765\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fdd7eee69ec29386534f06b328589873d8a3d2dd&amp;dn=Heroes.Reborn.S01E09.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'48765\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>0.98G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-11-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="48891" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/48891.html">
+																									英雄重生 Heroes Reborn S01E09 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eDEY6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'48891\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:79e007c78147d6430a9faa716920c52cc708c820&amp;dn=Heroes.Reborn.S01E09.1080p.WEB-DL.DD5.1.H264-NoGrp%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" target="_blank" name=\'magnet48891\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'48891\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:79e007c78147d6430a9faa716920c52cc708c820&amp;dn=Heroes.Reborn.S01E09.1080p.WEB-DL.DD5.1.H264-NoGrp%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E09 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'48891\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.65G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-11-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="48764" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/48764.html">
+																									英雄重生 Heroes Reborn S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sj3lztj" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'48764\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ef048e033cd3e3c222267c87e96b8a43a0aebee6&amp;dn=Heroes.Reborn.S01E09.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet48764\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'48764\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ef048e033cd3e3c222267c87e96b8a43a0aebee6&amp;dn=Heroes.Reborn.S01E09.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'48764\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>322M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-11-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="48407" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/48407.html">
+																									英雄重生 Heroes Reborn S01E08 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnlwINd" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'48407\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:BEE284BAA68C03699334B06AC466578F6A664D01&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E08.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet48407\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'48407\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:BEE284BAA68C03699334B06AC466578F6A664D01&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E08.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E08 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'48407\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>664M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-11-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="48301" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/48301.html">
+																									英雄重生 Heroes Reborn S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dD7DmHb" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'48301\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f5de7e98cf0ae734a3a0fd4d7505a5369c38ec66&amp;dn=Heroes.Reborn.S01E08.PROPER.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" target="_blank" name=\'magnet48301\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'48301\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f5de7e98cf0ae734a3a0fd4d7505a5369c38ec66&amp;dn=Heroes.Reborn.S01E08.PROPER.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'48301\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.22G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-11-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="48447" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/48447.html">
+																									英雄重生 Heroes Reborn S01E08 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgpikfm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'48447\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6c05694a7c531358bb5ca917a3264a0204b0dc9a&amp;dn=Heroes.Reborn.S01E08.June.13th.Part.Two.1080p.WEB-DL.DD5.1.H.264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=ud" rel="nofollow" target="_blank" name=\'magnet48447\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'48447\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6c05694a7c531358bb5ca917a3264a0204b0dc9a&amp;dn=Heroes.Reborn.S01E08.June.13th.Part.Two.1080p.WEB-DL.DD5.1.H.264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=ud" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E08 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'48447\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.65G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-11-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="48300" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/48300.html">
+																									英雄重生 Heroes Reborn S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgyB0da" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'48300\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5ed28fb049889a9e33ce3cb39844f67d1bfecc74&amp;dn=Heroes.Reborn.S01E08.PROPER.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet48300\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'48300\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5ed28fb049889a9e33ce3cb39844f67d1bfecc74&amp;dn=Heroes.Reborn.S01E08.PROPER.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'48300\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>336M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-11-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="47980" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47980.html">
+																									英雄重生 Heroes Reborn S01E07 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWj9NoK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47980\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:7FBBBBCA70075B26BAA52B3A16727EE2893C74D6&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E07.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet47980\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47980\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7FBBBBCA70075B26BAA52B3A16727EE2893C74D6&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E07.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E07 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47980\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>718M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-10-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="47895" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47895.html">
+																									英雄重生 Heroes Reborn S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dWDXG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47895\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:173ae2406c5e72732cdb2dd25fc04713c1540551&amp;dn=Heroes.Reborn.S01E07.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet47895\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47895\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:173ae2406c5e72732cdb2dd25fc04713c1540551&amp;dn=Heroes.Reborn.S01E07.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47895\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.30G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="48001" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/48001.html">
+																									英雄重生 Heroes Reborn S01E07 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJmtHUV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'48001\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ed20a472cd1db443c4782f19f30d27ce7bd258c0&amp;dn=Heroes.Reborn.S01E07.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet48001\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'48001\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ed20a472cd1db443c4782f19f30d27ce7bd258c0&amp;dn=Heroes.Reborn.S01E07.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E07 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'48001\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.63G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="47894" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47894.html">
+																									英雄重生 Heroes Reborn S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdFGjVt" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47894\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:a3f4d7728d17e5e6aeada5b224b067b3b035c60e&amp;dn=Heroes.Reborn.S01E07.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet47894\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47894\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a3f4d7728d17e5e6aeada5b224b067b3b035c60e&amp;dn=Heroes.Reborn.S01E07.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47894\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>382M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="47526" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47526.html">
+																									英雄重生 Heroes Reborn S01E06 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mg4alDY" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47526\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|Heroes.Reborn.S01E06.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mkv|689586620|7A4BD68B2222D0DAF2ED0FA6886748DB|h=M2L7TLNLGJPAXJWNEZISRZWKM5SHG2JW|/" rel="nofollow" target="_blank" name=\'ed2k47526\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'47526\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|Heroes.Reborn.S01E06.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mkv|689586620|7A4BD68B2222D0DAF2ED0FA6886748DB|h=M2L7TLNLGJPAXJWNEZISRZWKM5SHG2JW|/" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E06 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47526\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>657M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-10-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="47417" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47417.html">
+																									英雄重生 Heroes Reborn S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDtzbTR" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47417\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:7eb629b3f71a4a881ea82018ddcc9e1d0207e995&amp;dn=Heroes.Reborn.S01E06.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet47417\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47417\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7eb629b3f71a4a881ea82018ddcc9e1d0207e995&amp;dn=Heroes.Reborn.S01E06.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47417\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.11G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="47563" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47563.html">
+																									英雄重生 Heroes Reborn S01E06 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTyC9AB" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47563\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9e2054ae3b3beb3af98cd39ff18f45f5f7674b00&amp;dn=Heroes.Reborn.S01E06.Game.Over.1080p.WEB-DL.DD5.1.H.264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" target="_blank" name=\'magnet47563\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47563\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9e2054ae3b3beb3af98cd39ff18f45f5f7674b00&amp;dn=Heroes.Reborn.S01E06.Game.Over.1080p.WEB-DL.DD5.1.H.264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E06 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47563\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.63G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="47416" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47416.html">
+																									英雄重生 Heroes Reborn S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntxm18t" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47416\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2f05ef7d18c0a359b1b2e80386f5ffa393e08b8e&amp;dn=Heroes.Reborn.S01E06.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet47416\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47416\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2f05ef7d18c0a359b1b2e80386f5ffa393e08b8e&amp;dn=Heroes.Reborn.S01E06.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47416\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>367M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="47049" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47049.html">
+																									英雄重生 Heroes Reborn S01E05 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdApynh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47049\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:CDFC11EE3786CB508C31315C79CE9DAD8F4CD53D&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet47049\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47049\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:CDFC11EE3786CB508C31315C79CE9DAD8F4CD53D&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E05 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47049\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>642M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-10-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="46970" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46970.html">
+																									英雄重生 Heroes Reborn S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mg9zpg8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46970\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:07c0615c143d54aa584afb9c1519b85406eb2367&amp;dn=Heroes.Reborn.S01E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet46970\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46970\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:07c0615c143d54aa584afb9c1519b85406eb2367&amp;dn=Heroes.Reborn.S01E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46970\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>0.99G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="47106" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47106.html">
+																									英雄重生 Heroes Reborn S01E05 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c02ojrq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47106\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:edd183cb07f33b9fe46d236f554f9454e59c59de&amp;dn=Heroes.Reborn.S01E05.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet47106\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47106\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:edd183cb07f33b9fe46d236f554f9454e59c59de&amp;dn=Heroes.Reborn.S01E05.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E05 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47106\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.60G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="46969" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46969.html">
+																									英雄重生 Heroes Reborn S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i30HUSX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46969\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4d94f6a7d108412d4cbefc9d5fe0f9d578a7a926&amp;dn=Heroes.Reborn.S01E05.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet46969\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46969\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4d94f6a7d108412d4cbefc9d5fe0f9d578a7a926&amp;dn=Heroes.Reborn.S01E05.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46969\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>319M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="46549" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46549.html">
+																									英雄重生 Heroes Reborn S01E04 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgF42Ju" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46549\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:B91F4E3CF7EB9F91C42ADA9640D1DC72091F8E0D&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E04.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet46549\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46549\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:B91F4E3CF7EB9F91C42ADA9640D1DC72091F8E0D&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E04.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E04 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46549\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>654M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-10-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="46493" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46493.html">
+																									英雄重生 Heroes Reborn S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjmnWL3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46493\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:7b05ce3b9c3df08bee8d6d370728e137bbd0b6c7&amp;dn=Heroes.Reborn.S01E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet46493\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46493\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7b05ce3b9c3df08bee8d6d370728e137bbd0b6c7&amp;dn=Heroes.Reborn.S01E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46493\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>978M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="46618" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46618.html">
+																									英雄重生 Heroes Reborn S01E04 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWJ0kn6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46618\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:462eacf5e1b143e82ab5e449dabb88f93def8000&amp;dn=Heroes.Reborn.S01E04.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet46618\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46618\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:462eacf5e1b143e82ab5e449dabb88f93def8000&amp;dn=Heroes.Reborn.S01E04.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E04 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46618\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.62G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="46492" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46492.html">
+																									英雄重生 Heroes Reborn S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWJ0caS" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46492\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2e3ba4b139ee610ea718f180edcb354a7d692fd3&amp;dn=Heroes.Reborn.S01E04.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet46492\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46492\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2e3ba4b139ee610ea718f180edcb354a7d692fd3&amp;dn=Heroes.Reborn.S01E04.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46492\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>307M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="46097" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46097.html">
+																									英雄重生 Heroes Reborn S01E03 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJmX5CB" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46097\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6A037C8AC3E89BB1FC135C484C24B93E108F78BD&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E03.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet46097\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46097\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6A037C8AC3E89BB1FC135C484C24B93E108F78BD&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E03.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E03 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46097\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>668M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-10-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="46013" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46013.html">
+																									英雄重生 Heroes Reborn S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjzeAj7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46013\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:09dabbb89d9e5c9c9416c17e3161c8dd6632bb7b&amp;dn=Heroes.Reborn.S01E03.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet46013\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46013\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:09dabbb89d9e5c9c9416c17e3161c8dd6632bb7b&amp;dn=Heroes.Reborn.S01E03.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46013\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.05G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="46491" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46491.html">
+																									英雄重生 Heroes Reborn S01E03 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kT2Fn9d" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46491\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9fd2b83339045983ba6775ea31f31314e1f0b435&amp;dn=Heroes.Reborn.S01E03.Under.the.Mask.1080p.WEB-DL.DD5.1.H.264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet46491\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46491\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9fd2b83339045983ba6775ea31f31314e1f0b435&amp;dn=Heroes.Reborn.S01E03.Under.the.Mask.1080p.WEB-DL.DD5.1.H.264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E03 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46491\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.71G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="46012" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46012.html">
+																									英雄重生 Heroes Reborn S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdnTIAv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46012\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2073af077c26d9417c2ecdc2fd86fdba2ac2ad65&amp;dn=Heroes.Reborn.S01E03.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet46012\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46012\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2073af077c26d9417c2ecdc2fd86fdba2ac2ad65&amp;dn=Heroes.Reborn.S01E03.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46012\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>323M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="45710" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45710.html">
+																									英雄重生 Heroes Reborn S01E02 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnz6ByZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45710\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:843911ebf6645178fd4fef1ef38b8dd9420dccee&amp;dn=Heroes.Reborn.S01E02.Odessa.1080p.WEB-DL.DD5.1.H.264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9." rel="nofollow" target="_blank" name=\'magnet45710\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45710\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:843911ebf6645178fd4fef1ef38b8dd9420dccee&amp;dn=Heroes.Reborn.S01E02.Odessa.1080p.WEB-DL.DD5.1.H.264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9." rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E02 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45710\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.68G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-09-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="45692" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45692.html">
+																									英雄重生 Heroes Reborn S01E01E02 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjn8Qbr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45692\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:293F03ACA7A41E306AE87949C158046C00A5D5E2&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E01E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet45692\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45692\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:293F03ACA7A41E306AE87949C158046C00A5D5E2&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E01E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E01E02 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45692\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.36G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-09-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="45615" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45615.html">
+																									英雄重生 Heroes Reborn S01E01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJJ0TeF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45615\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:7d5269232f57e0a3ff1c9bd6582c7ffe97d0c490&amp;dn=Heroes.Reborn.S01E01E02.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" target="_blank" name=\'magnet45615\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45615\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7d5269232f57e0a3ff1c9bd6582c7ffe97d0c490&amp;dn=Heroes.Reborn.S01E01E02.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45615\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.95G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-09-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="45709" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45709.html">
+																									英雄重生 Heroes Reborn S01E01 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntkZkVn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45709\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d672405fdcfb76ffb755648de43c4f13f5ed2b4c&amp;dn=Heroes.Reborn.S01E01.Brave.New.World.1080p.WEB-DL.DD5.1.H.264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3" rel="nofollow" target="_blank" name=\'magnet45709\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45709\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d672405fdcfb76ffb755648de43c4f13f5ed2b4c&amp;dn=Heroes.Reborn.S01E01.Brave.New.World.1080p.WEB-DL.DD5.1.H.264-Oosh%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E01 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45709\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.66G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-09-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="45662" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45662.html">
+																									英雄重生 Heroes Reborn S01E01E02 FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bn9GaYz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45662\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:D5D1A7CECCA97F7B9C5E3B2A889DD65EA5F4B9A2&amp;dn=%5B%E6%97%A0%E5%90%8E%E6%9C%9F%E5%B0%81%E8%A3%85%E7%89%88%5D%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heros.Reborn.S01E01E02.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet45662\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45662\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:D5D1A7CECCA97F7B9C5E3B2A889DD65EA5F4B9A2&amp;dn=%5B%E6%97%A0%E5%90%8E%E6%9C%9F%E5%B0%81%E8%A3%85%E7%89%88%5D%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heros.Reborn.S01E01E02.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E01E02 FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45662\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>594M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-09-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="45614" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45614.html">
+																									英雄重生 Heroes Reborn S01E01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWCDrHE" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45614\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3469dd051eefedfdbad73987f6e93261e8b39bff&amp;dn=Heroes.Reborn.S01E01E02.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet45614\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45614\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3469dd051eefedfdbad73987f6e93261e8b39bff&amp;dn=Heroes.Reborn.S01E01E02.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45614\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>596M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-09-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="44146" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/44146.html">
+																									英雄重生 Heroes Reborn S01E00 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqvpTsg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'44146\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5A7E4734BFFB613539562A4188CE0D9B180111AA&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E00.Heroes.Reborn.Dark.Matters.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet44146\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'44146\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5A7E4734BFFB613539562A4188CE0D9B180111AA&amp;dn=%E8%8B%B1%E9%9B%84%E9%87%8D%E7%94%9F.Heroes.Reborn.S01E00.Heroes.Reborn.Dark.Matters.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="英雄重生 Heroes Reborn S01E00 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'44146\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>674M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-08-14</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=350764&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(350764,869,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,869);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,869);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,869);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

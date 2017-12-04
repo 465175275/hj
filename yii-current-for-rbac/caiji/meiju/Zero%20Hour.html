@@ -1,0 +1,1378 @@
+'HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2017 03:33:40 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d9cecce6b72dacbe4e96e3fa1ee81e62e1510112019; expires=Thu, 08-Nov-18 03:33:39 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3ba578db12cd5188-SJC
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>零点时刻 Zero Hour US-零点时刻下载-零点时刻全集下载-Zero Hour下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="零点时刻,Zero Hour,零点时刻下载,零点时刻全集下载,零点时刻高清下载,零点时刻迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;　　HankFoley（AnthonyEdwards）是个酷爱冒险的人，但这一次的经历却远远超出他的想象。作为《当代怀疑论者》杂志社（所刊登的文章总是质疑世界上各种不同寻常的事件）的一名资深编辑，Hank二十年来一直在追踪各种不同寻常的线索，曝光真相，揭露阴谋。他还是个众所周知的超自然迷，「逻辑推理就是指南针」是他的座右铭。可是Hank怀疑" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 487;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FZero%2520Hour.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FZero%2520Hour.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 487;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">零点时刻 Zero Hour US-零点时刻下载-零点时刻全集下载-Zero Hour下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i1.piimg.com/588755/9c869e72c784514e.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i1.piimg.com/588755/9c869e72c784514e.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周日</span>
+						<span>状态：被砍</span>
+						<span class="greybg">分类：剧情类</span>						
+						<span>最后更新：2013-07-16 13:52</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/487.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">10</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>
+			
+			
+			
+			
+			　　Hank Foley（Anthony Edwards）是个酷爱冒险的人，但这一次的经历却远远超出他的想象。作为《当代怀疑论者》杂志社（所刊登的文章总是质疑世界上各种不同寻常的事件）的一名资深编辑，Hank二十年来一直在追踪各种不同寻常的线索，曝光真相，揭露阴谋。他还是个众所周知的超自然迷，「逻辑推理就是指南针」是他的座右铭。可是Hank怀疑的一切竟然变成了现实！当Hank年轻美貌的妻子（Jacinda Barrett）从工作的古董钟表店被人绑架后，Hank很快卷入了人类历史上最大的阴谋－－一个广及全球，甚至可以回溯到数个世纪之前的离奇事件。　　　　Hank在妻子贩卖的一块古董钟表里发现了一张藏宝图，然而这张藏宝图不能给人带来财富，而是指引着一个巨大的灾难。现在只有Hank能破译图上的古怪符号并找出隐藏在其中的秘密，确保这些信息不落入坏人之手。在年轻同事Rachel（Addison Timlin）、Arron（Scott Michael Foster）及一名性感的FBI女探员（Carmen Ejogo）的帮助下，Hank将竭尽全力找到自己的妻子。当然……顺便拯救全人类。《越狱》（Prison Break）的创作人参与该剧的开发，其他制片人则来自电影《特种部队》（GI: Joe）系列和电视剧《替身标靶》（Human Target）。　　　　Michael Nyqvist扮演主要反派角色White Vincent，是这场「全球性大阴谋」的核心人物。　			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="24169" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24169.html">
+																									零点时刻 Zero Hour US S01E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/3B68D4F17F2C92AF85F98F427F6E86D585BF981A.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'24169\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3b68d4f17f2c92af85f98f427f6e86d585bf981a&amp;dn=Zero.Hour.US.S01E13.720p.HDTV.X264-SKGTV%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3" rel="nofollow" target="_blank" name=\'magnet24169\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'24169\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3b68d4f17f2c92af85f98f427f6e86d585bf981a&amp;dn=Zero.Hour.US.S01E13.720p.HDTV.X264-SKGTV%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'24169\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>868M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24168" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24168.html">
+																									零点时刻 Zero Hour US S01E13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3672462610&amp;uk=2083617814" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24168\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/8D74127351AD8687AD49B47F8851C96CDFFE97FB.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'24168\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:RV2BE42RVWDIPLKJWR7YQUOJNTP75F73&amp;dn=Zero.Hour.US.S01E13.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp:" rel="nofollow" target="_blank" name=\'magnet24168\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'24168\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:RV2BE42RVWDIPLKJWR7YQUOJNTP75F73&amp;dn=Zero.Hour.US.S01E13.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp:" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E13 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'24168\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>291M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24167" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24167.html">
+																									零点时刻 Zero Hour US S01E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/EB921B28216477FCCC143CC00D3234957B31CECB.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'24167\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:eb921b28216477fccc143cc00d3234957b31cecb&amp;dn=Zero.Hour.US.S01E12.720p.HDTV.X264-SKGTV&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;t" rel="nofollow" target="_blank" name=\'magnet24167\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'24167\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:eb921b28216477fccc143cc00d3234957b31cecb&amp;dn=Zero.Hour.US.S01E12.720p.HDTV.X264-SKGTV&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;t" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'24167\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>770M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24166" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24166.html">
+																									零点时刻 Zero Hour US S01E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3660877719&amp;uk=2083617814" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24166\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/47F71763689C739D4EEC7B390D07D9160D291924.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'24166\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:I73ROY3ITRZZ2TXMPM4Q2B6ZCYGSSGJE&amp;dn=Zero.Hour.US.S01E12.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp:" rel="nofollow" target="_blank" name=\'magnet24166\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'24166\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:I73ROY3ITRZZ2TXMPM4Q2B6ZCYGSSGJE&amp;dn=Zero.Hour.US.S01E12.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp:" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'24166\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>257M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23076" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23076.html">
+																									零点时刻 Zero Hour US S01E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/94D8F0736DADD9B8805EFAFD397D6C18627AE732.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'23076\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:94d8f0736dadd9b8805efafd397d6c18627ae732&amp;dn=Zero.Hour.US.S01E11.720p.HDTV.X264-SKGTV&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;t" rel="nofollow" target="_blank" name=\'magnet23076\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'23076\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:94d8f0736dadd9b8805efafd397d6c18627ae732&amp;dn=Zero.Hour.US.S01E11.720p.HDTV.X264-SKGTV&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;t" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'23076\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>772M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="23075" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23075.html">
+																									零点时刻 Zero Hour US S01E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/5A2E4D012E5A4FA6C4DAFFB5897C8013DE716E54.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'23075\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:LIXE2AJOLJH2NRG2762YS7EACPPHC3SU&amp;dn=Zero.Hour.US.S01E11.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet23075\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'23075\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:LIXE2AJOLJH2NRG2762YS7EACPPHC3SU&amp;dn=Zero.Hour.US.S01E11.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'23075\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>248M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22791" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22791.html">
+																									零点时刻 Zero Hour US S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/D8D0B7A9C89CC46FB4714D4054F9068C2D6EA575.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'22791\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d8d0b7a9c89cc46fb4714d4054f9068c2d6ea575&amp;dn=Zero.Hour.US.S01E10.720p.HDTV.X264-SKGTV%5Brartv%5D&amp;tr=http%3a%2f%2f10.rarbg.com%3a80&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710&amp;tr=udp%3a%2f%2f11.rarbg.com%3a80&amp;tr=http%3a%2f%2f1" rel="nofollow" target="_blank" name=\'magnet22791\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'22791\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d8d0b7a9c89cc46fb4714d4054f9068c2d6ea575&amp;dn=Zero.Hour.US.S01E10.720p.HDTV.X264-SKGTV%5Brartv%5D&amp;tr=http%3a%2f%2f10.rarbg.com%3a80&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710&amp;tr=udp%3a%2f%2f11.rarbg.com%3a80&amp;tr=http%3a%2f%2f1" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'22791\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>702M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22790" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22790.html">
+																									零点时刻 Zero Hour US S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=4118487361&amp;uk=1647339164" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22790\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/635B2B6928EB4DC0DD7D89BF58595E0C7F5D648F.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'22790\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:MNNSW2JI5NG4BXL5RG7VQWK6BR7V2ZEP&amp;dn=Zero.Hour.US.S01E10.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet22790\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'22790\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:MNNSW2JI5NG4BXL5RG7VQWK6BR7V2ZEP&amp;dn=Zero.Hour.US.S01E10.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'22790\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>227M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22548" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22548.html">
+																									零点时刻 Zero Hour US S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/179EE7BA743CF3D49CF2DC1D435DF4F4BA075B90.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'22548\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:179ee7ba743cf3d49cf2dc1d435df4f4ba075b90&amp;dn=Zero.Hour.US.S01E09.720p.HDTV.X264-SKGTV%5Brartv%5D&amp;tr=http%3a%2f%2f10.rarbg.com%3a80&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710&amp;tr=udp%3a%2f%2f11.rarbg.com%3a80&amp;tr=http%3a%2f%2f1" rel="nofollow" target="_blank" name=\'magnet22548\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'22548\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:179ee7ba743cf3d49cf2dc1d435df4f4ba075b90&amp;dn=Zero.Hour.US.S01E09.720p.HDTV.X264-SKGTV%5Brartv%5D&amp;tr=http%3a%2f%2f10.rarbg.com%3a80&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710&amp;tr=udp%3a%2f%2f11.rarbg.com%3a80&amp;tr=http%3a%2f%2f1" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'22548\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>759M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22547" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22547.html">
+																									零点时刻 Zero Hour US S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=741592&amp;uk=3845149431" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22547\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/41E01EA7C07E9C5251D1AA5A3D34E20A177FB746.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'22547\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:IHQB5J6AP2OFEUORVJND2NHCBILX7N2G&amp;dn=Zero.Hour.US.S01E09.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet22547\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'22547\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:IHQB5J6AP2OFEUORVJND2NHCBILX7N2G&amp;dn=Zero.Hour.US.S01E09.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'22547\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>257M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22288" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22288.html">
+																									零点时刻 Zero Hour US S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/353001207F0C765662BF32F12CDBC2E63FC7F3A5.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'22288\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:GUYACID7BR3FMYV7GLYSZW6C4Y74P45F&amp;dn=Zero.Hour.US.S01E08.720p.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet22288\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'22288\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:GUYACID7BR3FMYV7GLYSZW6C4Y74P45F&amp;dn=Zero.Hour.US.S01E08.720p.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'22288\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>730M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22287" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22287.html">
+																									零点时刻 Zero Hour US S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=458651&amp;uk=993525555" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22287\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/E664225E4F1A45DC2BD1A6EFAC45D7E9F9C5D854.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'22287\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4ZSCEXSPDJC5YK6RU3X2YROX5H44LWCU&amp;dn=Zero.Hour.US.S01E08.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet22287\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'22287\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4ZSCEXSPDJC5YK6RU3X2YROX5H44LWCU&amp;dn=Zero.Hour.US.S01E08.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'22287\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>237M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22047" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22047.html">
+																									零点时刻 Zero Hour US S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/47058B5940EF13B060616A98D6F2AA68DA0E406C.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'22047\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:I4CYWWKA54J3AYDBNKMNN4VKNDNA4QDM&amp;dn=Zero.Hour.US.S01E07.720p.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet22047\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'22047\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:I4CYWWKA54J3AYDBNKMNN4VKNDNA4QDM&amp;dn=Zero.Hour.US.S01E07.720p.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'22047\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>762M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22046" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22046.html">
+																									零点时刻 Zero Hour US S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=441566&amp;uk=3929499501" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22046\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/C28E879BA1127ACA1DB5430E37BF830A06A0BADA.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'22046\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:YKHIPG5BCJ5MUHNVIMHDPP4DBIDKBOW2&amp;dn=Zero.Hour.US.S01E07.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet22046\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'22046\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:YKHIPG5BCJ5MUHNVIMHDPP4DBIDKBOW2&amp;dn=Zero.Hour.US.S01E07.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'22046\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>257M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="21629" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21629.html">
+																									零点时刻 Zero Hour US S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/8A1D1C7F94C92550E3FC72D5B3F631BD4CA11567.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'21629\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:RIORY74UZESVBY74OLK3H5RRXVGKCFLH&amp;dn=Zero.Hour.US.S01E06.720p.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet21629\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'21629\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:RIORY74UZESVBY74OLK3H5RRXVGKCFLH&amp;dn=Zero.Hour.US.S01E06.720p.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'21629\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>840M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="21628" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21628.html">
+																									零点时刻 Zero Hour US S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=424505&amp;uk=1161263531" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21628\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/A45D9B17A6168DEDD48BC353FA14985C77C1E1B4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'21628\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:UROZWF5GC2G63VELYNJ7UFEYLR34DYNU&amp;dn=Zero.Hour.US.S01E06.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet21628\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'21628\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:UROZWF5GC2G63VELYNJ7UFEYLR34DYNU&amp;dn=Zero.Hour.US.S01E06.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'21628\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>287M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="21159" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21159.html">
+																									零点时刻 Zero Hour US S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/FCD78FD265B74978FC43E1041CA035A04C380439.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'21159\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7TLY7UTFW5EXR7CD4ECBZIBVUBGDQBBZ&amp;dn=Zero.Hour.US.S01E05.720p.HDTV.X264-DIMENSION&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet21159\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'21159\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7TLY7UTFW5EXR7CD4ECBZIBVUBGDQBBZ&amp;dn=Zero.Hour.US.S01E05.720p.HDTV.X264-DIMENSION&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'21159\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="21158" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21158.html">
+																									零点时刻 Zero Hour US S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=427278&amp;uk=121051551" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21158\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/93BA2574771A9B7196465F0C3F8E08B018E060FB.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'21158\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:SO5CK5DXDKNXDFSGL4GD7DQIWAMOAYH3&amp;dn=Zero.Hour.US.S01E05.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet21158\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'21158\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:SO5CK5DXDKNXDFSGL4GD7DQIWAMOAYH3&amp;dn=Zero.Hour.US.S01E05.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'21158\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>312M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="20841" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20841.html">
+																									零点时刻 Zero Hour US S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/B07AD595AF86A93D4193C884C67B40D99BFA7681.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'20841\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b07ad595af86a93d4193c884c67b40d99bfa7681&amp;dn=Zero.Hour.US.S01E04.720p.HDTV.X264-SKGTV%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3" rel="nofollow" target="_blank" name=\'magnet20841\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'20841\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b07ad595af86a93d4193c884c67b40d99bfa7681&amp;dn=Zero.Hour.US.S01E04.720p.HDTV.X264-SKGTV%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'20841\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>722M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20840" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20840.html">
+																									零点时刻 Zero Hour US S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=410919&amp;uk=1446459601" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20840\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/49E9581BF4E68F4456814F73251AD59C94A39DB4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'20840\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:JHUVQG7U42HUIVUBJ5ZSKGWVTSKKHHNU&amp;dn=Zero.Hour.US.S01E04.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet20840\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'20840\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:JHUVQG7U42HUIVUBJ5ZSKGWVTSKKHHNU&amp;dn=Zero.Hour.US.S01E04.HDTV.X264-SKGTV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'20840\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>239M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18450" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18450.html">
+																									零点时刻 Zero Hour US S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/996D6F56A2E2198C6B0A32627E162D3F8BF541C3.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18450\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:TFWW6VVC4IMYY2YKGJRH4FRNH6F7KQOD&amp;dn=Zero.Hour.US.S01E03.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&a" rel="nofollow" target="_blank" name=\'magnet18450\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18450\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Zero.Hour.US.S01E03.Pendulum.720p.HDTV.x264-DIMENSION.mkv|852253422|28030973DB1C47528BB99477EFB42FDC|h=2ZBREEBGFZ5WPC5WI5JZY747OJM7OKHV|/" rel="nofollow" target="_blank" name=\'ed2k18450\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18450\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:TFWW6VVC4IMYY2YKGJRH4FRNH6F7KQOD&amp;dn=Zero.Hour.US.S01E03.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&a" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18450\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>812M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="18449" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18449.html">
+																									零点时刻 Zero Hour US S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=332717&amp;uk=2822068684" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'18449\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/EDF57B7367AEAC7F4869B720FAF70C1224D5BFB5.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18449\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5X2XW43HV2WH6SDJW4QPV5YMCISNLP5V&amp;dn=Zero+Hour+US+S01E03+HDTV+x264-LOL[ettv]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=http://fr3" rel="nofollow" target="_blank" name=\'magnet18449\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18449\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Zero.Hour.US.S01E03.Pendulum.HDTV.x264-LOL.mp4|261039270|AF3519EF705B0665600A12ADBB5EE590|h=M577HAAJZLSMAIHCG2TUY4BYBCK35ZPG|/" rel="nofollow" target="_blank" name=\'ed2k18449\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18449\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:5X2XW43HV2WH6SDJW4QPV5YMCISNLP5V&amp;dn=Zero+Hour+US+S01E03+HDTV+x264-LOL[ettv]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=http://fr3" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18449\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>248M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18179" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18179.html">
+																									零点时刻 Zero Hour US S01E02 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="18113" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18113.html">
+																									零点时刻 Zero Hour US S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/DCC008E617AF3258970D30406385039704605DFA.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18113\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:DCC008E617AF3258970D30406385039704605DFA&amp;dn=Zero.Hour.US.S01E02.720p.HDTV.X264-DIMENSION.mkv&amp;tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" target="_blank" name=\'magnet18113\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18113\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Zero.Hour.US.S01E02.Face.720p.HDTV.x264-DIMENSION.mkv|830283230|7EE97CDEF7AA39AEA43784E4C63849BA|h=VQT6NPEDPE4ARIAHPCSYULRIUPPJT7OG|/" rel="nofollow" target="_blank" name=\'ed2k18113\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18113\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:DCC008E617AF3258970D30406385039704605DFA&amp;dn=Zero.Hour.US.S01E02.720p.HDTV.X264-DIMENSION.mkv&amp;tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18113\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>791M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18112" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18112.html">
+																									零点时刻 Zero Hour US S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=300974&amp;uk=1932833328" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'18112\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/15F1CA5B8DCA593A1080884431DB612A5D47258A.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18112\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:CXY4UW4NZJMTUEEARBCDDW3BFJOUOJMK&amp;dn=Zero.Hour.US.S01E02.HDTV.XviD-AFG&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=http://fr33dom.h" rel="nofollow" target="_blank" name=\'magnet18112\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18112\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Zero.Hour.US.S01E02.Face.HDTV.x264-LOL.mp4|274686747|ACE284B0E9F4BBED1D3C64E87F0831D3|h=I7CB7FLYLIW56UAAYSSFLGOETUUNRESS|/" rel="nofollow" target="_blank" name=\'ed2k18112\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18112\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:CXY4UW4NZJMTUEEARBCDDW3BFJOUOJMK&amp;dn=Zero.Hour.US.S01E02.HDTV.XviD-AFG&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=http://fr33dom.h" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18112\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>347M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="17690" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17690.html">
+																									零点时刻 Zero Hour S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=348066&amp;uk=2751694154" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'17690\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/CAA89D889E5F94ECA0E33A93BE7EF670011A4EFE.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17690\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ZKUJ3CE6L6KOZIHDHKJ347XWOAARUTX6&amp;dn=Zero.Hour.US.S01E01.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&a" rel="nofollow" target="_blank" name=\'magnet17690\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17690\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Zero.Hour.US.S01E01.Strike.720p.HDTV.X264-DIMENSION.mkv|802796718|1031E81F70DD28D55048FB11A01E8F01|h=TH2LAEUDGQ6VZQOA33CLR7OSO2VO6HND|/" rel="nofollow" target="_blank" name=\'ed2k17690\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'17690\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:ZKUJ3CE6L6KOZIHDHKJ347XWOAARUTX6&amp;dn=Zero.Hour.US.S01E01.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&a" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17690\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>765M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="17646" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17646.html">
+																									零点时刻 Zero Hour S01E01 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/D4EC546BDF8B9830DAB3329B5165167BBB8F3810.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17646\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2TWFI267ROMDBWVTGKNVCZIWPO5Y6OAQ&amp;dn=Zero.Hour.S01E01.720p.WEB-DL.DD5.1.H.264-HWD+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&a" rel="nofollow" target="_blank" name=\'magnet17646\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17646\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2TWFI267ROMDBWVTGKNVCZIWPO5Y6OAQ&amp;dn=Zero.Hour.S01E01.720p.WEB-DL.DD5.1.H.264-HWD+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&a" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour S01E01 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17646\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="17689" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17689.html">
+																									零点时刻 Zero Hour US S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=288160&amp;uk=1144302357" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'17689\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/0ABF791F10357E80BD245F0DFD912271A85D14B4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17689\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:BK7XSHYQGV7IBPJEL4G73EJCOGUF2FFU&amp;dn=Zero.Hour.US.S01E01.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet17689\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17689\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Zero.Hour.US.S01E01.Strike.HDTV.x264-LOL.mp4|273410458|71821A8D7D5DC0D6015EE695187608F6|h=NEO3FNOX7TO6LH2L2E4GSK7PEHTFJDKG|/" rel="nofollow" target="_blank" name=\'ed2k17689\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'17689\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:BK7XSHYQGV7IBPJEL4G73EJCOGUF2FFU&amp;dn=Zero.Hour.US.S01E01.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="零点时刻 Zero Hour US S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17689\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>260M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="17104" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17104.html">
+																									零点时刻  Zero Hour S01E01 Pilot WEBRip 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=267742&amp;uk=1446267519" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'17104\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/E114F3B69D6AE6B3B5FFCC7A912C9977EE227D77.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17104\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:E114F3B69D6AE6B3B5FFCC7A912C9977EE227D77&amp;dn=zero+hour+s01e01+pilot+webrip+x264+pmp&amp;tr=http%3A%2F%2Ffr33dom.h33t.com%3A3310%2Fannounce" rel="nofollow" target="_blank" name=\'magnet17104\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17104\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Zero.Hour.2013.S01E01.Strike.WEBRip.x264-PMP.mp4|201062693|911BE1BC19646D775A78F1A8A94782BC|h=OTKB2KP4BK6CY3VX5DY6NABKKZSOMJ2S|/" rel="nofollow" target="_blank" name=\'ed2k17104\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'17104\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:E114F3B69D6AE6B3B5FFCC7A912C9977EE227D77&amp;dn=zero+hour+s01e01+pilot+webrip+x264+pmp&amp;tr=http%3A%2F%2Ffr33dom.h33t.com%3A3310%2Fannounce" rel="nofollow" name=\'miurl\' filename="零点时刻  Zero Hour S01E01 Pilot WEBRip " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17104\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>191M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-03</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,487,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,487);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,487);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,487);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

@@ -1,0 +1,1594 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 10:59:55 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d6d0aa60bfecac0f377366fdd8698807b1509533995; expires=Thu, 01-Nov-18 10:59:55 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e58ee93e87930-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>吉普赛人 Gypsy-吉普赛人下载-吉普赛人全集下载-Gypsy下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="吉普赛人,Gypsy,吉普赛人下载,吉普赛人全集下载,吉普赛人高清下载,吉普赛人迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;剧集讲述了娜奥米扮演的心理治疗师让·霍洛威，和她的病人之间展开的一系列危险的亲密关系。&lt;/p&gt;" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1409;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FGypsy.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FGypsy.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1409;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">吉普赛人 Gypsy-吉普赛人下载-吉普赛人全集下载-Gypsy下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.piimg.com/588755/eccdc51445a795e6.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.piimg.com/588755/eccdc51445a795e6.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周五</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：剧情类</span>						
+						<span>最后更新：2017-08-28 16:32</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1409.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">330</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>剧集讲述了娜奥米扮演的心理治疗师让·霍洛威，和她的病人之间展开的一系列危险的亲密关系。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="86973" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86973.html">
+												<font style="color:red;font-weight:bold;">吉普赛人 Gypsy S01E10 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8wppLg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86973\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6141549255DC3081838BD92D1A4FE3B23A3B6B16&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E10.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" target="_blank" name=\'magnet86973\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86973\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6141549255DC3081838BD92D1A4FE3B23A3B6B16&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E10.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E10 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86973\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>361M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84670" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84670.html">
+																									吉普赛人 Gypsy S01E10 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kVsoQzH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84670\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:20522D6E56C77780E6390D4816D6808D52205D43&amp;dn=%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E010.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbi" rel="nofollow" target="_blank" name=\'magnet84670\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84670\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%83%E7%81%B5%E8%B6%8A%E7%95%8C.Gypsy.S01E010.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|494703519|6A6ED7CF29095067F606A89E0FF43991|h=M5PRPH6I7HAKSF3F3LZ5MAMBLGOGJGCN|/" rel="nofollow" target="_blank" name=\'ed2k84670\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84670\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:20522D6E56C77780E6390D4816D6808D52205D43&amp;dn=%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E010.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbi" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E10 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84670\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>472M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="84001" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84001.html">
+																									吉普赛人 Gypsy S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfEGZGv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84001\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=9imfkxn&amp;f=Gypsy.S01E10.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84001\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ad6a533a11db67fb1d603150b7197434c99ed00b&amp;dn=Gypsy.S01E10.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84001\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84001\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ad6a533a11db67fb1d603150b7197434c99ed00b&amp;dn=Gypsy.S01E10.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84001\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>739M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84000" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84000.html">
+																									吉普赛人 Gypsy S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIkiIt4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84000\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=15zyvi8&amp;f=Gypsy.S01E10.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84000\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e9ed4a5f27e7d3407c3f22096c00e3b35367614e&amp;dn=Gypsy.S01E10.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet84000\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84000\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e9ed4a5f27e7d3407c3f22096c00e3b35367614e&amp;dn=Gypsy.S01E10.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84000\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>472M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86926" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86926.html">
+												<font style="color:red;font-weight:bold;">吉普赛人 Gypsy S01E09 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8Pv1hC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86926\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:E746BDC5C408BD13513B46CCD2F1B05CE2133D78&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E09.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" target="_blank" name=\'magnet86926\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86926\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:E746BDC5C408BD13513B46CCD2F1B05CE2133D78&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E09.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E09 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86926\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>391M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84511" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84511.html">
+																									吉普赛人 Gypsy S01E09 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kU55CN1" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84511\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:96FACCF8F616F5943A06BB37F0A5581BC0D57781&amp;dn=%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E09.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbit" rel="nofollow" target="_blank" name=\'magnet84511\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84511\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%83%E7%81%B5%E8%B6%8A%E7%95%8C.Gypsy.S01E09.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|504703965|A975BA40505B1EE7AF2D2EE9E5E0901A|h=E4PA7EBJ32QJJKGCX2XRIUB4X4T2MYCH|/" rel="nofollow" target="_blank" name=\'ed2k84511\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84511\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:96FACCF8F616F5943A06BB37F0A5581BC0D57781&amp;dn=%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E09.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbit" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E09 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84511\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>482M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="83999" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83999.html">
+																									吉普赛人 Gypsy S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYrya0s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83999\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=5opgu94&amp;f=Gypsy.S01E09.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83999\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:aeb926c18f1745c1d2b0a45721c9be536dc21a07&amp;dn=Gypsy.S01E09.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83999\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83999\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:aeb926c18f1745c1d2b0a45721c9be536dc21a07&amp;dn=Gypsy.S01E09.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83999\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>737M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="83998" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83998.html">
+																									吉普赛人 Gypsy S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYwNLvu" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83998\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=qox8vzg&amp;f=Gypsy.S01E09.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83998\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:98218bb2414211fe0dd8fdf947dc7d545c3c8870&amp;dn=Gypsy.S01E09.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83998\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83998\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:98218bb2414211fe0dd8fdf947dc7d545c3c8870&amp;dn=Gypsy.S01E09.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83998\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>417M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86868" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86868.html">
+												<font style="color:red;font-weight:bold;">吉普赛人 Gypsy S01E08 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8slzjO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86868\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6E10F8652A1A83EF4B8F1573C95166216B3955CF&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E08.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" target="_blank" name=\'magnet86868\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86868\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6E10F8652A1A83EF4B8F1573C95166216B3955CF&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E08.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E08 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86868\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>412M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84510" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84510.html">
+																									吉普赛人 Gypsy S01E08 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSL5mwU" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84510\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:370C26C5FB6A859E65D3981069463D263A5BC6BC&amp;dn=%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E08.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbit" rel="nofollow" target="_blank" name=\'magnet84510\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84510\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%83%E7%81%B5%E8%B6%8A%E7%95%8C.Gypsy.S01E08.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|541305699|C0C0CBC8A870AF1168148EF54D7AC37D|h=LVFRFYGKHAQXVFQ4FF56D2O7EVP35KYM|/" rel="nofollow" target="_blank" name=\'ed2k84510\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84510\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:370C26C5FB6A859E65D3981069463D263A5BC6BC&amp;dn=%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E08.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbit" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E08 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84510\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>517M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="83997" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83997.html">
+																									吉普赛人 Gypsy S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kURPKtp" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83997\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=q36mzct&amp;f=Gypsy.S01E08.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83997\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9c4ba9da9e725a1b0298988cb2ded19fc3437d8c&amp;dn=Gypsy.S01E08.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83997\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83997\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9c4ba9da9e725a1b0298988cb2ded19fc3437d8c&amp;dn=Gypsy.S01E08.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83997\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>825M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="83996" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83996.html">
+																									吉普赛人 Gypsy S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfgRd9x" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83996\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=yrp4uz8&amp;f=Gypsy.S01E08.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83996\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:8ea409cbcbc1bfb59baabe678a2da923f3f7b187&amp;dn=Gypsy.S01E08.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83996\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83996\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8ea409cbcbc1bfb59baabe678a2da923f3f7b187&amp;dn=Gypsy.S01E08.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83996\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>498M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86805" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86805.html">
+												<font style="color:red;font-weight:bold;">吉普赛人 Gypsy S01E07 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kU4S5Qv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86805\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:F9816B2A170F5BC6D29F9D5AAFA07EA0E9EA7642&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E07.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" target="_blank" name=\'magnet86805\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86805\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:F9816B2A170F5BC6D29F9D5AAFA07EA0E9EA7642&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E07.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E07 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86805\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>360M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84415" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84415.html">
+																									吉普赛人 Gypsy S01E07 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8bn4l8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84415\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0DE4B01BF0F94AFCD248B779EDC7A83C1E6C4BE7&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E07.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" target="_blank" name=\'magnet84415\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84415\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%90%89%E6%99%AE%E8%B5%9B%E4%BA%BA.%E5%BF%83%E7%81%B5%E8%B6%8A%E7%95%8C.Gypsy.S01E07.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|485136454|520633134ADB82289C6EFF91680C7273|h=3LT4ENCKG66F2ADLJB6GL534D5UFX5OG|/" rel="nofollow" target="_blank" name=\'ed2k84415\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84415\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:0DE4B01BF0F94AFCD248B779EDC7A83C1E6C4BE7&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E07.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E07 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84415\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>462M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="83995" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83995.html">
+																									吉普赛人 Gypsy S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c25tCju" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83995\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=6ctyj2z&amp;f=Gypsy.S01E07.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83995\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:67012d578169bfe0d9b0fab3512c273ea502ec20&amp;dn=Gypsy.S01E07.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83995\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83995\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:67012d578169bfe0d9b0fab3512c273ea502ec20&amp;dn=Gypsy.S01E07.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83995\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>732M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="83994" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83994.html">
+																									吉普赛人 Gypsy S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mi3H0uc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83994\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=q5vldfi&amp;f=Gypsy.S01E07.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83994\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ca910186cf5496df7de356d8be4cb1b07887f745&amp;dn=Gypsy.S01E07.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83994\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83994\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ca910186cf5496df7de356d8be4cb1b07887f745&amp;dn=Gypsy.S01E07.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83994\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>450M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86559" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86559.html">
+												<font style="color:red;font-weight:bold;">吉普赛人 Gypsy S01E06 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dFfClOX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86559\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:03B2B1C1BFB53FC4C7A52A14BCE14FD948F8532D&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E06.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" target="_blank" name=\'magnet86559\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86559\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:03B2B1C1BFB53FC4C7A52A14BCE14FD948F8532D&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E06.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E06 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86559\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>720M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84320" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84320.html">
+																									吉普赛人 Gypsy S01E06 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pLfpjej" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84320\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ED3F20C4152FB0A3BBED8515064694DED4AC414F&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E06.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" target="_blank" name=\'magnet84320\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84320\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%90%89%E6%99%AE%E8%B5%9B%E4%BA%BA.%E5%BF%83%E7%81%B5%E8%B6%8A%E7%95%8C.Gypsy.S01E06.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|419339797|7647B975A7FE49DBDEFF9AE2E274A46A|h=N4J372NZJPLBP4HFD5H4GQCKMFNP6G2H|/" rel="nofollow" target="_blank" name=\'ed2k84320\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84320\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:ED3F20C4152FB0A3BBED8515064694DED4AC414F&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E06.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E06 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84320\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>400M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="83993" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83993.html">
+																									吉普赛人 Gypsy S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVeGXD1" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83993\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=u7oy4sb&amp;f=Gypsy.S01E06.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83993\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:174b286b3b03f1942b0a495618d87b304777d2b5&amp;dn=Gypsy.S01E06.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83993\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83993\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:174b286b3b03f1942b0a495618d87b304777d2b5&amp;dn=Gypsy.S01E06.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83993\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.01G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="83992" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83992.html">
+																									吉普赛人 Gypsy S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hs3j9bA" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83992\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=9i35d8l&amp;f=Gypsy.S01E06.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83992\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1be4b21e5fb7228a244596875845ef9a0a7f3bf4&amp;dn=Gypsy.S01E06.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83992\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83992\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1be4b21e5fb7228a244596875845ef9a0a7f3bf4&amp;dn=Gypsy.S01E06.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83992\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>416M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86442" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86442.html">
+												<font style="color:red;font-weight:bold;">吉普赛人 Gypsy S01E05 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qXZPZm0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86442\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:E04BA04DBFE6FE028920485FF6DFB666B5CF1686&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E05.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" target="_blank" name=\'magnet86442\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86442\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:E04BA04DBFE6FE028920485FF6DFB666B5CF1686&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E05.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E05 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86442\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>796M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84319" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84319.html">
+																									吉普赛人 Gypsy S01E05 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pLAxlDx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84319\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:AA079D4327961B90CCDB8EDF4157A99BFA3BEA6F&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E05.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" target="_blank" name=\'magnet84319\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84319\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%90%89%E6%99%AE%E8%B5%9B%E4%BA%BA.%E5%BF%83%E7%81%B5%E8%B6%8A%E7%95%8C.Gypsy.S01E05.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|478693579|D1FA7FD84ACDE603B01BB1A28CDC446C|h=TUHJ5T3MYA5WHI5QWHA2JYD7KYLJBC3U|/" rel="nofollow" target="_blank" name=\'ed2k84319\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84319\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:AA079D4327961B90CCDB8EDF4157A99BFA3BEA6F&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E05.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E05 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84319\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>457M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="83990" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83990.html">
+																									吉普赛人 Gypsy S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2vQm5a" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83990\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=mc9b8zn&amp;f=Gypsy.S01E05.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83990\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:dd1ba3b3a65f39a2e821fec155c5f78c4eeffab6&amp;dn=Gypsy.S01E05.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83990\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83990\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:dd1ba3b3a65f39a2e821fec155c5f78c4eeffab6&amp;dn=Gypsy.S01E05.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83990\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>722M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="83989" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83989.html">
+																									吉普赛人 Gypsy S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hsBrlHi" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83989\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=qbhus76&amp;f=Gypsy.S01E05.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83989\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0a9c6c214b2bb545a1a07b2399c356130083d5a2&amp;dn=Gypsy.S01E05.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83989\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83989\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0a9c6c214b2bb545a1a07b2399c356130083d5a2&amp;dn=Gypsy.S01E05.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83989\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>462M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86386" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86386.html">
+												<font style="color:red;font-weight:bold;">吉普赛人 Gypsy S01E04 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hs5oyqS" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86386\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3C53DBC6836349F5F6FCEDBE50C2FCCC2DADC42D&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E04.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" target="_blank" name=\'magnet86386\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86386\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3C53DBC6836349F5F6FCEDBE50C2FCCC2DADC42D&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E04.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E04 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86386\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>765M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84203" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84203.html">
+																									吉普赛人 Gypsy S01E04 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1boSgsRt" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84203\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:DDCD5AD7D31284F77941BA79A28FB10AA7C6933B&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E04.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" target="_blank" name=\'magnet84203\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84203\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%90%89%E6%99%AE%E8%B5%9B%E4%BA%BA.%E5%BF%83%E7%81%B5%E8%B6%8A%E7%95%8C.Gypsy.S01E04.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|494033834|79AAC5A0FFBA02E89D3AA40EED447E1D|h=2X6J4BF6KPTD4TIHOK4OLS7FOD674BUQ|/" rel="nofollow" target="_blank" name=\'ed2k84203\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84203\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:DDCD5AD7D31284F77941BA79A28FB10AA7C6933B&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E04.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E04 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84203\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>471M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="83988" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83988.html">
+																									吉普赛人 Gypsy S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eR4tzNW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83988\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=bgfhai6&amp;f=Gypsy.S01E04.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83988\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0dcabcc470611a116568d2d51ecd8ac79452c220&amp;dn=Gypsy.S01E04.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83988\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83988\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0dcabcc470611a116568d2d51ecd8ac79452c220&amp;dn=Gypsy.S01E04.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83988\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>738M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="83987" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83987.html">
+																									吉普赛人 Gypsy S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1sltxTrJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83987\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=ca8gveq&amp;f=Gypsy.S01E04.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83987\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a494b4436bdf3a5d12c073debacaebb939328b83&amp;dn=Gypsy.S01E04.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83987\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83987\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a494b4436bdf3a5d12c073debacaebb939328b83&amp;dn=Gypsy.S01E04.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83987\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>440M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85952" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85952.html">
+												<font style="color:red;font-weight:bold;">吉普赛人 Gypsy S01E03 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dFozdC1" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85952\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6F6E102F614F3E284342D42BD1EC42669642AC74&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" target="_blank" name=\'magnet85952\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85952\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6F6E102F614F3E284342D42BD1EC42669642AC74&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E03 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85952\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>697M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84111" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84111.html">
+																									吉普赛人 Gypsy S01E03 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jILwCrO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84111\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:CEA8C8465EBCFCCE8EAEC569B20B9806A3FF9643&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E03.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" target="_blank" name=\'magnet84111\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84111\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%90%89%E6%99%AE%E8%B5%9B%E4%BA%BA.%E5%BF%83%E7%81%B5%E8%B6%8A%E7%95%8C.Gypsy.S01E03.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|507565882|91900A7D91C19A8CE63129C15B7CD6DD|h=SCV7UFPONPSZ7R4ZDHRUJEOBIL3YZSIE|/" rel="nofollow" target="_blank" name=\'ed2k84111\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84111\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:CEA8C8465EBCFCCE8EAEC569B20B9806A3FF9643&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E03.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E03 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84111\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>484M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="83976" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83976.html">
+																									吉普赛人 Gypsy S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mhRhRoW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83976\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=g5a6xqf&amp;f=Gypsy.S01E03.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83976\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0c54f93e2daa129f47b656a7f2315dcb30deb01c&amp;dn=Gypsy.S01E03.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83976\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83976\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0c54f93e2daa129f47b656a7f2315dcb30deb01c&amp;dn=Gypsy.S01E03.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83976\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>760M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-06-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="83975" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83975.html">
+																									吉普赛人 Gypsy S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVBQWi7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83975\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=p7b6d3j&amp;f=Gypsy.S01E03.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83975\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:821d472e86c91bad8f7479ade41c1c7526c492e6&amp;dn=Gypsy.S01E03.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83975\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83975\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:821d472e86c91bad8f7479ade41c1c7526c492e6&amp;dn=Gypsy.S01E03.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83975\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>403M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-06-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85907" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85907.html">
+												<font style="color:red;font-weight:bold;">吉普赛人 Gypsy S01E02 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hsquLtq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85907\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:C1DFB87849F652695EF2CF369F29C47D758523C7&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" target="_blank" name=\'magnet85907\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85907\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:C1DFB87849F652695EF2CF369F29C47D758523C7&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E02 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85907\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>817M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84110" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84110.html">
+																									吉普赛人 Gypsy S01E02 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o7AORbG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84110\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0B3B08D5C1E6A3AF333D44F4F63ADA7B094B9FB3&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E02.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" target="_blank" name=\'magnet84110\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84110\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%90%89%E6%99%AE%E8%B5%9B%E4%BA%BA.%E5%BF%83%E7%81%B5%E8%B6%8A%E7%95%8C.Gypsy.S01E02.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|586402092|771C5594C210A26B555BC550A4306D58|h=M37O6O7IEYLGIDRIVW27VKV663NZHL6G|/" rel="nofollow" target="_blank" name=\'ed2k84110\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84110\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:0B3B08D5C1E6A3AF333D44F4F63ADA7B094B9FB3&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E02.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E02 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84110\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>560M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="83974" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83974.html">
+																									吉普赛人 Gypsy S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i4EwGsP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83974\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=dp8ynai&amp;f=Gypsy.S01E02.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83974\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c9c991594fbd3d90fdbb0554f11c4475998d0f85&amp;dn=Gypsy.S01E02.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83974\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83974\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c9c991594fbd3d90fdbb0554f11c4475998d0f85&amp;dn=Gypsy.S01E02.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83974\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>900M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-06-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="83973" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83973.html">
+																									吉普赛人 Gypsy S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1geI46S7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83973\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=jatu3f4&amp;f=Gypsy.S01E02.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83973\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1d02bd70ad70cd3c550056a388e7cc3f0ce9bdd0&amp;dn=Gypsy.S01E02.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83973\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83973\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1d02bd70ad70cd3c550056a388e7cc3f0ce9bdd0&amp;dn=Gypsy.S01E02.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83973\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>469M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-06-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85652" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85652.html">
+												<font style="color:red;font-weight:bold;">吉普赛人 Gypsy S01E01 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nv5du2l" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85652\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:A69DC7C8DD8CD5FB33698AFCDF62B62732DC7F72&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E01.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" target="_blank" name=\'magnet85652\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85652\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:A69DC7C8DD8CD5FB33698AFCDF62B62732DC7F72&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.Gypsy.S01E01.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E01 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85652\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>863M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84039" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84039.html">
+																									吉普赛人 Gypsy S01E01 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1miFmKJY" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84039\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:AD9520FDC870F58AFCC907E2546F3722365EE527&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E01.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" target="_blank" name=\'magnet84039\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84039\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%90%89%E6%99%AE%E8%B5%9B%E4%BA%BA.%E5%BF%83%E7%81%B5%E8%B6%8A%E7%95%8C.Gypsy.S01E01.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|594494081|7F41827843C4F09C61B36A833D7EF82F|h=GLZWKIUMO2IXNE6VJTNAOLEPJLQSBRX3|/" rel="nofollow" target="_blank" name=\'ed2k84039\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84039\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:AD9520FDC870F58AFCC907E2546F3722365EE527&amp;dn=%e5%90%89%e6%99%ae%e8%b5%9b%e4%ba%ba.%e5%bf%83%e7%81%b5%e8%b6%8a%e7%95%8c.Gypsy.S01E01.720p.HDTV.x264.%e5%8f%8c%e8%af%ad%e5%ad%97%e5%b9%95-%e6%b7%b1%e5%bd%b1%e5%ad%97%e5%b9%95%e7%bb%84.m" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E01 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84039\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>567M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="83972" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83972.html">
+																									吉普赛人 Gypsy S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1geFgL2N" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83972\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=xst3wbz&amp;f=Gypsy.S01E01.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83972\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1da48ac635461ddf41b93a679b85298b0881af6a&amp;dn=Gypsy.S01E01.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83972\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83972\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1da48ac635461ddf41b93a679b85298b0881af6a&amp;dn=Gypsy.S01E01.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83972\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-06-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="83971" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/83971.html">
+																									吉普赛人 Gypsy S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hsP4ras" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'83971\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=6l3kapb&amp;f=Gypsy.S01E01.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'83971\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c9ca41c555f76704e275df42bdff52f23cc50130&amp;dn=Gypsy.S01E01.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet83971\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'83971\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c9ca41c555f76704e275df42bdff52f23cc50130&amp;dn=Gypsy.S01E01.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="吉普赛人 Gypsy S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'83971\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>495M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-06-30</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=1056332&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(1056332,1409,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1409);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1409);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1409);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

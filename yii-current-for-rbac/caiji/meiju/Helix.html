@@ -1,0 +1,1509 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 10:57:09 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d1d314c147a0b1203be659b1607b021781509533829; expires=Thu, 01-Nov-18 10:57:09 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e54e371ec6df6-SJC
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>双螺旋 Helix-双螺旋下载-双螺旋全集下载-Helix下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="双螺旋,Helix,双螺旋下载,双螺旋全集下载,双螺旋高清下载,双螺旋迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;　　位于极地的北极生物系统研究基地爆发神秘病毒，造成三人感染、两人死亡的惨剧。为了查明病毒的成因，防止其他一百多名来自各国的科学家遇险，美国疾病防疫控制中心在军方的要求下，派出了艾伦·法拉格特（比利·坎贝尔BillyCampbell饰）、茱莉亚·沃克（凯拉·扎戈斯基KyraZagorsky饰）、莎拉·乔丹（乔丹·海耶斯JordanHayes" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 748;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FHelix.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FHelix.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 748;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">双螺旋 Helix-双螺旋下载-双螺旋全集下载-Helix下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i2.muimg.com/588755/1d45a5d7c144690f.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i2.muimg.com/588755/1d45a5d7c144690f.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周六</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：科幻类</span>						
+						<span>最后更新：2015-04-12 10:49</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/748.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">621</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>　　位于极地的北极生物系统研究基地爆发神秘病毒，造成三人感染、两人死亡的惨剧。为了查明病毒的成因，防止其他一百多名来自各国的科学家遇险，美国疾病防疫控制中心在军方的要求下，派出了艾伦·法拉格特（比利·坎贝尔 Billy Campbell 饰）、茱莉亚·沃克（凯拉·扎戈斯基 Kyra Zagorsky 饰）、莎拉·乔丹（乔丹·海耶斯 Jordan Hayes 饰）与多琳·博伊尔（凯瑟琳·勒米厄 Catherine Lemieux 饰）等四名精英飞往北极。三人中的幸存者彼得（尼尔·纳皮尔 Neil Napier 饰）是艾伦的哥哥，当年因一桩荒唐事导致弟弟和妻子茱莉亚离婚。一行人虽然受到畑博士（真田广之 饰）的热情接待，但基地内似乎隐藏着不可告人的秘密。 
+而随着极度虚弱的彼得突然消失，艾伦他们的调查开始朝着不可预测的方向发展……</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="2">
+																			第2季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="38342" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38342.html">
+																									双螺旋 Helix S02E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i31mwPR" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38342\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d76bb951c6fc1b9fa74147c7cc6bf4e6efaa19a9&amp;dn=Helix.S02E13.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;" rel="nofollow" target="_blank" name=\'magnet38342\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38342\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d76bb951c6fc1b9fa74147c7cc6bf4e6efaa19a9&amp;dn=Helix.S02E13.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38342\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>667M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38415" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38415.html">
+																									双螺旋 Helix S02E13 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6OILi6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38415\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:999eff57fed9c1809387ae9351d61312a6ec3f3f&amp;dn=Helix.S02E13.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet38415\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38415\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:999eff57fed9c1809387ae9351d61312a6ec3f3f&amp;dn=Helix.S02E13.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E13 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38415\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.63G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38341" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38341.html">
+																									双螺旋 Helix S02E13 季终 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjK8Ttz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38341\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2da9ff30506d7c96862cca8e774bcab15f4477cb&amp;dn=Helix+S02E13+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp%3A%2F" rel="nofollow" target="_blank" name=\'magnet38341\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38341\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2da9ff30506d7c96862cca8e774bcab15f4477cb&amp;dn=Helix+S02E13+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp%3A%2F" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E13 季终 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38341\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>197M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37980" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37980.html">
+																									双螺旋 Helix S02E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGEbrH8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37980\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e41ab285fd07d9bfffd952472ba9ce97533bf30f&amp;dn=Helix.S02E12.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet37980\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37980\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e41ab285fd07d9bfffd952472ba9ce97533bf30f&amp;dn=Helix.S02E12.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37980\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>566M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38033" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38033.html">
+																									双螺旋 Helix S02E12 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pVgmy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38033\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:59d273220e8f755378df32b9a479f8589acf2da1&amp;dn=Helix.S02E12.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet38033\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38033\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:59d273220e8f755378df32b9a479f8589acf2da1&amp;dn=Helix.S02E12.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E12 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38033\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.57G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37979" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37979.html">
+																									双螺旋 Helix S02E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnm5kKn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37979\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5a65a323f8516baef7e77b9e6e6866919061f0c1&amp;dn=Helix+S02E12+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2F%" rel="nofollow" target="_blank" name=\'magnet37979\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37979\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5a65a323f8516baef7e77b9e6e6866919061f0c1&amp;dn=Helix+S02E12+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2F%" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37979\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>174M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37599" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37599.html">
+																									双螺旋 Helix S02E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gd8b65l" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37599\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:39c2e4f44641a30f1c04e08ce6f6def427544cd4&amp;dn=Helix.S02E11.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet37599\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37599\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:39c2e4f44641a30f1c04e08ce6f6def427544cd4&amp;dn=Helix.S02E11.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37599\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>678M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37707" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37707.html">
+																									双螺旋 Helix S02E11 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjyTHi1" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37707\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8d02c06bd4543c5dd1e898190c102972efdaec20&amp;dn=Helix.S02E11.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet37707\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37707\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8d02c06bd4543c5dd1e898190c102972efdaec20&amp;dn=Helix.S02E11.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E11 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37707\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.63G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37598" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37598.html">
+																									双螺旋 Helix S02E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDtm4fR" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37598\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2434522fd172441595ee93fc83025d1345093879&amp;dn=Helix+S02E11+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2F%" rel="nofollow" target="_blank" name=\'magnet37598\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37598\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2434522fd172441595ee93fc83025d1345093879&amp;dn=Helix+S02E11+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2F%" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37598\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>222M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37149" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37149.html">
+																									双螺旋 Helix S02E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgMKj9m" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37149\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:748ac45e73087fb2bb087a4f25270d727ca3e28c&amp;dn=Helix.S02E10.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" target="_blank" name=\'magnet37149\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37149\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:748ac45e73087fb2bb087a4f25270d727ca3e28c&amp;dn=Helix.S02E10.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37149\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>802M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37193" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37193.html">
+																									双螺旋 Helix S02E10 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDfFg1z" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37193\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:bb5dd449029e65a3781e65410b9f90f74a284589&amp;dn=Helix.S02E10.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet37193\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37193\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:bb5dd449029e65a3781e65410b9f90f74a284589&amp;dn=Helix.S02E10.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E10 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37193\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.64G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37148" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37148.html">
+																									双螺旋 Helix S02E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jG7phLs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37148\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4591ebbd17ca51a04ee9c0569f63cb607a722cd3&amp;dn=Helix.S02E10.HDTV.x264-ASAP%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2F" rel="nofollow" target="_blank" name=\'magnet37148\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37148\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4591ebbd17ca51a04ee9c0569f63cb607a722cd3&amp;dn=Helix.S02E10.HDTV.x264-ASAP%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2F" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37148\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>267M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36739" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36739.html">
+																									双螺旋 Helix S02E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQnes8a" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36739\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c4683f92f63428bc22e15582b0a251064353ccb3&amp;dn=Helix.S02E09.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet36739\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36739\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c4683f92f63428bc22e15582b0a251064353ccb3&amp;dn=Helix.S02E09.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36739\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>765M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="36867" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36867.html">
+																									双螺旋 Helix S02E09 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jG1Pulg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36867\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5da7410ccf6d88e3d5b2fb64bbde1dfe8f1ee497&amp;dn=Helix.S02E09.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet36867\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36867\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5da7410ccf6d88e3d5b2fb64bbde1dfe8f1ee497&amp;dn=Helix.S02E09.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E09 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36867\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.60G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36738" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36738.html">
+																									双螺旋 Helix S02E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWsP6xu" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36738\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:29b857e6503fc8e6ac655b7bff7997b89a934331&amp;dn=Helix.S02E09.HDTV.x264-LOL%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&" rel="nofollow" target="_blank" name=\'magnet36738\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36738\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:29b857e6503fc8e6ac655b7bff7997b89a934331&amp;dn=Helix.S02E09.HDTV.x264-LOL%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36738\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>256M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="36262" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36262.html">
+																									双螺旋 Helix S02E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnrTS6b" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36262\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:19af5544f4fedd5ef172f5bc4ed8a4ea81a62680&amp;dn=Helix.S02E08.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet36262\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36262\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:19af5544f4fedd5ef172f5bc4ed8a4ea81a62680&amp;dn=Helix.S02E08.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36262\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>872M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36418" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36418.html">
+																									双螺旋 Helix S02E08 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o61aVai" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36418\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9d3d6bb7a583d1043bddd8b136eb44c5c61c9c32&amp;dn=Helix.S02E08.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet36418\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36418\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9d3d6bb7a583d1043bddd8b136eb44c5c61c9c32&amp;dn=Helix.S02E08.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E08 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36418\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.67G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="36261" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36261.html">
+																									双螺旋 Helix S02E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3tJ4iD" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36261\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:93f481342170174b46304680577217b24e331105&amp;dn=Helix+S02E08+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2F%" rel="nofollow" target="_blank" name=\'magnet36261\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36261\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:93f481342170174b46304680577217b24e331105&amp;dn=Helix+S02E08+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2F%" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36261\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>258M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35867" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35867.html">
+																									双螺旋 Helix S02E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDhGkBf" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35867\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3cf4bd3277f530cfb3319aa9b2bba53d40c1cbd3&amp;dn=Helix.S02E07.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet35867\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35867\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3cf4bd3277f530cfb3319aa9b2bba53d40c1cbd3&amp;dn=Helix.S02E07.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35867\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>687M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35975" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35975.html">
+																									双螺旋 Helix S02E07 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3kVScH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35975\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e264b587097f46ec263f331c8977b33c213b180c&amp;dn=Helix.S02E07.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet35975\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35975\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e264b587097f46ec263f331c8977b33c213b180c&amp;dn=Helix.S02E07.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E07 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35975\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.63G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35866" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35866.html">
+																									双螺旋 Helix S02E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bni0muz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35866\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:35dbdf509464e3bb9d69d5aa92e59a4041742000&amp;dn=Helix+S02E07+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2F%" rel="nofollow" target="_blank" name=\'magnet35866\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35866\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:35dbdf509464e3bb9d69d5aa92e59a4041742000&amp;dn=Helix+S02E07+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2F%" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35866\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>206M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35435" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35435.html">
+																									双螺旋 Helix S02E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnrn2mr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35435\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e96144af9a66625593029988ba9b7479c1f89ee5&amp;dn=Helix.S02E06.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet35435\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35435\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e96144af9a66625593029988ba9b7479c1f89ee5&amp;dn=Helix.S02E06.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35435\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>734M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35504" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35504.html">
+																									双螺旋 Helix S02E06 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gd1UH0J" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35504\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5868100cddbfb01a53e2510ba29c0f19cbc582a4&amp;dn=Helix.S02E06.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet35504\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35504\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5868100cddbfb01a53e2510ba29c0f19cbc582a4&amp;dn=Helix.S02E06.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E06 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35504\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.71G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35434" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35434.html">
+																									双螺旋 Helix S02E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJC3Kvh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35434\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:bafa4f5b662197d17b2822542b8f19501a4f4486&amp;dn=Helix.S02E06.HDTV.x264-LOL%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&" rel="nofollow" target="_blank" name=\'magnet35434\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35434\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:bafa4f5b662197d17b2822542b8f19501a4f4486&amp;dn=Helix.S02E06.HDTV.x264-LOL%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35434\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>228M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35002" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35002.html">
+																									双螺旋 Helix S02E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqIh7pE" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35002\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f1744364c2f8cb774e59c273673c4380e0ae2cc3&amp;dn=Helix.S02E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" target="_blank" name=\'magnet35002\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35002\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f1744364c2f8cb774e59c273673c4380e0ae2cc3&amp;dn=Helix.S02E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35002\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>903M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35062" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35062.html">
+																									双螺旋 Helix S02E05 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nt1cv8H" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35062\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5e605d28e4f23bc4f815f8db56a1b845d33728fb&amp;dn=Helix.S02E05.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet35062\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35062\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5e605d28e4f23bc4f815f8db56a1b845d33728fb&amp;dn=Helix.S02E05.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E05 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35062\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.68G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35001" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35001.html">
+																									双螺旋 Helix S02E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntza0L7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35001\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:36a7785e3ffcd6f9b3fadbe134415c6b064e8807&amp;dn=Helix+S02E05+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet35001\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35001\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:36a7785e3ffcd6f9b3fadbe134415c6b064e8807&amp;dn=Helix+S02E05+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35001\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>269M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34500" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34500.html">
+																									双螺旋 Helix S02E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjOA8Ex" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34500\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:20713c07b2455f0869fdca5ee9b108bb297d96cb&amp;dn=Helix.S02E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" target="_blank" name=\'magnet34500\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34500\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:20713c07b2455f0869fdca5ee9b108bb297d96cb&amp;dn=Helix.S02E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34500\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>975M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35000" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35000.html">
+																									双螺旋 Helix S02E04 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgxaBdm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35000\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:885e328fe54bc1bb1131f55cf96ef1827da93661&amp;dn=Helix.S02E04.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet35000\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35000\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:885e328fe54bc1bb1131f55cf96ef1827da93661&amp;dn=Helix.S02E04.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E04 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35000\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.62G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34499" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34499.html">
+																									双螺旋 Helix S02E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1tWZCy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34499\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:cdbdfa296dd82d66b556f30dd4c906ec53c671ee&amp;dn=Helix.S02E04.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6" rel="nofollow" target="_blank" name=\'magnet34499\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34499\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cdbdfa296dd82d66b556f30dd4c906ec53c671ee&amp;dn=Helix.S02E04.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34499\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>304M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="34061" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34061.html">
+																									双螺旋 Helix S02E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjHiNzZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34061\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3e50ad6a58e569a6f7d4ee649568bac5442273a2&amp;dn=Helix.S02E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" target="_blank" name=\'magnet34061\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34061\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3e50ad6a58e569a6f7d4ee649568bac5442273a2&amp;dn=Helix.S02E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34061\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>895M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34139" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34139.html">
+																									双螺旋 Helix S02E03 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjBJgMp" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34139\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:489fa45ac149cdc23ff4a936172794a6d7329d68&amp;dn=Helix.S02E03.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet34139\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34139\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:489fa45ac149cdc23ff4a936172794a6d7329d68&amp;dn=Helix.S02E03.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E03 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34139\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.52G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="34060" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34060.html">
+																									双螺旋 Helix S02E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c0voDdm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34060\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4d7272809c3795c4258ffbf8a079103f49211444&amp;dn=Helix+S02E03+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet34060\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34060\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4d7272809c3795c4258ffbf8a079103f49211444&amp;dn=Helix+S02E03+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34060\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>275M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33641" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33641.html">
+																									双螺旋 Helix S02E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c0piMuG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33641\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:51644365f3e40bbda53e768f91ec0adeb5c0d0b6&amp;dn=Helix.S02E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" target="_blank" name=\'magnet33641\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33641\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:51644365f3e40bbda53e768f91ec0adeb5c0d0b6&amp;dn=Helix.S02E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33641\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>879M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="33701" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33701.html">
+																									双螺旋 Helix S02E02 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWjuH7u" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33701\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3a59cf99aad6bf957ee58365e8e53d6eb81e92a2&amp;dn=Helix.S02E02.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet33701\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33701\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3a59cf99aad6bf957ee58365e8e53d6eb81e92a2&amp;dn=Helix.S02E02.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E02 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33701\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.62G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33640" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33640.html">
+																									双螺旋 Helix S02E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dD0CdBN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33640\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0d1e17967f662040947afebd02f844c1176125a9&amp;dn=Helix+S02E02+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet33640\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33640\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0d1e17967f662040947afebd02f844c1176125a9&amp;dn=Helix+S02E02+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33640\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>271M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="33308" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33308.html">
+																									双螺旋 Helix S02E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJqOb0n" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33308\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:40fc9fe8608a21a58a908d5577f96f3d832c5f15&amp;dn=Helix.S02E01.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" target="_blank" name=\'magnet33308\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33308\' alt=\'迅雷高清美剧下载\'></a>																				<a style="display:none;" href="http://cloud.pptv.com/v3/share/am4baAJa" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'33308\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:40fc9fe8608a21a58a908d5577f96f3d832c5f15&amp;dn=Helix.S02E01.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33308\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>955M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33353" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33353.html">
+																									双螺旋 Helix S02E01 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c0kyS0o" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33353\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b6a612f0091ad6088a5e3166abb3c9c8bd9cbfa1&amp;dn=Helix.S02E01.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet33353\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33353\' alt=\'迅雷高清美剧下载\'></a>																				<a style="display:none;" href="http://cloud.pptv.com/v3/share/am4b9cFh" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'33353\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:b6a612f0091ad6088a5e3166abb3c9c8bd9cbfa1&amp;dn=Helix.S02E01.1080p.WEB-DL.DD5.1.H.264-KiNGS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E01 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33353\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.57G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="33307" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33307.html">
+																									双螺旋 Helix S02E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6NuifC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33307\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:eb18820770ca553b99154d6d8008fb3504f5795e&amp;dn=Helix+S02E01+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet33307\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33307\' alt=\'迅雷高清美剧下载\'></a>																				<a style="display:none;" href="http://cloud.pptv.com/v3/share/am4bS5Do" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'33307\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:eb18820770ca553b99154d6d8008fb3504f5795e&amp;dn=Helix+S02E01+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="双螺旋 Helix S02E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33307\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>295M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-17</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,748,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,748);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,748);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,748);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

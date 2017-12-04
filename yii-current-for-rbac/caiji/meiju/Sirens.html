@@ -1,0 +1,1823 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:11:34 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d756d354fa74b4684494b6334722810261509534693; expires=Thu, 01-Nov-18 11:11:33 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e69fb251d7790-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>急救警情 Sirens-急救警情下载-急救警情全集下载-Sirens下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="急救警情,Sirens,急救警情下载,急救警情全集下载,急救警情高清下载,急救警情迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;　　描述芝加哥三个最优秀的急救员的故事。他们的个性都有问题，且存在自毁倾向，这让他们很难维持稳定的爱情、友情或其他关系，因此他们把大部分精力都投入工作中。对那些登上救护车的病人来说，能得到他们的救治无异于天赐之福——他们的能力是没话说的。MichaelMosley（Johnny）、KevinDaniels（Hank）和KevinBigley" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 756;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FSirens.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FSirens.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 756;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">急救警情 Sirens-急救警情下载-急救警情全集下载-Sirens下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i2.muimg.com/588755/16a05de8b02bfc52.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i2.muimg.com/588755/16a05de8b02bfc52.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周三</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：喜剧类</span>						
+						<span>最后更新：2015-05-01 17:54</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/756.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">63</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>　　描述芝加哥三个最优秀的急救员的故事。他们的个性都有问题，且存在自毁倾向，这让他们很难维持稳定的爱情、友情或其他关系，因此他们把大部分精力都投入工作中。对那些登上救护车的病人来说，能得到他们的救治无异于天赐之福——他们的能力是没话说的。Michael Mosley（Johnny）、Kevin Daniels（Hank）和Kevin Bigley（Brian）主演该剧。Jessica McNamee扮演女警察Theresa，曾经是Johnny的女友。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="2">
+																			第2季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="39550" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39550.html">
+																									急救警情 Sirens 2014 S02E13 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kT3Q7d1" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39550\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|急救警情.Sirens.2014.S02E13.720p.1280X720.中英双语-电波字幕组.mkv|381887869|654FE5A4745A908A3CDD47FF90C14A2A|h=AL6QLZN42ZQ3BDOEI2SEIUZUF44HQ44A|/" rel="nofollow" target="_blank" name=\'ed2k39550\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39550\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|急救警情.Sirens.2014.S02E13.720p.1280X720.中英双语-电波字幕组.mkv|381887869|654FE5A4745A908A3CDD47FF90C14A2A|h=AL6QLZN42ZQ3BDOEI2SEIUZUF44HQ44A|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E13 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39550\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>364M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38573" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38573.html">
+																									急救警情 Sirens 2014 S02E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqCJS92" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38573\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1159fab609e48b076783192dca53a41554bd76b1&amp;dn=Sirens.2014.S02E13.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&" rel="nofollow" target="_blank" name=\'magnet38573\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38573\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1159fab609e48b076783192dca53a41554bd76b1&amp;dn=Sirens.2014.S02E13.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38573\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>536M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39549" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39549.html">
+																									急救警情 Sirens 2014 S02E13 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c08i27A" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39549\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|急救警情.Sirens.2014.S02E13.480p.854X480.中英双语-电波字幕组.mp4|143969251|C9CF2A39D444092AA4ACBBAEA3119B89|h=GBVAMFOHEM6EOBBCB3GLZUNC5NG33MTX|/" rel="nofollow" target="_blank" name=\'ed2k39549\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39549\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|急救警情.Sirens.2014.S02E13.480p.854X480.中英双语-电波字幕组.mp4|143969251|C9CF2A39D444092AA4ACBBAEA3119B89|h=GBVAMFOHEM6EOBBCB3GLZUNC5NG33MTX|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E13 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39549\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>137M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38572" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38572.html">
+																									急救警情 Sirens 2014 S02E13 季终 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWJplow" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38572\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:dfbdc7ff8c031bdc48738cd315043d88d02cb935&amp;dn=Sirens.2014.S02E13.Sub-Primal.Fears.HDTV.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" target="_blank" name=\'magnet38572\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38572\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:dfbdc7ff8c031bdc48738cd315043d88d02cb935&amp;dn=Sirens.2014.S02E13.Sub-Primal.Fears.HDTV.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E13 季终 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38572\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>163M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39548" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39548.html">
+																									急救警情 Sirens 2014 S02E12 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnyaQRH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39548\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|急救警情.Sirens.2014.S02E12.720p.1280X720.中英双语-电波字幕组.mkv|381943374|C491F448DCE4CE4C3D2AC6169BB56B38|h=YZ7W5MFXNE5DY5Y45YSD3PRWMWQU3KPQ|/" rel="nofollow" target="_blank" name=\'ed2k39548\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39548\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|急救警情.Sirens.2014.S02E12.720p.1280X720.中英双语-电波字幕组.mkv|381943374|C491F448DCE4CE4C3D2AC6169BB56B38|h=YZ7W5MFXNE5DY5Y45YSD3PRWMWQU3KPQ|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E12 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39548\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>364M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38163" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38163.html">
+																									急救警情 Sirens 2014 S02E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJysla7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38163\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fcd9e5ea7eabc3bdc0fd34a3831d8ea8703911f7&amp;dn=Sirens.2014.S02E12.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet38163\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38163\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fcd9e5ea7eabc3bdc0fd34a3831d8ea8703911f7&amp;dn=Sirens.2014.S02E12.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38163\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>606M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39547" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39547.html">
+																									急救警情 Sirens 2014 S02E12 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGADP6Q" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39547\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|急救警情.Sirens.2014.S02E12.480p.854X480.中英双语-电波字幕组.mp4|143967264|D41CC9BBAF21B7455B508B5FC3E362FC|h=J66P6OM7UFH6I2EL2P2E2DMSOCNUO3KT|/" rel="nofollow" target="_blank" name=\'ed2k39547\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39547\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|急救警情.Sirens.2014.S02E12.480p.854X480.中英双语-电波字幕组.mp4|143967264|D41CC9BBAF21B7455B508B5FC3E362FC|h=J66P6OM7UFH6I2EL2P2E2DMSOCNUO3KT|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E12 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39547\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>137M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38162" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38162.html">
+																									急救警情 Sirens 2014 S02E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWwUmj6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38162\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:bf7552714e0c021ada6f7e41287bb917bebeaab6&amp;dn=Sirens+2014+S02E12+HDTV+x264-ASAP%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet38162\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38162\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:bf7552714e0c021ada6f7e41287bb917bebeaab6&amp;dn=Sirens+2014+S02E12+HDTV+x264-ASAP%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38162\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>179M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38079" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38079.html">
+																									急救警情 Sirens 2014 S02E11 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqGhuTI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38079\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E11.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|386517321|FA892C16A81552154BCCF997C7CB3C64|h=JB5A2JATGLEGHPSSU3EWYROJJ76RTEXT|/|sources,60.190.172.13:48793|/" rel="nofollow" target="_blank" name=\'ed2k38079\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'38079\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E11.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|386517321|FA892C16A81552154BCCF997C7CB3C64|h=JB5A2JATGLEGHPSSU3EWYROJJ76RTEXT|/|sources,60.190.172.13:48793|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E11 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38079\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>368M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37801" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37801.html">
+																									急救警情 Sirens 2014 S02E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQF5lWe" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37801\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fdf5ec1f78c4cf874379c7f24adad52005bde688&amp;dn=Sirens.2014.S02E11.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet37801\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37801\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fdf5ec1f78c4cf874379c7f24adad52005bde688&amp;dn=Sirens.2014.S02E11.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37801\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>514M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38078" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38078.html">
+																									急救警情 Sirens 2014 S02E11 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDEl98t" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38078\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E11.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|145730683|F7FF09BD64EAC23DC463C7996574C604|h=W5AZ4OJ3LQONXPCHTVGRJQPDOHSELVBB|/|sources,60.190.172.13:48793|/" rel="nofollow" target="_blank" name=\'ed2k38078\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'38078\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E11.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|145730683|F7FF09BD64EAC23DC463C7996574C604|h=W5AZ4OJ3LQONXPCHTVGRJQPDOHSELVBB|/|sources,60.190.172.13:48793|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E11 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38078\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>139M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37800" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37800.html">
+																									急救警情 Sirens 2014 S02E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGGIYCQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37800\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:bd3e3fd35e28180ea5f91ae219ad44cdc1529dd2&amp;dn=Sirens+2014+S02E11+HDTV+x264-ASAP%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet37800\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37800\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:bd3e3fd35e28180ea5f91ae219ad44cdc1529dd2&amp;dn=Sirens+2014+S02E11+HDTV+x264-ASAP%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37800\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>162M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37739" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37739.html">
+																									急救警情 Sirens 2014 S02E10 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c0rSDZ6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37739\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E10.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|382026114|CA69F61DF37470FD1A7434639A478696|h=2Q62MASRQFKLUC4OZLXI6IDJTJUZ4APS|/" rel="nofollow" target="_blank" name=\'ed2k37739\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'37739\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E10.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|382026114|CA69F61DF37470FD1A7434639A478696|h=2Q62MASRQFKLUC4OZLXI6IDJTJUZ4APS|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E10 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37739\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>364M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37381" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37381.html">
+																									急救警情 Sirens 2014 S02E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDzXZjj" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37381\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:73433d6977b4d7ca751c5e81cbbdce1bacb33798&amp;dn=Sirens.2014.S02E10.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet37381\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37381\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:73433d6977b4d7ca751c5e81cbbdce1bacb33798&amp;dn=Sirens.2014.S02E10.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37381\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>597M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37738" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37738.html">
+																									急救警情 Sirens 2014 S02E10 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWFkN9a" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37738\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E10.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|144025735|AD62733319F52C19629CBEC6245E3770|h=YEAJ5E45XLBB4IWII6ISUJLZ7HQ7UKLZ|/" rel="nofollow" target="_blank" name=\'ed2k37738\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'37738\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E10.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|144025735|AD62733319F52C19629CBEC6245E3770|h=YEAJ5E45XLBB4IWII6ISUJLZ7HQ7UKLZ|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E10 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37738\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>137M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37380" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37380.html">
+																									急救警情 Sirens 2014 S02E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1DBr8y" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37380\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4382c4a9c208fc437aa59b04a257f2de5de4d6c3&amp;dn=Sirens+2014+S02E10+HDTV+x264-ASAP%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet37380\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37380\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4382c4a9c208fc437aa59b04a257f2de5de4d6c3&amp;dn=Sirens+2014+S02E10+HDTV+x264-ASAP%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37380\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>184M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37413" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37413.html">
+																									急救警情 Sirens 2014 S02E09 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJyX4dP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37413\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E09.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|381613675|98CED126175DA919DAFBCA361B5532F4|h=K4IE37MRMBG6GUVBVYQQGLL4WDUR65IW|/" rel="nofollow" target="_blank" name=\'ed2k37413\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'37413\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E09.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|381613675|98CED126175DA919DAFBCA361B5532F4|h=K4IE37MRMBG6GUVBVYQQGLL4WDUR65IW|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E09 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37413\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>363M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37067" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37067.html">
+																									急救警情 Sirens 2014 S02E09 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQkwDnc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37067\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:19b8ef83be8b4ac8816817852b80461b9178c786&amp;dn=Sirens.2014.S02E09.Charbroiled.720p.WEB-DL.DD5.1.H.264-QUEENS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%" rel="nofollow" target="_blank" name=\'magnet37067\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37067\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:19b8ef83be8b4ac8816817852b80461b9178c786&amp;dn=Sirens.2014.S02E09.Charbroiled.720p.WEB-DL.DD5.1.H.264-QUEENS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E09 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37067\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>664M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36983" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36983.html">
+																									急救警情 Sirens 2014 S02E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o67gQDG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36983\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5daa30efdecea83217d7a33e46bb72bfb64958c3&amp;dn=Sirens.2014.S02E09.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet36983\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36983\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5daa30efdecea83217d7a33e46bb72bfb64958c3&amp;dn=Sirens.2014.S02E09.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36983\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>712M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37412" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37412.html">
+																									急救警情 Sirens 2014 S02E09 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQmyCgU" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37412\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E09.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|143845805|C2A778DA4303AEEC8E8A8EE079AF2744|h=TNNZILITGSTZ7ZGR45CE3SIDLHMGX6IY|/" rel="nofollow" target="_blank" name=\'ed2k37412\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'37412\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E09.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|143845805|C2A778DA4303AEEC8E8A8EE079AF2744|h=TNNZILITGSTZ7ZGR45CE3SIDLHMGX6IY|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E09 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37412\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>137M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36982" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36982.html">
+																									急救警情 Sirens 2014 S02E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjAyB4x" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36982\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:412974a793dcedab2b7f0c0ef1cd203b18ee5909&amp;dn=Sirens.2014.S02E09.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.o" rel="nofollow" target="_blank" name=\'magnet36982\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36982\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:412974a793dcedab2b7f0c0ef1cd203b18ee5909&amp;dn=Sirens.2014.S02E09.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.o" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36982\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>217M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37411" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37411.html">
+																									急救警情 Sirens 2014 S02E08 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3w19PV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37411\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E08.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|381703556|77F4A3CBEE163E6D605B062C96912337|h=YEZWVLGRW7BGOG7KW6JZ6ABPB4GRVMNA|/" rel="nofollow" target="_blank" name=\'ed2k37411\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'37411\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E08.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|381703556|77F4A3CBEE163E6D605B062C96912337|h=YEZWVLGRW7BGOG7KW6JZ6ABPB4GRVMNA|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E08 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37411\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>364M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37066" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37066.html">
+																									急救警情 Sirens 2014 S02E08 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjwR01B" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37066\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:337e89239361de6d25e650f0a980e104a8c3bce9&amp;dn=Sirens.2014.S02E08.Hypocritical.Oath.720p.WEB-DL.DD5.1.H.264-QUEENS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet37066\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37066\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:337e89239361de6d25e650f0a980e104a8c3bce9&amp;dn=Sirens.2014.S02E08.Hypocritical.Oath.720p.WEB-DL.DD5.1.H.264-QUEENS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E08 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37066\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>685M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="36479" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36479.html">
+																									急救警情 Sirens 2014 S02E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQISpPo" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36479\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c2911575e8b03d7d3e60fd41b3687f9c8f1021a1&amp;dn=Sirens.2014.S02E08.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet36479\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36479\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c2911575e8b03d7d3e60fd41b3687f9c8f1021a1&amp;dn=Sirens.2014.S02E08.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36479\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>603M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37410" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37410.html">
+																									急救警情 Sirens 2014 S02E08 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1wFSya" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37410\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E08.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|143893373|941A6906739494971B3976AC31765BD5|h=YWUAZMLDDQQY5Y3LVKGE2V6VV4TD3DPC|/" rel="nofollow" target="_blank" name=\'ed2k37410\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'37410\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E08.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|143893373|941A6906739494971B3976AC31765BD5|h=YWUAZMLDDQQY5Y3LVKGE2V6VV4TD3DPC|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E08 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37410\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>137M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="36478" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36478.html">
+																									急救警情 Sirens 2014 S02E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjsNun7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36478\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b2fa29a16424238b13cb1332d6356b179d4bf86b&amp;dn=Sirens+2014+S02E08+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" target="_blank" name=\'magnet36478\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36478\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b2fa29a16424238b13cb1332d6356b179d4bf86b&amp;dn=Sirens+2014+S02E08+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36478\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>182M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36357" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36357.html">
+																									急救警情 Sirens 2014 S02E07 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gd8aKRD" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36357\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E07.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|374169722|3E8EF4A4A1F3791330CD963F9CC61637|h=EM3RBGTBG5XDCNIPZ5KFXBFXCS6YOHOQ|/" rel="nofollow" target="_blank" name=\'ed2k36357\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'36357\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E07.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|374169722|3E8EF4A4A1F3791330CD963F9CC61637|h=EM3RBGTBG5XDCNIPZ5KFXBFXCS6YOHOQ|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E07 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36357\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>356M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="36052" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36052.html">
+																									急救警情 Sirens 2014 S02E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGuxsMy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36052\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:51c1d1897b7e6c4b79e47e7ae6561bb86b7ba62a&amp;dn=Sirens.2014.S02E07.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet36052\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36052\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:51c1d1897b7e6c4b79e47e7ae6561bb86b7ba62a&amp;dn=Sirens.2014.S02E07.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36052\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>689M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36356" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36356.html">
+																									急救警情 Sirens 2014 S02E07 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sj9Il5r" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36356\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E07.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|141044843|379E9D4232BADB266CFB8B8C1759F8EA|h=WGWH54ZMHCOUHOUTF7YLNNV4RQSFK5ZZ|/" rel="nofollow" target="_blank" name=\'ed2k36356\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'36356\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E07.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|141044843|379E9D4232BADB266CFB8B8C1759F8EA|h=WGWH54ZMHCOUHOUTF7YLNNV4RQSFK5ZZ|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E07 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36356\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>134M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="36051" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36051.html">
+																									急救警情 Sirens 2014 S02E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kT9oxfx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36051\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1b7f03467538d42d5fc5c19f3daac88d80c6e9fc&amp;dn=Sirens+2014+S02E07+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" target="_blank" name=\'magnet36051\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36051\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1b7f03467538d42d5fc5c19f3daac88d80c6e9fc&amp;dn=Sirens+2014+S02E07+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36051\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>210M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36355" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36355.html">
+																									急救警情 Sirens 2014 S02E06 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjFhHUH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36355\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E06.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|375711515|1F50B80314691E3FF23B45B541DAE373|h=BEQQITOATZ4OF27AXQTOWQZGQMGYOONI|/" rel="nofollow" target="_blank" name=\'ed2k36355\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'36355\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E06.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|375711515|1F50B80314691E3FF23B45B541DAE373|h=BEQQITOATZ4OF27AXQTOWQZGQMGYOONI|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E06 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36355\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>358M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35613" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35613.html">
+																									急救警情 Sirens 2014 S02E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDD4iiP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35613\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:deada378f5c67eb3048f1049bf0f4b6ee3991ef8&amp;dn=Sirens.2014.S02E06.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet35613\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35613\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:deada378f5c67eb3048f1049bf0f4b6ee3991ef8&amp;dn=Sirens.2014.S02E06.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35613\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>556M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36354" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36354.html">
+																									急救警情 Sirens 2014 S02E06 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDGmi2l" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36354\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E06.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|141639540|9845F40E3EF20D690CF0C2DD2533ED1E|h=GAF2SOKW4STZQNH5HNTKME35M6JAXNZ7|/" rel="nofollow" target="_blank" name=\'ed2k36354\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'36354\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E06.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|141639540|9845F40E3EF20D690CF0C2DD2533ED1E|h=GAF2SOKW4STZQNH5HNTKME35M6JAXNZ7|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E06 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36354\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>135M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35612" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35612.html">
+																									急救警情 Sirens 2014 S02E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgkjGpE" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35612\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b6ed1c4f272f8d7834e67eaaec972b43dd077be3&amp;dn=Sirens.2014.S02E06.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.o" rel="nofollow" target="_blank" name=\'magnet35612\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35612\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b6ed1c4f272f8d7834e67eaaec972b43dd077be3&amp;dn=Sirens.2014.S02E06.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.o" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35612\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>168M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35205" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35205.html">
+																									急救警情 Sirens 2014 S02E05 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1rpy7W" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35205\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E05.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|372767375|1E9EB7717B7E2C5EE3E2D61CCC9F8736|h=3QGBVXFO5AOIPVJ4ZTNSFJB3ZS4QKL5V|/" rel="nofollow" target="_blank" name=\'ed2k35205\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'35205\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E05.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|372767375|1E9EB7717B7E2C5EE3E2D61CCC9F8736|h=3QGBVXFO5AOIPVJ4ZTNSFJB3ZS4QKL5V|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E05 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35205\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>355M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-02-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34725" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34725.html">
+																									急救警情 Sirens 2014 S02E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kT7lXeJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34725\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:cc4a3370b4e55274e72dae2231f2f9747aa7911d&amp;dn=Sirens.2014.S02E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet34725\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34725\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cc4a3370b4e55274e72dae2231f2f9747aa7911d&amp;dn=Sirens.2014.S02E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34725\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>525M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35204" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35204.html">
+																									急救警情 Sirens 2014 S02E05 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnuBim7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35204\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E05.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|140524821|A11AD706949ED78E55D66A50E3C706F5|h=IZS53CMVYCXAVYMOD5HQQM3PNJVGKTST|/" rel="nofollow" target="_blank" name=\'ed2k35204\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'35204\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E05.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|140524821|A11AD706949ED78E55D66A50E3C706F5|h=IZS53CMVYCXAVYMOD5HQQM3PNJVGKTST|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E05 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35204\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>134M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-02-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34724" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34724.html">
+																									急救警情 Sirens 2014 S02E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o65dXKQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34724\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:dd57b01f94781e0cf276e843c47d8ce2b15e369c&amp;dn=Sirens.2014.S02E05.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.o" rel="nofollow" target="_blank" name=\'magnet34724\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34724\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:dd57b01f94781e0cf276e843c47d8ce2b15e369c&amp;dn=Sirens.2014.S02E05.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.o" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34724\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>160M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35203" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35203.html">
+																									急救警情 Sirens 2014 S02E04 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjySwc1" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35203\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E04.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|381535019|846F5617A626F90B00F585A4953A3BA7|h=SIVP55ABZKXXLHUNE64QDAFS7ARRVCJP|/" rel="nofollow" target="_blank" name=\'ed2k35203\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'35203\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E04.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|381535019|846F5617A626F90B00F585A4953A3BA7|h=SIVP55ABZKXXLHUNE64QDAFS7ARRVCJP|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E04 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35203\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>363M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-02-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34278" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34278.html">
+																									急救警情 Sirens 2014 S02E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gd1UnUr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34278\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:deb3f4ddb3933ae65df159da268e1a4bede267ea&amp;dn=Sirens.2014.S02E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet34278\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34278\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:deb3f4ddb3933ae65df159da268e1a4bede267ea&amp;dn=Sirens.2014.S02E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34278\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>636M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35202" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35202.html">
+																									急救警情 Sirens 2014 S02E04 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mguYLvi" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35202\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E04.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|143808008|2247EAFA9CF7583DD8B6666326A3AD94|h=W3ZBBRNN42E5AAJWY6ZMICHXHT37HF4A|/" rel="nofollow" target="_blank" name=\'ed2k35202\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'35202\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E04.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|143808008|2247EAFA9CF7583DD8B6666326A3AD94|h=W3ZBBRNN42E5AAJWY6ZMICHXHT37HF4A|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E04 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35202\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>137M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-02-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34277" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34277.html">
+																									急救警情 Sirens 2014 S02E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bn8ibnD" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34277\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:caa8345376f50e4c6dbfa567a6e5eae9ef197783&amp;dn=Sirens+2014+S02E04+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" target="_blank" name=\'magnet34277\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34277\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:caa8345376f50e4c6dbfa567a6e5eae9ef197783&amp;dn=Sirens+2014+S02E04+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34277\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>198M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35201" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35201.html">
+																									急救警情 Sirens 2014 S02E03 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qW2slm0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35201\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E03.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|370565591|4762D293ECC9BD9185CB2D107F1709A3|h=NRWCROQNGNW3GZXKJNDQC4UQXLQ6J6LN|/" rel="nofollow" target="_blank" name=\'ed2k35201\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'35201\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E03.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|370565591|4762D293ECC9BD9185CB2D107F1709A3|h=NRWCROQNGNW3GZXKJNDQC4UQXLQ6J6LN|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E03 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35201\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>353M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-02-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34268" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34268.html">
+																									急救警情 Sirens 2014 S02E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gd6DV4B" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34268\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d253c79f6ba1ab07f260ec2127e9d676688c8c7e&amp;dn=Sirens.2014.S02E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet34268\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34268\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d253c79f6ba1ab07f260ec2127e9d676688c8c7e&amp;dn=Sirens.2014.S02E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34268\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>658M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35200" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35200.html">
+																									急救警情 Sirens 2014 S02E03 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdH3GOF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35200\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E03.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|139736049|E63FC345360870B59D13A1F2B78532D6|h=LYBQ56BN5YCXJHOAOOND3VUBIUSLDJU2|/" rel="nofollow" target="_blank" name=\'ed2k35200\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'35200\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E03.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|139736049|E63FC345360870B59D13A1F2B78532D6|h=LYBQ56BN5YCXJHOAOOND3VUBIUSLDJU2|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E03 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35200\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>133M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-02-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34267" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34267.html">
+																									急救警情 Sirens 2014 S02E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6vAtj8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34267\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:caa8345376f50e4c6dbfa567a6e5eae9ef197783&amp;dn=Sirens+2014+S02E04+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" target="_blank" name=\'magnet34267\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34267\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:caa8345376f50e4c6dbfa567a6e5eae9ef197783&amp;dn=Sirens+2014+S02E04+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34267\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>200M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35199" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35199.html">
+																									急救警情 Sirens 2014 S02E02 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3pESWd" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35199\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E02.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|381447280|FDAC6E21A75DA458FC1EF4396212C9B5|h=SA3QKFJGICLZUTKNXW7E7O3E6RUCIH2V|/" rel="nofollow" target="_blank" name=\'ed2k35199\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'35199\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E02.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|381447280|FDAC6E21A75DA458FC1EF4396212C9B5|h=SA3QKFJGICLZUTKNXW7E7O3E6RUCIH2V|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E02 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35199\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>363M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-02-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33872" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33872.html">
+																									急救警情 Sirens 2014 S02E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJog8np" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33872\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b81ae0b414d75646ec6d5425d0965315cb0ebc81&amp;dn=Sirens.2014.S02E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet33872\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33872\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b81ae0b414d75646ec6d5425d0965315cb0ebc81&amp;dn=Sirens.2014.S02E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33872\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>667M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35198" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35198.html">
+																									急救警情 Sirens 2014 S02E02 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdCJ6E3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35198\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E02.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|143826937|0EA431D5970C90EE4F76EE3322705129|h=CEZATLBYKRLTGD3F6N3GJAP4INXZC2CH|/" rel="nofollow" target="_blank" name=\'ed2k35198\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'35198\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E02.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|143826937|0EA431D5970C90EE4F76EE3322705129|h=CEZATLBYKRLTGD3F6N3GJAP4INXZC2CH|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E02 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35198\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>137M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-02-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33871" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33871.html">
+																									急救警情 Sirens 2014 S02E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bFNJo" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33871\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d9ef72eb0f24fffdcb65f369635b62a1dc1096d2&amp;dn=Sirens+2014+S02E02+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" target="_blank" name=\'magnet33871\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33871\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d9ef72eb0f24fffdcb65f369635b62a1dc1096d2&amp;dn=Sirens+2014+S02E02+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33871\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>199M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35197" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35197.html">
+																									急救警情 Sirens 2014 S02E01 720p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWmIJfA" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35197\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E01.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|381708069|1472CBEC8F7508C6C2372CB231C44777|h=YQH67SK7UROTXTMWA5YYTCZ4SQUPLWJ7|/" rel="nofollow" target="_blank" name=\'ed2k35197\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'35197\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E01.720p.1280X720.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mkv|381708069|1472CBEC8F7508C6C2372CB231C44777|h=YQH67SK7UROTXTMWA5YYTCZ4SQUPLWJ7|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E01 720p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35197\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>364M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-02-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33844" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33844.html">
+																									急救警情 Sirens 2014 S02E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mguYlZy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33844\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f7dc2a9a0d8b17f3f383060c0e02607505b19ba6&amp;dn=Sirens.2014.S02E01.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet33844\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33844\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f7dc2a9a0d8b17f3f383060c0e02607505b19ba6&amp;dn=Sirens.2014.S02E01.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33844\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>609M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35196" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35196.html">
+																									急救警情 Sirens 2014 S02E01 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqkrj60" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35196\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E01.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|143146587|5D11CE2D01741C338229EA63EEE6D18A|h=Z5733SZGIMSBUKWDABJVREMWWR32NFDF|/" rel="nofollow" target="_blank" name=\'ed2k35196\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'35196\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%80%A5%E6%95%91%E8%AD%A6%E6%83%85.Sirens.2014.S02E01.480p.854X480.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-%E7%94%B5%E6%B3%A2%E5%AD%97%E5%B9%95%E7%BB%84.mp4|143146587|5D11CE2D01741C338229EA63EEE6D18A|h=Z5733SZGIMSBUKWDABJVREMWWR32NFDF|/" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E01 480p 电波字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35196\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>136M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-02-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33843" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33843.html">
+																									急救警情 Sirens 2014 S02E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgl4Oju" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33843\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:aa2ed57e42d3fcdbbc1367b11ca483dbd9138999&amp;dn=Sirens+2014+S02E01+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" target="_blank" name=\'magnet33843\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33843\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:aa2ed57e42d3fcdbbc1367b11ca483dbd9138999&amp;dn=Sirens+2014+S02E01+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=" rel="nofollow" name=\'miurl\' filename="急救警情 Sirens 2014 S02E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33843\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>184M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-28</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,756,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,756);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,756);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,756);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

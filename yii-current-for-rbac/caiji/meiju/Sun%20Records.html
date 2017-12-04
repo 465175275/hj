@@ -1,0 +1,1240 @@
+'HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2017 03:32:44 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=df0f0aedbf21589f10b1639f1af3754901510111963; expires=Thu, 08-Nov-18 03:32:43 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Set-Cookie: PHPSESSID=3eqs9eregtgoktjgp3s9iqi7d4; expires=Thu, 23-Nov-2017 03:32:43 GMT; Max-Age=1296000; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: private
+Pragma: no-cache
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3ba5777d37f31413-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>太阳唱片 Sun Records-太阳唱片下载-太阳唱片全集下载-Sun Records下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="太阳唱片,Sun Records,太阳唱片下载,太阳唱片全集下载,太阳唱片高清下载,太阳唱片迅雷下载"/>
+	  <meta name="description" content="&lt;pstyle=&quot;text-align:left;&quot;&gt;CMT公布了八集有限剧集《太阳唱片》（SunRecords）的正式预告片。该剧描述上世纪五十年代孟菲斯「音乐」与「种族」相碰撞，最终诞生了流行音乐史上第一批巨星。这些年轻艺人一夜成名之后，不得不面对剧烈的政治动荡和社会变化。LeslieGrief担任执行制片人，获得奥斯卡奖" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1326;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FSun%2520Records.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FSun%2520Records.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1326;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">太阳唱片 Sun Records-太阳唱片下载-太阳唱片全集下载-Sun Records下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i1.piimg.com/588755/f60ff2050248abb1.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i1.piimg.com/588755/f60ff2050248abb1.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周五</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：音乐类</span>						
+						<span>最后更新：2017-04-25 10:00</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1326.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">12</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p style="text-align: left;">CMT公布了八集有限剧集《太阳唱片》（Sun Records）的正式预告片。该剧描述上世纪五十年代孟菲斯「音乐」与「种族」相碰撞，最终诞生了流行音乐史上第一批巨星。这些年轻艺人一夜成名之后，不得不面对剧烈的政治动荡和社会变化。Leslie Grief担任执行制片人，获得奥斯卡奖提名的Roland Joffé执导。故事起始于1956年12月，在孟菲斯太阳唱片的录音棚里，Elvis Presley、Carl Perkins、Jerry Lee Lewis和Johnny Cash第一次会面。在这次会议上，他们随意演唱并录制了一批福音歌曲和山区乡村摇滚歌曲。这些内容中的一部分（包括17首歌）在1981年第一次公诸于众。又过了很多年，其他内容也被找到，一张新的专辑正式发布。2006年，一部音乐剧将他们的这次会议搬上了舞台。2010年，这部音乐剧首次在百老汇演出，获得三项托尼奖提名。本剧就是这部音乐剧的改编版——作为这次会议六十周年纪念的一项内容。四人当年在太阳唱片公司老板Sam Phillips的安排下会面时，恰逢民权运动最鼎盛的时期。时局改变了他们对音乐的看法，他们开始尝试混合不同流派和类型的音乐。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="79932" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79932.html">
+																									太阳唱片 Sun Records S01E08 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hsl5sY4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79932\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:860a6093528304bed8ac3d27b957690d1b7f57a9&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet79932\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79932\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%AA%E9%98%B3%E5%94%B1%E7%89%87.Sun.Records.S01E08.720p.HDTV.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|546450015|345152881d7ce6017fa1e9ac2e306024|h=ooogzh2lucbw4rfiltzh5rkdjdxyhp6r|/" rel="nofollow" target="_blank" name=\'ed2k79932\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79932\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:860a6093528304bed8ac3d27b957690d1b7f57a9&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E08 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79932\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>521M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79102" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79102.html">
+																									太阳唱片 Sun Records S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jILs0Vs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79102\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=4hsel5g&amp;f=Sun.Records.S01E08.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79102\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a3d55177722a7cd5cb87032353a875c0a37775be&amp;dn=Sun.Records.S01E08.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79102\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79102\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a3d55177722a7cd5cb87032353a875c0a37775be&amp;dn=Sun.Records.S01E08.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79102\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>857M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79101" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79101.html">
+																									太阳唱片 Sun Records S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nvLmt8t" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79101\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=vj1f29n&amp;f=Sun.Records.S01E08.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79101\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:629659e79e0121164ff8e568496fc4ffdf4f2a48&amp;dn=Sun.Records.S01E08.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79101\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79101\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:629659e79e0121164ff8e568496fc4ffdf4f2a48&amp;dn=Sun.Records.S01E08.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79101\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>244M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79262" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79262.html">
+																									太阳唱片 Sun Records S01E07 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sluFSfF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79262\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:69322ab5d1f27c40e93a589209e767bfd5dfe45a&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet79262\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79262\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%AA%E9%98%B3%E5%94%B1%E7%89%87.Sun.Records.S01E07.720p.HDTV.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|614028462|32fa7ba9cc87ba8f99d813f408229e48|h=3paqxgyyli6puwlxstjydqjtefo6imcb|/" rel="nofollow" target="_blank" name=\'ed2k79262\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79262\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:69322ab5d1f27c40e93a589209e767bfd5dfe45a&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E07 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79262\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>585M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="78511" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78511.html">
+																									太阳唱片 Sun Records S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eRK4i8y" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78511\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ctyjdwe&amp;f=Sun.Records.S01E07.PROPER.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78511\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:017da46c4fa37c5c409277f64ffa86a17a8f791d&amp;dn=Sun.Records.S01E07.PROPER.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" target="_blank" name=\'magnet78511\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78511\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:017da46c4fa37c5c409277f64ffa86a17a8f791d&amp;dn=Sun.Records.S01E07.PROPER.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78511\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>943M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="78510" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78510.html">
+																									太阳唱片 Sun Records S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i4RP5Jn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78510\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=7b9rkpg&amp;f=Sun.Records.S01E07.PROPER.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78510\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a2bb09784b27a590d7553b5d39ad4f3a675f7173&amp;dn=Sun.Records.S01E07.PROPER.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet78510\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78510\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a2bb09784b27a590d7553b5d39ad4f3a675f7173&amp;dn=Sun.Records.S01E07.PROPER.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78510\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>284M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="78778" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78778.html">
+																									太阳唱片 Sun Records S01E06 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dFzhFln" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78778\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:7a60fb5af71fb121ed50700608bf67ade3eaf0b2&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet78778\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78778\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%AA%E9%98%B3%E5%94%B1%E7%89%87.Sun.Records.S01E06.720p.HDTV.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|566815486|e1cf43d3c1dc59453c3b89d4cfa1b4dc|h=d3nsudlit5sqb7rgczy7touervpuudlf|/" rel="nofollow" target="_blank" name=\'ed2k78778\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'78778\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:7a60fb5af71fb121ed50700608bf67ade3eaf0b2&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E06 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78778\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>540M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77868" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77868.html">
+																									太阳唱片 Sun Records S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hrDDWJM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77868\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=n3xgvp2&amp;f=Sun.Records.S01E06.720p.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77868\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b1e106a9f6ad377c498641126ae903e07e0abaec&amp;dn=Sun.Records.S01E06.720p.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77868\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77868\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b1e106a9f6ad377c498641126ae903e07e0abaec&amp;dn=Sun.Records.S01E06.720p.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77868\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>862M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="77867" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77867.html">
+																									太阳唱片 Sun Records S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o8jVK74" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77867\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=duspbxh&amp;f=Sun.Records.S01E06.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77867\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:8759411fc3bc1dfc5e4c6bc602710e19c57d35b0&amp;dn=Sun.Records.S01E06.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77867\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77867\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8759411fc3bc1dfc5e4c6bc602710e19c57d35b0&amp;dn=Sun.Records.S01E06.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77867\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>258M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77996" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77996.html">
+																									太阳唱片 Sun Records S01E05 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1b6yEbO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77996\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3a9ab64343f76d245b639c38ed046d9a7d01220c&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet77996\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77996\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%AA%E9%98%B3%E5%94%B1%E7%89%87.Sun.Records.S01E05.720p.HDTV.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|584010131|7389f8f124a5bbbd0a8d0b6c187def1b|h=ixol4pdhyvz6ydnrrqpnshjigtu4qld2|/" rel="nofollow" target="_blank" name=\'ed2k77996\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'77996\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:3a9ab64343f76d245b639c38ed046d9a7d01220c&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E05 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77996\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>557M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="77409" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77409.html">
+																									太阳唱片 Sun Records S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hrXWv6c" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77409\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=1pkoafq&amp;f=Sun.Records.S01E05.720p.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77409\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6c04532a5cd442365a36065e0f1787f38d0be99f&amp;dn=Sun.Records.S01E05.720p.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77409\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77409\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6c04532a5cd442365a36065e0f1787f38d0be99f&amp;dn=Sun.Records.S01E05.720p.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77409\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>902M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77408" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77408.html">
+																									太阳唱片 Sun Records S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bG7AH4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77408\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=kmpohl4&amp;f=Sun.Records.S01E05.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77408\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:89e634ad1b8027f2e3ea78e857f44a224c14c3dc&amp;dn=Sun.Records.S01E05.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77408\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77408\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:89e634ad1b8027f2e3ea78e857f44a224c14c3dc&amp;dn=Sun.Records.S01E05.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77408\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>270M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="77470" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77470.html">
+																									太阳唱片 Sun Records S01E04 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bo2YzU3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77470\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:25341969bfeded4386b9ce7bc67f40792d9d4521&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet77470\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77470\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%AA%E9%98%B3%E5%94%B1%E7%89%87.Sun.Records.S01E04.720p.HDTV.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|536970394|eee6cf9e8feeb1dbe467bb5a855c01b8|h=m4sohhb3erb4ctrmqe6u3raw2y7vr5s7|/" rel="nofollow" target="_blank" name=\'ed2k77470\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'77470\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:25341969bfeded4386b9ce7bc67f40792d9d4521&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E04 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77470\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>512M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-03-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="76858" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76858.html">
+																									太阳唱片 Sun Records S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIqOKtg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'76858\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=fhbzwky&amp;f=Sun.Records.S01E04.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'76858\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5841e8599040ec4072c6785262c432a8cd232d25&amp;dn=Sun.Records.S01E04.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet76858\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76858\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5841e8599040ec4072c6785262c432a8cd232d25&amp;dn=Sun.Records.S01E04.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76858\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>826M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="76857" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76857.html">
+																									太阳唱片 Sun Records S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kURen8j" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'76857\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://thepiratebay.cr/torrent/17348661/Sun.Records.S01E04.480p.x264-mSD" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'76857\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9b4ffbdb26f212d3105cfbb1ae3730c8235afa8f&amp;dn=Sun.Records.S01E04.480p.x264-mSD&amp;tr=udp%3A//tracker.leechers-paradise.org%3A6969&amp;tr=udp%3A//zer0day.ch%3A1337&amp;tr=udp%3A//tracker.coppersurfer.tk%3A6969&amp;tr=udp%3A//public." rel="nofollow" target="_blank" name=\'magnet76857\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76857\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9b4ffbdb26f212d3105cfbb1ae3730c8235afa8f&amp;dn=Sun.Records.S01E04.480p.x264-mSD&amp;tr=udp%3A//tracker.leechers-paradise.org%3A6969&amp;tr=udp%3A//zer0day.ch%3A1337&amp;tr=udp%3A//tracker.coppersurfer.tk%3A6969&amp;tr=udp%3A//public." rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76857\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>173M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="76931" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76931.html">
+																									太阳唱片 Sun Records S01E03 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d1e294a55c8d8c7aa28d4760673d8895c6f87293&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet76931\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76931\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%AA%E9%98%B3%E5%94%B1%E7%89%87.Sun.Records.S01E03.720P.HDTV.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|694893273|9a05adaabd2702aa99e3f6efd936aac1|h=tifuhsvd5qc553cjxda22z4c3g2slvpp|/" rel="nofollow" target="_blank" name=\'ed2k76931\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'76931\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://pan.baidu.com/s/1bpipAph" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'76931\' alt=\'其他\'></a>
+										<a style="display:none;" href="magnet:?xt=urn:btih:d1e294a55c8d8c7aa28d4760673d8895c6f87293&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E03 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76931\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>662M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-03-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="76316" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76316.html">
+																									太阳唱片 Sun Records S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bo7HrsF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'76316\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=94w1epz&amp;f=Sun.Records.S01E03.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'76316\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3fb95604d00e202f35f4e7ba2fb1dbd1fa0b15e5&amp;dn=Sun.Records.S01E03.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet76316\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76316\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3fb95604d00e202f35f4e7ba2fb1dbd1fa0b15e5&amp;dn=Sun.Records.S01E03.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76316\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>920M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="76315" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76315.html">
+																									太阳唱片 Sun Records S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bo6vvYn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'76315\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=c7ibv4d&amp;f=Sun.Records.S01E03.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'76315\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7c90c3e03672c6daa526c23d2fda639593ce7fb4&amp;dn=Sun.Records.S01E03.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet76315\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76315\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7c90c3e03672c6daa526c23d2fda639593ce7fb4&amp;dn=Sun.Records.S01E03.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76315\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>267M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="76208" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76208.html">
+																									太阳唱片 Sun Records S01E02 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/init?shareid=1880059260&amp;uk=2617915150" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'76208\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:7ba8e0a987ca00eeb67dfc03bbefe1a8eaaa3672&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet76208\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76208\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%AA%E9%98%B3%E5%94%B1%E7%89%87.Sun.Records.S01E02.720p.HDTV.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|551282611|afe96912a9d4dab1496939b4aa8d62c7|h=fdfshrh6skdyvwia23u2jejgtii6bbx7|/" rel="nofollow" target="_blank" name=\'ed2k76208\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'76208\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:7ba8e0a987ca00eeb67dfc03bbefe1a8eaaa3672&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E02 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76208\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>525M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-03-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="75844" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75844.html">
+																									太阳唱片 Sun Records S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVbSOHh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75844\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://thepiratebay.cr/torrent/17227330/Sun.Records.S01E02.720p.HDTV.x264-SVA" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75844\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5542b3d82fb2906261166a60619ba7881a3084f8&amp;dn=Sun.Records.S01E02.720p.HDTV.x264-SVA&amp;tr=udp%3A//tracker.leechers-paradise.org%3A6969&amp;tr=udp%3A//zer0day.ch%3A1337&amp;tr=udp%3A//tracker.coppersurfer.tk%3A6969&amp;tr=udp%3A//pu" rel="nofollow" target="_blank" name=\'magnet75844\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75844\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5542b3d82fb2906261166a60619ba7881a3084f8&amp;dn=Sun.Records.S01E02.720p.HDTV.x264-SVA&amp;tr=udp%3A//tracker.leechers-paradise.org%3A6969&amp;tr=udp%3A//zer0day.ch%3A1337&amp;tr=udp%3A//tracker.coppersurfer.tk%3A6969&amp;tr=udp%3A//pu" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75844\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>839M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="75843" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75843.html">
+																									太阳唱片 Sun Records S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfLwmxt" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75843\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://thepiratebay.cr/torrent/17227299/Sun.Records.S01E02.HDTV.x264-SVA" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75843\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:138b41549334a29f71b8e17d6a62c7c1b3b109b6&amp;dn=Sun.Records.S01E02.HDTV.x264-SVA&amp;tr=udp%3A//tracker.leechers-paradise.org%3A6969&amp;tr=udp%3A//zer0day.ch%3A1337&amp;tr=udp%3A//tracker.coppersurfer.tk%3A6969&amp;tr=udp%3A//public." rel="nofollow" target="_blank" name=\'magnet75843\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75843\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:138b41549334a29f71b8e17d6a62c7c1b3b109b6&amp;dn=Sun.Records.S01E02.HDTV.x264-SVA&amp;tr=udp%3A//tracker.leechers-paradise.org%3A6969&amp;tr=udp%3A//zer0day.ch%3A1337&amp;tr=udp%3A//tracker.coppersurfer.tk%3A6969&amp;tr=udp%3A//public." rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75843\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>251M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="75609" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75609.html">
+																									太阳唱片 Sun Records S01E01 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i5qPNwT" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75609\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b87158817e2d3374a676d7768175e6504054a8a5&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet75609\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75609\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%AA%E9%98%B3%E5%94%B1%E7%89%87.Sun.Records.S01E01.720p.HDTV.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|618429102|4fe2f0fddbd2aaef66aaac9a0721a63b|h=pp5kgv7djpufjmqz4orxtxt7mx3mk7pf|/" rel="nofollow" target="_blank" name=\'ed2k75609\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'75609\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:b87158817e2d3374a676d7768175e6504054a8a5&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E01 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75609\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>589M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-03-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="75842" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75842.html">
+																									太阳唱片 Sun Records S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYsDCxI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75842\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://thepiratebay.cr/torrent/17182329/Sun.Records.S01E01.720p.HDTV.x264-SVA" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75842\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a92335ed6fa2da5f40a373b27777e6cb64e560a7&amp;dn=Sun.Records.S01E01.720p.HDTV.x264-SVA&amp;tr=udp%3A//tracker.leechers-paradise.org%3A6969&amp;tr=udp%3A//zer0day.ch%3A1337&amp;tr=udp%3A//tracker.coppersurfer.tk%3A6969&amp;tr=udp%3A//pu" rel="nofollow" target="_blank" name=\'magnet75842\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75842\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a92335ed6fa2da5f40a373b27777e6cb64e560a7&amp;dn=Sun.Records.S01E01.720p.HDTV.x264-SVA&amp;tr=udp%3A//tracker.leechers-paradise.org%3A6969&amp;tr=udp%3A//zer0day.ch%3A1337&amp;tr=udp%3A//tracker.coppersurfer.tk%3A6969&amp;tr=udp%3A//pu" rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75842\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>812M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="75841" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75841.html">
+																									太阳唱片 Sun Records S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfOebS3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75841\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://thepiratebay.cr/torrent/17182325/Sun.Records.S01E01.HDTV.x264-SVA" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75841\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c0fb531b1a1db25c34d7584e5917487222cba04d&amp;dn=Sun.Records.S01E01.HDTV.x264-SVA&amp;tr=udp%3A//tracker.leechers-paradise.org%3A6969&amp;tr=udp%3A//zer0day.ch%3A1337&amp;tr=udp%3A//tracker.coppersurfer.tk%3A6969&amp;tr=udp%3A//public." rel="nofollow" target="_blank" name=\'magnet75841\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75841\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c0fb531b1a1db25c34d7584e5917487222cba04d&amp;dn=Sun.Records.S01E01.HDTV.x264-SVA&amp;tr=udp%3A//tracker.leechers-paradise.org%3A6969&amp;tr=udp%3A//zer0day.ch%3A1337&amp;tr=udp%3A//tracker.coppersurfer.tk%3A6969&amp;tr=udp%3A//public." rel="nofollow" name=\'miurl\' filename="太阳唱片 Sun Records S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75841\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>248M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-04</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,1326,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1326);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1326);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1326);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

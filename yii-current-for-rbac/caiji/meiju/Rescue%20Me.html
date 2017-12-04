@@ -1,0 +1,936 @@
+'HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2017 02:55:33 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=ddbe99849d9d994782a7ed0e2463e679e1510109732; expires=Thu, 08-Nov-18 02:55:32 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3ba54106b0967826-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>火线救援 Rescue Me-火线救援下载-火线救援全集下载-Rescue Me下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="火线救援,Rescue Me,火线救援下载,火线救援全集下载,火线救援高清下载,火线救援迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;《火线救援》是美国FX公司出品的一部反映消防员工作、感情和生活的剧情类电视剧。&amp;nbsp;这并不仅仅是一群消防员在火场中拯救生命和财产的故事，对他们自己来说，拯救自己的生活也是一场不能失败的行动。纽约第62号消防组的日常工作并不是对着火场喷射水柱，他们必须劈开每一个障碍，在烈焰中寻找被困的人们，而在刚刚过去的911事件中，倒塌的双子" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 117;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FRescue%2520Me.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FRescue%2520Me.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 117;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">火线救援 Rescue Me-火线救援下载-火线救援全集下载-Rescue Me下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i2.muimg.com/588755/46b2a8b2134cd4ec.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i2.muimg.com/588755/46b2a8b2134cd4ec.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周四</span>
+						<span>状态：剧终</span>
+						<span class="greybg">分类：喜剧类</span>						
+						<span>最后更新：2011-09-08 22:08</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/117.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">0</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>《火线救援》是美国FX公司出品的一部反映消防员工作、感情和生活的剧情类电视剧。
+&nbsp;这并不仅仅是一群消防员在火场中拯救生命和财产的故事，对他们自己来说，拯救自己的生活也是一场不能失败的行动。纽约第62号消防组的日常工作并不是对着火场喷射水柱，他们必须劈开每一个障碍，在烈焰中寻找被困的人们，而在刚刚过去的911事件中，倒塌的双子塔埋葬了他们的许多战友。&nbsp; &nbsp;汤米-加文是每个成员尊敬而信赖的头领，是消防站毋庸置疑的核心，但多年的工作令他精神紧张，以至于沉溺于酒精来排遣压力，911事件后，妻子珍妮特无法再忍受他变本加厉的酗酒行为，带着三个孩子从他身边彻底消失，急怒交加的汤米此后更沉迷于酒杯。汤米的表兄吉米在双子塔殉职后，他负起了照顾吉米遗孀希拉的责任，但是两人却发展成情人，希拉还怀上了孩子。消防员之一弗兰科-利维拉原本是个好色的花花公子，但是突然发现自己有了一个女儿，由于前女友患有精神分裂症，弗兰科不得不担任起单身父亲的角色。疲倦的老消防员肯尼-路和妻子在发现彼此都有外遇后选择了离婚，但是受着精神压力和身体创伤双重折磨的肯尼已不再是当年的火场英雄，失望的女友也抛弃了他。迈克-塞里提是消防队的新成员，他与另一个消防员的恋情遭到了同事们的一致反对。杰瑞-瑞勒在酒吧里殴打了一个同性恋消防员，现在他的事业因此遭遇了空前的危机。&nbsp; &nbsp;工作和生活给这些消防员施加了无尽的压力，在火场中出生入死，下班后又挣扎于自己的生活。火场中受困的人们仰赖于他们的救助，但是他们自己要靠谁来挽救呢？&nbsp; &nbsp;救火现场真实，家庭生活也是一波又一波的麻烦，喜欢看硬汉题材的推荐看看，确实很多的帅哥。音乐很好听Devil，摇滚也很衬剧情。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="7">
+																			第7季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="1066" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/1066.html">
+																									火线救援 Rescue Me S07E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrent.zoink.it/Rescue.Me.S07E09.720p.HDTV.x264-IMMERSE.[eztv].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'1066\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:TX62774CL2MOIOXMI3TPMMRFZYTW2SB6&dn=Rescue.Me.S07E09.720p.HDTV.x264-IMMERSE&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet1066\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'1066\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:TX62774CL2MOIOXMI3TPMMRFZYTW2SB6&dn=Rescue.Me.S07E09.720p.HDTV.x264-IMMERSE&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="火线救援 Rescue Me S07E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'1066\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-09-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="1065" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/1065.html">
+																									火线救援 Rescue Me S07E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/BE9FF172C08FA0A9114855C92862D5A05D9BAEED.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'1065\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:BE9FF172C08FA0A9114855C92862D5A05D9BAEED&dn=download%20from%20superseeds.org%20Rescue.Me.S07E09.DVDRip.XviD-REWARD%5bss%5d&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" target="_blank" name=\'magnet1065\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'1065\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:BE9FF172C08FA0A9114855C92862D5A05D9BAEED&dn=download%20from%20superseeds.org%20Rescue.Me.S07E09.DVDRip.XviD-REWARD%5bss%5d&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" name=\'miurl\' filename="火线救援 Rescue Me S07E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'1065\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>564M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-09-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="903" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/903.html">
+																									火线救援 Rescue Me S07E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="../uploadfile/20110901/20110901161408993.rar" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'903\' alt=\'BT美剧片源下载\'>
+											</a>																																								
+																					<a style="display:none;" href="../uploadfile/20110901/20110901161408993.rar" rel="nofollow" name=\'miurl\' filename="火线救援 Rescue Me S07E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'903\' alt=\'小米路由器远程下载\'></a>
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-09-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="902" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/902.html">
+																									火线救援 Rescue Me S07E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrent.zoink.it/Rescue.Me.S07E08.Vows.HDTV.XviD-FQM.[eztv].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'902\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:FJPPNPP7IEYGIK4465A5KDJSRBIE53K7&dn=Rescue.Me.S07E08.Vows.HDTV.XviD-FQM&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet902\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'902\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:FJPPNPP7IEYGIK4465A5KDJSRBIE53K7&dn=Rescue.Me.S07E08.Vows.HDTV.XviD-FQM&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="火线救援 Rescue Me S07E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'902\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>550M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-09-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="731" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/731.html">
+																									火线救援 Rescue Me S07E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="../uploadfile/20110825/20110825122036817.rar" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'731\' alt=\'BT美剧片源下载\'>
+											</a>																																								
+																					<a style="display:none;" href="../uploadfile/20110825/20110825122036817.rar" rel="nofollow" name=\'miurl\' filename="火线救援 Rescue Me S07E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'731\' alt=\'小米路由器远程下载\'></a>
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-08-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="730" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/730.html">
+																									火线救援 Rescue Me S07E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrent.zoink.it/Rescue.Me.S07E07.Jeter.HDTV.XviD-FQM.[eztv].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'730\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ZU5GOBUAYFDLYUJIK53BSLY4RSCQVVTQ&dn=Rescue.Me.S07E07.Jeter.HDTV.XviD-FQM&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet730\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'730\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ZU5GOBUAYFDLYUJIK53BSLY4RSCQVVTQ&dn=Rescue.Me.S07E07.Jeter.HDTV.XviD-FQM&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="火线救援 Rescue Me S07E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'730\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>350M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-08-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="551" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/551.html">
+																									火线救援 Rescue Me S07E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="../uploadfile/20110818/20110818112305581.rar" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'551\' alt=\'BT美剧片源下载\'>
+											</a>																																								
+																					<a style="display:none;" href="../uploadfile/20110818/20110818112305581.rar" rel="nofollow" name=\'miurl\' filename="火线救援 Rescue Me S07E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'551\' alt=\'小米路由器远程下载\'></a>
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-08-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="550" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/550.html">
+																									火线救援 Rescue Me S07E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrent.zoink.it/Rescue.Me.S07E06.HDTV.XviD-ASAP.[eztv].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'550\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:WJQH3VP5J6EBLBN6A2V6GESAAMEXXNOK&dn=Rescue.Me.S07E06.HDTV.XviD-ASAP&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet550\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'550\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:WJQH3VP5J6EBLBN6A2V6GESAAMEXXNOK&dn=Rescue.Me.S07E06.HDTV.XviD-ASAP&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="火线救援 Rescue Me S07E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'550\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>350M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-08-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="377" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/377.html">
+																									火线救援 Rescue Me S07E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrent.zoink.it/Rescue.Me.7x05.(HDTV-FQM)[VTV].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'377\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:D400B810A3FE3FC17AB8CF1916211AC07743323C&dn=Rescue.Me.7x05.(HDTV-FQM)&tr=http://tracker.ccc.de/announce&tr=udp://tracker.ccc.de:80/announce&tr=http://tracker.istole.it:80/announce&tr=http://tracker.publicbt.com:80/announce&tr=http" rel="nofollow" target="_blank" name=\'magnet377\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'377\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:D400B810A3FE3FC17AB8CF1916211AC07743323C&dn=Rescue.Me.7x05.(HDTV-FQM)&tr=http://tracker.ccc.de/announce&tr=udp://tracker.ccc.de:80/announce&tr=http://tracker.istole.it:80/announce&tr=http://tracker.publicbt.com:80/announce&tr=http" rel="nofollow" name=\'miurl\' filename="火线救援 Rescue Me S07E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'377\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>349M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-08-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="223" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/223.html">
+																									火线救援 Rescue.Me.S07E04.720p-IMMERSE 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:D2F213759C500153D57B55EB31347842D9719A96&dn=%28download%20at%20superseeds.org%29%20Rescue.Me.S07E05.720p.HDTV.x264-IMMERSE%5bss%5d&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" target="_blank" name=\'magnet223\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'223\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:D2F213759C500153D57B55EB31347842D9719A96&dn=%28download%20at%20superseeds.org%29%20Rescue.Me.S07E05.720p.HDTV.x264-IMMERSE%5bss%5d&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" name=\'miurl\' filename="火线救援 Rescue.Me.S07E04.720p-IMMERSE " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'223\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-08-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="216" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/216.html">
+																									火线救援 Rescue Me S07E04 Brownies HDTV XviD-FQM 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="../uploadfile/20110804/20110804130007187.rar" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'216\' alt=\'BT美剧片源下载\'>
+											</a>																																								
+																					<a style="display:none;" href="../uploadfile/20110804/20110804130007187.rar" rel="nofollow" name=\'miurl\' filename="火线救援 Rescue Me S07E04 Brownies HDTV XviD-FQM " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'216\' alt=\'小米路由器远程下载\'></a>
+										</td>
+										<td></td>
+										<td>349M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-08-04</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=1652025&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(1652025,117,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,117);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,117);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,117);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

@@ -1,0 +1,1259 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:17:06 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d7609f6800c93cc72bff40d4372270e6a1509535026; expires=Thu, 01-Nov-18 11:17:06 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e721b54f69300-SJC
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>网疗记 Web Therapy-网疗记下载-网疗记全集下载-Web Therapy下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="网疗记,Web Therapy,网疗记下载,网疗记全集下载,网疗记高清下载,网疗记迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;LisaKudrow在剧中饰演一位网络治疗师，她通过网络摄像头向需要的人提供治疗。没看错菲比大姐演的~&lt;/p&gt;" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 185;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FWeb.Therapy.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FWeb.Therapy.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 185;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">网疗记 Web Therapy-网疗记下载-网疗记全集下载-Web Therapy下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i2.muimg.com/588755/3809d3b146016a58.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i2.muimg.com/588755/3809d3b146016a58.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周三</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：喜剧类</span>						
+						<span>最后更新：2015-01-29 16:10</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/185.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">30</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>
+			
+			
+			
+			
+			Lisa Kudrow在剧中饰演一位网络治疗师，她通过网络摄像头向需要的人提供治疗。
+没看错 菲比大姐演的~			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="4">
+																			第4季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="3">
+																			第3季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="2">
+																			第2季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="1">
+																			第1季																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="33935" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33935.html">
+																									网疗记 Web Therapy S04E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c0GTqPM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33935\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9d335fad2e05475f6c41f471a7f19162dd5877b5&amp;dn=Web.Therapy.S04E12.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" target="_blank" name=\'magnet33935\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33935\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9d335fad2e05475f6c41f471a7f19162dd5877b5&amp;dn=Web.Therapy.S04E12.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33935\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>435M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33934" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33934.html">
+																									网疗记 Web Therapy S04E12 本季终 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6smxQy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33934\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0ed5ba7490bbfa8be16bf5def892a14d7574ee5c&amp;dn=Web+Therapy+S04E12+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet33934\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33934\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0ed5ba7490bbfa8be16bf5def892a14d7574ee5c&amp;dn=Web+Therapy+S04E12+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E12 本季终 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33934\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>125M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="33543" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33543.html">
+																									网疗记 Web Therapy S04E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgFqSaO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33543\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3509f033094d6ad0c26f26c611d9e0b38e7c8e57&amp;dn=Web.Therapy.S04E11.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" target="_blank" name=\'magnet33543\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33543\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3509f033094d6ad0c26f26c611d9e0b38e7c8e57&amp;dn=Web.Therapy.S04E11.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33543\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>369M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33542" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33542.html">
+																									网疗记 Web Therapy S04E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntE8QKD" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33542\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:66bf7449cb18d7f6a1fa80ecf6be764e9daab1a7&amp;dn=Web+Therapy+S04E11+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet33542\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33542\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:66bf7449cb18d7f6a1fa80ecf6be764e9daab1a7&amp;dn=Web+Therapy+S04E11+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33542\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="33190" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33190.html">
+																									网疗记 Web Therapy S04E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnctwJl" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33190\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f2f410d0372f2d2766a936763973af40e53a4179&amp;dn=Web.Therapy.S04E10.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" target="_blank" name=\'magnet33190\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33190\' alt=\'迅雷高清美剧下载\'></a>																				<a style="display:none;" href="http://cloud.pptv.com/v3/share/am4beeBw" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'33190\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:f2f410d0372f2d2766a936763973af40e53a4179&amp;dn=Web.Therapy.S04E10.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33190\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>399M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33189" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33189.html">
+																									网疗记 Web Therapy S04E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6uTNi6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33189\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b323a04a80f212cb091e4635421514bc3bce1f77&amp;dn=Web.Therapy.S04E10.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=ud" rel="nofollow" target="_blank" name=\'magnet33189\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33189\' alt=\'迅雷高清美剧下载\'></a>																				<a style="display:none;" href="http://cloud.pptv.com/v3/share/am4b90N5" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'33189\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:b323a04a80f212cb091e4635421514bc3bce1f77&amp;dn=Web.Therapy.S04E10.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=ud" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33189\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>110M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="32273" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32273.html">
+																									网疗记 Web Therapy S04E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6kdCXs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32273\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/08DB52E8FB9428EC3B57E5EF96CAF75591EC1AB0" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'32273\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:08db52e8fb9428ec3b57e5ef96caf75591ec1ab0&amp;dn=Web.Therapy.S04E09.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" target="_blank" name=\'magnet32273\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32273\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:08db52e8fb9428ec3b57e5ef96caf75591ec1ab0&amp;dn=Web.Therapy.S04E09.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32273\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>427M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="32272" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32272.html">
+																									网疗记 Web Therapy S04E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3FvYGP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32272\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/66DE3CBCACA0336888E236396CC6909FA4481565" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'32272\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:66de3cbcaca0336888e236396cc6909fa4481565&amp;dn=Web+Therapy+S04E09+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet32272\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32272\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:66de3cbcaca0336888e236396cc6909fa4481565&amp;dn=Web+Therapy+S04E09+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32272\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>118M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="31934" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31934.html">
+																									网疗记 Web Therapy S04E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1EUfHc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31934\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/1B3F289596759946310FBB127BAFF7C5CD28F39F" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31934\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1b3f289596759946310fbb127baff7c5cd28f39f&amp;dn=Web.Therapy.S04E08.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" target="_blank" name=\'magnet31934\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31934\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1b3f289596759946310fbb127baff7c5cd28f39f&amp;dn=Web.Therapy.S04E08.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31934\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>421M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="31933" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31933.html">
+																									网疗记 Web Therapy S04E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntyYA9b" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31933\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/3AAAE191AAEA3C67DAE92F2898ACFC6083443435" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31933\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3aaae191aaea3c67dae92f2898acfc6083443435&amp;dn=Web+Therapy+S04E08+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet31933\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31933\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3aaae191aaea3c67dae92f2898acfc6083443435&amp;dn=Web+Therapy+S04E08+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31933\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>117M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="31546" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31546.html">
+																									网疗记 Web Therapy S04E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGDrI6M" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31546\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/EF606B65678FE977C8CA818238D955B22F9A330E.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31546\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ef606b65678fe977c8ca818238d955b22f9a330e&amp;dn=Web.Therapy.S04E07.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6" rel="nofollow" target="_blank" name=\'magnet31546\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31546\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ef606b65678fe977c8ca818238d955b22f9a330e&amp;dn=Web.Therapy.S04E07.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31546\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>451M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="31545" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31545.html">
+																									网疗记 Web Therapy S04E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGoVkDC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31545\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://zoink.it/torrent/66B5D94BCA0FC0CC6055D7A2BE129D60EF0E4291.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31545\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:M225SS6KB7AMYYCV26RL4EU5MDXQ4QUR&amp;dn=Web.Therapy.S04E07.HDTV.x264-BATV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp://" rel="nofollow" target="_blank" name=\'magnet31545\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31545\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:M225SS6KB7AMYYCV26RL4EU5MDXQ4QUR&amp;dn=Web.Therapy.S04E07.HDTV.x264-BATV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp://" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31545\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>130M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="31249" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31249.html">
+																									网疗记 Web Therapy S04E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWui7d6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31249\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/9BF943C2F4C2964484DF7B2817CDBCAB17D912B2.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31249\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9bf943c2f4c2964484df7b2817cdbcab17d912b2&amp;dn=Web.Therapy.S04E06.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" target="_blank" name=\'magnet31249\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31249\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9bf943c2f4c2964484df7b2817cdbcab17d912b2&amp;dn=Web.Therapy.S04E06.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31249\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>509M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="31248" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31248.html">
+																									网疗记 Web Therapy S04E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kT20jZL" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31248\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/F670C1A6AFA99FEA14A7EE75FFC467BEEDF6884A.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31248\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f670c1a6afa99fea14a7ee75ffc467beedf6884a&amp;dn=Web+Therapy+S04E06+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet31248\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31248\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f670c1a6afa99fea14a7ee75ffc467beedf6884a&amp;dn=Web+Therapy+S04E06+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31248\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>147M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="30883" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30883.html">
+																									网疗记 Web Therapy S04E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3ABDAH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30883\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://zoink.it/torrent/1AC97B43DF869CBB6B66BB26F178D62EF9E52390.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30883\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:DLEXWQ67Q2OLW23GXMTPC6GWF346KI4Q&amp;dn=Web.Therapy.S04E05.720p.HDTV.x264-BATV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=u" rel="nofollow" target="_blank" name=\'magnet30883\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30883\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:DLEXWQ67Q2OLW23GXMTPC6GWF346KI4Q&amp;dn=Web.Therapy.S04E05.720p.HDTV.x264-BATV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=u" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30883\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>423M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="30882" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30882.html">
+																									网疗记 Web Therapy S04E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3gPySH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30882\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://zoink.it/torrent/70BC7A648701F077E95E0EE3DF17DB5E1B777890.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30882\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:OC6HUZEHAHYHP2K6B3R56F63LYNXO6EQ&amp;dn=Web.Therapy.S04E05.HDTV.x264-BATV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp://" rel="nofollow" target="_blank" name=\'magnet30882\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30882\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:OC6HUZEHAHYHP2K6B3R56F63LYNXO6EQ&amp;dn=Web.Therapy.S04E05.HDTV.x264-BATV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp://" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30882\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>123M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="30487" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30487.html">
+																									网疗记 Web Therapy S04E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1fHAl4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30487\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://zoink.it/torrent/F301AEF23751E4490AF550BC313279D1032A7EF5.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30487\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6MA254RXKHSESCXVKC6DCMTZ2EBSU7XV&amp;dn=Web.Therapy.S04E04.720p.HDTV.x264-KILLERS&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;t" rel="nofollow" target="_blank" name=\'magnet30487\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30487\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6MA254RXKHSESCXVKC6DCMTZ2EBSU7XV&amp;dn=Web.Therapy.S04E04.720p.HDTV.x264-KILLERS&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;t" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30487\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>440M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="30486" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30486.html">
+																									网疗记 Web Therapy S04E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c0riOla" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30486\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://zoink.it/torrent/7FD3AF5ECB3506EBC58AEBF993293C885BC96C87.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30486\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:P7J26XWLGUDOXRMK5P4ZGKJ4RBN4S3EH&amp;dn=Web.Therapy.S04E04.HDTV.x264-KILLERS&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet30486\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30486\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:P7J26XWLGUDOXRMK5P4ZGKJ4RBN4S3EH&amp;dn=Web.Therapy.S04E04.HDTV.x264-KILLERS&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30486\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>129M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="30119" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30119.html">
+																									网疗记 Web Therapy S04E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgNwy9M" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30119\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/D919DD86D3D089CF56DAE45A73609E041AD3C22B.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30119\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d919dd86d3d089cf56dae45a73609e041ad3c22b&amp;dn=Web.Therapy.S04E03.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet30119\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30119\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d919dd86d3d089cf56dae45a73609e041ad3c22b&amp;dn=Web.Therapy.S04E03.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30119\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>416M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="30118" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30118.html">
+																									网疗记 Web Therapy S04E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJ9djRH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30118\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/8D1E761CF457BBD0A9D56BB9849BE62130A73FB9.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30118\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:8d1e761cf457bbd0a9d56bb9849be62130a73fb9&amp;dn=Web.Therapy.S04E03.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet30118\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30118\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8d1e761cf457bbd0a9d56bb9849be62130a73fb9&amp;dn=Web.Therapy.S04E03.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30118\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>120M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="29695" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/29695.html">
+																									网疗记 Web Therapy S04E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mg5LqI0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'29695\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/7401DA3D1C6D8E2ED9038BBB633EE6ED07933814.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'29695\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7401DA3D1C6D8E2ED9038BBB633EE6ED07933814&amp;dn=web+therapy+s04e02+720p+hdtv+x264+2hd+rartv&amp;tr=udp%3A%2F%2Ftracker-ccc.de%3A6969&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" rel="nofollow" target="_blank" name=\'magnet29695\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'29695\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7401DA3D1C6D8E2ED9038BBB633EE6ED07933814&amp;dn=web+therapy+s04e02+720p+hdtv+x264+2hd+rartv&amp;tr=udp%3A%2F%2Ftracker-ccc.de%3A6969&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'29695\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>566M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-10-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="29694" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/29694.html">
+																									网疗记 Web Therapy S04E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nt2v23n" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'29694\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/251C79A8F94960371019102F0F4E743E6571F96F.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'29694\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:251C79A8F94960371019102F0F4E743E6571F96F&amp;dn=web+therapy+s04e02+hdtv+x264+2hd+rartv&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" rel="nofollow" target="_blank" name=\'magnet29694\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'29694\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:251C79A8F94960371019102F0F4E743E6571F96F&amp;dn=web+therapy+s04e02+hdtv+x264+2hd+rartv&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'29694\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>151M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-10-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="29365" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/29365.html">
+																									网疗记 Web Therapy S04E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1CRgbO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'29365\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/84547AD8EBCC6CFA775C3E8ACDFDDECA61E1CBC9.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'29365\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:84547ad8ebcc6cfa775c3e8acdfddeca61e1cbc9&amp;dn=Web.Therapy.S04E01.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" target="_blank" name=\'magnet29365\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'29365\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:84547ad8ebcc6cfa775c3e8acdfddeca61e1cbc9&amp;dn=Web.Therapy.S04E01.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'29365\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>479M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-10-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="29364" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/29364.html">
+																									网疗记 Web Therapy S04E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGGE962" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'29364\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/5F911ED363418B6E6188FF918DC58E6A37BF2856.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'29364\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5f911ed363418b6e6188ff918dc58e6a37bf2856&amp;dn=Web.Therapy.S04E01.HDTV.x264-BATV%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&a" rel="nofollow" target="_blank" name=\'magnet29364\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'29364\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5f911ed363418b6e6188ff918dc58e6a37bf2856&amp;dn=Web.Therapy.S04E01.HDTV.x264-BATV%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&a" rel="nofollow" name=\'miurl\' filename="网疗记 Web Therapy S04E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'29364\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>137M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-10-23</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,185,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,185);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,185);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,185);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

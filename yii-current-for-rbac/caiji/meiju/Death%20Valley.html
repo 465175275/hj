@@ -1,0 +1,1246 @@
+'HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2017 04:40:20 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=db578a94e4ec9204de5bf3cfb31b0ba2e1510116020; expires=Thu, 08-Nov-18 04:40:20 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3ba5da86b2d4538a-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>死亡谷 Death Valley-死亡谷下载-死亡谷全集下载-Death Valley下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="死亡谷,Death Valley,死亡谷下载,死亡谷全集下载,死亡谷高清下载,死亡谷迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;《死亡谷》（DeathValley）是MTV播出的一部超自然恐怖新剧。该剧描述的是洛杉矶警察局于2009年组建的一支特警队－－不死生物特别行动组（UndeadTaskForce，简称UTF）。就在同一年，洛杉矶郊区的圣费尔南多山谷被不明来历的僵尸、吸血鬼、狼人及其他不死生物占领。尽管科学家们对圣费尔南多谷所发生的一切毫无头绪，但UTF必须动" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 198;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FDeath%2520Valley.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FDeath%2520Valley.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 198;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">死亡谷 Death Valley-死亡谷下载-死亡谷全集下载-Death Valley下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/c855167970252a37.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/c855167970252a37.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周二</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：惊悚类</span>						
+						<span>最后更新：2011-11-22 14:03</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/198.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">26</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>《死亡谷》（Death Valley）是MTV播出的一部超自然恐怖新剧。该剧描述的是洛杉矶警察局于2009年组建的一支特警队－－不死生物特别行动组（Undead Task Force，简称UTF）。就在同一年，洛杉矶郊区的圣费尔南多山谷被不明来历的僵尸、吸血鬼、狼人及其他不死生物占领。尽管科学家们对圣费尔南多谷所发生的一切毫无头绪，但UTF必须动用一切手段来控制并毁灭这些生物，以确保这场灾难不继续蔓延－－至少不能让这些怪物跑到圣费尔南多谷之外去。
+该剧采用伪纪录片的方式拍摄（肩扛摄像机+摇晃镜头），摄制组将「尾随」UTF成员深入圣费尔南多谷，记录他们对付每一种超自然生物的过程。
+这是一部较为恐怖的剧集，某些场景可以用「恶心」来形容，比《行尸走肉》（The Walking Dead）的「恶心程度」有过之而无不及。与此同时，该剧还充满了「黑色幽默」。该剧借鉴了很多科幻恐怖电影及灵异真人秀的元素，有许多镜头会让你感觉「似曾相识」。
+在首集里，一个吸血鬼在「卖淫敲诈案」中被杀，而一次普通的猎杀僵尸行动导致特警队的一名成员不幸丧生。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ??&nbsp;&nbsp; 转自天涯小筑</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="3341" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/3341.html">
+																									死亡谷 Death Valley S01E12 720p 本季终 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/269F8C97F5B7AC0D57E153AEE73E83C061D00273.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'3341\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:E2PYZF7VW6WA2V7BKOXOOPUDYBQ5AATT&dn=Death.Valley.S01E12.720p.HDTV.x264-ORENJI&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet3341\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'3341\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:E2PYZF7VW6WA2V7BKOXOOPUDYBQ5AATT&dn=Death.Valley.S01E12.720p.HDTV.x264-ORENJI&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E12 720p 本季终 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'3341\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>515M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-11-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="3340" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/3340.html">
+																									死亡谷 Death Valley S01E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/BDE74E68AFB20DA6DF1E56E2BE0B63514B3CE863.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'3340\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:XXTU42FPWIG2NXY6K3RL4C3DKFFTZ2DD&dn=Death.Valley.S01E12.Peace.in.the.Valley.HDTV.XviD-FQM&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet3340\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'3340\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:XXTU42FPWIG2NXY6K3RL4C3DKFFTZ2DD&dn=Death.Valley.S01E12.Peace.in.the.Valley.HDTV.XviD-FQM&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'3340\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>175M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-11-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="3107" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/3107.html">
+																									死亡谷 Death Valley S01E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/4E39DF328FCC5602C6E645C10B5083F36E5B2EE5.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'3107\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:JY456MUPZRLAFRXGIXAQWUED6NXFWLXF&dn=Death.Valley.S01E11.720p.HDTV.X264-DIMENSION&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet3107\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'3107\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:JY456MUPZRLAFRXGIXAQWUED6NXFWLXF&dn=Death.Valley.S01E11.720p.HDTV.X264-DIMENSION&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'3107\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>544M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-11-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="3106" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/3106.html">
+																									死亡谷 Death Valley S01E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/99E4E36123AC508B832E2F3C0E8EB4E4E2B3E7B9.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'3106\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:THSOGYJDVRIIXAZOF46A5DVU4TRLHZ5Z&dn=Death.Valley.S01E11.HDTV.XviD-SYS&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet3106\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'3106\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:THSOGYJDVRIIXAZOF46A5DVU4TRLHZ5Z&dn=Death.Valley.S01E11.HDTV.XviD-SYS&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'3106\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>174M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-11-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="2877" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/2877.html">
+																									死亡谷 Death Valley S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/95445BFCF2DAAFEA94F0E317B3ADB3BA4EC9A703.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'2877\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:SVCFX7HS3KX6VFHQ4ML3HLNTXJHMTJYD&dn=Death.Valley.S01E10.720p.HDTV.X264-DIMENSION&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet2877\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'2877\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:SVCFX7HS3KX6VFHQ4ML3HLNTXJHMTJYD&dn=Death.Valley.S01E10.720p.HDTV.X264-DIMENSION&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'2877\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>608M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-11-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="2876" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/2876.html">
+																									死亡谷 Death Valley S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/6B18AB2D8C195B37C85BB00413E61A74ECEAD25E.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'2876\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:NMMKWLMMDFNTPSC3WACBHZQ2OTWOVUS6&dn=Death.Valley.S01E10.HDTV.XviD-SYS&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet2876\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'2876\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:NMMKWLMMDFNTPSC3WACBHZQ2OTWOVUS6&dn=Death.Valley.S01E10.HDTV.XviD-SYS&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'2876\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>174M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-11-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="2647" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/2647.html">
+																									死亡谷 Death Valley S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/2F59766152DA83B1CF6FFB17C88E9BA70C97A68D.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'2647\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:F5MXMYKS3KB3DT3P7ML4RDU3U4GJPJUN&dn=Death.Valley.S01E09.720p.HDTV.x264-IMMERSE&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet2647\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'2647\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:F5MXMYKS3KB3DT3P7ML4RDU3U4GJPJUN&dn=Death.Valley.S01E09.720p.HDTV.x264-IMMERSE&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'2647\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>604M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-11-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="2646" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/2646.html">
+																									死亡谷 Death Valley S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/F54F4E06E30271F138F8423C564BDFBFFC3C607F.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'2646\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="http://zoink.it/torrent/F54F4E06E30271F138F8423C564BDFBFFC3C607F.torrent" rel="nofollow" target="_blank" name=\'magnet2646\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'2646\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="http://zoink.it/torrent/F54F4E06E30271F138F8423C564BDFBFFC3C607F.torrent" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'2646\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>175M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-11-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="2444" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/2444.html">
+																									死亡谷 Death Valley S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/6FE64AAC3ECEA3DB43CEEEAA503C3AB5641FB4BA.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'2444\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:N7TEVLB6Z2R5WQ6O52VFAPB2WVSB7NF2&dn=Death.Valley.S01E08.720p.HDTV.x264-IMMERSE&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet2444\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'2444\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:N7TEVLB6Z2R5WQ6O52VFAPB2WVSB7NF2&dn=Death.Valley.S01E08.720p.HDTV.x264-IMMERSE&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'2444\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>478M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-10-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="2443" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/2443.html">
+																									死亡谷 Death Valley S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/CBA3E8EEA0A2F2BDA936A07D4EB9CC5CF1FBA48E.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'2443\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ZOR6R3VAULZL3KJWUB6U5OOMLTY7XJEO&dn=Death.Valley.S01E08.HDTV.XviD-ASAP&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet2443\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'2443\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ZOR6R3VAULZL3KJWUB6U5OOMLTY7XJEO&dn=Death.Valley.S01E08.HDTV.XviD-ASAP&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'2443\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>174M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-10-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="2239" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/2239.html">
+																									死亡谷 Death Valley S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/B7D2A3756EA736C0DE0D325702E4BEC270CC0F3D.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'2239\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:W7JKG5LOU43MBXQNGJLQFZF6YJYMYDZ5&dn=Death.Valley.S01E07.720p.HDTV.x264-ORENJI&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet2239\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'2239\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:W7JKG5LOU43MBXQNGJLQFZF6YJYMYDZ5&dn=Death.Valley.S01E07.720p.HDTV.x264-ORENJI&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'2239\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>460M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-10-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="2238" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/2238.html">
+																									死亡谷 Death Valley S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/0D08AEF9C72AD385D2675BD8EFC4337892F5A5E6.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'2238\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:BUEK56OHFLJYLUTHLPMO7RBTPCJPLJPG&dn=Death.Valley.S01E07.HDTV.XviD-FQM&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet2238\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'2238\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:BUEK56OHFLJYLUTHLPMO7RBTPCJPLJPG&dn=Death.Valley.S01E07.HDTV.XviD-FQM&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'2238\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>175M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-10-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="1821" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/1821.html">
+																									死亡谷 Death Valley S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/743B6574B2E717E35920D41628B19D8A02E2D149.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'1821\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:743B6574B2E717E35920D41628B19D8A02E2D149&dn=Death.Valley.S01E06.720p.HDTV.x264-IMMERSE.mkv&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" target="_blank" name=\'magnet1821\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'1821\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:743B6574B2E717E35920D41628B19D8A02E2D149&dn=Death.Valley.S01E06.720p.HDTV.x264-IMMERSE.mkv&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'1821\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>609M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-10-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="1820" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/1820.html">
+																									死亡谷 Death Valley S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/52408868814CF5BDB15F9EE58A7F8B5D56066611.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'1820\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:52408868814CF5BDB15F9EE58A7F8B5D56066611&dn=Death.Valley.S01E06.HDTV.XviD-ASAP.avi&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" target="_blank" name=\'magnet1820\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'1820\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:52408868814CF5BDB15F9EE58A7F8B5D56066611&dn=Death.Valley.S01E06.HDTV.XviD-ASAP.avi&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'1820\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>174M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-10-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="1578" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/1578.html">
+																									死亡谷 Death Valley S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/CC90D0A756AEE31E1A6CBCC6982E160CE3AE6924.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'1578\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:CC90D0A756AEE31E1A6CBCC6982E160CE3AE6924&dn=%5b%20www.Speed.Cd%20%5d%20-%20Death.Valley.S01E05.720p.HDTV.x264-IMMERSE&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" target="_blank" name=\'magnet1578\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'1578\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:CC90D0A756AEE31E1A6CBCC6982E160CE3AE6924&dn=%5b%20www.Speed.Cd%20%5d%20-%20Death.Valley.S01E05.720p.HDTV.x264-IMMERSE&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'1578\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>608M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-09-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="1577" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/1577.html">
+																									死亡谷 Death Valley S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/1588D0958AE717B8EDD5419F582C8EDD617C31CF.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'1577\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1588D0958AE717B8EDD5419F582C8EDD617C31CF&dn=Death.Valley.S01E05.HDTV.XviD-ASAP.avi&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" target="_blank" name=\'magnet1577\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'1577\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1588D0958AE717B8EDD5419F582C8EDD617C31CF&dn=Death.Valley.S01E05.HDTV.XviD-ASAP.avi&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'1577\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>174M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-09-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="1321" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/1321.html">
+																									死亡谷 Death Valley S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="../uploadfile/20110920/20110920125253273.rar" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'1321\' alt=\'BT美剧片源下载\'>
+											</a>																																								
+																					<a style="display:none;" href="../uploadfile/20110920/20110920125253273.rar" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'1321\' alt=\'小米路由器远程下载\'></a>
+										</td>
+										<td></td>
+										<td>542M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-09-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="1320" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/1320.html">
+																									死亡谷 Death Valley S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrent.zoink.it/Death.Valley.S01E04.DSR.XviD-TASTETV.[eztv].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'1320\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:GV5UJ3QX22NGFC4NG5QSZ5LYPDEW75KE&dn=Death.Valley.S01E04.DSR.XviD-TASTETV&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet1320\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'1320\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:GV5UJ3QX22NGFC4NG5QSZ5LYPDEW75KE&dn=Death.Valley.S01E04.DSR.XviD-TASTETV&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'1320\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>182M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-09-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="1175" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/1175.html">
+																									死亡谷 Death Valley S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrent.zoink.it/Death.Valley.S01E03.720p.HDTV.X264-DIMENSION.[eztv].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'1175\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:SH6EHNVKQRI7DMT35MSD7JMWKNB2VFP2&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet1175\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'1175\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:SH6EHNVKQRI7DMT35MSD7JMWKNB2VFP2&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'1175\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>560M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-09-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="1174" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/1174.html">
+																									死亡谷 Death Valley S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrent.zoink.it/Death.Valley.S01E03.HDTV.XviD-SYS.[eztv].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'1174\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:DMRTKFKUTLRH7D5CFD4BQC6FXCY5YOI5&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet1174\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'1174\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:DMRTKFKUTLRH7D5CFD4BQC6FXCY5YOI5&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'1174\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>176M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2011-09-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="1020" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/1020.html">
+																									死亡谷 Death Valley S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="../uploadfile/20110913/20110913004802241.rar" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'1020\' alt=\'BT美剧片源下载\'>
+											</a>																																								
+																					<a style="display:none;" href="../uploadfile/20110913/20110913004802241.rar" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'1020\' alt=\'小米路由器远程下载\'></a>
+										</td>
+										<td></td>
+										<td>737M</td>
+										<td>720p</td>
+										<td>
+																																							<a href="http://shooter.cn/xml/sub/182/182467.xml" target="_blank" rel="nofollow">双语</a>
+																								</td>
+										<td>2011-09-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="1019" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/1019.html">
+																									死亡谷 Death Valley S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrent.zoink.it/Death.Valley.S01E02.HDTV.XviD-SYS.[eztv].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'1019\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:WRZVMR3CCPRHERNNC6ODJBIDKKE3JP6L&dn=Death.Valley.S01E02.HDTV.XviD-SYS&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet1019\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'1019\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:WRZVMR3CCPRHERNNC6ODJBIDKKE3JP6L&dn=Death.Valley.S01E02.HDTV.XviD-SYS&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'1019\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>175M</td>
+										<td></td>
+										<td>
+																																							<a href="http://shooter.cn/xml/sub/182/182458.xml" target="_blank" rel="nofollow">双语</a>
+																								</td>
+										<td>2011-09-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="874" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/874.html">
+																									死亡谷 Death Valley S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="../uploadfile/20110830/20110830111705519.rar" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'874\' alt=\'BT美剧片源下载\'>
+											</a>																																								
+																					<a style="display:none;" href="../uploadfile/20110830/20110830111705519.rar" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'874\' alt=\'小米路由器远程下载\'></a>
+										</td>
+										<td></td>
+										<td>657M</td>
+										<td>720p</td>
+										<td>
+																																							<a href="http://shooter.cn/xml/sub/182/182038.xml" target="_blank" rel="nofollow">双语</a>
+																								</td>
+										<td>2011-08-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="875" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/875.html">
+																									死亡谷 Death Valley S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrent.zoink.it/Death.Valley.S01E01.HDTV.XviD-ASAP.[eztv].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'875\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:CXZ54E22RG72EX2C3MC2X4YFNAJSVX3H&dn=Death.Valley.S01E01.HDTV.XviD-ASAP&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" target="_blank" name=\'magnet875\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'875\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:CXZ54E22RG72EX2C3MC2X4YFNAJSVX3H&dn=Death.Valley.S01E01.HDTV.XviD-ASAP&tr=http://tracker.openbittorrent.com/announce" rel="nofollow" name=\'miurl\' filename="死亡谷 Death Valley S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'875\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>174M</td>
+										<td></td>
+										<td>
+																																							<a href="http://shooter.cn/xml/sub/181/181846.xml" target="_blank" rel="nofollow">双语</a>
+																								</td>
+										<td>2011-08-30</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=370799&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(370799,198,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,198);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,198);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,198);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

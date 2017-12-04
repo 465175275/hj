@@ -1,0 +1,1538 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:11:55 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d84a3850fa9c654786656593d46ff59df1509534715; expires=Thu, 01-Nov-18 11:11:55 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e6a8394db2294-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>罪过 Guilt-罪过下载-罪过全集下载-Guilt下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="罪过,Guilt,罪过下载,罪过全集下载,罪过高清下载,罪过迅雷下载"/>
+	  <meta name="description" content="" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1059;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FGuilt.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FGuilt.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1059;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">罪过 Guilt-罪过下载-罪过全集下载-Guilt下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i2.muimg.com/588755/6c34cfd40d90079d.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i2.muimg.com/588755/6c34cfd40d90079d.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周二</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：悬疑类</span>						
+						<span>最后更新：2016-08-25 21:50</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1059.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">60</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="63508" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/63508.html">
+																									罪过 Guilt S01E10 720p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hs39g2K" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'63508\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E10.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|642234499|93DFB65754D22CBC5E07B4EAFCB97F22|h=EL3CSWNRB6TFSZXE2AISAVXRYR6WEQZR|/" rel="nofollow" target="_blank" name=\'ed2k63508\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'63508\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E10.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|642234499|93DFB65754D22CBC5E07B4EAFCB97F22|h=EL3CSWNRB6TFSZXE2AISAVXRYR6WEQZR|/" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E10 720p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'63508\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>612.5M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-08-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="63379" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/63379.html">
+																									有罪 Guilt S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pKMbuMv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'63379\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=cwkp9nm&amp;f=Guilt.S01E10.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'63379\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3b2e21119511fc0605c6fe157c86c4b59097a5f4&amp;dn=Guilt.S01E10.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet63379\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'63379\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3b2e21119511fc0605c6fe157c86c4b59097a5f4&amp;dn=Guilt.S01E10.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'63379\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>923M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="63378" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/63378.html">
+																									有罪 Guilt S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dF6wV9B" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'63378\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=zt5wcbx&amp;f=Guilt.S01E10.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'63378\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:25a8b638631dc85fe7b390cf199b989be1a3980a&amp;dn=Guilt.S01E10.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet63378\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'63378\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:25a8b638631dc85fe7b390cf199b989be1a3980a&amp;dn=Guilt.S01E10.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'63378\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>281M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="63269" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/63269.html">
+																									罪过 Guilt S01E09 720p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qY6apkC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'63269\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E09.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|679392395|80EEC63C1FBEA9FE22AFB11434437CA8|h=MC4M27ZIU7W4YPFLSORSBWPHCLMAMXQD|/" rel="nofollow" target="_blank" name=\'ed2k63269\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'63269\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E09.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|679392395|80EEC63C1FBEA9FE22AFB11434437CA8|h=MC4M27ZIU7W4YPFLSORSBWPHCLMAMXQD|/" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E09 720p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'63269\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>647.9M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-08-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="63167" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/63167.html">
+																									有罪 Guilt S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nv6Mkbv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'63167\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=yh6lx8d&amp;f=Guilt.S01E09.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'63167\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9f78c382d0ce144c57831a6f3d4b2edf0b5ba508&amp;dn=Guilt.S01E09.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet63167\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'63167\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9f78c382d0ce144c57831a6f3d4b2edf0b5ba508&amp;dn=Guilt.S01E09.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'63167\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.04G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="63166" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/63166.html">
+																									有罪 Guilt S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kUSUGr9" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'63166\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=4epayqo&amp;f=Guilt.S01E09.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'63166\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1e20bcd97aa89634003e0b8569c7df2427d0c4eb&amp;dn=Guilt.S01E09.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet63166\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'63166\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1e20bcd97aa89634003e0b8569c7df2427d0c4eb&amp;dn=Guilt.S01E09.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'63166\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>305M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="63074" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/63074.html">
+																									罪过 Guilt S01E08 720p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c16ijN6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'63074\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E08.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|573927441|0AE29C26329575A2C31DB03B26017DC8|h=6HQWDV242UR6WGMVPSKIO2DM3O5JXD3L|/" rel="nofollow" target="_blank" name=\'ed2k63074\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'63074\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E08.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|573927441|0AE29C26329575A2C31DB03B26017DC8|h=6HQWDV242UR6WGMVPSKIO2DM3O5JXD3L|/" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E08 720p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'63074\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>547.3M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-08-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="62931" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62931.html">
+																									有罪 Guilt S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIqCTYu" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62931\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=nt7uqj5&amp;f=Guilt.S01E08.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62931\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:50fae538c555c99b2f7c8ef832736f24f92fb6bf&amp;dn=Guilt.S01E08.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet62931\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62931\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:50fae538c555c99b2f7c8ef832736f24f92fb6bf&amp;dn=Guilt.S01E08.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62931\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.01G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="62930" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62930.html">
+																									有罪 Guilt S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIhj2jO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62930\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=hz7sl95&amp;f=Guilt.S01E08.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62930\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:424516bd951f31fbabf71d4b7a3269ab1b980d9a&amp;dn=Guilt.S01E08.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet62930\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62930\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:424516bd951f31fbabf71d4b7a3269ab1b980d9a&amp;dn=Guilt.S01E08.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62930\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>263M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="62835" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62835.html">
+																									罪过 Guilt S01E07 720p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gfseGKj" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62835\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E07.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|608592141|243E2D99A6376B8B9948601C9A0135EF|h=5FGSYWVS6QTDFIBW4DKRFTAMTXGXHVOZ|/" rel="nofollow" target="_blank" name=\'ed2k62835\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'62835\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E07.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|608592141|243E2D99A6376B8B9948601C9A0135EF|h=5FGSYWVS6QTDFIBW4DKRFTAMTXGXHVOZ|/" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E07 720p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62835\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>580.4M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-08-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="62581" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62581.html">
+																									有罪 Guilt S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mi95pNU" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62581\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=tc1dx5y&amp;f=Guilt.S01E07.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62581\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:384ff7f66b0506870e5a642a97d0f5677987821e&amp;dn=Guilt.S01E07.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet62581\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62581\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:384ff7f66b0506870e5a642a97d0f5677987821e&amp;dn=Guilt.S01E07.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62581\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>986M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="62580" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62580.html">
+																									有罪 Guilt S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jH6Brds" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62580\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=dmkce83&amp;f=Guilt.S01E07.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62580\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c5e00956482aa60d6438de4a6961a484c56b6efd&amp;dn=Guilt.S01E07.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet62580\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62580\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c5e00956482aa60d6438de4a6961a484c56b6efd&amp;dn=Guilt.S01E07.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62580\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>273M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="62398" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62398.html">
+																									罪过 Guilt S01E06 720p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dFmIDxf" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62398\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E06.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|579579389|C8D13F527394C9F5C5BF0EB497715EAA|h=UGHUEQDG36LNV5TNP5OQUB7FGKBTHGR6|/" rel="nofollow" target="_blank" name=\'ed2k62398\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'62398\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E06.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|579579389|C8D13F527394C9F5C5BF0EB497715EAA|h=UGHUEQDG36LNV5TNP5OQUB7FGKBTHGR6|/" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E06 720p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62398\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>552.7M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="62211" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62211.html">
+																									有罪 Guilt S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eS8viWq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62211\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=xrm1p24&amp;f=Guilt.S01E06.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62211\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f63a0a0b10bec341760cc30fa892c1c2640c2365&amp;dn=Guilt.S01E06.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet62211\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62211\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f63a0a0b10bec341760cc30fa892c1c2640c2365&amp;dn=Guilt.S01E06.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62211\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.04G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="62613" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62613.html">
+																									罪过 Guilt S01E06 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nvjeNrz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62613\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=lxzsmok&amp;f=Guilt.S01E06.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62613\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a3f50821610a43c37647a0272c929503aa20b321&amp;dn=Guilt.S01E06.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet62613\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62613\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a3f50821610a43c37647a0272c929503aa20b321&amp;dn=Guilt.S01E06.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E06 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62613\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.58G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="62210" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62210.html">
+																									有罪 Guilt S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hrGixl6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62210\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=v1wytuj&amp;f=Guilt.S01E06.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62210\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c5cf96322ab67f1e01a13958c850b4ab8c1a0c45&amp;dn=Guilt.S01E06.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet62210\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62210\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c5cf96322ab67f1e01a13958c850b4ab8c1a0c45&amp;dn=Guilt.S01E06.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62210\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>269M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="62003" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62003.html">
+																									罪过 Guilt S01E05 720p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E05.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|623630387|57A52F7377B6A0EC21C9A94C98C4A8B2|h=CCDIZ7JHJEAY3ACNTOVUSCUFEJJKRODO|/" rel="nofollow" target="_blank" name=\'ed2k62003\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'62003\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E05.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|623630387|57A52F7377B6A0EC21C9A94C98C4A8B2|h=CCDIZ7JHJEAY3ACNTOVUSCUFEJJKRODO|/" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E05 720p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62003\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>594.7M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="61900" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61900.html">
+																									有罪 Guilt S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1slov6qD" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61900\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=627f4xa&amp;f=Guilt.S01E05.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61900\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0ed8e61b98d434434222e626cfc82bdec49518f1&amp;dn=Guilt.S01E05.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet61900\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61900\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0ed8e61b98d434434222e626cfc82bdec49518f1&amp;dn=Guilt.S01E05.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61900\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.12G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="62612" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62612.html">
+																									罪过 Guilt S01E05 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qY5ZsuC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62612\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=vydau52&amp;f=Guilt.S01E05.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62612\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a1d8cbaa7b991af4138f865e411141841b419ea4&amp;dn=Guilt.S01E05.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet62612\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62612\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a1d8cbaa7b991af4138f865e411141841b419ea4&amp;dn=Guilt.S01E05.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E05 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62612\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.62G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="61899" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61899.html">
+																									有罪 Guilt S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jIxxohg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61899\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=5jvro7q&amp;f=Guilt.S01E05.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61899\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9773c22e620321a3ebecdd703f54e115d562e54f&amp;dn=Guilt.S01E05.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet61899\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61899\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9773c22e620321a3ebecdd703f54e115d562e54f&amp;dn=Guilt.S01E05.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61899\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>292M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="61735" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61735.html">
+																									罪过 Guilt S01E04 720p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qYf9Sb6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61735\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E04.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|715580722|8FB9A48F689111572EBCBD8B8D43C312|h=VJBIRZRVR532BMVERQSUWESK4BX3FPLK|/" rel="nofollow" target="_blank" name=\'ed2k61735\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'61735\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E04.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|715580722|8FB9A48F689111572EBCBD8B8D43C312|h=VJBIRZRVR532BMVERQSUWESK4BX3FPLK|/" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E04 720p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61735\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>682.4M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="61589" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61589.html">
+																									有罪 Guilt S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1miPdjQC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61589\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=hdkz4a2&amp;f=Guilt.S01E04.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61589\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:49868c38db338a9d647f87407dbe402597d0c81b&amp;dn=Guilt.S01E04.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet61589\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61589\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:49868c38db338a9d647f87407dbe402597d0c81b&amp;dn=Guilt.S01E04.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61589\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.12G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="62611" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62611.html">
+																									罪过 Guilt S01E04 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c9PCFO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62611\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=qta1dsk&amp;f=Guilt.S01E04.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62611\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:421245ada24589159758611093a0c4466055ef39&amp;dn=Guilt.S01E04.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet62611\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62611\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:421245ada24589159758611093a0c4466055ef39&amp;dn=Guilt.S01E04.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E04 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62611\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.64G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="61588" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61588.html">
+																									有罪 Guilt S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1cJrR6e" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61588\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ery4iml&amp;f=Guilt.S01E04.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61588\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f263fdfc42cfbd766137ade73cf69bba4dcbb3e9&amp;dn=Guilt.S01E04.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet61588\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61588\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f263fdfc42cfbd766137ade73cf69bba4dcbb3e9&amp;dn=Guilt.S01E04.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61588\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>327M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="61011" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61011.html">
+																									罪过 Guilt S01E03 720p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1cid1t8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61011\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E03.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|634706072|4E69F957F5293552231215A02EEA4CF4|h=GX72BVYVRJJGR67UR5MRCKXGLLSMWCTS|/" rel="nofollow" target="_blank" name=\'ed2k61011\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'61011\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%BD%AA%E8%BF%87.Guilt.S01E03.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|634706072|4E69F957F5293552231215A02EEA4CF4|h=GX72BVYVRJJGR67UR5MRCKXGLLSMWCTS|/" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E03 720p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61011\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>605.3M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-06-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60872" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60872.html">
+																									有罪 Guilt S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eS8Z9aq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'60872\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=4fugs8p&amp;f=Guilt.S01E03.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60872\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4c7cd62d95fb694b816517f63a79c7988d74794e&amp;dn=Guilt.S01E03.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet60872\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60872\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4c7cd62d95fb694b816517f63a79c7988d74794e&amp;dn=Guilt.S01E03.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60872\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.03G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="62610" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62610.html">
+																									罪过 Guilt S01E03 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mhQjZo0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62610\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=8low4qa&amp;f=Guilt.S01E03.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62610\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:fcbd6a4d6ae49759f44ad29e56e282d2e781dfc6&amp;dn=Guilt.S01E03.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet62610\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62610\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fcbd6a4d6ae49759f44ad29e56e282d2e781dfc6&amp;dn=Guilt.S01E03.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E03 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62610\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.64G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60871" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60871.html">
+																									有罪 Guilt S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pKA2Q2f" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'60871\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=kieh4b3&amp;f=Guilt.S01E03.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60871\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:07d01ab8ee90cfc135441c7dd3edda7eacc872ef&amp;dn=Guilt.S01E03.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet60871\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60871\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:07d01ab8ee90cfc135441c7dd3edda7eacc872ef&amp;dn=Guilt.S01E03.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60871\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>320M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60666" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60666.html">
+																									罪过 Guilt S01E02 720p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mi8hiFA" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'60666\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%9C%89%E7%BD%AA.Guilt.S01E02.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|662808476|B6847EC271548BDA2D58D6C84F15E85D|h=TXBVGZCZG6Y52GY2BRFEJA2SXVDYDZJS|/" rel="nofollow" target="_blank" name=\'ed2k60666\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'60666\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%9C%89%E7%BD%AA.Guilt.S01E02.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|662808476|B6847EC271548BDA2D58D6C84F15E85D|h=TXBVGZCZG6Y52GY2BRFEJA2SXVDYDZJS|/" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E02 720p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60666\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>632.1M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-06-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60496" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60496.html">
+																									有罪 Guilt S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bp4vBkF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'60496\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=qjpv4ki&amp;f=Guilt.S01E02.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60496\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d7429fe352d23c647c9ccb688dd1e3cbf7584d92&amp;dn=Guilt.S01E02.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet60496\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60496\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d7429fe352d23c647c9ccb688dd1e3cbf7584d92&amp;dn=Guilt.S01E02.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60496\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.04G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="62609" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62609.html">
+																									罪过 Guilt S01E02 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kUGIDMJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62609\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=x7zm5b8&amp;f=Guilt.S01E02.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62609\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f1c62176e9d18314cc71f2c98eccd176faa244d7&amp;dn=Guilt.S01E02.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet62609\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62609\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f1c62176e9d18314cc71f2c98eccd176faa244d7&amp;dn=Guilt.S01E02.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E02 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62609\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.60G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60599" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60599.html">
+																									有罪 Guilt S01E02 720P UnIon字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8xTCSy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'60599\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e37b3572e9718467976010b0a0487c692188be16&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" name=\'magnet60599\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60599\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Guilt.S01E02.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.720p.TVrip.x264-UnIon%E5%AD%97%E5%B9%95%E7%BB%84.mkv|822027690|c96a4e7d1fa110ba995bd32f72df05d8|h=ao23lgxtpqxfr3gnckfx34zidzg7v2zk|/" rel="nofollow" target="_blank" name=\'ed2k60599\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'60599\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:e37b3572e9718467976010b0a0487c692188be16&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E02 720P UnIon字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60599\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>784M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-06-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60495" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60495.html">
+																									有罪 Guilt S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1geAcQHl" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'60495\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=l3piywe&amp;f=Guilt.S01E02.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60495\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b79d1743dae9a14c9ade3f2610474d500e389d8a&amp;dn=Guilt.S01E02.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet60495\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60495\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b79d1743dae9a14c9ade3f2610474d500e389d8a&amp;dn=Guilt.S01E02.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60495\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>306M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60295" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60295.html">
+																									罪 Guilt S01E01 720p UnIon字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i5noi13" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'60295\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="magnet:?xt=urn:btih:1eb44ae2bfce6c4544b3594e71dbb8b1c03c985d&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60295\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1eb44ae2bfce6c4544b3594e71dbb8b1c03c985d&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" name=\'magnet60295\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60295\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Guilt.S01E01.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.720p.TVrip.x264-UnIon%E5%AD%97%E5%B9%95%E7%BB%84.mkv|900285285|15d519fb4319cbc5fda5ca06812611e2|h=fxv3ojxqu45isftn3dotwczuosyyh4o5|/" rel="nofollow" target="_blank" name=\'ed2k60295\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'60295\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:1eb44ae2bfce6c4544b3594e71dbb8b1c03c985d&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" name=\'miurl\' filename="罪 Guilt S01E01 720p UnIon字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60295\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>858.5M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-06-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60269" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60269.html">
+																									罪过 Guilt S01E01 720p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nv8KEXN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'60269\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E6%9C%89%E7%BD%AA.Guilt.S01E01.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|649360331|607D2E3555C899D4081E551747E180F4|h=3HKOY6F7745TGUALK6XXDCK57CG4NU4N|/" rel="nofollow" target="_blank" name=\'ed2k60269\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'60269\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E6%9C%89%E7%BD%AA.Guilt.S01E01.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|649360331|607D2E3555C899D4081E551747E180F4|h=3HKOY6F7745TGUALK6XXDCK57CG4NU4N|/" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E01 720p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60269\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>619.3M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-06-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60200" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60200.html">
+																									有罪 Guilt S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSFK1jG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'60200\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=j2o5x6l&amp;f=Guilt.S01E01.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60200\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:22e641f203b8ea86e8f5f03db25e1ad8cd6e8f65&amp;dn=Guilt.S01E01.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet60200\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60200\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:22e641f203b8ea86e8f5f03db25e1ad8cd6e8f65&amp;dn=Guilt.S01E01.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60200\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.14G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="62608" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62608.html">
+																									罪过 Guilt S01E01 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pLs4jXL" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62608\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=52pn18d&amp;f=Guilt.S01E01.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62608\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2168537ed7402430daedb24744bfe423f53a5d71&amp;dn=Guilt.S01E01.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet62608\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62608\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2168537ed7402430daedb24744bfe423f53a5d71&amp;dn=Guilt.S01E01.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="罪过 Guilt S01E01 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62608\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.65G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60199" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60199.html">
+																									有罪 Guilt S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1cFmDzg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'60199\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ix65oy9&amp;f=Guilt.S01E01.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60199\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c49256f8584685533673917fd86343f77d7b6361&amp;dn=Guilt.S01E01.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet60199\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60199\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c49256f8584685533673917fd86343f77d7b6361&amp;dn=Guilt.S01E01.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="有罪 Guilt S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60199\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>321M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-14</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=552891&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(552891,1059,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1059);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1059);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1059);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

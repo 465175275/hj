@@ -1,0 +1,1592 @@
+'HTTP/1.1 200 OK
+Date: Tue, 07 Nov 2017 10:49:33 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d504cfa797abd441c59d05d761fb47aef1510051773; expires=Wed, 07-Nov-18 10:49:33 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b9fba0034a96bc8-SJC
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>先见之明 The OA-先见之明下载-先见之明全集下载-The OA下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="先见之明,The OA,先见之明下载,先见之明全集下载,先见之明高清下载,先见之明迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;&lt;spanstyle=&quot;color:rgb(17,17,17);font-family:Helvetica,Arial,sans-serif;font-size:12px;background-color:rgb(255,255,255);&quot;&gt;一个女子神秘失踪7年，回来之后，却带回了不属于自身的记忆，可能是超" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1234;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FThe%2520OA.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FThe%2520OA.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1234;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">先见之明 The OA-先见之明下载-先见之明全集下载-The OA下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i2.muimg.com/588755/4639ce5486693cb0.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i2.muimg.com/588755/4639ce5486693cb0.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周六</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：奇幻类</span>						
+						<span>最后更新：2017-01-15 22:14</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1234.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">173</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p><span style="color: rgb(17, 17, 17); font-family: Helvetica, Arial, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">一个女子神秘失踪7年，回来之后，却带回了不属于自身的记忆，可能是超自然现象。她表示自己并非失踪，而是一直都在。</span></p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="72316" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/72316.html">
+																									先见之明 The OA  S01E08 720P 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1geRPeMn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'72316\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9e9a21e895a4fd398f236dfeb75de8a977fabb1d&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet72316\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'72316\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%85%88%E8%A7%81%E4%B9%8B%E6%98%8E.The.OA.S01E08.720p.WEBRip.X264-%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|561259259|0aad0058617308a3b41ec7502e5d66db|h=wlldwq7lsakjx4jz24nkrsc35xgsaiis|/" rel="nofollow" target="_blank" name=\'ed2k72316\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'72316\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:9e9a21e895a4fd398f236dfeb75de8a977fabb1d&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="先见之明 The OA  S01E08 720P 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'72316\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>535M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-01-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="71147" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71147.html">
+																									先见之明 The OA S01E08  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bpoW679" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71147\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>671M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71059" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71059.html">
+																									先见之明 The OA S01E08 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i44IX2t" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71059\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:B60311D46793CCE6AB228724E36C9E21965EDDA5" rel="nofollow" target="_blank" name=\'magnet71059\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71059\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.OA.S01E08.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mkv|808981776|149D7E1E54BF763BAC3FA106239AFFAA|h=32P3KKOPNTAUFZJP4DOBWSGPNTDDEPYQ|/" rel="nofollow" target="_blank" name=\'ed2k71059\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71059\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:B60311D46793CCE6AB228724E36C9E21965EDDA5" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E08 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71059\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>771M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70838" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70838.html">
+																									先见之明 The OA S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfFS1wB" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70838\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=iprslyk&amp;f=The.OA.S01E08.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70838\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3d6a0e029345e8b5b54e66adcaeb6a5275ff390a&amp;dn=The.OA.S01E08.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70838\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70838\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3d6a0e029345e8b5b54e66adcaeb6a5275ff390a&amp;dn=The.OA.S01E08.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70838\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.46G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70837" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70837.html">
+																									先见之明 The OA S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1boHMqdT" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70837\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=sxpb5yc&amp;f=The.OA.S01E08.WEBRip.X264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70837\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b1b71f828112ea6948319dc5227bb760b189e6be&amp;dn=The.OA.S01E08.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70837\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70837\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b1b71f828112ea6948319dc5227bb760b189e6be&amp;dn=The.OA.S01E08.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70837\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>437M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="72068" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/72068.html">
+																									先见之明 The OA  S01E07 720P 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1miBFYmk" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'72068\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e89f0f33fd25ee98acdcef4ed27a7c85cc12ba5e&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet72068\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'72068\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%85%88%E8%A7%81%E4%B9%8B%E6%98%8E.The.OA.S01E07.720p.WEBRip.X264-%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|456214669|307713deab5f9e1ac089235af4cc71bd|h=gq4ae2rgnxqrpyiggsmwyfyq5n6n26vf|/" rel="nofollow" target="_blank" name=\'ed2k72068\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'72068\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:e89f0f33fd25ee98acdcef4ed27a7c85cc12ba5e&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="先见之明 The OA  S01E07 720P 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'72068\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>435M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-01-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71140" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71140.html">
+																									先见之明 The OA S01E07  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mig6IDy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71140\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>560M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70995" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70995.html">
+																									先见之明 The OA S01E07 720P FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSHq51K" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70995\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:39CDC01F8D9C117F14EC4540C7CBD6A2D2B4A284" rel="nofollow" target="_blank" name=\'magnet70995\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70995\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.OA.S01E07.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|669133144|7158EC19976DA570A4CAA42F608E6B8C|h=6MG3EB6SINIOJD6OMEJBEJXECB2M7TLJ|/" rel="nofollow" target="_blank" name=\'ed2k70995\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'70995\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:39CDC01F8D9C117F14EC4540C7CBD6A2D2B4A284" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E07 720P FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70995\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>638M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70836" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70836.html">
+																									先见之明 The OA S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bDK8bG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70836\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=efl5oa6&amp;f=The.OA.S01E07.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70836\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:19e2c488b676a624d3ec4be09962f2857d1c5c25&amp;dn=The.OA.S01E07.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70836\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70836\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:19e2c488b676a624d3ec4be09962f2857d1c5c25&amp;dn=The.OA.S01E07.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70836\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70835" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70835.html">
+																									先见之明 The OA S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVfS2Zd" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70835\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=wxj3lmo&amp;f=The.OA.S01E07.WEB.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70835\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:54fb0a654b77c1054eb85d38dd565fbb2b120778&amp;dn=The.OA.S01E07.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70835\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70835\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:54fb0a654b77c1054eb85d38dd565fbb2b120778&amp;dn=The.OA.S01E07.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70835\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>188M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71667" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71667.html">
+																									先见之明 The OA  S01E06 720P  深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1byS6Jk" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71667\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:02beac6983fdc5a94cda5e7bec54b967e03e6f36&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet71667\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71667\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%85%88%E8%A7%81%E4%B9%8B%E6%98%8E.The.OA.S01E06.720p.WEBRip.X264-%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|336205857|6f16d89235e126d4761d98b0f9bc2c17|h=a2nbqftlrmx35uwu5nuroewzjud3zps6|/" rel="nofollow" target="_blank" name=\'ed2k71667\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71667\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:02beac6983fdc5a94cda5e7bec54b967e03e6f36&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="先见之明 The OA  S01E06 720P  深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71667\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>320M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-01-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="71036" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71036.html">
+																									先见之明 The OA S01E06  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hr72T9a" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71036\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>416M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70984" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70984.html">
+																									先见之明 The OA S01E06 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i4GUfRJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70984\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:BD4BD7174EC2D634FF7331E860E005AAD2251D23&amp;dn=The.OA.S01E06.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet70984\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70984\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.OA.S01E06.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|500332496|C80AB18BB5BCB25CFFD2238E200C15C1|h=DYNLGFNKNCLAVYFZKBTEHWGTGRU5FUV2|/" rel="nofollow" target="_blank" name=\'ed2k70984\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'70984\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:BD4BD7174EC2D634FF7331E860E005AAD2251D23&amp;dn=The.OA.S01E06.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E06 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70984\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>477M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70834" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70834.html">
+																									先见之明 The OA S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i5QDJ61" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70834\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=qxp1rzv&amp;f=The.OA.S01E06.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70834\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f5d5f2c0c43e6b11bf248e6629a0c0b87a3f165f&amp;dn=The.OA.S01E06.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70834\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70834\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f5d5f2c0c43e6b11bf248e6629a0c0b87a3f165f&amp;dn=The.OA.S01E06.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70834\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.56G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70833" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70833.html">
+																									先见之明 The OA S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eSPxSDO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70833\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=fkprn6g&amp;f=The.OA.S01E06.WEB.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70833\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9123e299dc7db7b7d02689c325f03380aeced0ac&amp;dn=The.OA.S01E06.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70833\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70833\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9123e299dc7db7b7d02689c325f03380aeced0ac&amp;dn=The.OA.S01E06.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70833\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>147M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="71435" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71435.html">
+																									先见之明 The OA  S01E05 720P  深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hsbVLMc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71435\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9f1e1d87eb0a4790879a164f0bbe7d19db581e4d&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet71435\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71435\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%85%88%E8%A7%81%E4%B9%8B%E6%98%8E.The.OA.S01E05.720p.WEBRip.X264-%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|744859447|c6bf99ed344b7b97886305c4f14a954f|h=2bcidprib73foieyntxothl5gojmnedr|/" rel="nofollow" target="_blank" name=\'ed2k71435\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71435\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:9f1e1d87eb0a4790879a164f0bbe7d19db581e4d&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="先见之明 The OA  S01E05 720P  深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71435\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>710M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-01-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71035" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71035.html">
+																									先见之明 The OA S01E05  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pLLHYd1" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71035\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>864M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70943" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70943.html">
+																									先见之明 The OA S01E05 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jICyDhW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70943\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ADEE8C5F65343ED19861CBD9460A4E17482F8872&amp;dn=The.OA.S01E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet70943\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70943\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://%7Cfile%7CThe.OA.S01E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4%7C988089428%7CB9401EDF5939BC8E7C3CDBF5B06964FB%7Ch=UICMK4EGP5FLSNZHKH63OKYZQMHH6RQM%7C/" rel="nofollow" target="_blank" name=\'ed2k70943\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'70943\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:ADEE8C5F65343ED19861CBD9460A4E17482F8872&amp;dn=The.OA.S01E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E05 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70943\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>942M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70832" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70832.html">
+																									先见之明 The OA S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bHOtvK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70832\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=3nsvyx4&amp;f=The.OA.S01E05.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70832\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a6a0a078b6f31818997dee6c3688f3ea1f615bb0&amp;dn=The.OA.S01E05.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70832\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70832\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a6a0a078b6f31818997dee6c3688f3ea1f615bb0&amp;dn=The.OA.S01E05.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70832\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.73G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70831" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70831.html">
+																									先见之明 The OA S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eSj02H0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70831\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=1k8c54e&amp;f=The.OA.S01E05.WEB.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70831\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:40f1e734ca71246d2fa7ad84a68a990826909ba5&amp;dn=The.OA.S01E05.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70831\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70831\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:40f1e734ca71246d2fa7ad84a68a990826909ba5&amp;dn=The.OA.S01E05.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70831\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>284M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71391" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71391.html">
+																									先见之明 The OA  S01E04 720P  深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8S6qCy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71391\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:31a86da5e3654bbbf0d71f9ba227e323f0478b56&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet71391\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71391\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%85%88%E8%A7%81%E4%B9%8B%E6%98%8E.The.OA.S01E04.PROPER.720p.WEBRip.X264-%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|841495892|6f6500aabd03c7b7d02b70a8ed00fe00|h=okwusockkxj7xzg74hxaah7idn3b3yb4|/" rel="nofollow" target="_blank" name=\'ed2k71391\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71391\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:31a86da5e3654bbbf0d71f9ba227e323f0478b56&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="先见之明 The OA  S01E04 720P  深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71391\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>802M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-01-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70986" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70986.html">
+																									先见之明 The OA S01E04  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nuL5KiH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70986\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>818M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70940" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70940.html">
+																									先见之明 The OA S01E04 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pLq9Eo7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70940\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:D91150CEBCB3843FEB16B72947ADC35F3264BE79" rel="nofollow" target="_blank" name=\'magnet70940\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70940\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.OA.S01E04.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|1033395056|C7B73FA22A37C215E91888285C9E7863|h=SFEQKFTXOSSPYDIADNUZSTL7TBWXYIVP|/" rel="nofollow" target="_blank" name=\'ed2k70940\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'70940\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:D91150CEBCB3843FEB16B72947ADC35F3264BE79" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E04 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70940\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>985M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70830" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70830.html">
+																									先见之明 The OA S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mhXJl7y" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70830\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=t63x85m&amp;f=The.OA.S01E04.PROPER.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70830\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2d968474496b86f801da79d6947de6e7570cc9d4&amp;dn=The.OA.S01E04.PROPER.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet70830\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70830\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2d968474496b86f801da79d6947de6e7570cc9d4&amp;dn=The.OA.S01E04.PROPER.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70830\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.76G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70829" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70829.html">
+																									先见之明 The OA S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bPVHuu" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70829\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=e6sxbkf&amp;f=The.OA.S01E04.WEB.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70829\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:cd1a1760cdf8443a80cfee2661b147d37d98d78f&amp;dn=The.OA.S01E04.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70829\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70829\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cd1a1760cdf8443a80cfee2661b147d37d98d78f&amp;dn=The.OA.S01E04.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70829\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>601M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="71233" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71233.html">
+																									先见之明 The OA S01E03 720P  深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1boPUuN9" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71233\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e29a971105e7ee116eb1e9166c2aaa1807fa4379&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet71233\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71233\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%85%88%E8%A7%81%E4%B9%8B%E6%98%8E.The.OA.S01E03.720p.webrip.x264-%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|719983458|32dd85fc5032175067335f2a5e99f1b9|h=atcribgkbx6awqadywo6264hz2rkt7rg|/" rel="nofollow" target="_blank" name=\'ed2k71233\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71233\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:e29a971105e7ee116eb1e9166c2aaa1807fa4379&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E03 720P  深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71233\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>686M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70944" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70944.html">
+																									先见之明 The OA S01E03  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mhQX1B6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70944\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>869M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70939" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70939.html">
+																									先见之明 The OA S01E03 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gf9gRGf" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70939\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:47D69150E443DBE63AD9DE9F5724771E5704120B" rel="nofollow" target="_blank" name=\'magnet70939\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70939\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.OA.S01E03.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|979786662|E8A2CB05C837FCD89266448DE212C9CC|h=5V2UAVLDZNDQXUFJZVO6VBPS5UDI4RJM|/" rel="nofollow" target="_blank" name=\'ed2k70939\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'70939\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:47D69150E443DBE63AD9DE9F5724771E5704120B" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E03 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70939\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>934M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70828" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70828.html">
+																									先见之明 The OA S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kUWzcFl" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70828\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=un1eoab&amp;f=The.OA.S01E03.720p.WEBRip.x264-SKGTV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70828\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c67f0ab5c609ee743caa32e5a4f577628efb8180&amp;dn=The.OA.S01E03.720p.WEBRip.x264-SKGTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70828\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70828\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c67f0ab5c609ee743caa32e5a4f577628efb8180&amp;dn=The.OA.S01E03.720p.WEBRip.x264-SKGTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70828\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.40G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70827" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70827.html">
+																									先见之明 The OA S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jImajn4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70827\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=n8p73o4&amp;f=The.OA.S01E03.WEB.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70827\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ef3e63378af600ed08eb82570be66977df786315&amp;dn=The.OA.S01E03.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70827\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70827\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ef3e63378af600ed08eb82570be66977df786315&amp;dn=The.OA.S01E03.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70827\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>299M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71164" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71164.html">
+																									先见之明 The OA S01E02 720P  深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qXKJWYS" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71164\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3fc8e3fcecb36bfcd453d49f81ff74241e7c283c&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet71164\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71164\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%85%88%E8%A7%81%E4%B9%8B%E6%98%8E.The.OA.S01E02.720p.WEBRip.X264-D%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|666817611|6cb2b833e00f55c3213f7bbdab0bd014|h=g36arrifqzoopmi5ylbidmbnewant5ep|/" rel="nofollow" target="_blank" name=\'ed2k71164\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71164\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:3fc8e3fcecb36bfcd453d49f81ff74241e7c283c&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E02 720P  深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71164\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>635M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70937" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70937.html">
+																									先见之明 The OA S01E02  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ccheF0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70937\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>780M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70898" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70898.html">
+																									先见之明 The OA S01E02 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mhVbg4w" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70898\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:E26AB3D9837AAD9B11B50DAB1A636E6DF741FB21&amp;dn=The.OA.S01E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet70898\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70898\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://%7Cfile%7CThe.OA.S01E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4%7C943949807%7C649D6E7D44CCF555C34BC960155823EE%7Ch=AQIMR4SM27Q4T3OHVEFDSF56VYLTXTXH%7C/" rel="nofollow" target="_blank" name=\'ed2k70898\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'70898\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:E26AB3D9837AAD9B11B50DAB1A636E6DF741FB21&amp;dn=The.OA.S01E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E02 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70898\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>900M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70825" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70825.html">
+																									先见之明 The OA S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1geVl2Jx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70825\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=kf3webp&amp;f=The.OA.S01E02.PROPER.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70825\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:be0f13019bde6b7b15750e712a72f8b564ee2df7&amp;dn=The.OA.S01E02.PROPER.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet70825\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70825\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:be0f13019bde6b7b15750e712a72f8b564ee2df7&amp;dn=The.OA.S01E02.PROPER.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70825\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.24G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70824" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70824.html">
+																									先见之明 The OA S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1ge8Q8Bh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70824\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=prlzv12&amp;f=The.OA.S01E02.WEB.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70824\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f972a96cc084f00151d6bb78ae91e0f9b774e1b2&amp;dn=The.OA.S01E02.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70824\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70824\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f972a96cc084f00151d6bb78ae91e0f9b774e1b2&amp;dn=The.OA.S01E02.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70824\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>278M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="71009" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71009.html">
+																									先见之明 The OA S01E01 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o7KNYIm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71009\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c60c20e87366fa7373c58ccaec58e938192e983f&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet71009\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71009\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%85%88%E8%A7%81%E4%B9%8B%E6%98%8E.The.OA.S01E01.PROPER.720p.X264-%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95%E7%B2%BE%E6%A0%A1%E7%89%88.%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|872084171|57c5968e46bc7120ad3d944e400e874d|h=vzsxova4iqp6qsx5zsrsan6ij47j47ws|/" rel="nofollow" target="_blank" name=\'ed2k71009\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71009\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:c60c20e87366fa7373c58ccaec58e938192e983f&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E01 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71009\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>831M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70913" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70913.html">
+																									先见之明 The OA S01E01  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pLJFXuN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70913\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>996M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70896" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70896.html">
+																									先见之明 The OA S01E01  Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i4VNlxb" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70896\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>394M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70893" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70893.html">
+																									先见之明 The OA S01E01 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSt9Npw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70893\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:664370ABEE14734AB07483456F5EAF5C6625A4EC&amp;dn=The.OA.S01E01.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet70893\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70893\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.OA.S01E01.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|1153506655|7CAC97E6713BDEC214151D30250949BB|h=YPNLJM2AYVXYUE4ITNXMUZDXTDGMXXFR|/" rel="nofollow" target="_blank" name=\'ed2k70893\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'70893\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:664370ABEE14734AB07483456F5EAF5C6625A4EC&amp;dn=The.OA.S01E01.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E01 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70893\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.07G</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70823" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70823.html">
+																									先见之明 The OA S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mhGOnd2" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70823\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=dlqwc5f&amp;f=The.OA.S01E01.PROPER.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70823\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b6019832919ff70798d4d823f33a9bb934d36811&amp;dn=The.OA.S01E01.PROPER.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet70823\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70823\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b6019832919ff70798d4d823f33a9bb934d36811&amp;dn=The.OA.S01E01.PROPER.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70823\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.55G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70822" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70822.html">
+																									先见之明 The OA S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bSDCp4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70822\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=shxduzc&amp;f=The.OA.S01E01.WEB.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70822\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2f6995464b04d94fbcd4e0edc3edc9aa025bbf56&amp;dn=The.OA.S01E01.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70822\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70822\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2f6995464b04d94fbcd4e0edc3edc9aa025bbf56&amp;dn=The.OA.S01E01.WEB.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="先见之明 The OA S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70822\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>459M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=218922&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(218922,1234,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1234);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1234);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1234);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

@@ -1,0 +1,1516 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:03:21 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d1d0b9c73eae69461a7bfcce7b2cd47501509534201; expires=Thu, 01-Nov-18 11:03:21 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e5df6404f0d55-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>忠诚 Allegiance-忠诚下载-忠诚全集下载-Allegiance下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="忠诚,Allegiance,忠诚下载,忠诚全集下载,忠诚高清下载,忠诚迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;　　AlexO’Connor是一位年轻的、充满理想主义的中情局分析师，专门负责研究俄罗斯情报。他是一位狂热的爱国者，对国家和家庭极度忠诚，但他做梦也没想到自己最亲密的家人竟然隐瞒了一个惊天大秘密。一旦真相暴露，这个家庭可能落得个分崩离析、满门抄斩的下场。Alex的父亲Mark（ScottCohen，《难得坚强》）和母亲Katya（HopeD" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 758;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FAllegiance.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FAllegiance.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 758;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">忠诚 Allegiance-忠诚下载-忠诚全集下载-Allegiance下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i1.piimg.com/588755/3174c512c685ba0c.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i1.piimg.com/588755/3174c512c685ba0c.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周五</span>
+						<span>状态：被砍</span>
+						<span class="greybg">分类：</span>						
+						<span>最后更新：2017-05-21 17:50</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/758.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">183</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>　　Alex O’Connor是一位年轻的、充满理想主义的中情局分析师，专门负责研究俄罗斯情报。他是一位狂热的爱国者，对国家和家庭极度忠诚，但他做梦也没想到自己最亲密的家人竟然隐瞒了一个惊天大秘密。一旦真相暴露，这个家庭可能落得个分崩离析、满门抄斩的下场。Alex的父亲Mark（Scott Cohen，《难得坚强》）和母亲Katya（Hope Davis，《新闻编辑室》）都是潜藏在美国境内的俄罗斯间谍，二十多年前因为前苏联解体而不再执行任何任务。因为某种原因，俄罗斯情报部门重新征召并「激活」了他们，让他们在美国境内继续从事间谍活动。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="80640" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80640.html">
+																									忠诚 Allegiance  S01E13 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jHJbzs6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80640\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6D8728217E939594D284AB08B81C2D0468300DC9" rel="nofollow" target="_blank" name=\'magnet80640\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80640\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E13.%E5%A4%A7%E7%BB%93%E5%B1%80.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|667230378|4c7e16ed3eff02fa603e6fff281e7be3|h=7vkhueh7zysw5agitn4gozdtcxq77pmt|/" rel="nofollow" target="_blank" name=\'ed2k80640\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'80640\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:6D8728217E939594D284AB08B81C2D0468300DC9" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E13 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80640\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>636M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39739" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39739.html">
+																									忠诚 Allegiance S01E13 720p REPACK 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGgmCWQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39739\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e0c03a54968b932bb575773af9c80ad836c8131f&amp;dn=Allegiance.S01E13.REPACK.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet39739\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39739\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e0c03a54968b932bb575773af9c80ad836c8131f&amp;dn=Allegiance.S01E13.REPACK.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E13 720p REPACK " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39739\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>724M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39738" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39738.html">
+																									忠诚 Allegiance S01E13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqGi7Co" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39738\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:480902dbf120b27bbb001608932729698e62d319&amp;dn=Allegiance+S01E13+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet39738\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39738\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:480902dbf120b27bbb001608932729698e62d319&amp;dn=Allegiance+S01E13+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E13 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39738\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>220M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80499" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80499.html">
+																									忠诚 Allegiance  S01E12 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hs1eHRu" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80499\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:F21F4D792840F58A56FCE9FA9BD557F634D934EF" rel="nofollow" target="_blank" name=\'magnet80499\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80499\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E12.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|554664695|5e7e06d533c70a8bc41f5a4419e46e09|h=6idqqsbzoc7447fast2dvkaihyqwkjc2|/" rel="nofollow" target="_blank" name=\'ed2k80499\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'80499\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:F21F4D792840F58A56FCE9FA9BD557F634D934EF" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E12 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80499\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>515M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39404" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39404.html">
+																									忠诚 Allegiance S01E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntuZszZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39404\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:30932f1d86125fff4d43189e6936a009a5986057&amp;dn=Allegiance.S01E12.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet39404\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39404\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:30932f1d86125fff4d43189e6936a009a5986057&amp;dn=Allegiance.S01E12.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39404\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>614M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39403" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39403.html">
+																									忠诚 Allegiance S01E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnm6m8R" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39403\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c5447e45dc2749ae371dc8b7641f781ddc31468b&amp;dn=Allegiance.S01E12.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet39403\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39403\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c5447e45dc2749ae371dc8b7641f781ddc31468b&amp;dn=Allegiance.S01E12.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39403\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>178M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79984" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79984.html">
+																									忠诚 Allegiance  S01E11 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c1qDL8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79984\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:611C37C3ADF90E120CA91578C26080EDB725466E" rel="nofollow" target="_blank" name=\'magnet79984\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79984\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E11.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|653979695|b9235d37a0753cdcf1eae80fb84cbd06|h=bwspchii6rfcmq4a2oq4d52vzhj5py27|/" rel="nofollow" target="_blank" name=\'ed2k79984\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79984\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:611C37C3ADF90E120CA91578C26080EDB725466E" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E11 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79984\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>624M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38857" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38857.html">
+																									忠诚 Allegiance S01E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6iLCLW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38857\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:deb81e2abe11fb4f5894e1c72708928b7612f490&amp;dn=Allegiance.S01E11.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet38857\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38857\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:deb81e2abe11fb4f5894e1c72708928b7612f490&amp;dn=Allegiance.S01E11.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38857\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>711M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38856" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38856.html">
+																									忠诚 Allegiance S01E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJBjR55" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38856\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:89d175d37df3d63c7f4d3419e3e822087ac876cf&amp;dn=Allegiance.S01E11.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet38856\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38856\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:89d175d37df3d63c7f4d3419e3e822087ac876cf&amp;dn=Allegiance.S01E11.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38856\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>211M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79787" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79787.html">
+																									忠诚 Allegiance  S01E10 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://weibo.com/xsub/profile?rightmod=1&amp;wvr=6&amp;mod=personnumber&amp;is_all=1#1492922576868" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79787\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2E38C7068CFB4F53D669AC95D197A3E079FFE6D7" rel="nofollow" target="_blank" name=\'magnet79787\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79787\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E10.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|540351927|630a70a53ed92dea3756f1849dd9b6ad|h=q6lwfem5dvwzdhoqgjomrtubboanow62|/" rel="nofollow" target="_blank" name=\'ed2k79787\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79787\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:2E38C7068CFB4F53D669AC95D197A3E079FFE6D7" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E10 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79787\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>515M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38855" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38855.html">
+																									忠诚 Allegiance S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnlPWwZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38855\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0eb56e9c8f6b70ab9b520a6ac284432ff28c7d94&amp;dn=Allegiance.S01E10.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet38855\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38855\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0eb56e9c8f6b70ab9b520a6ac284432ff28c7d94&amp;dn=Allegiance.S01E10.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38855\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>604M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38854" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38854.html">
+																									忠诚 Allegiance S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGf5Z4i" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38854\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b5994e507e379edeb97023a5ac0e6b3e76e0bbfa&amp;dn=Allegiance.S01E10.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet38854\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38854\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b5994e507e379edeb97023a5ac0e6b3e76e0bbfa&amp;dn=Allegiance.S01E10.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38854\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>179M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79621" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79621.html">
+																									忠诚 Allegiance  S01E09 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/share/link?shareid=99409511&amp;uk=2942702436" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79621\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:A941980F8F22AD8ADBA11FDB2E3BBF4046EC322D" rel="nofollow" target="_blank" name=\'magnet79621\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79621\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E09.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|619174383|e484b9379ddfce382afdd351a76f7c9d|h=kocpg7n6pgjwvr6e64x3fsqpkmtpcqjg|/" rel="nofollow" target="_blank" name=\'ed2k79621\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79621\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:A941980F8F22AD8ADBA11FDB2E3BBF4046EC322D" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E09 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79621\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>590M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38058" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38058.html">
+																									忠诚 Allegiance S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nt2zU2X" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38058\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:06ab598e448ba989b3c6f91c7f6957f7c28ed411&amp;dn=Allegiance.S01E09.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" target="_blank" name=\'magnet38058\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38058\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:06ab598e448ba989b3c6f91c7f6957f7c28ed411&amp;dn=Allegiance.S01E09.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38058\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>680M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38057" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38057.html">
+																									忠诚 Allegiance S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gd0ApIb" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38057\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fcc93a1f97be9de70c933b9792383924a83f966b&amp;dn=Allegiance.S01E09.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet38057\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38057\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fcc93a1f97be9de70c933b9792383924a83f966b&amp;dn=Allegiance.S01E09.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38057\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>197M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79620" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79620.html">
+																									忠诚 Allegiance  S01E08 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/share/link?shareid=1905515058&amp;uk=2405884263" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79620\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:F5F4C9C5ED0E78449520180047C78095C892936D" rel="nofollow" target="_blank" name=\'magnet79620\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79620\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E08.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|717346216|e5b0d816ecfb40f8c743b25d0b913176|h=wde4s35h73uxgdnigm7m3m36xw4lpfzo|/" rel="nofollow" target="_blank" name=\'ed2k79620\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79620\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:F5F4C9C5ED0E78449520180047C78095C892936D" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E08 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79620\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>684M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37555" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37555.html">
+																									忠诚 Allegiance S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntqUpcP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37555\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8350cd1ded96545500df506601f4d5fc5f171450&amp;dn=Allegiance.S01E08.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet37555\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37555\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8350cd1ded96545500df506601f4d5fc5f171450&amp;dn=Allegiance.S01E08.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37555\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>776M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37554" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37554.html">
+																									忠诚 Allegiance S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQfDohO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37554\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:358474643adf5797b8ee656830996069cb352d88&amp;dn=Allegiance.S01E08.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet37554\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37554\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:358474643adf5797b8ee656830996069cb352d88&amp;dn=Allegiance.S01E08.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37554\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>218M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79619" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79619.html">
+																									忠诚 Allegiance  S01E07 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/share/link?shareid=312767489&amp;uk=2405884263" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79619\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:F3117E10E7375A1A298932B0CF9D458B9991F090" rel="nofollow" target="_blank" name=\'magnet79619\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79619\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E07.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|832241395|524bac35f8a37a1aeb6682cd43769081|h=ffet5upgvvqyk4l7yglpalq7q3fpoyku|/" rel="nofollow" target="_blank" name=\'ed2k79619\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79619\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:F3117E10E7375A1A298932B0CF9D458B9991F090" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E07 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79619\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>793M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37277" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37277.html">
+																									忠诚 Allegiance S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3zjKOl" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37277\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fdfbd4f6b7c41fae68a6550c60669b2c7bc86399&amp;dn=Allegiance.S01E07.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" target="_blank" name=\'magnet37277\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37277\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fdfbd4f6b7c41fae68a6550c60669b2c7bc86399&amp;dn=Allegiance.S01E07.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37277\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>902M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37276" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37276.html">
+																									忠诚 Allegiance S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTII33L" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37276\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e35d4af039f0be0ee07f43def6008a4e974bb152&amp;dn=Allegiance.S01E07.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet37276\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37276\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e35d4af039f0be0ee07f43def6008a4e974bb152&amp;dn=Allegiance.S01E07.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37276\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>259M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79618" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79618.html">
+																									忠诚 Allegiance  S01E06 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/share/link?shareid=2860725872&amp;uk=2405884263" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79618\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:99A49FCEE5EE0B42B0CF22559E2352038B6420F2" rel="nofollow" target="_blank" name=\'magnet79618\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79618\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E06.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|693172445|80a7d2a8cd28ea209e0af8107656a839|h=znsovrte6nymvopd4cifbxqi5a6apgp2|/" rel="nofollow" target="_blank" name=\'ed2k79618\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79618\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:99A49FCEE5EE0B42B0CF22559E2352038B6420F2" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E06 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79618\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>661M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37275" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37275.html">
+																									忠诚 Allegiance S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGCEU3s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37275\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2e3a6a31adb9d4e7b7694bb22ba1dbb26c249d11&amp;dn=Allegiance.S01E06.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" target="_blank" name=\'magnet37275\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37275\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2e3a6a31adb9d4e7b7694bb22ba1dbb26c249d11&amp;dn=Allegiance.S01E06.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37275\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>748M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37274" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37274.html">
+																									忠诚 Allegiance S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGmq638" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37274\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:7c06dc028a2fe3228f512bb212b997c62f1b31fe&amp;dn=Allegiance.S01E06.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet37274\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37274\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7c06dc028a2fe3228f512bb212b997c62f1b31fe&amp;dn=Allegiance.S01E06.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37274\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>220M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79617" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79617.html">
+																									忠诚 Allegiance  S01E05 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIDOZd0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79617\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:D4998DD76ABB6499A8C474E395F6CFC7E3294718" rel="nofollow" target="_blank" name=\'magnet79617\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79617\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E05.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|567604323|2cb77602236940bffa5cb23c081e097c|h=zl5rd73uobyq6j2m7cw3xoys6p3p7x7p|/" rel="nofollow" target="_blank" name=\'ed2k79617\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79617\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:D4998DD76ABB6499A8C474E395F6CFC7E3294718" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E05 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79617\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>541M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="36190" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36190.html">
+																									忠诚 Allegiance S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o61GNge" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36190\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1af38014da5be27a574e361006f8b55be37f5c66&amp;dn=Allegiance.S01E05.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" target="_blank" name=\'magnet36190\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36190\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1af38014da5be27a574e361006f8b55be37f5c66&amp;dn=Allegiance.S01E05.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36190\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>629M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36189" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36189.html">
+																									忠诚 Allegiance S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWPZoTY" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36189\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:22cea226b3d18f74222df2f17c5535021fcc745d&amp;dn=Allegiance.S01E05.HDTV.x264-LOL%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A" rel="nofollow" target="_blank" name=\'magnet36189\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36189\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:22cea226b3d18f74222df2f17c5535021fcc745d&amp;dn=Allegiance.S01E05.HDTV.x264-LOL%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36189\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>192M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79616" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79616.html">
+																									忠诚 Allegiance  S01E04 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/share/link?shareid=3111386601&amp;uk=2405884263" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79616\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:14FDD391D013F7B00CF77E15C55990FE41CF92B2" rel="nofollow" target="_blank" name=\'magnet79616\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79616\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E04.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|679784461|e59d27a2128f86dc1d90f9cf1aeecc8f|h=dcebkfw2l5cqsuzyja7svkysrm4ycvzs|/" rel="nofollow" target="_blank" name=\'ed2k79616\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79616\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:14FDD391D013F7B00CF77E15C55990FE41CF92B2" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E04 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79616\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>648M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35792" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35792.html">
+																									忠诚 Allegiance S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgMdz6o" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35792\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:338763820aacbecde100b7a5f966d49f7a273c38&amp;dn=Allegiance.S01E04.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" target="_blank" name=\'magnet35792\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35792\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:338763820aacbecde100b7a5f966d49f7a273c38&amp;dn=Allegiance.S01E04.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35792\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>738M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35791" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35791.html">
+																									忠诚 Allegiance S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dD3uO2d" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35791\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8e6c96b1d4097cac406c6f9bbaa69fe7868fa391&amp;dn=Allegiance+S01E04+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3" rel="nofollow" target="_blank" name=\'magnet35791\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35791\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8e6c96b1d4097cac406c6f9bbaa69fe7868fa391&amp;dn=Allegiance+S01E04+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35791\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>231M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79615" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79615.html">
+																									忠诚 Allegiance  S01E03 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/share/link?shareid=3882586201&amp;uk=3261622559" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79615\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:EAA1BD700FDB1B616FFB398C3FC575ACE9BD629C" rel="nofollow" target="_blank" name=\'magnet79615\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79615\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E03.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|833707714|7cab3141aff5b8ac17cbf07d44d4b3be|h=ioymydh54mt4rhhdlsgt7xmf5lq5h7sy|/" rel="nofollow" target="_blank" name=\'ed2k79615\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79615\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:EAA1BD700FDB1B616FFB398C3FC575ACE9BD629C" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E03 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79615\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>795M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35421" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35421.html">
+																									忠诚 Allegiance S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jG244jO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35421\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:64d3dd92a72420ca740652f569d0666fada336ab&amp;dn=Allegiance.S01E03.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" target="_blank" name=\'magnet35421\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35421\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:64d3dd92a72420ca740652f569d0666fada336ab&amp;dn=Allegiance.S01E03.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35421\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>784M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35420" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35420.html">
+																									忠诚 Allegiance S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgywDAS" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35420\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f0c2e2be504007b39847c058866a6344ce01adff&amp;dn=Allegiance.S01E03.HDTV.x264-LOL%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A" rel="nofollow" target="_blank" name=\'magnet35420\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35420\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f0c2e2be504007b39847c058866a6344ce01adff&amp;dn=Allegiance.S01E03.HDTV.x264-LOL%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35420\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>242M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79614" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79614.html">
+																									忠诚 Allegiance  S01E02 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dFijxj7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79614\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1B06E3B6ECB6DACB22CAA614BF0AE51AFDDC757B" rel="nofollow" target="_blank" name=\'magnet79614\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79614\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E02.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|805222681|006580470be8c9dad443364939153af5|h=wt2g7zdlip4me4pidnot7kmirhaxstzh|/" rel="nofollow" target="_blank" name=\'ed2k79614\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79614\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:1B06E3B6ECB6DACB22CAA614BF0AE51AFDDC757B" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E02 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79614\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>767M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="34901" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34901.html">
+																									忠诚 Allegiance S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTKJm3l" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34901\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:041dc4ddecc97c3dfcd8618e750c591e35260c31&amp;dn=Allegiance.S01E02.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" target="_blank" name=\'magnet34901\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34901\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:041dc4ddecc97c3dfcd8618e750c591e35260c31&amp;dn=Allegiance.S01E02.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34901\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>733M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34900" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34900.html">
+																									忠诚 Allegiance S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdpJpb9" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34900\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:7a1baa4f64febb30b60562b68f1c2453ca9f5daa&amp;dn=Allegiance.S01E02.HDTV.x264-LOL%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A" rel="nofollow" target="_blank" name=\'magnet34900\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34900\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7a1baa4f64febb30b60562b68f1c2453ca9f5daa&amp;dn=Allegiance.S01E02.HDTV.x264-LOL%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34900\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>226M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79533" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79533.html">
+																									忠诚 Allegiance  S01E01 720p X字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVylOnP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79533\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:251D9B2EC253F2C240A2B9B3042200B24F7AB4FD" rel="nofollow" target="_blank" name=\'magnet79533\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79533\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%BF%A0%E8%AF%9A.Allegiance.S01E01.%E4%B8%AD%E8%8B%B1%E7%B2%BE%E6%A0%A1.720p.HDTV.X%E5%AD%97%E5%B9%95%E7%BB%84.mp4|808193194|8382bbcd3b1a99245073bf837b679596|h=3gcqc2n7opwf236wq3z6jjn3spp54uuw|/" rel="nofollow" target="_blank" name=\'ed2k79533\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79533\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:251D9B2EC253F2C240A2B9B3042200B24F7AB4FD" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance  S01E01 720p X字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79533\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>770M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34411" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34411.html">
+																									忠诚 Allegiance S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdviGoF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34411\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:46c9fb482e1bcf29bc3b2c10452908fdadf6347a&amp;dn=Allegiance.S01E01.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" target="_blank" name=\'magnet34411\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34411\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:46c9fb482e1bcf29bc3b2c10452908fdadf6347a&amp;dn=Allegiance.S01E01.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34411\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>873M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="34410" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34410.html">
+																									忠诚 Allegiance S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnlh4bP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34410\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:af61f80820e6e297166ea7cb41eed0229e540d48&amp;dn=Allegiance+S01E01+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3" rel="nofollow" target="_blank" name=\'magnet34410\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34410\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:af61f80820e6e297166ea7cb41eed0229e540d48&amp;dn=Allegiance+S01E01+HDTV+x264-LOL%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3" rel="nofollow" name=\'miurl\' filename="忠诚 Allegiance S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34410\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>272M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-06</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=417924&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(417924,758,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,758);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,758);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,758);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

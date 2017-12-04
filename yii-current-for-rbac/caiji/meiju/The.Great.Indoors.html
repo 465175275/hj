@@ -1,0 +1,1696 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:14:48 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d6f694ed85de900f761c1b6b87f2d288a1509534887; expires=Thu, 01-Nov-18 11:14:47 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e6eb864b622f4-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>室内奇兵 The Great Indoors-室内奇兵下载-室内奇兵全集下载-The Great Indoors下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="室内奇兵,The Great Indoors,室内奇兵下载,室内奇兵全集下载,室内奇兵高清下载,室内奇兵迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;&lt;spanstyle=&quot;color:rgb(17,17,17);font-family:Helvetica,Arial,sans-serif;font-size:12px;background-color:rgb(255,255,255);&quot;&gt;CBS的多镜头喜剧《TheGreatIndoors》，讲述一名杂志" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1220;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FThe.Great.Indoors.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FThe.Great.Indoors.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1220;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">室内奇兵 The Great Indoors-室内奇兵下载-室内奇兵全集下载-The Great Indoors下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/b2f39ddfecf698d3.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/b2f39ddfecf698d3.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周五</span>
+						<span>状态：被砍</span>
+						<span class="greybg">分类：喜剧类</span>						
+						<span>最后更新：2017-05-09 10:53</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1220.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">43</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p><span style="color: rgb(17, 17, 17); font-family: Helvetica, Arial, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">CBS的多镜头喜剧《The Great Indoors》，讲述一名杂志的户外记者必须调整好自己，因为他被指派到杂志中的网上部门，而手下都是一群千禧一代的员工。 Joel McHale扮演风趣幽默的《室外奇兵》杂志明星编辑。是个野外生存里男人中的男人。他经常攀爬山岳，与熊 搏斗，追求刺激冒险的生活。但是他被迫派到了出版社的数码及社交媒体部门，在室内工作。身边同事都是年轻人，让他感觉到自己是外星来的或者是古代穿越来的。</span></p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="80976" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80976.html">
+																									室内奇兵 The Great Indoors  S01E22 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bMFNAI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80976\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=6d1pbsy&amp;f=The.Great.Indoors.S01E22.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80976\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:cd549320898880fdf442c2ebdb747d3ea2611e5d&amp;dn=The.Great.Indoors.S01E22.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet80976\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80976\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cd549320898880fdf442c2ebdb747d3ea2611e5d&amp;dn=The.Great.Indoors.S01E22.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E22 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80976\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>474M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80975" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80975.html">
+																									室内奇兵 The Great Indoors  S01E22 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYwfeR6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80975\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=gw758rb&amp;f=The.Great.Indoors.S01E22.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80975\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2ddd11d3dac11009385e56846bc0d48591d03656&amp;dn=The.Great.Indoors.S01E22.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80975\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80975\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2ddd11d3dac11009385e56846bc0d48591d03656&amp;dn=The.Great.Indoors.S01E22.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E22 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80975\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>131M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80420" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80420.html">
+																									室内奇兵 The Great Indoors  S01E21 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nvBdPnN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80420\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=i35grxh&amp;f=The.Great.Indoors.S01E21.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80420\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:29d0033029be75acb758cf7861da67918417ba12&amp;dn=The.Great.Indoors.S01E21.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet80420\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80420\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:29d0033029be75acb758cf7861da67918417ba12&amp;dn=The.Great.Indoors.S01E21.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E21 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80420\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>510M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80419" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80419.html">
+																									室内奇兵 The Great Indoors  S01E21 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eSN3ybK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80419\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=da5xmib&amp;f=The.Great.Indoors.S01E21.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80419\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:feda2b65c2e26c9acfc6e0d0b41a4aab80535aa7&amp;dn=The.Great.Indoors.S01E21.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80419\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80419\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:feda2b65c2e26c9acfc6e0d0b41a4aab80535aa7&amp;dn=The.Great.Indoors.S01E21.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E21 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80419\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>146M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80130" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80130.html">
+																									室内奇兵 The Great Indoors  S01E20 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hs9RVve" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80130\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ujtsaiz&amp;f=The.Great.Indoors.S01E20.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80130\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:90ebc020933c73a6f53395265b2c568e64841ef5&amp;dn=The.Great.Indoors.S01E20.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet80130\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80130\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:90ebc020933c73a6f53395265b2c568e64841ef5&amp;dn=The.Great.Indoors.S01E20.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E20 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80130\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>514M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80129" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80129.html">
+																									室内奇兵 The Great Indoors  S01E20 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bpqzu8n" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80129\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=dz78oix&amp;f=The.Great.Indoors.S01E20.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80129\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:10241a3cf8056f1a223ddbdcfd146ba18d347a46&amp;dn=The.Great.Indoors.S01E20.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80129\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80129\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:10241a3cf8056f1a223ddbdcfd146ba18d347a46&amp;dn=The.Great.Indoors.S01E20.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E20 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80129\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>143M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79084" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79084.html">
+																									室内奇兵 The Great Indoors  S01E19 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1geVr9Of" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79084\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=7gvyaod&amp;f=The.Great.Indoors.S01E19.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79084\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:162b5ed798e20da8d494cc8c33d3b824978e37a8&amp;dn=The.Great.Indoors.S01E19.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet79084\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79084\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:162b5ed798e20da8d494cc8c33d3b824978e37a8&amp;dn=The.Great.Indoors.S01E19.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E19 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79084\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>508M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79083" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79083.html">
+																									室内奇兵 The Great Indoors  S01E19 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nvv3PSP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79083\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=e8mvgj2&amp;f=The.Great.Indoors.S01E19.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79083\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:921398f143938eecf997cb259a6d25574f59c562&amp;dn=The.Great.Indoors.S01E19.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79083\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79083\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:921398f143938eecf997cb259a6d25574f59c562&amp;dn=The.Great.Indoors.S01E19.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E19 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79083\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>140M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="78484" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78484.html">
+																									室内奇兵 The Great Indoors  S01E18 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o8FKnAM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78484\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=eguv36w&amp;f=The.Great.Indoors.S01E18.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78484\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9bff24253fa3ccb5ca7065c713c741c7df901a6e&amp;dn=The.Great.Indoors.S01E18.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet78484\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78484\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9bff24253fa3ccb5ca7065c713c741c7df901a6e&amp;dn=The.Great.Indoors.S01E18.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E18 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78484\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>467M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="78483" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78483.html">
+																									室内奇兵 The Great Indoors  S01E18 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pLfQucN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78483\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=p4dri8q&amp;f=The.Great.Indoors.S01E18.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78483\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:88d76a912304dcb5f443530f3bbf7fc1afd1c922&amp;dn=The.Great.Indoors.S01E18.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet78483\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78483\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:88d76a912304dcb5f443530f3bbf7fc1afd1c922&amp;dn=The.Great.Indoors.S01E18.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E18 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78483\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>128M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="77846" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77846.html">
+																									室内奇兵 The Great Indoors  S01E17 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfggpEF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77846\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=tfganhy&amp;f=The.Great.Indoors.S01E17.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77846\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9dc4571efaf7b9d7581579c015c5eb00aabb5717&amp;dn=The.Great.Indoors.S01E17.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet77846\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77846\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9dc4571efaf7b9d7581579c015c5eb00aabb5717&amp;dn=The.Great.Indoors.S01E17.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E17 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77846\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>465M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77845" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77845.html">
+																									室内奇兵 The Great Indoors  S01E17 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIbq1oi" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77845\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=6pxb1an&amp;f=The.Great.Indoors.S01E17.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77845\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c0971164bbe25d37f080505f7f64ed0e943f52ec&amp;dn=The.Great.Indoors.S01E17.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77845\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77845\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c0971164bbe25d37f080505f7f64ed0e943f52ec&amp;dn=The.Great.Indoors.S01E17.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E17 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77845\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>124M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="77589" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77589.html">
+																									室内奇兵 The Great Indoors  S01E16 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c23mL7U" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77589\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=5v4s871&amp;f=The.Great.Indoors.S01E16.720p.HDTV.X264-DIMENSION%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77589\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d00fa54a2057b7b6fd6170d3285011fd5dfea4db&amp;dn=The.Great.Indoors.S01E16.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet77589\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77589\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d00fa54a2057b7b6fd6170d3285011fd5dfea4db&amp;dn=The.Great.Indoors.S01E16.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E16 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77589\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>523M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77588" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77588.html">
+																									室内奇兵 The Great Indoors  S01E16 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c2Buwta" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77588\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=fd1ks2o&amp;f=The.Great.Indoors.S01E16.HDTV.x264-LOL%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77588\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:17f80d301a76fd76425cc7825243b1fdabc337a2&amp;dn=The.Great.Indoors.S01E16.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77588\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77588\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:17f80d301a76fd76425cc7825243b1fdabc337a2&amp;dn=The.Great.Indoors.S01E16.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E16 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77588\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>156M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="76222" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76222.html">
+																									室内奇兵 The Great Indoors  S01E15 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kU92TEZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'76222\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=brm4jy1&amp;f=The.Great.Indoors.S01E15.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'76222\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9fc2126c88a128ef317f17be940398859893a870&amp;dn=The.Great.Indoors.S01E15.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet76222\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76222\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9fc2126c88a128ef317f17be940398859893a870&amp;dn=The.Great.Indoors.S01E15.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E15 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76222\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>461M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="76221" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76221.html">
+																									室内奇兵 The Great Indoors  S01E15 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nuY1tfN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'76221\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=7g3aspu&amp;f=The.Great.Indoors.S01E15.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'76221\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:60c0e698d738e03dc6f63dda41a35e9e7e18ef46&amp;dn=The.Great.Indoors.S01E15.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet76221\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76221\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:60c0e698d738e03dc6f63dda41a35e9e7e18ef46&amp;dn=The.Great.Indoors.S01E15.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E15 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76221\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>136M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="75183" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75183.html">
+																									室内奇兵 The Great Indoors  S01E14 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qXBtHHq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75183\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=iohz6vj&amp;f=The.Great.Indoors.S01E14.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75183\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:af5799efa308deb0f2b381e4025c2c670d053040&amp;dn=The.Great.Indoors.S01E14.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet75183\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75183\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:af5799efa308deb0f2b381e4025c2c670d053040&amp;dn=The.Great.Indoors.S01E14.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E14 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75183\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>410M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="75182" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75182.html">
+																									室内奇兵 The Great Indoors  S01E14 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jI7I4yq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75182\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=cyfebvk&amp;f=The.Great.Indoors.S01E14.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75182\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:40329bea81dbf279c16d41d0648b34762fdc45e7&amp;dn=The.Great.Indoors.S01E14.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet75182\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75182\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:40329bea81dbf279c16d41d0648b34762fdc45e7&amp;dn=The.Great.Indoors.S01E14.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E14 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75182\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>115M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="74589" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74589.html">
+																									室内奇兵 The Great Indoors  S01E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dEGz1Sl" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'74589\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=akiv8wt&amp;f=The.Great.Indoors.S01E13.720p.HDTV.X264-DIMENSION%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'74589\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:fa2238e824e357ced915e2eb6ee2eed5b6cfd43c&amp;dn=The.Great.Indoors.S01E13.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet74589\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74589\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fa2238e824e357ced915e2eb6ee2eed5b6cfd43c&amp;dn=The.Great.Indoors.S01E13.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74589\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>481M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="74588" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74588.html">
+																									室内奇兵 The Great Indoors  S01E13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eSonz7G" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'74588\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=zisrkpu&amp;f=The.Great.Indoors.S01E13.HDTV.x264-LOL%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'74588\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:51202fe4c49d141f7cbdd59a722c4eea78561557&amp;dn=The.Great.Indoors.S01E13.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet74588\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74588\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:51202fe4c49d141f7cbdd59a722c4eea78561557&amp;dn=The.Great.Indoors.S01E13.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E13 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74588\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>142M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="74102" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74102.html">
+																									室内奇兵 The Great Indoors  S01E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hrVRWwO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'74102\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=gqkn5tc&amp;f=The.Great.Indoors.S01E12.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'74102\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:af1419f0c73234d3b97b4135a53ebf7b63cd623f&amp;dn=The.Great.Indoors.S01E12.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" target="_blank" name=\'magnet74102\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74102\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:af1419f0c73234d3b97b4135a53ebf7b63cd623f&amp;dn=The.Great.Indoors.S01E12.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74102\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>423M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="74101" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74101.html">
+																									室内奇兵 The Great Indoors  S01E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kV19YgZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'74101\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=gx2pcer&amp;f=The.Great.Indoors.S01E12.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'74101\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0dff26072a7c9b3538945759924ac3264e8c9354&amp;dn=The.Great.Indoors.S01E12.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet74101\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74101\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0dff26072a7c9b3538945759924ac3264e8c9354&amp;dn=The.Great.Indoors.S01E12.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74101\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>125M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="74100" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74100.html">
+																									室内奇兵 The Great Indoors  S01E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mhMWzji" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'74100\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=p1c3jmn&amp;f=The.Great.Indoors.S01E11.Mason.Blows.Up.720p.WEB-DL.DD5.1.H264-PODO%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'74100\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f8e308af0bb5357a2976cea42090a0f106b335d3&amp;dn=The.Great.Indoors.S01E11.Mason.Blows.Up.720p.WEB-DL.DD5.1.H264-PODO%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet74100\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74100\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f8e308af0bb5357a2976cea42090a0f106b335d3&amp;dn=The.Great.Indoors.S01E11.Mason.Blows.Up.720p.WEB-DL.DD5.1.H264-PODO%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74100\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>680M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="74099" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74099.html">
+																									室内奇兵 The Great Indoors  S01E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bpmrrLd" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'74099\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=z9iwqbt&amp;f=The.Great.Indoors.S01E11.WEB-DL.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'74099\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c76a828ebdad6e2a6c4f135167bf7ccd230a849c&amp;dn=The.Great.Indoors.S01E11.WEB-DL.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet74099\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74099\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c76a828ebdad6e2a6c4f135167bf7ccd230a849c&amp;dn=The.Great.Indoors.S01E11.WEB-DL.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74099\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>145M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="72030" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/72030.html">
+																									室内奇兵 The Great Indoors  S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c5UFaI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'72030\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=w1puzdo&amp;f=The.Great.Indoors.S01E10.720p.HDTV.X264-DIMENSION%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'72030\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:bf3bafadf65d82fa148f884b6ef46b5316bc73ed&amp;dn=The.Great.Indoors.S01E10.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet72030\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'72030\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:bf3bafadf65d82fa148f884b6ef46b5316bc73ed&amp;dn=The.Great.Indoors.S01E10.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'72030\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>458M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="72029" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/72029.html">
+																									室内奇兵 The Great Indoors  S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c1Lj0Ne" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'72029\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=zq1wgfu&amp;f=The.Great.Indoors.S01E10.HDTV.x264-LOL%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'72029\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5f81c8286e936ae96abd0b3e6a6c321334d12b3f&amp;dn=The.Great.Indoors.S01E10.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet72029\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'72029\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5f81c8286e936ae96abd0b3e6a6c321334d12b3f&amp;dn=The.Great.Indoors.S01E10.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'72029\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>142M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71569" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71569.html">
+																									室内奇兵 The Great Indoors  S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pL978Cz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71569\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ktpg4yo&amp;f=The.Great.Indoors.S01E09.720p.HDTV.X264-DIMENSION%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'71569\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:09d6a69990b97f9eeb9f3acb3553dfdeb38221fc&amp;dn=The.Great.Indoors.S01E09.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet71569\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71569\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:09d6a69990b97f9eeb9f3acb3553dfdeb38221fc&amp;dn=The.Great.Indoors.S01E09.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71569\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>490M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="71568" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71568.html">
+																									室内奇兵 The Great Indoors  S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfkf3UV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71568\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=bpsy6ux&amp;f=The.Great.Indoors.S01E09.HDTV.x264-LOL%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'71568\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:11f30188091ba4ae66db5629a7e41b531eeaa741&amp;dn=The.Great.Indoors.S01E09.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet71568\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71568\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:11f30188091ba4ae66db5629a7e41b531eeaa741&amp;dn=The.Great.Indoors.S01E09.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors  S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71568\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>157M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70707" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70707.html">
+																									室内奇兵 The Great Indoors S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVK3U6r" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70707\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ebf759k&amp;f=The.Great.Indoors.S01E08.720p.HDTV.X264-DIMENSION%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70707\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:29d8b0d5011bb34458cccfcc41fc5ade2e5dd0c0&amp;dn=The.Great.Indoors.S01E08.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet70707\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70707\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:29d8b0d5011bb34458cccfcc41fc5ade2e5dd0c0&amp;dn=The.Great.Indoors.S01E08.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70707\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>452M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70706" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70706.html">
+																									室内奇兵 The Great Indoors S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qXONnbA" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70706\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=wjgi4ef&amp;f=The.Great.Indoors.S01E08.HDTV.x264-LOL%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70706\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:04ac9385bf3efeba12af13aff37bcfadcab99eef&amp;dn=The.Great.Indoors.S01E08.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70706\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70706\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:04ac9385bf3efeba12af13aff37bcfadcab99eef&amp;dn=The.Great.Indoors.S01E08.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70706\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>145M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70258" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70258.html">
+																									室内奇兵 The Great Indoors S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hsC2fAG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70258\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=2rhjvfe&amp;f=The.Great.Indoors.S01E07.720p.HDTV.X264-DIMENSION%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70258\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:86c19a435c3de0866b6d18cce55fde433f76f2b6&amp;dn=The.Great.Indoors.S01E07.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet70258\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70258\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:86c19a435c3de0866b6d18cce55fde433f76f2b6&amp;dn=The.Great.Indoors.S01E07.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70258\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>471M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70257" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70257.html">
+																									室内奇兵 The Great Indoors S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o82g3F0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70257\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=dnwbsfl&amp;f=The.Great.Indoors.S01E07.HDTV.x264-LOL%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70257\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9eedbd15b6ca6782040bd61b393ad237716e41ae&amp;dn=The.Great.Indoors.S01E07.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70257\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70257\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9eedbd15b6ca6782040bd61b393ad237716e41ae&amp;dn=The.Great.Indoors.S01E07.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70257\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>146M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="69769" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69769.html">
+																									室内奇兵 The Great Indoors S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nvQ4Fyh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69769\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=kip7y8c&amp;f=The.Great.Indoors.S01E06.720p.HDTV.X264-DIMENSION%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69769\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b1fd23ac048f5e1954b1c60286f5fd5ae7211fa4&amp;dn=The.Great.Indoors.S01E06.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet69769\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69769\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b1fd23ac048f5e1954b1c60286f5fd5ae7211fa4&amp;dn=The.Great.Indoors.S01E06.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69769\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>500M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69768" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69768.html">
+																									室内奇兵 The Great Indoors S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hsoLdTq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69768\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=xethy7j&amp;f=The.Great.Indoors.S01E06.HDTV.x264-LOL%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69768\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4296bd8812db3e9d026cca613704f08c08343e53&amp;dn=The.Great.Indoors.S01E06.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet69768\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69768\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4296bd8812db3e9d026cca613704f08c08343e53&amp;dn=The.Great.Indoors.S01E06.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69768\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>157M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="69363" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69363.html">
+																									室内奇兵 The Great Indoors S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2qULPI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69363\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=s8j9t7g&amp;f=The.Great.Indoors.S01E05.720p.HDTV.X264-DIMENSION%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69363\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:44281fd7e0c84facf2a10313fbcfca3123de13ef&amp;dn=The.Great.Indoors.S01E05.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet69363\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69363\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:44281fd7e0c84facf2a10313fbcfca3123de13ef&amp;dn=The.Great.Indoors.S01E05.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69363\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>426M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69362" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69362.html">
+																									室内奇兵 The Great Indoors S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1sk84Vil" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69362\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=sarz4it&amp;f=The.Great.Indoors.S01E05.HDTV.x264-LOL%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69362\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:42bfc188c9342f6d5f1913ef82a868db21181629&amp;dn=The.Great.Indoors.S01E05.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet69362\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69362\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:42bfc188c9342f6d5f1913ef82a868db21181629&amp;dn=The.Great.Indoors.S01E05.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69362\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>135M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="69361" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69361.html">
+																									室内奇兵 The Great Indoors S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i5JQR1F" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69361\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=5q9b7cg&amp;f=The.Great.Indoors.S01E04.720p.HDTV.X264-DIMENSION%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69361\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:66e2fa8f532db7a65bedf4ea826ea0a6f10daa7a&amp;dn=The.Great.Indoors.S01E04.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet69361\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69361\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:66e2fa8f532db7a65bedf4ea826ea0a6f10daa7a&amp;dn=The.Great.Indoors.S01E04.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69361\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>419M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69360" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69360.html">
+																									室内奇兵 The Great Indoors S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hrD7bmc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69360\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=b6qrohd&amp;f=The.Great.Indoors.S01E04.HDTV.x264-LOL%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69360\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9448b1a26d24f99f75d3053df4ab0b0d4d5835fe&amp;dn=The.Great.Indoors.S01E04.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet69360\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69360\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9448b1a26d24f99f75d3053df4ab0b0d4d5835fe&amp;dn=The.Great.Indoors.S01E04.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69360\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>130M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="69359" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69359.html">
+																									室内奇兵 The Great Indoors S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o80dP14" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69359\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=oxitk6h&amp;f=The.Great.Indoors.S01E03.720p.HDTV.X264-DIMENSION%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69359\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:88a47d2292c7131494d88660d0f08e344db7dcc6&amp;dn=The.Great.Indoors.S01E03.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet69359\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69359\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:88a47d2292c7131494d88660d0f08e344db7dcc6&amp;dn=The.Great.Indoors.S01E03.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69359\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>471M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69358" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69358.html">
+																									室内奇兵 The Great Indoors S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dECXo45" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69358\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=lvymbgw&amp;f=The.Great.Indoors.S01E03.HDTV.x264-LOL%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69358\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:fc0f0a37ac7dd0248e4ac3924adf2b62f4a788f6&amp;dn=The.Great.Indoors.S01E03.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet69358\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69358\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fc0f0a37ac7dd0248e4ac3924adf2b62f4a788f6&amp;dn=The.Great.Indoors.S01E03.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69358\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>152M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="69357" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69357.html">
+																									室内奇兵 The Great Indoors S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hr2HGg8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69357\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ebwdxgz&amp;f=The.Great.Indoors.S01E02.720p.HDTV.X264-DIMENSION%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69357\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c5db5611c7588e366a7f9d33a1bba622c7e983c2&amp;dn=The.Great.Indoors.S01E02.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet69357\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69357\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c5db5611c7588e366a7f9d33a1bba622c7e983c2&amp;dn=The.Great.Indoors.S01E02.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69357\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>465M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69356" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69356.html">
+																									室内奇兵 The Great Indoors S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIsK6FG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69356\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=856o7vs&amp;f=The.Great.Indoors.S01E02.HDTV.x264-LOL%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69356\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d6fd61491eba6d1215ed14752c5d1150bc772ec6&amp;dn=The.Great.Indoors.S01E02.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet69356\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69356\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d6fd61491eba6d1215ed14752c5d1150bc772ec6&amp;dn=The.Great.Indoors.S01E02.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69356\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>151M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="69355" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69355.html">
+																									室内奇兵 The Great Indoors S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hrF8W4G" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69355\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=1pycsoz&amp;f=The.Great.Indoors.S01E01.720p.HDTV.X264-DIMENSION%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69355\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1aaf77d58bb7d416c5a84fb533377efe0c651400&amp;dn=The.Great.Indoors.S01E01.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet69355\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69355\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1aaf77d58bb7d416c5a84fb533377efe0c651400&amp;dn=The.Great.Indoors.S01E01.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69355\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>451M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69354" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69354.html">
+																									室内奇兵 The Great Indoors S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pK9pccb" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69354\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=d2qp9ny&amp;f=The.Great.Indoors.S01E01.HDTV.x264-LOL%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69354\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b7c328c30a50d1808e66a24ea856d41ebc009b21&amp;dn=The.Great.Indoors.S01E01.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet69354\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69354\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b7c328c30a50d1808e66a24ea856d41ebc009b21&amp;dn=The.Great.Indoors.S01E01.HDTV.x264-LOL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="室内奇兵 The Great Indoors S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69354\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>151M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-25</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,1220,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1220);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1220);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1220);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

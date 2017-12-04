@@ -1,0 +1,1437 @@
+'HTTP/1.1 200 OK
+Date: Tue, 07 Nov 2017 09:40:07 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d30eefc3889d259aaf7eee36dda67d4611510047607; expires=Wed, 07-Nov-18 09:40:07 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b9f5448f4ae6d84-SJC
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>我们这一天 This Is Us-我们这一天下载-我们这一天全集下载-This Is Us下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="我们这一天,This Is Us,我们这一天下载,我们这一天全集下载,我们这一天高清下载,我们这一天迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;有时生活会给你惊喜。该剧由DanFogelman开发，主人公是一群「在同一天出生的人」，他们各自的生活故事将以令人意想不到的方式相互交织在一起。该剧以非常真诚的态度和独特的视角来剖析现代人的生活琐事——你觉得你对身边的人已经足够了解，但在很大程度上那可能只是你的一厢情愿。该剧的预告片创造了收视率神话，正式剧集是否也能保持相同的人气？至少媒体" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1135;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FThis%2520Is%2520Us.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FThis%2520Is%2520Us.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1135;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">我们这一天 This Is Us-我们这一天下载-我们这一天全集下载-This Is Us下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i1.nbimg.com/588755/0026c0a8a3b16ab2.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i1.nbimg.com/588755/0026c0a8a3b16ab2.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周三</span>
+						<span>状态：<font color="#5cb1c5">播出中</font></span>
+						<span class="greybg">分类：</span>						
+						<span>最后更新：2017-11-07 14:45</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1135.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">4186</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>有时生活会给你惊喜。该剧由Dan Fogelman开发，主人公是一群「在同一天出生的人」，他们各自的生活故事将以令人意想不到的方式相互交织在一起。该剧以非常真诚的态度和独特的视角来剖析现代人的生活琐事——你觉得你对身边的人已经足够了解，但在很大程度上那可能只是你的一厢情愿。该剧的预告片创造了收视率神话，正式剧集是否也能保持相同的人气？至少媒体在一个劲地叫好，称这是《为人父母》（Parenthood）的完美接班人。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="2">
+																			第2季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="1">
+																			第1季																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="91316" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/91316.html">
+																									我们这一天 This Is Us  S02E06  720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVL16h5" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'91316\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E06.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'91316\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:IRJKP42KR3J4QC3GQXXCRI5MLEHFQ4WP&amp;dn=%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E06.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open" rel="nofollow" target="_blank" name=\'magnet91316\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'91316\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E06.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|631713141|AD10F8F439063D1D64894C0429616D26|h=QE2JU44MZX357UGGBZY7UF7MWFXQEQB4|/" rel="nofollow" target="_blank" name=\'ed2k91316\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'91316\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:IRJKP42KR3J4QC3GQXXCRI5MLEHFQ4WP&amp;dn=%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E06.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E06  720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'91316\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>mq6j</td>
+										<td>602M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-11-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="91245" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/91245.html">
+												<font style="color:red;font-weight:bold;">我们这一天 This Is Us  S02E06 720p 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jIuziIU" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'91245\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0ED92F3A5F43C8B9A71CEF78982DB2B0CA27125F&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E06.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" target="_blank" name=\'magnet91245\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'91245\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0ED92F3A5F43C8B9A71CEF78982DB2B0CA27125F&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E06.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E06 720p 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'91245\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>rkx1</td>
+										<td>588M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-11-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="91253" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/91253.html">
+																									我们这一天 This Is Us  S02E06 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=1fxygmn&amp;f=This.Is.Us.S02E06.1080p.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'91253\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7b9921727c3079dbbcb46d08fc472e07ff00ac13&amp;dn=This.Is.Us.S02E06.1080p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet91253\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'91253\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7b9921727c3079dbbcb46d08fc472e07ff00ac13&amp;dn=This.Is.Us.S02E06.1080p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E06 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'91253\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.26G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-11-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="91143" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/91143.html">
+																									我们这一天 This Is Us  S02E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c13i8Y8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'91143\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=7yeo59n&amp;f=This.Is.Us.S02E06.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'91143\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a587876df642f54ba02e2fbcecd97ebbdfb15487&amp;dn=This.Is.Us.S02E06.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet91143\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'91143\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a587876df642f54ba02e2fbcecd97ebbdfb15487&amp;dn=This.Is.Us.S02E06.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'91143\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>859M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-11-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="91142" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/91142.html">
+																									我们这一天 This Is Us  S02E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mi7Spzq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'91142\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=3a8eiwh&amp;f=This.Is.Us.S02E06.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'91142\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:89676d62b0b7fcbdfc5a6ee61cf123caff2333ff&amp;dn=This.Is.Us.S02E06.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet91142\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'91142\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:89676d62b0b7fcbdfc5a6ee61cf123caff2333ff&amp;dn=This.Is.Us.S02E06.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'91142\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>239M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-11-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="90807" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90807.html">
+																									我们这一天 This Is Us  S02E05  720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfw6LUV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90807\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9/%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E05.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90807\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:I7VEE4QHXMESXJ5WZIJLKV6UCSVCYSD3&amp;dn=%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E05.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open" rel="nofollow" target="_blank" name=\'magnet90807\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90807\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E05.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|719924308|1DD0EE5918C792620A8AB0C3530FE958|h=JT42J6ZWZGX2GPW7XMSXQ5U2D74JHBI7|/" rel="nofollow" target="_blank" name=\'ed2k90807\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'90807\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:I7VEE4QHXMESXJ5WZIJLKV6UCSVCYSD3&amp;dn=%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E05.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E05  720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90807\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>3rk3</td>
+										<td>686M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="90713" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90713.html">
+												<font style="color:red;font-weight:bold;">我们这一天 This Is Us  S02E05 720p 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nviNnCH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90713\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:B835579F3F960548692C15A67DD4B688BECD41E9&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E05.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" target="_blank" name=\'magnet90713\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90713\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:B835579F3F960548692C15A67DD4B688BECD41E9&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E05.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E05 720p 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90713\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>07zp</td>
+										<td>496M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="90733" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90733.html">
+																									我们这一天 This Is Us  S02E05 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=iy5bcr3&amp;f=This.Is.Us.S02E05.Brothers.1080p.AMZN.WEBRip.DDP5.1.x264-NTb%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90733\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:39143a6c8e2e4171c8489c72cb5f900fdc4f798b&amp;dn=This.Is.Us.S02E05.Brothers.1080p.AMZN.WEBRip.DDP5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" target="_blank" name=\'magnet90733\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90733\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:39143a6c8e2e4171c8489c72cb5f900fdc4f798b&amp;dn=This.Is.Us.S02E05.Brothers.1080p.AMZN.WEBRip.DDP5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E05 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90733\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.86G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="90611" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90611.html">
+																									我们这一天 This Is Us  S02E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jItcUTg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90611\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=oe4zvkb&amp;f=This.Is.Us.S02E05.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90611\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9aee7960f6078f80d96954ff43cca25402f674ec&amp;dn=This.Is.Us.S02E05.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet90611\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90611\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9aee7960f6078f80d96954ff43cca25402f674ec&amp;dn=This.Is.Us.S02E05.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90611\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>926M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="90610" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90610.html">
+																									我们这一天 This Is Us  S02E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c4OzXc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90610\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:dbe1e890ff94c73d366e640866ae91ae61867f8e&amp;dn=This.Is.Us.S02E05.XviD-AFG&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&amp;tr=udp%3A%2F%2Fzer0day.ch%3A1337&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" target="_blank" name=\'magnet90610\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90610\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:dbe1e890ff94c73d366e640866ae91ae61867f8e&amp;dn=This.Is.Us.S02E05.XviD-AFG&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&amp;tr=udp%3A%2F%2Fzer0day.ch%3A1337&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90610\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>429M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="90343" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90343.html">
+																									我们这一天 This Is Us  S02E04  720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hshBsI4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90343\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9/%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This%20is%20us.S02E04.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.%E7%AE%80%E4%BD%93%26%E8%8B%B1%E6%96%87.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90343\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7L7KRNDKPGSEEEL5EUWRC5VJ7VMXFAFL&amp;dn=%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This%20is%20us.S02E04.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.%E7%AE%80%E4%BD%93%26%E8%8B%B1%E6%96%87.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A8" rel="nofollow" target="_blank" name=\'magnet90343\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90343\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This%20is%20us.S02E04.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.%E7%AE%80%E4%BD%93&amp;%E8%8B%B1%E6%96%87.mp4|596019518|42650070899F0DEFD0970041596372E8|h=UBI5LBDWTMFBCDS3WTHB5QFVYA53YZWY|/" rel="nofollow" target="_blank" name=\'ed2k90343\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'90343\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:7L7KRNDKPGSEEEL5EUWRC5VJ7VMXFAFL&amp;dn=%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This%20is%20us.S02E04.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.%E7%AE%80%E4%BD%93%26%E8%8B%B1%E6%96%87.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A8" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E04  720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90343\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>9p12</td>
+										<td>568M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="90245" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90245.html">
+												<font style="color:red;font-weight:bold;">我们这一天 This Is Us  S02E04 720p 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eR4zGsE" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90245\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:395E6AD92F912B2A179D03D1C25C4EE466359386&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E04.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" target="_blank" name=\'magnet90245\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90245\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:395E6AD92F912B2A179D03D1C25C4EE466359386&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E04.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E04 720p 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90245\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>x9ft</td>
+										<td>624M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="90253" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90253.html">
+																									我们这一天 This Is Us  S02E04 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=zru1ne7&amp;f=This.Is.Us.S02E04.1080p.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90253\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f56fcb69735eea50aeceb8c0436de5155ef2facd&amp;dn=This.Is.Us.S02E04.1080p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet90253\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90253\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f56fcb69735eea50aeceb8c0436de5155ef2facd&amp;dn=This.Is.Us.S02E04.1080p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E04 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90253\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.26G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="90126" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90126.html">
+																									我们这一天 This Is Us  S02E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVnAIZd" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90126\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=71io4wr&amp;f=This.Is.Us.S02E04.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90126\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f2ac7c97eacb61996ccd19eee5dcc7d5b718b07e&amp;dn=This.Is.Us.S02E04.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet90126\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90126\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f2ac7c97eacb61996ccd19eee5dcc7d5b718b07e&amp;dn=This.Is.Us.S02E04.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90126\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>903M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="90125" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90125.html">
+																									我们这一天 This Is Us  S02E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o8btrN8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90125\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=6a3kwo5&amp;f=This.Is.Us.S02E04.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90125\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a309ff9a7084ff23fdbfd53bc29fe308fbc6baf0&amp;dn=This.Is.Us.S02E04.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet90125\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90125\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a309ff9a7084ff23fdbfd53bc29fe308fbc6baf0&amp;dn=This.Is.Us.S02E04.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90125\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>259M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="90073" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90073.html">
+												<font style="color:red;font-weight:bold;">我们这一天 This Is Us  S02E03 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c22bZ3M" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90073\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:AAD6BF3C7317F3B4ACEE914AB2B46CFBAAB5FACB&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E03.720p-%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp" rel="nofollow" target="_blank" name=\'magnet90073\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90073\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:AAD6BF3C7317F3B4ACEE914AB2B46CFBAAB5FACB&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E03.720p-%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E03 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90073\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>bpzq</td>
+										<td>591M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="89924" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89924.html">
+																									我们这一天 This Is Us  S02E03  720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVIcDpX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89924\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9/%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E03.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89924\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:NFKJE32Y2A2RP6EA3B6FMAOQLAFIDMVQ&amp;dn=%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E03.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open" rel="nofollow" target="_blank" name=\'magnet89924\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89924\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E03.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent|47595|BFA53779B31E907B8D9A7A88DD5A73EB|h=KRY7SL4OXLI6IZ45GHE4BVBVJXNW6AIQ|/" rel="nofollow" target="_blank" name=\'ed2k89924\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'89924\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:NFKJE32Y2A2RP6EA3B6FMAOQLAFIDMVQ&amp;dn=%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E03.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E03  720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89924\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>1cjd</td>
+										<td>578M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="89681" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89681.html">
+												<font style="color:red;font-weight:bold;">我们这一天 This Is Us  S02E03 720p 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eRHq526" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89681\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:877712A2ECD93147C1A4E8D886D8921253E34830&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E03.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" target="_blank" name=\'magnet89681\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89681\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:877712A2ECD93147C1A4E8D886D8921253E34830&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E03.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E03 720p 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89681\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>4kh7</td>
+										<td>596M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="89693" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89693.html">
+																									我们这一天 This Is Us  S02E03 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=gncouaw&amp;f=This.Is.Us.S02E03.Deja.Vu.1080p.AMZN.WEBRip.DDP5.1.x264-NTb%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89693\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:588c3215ced600a01becf84e9d2ff81183a6ee54&amp;dn=This.Is.Us.S02E03.Deja.Vu.1080p.AMZN.WEBRip.DDP5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F" rel="nofollow" target="_blank" name=\'magnet89693\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89693\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:588c3215ced600a01becf84e9d2ff81183a6ee54&amp;dn=This.Is.Us.S02E03.Deja.Vu.1080p.AMZN.WEBRip.DDP5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E03 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89693\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.67G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="89566" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89566.html">
+																									我们这一天 This Is Us  S02E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1boUnJ8j" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89566\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=rok3snf&amp;f=This.Is.Us.S02E03.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89566\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ff738fd5cafa3827499a5c1a0d4669429c9e5481&amp;dn=This.Is.Us.S02E03.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet89566\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89566\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ff738fd5cafa3827499a5c1a0d4669429c9e5481&amp;dn=This.Is.Us.S02E03.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89566\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>846M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="89565" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89565.html">
+																									我们这一天 This Is Us  S02E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYJUjIs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89565\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=fu7z8sb&amp;f=This.Is.Us.S02E03.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89565\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3806c14d6f43afdfd2c85eeefc44c97d51f4d014&amp;dn=This.Is.Us.S02E03.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet89565\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89565\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3806c14d6f43afdfd2c85eeefc44c97d51f4d014&amp;dn=This.Is.Us.S02E03.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89565\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>243M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="89310" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89310.html">
+												<font style="color:red;font-weight:bold;">我们这一天 This Is Us  S02E02 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="链接：http://pan.baidu.com/s/1nuNhAIX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89310\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:C8FBE911BB4D27196EB8E703065BCFFD0886EBCD&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E02.720p-%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp" rel="nofollow" target="_blank" name=\'magnet89310\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89310\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:C8FBE911BB4D27196EB8E703065BCFFD0886EBCD&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E02.720p-%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E02 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89310\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>by99</td>
+										<td>586M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="89224" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89224.html">
+																									我们这一天 This Is Us  S02E02  720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bppmkgv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89224\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9/%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E02.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89224\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:32NSUB7VJM4OIF7C65H55K6J3XFKPLKS&amp;dn=%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E02.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open" rel="nofollow" target="_blank" name=\'magnet89224\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89224\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E02.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|618943771|0F2D928D1F2C41B3B626369E43F013BB|h=LVNHIL2VVGTXLXZYUKFG2II2GO2YBUZT|/" rel="nofollow" target="_blank" name=\'ed2k89224\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'89224\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:32NSUB7VJM4OIF7C65H55K6J3XFKPLKS&amp;dn=%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E02.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E02  720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89224\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>zm73</td>
+										<td>590M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="89149" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89149.html">
+												<font style="color:red;font-weight:bold;">我们这一天 This Is Us  S02E02 720p 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kVOhHn5" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89149\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:A93AB1327B5A86C57F986EDBFF2743AABA011061&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E02.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" target="_blank" name=\'magnet89149\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89149\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:A93AB1327B5A86C57F986EDBFF2743AABA011061&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E02.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E02 720p 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89149\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>16o4</td>
+										<td>465M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="89066" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89066.html">
+																									我们这一天 This Is Us  S02E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pLHnWyn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89066\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=5e3zyx8&amp;f=This.Is.Us.S02E02.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89066\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:90ebe76f43e542496ce633771a6fc24cbd959be7&amp;dn=This.Is.Us.S02E02.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet89066\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89066\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:90ebe76f43e542496ce633771a6fc24cbd959be7&amp;dn=This.Is.Us.S02E02.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89066\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>833M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="89065" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89065.html">
+																									我们这一天 This Is Us  S02E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nvzHiJJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89065\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=kn63coz&amp;f=This.Is.Us.S02E02.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89065\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:16401b27f987523812e34ce950aa44e6837195a1&amp;dn=This.Is.Us.S02E02.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet89065\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89065\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:16401b27f987523812e34ce950aa44e6837195a1&amp;dn=This.Is.Us.S02E02.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89065\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>245M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="88836" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88836.html">
+												<font style="color:red;font-weight:bold;">我们这一天 This Is Us  S02E01 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i58C2fr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88836\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:200E3198A04FB6E4AA155688FB2F9EB7945B6026&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E01.720p-%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp" rel="nofollow" target="_blank" name=\'magnet88836\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88836\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:200E3198A04FB6E4AA155688FB2F9EB7945B6026&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E01.720p-%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E01 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88836\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>4e18</td>
+										<td>567M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="88694" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88694.html">
+																									我们这一天 This Is Us  S02E01  720P 精校版 Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c10yVD2" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88694\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9/%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E01.720p.%E7%B2%BE%E6%A0%A1%E7%89%88.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88694\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:NJB5GFMJJC4DDBSMEXYFKT4QGFLFFLFM&amp;dn=%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E01.720p.%E7%B2%BE%E6%A0%A1%E7%89%88.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp" rel="nofollow" target="_blank" name=\'magnet88694\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88694\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E01.720p.%E7%B2%BE%E6%A0%A1%E7%89%88.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|602649133|F0EBCBC13A8DD63961753B43572F171F|h=RKLDJRC3TFJRXKMZAAYJ6B6RRM4QLKQA|/" rel="nofollow" target="_blank" name=\'ed2k88694\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'88694\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:NJB5GFMJJC4DDBSMEXYFKT4QGFLFFLFM&amp;dn=%E6%88%91%E4%BB%AC%E8%BF%99%E4%B8%80%E5%A4%A9.This.Is.Us.S02E01.720p.%E7%B2%BE%E6%A0%A1%E7%89%88.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E01  720P 精校版 Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88694\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>34ci</td>
+										<td>574M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="88618" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88618.html">
+												<font style="color:red;font-weight:bold;">我们这一天 This Is Us  S02E01 720p 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSjGe0i" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88618\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:7941680A55FAB5DC3EE9ADAA6FA31F20BBFA6942&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E01.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" target="_blank" name=\'magnet88618\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88618\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7941680A55FAB5DC3EE9ADAA6FA31F20BBFA6942&amp;dn=%e6%88%91%e4%bb%ac%e8%bf%99%e4%b8%80%e5%a4%a9.This.Is.Us.S02E01.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fannounce" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E01 720p 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88618\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>h163</td>
+										<td>571M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="88636" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88636.html">
+																									我们这一天 This Is Us  S02E01 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=n7wg13x&amp;f=This.Is.Us.S02E01.1080p.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88636\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:abe5467edc792c11e447a69e848a610679466558&amp;dn=This.Is.Us.S02E01.1080p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet88636\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88636\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:abe5467edc792c11e447a69e848a610679466558&amp;dn=This.Is.Us.S02E01.1080p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E01 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88636\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.26G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="88514" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88514.html">
+																									我们这一天 This Is Us  S02E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nuVUBdJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88514\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=sbup9kg&amp;f=This.Is.Us.S02E01.REAL.PROPER.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88514\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1f41189d1234d36b38bf45ff4e8808f63ed7a13e&amp;dn=This.Is.Us.S02E01.REAL.PROPER.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" target="_blank" name=\'magnet88514\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88514\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1f41189d1234d36b38bf45ff4e8808f63ed7a13e&amp;dn=This.Is.Us.S02E01.REAL.PROPER.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88514\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>831M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="88513" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88513.html">
+																									我们这一天 This Is Us  S02E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c1KbGOw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88513\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=ylogj9d&amp;f=This.Is.Us.S02E01.REAL.PROPER.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88513\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1f8ac8f3370cc51ad304f3cb9f7cde5f66fff07a&amp;dn=This.Is.Us.S02E01.REAL.PROPER.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet88513\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88513\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1f8ac8f3370cc51ad304f3cb9f7cde5f66fff07a&amp;dn=This.Is.Us.S02E01.REAL.PROPER.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="我们这一天 This Is Us  S02E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88513\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>237M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-27</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,1135,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1135);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1135);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1135);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

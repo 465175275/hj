@@ -1,0 +1,1334 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 09:25:48 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d0bfd6bf1e837c4035a1c4a667129e23f1509528348; expires=Thu, 01-Nov-18 09:25:48 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6dcf11901a1e8f-SJC
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>黑吃黑 Banshee-黑吃黑下载-黑吃黑全集下载-Banshee下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="黑吃黑,Banshee,黑吃黑下载,黑吃黑全集下载,黑吃黑高清下载,黑吃黑迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;该剧由《真爱如血》（TrueBlood）制片人AlanBall打造，故事描述曾经坐过牢的诈骗大师兼飞天大盗LucasHood（AntonyStarr）不知悔改，跑到宾夕法尼亚州Banshee镇假冒警长，暗地里仍然干非法勾当。与此同时，多年前遭他背叛的一名黑帮匪徒穷追不舍，誓要将他碎尸万段。和Cinemax其他节目一样，性和暴力是该剧的主要看" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 476;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FBanshee.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FBanshee.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 476;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">黑吃黑 Banshee-黑吃黑下载-黑吃黑全集下载-Banshee下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/2758a3e4bafbcf99.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/2758a3e4bafbcf99.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周六</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：罪案类</span>						
+						<span>最后更新：2016-05-22 09:22</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/476.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">1524</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>	该剧由《真爱如血》（True Blood）制片人Alan Ball打造，故事描述曾经坐过牢的诈骗大师兼飞天大盗Lucas Hood（Antony Starr）不知悔改，跑到宾夕法尼亚州Banshee镇假冒警长，暗地里仍然干非法勾当。与此同时，多年前遭他背叛的一名黑帮匪徒穷追不舍，誓要将他碎尸万段。和Cinemax其他节目一样，性和暴力是该剧的主要看点。	
+	Ivana Milicevic扮演臭名昭著的珠宝大盗Carrie Hopewell，Lucas的旧情人和犯罪搭档。Carrie如今用化名在Banshee镇过着隐居生活，不仅嫁了人，还生了孩子，她的家人对她的犯罪历史完全不知情。Ulrich Thomsen扮演富有的商人Proctor，在当地他的话就是法律，没有人敢挑战他的权威。Frankie Faison扮演一名退役的拳击手，聪明、强势，曾干过诈骗的勾当，如今是当地酒吧的老板。Rus Blackwell扮演战争英雄Gordon Hopewell，Banshee镇上的检察官，是Carrie的丈夫。Ryann Shane扮演Carrie和Gordon的女儿Deva，性格叛逆。Ben Cross扮演冷血无情的乌克兰黑帮成员「兔子先生」，15年来一直在追踪Lucas和Carrie的下落——他们曾是他手下的顶级大盗。Demetrius Grosse扮演曾当过橄榄球运动员的警官Emmett Yawners。Trieste Kelly Dunn扮演性格泼辣的女警官Siobhan Kelly。Matt Servitto扮演Banshee镇警察局服役时间最长的警官Brock Lotus，本有希望成为警长，Lucas的到来威胁到他的地位。Lili Simmons扮演当地一名阿曼门诺派教徒Rebecca Bowman，二十出头，白天是个看似虔诚的宗教信徒、温柔乖巧的女孩，但到了夜里就变成性格叛逆、可以随便和男人上床的交际花。Hoon Lee扮演有异装癖的计算机黑客Job，是Lucas打造犯罪帝国的重要帮手。Daniel Ross Owens扮演镇长Dan Kendall，年轻的理想主义者。	
+	摘自天涯小筑</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="4">
+																			第4季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="3">
+																			第3季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="2">
+																			第2季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="1">
+																			第1季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="59128" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/59128.html">
+																									黑吃黑 Banshee S04E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mhSNZvE" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'59128\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=c3noxr9&amp;f=Banshee.S04E08.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'59128\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5a3ffc24900da979ca56680762fdd175c392b334&amp;dn=Banshee.S04E08.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet59128\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'59128\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5a3ffc24900da979ca56680762fdd175c392b334&amp;dn=Banshee.S04E08.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'59128\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.63G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="59183" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/59183.html">
+																									黑吃黑 Banshee S04E08 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1skK6uct" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'59183\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=64nsdpt&amp;f=Banshee.S04E08.1080p.HDTV.x264-BATV%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'59183\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c65ab1a2879fc8ef95bb32f234b05362e7c9a17d&amp;dn=Banshee.S04E08.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet59183\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'59183\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c65ab1a2879fc8ef95bb32f234b05362e7c9a17d&amp;dn=Banshee.S04E08.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E08 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'59183\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.43G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="59127" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/59127.html">
+																									黑吃黑 Banshee S04E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eRL8ETc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'59127\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=x5svf91&amp;f=Banshee.S04E08.HDTV.x264-KILLERS%5Bettv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'59127\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a73f79897ac56bd6c9159b1234bb50a99d5091b4&amp;dn=Banshee.S04E08.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet59127\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'59127\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a73f79897ac56bd6c9159b1234bb50a99d5091b4&amp;dn=Banshee.S04E08.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'59127\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>483M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="58726" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/58726.html">
+																									黑吃黑 Banshee S04E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSLO8oy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'58726\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=67bypne&amp;f=Banshee.S04E07.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'58726\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:704b3cd97e56a084c1129ae0678d7a78674a17a1&amp;dn=Banshee.S04E07.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet58726\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'58726\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:704b3cd97e56a084c1129ae0678d7a78674a17a1&amp;dn=Banshee.S04E07.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'58726\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>996M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="59126" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/59126.html">
+																									黑吃黑 Banshee S04E07 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nuHWBbj" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'59126\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=tf2bxa5&amp;f=Banshee.S04E07.PROPER.1080p.HDTV.x264-BATV%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'59126\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:97887cc165a26b57b798f47820b869638f59ceb0&amp;dn=Banshee.S04E07.PROPER.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet59126\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'59126\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:97887cc165a26b57b798f47820b869638f59ceb0&amp;dn=Banshee.S04E07.PROPER.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E07 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'59126\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.22G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="58725" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/58725.html">
+																									黑吃黑 Banshee S04E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qXYLgVM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'58725\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=j4bfxe5&amp;f=Banshee.S04E07.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'58725\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ef74085ec009fa06d6432b19af8507033496ae88&amp;dn=Banshee.S04E07.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet58725\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'58725\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ef74085ec009fa06d6432b19af8507033496ae88&amp;dn=Banshee.S04E07.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'58725\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>266M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="58281" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/58281.html">
+																									黑吃黑 Banshee S04E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8u3B5K" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'58281\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6e0e0a6051335134599f62b90b53c0b3a078de2c&amp;dn=Banshee.S04E06.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet58281\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'58281\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6e0e0a6051335134599f62b90b53c0b3a078de2c&amp;dn=Banshee.S04E06.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'58281\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.05G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="58724" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/58724.html">
+																									黑吃黑 Banshee S04E06 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1b2dDUI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'58724\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=h8ir29f&amp;f=Banshee.S04E06.1080p.HDTV.x264-BATV%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'58724\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1e6d0f45c055bc00da39b3e3bad25f19099b01af&amp;dn=Banshee.S04E06.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet58724\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'58724\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1e6d0f45c055bc00da39b3e3bad25f19099b01af&amp;dn=Banshee.S04E06.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E06 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'58724\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.28G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="58280" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/58280.html">
+																									黑吃黑 Banshee S04E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pKA0uQB" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'58280\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:21e983a61a4b76cd6ef440e47750e515b07ae891&amp;dn=Banshee.S04E06.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet58280\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'58280\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:21e983a61a4b76cd6ef440e47750e515b07ae891&amp;dn=Banshee.S04E06.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'58280\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>305M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="57946" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57946.html">
+																									黑吃黑 Banshee S04E05 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i4P5wsX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'57946\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:7C9D75C6D579B41ECAD8FE5A3B5598A671E9D732&amp;dn=Banshee.S04E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet57946\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57946\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7C9D75C6D579B41ECAD8FE5A3B5598A671E9D732&amp;dn=Banshee.S04E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E05 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57946\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>814.9M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-05-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="57801" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57801.html">
+																									黑吃黑 Banshee S04E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSFcoJw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'57801\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2c20b9bf4950e1198ed736b305961240e3e1f522&amp;dn=Banshee.S04E05.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet57801\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57801\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2c20b9bf4950e1198ed736b305961240e3e1f522&amp;dn=Banshee.S04E05.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57801\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.15G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="58279" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/58279.html">
+																									黑吃黑 Banshee S04E05 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1cfYQHw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'58279\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e5b29c624bcb7329a07189305a96f03e4198aa5a&amp;dn=Banshee.S04E05.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet58279\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'58279\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e5b29c624bcb7329a07189305a96f03e4198aa5a&amp;dn=Banshee.S04E05.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E05 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'58279\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.49G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="57800" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57800.html">
+																									黑吃黑 Banshee S04E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qXAxTq0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'57800\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6231e198c5a8edf23554eb986bd164a2157dc0f3&amp;dn=Banshee.S04E05.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet57800\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57800\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6231e198c5a8edf23554eb986bd164a2157dc0f3&amp;dn=Banshee.S04E05.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57800\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>323M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="57750" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57750.html">
+																									黑吃黑 Banshee S04E04 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSyMVqa" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'57750\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:95EA9549C4BC33DD5F9300C1368376A7C4FC2CB0&amp;dn=Banshee.S04E04.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet57750\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57750\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:95EA9549C4BC33DD5F9300C1368376A7C4FC2CB0&amp;dn=Banshee.S04E04.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E04 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57750\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>771.8M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-04-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="56965" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56965.html">
+																									黑吃黑 Banshee S04E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jHED6XS" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'56965\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:33af23215d68520334045c0e02648dc1b4b727ad&amp;dn=Banshee.S04E04.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet56965\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56965\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:33af23215d68520334045c0e02648dc1b4b727ad&amp;dn=Banshee.S04E04.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56965\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.16G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="58278" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/58278.html">
+																									黑吃黑 Banshee S04E04 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sl46LSp" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'58278\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:184df4127a203eda8704d84bf2ffade3d1cba348&amp;dn=Banshee.S04E04.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet58278\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'58278\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:184df4127a203eda8704d84bf2ffade3d1cba348&amp;dn=Banshee.S04E04.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E04 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'58278\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.54G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="56964" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56964.html">
+																									黑吃黑 Banshee S04E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSpt3QM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'56964\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f22e7380ebad3da0499e784d708f18226da0c112&amp;dn=Banshee.S04E04.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet56964\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56964\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f22e7380ebad3da0499e784d708f18226da0c112&amp;dn=Banshee.S04E04.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56964\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>330M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="57749" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57749.html">
+																									黑吃黑 Banshee S04E03 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mh5fS5U" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'57749\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:BD6061D22B25EDE9EF01EDE662BABA3FCCAF03D3&amp;dn=Banshee.S04E03.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet57749\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57749\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:BD6061D22B25EDE9EF01EDE662BABA3FCCAF03D3&amp;dn=Banshee.S04E03.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E03 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57749\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>793.1M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-04-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="56962" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56962.html">
+																									黑吃黑 Banshee S04E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:077b3a5c18a1c9e6788656e6e2ce3ae0609bc570&amp;dn=Banshee.S04E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet56962\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56962\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:077b3a5c18a1c9e6788656e6e2ce3ae0609bc570&amp;dn=Banshee.S04E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56962\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.62G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="56963" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56963.html">
+																									黑吃黑 Banshee S04E03 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0452b2b9c880912a44e48c4fcd935bcf4f0e67d9&amp;dn=Banshee.S04E03.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet56963\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56963\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0452b2b9c880912a44e48c4fcd935bcf4f0e67d9&amp;dn=Banshee.S04E03.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E03 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56963\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.72G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="56961" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56961.html">
+																									黑吃黑 Banshee S04E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5f3bc5c2084a249e7296a98e76655998d7e40b8c&amp;dn=Banshee.S04E03.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet56961\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56961\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5f3bc5c2084a249e7296a98e76655998d7e40b8c&amp;dn=Banshee.S04E03.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56961\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>403M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="57748" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57748.html">
+																									黑吃黑 Banshee S04E02 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1skJOyZF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'57748\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:DC33BC07FEE86D43EA6F67B4B334D8EA395B764D&amp;dn=Banshee.S04E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet57748\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57748\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:DC33BC07FEE86D43EA6F67B4B334D8EA395B764D&amp;dn=Banshee.S04E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E02 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57748\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>733M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-04-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="56958" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56958.html">
+																									黑吃黑 Banshee S04E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:a33bd27e439b9770cfced526915def01c8d5a255&amp;dn=Banshee.S04E02.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet56958\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56958\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a33bd27e439b9770cfced526915def01c8d5a255&amp;dn=Banshee.S04E02.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56958\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.10G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="56960" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56960.html">
+																									黑吃黑 Banshee S04E02 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ce1e02bae6b87dd445905bce3248f553904204e1&amp;dn=Banshee.S04E02.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet56960\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56960\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ce1e02bae6b87dd445905bce3248f553904204e1&amp;dn=Banshee.S04E02.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E02 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56960\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.44G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="56957" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56957.html">
+																									黑吃黑 Banshee S04E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d84a3c19f0827a7281072cbb72f8b97b4933ee08&amp;dn=Banshee.S04E02.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet56957\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56957\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d84a3c19f0827a7281072cbb72f8b97b4933ee08&amp;dn=Banshee.S04E02.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56957\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>310M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="56460" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56460.html">
+																									黑吃黑 Banshee S04E01 720p FIX字幕侠 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1boRIhtl" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'56460\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1BF2E8235B531481A6418627AC18436C59BBACFF&amp;dn=Banshee.S04E01.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet56460\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56460\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1BF2E8235B531481A6418627AC18436C59BBACFF&amp;dn=Banshee.S04E01.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E01 720p FIX字幕侠 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56460\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>903M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-04-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="56364" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56364.html">
+																									黑吃黑 Banshee S04E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jH7QWZk" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'56364\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:62d1f53b75a008a1ab7f8ab6ebaa19ef2303571f&amp;dn=Banshee.S04E01.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet56364\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56364\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:62d1f53b75a008a1ab7f8ab6ebaa19ef2303571f&amp;dn=Banshee.S04E01.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56364\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.47G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="56959" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56959.html">
+																									黑吃黑 Banshee S04E01 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:51e82d6e37c5612a368a95cd73a5939aa5615e81&amp;dn=Banshee.S04E01.INTERNAL.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet56959\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56959\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:51e82d6e37c5612a368a95cd73a5939aa5615e81&amp;dn=Banshee.S04E01.INTERNAL.1080p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E01 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56959\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.28G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="56363" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56363.html">
+																									黑吃黑 Banshee S04E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mhFU0oK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'56363\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2543093C7E602B2B329B1FC09099378D7BB3C7A3&amp;dn=banshee+s04e01+hdtv+x264+killers+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.co" rel="nofollow" target="_blank" name=\'magnet56363\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56363\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2543093C7E602B2B329B1FC09099378D7BB3C7A3&amp;dn=banshee+s04e01+hdtv+x264+killers+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.co" rel="nofollow" name=\'miurl\' filename="黑吃黑 Banshee S04E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56363\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>437G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-02</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,476,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,476);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,476);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,476);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

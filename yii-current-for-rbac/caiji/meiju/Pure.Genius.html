@@ -1,0 +1,1854 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:08:01 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=dc226a6fbe4eba360d0aa8f35ff5ba43d1509534481; expires=Thu, 01-Nov-18 11:08:01 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e64cd03f82294-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>天才医院 Pure Genius-天才医院下载-天才医院全集下载-Pure Genius下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="天才医院,Pure Genius,天才医院下载,天才医院全集下载,天才医院高清下载,天才医院迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;&lt;spanstyle=&quot;color:rgb(17,17,17);font-family:Helvetica,Arial,sans-serif;font-size:12px;background-color:rgb(255,255,255);&quot;&gt;《天才医院PureGenius》由JasonKatims编剧及当执" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1194;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FPure.Genius.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FPure.Genius.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1194;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">天才医院 Pure Genius-天才医院下载-天才医院全集下载-Pure Genius下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/46d298370b1c098f.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/46d298370b1c098f.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周五</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：喜剧类</span>						
+						<span>最后更新：2017-02-09 18:19</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1194.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">105</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p><span style="color: rgb(17, 17, 17); font-family: Helvetica, Arial, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">《天才医院 Pure Genius》由Jason Katims编剧及当执行制片，</span><span style="color: rgb(17, 17, 17); font-family: Helvetica, Arial, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);">Augustus Prew饰演一名年轻的硅谷科技巨头James Bell，像有无穷能量的他，外表无情﹑反传统，像是天才但又像个疯子似的；但他对医疗的决心，以及对别人的吸引力可是无容置疑。在预告可见他患上了种未有治疗方法的遗传病，正在致力找出解决办法。他为医院拉来了一位资深外科医生Walter Wallace（Dermot Mulroney饰），他有着争议的过去，虽然他在救人上是个天才，但他对病患却有种冷漠的感觉。&nbsp;</span></p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="73718" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/73718.html">
+																									天才医院 Pure Genius  S01E13 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIqg1Ae" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'73718\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=8dvrweo&amp;f=Pure.Genius.S01E13.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'73718\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2d3d26c2b281166c2f2ed3637bc49e42499861fa&amp;dn=Pure.Genius.S01E13.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet73718\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'73718\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2d3d26c2b281166c2f2ed3637bc49e42499861fa&amp;dn=Pure.Genius.S01E13.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E13 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'73718\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.66G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="74003" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74003.html">
+																									天才医院 Pure Genius  S01E13 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bpDv6iz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'74003\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d6e47d95aae59435bf69a059b834ab9478afeed0&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet74003\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74003\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E13.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|526006668|1c5df9bc151ddcd8d6c30bca156c0281|h=662yhv22csnma2kiypkdbao2ae2kogv2|/" rel="nofollow" target="_blank" name=\'ed2k74003\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'74003\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:d6e47d95aae59435bf69a059b834ab9478afeed0&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E13 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74003\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>501.6M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="73717" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/73717.html">
+																									天才医院 Pure Genius  S01E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i4PenxN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'73717\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=gdc2hbu&amp;f=Pure.Genius.S01E13.720p.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'73717\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:fd005c69842e7dbec767ecbb467812bd57a2b6ba&amp;dn=Pure.Genius.S01E13.720p.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet73717\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'73717\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fd005c69842e7dbec767ecbb467812bd57a2b6ba&amp;dn=Pure.Genius.S01E13.720p.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'73717\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>908M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="73716" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/73716.html">
+																									天才医院 Pure Genius  S01E13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bpch42j" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'73716\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ylm6uxc&amp;f=Pure.Genius.S01E13.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'73716\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:59189d6e1644e3cd1b279fe3bf95178c5a6d1f00&amp;dn=Pure.Genius.S01E13.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet73716\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'73716\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:59189d6e1644e3cd1b279fe3bf95178c5a6d1f00&amp;dn=Pure.Genius.S01E13.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E13 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'73716\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>235M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="72726" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/72726.html">
+																									天才医院 Pure Genius  S01E12 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qXL1wcO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'72726\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=phfvgse&amp;f=Pure.Genius.S01E12.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'72726\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ab414f09d25aa13dd33ec8b8916bcb7e71691387&amp;dn=Pure.Genius.S01E12.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet72726\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'72726\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ab414f09d25aa13dd33ec8b8916bcb7e71691387&amp;dn=Pure.Genius.S01E12.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E12 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'72726\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.70G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="73030" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/73030.html">
+																									天才医院 Pure Genius  S01E12 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nuF2hdB" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'73030\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E12.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|504821702|73963a5ed842b06bbc311b37db7d2e5b|h=onkzq6zyxw4lxagthrzgigb2i2xdvnhw|/" rel="nofollow" target="_blank" name=\'magnet73030\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'73030\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E12.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|504821702|73963a5ed842b06bbc311b37db7d2e5b|h=onkzq6zyxw4lxagthrzgigb2i2xdvnhw|/" rel="nofollow" target="_blank" name=\'ed2k73030\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'73030\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E12.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|504821702|73963a5ed842b06bbc311b37db7d2e5b|h=onkzq6zyxw4lxagthrzgigb2i2xdvnhw|/" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E12 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'73030\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>481.4M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="72627" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/72627.html">
+																									天才医院 Pure Genius  S01E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1sljLS5J" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'72627\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=hlgbqwd&amp;f=Pure.Genius.S01E12.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'72627\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:61a9a0c9947d3e6acb455fbf8423893d7cdf7241&amp;dn=Pure.Genius.S01E12.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet72627\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'72627\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:61a9a0c9947d3e6acb455fbf8423893d7cdf7241&amp;dn=Pure.Genius.S01E12.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'72627\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>878M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="72626" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/72626.html">
+																									天才医院 Pure Genius  S01E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dEBEwiH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'72626\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=gthwm42&amp;f=Pure.Genius.S01E12.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'72626\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3a3da5e14151a1f5fcc880c2f9ed845b631808cd&amp;dn=Pure.Genius.S01E12.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet72626\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'72626\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3a3da5e14151a1f5fcc880c2f9ed845b631808cd&amp;dn=Pure.Genius.S01E12.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'72626\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>242M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="72152" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/72152.html">
+																									天才医院 Pure Genius  S01E11 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jH5yntG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'72152\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=spaljvx&amp;f=Pure.Genius.S01E11.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'72152\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0cc9bc17e0f2a35853c0a4a1a0c14f43a9f0f17b&amp;dn=Pure.Genius.S01E11.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet72152\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'72152\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0cc9bc17e0f2a35853c0a4a1a0c14f43a9f0f17b&amp;dn=Pure.Genius.S01E11.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E11 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'72152\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.69G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="72408" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/72408.html">
+																									天才医院 Pure Genius  S01E11 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jHIV9nK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'72408\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:a1a7a4403faa088cce843c1f1c2bf86aa3d88e78&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet72408\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'72408\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E11.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|576582065|5fbb56882248322701f8a00b671c7e28|h=4cx2yp7fjck5ftv74vkrmb7hpezm2qz2|/" rel="nofollow" target="_blank" name=\'ed2k72408\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'72408\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:a1a7a4403faa088cce843c1f1c2bf86aa3d88e78&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E11 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'72408\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>549.8M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="72048" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/72048.html">
+																									天才医院 Pure Genius  S01E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c3mQXC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'72048\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=8slmj21&amp;f=Pure.Genius.S01E11.720p.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'72048\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b4015a9cf4195553b19a9b0077277370498c25c8&amp;dn=Pure.Genius.S01E11.720p.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet72048\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'72048\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b4015a9cf4195553b19a9b0077277370498c25c8&amp;dn=Pure.Genius.S01E11.720p.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'72048\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="72047" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/72047.html">
+																									天才医院 Pure Genius  S01E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i5htVNn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'72047\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=qn54dse&amp;f=Pure.Genius.S01E11.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'72047\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d1741070e2392c9038735dd5f66045dc0afd1efe&amp;dn=Pure.Genius.S01E11.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet72047\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'72047\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d1741070e2392c9038735dd5f66045dc0afd1efe&amp;dn=Pure.Genius.S01E11.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'72047\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>266M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71745" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71745.html">
+																									天才医院 Pure Genius  S01E10 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1skLyHtV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71745\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=8ma4jwk&amp;f=Pure.Genius.S01E10.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'71745\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e1ba101617cd06324b011af520746f2426e3d5c3&amp;dn=Pure.Genius.S01E10.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet71745\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71745\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e1ba101617cd06324b011af520746f2426e3d5c3&amp;dn=Pure.Genius.S01E10.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E10 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71745\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.64G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="71823" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71823.html">
+																									天才医院 Pure Genius  S01E10 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1boLlwir" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71823\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0462af807932735d1be3fa9c7556b15846f5cfa4&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet71823\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71823\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E10.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|517292956|92249edfd52461e2c1bbe279ae30a335|h=73ka7awvyiicylr7wt2jsmgjnjpkwk5d|/" rel="nofollow" target="_blank" name=\'ed2k71823\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71823\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:0462af807932735d1be3fa9c7556b15846f5cfa4&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E10 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71823\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>493.3M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71580" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71580.html">
+																									天才医院 Pure Genius  S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mhAJv3y" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71580\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=m3cb9fj&amp;f=Pure.Genius.S01E10.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'71580\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:876d5601b27066b3f49ba4e43e9d53d24b4202b2&amp;dn=Pure.Genius.S01E10.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet71580\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71580\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:876d5601b27066b3f49ba4e43e9d53d24b4202b2&amp;dn=Pure.Genius.S01E10.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71580\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="71579" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71579.html">
+																									天才医院 Pure Genius  S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dFp9oxr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71579\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=7rkne9c&amp;f=Pure.Genius.S01E10.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'71579\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:66ec7ca2cfda2d5bf68b542a31bbbce944f823d2&amp;dn=Pure.Genius.S01E10.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet71579\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71579\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:66ec7ca2cfda2d5bf68b542a31bbbce944f823d2&amp;dn=Pure.Genius.S01E10.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71579\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>257M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71395" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71395.html">
+																									天才医院 Pure Genius  S01E09 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVHhidT" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71395\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=49zho8e&amp;f=Pure.Genius.S01E09.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'71395\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e4bcc67a5db0474234eaacead0189a89fc1ef2fe&amp;dn=Pure.Genius.S01E09.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet71395\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71395\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e4bcc67a5db0474234eaacead0189a89fc1ef2fe&amp;dn=Pure.Genius.S01E09.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E09 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71395\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.68G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="71483" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71483.html">
+																									天才医院 Pure Genius  S01E09 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bpmpIJ9" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71483\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c3b07c0e1f2cbd069d53fcbd5bf6c58b6949d4d4&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet71483\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71483\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E09.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|477836775|20967f940fde885771c7d85aca0c6e54|h=lfid22iwhazkpqd66elvvf6fxac2t43e|/" rel="nofollow" target="_blank" name=\'ed2k71483\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'71483\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:c3b07c0e1f2cbd069d53fcbd5bf6c58b6949d4d4&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E09 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71483\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>455.7M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71361" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71361.html">
+																									天才医院 Pure Genius  S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1geW7Xab" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71361\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=m7b3glo&amp;f=Pure.Genius.S01E09.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'71361\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:73b93b2377eea096e943a694d71ca8863982e2c1&amp;dn=Pure.Genius.S01E09.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet71361\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71361\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:73b93b2377eea096e943a694d71ca8863982e2c1&amp;dn=Pure.Genius.S01E09.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71361\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>786M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="71360" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71360.html">
+																									天才医院 Pure Genius  S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mh5ZxZM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71360\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=5yptxvg&amp;f=Pure.Genius.S01E09.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'71360\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:967968e875459089fb7950e1fb5c0d9ae0f37a75&amp;dn=Pure.Genius.S01E09.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet71360\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71360\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:967968e875459089fb7950e1fb5c0d9ae0f37a75&amp;dn=Pure.Genius.S01E09.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius  S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71360\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>235M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70810" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70810.html">
+																									天才医院 Pure Genius S01E08 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nvhksKp" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70810\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=x4lic3z&amp;f=Pure.Genius.S01E08.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70810\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a3a5cc4796d93b031167768ca868575900fcf8c6&amp;dn=Pure.Genius.S01E08.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70810\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70810\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a3a5cc4796d93b031167768ca868575900fcf8c6&amp;dn=Pure.Genius.S01E08.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E08 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70810\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.67G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70972" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70972.html">
+																									天才医院 Pure Genius S01E08 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i4KsokP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70972\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ae854c596e475766f93d6657558e846673239f40&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet70972\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70972\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E08.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|429517750|bc9b3be5e339f4f9657a9602819f65b0|h=saanvwa3dgl5ggovbfqxtmjs4dshtk3s|/" rel="nofollow" target="_blank" name=\'ed2k70972\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'70972\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:ae854c596e475766f93d6657558e846673239f40&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E08 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70972\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>409.6M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70713" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70713.html">
+																									天才医院 Pure Genius S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mhIjNwG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70713\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=anpsu2r&amp;f=Pure.Genius.S01E08.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70713\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:03a5c2506eea93f2370ffa39aa63ce31c490c38d&amp;dn=Pure.Genius.S01E08.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70713\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70713\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:03a5c2506eea93f2370ffa39aa63ce31c490c38d&amp;dn=Pure.Genius.S01E08.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70713\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>724M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70712" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70712.html">
+																									天才医院 Pure Genius S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eR4iSl8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70712\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=4ltwgaq&amp;f=Pure.Genius.S01E08.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70712\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a455da0f6a1061ffc4fa43da883459d29fb61652&amp;dn=Pure.Genius.S01E08.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70712\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70712\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a455da0f6a1061ffc4fa43da883459d29fb61652&amp;dn=Pure.Genius.S01E08.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70712\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>220M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70371" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70371.html">
+																									天才医院 Pure Genius S01E07 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pKQkPM7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70371\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=f1z6cdm&amp;f=Pure.Genius.S01E07.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70371\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7f1286d1845872e41764fa1c76f74bd91d88115b&amp;dn=Pure.Genius.S01E07.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70371\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70371\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7f1286d1845872e41764fa1c76f74bd91d88115b&amp;dn=Pure.Genius.S01E07.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E07 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70371\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.71G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70479" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70479.html">
+																									天才医院 Pure Genius S01E07 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nvi6jUx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70479\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2f47c428bc2dc45f5bf11a9f2c6c0b67f457b7a5&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet70479\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70479\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E07.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|459674668|ff0de1ae34c5dbf45ae484a62708be64|h=fziu7bi3fvuuz6t4ouleqlvl2nx4vtas|/" rel="nofollow" target="_blank" name=\'ed2k70479\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'70479\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:2f47c428bc2dc45f5bf11a9f2c6c0b67f457b7a5&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E07 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70479\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>438.3M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="70271" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70271.html">
+																									天才医院 Pure Genius S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i5fWawt" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70271\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ix3p976&amp;f=Pure.Genius.S01E07.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70271\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d3c3af5f28056ec0e264075df11dbb1fdfda25f3&amp;dn=Pure.Genius.S01E07.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70271\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70271\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d3c3af5f28056ec0e264075df11dbb1fdfda25f3&amp;dn=Pure.Genius.S01E07.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70271\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>759M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="70270" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70270.html">
+																									天才医院 Pure Genius S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1slCjNOh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70270\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=vk7buch&amp;f=Pure.Genius.S01E07.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'70270\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a1a3623ad340214ac19255b2da48d573a2ee4f4b&amp;dn=Pure.Genius.S01E07.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet70270\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'70270\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a1a3623ad340214ac19255b2da48d573a2ee4f4b&amp;dn=Pure.Genius.S01E07.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70270\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>223M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="69882" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69882.html">
+																									天才医院 Pure Genius S01E06 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mhKkSL6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69882\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=rstexg4&amp;f=Pure.Genius.S01E06.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69882\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9f4b9694699f481ce03b34f16cfb6c8711e31b88&amp;dn=Pure.Genius.S01E06.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet69882\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69882\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9f4b9694699f481ce03b34f16cfb6c8711e31b88&amp;dn=Pure.Genius.S01E06.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E06 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69882\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.59G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69986" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69986.html">
+																									天才医院 Pure Genius S01E06 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qXIbCWs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69986\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0c42c7a3fd5e46fe47394b38150115df6d917a38&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet69986\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69986\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E06.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|452110529|f7122379ffaad09303984216f12ad331|h=nkz4gtgkuqouqqulwmwcjyrlatvnofow|/" rel="nofollow" target="_blank" name=\'ed2k69986\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'69986\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:0c42c7a3fd5e46fe47394b38150115df6d917a38&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E06 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69986\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>431.1M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="69779" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69779.html">
+																									天才医院 Pure Genius S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o84NTkm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69779\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=4832vhc&amp;f=Pure.Genius.S01E06.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69779\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:de49a5bda7decba7028f8a9a57b49950207ae63f&amp;dn=Pure.Genius.S01E06.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet69779\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69779\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:de49a5bda7decba7028f8a9a57b49950207ae63f&amp;dn=Pure.Genius.S01E06.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69779\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>754M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69778" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69778.html">
+																									天才医院 Pure Genius S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVAtHB5" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69778\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=x4uesz9&amp;f=Pure.Genius.S01E06.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69778\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5538c19725e1ea44718e93b9a27628f182636502&amp;dn=Pure.Genius.S01E06.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet69778\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69778\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5538c19725e1ea44718e93b9a27628f182636502&amp;dn=Pure.Genius.S01E06.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69778\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>224M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-12-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="69386" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69386.html">
+																									天才医院 Pure Genius S01E05 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVv0qEF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69386\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ewnjif4&amp;f=Pure.Genius.S01E05.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69386\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:fadf2c6c317f0f2173ca791fef7f69ec1a4bcd8c&amp;dn=Pure.Genius.S01E05.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet69386\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69386\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fadf2c6c317f0f2173ca791fef7f69ec1a4bcd8c&amp;dn=Pure.Genius.S01E05.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E05 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69386\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.66G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69555" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69555.html">
+																									天才医院 Pure Genius S01E05 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qXUSjM0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69555\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b924c2b6bfda609b7dc14e524e7f00b925d9ed5f&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet69555\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69555\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E05.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|492799929|11b90f6dea32ff5cc80f5e43295f4d5d|h=mhuqxojsodws5mfdqxi3y5nayy3yvpmq|/" rel="nofollow" target="_blank" name=\'ed2k69555\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'69555\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:b924c2b6bfda609b7dc14e524e7f00b925d9ed5f&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E05 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69555\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>469.9M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="69317" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69317.html">
+																									天才医院 Pure Genius S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1cvcEqM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69317\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=c26dzor&amp;f=Pure.Genius.S01E05.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69317\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:36191e8fe5cded2d3aea40c385cd53b302da45da&amp;dn=Pure.Genius.S01E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet69317\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69317\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:36191e8fe5cded2d3aea40c385cd53b302da45da&amp;dn=Pure.Genius.S01E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69317\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>815M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69316" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69316.html">
+																									天才医院 Pure Genius S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jHB1eD4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69316\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=zp7tjg4&amp;f=Pure.Genius.S01E05.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'69316\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:15b33f528912584cc3852dca7bc6690246c8fc62&amp;dn=Pure.Genius.S01E05.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet69316\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69316\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:15b33f528912584cc3852dca7bc6690246c8fc62&amp;dn=Pure.Genius.S01E05.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69316\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>241M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68919" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68919.html">
+																									天才医院 Pure Genius S01E04 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i4W12cP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68919\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=iht9bq6&amp;f=Pure.Genius.S01E04.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68919\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:47ca4cee8eb34c659a2a28c1bfb293a14bdb1cf1&amp;dn=Pure.Genius.S01E04.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68919\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68919\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:47ca4cee8eb34c659a2a28c1bfb293a14bdb1cf1&amp;dn=Pure.Genius.S01E04.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E04 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68919\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.68G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69070" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69070.html">
+																									天才医院 Pure Genius S01E04 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qY2HU36" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69070\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c1d142deb8b0bf2dd034bbb4d6bed50afdd5cbba&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" name=\'magnet69070\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69070\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E04.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|438132674|ec567e27b2d05463a30a9e72df1b2011|h=rm3ohnz4fmgl37qs2ujn65ngotnfalkv|/" rel="nofollow" target="_blank" name=\'ed2k69070\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'69070\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:c1d142deb8b0bf2dd034bbb4d6bed50afdd5cbba&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E04 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69070\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>417.2M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68844" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68844.html">
+																									天才医院 Pure Genius S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hswRUPu" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68844\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=vpz9tka&amp;f=Pure.Genius.S01E04.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68844\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a8d812f83935e86391ee6a6b22b953541b1adeb1&amp;dn=Pure.Genius.S01E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68844\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68844\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a8d812f83935e86391ee6a6b22b953541b1adeb1&amp;dn=Pure.Genius.S01E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68844\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>726M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68843" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68843.html">
+																									天才医院 Pure Genius S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8nSn0Y" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68843\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=rgw9lfq&amp;f=Pure.Genius.S01E04.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68843\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1afa1ef06a44c4ff89c840a8b521dd914b41ef64&amp;dn=Pure.Genius.S01E04.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68843\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68843\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1afa1ef06a44c4ff89c840a8b521dd914b41ef64&amp;dn=Pure.Genius.S01E04.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68843\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>213M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68374" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68374.html">
+																									天才医院 Pure Genius S01E03 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVyhtER" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68374\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=zlpvh8g&amp;f=Pure.Genius.S01E03.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68374\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b7290f19296a8d1e1ca5b61e0e5a8e9d9ddf2391&amp;dn=Pure.Genius.S01E03.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68374\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68374\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b7290f19296a8d1e1ca5b61e0e5a8e9d9ddf2391&amp;dn=Pure.Genius.S01E03.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E03 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68374\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.70G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69054" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69054.html">
+																									天才医院 Pure Genius S01E03 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sk84W4t" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69054\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b92368f1868841ed30c775cc8868d0cc9ae6aa2d&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" name=\'magnet69054\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'69054\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E03.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|563859523|1c9565c124c6796b1697b473b1d8ccf2|h=ml5ghnuoppiwp4glem7xjle5klese5kb|/" rel="nofollow" target="_blank" name=\'ed2k69054\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'69054\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:b92368f1868841ed30c775cc8868d0cc9ae6aa2d&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E03 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69054\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>533.4M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68293" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68293.html">
+																									天才医院 Pure Genius S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c2KGrTm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68293\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=3vdacrn&amp;f=Pure.Genius.S01E03.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68293\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c9da1b662a1380c336fb66fec38c65c97b90c385&amp;dn=Pure.Genius.S01E03.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68293\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68293\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c9da1b662a1380c336fb66fec38c65c97b90c385&amp;dn=Pure.Genius.S01E03.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68293\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68292" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68292.html">
+																									天才医院 Pure Genius S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qYOv7zA" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68292\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=g7cymqb&amp;f=Pure.Genius.S01E03.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68292\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:eb4edde60992a44f90408e42349060856c2afc86&amp;dn=Pure.Genius.S01E03.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68292\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68292\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:eb4edde60992a44f90408e42349060856c2afc86&amp;dn=Pure.Genius.S01E03.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68292\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>263M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68367" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68367.html">
+																									天才医院 Pure Genius S01E02 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jIlsmRs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68367\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ilhspu5&amp;f=Pure.Genius.S01E02.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68367\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:20eba0c0c271fea05a672281146c2eda5ee7d21b&amp;dn=Pure.Genius.S01E02.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68367\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68367\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:20eba0c0c271fea05a672281146c2eda5ee7d21b&amp;dn=Pure.Genius.S01E02.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E02 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68367\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.68G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="67464" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67464.html">
+																									天才医院 Pure Genius S01E02 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gf2ZHM7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67464\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:725392c63f2482d106b7c4c5fff7b970d685fd72&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" name=\'magnet67464\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67464\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E02.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|573483551|4a46c3a4f1aceb41db80fbf7eb91f881|h=6rkscj2572cv7xj6b7uuaii2lidb25eg|/" rel="nofollow" target="_blank" name=\'ed2k67464\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'67464\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:725392c63f2482d106b7c4c5fff7b970d685fd72&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E02 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67464\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>546.9M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67849" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67849.html">
+																									天才医院 Pure Genius S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mifOdoW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67849\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=1bschrn&amp;f=Pure.Genius.S01E02.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67849\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:48e5eeb944a5048415f23a0e7663f73c4859c4ba&amp;dn=Pure.Genius.S01E02.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67849\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67849\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:48e5eeb944a5048415f23a0e7663f73c4859c4ba&amp;dn=Pure.Genius.S01E02.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67849\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.0G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="67848" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67848.html">
+																									天才医院 Pure Genius S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o768e0q" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67848\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=3j4id6q&amp;f=Pure.Genius.S01E02.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67848\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ff511a15b486462ce62d9d4887f300007cd22c48&amp;dn=Pure.Genius.S01E02.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67848\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67848\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ff511a15b486462ce62d9d4887f300007cd22c48&amp;dn=Pure.Genius.S01E02.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67848\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>283M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67361" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67361.html">
+																									天才医院 Pure Genius S01E01 1080p  WEB-DL											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o79pFJ0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67361\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=q2xwsrt&amp;f=Pure.Genius.S01E01.1080p.WEB-DL.DD5.1.H264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67361\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7d4b8a6872bc3c2320d68e55a72eb4c65671037d&amp;dn=Pure.Genius.S01E01.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67361\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67361\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7d4b8a6872bc3c2320d68e55a72eb4c65671037d&amp;dn=Pure.Genius.S01E01.1080p.WEB-DL.DD5.1.H264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E01 1080p  WEB-DL" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67361\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.70G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="67462" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67462.html">
+																									天才医院 Pure Genius S01E01 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i58vuKH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67462\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e4fd8cc8787908991b2b18d6e9ec3d81b6f001fc&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" name=\'magnet67462\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67462\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%A4%A9%E6%89%8D%E5%8C%BB%E9%99%A2.Pure.Genius.S01E01.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|588885710|e60e11a33c4323afb43e0e0b9b33c6cf|h=zlis6rutdkh7gmxbao4rascu67xemgum|/" rel="nofollow" target="_blank" name=\'ed2k67462\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'67462\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:e4fd8cc8787908991b2b18d6e9ec3d81b6f001fc&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E01 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67462\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>561.6M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67360" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67360.html">
+																									天才医院 Pure Genius S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1miln2SK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67360\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=zqf2568&amp;f=Pure.Genius.S01E01.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67360\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4b5064c176d49de47fcf5561f64ac02ebb83f764&amp;dn=Pure.Genius.S01E01.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67360\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67360\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4b5064c176d49de47fcf5561f64ac02ebb83f764&amp;dn=Pure.Genius.S01E01.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67360\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.12G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="67359" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67359.html">
+																									天才医院 Pure Genius S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2sptIC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67359\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ca8z4tx&amp;f=Pure.Genius.S01E01.WEB-DL.x264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67359\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:652d8f6141a40f709ebcef1d225df81406da8d13&amp;dn=Pure.Genius.S01E01.WEB-DL.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67359\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67359\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:652d8f6141a40f709ebcef1d225df81406da8d13&amp;dn=Pure.Genius.S01E01.WEB-DL.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="天才医院 Pure Genius S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67359\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>288M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-10-29</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,1194,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1194);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1194);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1194);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

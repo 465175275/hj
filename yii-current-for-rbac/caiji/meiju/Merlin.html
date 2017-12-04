@@ -1,0 +1,1308 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:09:44 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d0ccc5142963d876862323af636db3e7c1509534584; expires=Thu, 01-Nov-18 11:09:44 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e6750d44553f0-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>梅林传奇 Merlin-梅林传奇下载-梅林传奇全集下载-Merlin下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="梅林传奇,Merlin,梅林传奇下载,梅林传奇全集下载,梅林传奇高清下载,梅林传奇迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;《梅林传奇》由英国BBC制作，讲述梅林和亚瑟早年的生活。本剧将以全新的现代视角诠释古老而经典的亚瑟王传说，展示观众们从未见过的新奇领域??大法师梅林的年轻时代。故事将从少年梅林第一次踏进卡梅洛特城开始。君王尤瑟王二十年前颁布过一道命令，禁止在国内使用任何魔法，而年少气盛的梅林却被先" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 262;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FMerlin.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FMerlin.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 262;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">梅林传奇 Merlin-梅林传奇下载-梅林传奇全集下载-Merlin下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/e9e3c45a3287991d.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/e9e3c45a3287991d.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周日</span>
+						<span>状态：剧终</span>
+						<span class="greybg">分类：奇幻类</span>						
+						<span>最后更新：2014-09-13 20:17</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/262.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">84</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>
+			
+			
+			
+			&nbsp;&nbsp;&nbsp; 《梅林传奇》由英国BBC制作，讲述梅林和亚瑟早年的生活。本剧将以全新的现代视角诠释古老而经典的亚瑟王传说，展示观众们从未见过的新奇领域??大法师梅林的年轻时代。故事将从少年梅林第一次踏进卡梅洛特城开始。君王尤瑟王二十年前颁布过一道命令，禁止在国内使用任何魔法，而年少气盛的梅林却被先天给予了魔法。　　　本剧根据亚瑟王与魔法师梅林的故事改编。与传说不同的是，本剧中的梅林不再是白发老者，而是一位初出茅庐的少年，故事将着重讲述年轻的梅林如何认识自己的使命，与亚瑟王子化敌为友拯救魔法世界。随着剧情的展开，圆桌骑士、湖中精灵等等传说中的角色也将一一登场。　
+&nbsp;			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="5">
+																			第5季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="4">
+																			第4季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="15590" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15590.html">
+																									梅林传奇 Merlin S05E13 720p 全剧终 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/803DB67EC088F83569B94DF154EA5ADDA9FC9BA0.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15590\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:803db67ec088f83569b94df154ea5adda9fc9ba0&amp;dn=Merlin_2008.5x13.The_Diamond_Of_The_Day_Part_Two.720p_HDTV_x264-FoV&amp;tr=http%3a%2f%2f10.rarbg.com%3a80&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710&amp;tr=udp%3a%2f%2f11.rarbg.com%3a80&amp;t" rel="nofollow" target="_blank" name=\'magnet15590\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15590\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:803db67ec088f83569b94df154ea5adda9fc9ba0&amp;dn=Merlin_2008.5x13.The_Diamond_Of_The_Day_Part_Two.720p_HDTV_x264-FoV&amp;tr=http%3a%2f%2f10.rarbg.com%3a80&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710&amp;tr=udp%3a%2f%2f11.rarbg.com%3a80&amp;t" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E13 720p 全剧终 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15590\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>910M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="15589" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15589.html">
+																									梅林传奇 Merlin S05E13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=146287&amp;uk=1043054401&amp;third=0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'15589\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/D2E39EE31C1CCBD0646D8F3E23367D4CC8DE825F.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15589\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d2e39ee31c1ccbd0646d8f3e23367d4cc8de825f&amp;dn=Merlin_2008.5x13.The_Diamond_Of_The_Day_Part_Two.HDTV_x264-FoV&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker." rel="nofollow" target="_blank" name=\'magnet15589\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15589\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d2e39ee31c1ccbd0646d8f3e23367d4cc8de825f&amp;dn=Merlin_2008.5x13.The_Diamond_Of_The_Day_Part_Two.HDTV_x264-FoV&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker." rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E13 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15589\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>317M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="15562" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15562.html">
+																									梅林传奇 Merlin S05E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/B6B04DD6118DDDF9A1A687CF50717B45E6E3BA25.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15562\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:W2YE3VQRRXO7TINGQ7HVA4L3IXTOHORF&amp;dn=Merlin+2008+5x12+The+Diamond+Of+The+Day+Part+One+720p+HDTV+x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbitto" rel="nofollow" target="_blank" name=\'magnet15562\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15562\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:W2YE3VQRRXO7TINGQ7HVA4L3IXTOHORF&amp;dn=Merlin+2008+5x12+The+Diamond+Of+The+Day+Part+One+720p+HDTV+x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbitto" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15562\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>584M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="15561" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15561.html">
+																									梅林传奇 Merlin S05E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=144728&amp;uk=1043054401&amp;third=0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'15561\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/B298A34B02D6F5D97898C63E17198BA7E603B153.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15561\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:WKMKGSYC2325S6EYYY7BOGMLU7TAHMKT&amp;dn=Merlin.2008.5x12.The.Diamond.Of.The.Day.Part.One.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet15561\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15561\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:WKMKGSYC2325S6EYYY7BOGMLU7TAHMKT&amp;dn=Merlin.2008.5x12.The.Diamond.Of.The.Day.Part.One.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15561\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>231M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="15338" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15338.html">
+																									梅林传奇 Merlin S05E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/DCF570498505DE6B2FD3C40C84C266397A7A6A12.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15338\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:dcf570498505de6b2fd3c40c84c266397a7a6a12&amp;dn=Merlin+2008+5x11+The+Drawing+Of+The+Dark+720p+HDTV+x264-FoV+%5BPub&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" target="_blank" name=\'magnet15338\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15338\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:dcf570498505de6b2fd3c40c84c266397a7a6a12&amp;dn=Merlin+2008+5x11+The+Drawing+Of+The+Dark+720p+HDTV+x264-FoV+%5BPub&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15338\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>692M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="15337" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15337.html">
+																									梅林传奇 Merlin S05E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=141544&amp;uk=3224105131" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'15337\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/655A7174E7366FF9CB24B0D37FE8DBB8391AC975.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15337\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:MVNHC5HHGZX7TSZEWDJX72G3XA4RVSLV&amp;dn=Merlin.2008.5x11.The.Drawing.Of.The.Dark.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet15337\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15337\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:MVNHC5HHGZX7TSZEWDJX72G3XA4RVSLV&amp;dn=Merlin.2008.5x11.The.Drawing.Of.The.Dark.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15337\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>234M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="15023" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15023.html">
+																									梅林传奇 Merlin S05E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/6162393D1E309CA75A8580C5D9C61FC711BCF2BF.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15023\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:MFRDSPI6GCOKOWUFQDC5TRQ7Y4I3Z4V7&amp;dn=Merlin+2008+5x10+The+Kindness+Of+Strangers+720p+HDTV+x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent." rel="nofollow" target="_blank" name=\'magnet15023\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15023\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:MFRDSPI6GCOKOWUFQDC5TRQ7Y4I3Z4V7&amp;dn=Merlin+2008+5x10+The+Kindness+Of+Strangers+720p+HDTV+x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent." rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15023\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>712M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="15022" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15022.html">
+																									梅林传奇 Merlin S05E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=130902&amp;uk=371951506" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'15022\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/F38629DB925267EA34E562C9A7340ADFFA2A4591.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15022\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6ODCTW4SKJT6UNHFMLE2ONAK375CURMR&amp;dn=Merlin.2008.5x10.The.Kindness.Of.Strangers.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet15022\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15022\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6ODCTW4SKJT6UNHFMLE2ONAK375CURMR&amp;dn=Merlin.2008.5x10.The.Kindness.Of.Strangers.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15022\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>240M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="14682" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/14682.html">
+																									梅林传奇 Merlin S05E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/98160D01290676E4B709EFD0F2AA91B63F4F54A2.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'14682\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:TALA2AJJAZ3OJNYJ57IPFKURWY7U6VFC&amp;dn=Merlin+2008+5x09+720p+HDTV+x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=htt" rel="nofollow" target="_blank" name=\'magnet14682\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'14682\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:TALA2AJJAZ3OJNYJ57IPFKURWY7U6VFC&amp;dn=Merlin+2008+5x09+720p+HDTV+x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=htt" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'14682\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="14681" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/14681.html">
+																									梅林传奇 Merlin S05E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=123119&amp;uk=539733491" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'14681\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/741C8B1474C34582456DB0B875B6FE2642BC549A.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'14681\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:OQOIWFDUYNCYERLNWC4HLNX6EZBLYVE2&amp;dn=Merlin.2008.5x09.With.All.My.Heart.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet14681\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'14681\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:OQOIWFDUYNCYERLNWC4HLNX6EZBLYVE2&amp;dn=Merlin.2008.5x09.With.All.My.Heart.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'14681\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>358M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="14332" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/14332.html">
+																									梅林传奇 Merlin S05E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/60FC6C0F9908F5738853F3E0536E4D34F9199C4C.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'14332\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:MD6GYD4ZBD2XHCCT6PQFG3SNGT4RTHCM&amp;dn=Merlin+2008+S05E08+The+Hollow+Queen+720p+HDTV+DD2.0+x264-FOV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.c" rel="nofollow" target="_blank" name=\'magnet14332\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'14332\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:MD6GYD4ZBD2XHCCT6PQFG3SNGT4RTHCM&amp;dn=Merlin+2008+S05E08+The+Hollow+Queen+720p+HDTV+DD2.0+x264-FOV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.c" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'14332\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>832M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-11-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="14331" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/14331.html">
+																									梅林传奇 Merlin S05E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=112253&amp;uk=740972332" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'14331\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/B8B66B4AAA647D4CBA56939246B1FE04444D3B00.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'14331\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:XC3GWSVKMR6UZOSWSOJENMP6ARCE2OYA&amp;dn=Merlin.2008.5x08.The.Hollow.Queen.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet14331\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'14331\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:XC3GWSVKMR6UZOSWSOJENMP6ARCE2OYA&amp;dn=Merlin.2008.5x08.The.Hollow.Queen.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'14331\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>279M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-11-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="14022" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/14022.html">
+																									梅林传奇 Merlin S05E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.ws/torrent/FC9A339B99DFADEA18A715C37CC1BA091F7B9C38.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'14022\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:fc9a339b99dfadea18a715c37cc1ba091f7b9c38&amp;dn=Merlin.2008.S05E07.720p.HDTV.x264-TLA&amp;tr=http%3a%2f%2f10.rarbg.com%3a80&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710&amp;tr=udp%3a%2f%2f11.rarbg.com%3a80&amp;tr=http%3a%2f%2f10.rarbg.com%3a" rel="nofollow" target="_blank" name=\'magnet14022\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'14022\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fc9a339b99dfadea18a715c37cc1ba091f7b9c38&amp;dn=Merlin.2008.S05E07.720p.HDTV.x264-TLA&amp;tr=http%3a%2f%2f10.rarbg.com%3a80&amp;tr=udp%3a%2f%2f9.rarbg.com%3a2710&amp;tr=udp%3a%2f%2f11.rarbg.com%3a80&amp;tr=http%3a%2f%2f10.rarbg.com%3a" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'14022\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>766M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-11-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="14021" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/14021.html">
+																									梅林传奇 Merlin S05E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=104753&amp;uk=1730822010" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'14021\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/%3C!DOCTYPE%20HTML%20PUBLIC%20%22-//W3C//DTD%20HTML%20.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'14021\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:MMH25P5JE3GN2HPM7JBIKIYWYFNSQZAP&amp;dn=Merlin.2008.S05E07.HDTV.x264-TLA&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet14021\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'14021\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:MMH25P5JE3GN2HPM7JBIKIYWYFNSQZAP&amp;dn=Merlin.2008.S05E07.HDTV.x264-TLA&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'14021\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>301M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-11-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="13663" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/13663.html">
+																									梅林传奇 Merlin S05E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/3825B5CE1982458A04CAB3B20DC558114C6E7B62.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'13663\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:HAS3LTQZQJCYUBGKWOZA3RKYCFGG463C&amp;dn=Merlin_2008.5x06.The_Dark_Tower.720p_HDTV_x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet13663\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'13663\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:HAS3LTQZQJCYUBGKWOZA3RKYCFGG463C&amp;dn=Merlin_2008.5x06.The_Dark_Tower.720p_HDTV_x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'13663\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>936M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-11-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="13662" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/13662.html">
+																									梅林传奇 Merlin S05E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=97623&amp;uk=3291133375" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'13662\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/C8987EF7ED486B61908C1CC74F0B009B229D9B32.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'13662\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ZCMH557NJBVWDEEMDTDU6CYATMRJ3GZS&amp;dn=Merlin.2008.5x06.The.Dark.Tower.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet13662\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'13662\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ZCMH557NJBVWDEEMDTDU6CYATMRJ3GZS&amp;dn=Merlin.2008.5x06.The.Dark.Tower.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'13662\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>332M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-11-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="13314" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/13314.html">
+																									梅林传奇 Merlin S05E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/12168C234094E3958199B2D2677E53F6C8661CAD.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'13314\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:CILIYI2ASTRZLAMZWLJGO7ST63EGMHFN&amp;dn=Merlin_2008.5x05.The_Disir.720p_HDTV_x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&" rel="nofollow" target="_blank" name=\'magnet13314\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'13314\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:CILIYI2ASTRZLAMZWLJGO7ST63EGMHFN&amp;dn=Merlin_2008.5x05.The_Disir.720p_HDTV_x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'13314\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>899M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-11-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="13313" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/13313.html">
+																									梅林传奇 Merlin S05E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=108861&amp;uk=4096419031" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'13313\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/F632D6363F5AFFBF176658D98545A3565C816ABD.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'13313\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6YZNMNR7LL736F3GLDMYKRNDKZOIC2V5&amp;dn=Merlin.2008.5x05.The.Disir.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet13313\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'13313\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6YZNMNR7LL736F3GLDMYKRNDKZOIC2V5&amp;dn=Merlin.2008.5x05.The.Disir.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'13313\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>309M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-11-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="12943" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/12943.html">
+																									梅林传奇 Merlin S05E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/92F151AADB9EBC7B08A5927E3C074C8B3840C8F3.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'12943\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:SLYVDKW3T26HWCFFSJ7DYB2MRM4EBSHT&amp;dn=Merlin_2008.5x04.Anothers_Sorrow.720p_HDTV_x264-FoV+[FTV]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce" rel="nofollow" target="_blank" name=\'magnet12943\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'12943\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:SLYVDKW3T26HWCFFSJ7DYB2MRM4EBSHT&amp;dn=Merlin_2008.5x04.Anothers_Sorrow.720p_HDTV_x264-FoV+[FTV]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'12943\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>981M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-10-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="12942" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/12942.html">
+																									梅林传奇 Merlin S05E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=88210&amp;uk=3593075536" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'12942\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/BBC1304AA3F66D290AFF89AB2B43EA70BD442B20.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'12942\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:XPATASVD6ZWSSCX7RGVSWQ7KOC6UIKZA&amp;dn=Merlin.2008.5x04.Anothers.Sorrow.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet12942\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'12942\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:XPATASVD6ZWSSCX7RGVSWQ7KOC6UIKZA&amp;dn=Merlin.2008.5x04.Anothers.Sorrow.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'12942\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>342M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-10-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="12558" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/12558.html">
+																									梅林传奇 Merlin S05E03 REPACK 720p 修复版 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/D43A81357033BC37B5BE0E1A4CE0CD7AC7BDEBE3.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'12558\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2Q5ICNLQGO6DPNN6BYNEZYGNPLD3327D&amp;dn=Merlin_2008.5x03.The_Death_Song_Of_Uther_Pendragon.REPACK.720p_HDTV_x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker." rel="nofollow" target="_blank" name=\'magnet12558\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'12558\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2Q5ICNLQGO6DPNN6BYNEZYGNPLD3327D&amp;dn=Merlin_2008.5x03.The_Death_Song_Of_Uther_Pendragon.REPACK.720p_HDTV_x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker." rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E03 REPACK 720p 修复版 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'12558\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>785M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-10-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="12557" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/12557.html">
+																									梅林传奇 Merlin S05E03 REPACK 修复版 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=90327&amp;uk=3374963198" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'12557\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/73FBDCBF29E4BC2AFAA9D19CFE2268BD86404DD1.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'12557\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:OP55ZPZJ4S6CV6VJ2GOP4ITIXWDEATOR&amp;dn=Merlin.2008.5x03.The.Death.Song.Of.Uther.Pendragon.REPACK.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet12557\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'12557\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:OP55ZPZJ4S6CV6VJ2GOP4ITIXWDEATOR&amp;dn=Merlin.2008.5x03.The.Death.Song.Of.Uther.Pendragon.REPACK.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E03 REPACK 修复版 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'12557\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>260M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-10-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="12173" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/12173.html">
+																									梅林传奇 Merlin S05E02 REPACK 修复版 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/6EEC83E0EAF342A8A428AF7D7ECC1F5361ECAC71.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'12173\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:N3WIHYHK6NBKRJBIV56X5TA7KNQ6ZLDR&amp;dn=Merlin_2008.5x02.Arthurs_Bane_Part_Two.REPACK.720p_HDTV_x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorre" rel="nofollow" target="_blank" name=\'magnet12173\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'12173\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:N3WIHYHK6NBKRJBIV56X5TA7KNQ6ZLDR&amp;dn=Merlin_2008.5x02.Arthurs_Bane_Part_Two.REPACK.720p_HDTV_x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorre" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E02 REPACK 修复版 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'12173\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>920M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-10-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="12172" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/12172.html">
+																									梅林传奇 Merlin S05E02 PROPER 修正版 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=80370&amp;uk=3257439493" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'12172\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/A8FAAC057B19FC3C69997523E400401CE3182257.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'12172\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:VD5KYBL3DH6DY2MZOUR6IACADTRRQISX&amp;dn=Merlin.2008.S05E02.Arthurs.Bane.Part.Two.PROPER.HDTV.x264-TLA&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet12172\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'12172\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:VD5KYBL3DH6DY2MZOUR6IACADTRRQISX&amp;dn=Merlin.2008.S05E02.Arthurs.Bane.Part.Two.PROPER.HDTV.x264-TLA&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E02 PROPER 修正版 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'12172\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>303M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-10-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="11845" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/11845.html">
+																									梅林传奇 Merlin S05E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/864FA1FE347CA1C6D38AB178A5CB2C0EA6F5C0C2.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'11845\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:QZH2D7RUPSQ4NU4KWF4KLSZMB2TPLQGC&amp;dn=Merlin_2008.5x01.Arthurs_Bane_Part_One.720p_HDTV_x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:" rel="nofollow" target="_blank" name=\'magnet11845\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'11845\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:QZH2D7RUPSQ4NU4KWF4KLSZMB2TPLQGC&amp;dn=Merlin_2008.5x01.Arthurs_Bane_Part_One.720p_HDTV_x264-FoV+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'11845\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-10-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="11844" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/11844.html">
+																									梅林传奇 Merlin S05E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=69716&amp;uk=3727200125" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'11844\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/4A2A77664469FC3BCDA951D80576A4F7DE45A535.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'11844\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:JIVHOZSENH6DXTNJKHMAK5VE67PELJJV&amp;dn=Merlin.2008.5x01.Arthurs.Bane.Part.One.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet11844\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'11844\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:JIVHOZSENH6DXTNJKHMAK5VE67PELJJV&amp;dn=Merlin.2008.5x01.Arthurs.Bane.Part.One.HDTV.x264-FoV&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="梅林传奇 Merlin S05E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'11844\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>381M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-10-07</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,262,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,262);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,262);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,262);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

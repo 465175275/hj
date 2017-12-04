@@ -1,0 +1,3618 @@
+'HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2017 02:46:00 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d209fdc49b82b8f04069c237c3dad860b1510109160; expires=Thu, 08-Nov-18 02:46:00 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3ba5330df4f9773c-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>ABC世界新闻 ABC World News-ABC世界新闻下载-ABC世界新闻全集下载-ABC World News下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="ABC世界新闻,ABC World News,ABC世界新闻下载,ABC世界新闻全集下载,ABC世界新闻高清下载,ABC世界新闻迅雷下载"/>
+	  <meta name="description" content="《ABC世界新闻》（ABCWorldNews）是美国全国电视联播网之一美国广播公司（ABC）的旗舰新闻节目。现时其周一至周五主播为黛安·索耶（DianeSawyer），周末主播是大卫·梅尔（DavidMuir）ABC从1953年起制作全国新闻联播，但多年来收视一直欠佳。ABC遂于1978年改革其新闻部，而全国新闻联播亦于同年改称《今夜世界新闻》（WorldN" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 513;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FABC%2520World%2520News.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FABC%2520World%2520News.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 513;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">ABC世界新闻 ABC World News-ABC世界新闻下载-ABC世界新闻全集下载-ABC World News下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/94e6a2947c3bdfb1.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/94e6a2947c3bdfb1.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：随机</span>
+						<span>状态：<font color="#5cb1c5">播出中</font></span>
+						<span class="greybg">分类：</span>						
+						<span>最后更新：2013-09-26 20:11</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/513.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">37</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						《ABC世界新闻》（ABC World News）是美国全国电视联播网之一美国广播公司（ABC）的旗舰新闻节目。现时其周一至周五主播为黛安·索耶（Diane Sawyer），周末主播是大卫·梅尔（David Muir）ABC从1953年起制作全国新闻联播，但多年来收视一直欠佳。ABC遂于1978年改革其新闻部，而全国新闻联播亦于同年改称《今夜世界新闻》（World News Tonight）。经过一连串改革后，节目的收视渐见起色，更开始超越其对手《CBS晚间新闻》及《NBC晚间新闻》。                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="-1">
+																			其它▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="25956" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25956.html">
+																									ABC世界新闻 ABC World News 2013 08 29 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1264722940&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25956\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25793" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25793.html">
+																									ABC世界新闻 ABC World News 2013 08 25 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1180880708&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25793\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>90.1M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="25545" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25545.html">
+																									ABC世界新闻 ABC World News 2013 08 18 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=742660010&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25545\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25407" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25407.html">
+																									ABC世界新闻 ABC World News 2013 08 14 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1146109372&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25407\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="25682" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25682.html">
+																									ABC世界新闻 ABC World News 2013 08 22 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=857521813&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25682\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>104M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24771" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24771.html">
+																									ABC世界新闻 ABC World News 2013 07 30 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=377137495&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24771\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22001" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22001.html">
+																									ABC世界新闻 ABC World News 2013 05 14 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=440596&amp;uk=3929499501" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22001\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://v.qq.com/boke/page/o/a/h/o0113huzyah.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'22001\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22678" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22678.html">
+																									ABC世界新闻 ABC World News 2013 06 01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=500264&amp;uk=1647339164" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22678\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>92M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="25915" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25915.html">
+																									ABC世界新闻 ABC World News 2013 08 28 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1228486024&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25915\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25445" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25445.html">
+																									ABC世界新闻 ABC World News 2013 08 15 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=405697769&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25445\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22768" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22768.html">
+																									ABC世界新闻 ABC World News 2013 06 03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=502991&amp;uk=1647339164" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22768\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22221" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22221.html">
+																									ABC世界新闻 ABC World News 2013 05 19 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=581736&amp;uk=3895943681" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22221\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/104530070-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'22221\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22179" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22179.html">
+																									ABC世界新闻 ABC World News 2013 05 18 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=524230&amp;uk=825739795" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22179\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/104445396-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'22179\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>99M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22152" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22152.html">
+																									ABC世界新闻 ABC World News 2013 05 17 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=522410&amp;uk=825739795" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22152\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/104381429-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'22152\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>84M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="21946" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21946.html">
+																									ABC世界新闻 ABC World News 2013 05 13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=495075&amp;uk=2503466868" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21946\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://v.qq.com/boke/page/q/u/f/q01136whduf.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21946\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="21751" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21751.html">
+																									ABC世界新闻 ABC World News 2013 05 09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=437192&amp;uk=1295450708" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21751\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/103639040-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21751\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>97M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="21572" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21572.html">
+																									ABC世界新闻 ABC World News 2013 05 06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=422766&amp;uk=2788644014" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21572\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://v.qq.com/boke/page/e/o/t/e01138jzsot.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21572\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>99M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="23942" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23942.html">
+																									ABC世界新闻 ABC World News 2013 07 09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3222101646&amp;uk=3140599628" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23942\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22918" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22918.html">
+																									ABC世界新闻 ABC World News 2013 06 07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2546339659&amp;uk=2117131173" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22918\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22060" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22060.html">
+																									ABC世界新闻 ABC World News 2013 05 15 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=400305&amp;uk=4181137253" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22060\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/104222309-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'22060\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="21055" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21055.html">
+																									ABC世界新闻 ABC World News 2013 04 27 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=429734&amp;uk=3677858553" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21055\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/102683067-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21055\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>82M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26763" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26763.html">
+																									ABC世界新闻 ABC World News 2013 09 20 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2279640541&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26763\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26489" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26489.html">
+																									ABC世界新闻 ABC World News 2013 09 13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2079167078&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26489\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22716" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22716.html">
+																									ABC世界新闻 ABC World News 2013 06 02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=501662&amp;uk=1647339164" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22716\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="21285" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21285.html">
+																									ABC世界新闻 ABC World News 2013 05 01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=618534&amp;uk=2570558608" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21285\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://v.qq.com/boke/page/c/x/o/c0113ghoqxo.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21285\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>99M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20664" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20664.html">
+																									ABC世界新闻 ABC World News 2013 04 19 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=437453&amp;uk=1681322799" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20664\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/102074807-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20664\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>108M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="20633" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20633.html">
+																									ABC世界新闻 ABC World News 2013 04 18 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=496306&amp;uk=1429634104" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20633\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/101985949-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20633\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>98M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20365" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20365.html">
+																									ABC世界新闻 ABC World News 2013 04 13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=506715&amp;uk=859189022" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20365\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/101618916-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20365\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>74M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="20199" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20199.html">
+																									ABC世界新闻 ABC World News 2013 04 09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=384204&amp;uk=4147548797" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20199\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/101320377-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20199\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>82M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22444" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22444.html">
+																									ABC世界新闻 ABC World News 2013 05 25 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=487382&amp;uk=2435854549" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22444\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/105047720-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'22444\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24412" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24412.html">
+																									ABC世界新闻 ABC World News 2013 07 21 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3845330686&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24412\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>94.9M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="21635" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21635.html">
+																									ABC世界新闻 ABC World News 2013 05 07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=479192&amp;uk=4281833125" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21635\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/103443716-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21635\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>107M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="25706" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25706.html">
+																									ABC世界新闻 ABC World News 2013 08 23 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1030265732&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25706\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>106M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24245" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24245.html">
+																									ABC世界新闻 ABC World News 2013 07 16 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=320617602&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24245\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24123" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24123.html">
+																									ABC世界新闻 ABC World News 2013 07 14 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3336176705&amp;uk=3492883305" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24123\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>104M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20113" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20113.html">
+																									ABC世界新闻 ABC World News 2013 04 07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=549404&amp;uk=1295402573" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20113\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.56.com/u15/v_OTAxMjU2NDQ.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20113\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26456" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26456.html">
+																									ABC世界新闻 ABC World News 2013 09 12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1950327342&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26456\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>99.7M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="23991" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23991.html">
+																									ABC世界新闻 ABC World News 2013 07 10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=4177583830&amp;uk=3962675013" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23991\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23772" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23772.html">
+																									ABC世界新闻 ABC World News 2013 07 03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3780752350&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23772\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>99M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22519" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22519.html">
+																									ABC世界新闻 ABC World News 2013 05 27 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=733618&amp;uk=3845149431" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22519\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>107M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="21409" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21409.html">
+																									ABC世界新闻 ABC World News 2013 05 03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=502530&amp;uk=1899462019" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21409\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/103131914-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21409\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>98M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20975" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20975.html">
+																									ABC世界新闻 ABC World News 2013 04 25 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=450762&amp;uk=2872535489" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20975\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/102528020-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20975\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="21359" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21359.html">
+																									ABC世界新闻 ABC World News 2013 05 02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=433032&amp;uk=305619081" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21359\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/103051715-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21359\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="21017" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21017.html">
+																									ABC世界新闻 ABC World News 2013 04 26 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=422656&amp;uk=4046978041" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21017\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/102606276-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21017\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26599" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26599.html">
+																									ABC世界新闻 ABC World News 2013 09 16 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2606961058&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26599\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25482" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25482.html">
+																									ABC世界新闻 ABC World News 2013 08 16 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=357104649&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25482\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>105M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24722" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24722.html">
+																									ABC世界新闻 ABC World News 2013 07 29 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=837010067&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24722\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="23265" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23265.html">
+																									ABC世界新闻 ABC World News 2013 06 19 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3962445379&amp;uk=2050024039" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23265\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>99M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22261" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22261.html">
+																									ABC世界新闻 ABC World News 2013 05 20 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=473391&amp;uk=4130808889" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22261\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26170" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26170.html">
+																									ABC世界新闻 ABC World News 2013 09 04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1525920477&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26170\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24457" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24457.html">
+																									ABC世界新闻 ABC World News 2013 07 22 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=4271400427&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24457\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="23799" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23799.html">
+																									ABC世界新闻 ABC World News 2013 07 05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2484000173&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23799\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>109M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23746" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23746.html">
+																									ABC世界新闻 ABC World News 2013 07 02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3034522509&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23746\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>104M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22879" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22879.html">
+																									ABC世界新闻 ABC World News 2013 06 06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1449499749&amp;uk=120641714" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22879\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22117" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22117.html">
+																									ABC世界新闻 ABC World News 2013 05 16 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=524836&amp;uk=2235022618" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22117\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://v.qq.com/boke/page/e/f/z/e0113rsnqfz.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'22117\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="21112" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21112.html">
+																									ABC世界新闻 ABC World News 2013 04 28 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=448219&amp;uk=171429095" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21112\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/102755902-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21112\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26694" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26694.html">
+																									ABC世界新闻 ABC World News 2013 09 18 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2526533858&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26694\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26128" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26128.html">
+																									ABC世界新闻 ABC World News 2013 09 03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1462001591&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26128\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="25581" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25581.html">
+																									ABC世界新闻 ABC World News 2013 08 19 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=762356640&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25581\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25096" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25096.html">
+																									ABC世界新闻 ABC World News 2013 08 07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=118599805&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25096\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23633" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23633.html">
+																									ABC世界新闻 ABC World News 2013 06 29 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3834455230&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23633\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22481" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22481.html">
+																									ABC世界新闻 ABC World News 2013 05 26 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=489142&amp;uk=2435854549" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22481\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="21892" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21892.html">
+																									ABC世界新闻 ABC World News 2013 05 12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=474710&amp;uk=1530367355" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21892\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/103946746-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21892\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20546" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20546.html">
+																									ABC世界新闻 ABC World News 2013 04 16 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=406020&amp;uk=3157712904" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20546\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/101843632-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20546\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>205M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26559" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26559.html">
+																									ABC世界新闻 ABC World News 2013 09 15 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2210743798&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26559\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25500" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25500.html">
+																									ABC世界新闻 ABC World News 2013 08 17 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=941582387&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25500\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="25361" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25361.html">
+																									ABC世界新闻 ABC World News 2013 08 13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=585326306&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25361\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25262" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25262.html">
+																									ABC世界新闻 ABC World News 2013 08 11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=473894953&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25262\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>104M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23549" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23549.html">
+																									ABC世界新闻 ABC World News 2013 06 26 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2587912160&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23549\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>106M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22425" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22425.html">
+																									ABC世界新闻 ABC World News 2013 05 24 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=485957&amp;uk=2435854549" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22425\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>99M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="20908" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20908.html">
+																									ABC世界新闻 ABC World News 2013 04 24 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=454604&amp;uk=104280521" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20908\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/102458839-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20908\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26311" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26311.html">
+																									ABC世界新闻 ABC World News 2013 09 09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1739535711&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26311\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101.4M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26227" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26227.html">
+																									ABC世界新闻 ABC World News 2013 09 06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2030655791&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26227\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25661" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25661.html">
+																									ABC世界新闻 ABC World News 2013 08 21 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1577481668&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25661\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>104M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="25623" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25623.html">
+																									ABC世界新闻 ABC World News 2013 08 20 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1039506448&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25623\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>104M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25186" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25186.html">
+																									ABC世界新闻 ABC World News 2013 08 09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=441080507&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25186\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24509" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24509.html">
+																									ABC世界新闻 ABC World News 2013 07 23 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3761853963&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24509\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>85.5M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="23507" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23507.html">
+																									ABC世界新闻 ABC World News 2013 06 25 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2454905094&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23507\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>88M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23138" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23138.html">
+																									ABC世界新闻 ABC World News 2013 06 13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1911608862&amp;uk=2050024039" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23138\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22650" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22650.html">
+																									ABC世界新闻 ABC World News 2013 05 31 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=498289&amp;uk=1647339164" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22650\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="25151" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25151.html">
+																									ABC世界新闻 ABC World News 2013 08 08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=340645028&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25151\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>99.6M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25050" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25050.html">
+																									ABC世界新闻 ABC World News 2013 08 06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=442739059&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25050\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24610" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24610.html">
+																									ABC世界新闻 ABC World News 2013 07 26 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=4142181684&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24610\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>106M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24068" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24068.html">
+																									ABC世界新闻 ABC World News 2013 07 13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3219582263&amp;uk=3492883305" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24068\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23623" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23623.html">
+																									ABC世界新闻 ABC World News 2013 06 28 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=56871050&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23623\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>95M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="23098" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23098.html">
+																									ABC世界新闻 ABC World News 2013 06 12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1590461122&amp;uk=1160809329" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23098\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="21694" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21694.html">
+																									ABC世界新闻 ABC World News 2013 05 08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=458779&amp;uk=1144499292" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21694\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://you.video.sina.com.cn/b/103541932-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21694\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>98M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20333" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20333.html">
+																									ABC世界新闻 ABC World News 2013 04 12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=402095&amp;uk=3644234087" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20333\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/101543259-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20333\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="20149" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20149.html">
+																									ABC世界新闻 ABC World News 2013 04 08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=413123&amp;uk=271985734" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20149\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.56.com/u18/v_OTAxNDIzNjc.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20149\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>98M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25980" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25980.html">
+																									ABC世界新闻 ABC World News 2013 08 30 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1200873539&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25980\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>105M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24679" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24679.html">
+																									ABC世界新闻 ABC World News 2013 07 28 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=4093987615&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24679\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>90.5M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24628" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24628.html">
+																									ABC世界新闻 ABC World News 2013 07 27 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1327562496&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24628\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>89.4M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24321" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24321.html">
+																									ABC世界新闻 ABC World News 2013 07 18 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3675922041&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24321\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="23904" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23904.html">
+																									ABC世界新闻 ABC World News 2013 07 08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3194361859&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23904\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>104M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23383" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23383.html">
+																									ABC世界新闻 ABC World News 2013 06 22 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3205067985&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23383\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22841" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22841.html">
+																									ABC世界新闻 ABC World News 2013 06 05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1592256366&amp;uk=1328591545" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22841\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>99M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22384" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22384.html">
+																									ABC世界新闻 ABC World News 2013 05 23 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=478194&amp;uk=4130808889" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22384\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>78M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="21846" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21846.html">
+																									ABC世界新闻 ABC World News 2013 05 11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=545980&amp;uk=1480031871" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21846\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://v.qq.com/boke/page/b/a/k/b0113byr8ak.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21846\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>92M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="21512" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21512.html">
+																									ABC世界新闻 ABC World News 2013 05 05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=490236&amp;uk=255298484" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21512\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/103299866-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21512\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>114M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="21466" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21466.html">
+																									ABC世界新闻 ABC World News 2013 05 04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=435975&amp;uk=540531132" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21466\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/103212270-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21466\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>80M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="20482" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20482.html">
+																									ABC世界新闻 ABC World News 2013 04 15 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=491775&amp;uk=4046863376" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20482\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/101764170-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20482\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>203M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26870" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26870.html">
+																									ABC世界新闻 ABC World News 2013 09 23 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3020718037&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26870\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>91.7M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26834" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26834.html">
+																									ABC世界新闻 ABC World News 2013 09 22 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2666664855&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26834\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>90.6M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24281" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24281.html">
+																									ABC世界新闻 ABC World News 2013 07 17 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=118432339&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24281\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23708" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23708.html">
+																									ABC世界新闻 ABC World News 2013 07 01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2415932891&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23708\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="23361" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23361.html">
+																									ABC世界新闻 ABC World News 2013 06 21 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2691267746&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23361\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22598" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22598.html">
+																									ABC世界新闻 ABC World News 2013 05 29 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=547482&amp;uk=1043352303" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22598\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>97M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="21804" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21804.html">
+																									ABC世界新闻 ABC World News 2013 05 10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=513654&amp;uk=171433291" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21804\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/103733476-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21804\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>96M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="20418" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20418.html">
+																									ABC世界新闻 ABC World News 2013 04 14 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=378848&amp;uk=3744892695" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20418\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/101687480-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20418\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>93M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25877" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25877.html">
+																									ABC世界新闻 ABC World News 2013 08 27 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1410679876&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25877\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="25742" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25742.html">
+																									ABC世界新闻 ABC World News 2013 08 24 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1983255654&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25742\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>94.0M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24998" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24998.html">
+																									ABC世界新闻 ABC World News 2013 08 05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=17677280&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24998\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24845" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24845.html">
+																									ABC世界新闻 ABC World News 2013 08 01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=4195702842&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24845\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>90.7M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24816" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24816.html">
+																									ABC世界新闻 ABC World News 2013 07 31 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=4102243271&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24816\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24046" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24046.html">
+																									ABC世界新闻 ABC World News 2013 07 12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3385454352&amp;uk=3794921083" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24046\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>104M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="23809" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23809.html">
+																									ABC世界新闻 ABC World News 2013 07 06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3538758807&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23809\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23788" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23788.html">
+																									ABC世界新闻 ABC World News 2013 07 04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=34279593&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23788\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22300" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22300.html">
+																									ABC世界新闻 ABC World News 2013 05 21 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=479990&amp;uk=2805460014" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22300\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/104698908-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'22300\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>205M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="20591" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20591.html">
+																									ABC世界新闻 ABC World News 2013 04 17 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=482201&amp;uk=2016835328" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20591\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/101913318-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20591\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>98M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20251" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20251.html">
+																									ABC世界新闻 ABC World News 2013 04 10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=502505&amp;uk=3946213238" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20251\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/101386544-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20251\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>98M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26647" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26647.html">
+																									ABC世界新闻 ABC World News 2013 09 17 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2295541530&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26647\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25212" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25212.html">
+																									ABC世界新闻 ABC World News 2013 08 10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1076255427&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25212\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>103M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24952" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24952.html">
+																									ABC世界新闻 ABC World News 2013 08 04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=517070644&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24952\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>78.2M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24896" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24896.html">
+																									ABC世界新闻 ABC World News 2013 08 03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1714818525&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24896\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24179" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24179.html">
+																									ABC世界新闻 ABC World News 2013 07 15 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=95059659&amp;uk=2083617814" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24179\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="23665" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23665.html">
+																									ABC世界新闻 ABC World News 2013 06 30 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2722450790&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23665\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23588" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23588.html">
+																									ABC世界新闻 ABC World News 2013 06 27 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2864125709&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23588\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>97M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26083" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26083.html">
+																									ABC世界新闻 ABC World News 2013 09 02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1614822758&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26083\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>104M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26041" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26041.html">
+																									ABC世界新闻 ABC World News 2013 09 01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1304778867&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26041\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24871" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24871.html">
+																									ABC世界新闻 ABC World News 2013 08 02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=99420653&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24871\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>105M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24359" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24359.html">
+																									ABC世界新闻 ABC World News 2013 07 20 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3815329641&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24359\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24024" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24024.html">
+																									ABC世界新闻 ABC World News 2013 07 11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=4065503288&amp;uk=3794921083" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24024\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>95.3M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23848" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23848.html">
+																									ABC世界新闻 ABC World News 2013 07 07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3061041334&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23848\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>105M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="23424" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23424.html">
+																									ABC世界新闻 ABC World News 2013 06 23 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2366974006&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23424\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23325" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23325.html">
+																									ABC世界新闻 ABC World News 2013 06 20 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2170267187&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23325\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>99M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26991" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26991.html">
+																									ABC世界新闻 ABC World News 2013 09 25 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1yy4Tz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26991\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>88.9M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26931" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26931.html">
+																									ABC世界新闻 ABC World News 2013 09 24 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1l7mUF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26931\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>104M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26417" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26417.html">
+																									ABC世界新闻 ABC World News 2013 09 11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1890669096&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26417\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>98.4M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="26367" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26367.html">
+																									ABC世界新闻 ABC World News 2013 09 10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3144771395&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26367\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>97.7M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="26206" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/26206.html">
+																									ABC世界新闻 ABC World News 2013 09 05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1698235750&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'26206\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-09-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="25833" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25833.html">
+																									ABC世界新闻 ABC World News 2013 08 26 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1220976368&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25833\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="25313" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/25313.html">
+																									ABC世界新闻 ABC World News 2013 08 12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=426055665&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'25313\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-08-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="24584" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24584.html">
+																									ABC世界新闻 ABC World News 2013 07 25 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3983002042&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24584\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>63.0M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="24344" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/24344.html">
+																									ABC世界新闻 ABC World News 2013 07 19 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3817604158&amp;uk=4197203346" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'24344\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>318M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-07-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="23464" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/23464.html">
+																									ABC世界新闻 ABC World News 2013 06 24 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2457432370&amp;uk=4096827176" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'23464\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22804" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22804.html">
+																									ABC世界新闻 ABC World News 2013 06 04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1695435332&amp;uk=1513150336" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22804\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>98M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-06-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="22615" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22615.html">
+																									ABC世界新闻 ABC World News 2013 05 30 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=486305&amp;uk=2620451556" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22615\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>105M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22353" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22353.html">
+																									ABC世界新闻 ABC World News 2013 05 22 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=584989&amp;uk=1412941862" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'22353\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/104776272-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'22353\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>265M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="21157" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/21157.html">
+																									ABC世界新闻 ABC World News 2013 04 29 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=427180&amp;uk=121051551" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'21157\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/102823796-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'21157\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>100M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20848" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20848.html">
+																									ABC世界新闻 ABC World News 2013 04 23 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=517690&amp;uk=1647820496" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20848\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/102379863-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20848\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>97M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="20794" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20794.html">
+																									ABC世界新闻 ABC World News 2013 04 22 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=422994&amp;uk=1194797784" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20794\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/102290748-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20794\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>101M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20746" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20746.html">
+																									ABC世界新闻 ABC World News 2013 04 21 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=603463&amp;uk=2906004512" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20746\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/102207559-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20746\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>105M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="20695" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20695.html">
+																									ABC世界新闻 ABC World News 2013 04 20 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=621777&amp;uk=2234912295" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20695\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/102144024-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20695\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>102M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20298" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20298.html">
+																									ABC世界新闻 ABC World News 2013 04 11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=589108&amp;uk=3711360110" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20298\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://video.sina.com.cn/v/b/101469322-1265416944.html" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'20298\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>98M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-12</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=1576922&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(1576922,513,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,513);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,513);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,513);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

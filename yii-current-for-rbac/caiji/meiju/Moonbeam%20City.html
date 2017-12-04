@@ -1,0 +1,1381 @@
+'HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2017 04:03:15 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d453c7dcc75600a930ebbb1ab47456d9c1510113794; expires=Thu, 08-Nov-18 04:03:14 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Set-Cookie: PHPSESSID=mm5te30gifr2ob6bcp8vgpif93; expires=Thu, 23-Nov-2017 04:03:14 GMT; Max-Age=1296000; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: private
+Pragma: no-cache
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3ba5a42d82cc9300-SJC
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>月光都市-月光都市下载-月光都市全集下载-Moonbeam City下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="月光都市,Moonbeam City,月光都市下载,月光都市全集下载,月光都市高清下载,月光都市迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;喜剧频道新剧《月光都市》描述英俊但愚笨的侦探DazzleNovak（RobLowe）试图在女警ChrysalisTate（KateMara）的帮助下扫除大街小巷的黑恶势力，但他事事都不走运——特别是当他遇到死敌RadCunningham（WillForte）时。Dazzle过分追求理想主义，结果……他自己所犯的罪行比大多数罪犯所犯的罪行还要" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 888;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FMoonbeam%2520City.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FMoonbeam%2520City.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 888;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">月光都市-月光都市下载-月光都市全集下载-Moonbeam City下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/53ee080e47aab616.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/53ee080e47aab616.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周四</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：动画类</span>						
+						<span>最后更新：2017-07-07 14:10</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/888.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">19</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>喜剧频道新剧《月光都市》描述英俊但愚笨的侦探Dazzle Novak（Rob Lowe）试图在女警Chrysalis Tate（Kate Mara）的帮助下扫除大街小巷的黑恶势力，但他事事都不走运——特别是当他遇到死敌Rad Cunningham（Will Forte）时。Dazzle过分追求理想主义，结果……他自己所犯的罪行比大多数罪犯所犯的罪行还要多。更糟的是，他的死敌Rad随时都在抓他的小辫子，随时都可能彻底毁掉他。Dazzle有一个性感但异常专横的女上司Pizzaz Miller（Elizabeth Banks）。所幸这座城市至少还有一个合格的警察，那就是Chrysalis。这部动画剧混合了上世纪八十年代罪案剧的诸多特点：荒诞主义、写实、暴力、「性欲横流」。首集已提前通过网络播出。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="84310" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84310.html">
+																									月光都市  S01E10 Moonbeam City 720p 漫迪字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/15DV9k" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84310\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5238ddef57ff985231b3e2f86f4846294386c38a&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet84310\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84310\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%A2%A6%E6%BB%A8%E5%9F%8E.Moonbeam.City.S01E10.The.Wedding.of.Rad.Lie.720p-%E6%BC%AB%E8%BF%AA%E5%AD%97%E5%B9%95%E7%BB%84.mp4|126142072|9c0aa7370b9ddd06b62b69a0c17172f0|h=fdlii5rgnciz4ctrnoliuh7au5acehai|/" rel="nofollow" target="_blank" name=\'ed2k84310\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84310\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:5238ddef57ff985231b3e2f86f4846294386c38a&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="月光都市  S01E10 Moonbeam City 720p 漫迪字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84310\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>119M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="50374" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/50374.html">
+																									月光都市 Moonbeam City S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o72s4sy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'50374\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:426a5ffcb94ff3889cf498060c2c32511f6c6b5c&amp;dn=Moonbeam.City.S01E10.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet50374\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'50374\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:426a5ffcb94ff3889cf498060c2c32511f6c6b5c&amp;dn=Moonbeam.City.S01E10.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'50374\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>404M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-12-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="50373" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/50373.html">
+																									月光都市 Moonbeam City S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1skfRItn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'50373\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:911923f42a16121a27674f6a40270faf1d8c2982&amp;dn=Moonbeam.City.S01E10.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet50373\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'50373\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:911923f42a16121a27674f6a40270faf1d8c2982&amp;dn=Moonbeam.City.S01E10.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'50373\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>115M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-12-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="84309" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84309.html">
+																									月光都市  S01E09 Moonbeam City 720p 漫迪字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/15DV9k" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84309\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1f79be2031922a71455bca7224e2ce3e66759a7d&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet84309\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84309\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%A2%A6%E6%BB%A8%E5%9F%8E.Moonbeam.City.S01E09.The.Legend.of.Circuit.Lake.720p-%E6%BC%AB%E8%BF%AA%E5%AD%97%E5%B9%95%E7%BB%84.mp4|117257213|a0b0ac7d6989a1acbd7e8c683b5a9b35|h=csd3cf4jxrlpo3ddgj4ovig77ygdvn6i|/" rel="nofollow" target="_blank" name=\'ed2k84309\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84309\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:1f79be2031922a71455bca7224e2ce3e66759a7d&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="月光都市  S01E09 Moonbeam City 720p 漫迪字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84309\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>111M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="50023" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/50023.html">
+																									月光都市 Moonbeam City S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDmGGgh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'50023\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e056e7454ae755aee9079cc81f4658a52cae6884&amp;dn=Moonbeam.City.S01E09.The.Legend.of.Circuit.Lake.720p.CC.WEBRip.AAC2.0.x264-BTW%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&" rel="nofollow" target="_blank" name=\'magnet50023\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'50023\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e056e7454ae755aee9079cc81f4658a52cae6884&amp;dn=Moonbeam.City.S01E09.The.Legend.of.Circuit.Lake.720p.CC.WEBRip.AAC2.0.x264-BTW%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'50023\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>518M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-12-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="50022" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/50022.html">
+																									月光都市 Moonbeam City S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o75FYhs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'50022\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b9db3a6d2297ad32adb213d1cd78906edf3b1b07&amp;dn=Moonbeam.City.S01E09.WEB-DL.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet50022\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'50022\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b9db3a6d2297ad32adb213d1cd78906edf3b1b07&amp;dn=Moonbeam.City.S01E09.WEB-DL.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'50022\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>114M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-12-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="49458" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/49458.html">
+																									月光都市 Moonbeam City S01E08 720p 漫迪字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/15DV9k" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'49458\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:45996c5490c395f9717532a29564c749e2187ea1&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet49458\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'49458\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%A2%A6%E6%BB%A8%E5%9F%8E.Moonbeam.City.S01E08.Stuntzstravaganza.720p-%E6%BC%AB%E8%BF%AA%E5%AD%97%E5%B9%95%E7%BB%84.mp4|110143021|3099c04ccbc8538666dc7ca2a1e26784|h=mvgvpftangmiptis7gted3qdebmt2xm6|/" rel="nofollow" target="_blank" name=\'ed2k49458\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'49458\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:45996c5490c395f9717532a29564c749e2187ea1&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E08 720p 漫迪字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'49458\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>104M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-11-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="49145" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/49145.html">
+																									月光都市 Moonbeam City S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1G7EI6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'49145\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6943DA8BFC866637849A76BBF0BBE6D0893E8ACA&amp;dn=moonbeam+city+s01e08+720p+hdtv+x264+fleet+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce" rel="nofollow" target="_blank" name=\'magnet49145\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'49145\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6943DA8BFC866637849A76BBF0BBE6D0893E8ACA&amp;dn=moonbeam+city+s01e08+720p+hdtv+x264+fleet+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'49145\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>395M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-11-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="49457" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/49457.html">
+																									月光都市 Moonbeam City S01E07 720p 漫迪字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/15DV9k" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'49457\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5f9266dfe14e907546b60d5d43ec3845a2570a88&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet49457\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'49457\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%A2%A6%E6%BB%A8%E5%9F%8E.Moonbeam.City.S01E07.Cop.Con.720p-%E6%BC%AB%E8%BF%AA%E5%AD%97%E5%B9%95%E7%BB%84.mp4|113661348|9a91d948a568a1d6051cff5bf36e96a9|h=34em6i6gqroyognnmvf2f2jmpfnjupxg|/" rel="nofollow" target="_blank" name=\'ed2k49457\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'49457\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:5f9266dfe14e907546b60d5d43ec3845a2570a88&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E07 720p 漫迪字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'49457\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>107M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-11-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="48735" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/48735.html">
+																									月光都市 Moonbeam City S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntLA4M9" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'48735\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:556bfd445569c59c3939b5587af5dc473f6836cd&amp;dn=Moonbeam.City.S01E07.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet48735\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'48735\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:556bfd445569c59c3939b5587af5dc473f6836cd&amp;dn=Moonbeam.City.S01E07.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'48735\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>383M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-11-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="48734" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/48734.html">
+																									月光都市 Moonbeam City S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mg5xzVa" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'48734\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ab9f83d9f64dae40372b6f9f2bcd32392d29ed21&amp;dn=Moonbeam.City.S01E07.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet48734\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'48734\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ab9f83d9f64dae40372b6f9f2bcd32392d29ed21&amp;dn=Moonbeam.City.S01E07.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'48734\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>107M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-11-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="48224" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/48224.html">
+																									月光都市 Moonbeam City S01E06 720p 漫迪字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/15DV9k" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'48224\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:839b3891e24c5a323a6aff0108b9531b8299e6c6&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet48224\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'48224\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%A2%A6%E6%BB%A8%E5%9F%8E.Moonbeam.City.S01E06.Lasers.and.Liars.720p-%E6%BC%AB%E8%BF%AA%E5%AD%97%E5%B9%95%E7%BB%84.mp4|116020386|27be49b7d4b8d4513eea41e0ff25514d|h=efwqlhbzksxm6ngqws6dlfcjh4bwsxk7|/" rel="nofollow" target="_blank" name=\'ed2k48224\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'48224\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:839b3891e24c5a323a6aff0108b9531b8299e6c6&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E06 720p 漫迪字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'48224\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>110M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-11-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="47845" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47845.html">
+																									月光都市 Moonbeam City S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDv1tcP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47845\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6268aed2193e47073d0907abbb2b3ec1b0c2608d&amp;dn=Moonbeam.City.S01E06.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet47845\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47845\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6268aed2193e47073d0907abbb2b3ec1b0c2608d&amp;dn=Moonbeam.City.S01E06.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47845\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>443M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="47844" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47844.html">
+																									月光都市 Moonbeam City S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="47651" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47651.html">
+																									月光都市 Moonbeam City S01E05 720p 漫迪字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/15DV9k" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47651\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:cbd94cd359c6eb03e910db2837167d2933f3d2e9&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet47651\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47651\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%A2%A6%E6%BB%A8%E5%9F%8E.Moonbeam.City.S01E05.Glitzotrene.One.Towns.Seduction.720p-%E6%BC%AB%E8%BF%AA%E5%AD%97%E5%B9%95%E7%BB%84.mp4|131030887|98e9acfe1f862f09a25f95b118203558|h=2omzphlh4afwps5oe4stahoqv2ciu3oo|/" rel="nofollow" target="_blank" name=\'ed2k47651\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'47651\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:cbd94cd359c6eb03e910db2837167d2933f3d2e9&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E05 720p 漫迪字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47651\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>124M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-10-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="47382" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47382.html">
+																									月光都市 Moonbeam City S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTkzrQf" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47382\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:bf2a8761ea3e7442d1ff46748da1983bf3084768&amp;dn=Moonbeam.City.S01E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet47382\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47382\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:bf2a8761ea3e7442d1ff46748da1983bf3084768&amp;dn=Moonbeam.City.S01E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47382\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>429M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="47381" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47381.html">
+																									月光都市 Moonbeam City S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnodv4r" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47381\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d210b4f3ad5c9d8e3922fa2c2c42ceaa19205a04&amp;dn=Moonbeam.City.S01E05.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet47381\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47381\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d210b4f3ad5c9d8e3922fa2c2c42ceaa19205a04&amp;dn=Moonbeam.City.S01E05.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47381\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>121M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="47327" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/47327.html">
+																									月光都市 Moonbeam City S01E04 720p 漫迪字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/15DV9k" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'47327\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:00703b232d71343a35168aa1515aa82110d8f583&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet47327\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'47327\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%A2%A6%E6%BB%A8%E5%9F%8E.Moonbeam.City.S01E04.Quest.for.Aquatica.720p-%E6%BC%AB%E8%BF%AA%E5%AD%97%E5%B9%95%E7%BB%84.mp4|113724700|d835069a73e41071432b04dcc9edcf3f|h=y2fvh5tauefc3edbukizgbkg5efjfmgz|/" rel="nofollow" target="_blank" name=\'ed2k47327\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'47327\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:00703b232d71343a35168aa1515aa82110d8f583&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E04 720p 漫迪字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'47327\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>108M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-10-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="46448" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46448.html">
+																									月光都市 Moonbeam City S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgu6fcW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46448\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:774974cc1e033a0121c4fc96c15add2a002d6755&amp;dn=Moonbeam.City.S01E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet46448\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46448\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:774974cc1e033a0121c4fc96c15add2a002d6755&amp;dn=Moonbeam.City.S01E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46448\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>393M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="46447" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46447.html">
+																									月光都市 Moonbeam City S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdBBpYz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46447\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4bb86f68be35223a4e0df31f2257564f68296f2a&amp;dn=Moonbeam.City.S01E04.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet46447\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46447\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4bb86f68be35223a4e0df31f2257564f68296f2a&amp;dn=Moonbeam.City.S01E04.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46447\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>114M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="46882" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46882.html">
+																									月光都市 Moonbeam City S01E03 720p 漫迪字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/15DV9k" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46882\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fd94268567ee0c1a7a77663235bc6b01a9030931&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet46882\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46882\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%A2%A6%E6%BB%A8%E5%9F%8E.Moonbeam.City.S01E03.The.Strike.Visualizer.Strikes.Again.720p-%E6%BC%AB%E8%BF%AA%E5%AD%97%E5%B9%95%E7%BB%84.mp4|125305218|bf71079bc2fdc59dc5f47ca147ac8ed6|h=j7zfl2xxduldb7hvq3ty2mui4d4l5jre|/" rel="nofollow" target="_blank" name=\'ed2k46882\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'46882\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:fd94268567ee0c1a7a77663235bc6b01a9030931&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E03 720p 漫迪字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46882\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>107M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-10-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="45976" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45976.html">
+																									月光都市 Moonbeam City S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjBpMMh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45976\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5d27c52d8c7fa558094d57c3d2c64dfeec7235a4&amp;dn=Moonbeam.City.S01E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet45976\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45976\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5d27c52d8c7fa558094d57c3d2c64dfeec7235a4&amp;dn=Moonbeam.City.S01E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45976\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>413M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="46072" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46072.html">
+																									月光都市 Moonbeam City S01E03 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gd0eXZt" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46072\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:cbbfc8e010f6ba91a42127ca54c104f8e6f9b4fb&amp;dn=Moonbeam.City.S01E03.The.Strike.Visualizer.Strikes.Again.1080p.WEB-DL.AAC2.0.H.264-iT00NZ%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet46072\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46072\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cbbfc8e010f6ba91a42127ca54c104f8e6f9b4fb&amp;dn=Moonbeam.City.S01E03.The.Strike.Visualizer.Strikes.Again.1080p.WEB-DL.AAC2.0.H.264-iT00NZ%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E03 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46072\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>806M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="45975" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45975.html">
+																									月光都市 Moonbeam City S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6KjzGu" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45975\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c853342b3290bfe0308a76a3424509a702a9b7f4&amp;dn=Moonbeam.City.S01E03.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet45975\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45975\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c853342b3290bfe0308a76a3424509a702a9b7f4&amp;dn=Moonbeam.City.S01E03.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45975\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>119M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-10-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="46881" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/46881.html">
+																									月光都市 Moonbeam City S01E02 720p 漫迪字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/15DV9k" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'46881\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8075fad4b35b2de769f46865e4dcdddcf2aa068d&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet46881\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'46881\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%A2%A6%E6%BB%A8%E5%9F%8E.Moonbeam.City.S01E02.Lights.Camera.Reenaction.720p-%E6%BC%AB%E8%BF%AA%E5%AD%97%E5%B9%95%E7%BB%84.mp4|122476263|55abecb43508013843c7d74c28cc5618|h=7yi72jp3yzkjkrq7mog72uqzkzsbdjda|/" rel="nofollow" target="_blank" name=\'ed2k46881\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'46881\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:8075fad4b35b2de769f46865e4dcdddcf2aa068d&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E02 720p 漫迪字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'46881\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>116M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-10-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="45563" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45563.html">
+																									月光都市 Moonbeam City S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqroMMw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45563\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1303c434c8da6f59471a37fe3cd07ee1c061f8ca&amp;dn=Moonbeam.City.S01E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" target="_blank" name=\'magnet45563\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45563\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1303c434c8da6f59471a37fe3cd07ee1c061f8ca&amp;dn=Moonbeam.City.S01E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A271" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45563\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>377M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-09-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="45641" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45641.html">
+																									月光都市 Moonbeam City S01E02 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDjTyLF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45641\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:655139b015959bead4f87a83d72aa0969efb0222&amp;dn=Moonbeam.City.S01E02.Lights.Camera.Reenaction.1080p.WEB-DL.AAC2.0.H.264-iT00NZ%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&" rel="nofollow" target="_blank" name=\'magnet45641\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45641\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:655139b015959bead4f87a83d72aa0969efb0222&amp;dn=Moonbeam.City.S01E02.Lights.Camera.Reenaction.1080p.WEB-DL.AAC2.0.H.264-iT00NZ%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E02 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45641\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>766M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-09-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="45562" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45562.html">
+																									月光都市 Moonbeam City S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntpcI85" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45562\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d01f1470a5045f90f6af818b7ada046e490c4773&amp;dn=Moonbeam.City.S01E02.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet45562\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45562\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d01f1470a5045f90f6af818b7ada046e490c4773&amp;dn=Moonbeam.City.S01E02.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45562\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>107M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-09-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="45374" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45374.html">
+																									月光都市 Moonbeam City S01E01 720p 漫迪字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/15DV9k" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45374\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:01bf43ebf31bb1fb291a3f83f211caaa9d9c6d35&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet45374\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45374\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%A2%A6%E6%BB%A8%E5%9F%8E.Moonbeam.City.S01E01.Mall.Hath.No.Fury.720p-%E6%BC%AB%E8%BF%AA%E5%AD%97%E5%B9%95%E7%BB%84.mp4|112948874|cdcc114a4e48798499d766c74494057b|h=77eycenzfraamirhisgqdnj3ttcnwep3|/" rel="nofollow" target="_blank" name=\'ed2k45374\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'45374\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:01bf43ebf31bb1fb291a3f83f211caaa9d9c6d35&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E01 720p 漫迪字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45374\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>107M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-09-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="45315" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45315.html">
+																									月光都市 Moonbeam City S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWmo08W" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45315\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:449e3417e5360144ac0e11b608623a98d3cd0a4d&amp;dn=Moonbeam.City.S01E01.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet45315\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45315\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:449e3417e5360144ac0e11b608623a98d3cd0a4d&amp;dn=Moonbeam.City.S01E01.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45315\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>234M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-09-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="45316" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45316.html">
+																									月光都市 Moonbeam City S01E01 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kT1XDHH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45316\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2cedfd6b3a4ba9c767370a8c686b25a5fe7f3a7d&amp;dn=Moonbeam.City.S01E01.1080p.WEB-DL.AAC2.0.H.264-iT00NZ%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" target="_blank" name=\'magnet45316\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45316\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2cedfd6b3a4ba9c767370a8c686b25a5fe7f3a7d&amp;dn=Moonbeam.City.S01E01.1080p.WEB-DL.AAC2.0.H.264-iT00NZ%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E01 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45316\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>819M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-09-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="45314" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/45314.html">
+																									月光都市 Moonbeam City S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntDyRah" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'45314\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:cbcdee1f36e9955811eeaddb5cab275fb8fef4a8&amp;dn=Moonbeam.City.S01E01.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet45314\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'45314\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cbcdee1f36e9955811eeaddb5cab275fb8fef4a8&amp;dn=Moonbeam.City.S01E01.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="月光都市 Moonbeam City S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'45314\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>93M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-09-17</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,888,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,888);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,888);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,888);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

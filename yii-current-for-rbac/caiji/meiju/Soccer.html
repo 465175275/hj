@@ -1,0 +1,2594 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:18:52 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d789a8066daeb0605a13f6dd53730f4081509535132; expires=Thu, 01-Nov-18 11:18:52 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e74b230a77790-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>足球赛事 Soccer-足球赛事下载-足球赛事全集下载-Soccer下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="足球赛事,Soccer,足球赛事下载,足球赛事全集下载,足球赛事高清下载,足球赛事迅雷下载"/>
+	  <meta name="description" content="这里放置本站更新的跟足球有关的视频" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 379;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FSoccer.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FSoccer.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 379;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">足球赛事 Soccer-足球赛事下载-足球赛事全集下载-Soccer下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/a19b0a89eb6e7c38.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/a19b0a89eb6e7c38.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：随机</span>
+						<span>状态：<font color="#5cb1c5">播出中</font></span>
+						<span class="greybg">分类：</span>						
+						<span>最后更新：2016-07-11 14:26</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/379.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">24</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						这里放置本站更新的跟足球有关的视频                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="-1">
+																			其它▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="61096" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61096.html">
+																									2016年欧洲杯 1/4决赛 波兰vs葡萄牙 Poland vs Portugal 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=tzvms7q&amp;f=UEFA.Euro.2016.Quarter.Final.Poland.vs.Portugal.WEB.x264-OVERTiME%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61096\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5808adda00393b7bbad3328f3eedf39650e84e61&amp;dn=UEFA.Euro.2016.Quarter.Final.Poland.vs.Portugal.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet61096\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61096\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5808adda00393b7bbad3328f3eedf39650e84e61&amp;dn=UEFA.Euro.2016.Quarter.Final.Poland.vs.Portugal.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/4决赛 波兰vs葡萄牙 Poland vs Portugal " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61096\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.28G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60898" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60898.html">
+																									2016年欧洲杯 1/8决赛 德国vs斯洛伐克 Germany vs Slovakia 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ym2ohkw&amp;f=UEFA.Euro.2016.Round.of.16.Germany.vs.Slovakia.WEB.x264-OVERTiME%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60898\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:276c1d3f2bd16b79b7ce7ea4dd2b337b76df2204&amp;dn=UEFA.Euro.2016.Round.of.16.Germany.vs.Slovakia.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%" rel="nofollow" target="_blank" name=\'magnet60898\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60898\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:276c1d3f2bd16b79b7ce7ea4dd2b337b76df2204&amp;dn=UEFA.Euro.2016.Round.of.16.Germany.vs.Slovakia.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/8决赛 德国vs斯洛伐克 Germany vs Slovakia " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60898\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.00G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60897" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60897.html">
+																									2016年欧洲杯 1/8决赛 法国vs爱尔兰 France vs Republic of Ireland 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=m9hodxj&amp;f=UEFA.Euro.2016.Round.of.16.France.vs.Republic.of.Ireland.WEB.x264-OVERTiME%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60897\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:952e15bcd7d7a324d26e2f0d253266cad1fae40a&amp;dn=UEFA.Euro.2016.Round.of.16.France.vs.Republic.of.Ireland.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;" rel="nofollow" target="_blank" name=\'magnet60897\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60897\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:952e15bcd7d7a324d26e2f0d253266cad1fae40a&amp;dn=UEFA.Euro.2016.Round.of.16.France.vs.Republic.of.Ireland.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/8决赛 法国vs爱尔兰 France vs Republic of Ireland " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60897\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.01G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60264" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60264.html">
+																									2016年欧洲杯 D组 西班牙vs捷克 EURO Group D Spain vs Czech Republic 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3B8342366B6390D1A9E06814F0090824DA5E6BDE&amp;dn=uefa+euro+2016+group+d+spain+vs+czech+republic+720p+hdtv+x264+angelic+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=" rel="nofollow" target="_blank" name=\'magnet60264\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60264\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3B8342366B6390D1A9E06814F0090824DA5E6BDE&amp;dn=uefa+euro+2016+group+d+spain+vs+czech+republic+720p+hdtv+x264+angelic+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 D组 西班牙vs捷克 EURO Group D Spain vs Czech Republic " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60264\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.55G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60263" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60263.html">
+																									2016年欧洲杯 C组 德国vs乌克兰 EURO Group C Germany vs Ukraine 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0CFD41831FA2B48F0AF6EE13DFF02035D1B11364&amp;dn=uefa+euro+2016+group+c+germany+vs+ukraine+web+h264+overtime+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A%2F%" rel="nofollow" target="_blank" name=\'magnet60263\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60263\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0CFD41831FA2B48F0AF6EE13DFF02035D1B11364&amp;dn=uefa+euro+2016+group+c+germany+vs+ukraine+web+h264+overtime+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A%2F%" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 C组 德国vs乌克兰 EURO Group C Germany vs Ukraine " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60263\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.76G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60262" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60262.html">
+																									2016年欧洲杯 E组 比利时vs意大利 EURO Group E Belgium vs Italy 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:CBA06137AF80F6123CEAA43A0C220FF38FCD74BB&amp;dn=uefa+euro+2016+group+e+belgium+vs+italy+720p+hdtv+x264+angelic+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A%" rel="nofollow" target="_blank" name=\'magnet60262\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60262\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:CBA06137AF80F6123CEAA43A0C220FF38FCD74BB&amp;dn=uefa+euro+2016+group+e+belgium+vs+italy+720p+hdtv+x264+angelic+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A%" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 E组 比利时vs意大利 EURO Group E Belgium vs Italy " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60262\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.05G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60261" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60261.html">
+																									2016年欧洲杯 F组 葡萄牙vs冰岛 EURO Group F Portugal Vs Iceland 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:B4656F0AE1E7A5CC7663ADD42894B60B9BC9CA91&amp;dn=uefa+euro+2016+group+f+portugal+vs+iceland+720p+hdtv+x264+angelic+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet60261\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60261\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:B4656F0AE1E7A5CC7663ADD42894B60B9BC9CA91&amp;dn=uefa+euro+2016+group+f+portugal+vs+iceland+720p+hdtv+x264+angelic+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 F组 葡萄牙vs冰岛 EURO Group F Portugal Vs Iceland " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60261\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.14G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60260" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60260.html">
+																									2016年欧洲杯 A组 法国vs罗马尼亚 EURO Group A France vs Romania 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:F6F8F3EC578FDC85E3373DB3AA8B0D88C61966B8&amp;dn=uefa+euro+2016+group+a+france+vs+romania+720p+hdtv+x264+angelic+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet60260\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60260\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:F6F8F3EC578FDC85E3373DB3AA8B0D88C61966B8&amp;dn=uefa+euro+2016+group+a+france+vs+romania+720p+hdtv+x264+angelic+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 A组 法国vs罗马尼亚 EURO Group A France vs Romania " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60260\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.19G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60259" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60259.html">
+																									2016年欧洲杯 B组 英格兰vs俄罗斯 EURO Group B England vs Russia 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:575F0BBAA2733B2BE13877954C208405A754CEE5&amp;dn=uefa+euro+2016+group+b+england+vs+russia+11+06+2016+h+264+rus+50fps+hdtvrip+720p&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&am" rel="nofollow" target="_blank" name=\'magnet60259\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60259\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:575F0BBAA2733B2BE13877954C208405A754CEE5&amp;dn=uefa+euro+2016+group+b+england+vs+russia+11+06+2016+h+264+rus+50fps+hdtvrip+720p&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&am" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 B组 英格兰vs俄罗斯 EURO Group B England vs Russia " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60259\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.51G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60856" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60856.html">
+																									2016年欧洲杯 1/8决赛 威尔士vs北爱尔兰 Wales vs Northern Ireland 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=3omfb9z&amp;f=UEFA.Euro.2016.Round.of.16.Wales.vs.Northern.Ireland.1080p.HDTV.x264-VERUM%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60856\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e79216769b1842857c89931899fcf5a92501bdbd&amp;dn=UEFA.Euro.2016.Round.of.16.Wales.vs.Northern.Ireland.1080p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;" rel="nofollow" target="_blank" name=\'magnet60856\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60856\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e79216769b1842857c89931899fcf5a92501bdbd&amp;dn=UEFA.Euro.2016.Round.of.16.Wales.vs.Northern.Ireland.1080p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/8决赛 威尔士vs北爱尔兰 Wales vs Northern Ireland " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60856\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>6.41G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60855" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60855.html">
+																									2016年欧洲杯 1/8决赛 克罗地亚vs葡萄牙 Croatia vs Portugal 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=nghc5pt&amp;f=UEFA.Euro.2016.Round.of.16.Croatia.vs.Portugal.720p.HDTV.x264-VERUM%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60855\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f94d3c875ceec08f6416d10a8c1287ae7fa2bdfa&amp;dn=UEFA.Euro.2016.Round.of.16.Croatia.vs.Portugal.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet60855\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60855\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f94d3c875ceec08f6416d10a8c1287ae7fa2bdfa&amp;dn=UEFA.Euro.2016.Round.of.16.Croatia.vs.Portugal.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/8决赛 克罗地亚vs葡萄牙 Croatia vs Portugal " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60855\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.80G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60586" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60586.html">
+																									2016年欧洲杯 C组 北爱尔兰vs德国 EURO Group C Northern Ireland vs Ger… 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b37d8892a6068915e769f3d18475b30cf120138d&amp;dn=UEFA.Euro.2016.Group.C.Northern.Ireland.vs.Germany.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=" rel="nofollow" target="_blank" name=\'magnet60586\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60586\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b37d8892a6068915e769f3d18475b30cf120138d&amp;dn=UEFA.Euro.2016.Group.C.Northern.Ireland.vs.Germany.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 C组 北爱尔兰vs德国 EURO Group C Northern Ireland vs Ger… " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60586\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.24G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60945" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60945.html">
+																									2016年欧洲杯 1/8决赛 意大利vs西班牙 Italy vs Spain 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=sy4bpr2&amp;f=UEFA.Euro.2016.Round.of.16.Italy.vs.Spain.720p.HDTV.x264-VERUM%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60945\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:118e5df7007030bd06968d6799e06b4f92b92953&amp;dn=UEFA.Euro.2016.Round.of.16.Italy.vs.Spain.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F" rel="nofollow" target="_blank" name=\'magnet60945\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60945\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:118e5df7007030bd06968d6799e06b4f92b92953&amp;dn=UEFA.Euro.2016.Round.of.16.Italy.vs.Spain.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/8决赛 意大利vs西班牙 Italy vs Spain " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60945\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.12G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="9115" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9115.html">
+																									2012年欧洲杯 A组 捷克vs波兰 EURO Group A Czech Vs Poland 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/C777D1D457BEEDAF48382737E56014CD668B9CD2.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9115\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c777d1d457beedaf48382737e56014cd668b9cd2&amp;dn=Euro+2012+-+Czech+Republic+v+Poland+%2816th+June+2012%29+Full+Match+&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftr" rel="nofollow" target="_blank" name=\'magnet9115\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9115\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c777d1d457beedaf48382737e56014cd668b9cd2&amp;dn=Euro+2012+-+Czech+Republic+v+Poland+%2816th+June+2012%29+Full+Match+&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftr" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 A组 捷克vs波兰 EURO Group A Czech Vs Poland " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9115\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>953M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="8940" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8940.html">
+																									2012年欧洲杯 B组 德国 VS 葡萄牙 Euro.2012.Group.B.Germany.vs.Portugal 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/8BE9C2195E8DDF2F44AA0EC58F7AC65496F5DBDD.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8940\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:8BE9C2195E8DDF2F44AA0EC58F7AC65496F5DBDD&amp;dn=uefa.euro.2012.group.b.germany.vs.portugal.hdtv.x264-angelic.mp4&amp;tr=http%3a//fr33dom.h33t.com%3a3310/announce" rel="nofollow" target="_blank" name=\'magnet8940\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8940\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8BE9C2195E8DDF2F44AA0EC58F7AC65496F5DBDD&amp;dn=uefa.euro.2012.group.b.germany.vs.portugal.hdtv.x264-angelic.mp4&amp;tr=http%3a//fr33dom.h33t.com%3a3310/announce" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 B组 德国 VS 葡萄牙 Euro.2012.Group.B.Germany.vs.Portugal " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8940\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="22443" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/22443.html">
+																									2013欧洲冠军杯 UCL Final Dortmund vs Bayern 多特蒙德vs拜仁 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/A24CA91954040EFDBBE0C168D296DF89051D3A95.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'22443\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a24ca91954040efdbbe0c168d296df89051d3a95&amp;dn=UCL+-+Borussia+Dortmund+vs+Bayern+Munich+720p+25.05.2013&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole" rel="nofollow" target="_blank" name=\'magnet22443\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'22443\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a24ca91954040efdbbe0c168d296df89051d3a95&amp;dn=UCL+-+Borussia+Dortmund+vs+Bayern+Munich+720p+25.05.2013&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole" rel="nofollow" name=\'miurl\' filename="2013欧洲冠军杯 UCL Final Dortmund vs Bayern 多特蒙德vs拜仁 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'22443\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-05-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="61560" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61560.html">
+																									2016年欧洲杯 决赛 葡萄牙vs法国 Portugal vs France 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=hfdmcn6&amp;f=UEFA.Euro.2016.Final.Portugal.vs.France.720p.HDTV.x264-VERUM%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61560\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4baebb63e2db51c8264ebb6bd3618f8fda7f4fac&amp;dn=UEFA.Euro.2016.Final.Portugal.vs.France.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" target="_blank" name=\'magnet61560\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61560\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4baebb63e2db51c8264ebb6bd3618f8fda7f4fac&amp;dn=UEFA.Euro.2016.Final.Portugal.vs.France.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 决赛 葡萄牙vs法国 Portugal vs France 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61560\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>6.0G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60804" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60804.html">
+																									2016年欧洲杯 1/8决赛 瑞士vs波兰 Switzerland vs Poland 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=1rlqsvw&amp;f=UEFA.Euro.2016.Round.of.16.Switzerland.vs.Poland.WEB.h264-OVERTiME%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60804\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:609d2a6907d5554a3eabc7997e4281e8c12dc21a&amp;dn=UEFA.Euro.2016.Round.of.16.Switzerland.vs.Poland.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3" rel="nofollow" target="_blank" name=\'magnet60804\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60804\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:609d2a6907d5554a3eabc7997e4281e8c12dc21a&amp;dn=UEFA.Euro.2016.Round.of.16.Switzerland.vs.Poland.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/8决赛 瑞士vs波兰 Switzerland vs Poland " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60804\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.33G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60803" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60803.html">
+																									2016年欧洲杯 1/8决赛 威尔士vs北爱尔兰 Wales vs Northern Ireland 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=xt7gfm3&amp;f=UEFA.Euro.2016.Round.of.16.Wales.vs.Northern.Ireland.720p.HDTV.x264-VERUM%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60803\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4bfee116399d3f9328ba14bf6d602a4d5a6bce2c&amp;dn=UEFA.Euro.2016.Round.of.16.Wales.vs.Northern.Ireland.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;t" rel="nofollow" target="_blank" name=\'magnet60803\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60803\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4bfee116399d3f9328ba14bf6d602a4d5a6bce2c&amp;dn=UEFA.Euro.2016.Round.of.16.Wales.vs.Northern.Ireland.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;t" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/8决赛 威尔士vs北爱尔兰 Wales vs Northern Ireland " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60803\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.14G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60658" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60658.html">
+																									2016年欧洲杯 F组 匈牙利vs葡萄牙 EURO Group F Hungary vs Portugal 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:7c529468fa5f8d5e93e4b3f3476fd7b2803ddd2f&amp;dn=UEFA.Euro.2016.Group.F.Hungary.vs.Portugal.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2" rel="nofollow" target="_blank" name=\'magnet60658\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60658\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7c529468fa5f8d5e93e4b3f3476fd7b2803ddd2f&amp;dn=UEFA.Euro.2016.Group.F.Hungary.vs.Portugal.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 F组 匈牙利vs葡萄牙 EURO Group F Hungary vs Portugal " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60658\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.94G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60412" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60412.html">
+																									2016年欧洲杯 F组 冰岛vs匈牙利 EURO Group F Iceland vs Hungary 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:09a0216e9ebc73451c0419d76a1746d65c707614&amp;dn=UEFA.Euro.2016.Group.F.Iceland.vs.Hungary.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F" rel="nofollow" target="_blank" name=\'magnet60412\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60412\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:09a0216e9ebc73451c0419d76a1746d65c707614&amp;dn=UEFA.Euro.2016.Group.F.Iceland.vs.Hungary.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 F组 冰岛vs匈牙利 EURO Group F Iceland vs Hungary " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60412\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.75G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60411" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60411.html">
+																									2016年欧洲杯 E组 比利时vs爱尔兰 EURO Group E Belgium vs Republic of … 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b36c2e99f98849d9827d52fd18443449dbed28c6&amp;dn=UEFA.Euro.2016.Group.E.Belgium.vs.Republic.of.Ireland.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;" rel="nofollow" target="_blank" name=\'magnet60411\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60411\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b36c2e99f98849d9827d52fd18443449dbed28c6&amp;dn=UEFA.Euro.2016.Group.E.Belgium.vs.Republic.of.Ireland.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 E组 比利时vs爱尔兰 EURO Group E Belgium vs Republic of … " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60411\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.89G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="9315" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9315.html">
+																									2012年欧洲杯 1/4决赛 德国vs希腊 Germany.vs.Greece 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/D223337D58CC451FA7C79D0FA8D252EED770C49F.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9315\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d223337d58cc451fa7c79d0fa8d252eed770c49f&amp;dn=EURO.2012.Gdansk.QF.%2822+june%29.Germany.vs.Greece.720p&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole" rel="nofollow" target="_blank" name=\'magnet9315\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9315\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d223337d58cc451fa7c79d0fa8d252eed770c49f&amp;dn=EURO.2012.Gdansk.QF.%2822+june%29.Germany.vs.Greece.720p&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 1/4决赛 德国vs希腊 Germany.vs.Greece 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9315\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="9314" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9314.html">
+																									2012年欧洲杯 1/4决赛 捷克vs葡萄牙 Czech Republic vs Portugal 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/88840753D21621466044F7017D44C16901721C54.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9314\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:88840753d21621466044f7017d44c16901721c54&amp;dn=Euro+2012+Quarterfinal+Czech+Republic+v+Portugal+720p+HD&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole" rel="nofollow" target="_blank" name=\'magnet9314\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9314\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:88840753d21621466044f7017d44c16901721c54&amp;dn=Euro+2012+Quarterfinal+Czech+Republic+v+Portugal+720p+HD&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 1/4决赛 捷克vs葡萄牙 Czech Republic vs Portugal 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9314\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="9313" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9313.html">
+																									2012年欧洲杯 1/4决赛 法国vs西班牙 Spain.vs.France 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/4FE825370DC8D64C44B49DC092C8BCA94334A398.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9313\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4fe825370dc8d64c44b49dc092c8bca94334a398&amp;dn=EURO.2012.Donetsk.QF.%2823+june%29.Germany.vs.Greece.720p&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istol" rel="nofollow" target="_blank" name=\'magnet9313\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9313\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4fe825370dc8d64c44b49dc092c8bca94334a398&amp;dn=EURO.2012.Donetsk.QF.%2823+june%29.Germany.vs.Greece.720p&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istol" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 1/4决赛 法国vs西班牙 Spain.vs.France 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9313\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="9171" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9171.html">
+																									2012年欧洲杯 C组 西班牙vs克罗地亚 Group C Spain Vs Croatia 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/CDB83F73FA25A878C17229261336F0C3CE9F6A57.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9171\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:CDB83F73FA25A878C17229261336F0C3CE9F6A57&amp;dn=Euro%202012%20Group%20C%20Croatia%20v%20Spain%20720p%20HD&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" target="_blank" name=\'magnet9171\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9171\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:CDB83F73FA25A878C17229261336F0C3CE9F6A57&amp;dn=Euro%202012%20Group%20C%20Croatia%20v%20Spain%20720p%20HD&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 C组 西班牙vs克罗地亚 Group C Spain Vs Croatia 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9171\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60650" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60650.html">
+																									2016年欧洲杯 D组 捷克vs土耳其 EURO Group D Czech Republic vs Turkey 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5764220103d270e332dc1568ce763c5f4b04f0bc&amp;dn=UEFA.Euro.2016.Group.D.Czech.Republic.vs.Turkey.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet60650\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60650\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5764220103d270e332dc1568ce763c5f4b04f0bc&amp;dn=UEFA.Euro.2016.Group.D.Czech.Republic.vs.Turkey.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 D组 捷克vs土耳其 EURO Group D Czech Republic vs Turkey " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60650\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.34G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60649" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60649.html">
+																									2016年欧洲杯 C组 乌克兰vs波兰 EURO Group C Ukraine vs Poland 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:7026db7867c56fa2a047a35e571920801abc308d&amp;dn=UEFA.Euro.2016.Group.C.Ukraine.vs.Poland.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9" rel="nofollow" target="_blank" name=\'magnet60649\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60649\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7026db7867c56fa2a047a35e571920801abc308d&amp;dn=UEFA.Euro.2016.Group.C.Ukraine.vs.Poland.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 C组 乌克兰vs波兰 EURO Group C Ukraine vs Poland " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60649\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.79G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60463" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60463.html">
+																									2016年欧洲杯 A组 瑞士vs法国 EURO Group A Switzerland vs France 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e5df334be572bd8449073598183b633374590865&amp;dn=UEFA.Euro.2016.Group.A.Switzerland.vs.France.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F" rel="nofollow" target="_blank" name=\'magnet60463\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60463\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e5df334be572bd8449073598183b633374590865&amp;dn=UEFA.Euro.2016.Group.A.Switzerland.vs.France.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 A组 瑞士vs法国 EURO Group A Switzerland vs France " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60463\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.82G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60462" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60462.html">
+																									2016年欧洲杯 A组 罗马尼亚vs阿尔巴尼亚 EURO Group A Romania vs Albania 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6ebecf71caf35d0a667991a8c00235bb40b08c70&amp;dn=UEFA.Euro.2016.Group.A.Romania.vs.Albania.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F" rel="nofollow" target="_blank" name=\'magnet60462\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60462\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6ebecf71caf35d0a667991a8c00235bb40b08c70&amp;dn=UEFA.Euro.2016.Group.A.Romania.vs.Albania.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 A组 罗马尼亚vs阿尔巴尼亚 EURO Group A Romania vs Albania " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60462\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.74G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="9170" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9170.html">
+																									2012年欧洲杯 C组 西班牙vs克罗地亚 Group C Spain Vs Croatia 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/57A1DBE488013EBF473A3D13EE813CF0435FFAD2.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9170\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:57A1DBE488013EBF473A3D13EE813CF0435FFAD2&amp;dn=Euro%202012-Group%20C%20-Spain%20Vs%20Croatia%20%2818.6.2012%29%20Full%20Match&amp;tr=udp%3a//tracker.1337x.org%3a80/announce" rel="nofollow" target="_blank" name=\'magnet9170\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9170\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:57A1DBE488013EBF473A3D13EE813CF0435FFAD2&amp;dn=Euro%202012-Group%20C%20-Spain%20Vs%20Croatia%20%2818.6.2012%29%20Full%20Match&amp;tr=udp%3a//tracker.1337x.org%3a80/announce" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 C组 西班牙vs克罗地亚 Group C Spain Vs Croatia " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9170\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>861M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60901" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60901.html">
+																									2016年欧洲杯 1/8决赛 匈牙利vs比利时 Hungary vs Belgium 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=mz3bp7y&amp;f=UEFA.Euro.2016.Round.of.16.Hungary.vs.Belgium.720p.WEB.h264-OVERTiME%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60901\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:cc779a4d5a6c31a9f8e73882d9626eb24f4080b1&amp;dn=UEFA.Euro.2016.Round.of.16.Hungary.vs.Belgium.720p.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet60901\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60901\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cc779a4d5a6c31a9f8e73882d9626eb24f4080b1&amp;dn=UEFA.Euro.2016.Round.of.16.Hungary.vs.Belgium.720p.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/8决赛 匈牙利vs比利时 Hungary vs Belgium " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60901\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.53G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18026" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18026.html">
+																									欧洲冠军联赛 2013 02 20 阿森纳vs拜仁 720p 央视国语 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>3G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="9393" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9393.html">
+																									2012年欧洲杯 1/2决赛 德国vs意大利 Germany Vs Italy 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/C0CE4F256C61CAC9BECA710C7FE08BB3763C9159.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9393\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c0ce4f256c61cac9beca710c7fe08bb3763c9159&amp;dn=Euro+2012+-+2+Semi+Final-+Germany+Vs+Italy+%2828.06.2012%29+Full+Mat&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftr" rel="nofollow" target="_blank" name=\'magnet9393\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9393\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c0ce4f256c61cac9beca710c7fe08bb3763c9159&amp;dn=Euro+2012+-+2+Semi+Final-+Germany+Vs+Italy+%2828.06.2012%29+Full+Mat&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftr" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 1/2决赛 德国vs意大利 Germany Vs Italy " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9393\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>775M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="9173" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9173.html">
+																									2012年欧洲杯 C组 意大利vs爱尔兰 EURO Group C Italy Vs Ireland 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/C8A7475E45256726B947B90EDC1667C06D1A6E6C.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9173\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:C8A7475E45256726B947B90EDC1667C06D1A6E6C&amp;dn=Euro%202012-Group%20C-Italy%20Vs%20Republic%20of%20Ireland%20%2818.6.2012%29%20Full%20Match&amp;tr=http%3a//desidhamal.com%3a2710/pcstfk4vqxwugd3y7ja770ffqqat2orr/announce" rel="nofollow" target="_blank" name=\'magnet9173\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9173\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:C8A7475E45256726B947B90EDC1667C06D1A6E6C&amp;dn=Euro%202012-Group%20C-Italy%20Vs%20Republic%20of%20Ireland%20%2818.6.2012%29%20Full%20Match&amp;tr=http%3a//desidhamal.com%3a2710/pcstfk4vqxwugd3y7ja770ffqqat2orr/announce" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 C组 意大利vs爱尔兰 EURO Group C Italy Vs Ireland " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9173\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>855M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="9439" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9439.html">
+																									2012年欧洲杯 决赛 西班牙vs意大利 Euro.2012.Final Spain.vs.Italy.720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://bbs.ttmeiju.com/thread-7205-1-1.html" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'9439\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/A408F72E0E9C281FB2C71D92B8D26388549A3EC0.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9439\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:A408F72E0E9C281FB2C71D92B8D26388549A3EC0&amp;dn=UEFA.Euro.2012.Final.Spain.vs.Italy.720p.HDTV.x264-SPASTiKUS&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" target="_blank" name=\'magnet9439\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9439\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:A408F72E0E9C281FB2C71D92B8D26388549A3EC0&amp;dn=UEFA.Euro.2012.Final.Spain.vs.Italy.720p.HDTV.x264-SPASTiKUS&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 决赛 西班牙vs意大利 Euro.2012.Final Spain.vs.Italy.720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9439\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-07-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60537" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60537.html">
+																									2016年欧洲杯 B组 斯洛伐克vs英格兰 EURO Group B Slovakia vs England 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b9548e3d4cc841958ca358ee1bae58bc041d3ef0&amp;dn=UEFA.Euro.2016.Group.B.Slovakia.vs.England.720p.HDTV.x264-ANGELiC%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet60537\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60537\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b9548e3d4cc841958ca358ee1bae58bc041d3ef0&amp;dn=UEFA.Euro.2016.Group.B.Slovakia.vs.England.720p.HDTV.x264-ANGELiC%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 B组 斯洛伐克vs英格兰 EURO Group B Slovakia vs England " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60537\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.59G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="9053" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9053.html">
+																									2012年欧洲杯 B组 德国vs荷兰 Group B Netherlands.vs.Germany 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/25568230D500B4FE3189FF34927B56EA190AB630.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9053\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:25568230D500B4FE3189FF34927B56EA190AB630&amp;dn=UEFA.Euro.2012.Group.B.Netherlands.vs.Germany.HDTV.x264-ANGELiC&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" target="_blank" name=\'magnet9053\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9053\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:25568230D500B4FE3189FF34927B56EA190AB630&amp;dn=UEFA.Euro.2012.Group.B.Netherlands.vs.Germany.HDTV.x264-ANGELiC&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 B组 德国vs荷兰 Group B Netherlands.vs.Germany " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9053\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="9052" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9052.html">
+																									2012年欧洲杯 B组 丹麦vs葡萄牙 Group B Denmark.vs.Portugal 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/34CF2CC8BC7AD845D1D6F78C56AA23A12A550AAA.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9052\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:34CF2CC8BC7AD845D1D6F78C56AA23A12A550AAA&amp;dn=UEFA.Euro.2012.Group.B.Denmark.vs.Portugal.HDTV.x264&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" target="_blank" name=\'magnet9052\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9052\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:34CF2CC8BC7AD845D1D6F78C56AA23A12A550AAA&amp;dn=UEFA.Euro.2012.Group.B.Denmark.vs.Portugal.HDTV.x264&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 B组 丹麦vs葡萄牙 Group B Denmark.vs.Portugal " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9052\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60385" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60385.html">
+																									2016年欧洲杯 E组 意大利vs瑞典 EURO Group E Italy vs Sweden 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:085f9838869c803c5e207e48d5781c2036aef0bc&amp;dn=UEFA.Euro.2016.Group.E.Italy.vs.Sweden.720p.HDTV.x264-ANGELiC%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%" rel="nofollow" target="_blank" name=\'magnet60385\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60385\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:085f9838869c803c5e207e48d5781c2036aef0bc&amp;dn=UEFA.Euro.2016.Group.E.Italy.vs.Sweden.720p.HDTV.x264-ANGELiC%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 E组 意大利vs瑞典 EURO Group E Italy vs Sweden " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60385\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.60G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="8930" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8930.html">
+																									2012年欧洲杯 B组 荷兰 VS 丹麦 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/C452D007B2594833C3E39A3117B7977008B071B0.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8930\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c452d007b2594833c3e39a3117b7977008b071b0&amp;dn=Euro+2012+Group+B+Netherlands+v+Denmark+720p+HD+&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A69" rel="nofollow" target="_blank" name=\'magnet8930\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8930\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c452d007b2594833c3e39a3117b7977008b071b0&amp;dn=Euro+2012+Group+B+Netherlands+v+Denmark+720p+HD+&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A69" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 B组 荷兰 VS 丹麦 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8930\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60443" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60443.html">
+																									2016年欧洲杯 F组 葡萄牙vs奥地利 EURO Group F Portugal vs Austria 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5a3398df74fbd1becdb4bee076d170af0def4729&amp;dn=UEFA.Euro.2016.Group.F.Portugal.vs.Austria.720p.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet60443\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60443\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5a3398df74fbd1becdb4bee076d170af0def4729&amp;dn=UEFA.Euro.2016.Group.F.Portugal.vs.Austria.720p.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 F组 葡萄牙vs奥地利 EURO Group F Portugal vs Austria " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60443\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.57G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="8929" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8929.html">
+																									2012年欧洲杯 B组 荷兰 VS 丹麦 Euro.2012.Group.A.Netherlands.vs.Denmar...											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/6328D41DFE7645757012C018D2FEB5F9D9DF269B.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8929\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6328d41dfe7645757012c018d2feb5f9d9df269b&amp;dn=Euro.2012.Group.B.Netherlands.vs.Denmark.HDTV.x264-ANGELiC%5Bss%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" target="_blank" name=\'magnet8929\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8929\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6328d41dfe7645757012c018d2feb5f9d9df269b&amp;dn=Euro.2012.Group.B.Netherlands.vs.Denmark.HDTV.x264-ANGELiC%5Bss%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 B组 荷兰 VS 丹麦 Euro.2012.Group.A.Netherlands.vs.Denmar..." target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8929\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="61228" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61228.html">
+																									2016年欧洲杯 1/4决赛 法国vs冰岛 France vs Iceland 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=uxz5la2&amp;f=UEFA.Euro.2016.Quarter.Final.France.vs.Iceland.720p.HDTV.x264-VERUM%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61228\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f1455100a1bb17517ba8dbd5a044c7a51fe24b2c&amp;dn=UEFA.Euro.2016.Quarter.Final.France.vs.Iceland.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet61228\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61228\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f1455100a1bb17517ba8dbd5a044c7a51fe24b2c&amp;dn=UEFA.Euro.2016.Quarter.Final.France.vs.Iceland.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/4决赛 法国vs冰岛 France vs Iceland 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61228\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.65G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="8970" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8970.html">
+																									2012年欧洲杯 C组 爱尔兰vs克罗地亚 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/F8444AD23B97354481D9B5DD2982C1485E5D8429.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8970\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f8444ad23b97354481d9b5dd2982c1485e5d8429&amp;dn=UEFA.Euro.2012.Group.C.Ireland.vs.Croatia.720p.HDTV.x264-ANGELiC&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracke" rel="nofollow" target="_blank" name=\'magnet8970\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8970\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f8444ad23b97354481d9b5dd2982c1485e5d8429&amp;dn=UEFA.Euro.2012.Group.C.Ireland.vs.Croatia.720p.HDTV.x264-ANGELiC&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracke" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 C组 爱尔兰vs克罗地亚 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8970\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="9103" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9103.html">
+																									2012年欧洲杯 D组 瑞士vs英格兰 EURO Group D England Vs Sweden 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/3404DE836B53D6CA18A32DD211909B3F3FDAD4CB.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9103\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3404de836b53d6ca18a32dd211909b3f3fdad4cb&amp;dn=Euro+2012+-+England+Vs+Sweden+%2815.6.2012%29+Full+Match+%28English+Co&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2F" rel="nofollow" target="_blank" name=\'magnet9103\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9103\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3404de836b53d6ca18a32dd211909b3f3fdad4cb&amp;dn=Euro+2012+-+England+Vs+Sweden+%2815.6.2012%29+Full+Match+%28English+Co&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2F" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 D组 瑞士vs英格兰 EURO Group D England Vs Sweden " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9103\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="9102" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9102.html">
+																									2012年欧洲杯 D组 法国vs乌克兰 EURO Group D France Vs Ukraine 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/1CD851DABEB0F84D8CDDB41EC0022169507F7F5F.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9102\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1cd851dabeb0f84d8cddb41ec0022169507f7f5f&amp;dn=Euro+2012+-+France+Vs+Ukraine+%2815.6.2012%29+Full+Match&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole" rel="nofollow" target="_blank" name=\'magnet9102\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9102\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1cd851dabeb0f84d8cddb41ec0022169507f7f5f&amp;dn=Euro+2012+-+France+Vs+Ukraine+%2815.6.2012%29+Full+Match&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 D组 法国vs乌克兰 EURO Group D France Vs Ukraine " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9102\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="8971" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8971.html">
+																									2012年欧洲杯 C组 西班牙vs意大利 UEFA.Euro.2012.Group.C.Spain.vs.Italy 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/AB6A99755B97441F0929A4F15F1396401F1349EF.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8971\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ab6a99755b97441f0929a4f15f1396401f1349ef&amp;dn=UEFA.Euro.2012.Group.C.Spain.vs.Italy.HDTV.x264-ANGELiC+%5BPublicH&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" target="_blank" name=\'magnet8971\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8971\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ab6a99755b97441f0929a4f15f1396401f1349ef&amp;dn=UEFA.Euro.2012.Group.C.Spain.vs.Italy.HDTV.x264-ANGELiC+%5BPublicH&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 C组 西班牙vs意大利 UEFA.Euro.2012.Group.C.Spain.vs.Italy " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8971\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="8969" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8969.html">
+																									2012年欧洲杯 C组 爱尔兰vs克罗地亚 UEFA Euro 2012  Ireland vs Croatia 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/C83C09EA8CAADB70906F013BC9A83086B5E55486.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8969\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c83c09ea8caadb70906f013bc9a83086b5e55486&amp;dn=UEFA.Euro.2012.Group.C.Ireland.vs.Croatia.HDTV.x264-ANGELiC+%5BPub&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" target="_blank" name=\'magnet8969\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8969\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c83c09ea8caadb70906f013bc9a83086b5e55486&amp;dn=UEFA.Euro.2012.Group.C.Ireland.vs.Croatia.HDTV.x264-ANGELiC+%5BPub&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 C组 爱尔兰vs克罗地亚 UEFA Euro 2012  Ireland vs Croatia " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8969\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="61203" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61203.html">
+																									2016年欧洲杯 1/4决赛 德国vs意大利 Germany vs Italy 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=xam58tg&amp;f=UEFA.Euro.2016.Quarter.Final.Germany.vs.Italy.720p.HDTV.x264-VERUM%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61203\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d52bab3cddd469e3a9afb95af53c9d16a61e6e68&amp;dn=UEFA.Euro.2016.Quarter.Final.Germany.vs.Italy.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3" rel="nofollow" target="_blank" name=\'magnet61203\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61203\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d52bab3cddd469e3a9afb95af53c9d16a61e6e68&amp;dn=UEFA.Euro.2016.Quarter.Final.Germany.vs.Italy.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/4决赛 德国vs意大利 Germany vs Italy 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61203\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>6.0G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18123" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18123.html">
+																									欧洲冠军联赛 2013 02 21 AC米兰vs巴塞罗那 720p 央视国语 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=274254&amp;uk=3610525750" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'18123\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="9121" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9121.html">
+																									2012年欧洲杯 A组 希腊vs俄罗斯 EURO Group A Greece Vs Russia 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/6481A537D6A2FDA38A28525CF7EE8109CB905034.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9121\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6481A537D6A2FDA38A28525CF7EE8109CB905034&amp;dn=Greece-Russia&amp;tr=http%3a//bt3.rutracker.org/ann%3fuk%3dziaQCt29ta" rel="nofollow" target="_blank" name=\'magnet9121\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9121\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6481A537D6A2FDA38A28525CF7EE8109CB905034&amp;dn=Greece-Russia&amp;tr=http%3a//bt3.rutracker.org/ann%3fuk%3dziaQCt29ta" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 A组 希腊vs俄罗斯 EURO Group A Greece Vs Russia 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9121\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="8926" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8926.html">
+																									2012年欧洲杯 A组 俄罗斯 VS 捷克 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/F906AFD07DD0BEA1996859B57F3B48BE988020E1.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8926\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f906afd07dd0bea1996859b57f3b48be988020e1&amp;dn=EURO.2012.Warsaw.Gr.A.%2808+june%29.Russia.vs.Czech+Rep.720p&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.is" rel="nofollow" target="_blank" name=\'magnet8926\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8926\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f906afd07dd0bea1996859b57f3b48be988020e1&amp;dn=EURO.2012.Warsaw.Gr.A.%2808+june%29.Russia.vs.Czech+Rep.720p&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.is" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 A组 俄罗斯 VS 捷克 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8926\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="8922" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8922.html">
+																									2012年欧洲杯 A组 波兰 VS 希腊 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/4D91740763E5A0E908454CB6291D21015E4A93D0.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8922\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4d91740763e5a0e908454cb6291d21015e4a93d0&amp;dn=UEFA.Euro.2012.Group.A.Poland.vs.Greece.720p.HDTV.x264-ANGELiC+%5B&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" target="_blank" name=\'magnet8922\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8922\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4d91740763e5a0e908454cb6291d21015e4a93d0&amp;dn=UEFA.Euro.2012.Group.A.Poland.vs.Greece.720p.HDTV.x264-ANGELiC+%5B&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 A组 波兰 VS 希腊 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8922\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60705" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60705.html">
+																									2016年欧洲杯 E组 瑞典vs比利时 EURO Group E Sweden vs Belgium 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=1bqonc7&amp;f=UEFA.Euro.2016.Group.E.Sweden.vs.Belgium.720p.HDTV.x264-VERUM%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60705\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a375dbcceff367c2c6f4cde18fc06d135d0b1852&amp;dn=UEFA.Euro.2016.Group.E.Sweden.vs.Belgium.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%" rel="nofollow" target="_blank" name=\'magnet60705\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60705\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a375dbcceff367c2c6f4cde18fc06d135d0b1852&amp;dn=UEFA.Euro.2016.Group.E.Sweden.vs.Belgium.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 E组 瑞典vs比利时 EURO Group E Sweden vs Belgium " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60705\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.19G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="9345" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9345.html">
+																									2012年欧洲杯 1/2决赛 葡萄牙vs西班牙 Portugal.VS.Spain 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/33A8B3D7E65033D6DAEE2BFB94F5C9516F2077FB.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9345\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:GOULHV7GKAZ5NWXOFP5ZJ5OJKFXSA573&amp;dn=UEFA.Euro.2012.Portugal.VS.Spain.HDTV.SATHACK+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&" rel="nofollow" target="_blank" name=\'magnet9345\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9345\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:GOULHV7GKAZ5NWXOFP5ZJ5OJKFXSA573&amp;dn=UEFA.Euro.2012.Portugal.VS.Spain.HDTV.SATHACK+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 1/2决赛 葡萄牙vs西班牙 Portugal.VS.Spain " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9345\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="9245" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9245.html">
+																									2012年欧洲杯 1/4决赛 英格兰vs意大利 England vs Italy 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/5B2756A1358C48686FC6711D97F3253F738820CE.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9245\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5B2756A1358C48686FC6711D97F3253F738820CE&amp;dn=Euro%202012%20-%204%20Quater%20Final-%20England%20Vs%20Italy%20%2824.06.2012%29%20Full%20Match&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" target="_blank" name=\'magnet9245\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9245\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5B2756A1358C48686FC6711D97F3253F738820CE&amp;dn=Euro%202012%20-%204%20Quater%20Final-%20England%20Vs%20Italy%20%2824.06.2012%29%20Full%20Match&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 1/4决赛 英格兰vs意大利 England vs Italy " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9245\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="8925" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8925.html">
+																									2012年欧洲杯 A组 俄罗斯 VS 捷克 Euro.2012.Group.A.Russia VS Czechia 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>2G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="8921" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8921.html">
+																									2012年欧洲杯 A组 波兰 VS 希腊 UEFA.Euro.2012.Group.A.Poland.vs.Greece...											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/1FE3EE09F3EFCA7435A295B241D0AADDA5AA74D7.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8921\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1fe3ee09f3efca7435a295b241d0aadda5aa74d7&amp;dn=UEFA.Euro.2012.Group.A.Poland.vs.Greece.HDTV.x264-ANGELiC&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istol" rel="nofollow" target="_blank" name=\'magnet8921\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8921\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1fe3ee09f3efca7435a295b241d0aadda5aa74d7&amp;dn=UEFA.Euro.2012.Group.A.Poland.vs.Greece.HDTV.x264-ANGELiC&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istol" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 A组 波兰 VS 希腊 UEFA.Euro.2012.Group.A.Poland.vs.Greece..." target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8921\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="9400" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9400.html">
+																									2012年欧洲杯 1/2决赛 德国vs意大利 Germany Vs Italy 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>3G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="9204" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9204.html">
+																									2012年欧洲杯 D组 英格兰vs乌克兰 Group D England v Ukraine 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/92219D352BB599869350C810066130F2FB70D7DC.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9204\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:92219d352bb599869350c810066130f2fb70d7dc&amp;dn=Euro+2012+Group+D+England+v+Ukraine+720p+HD&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&am" rel="nofollow" target="_blank" name=\'magnet9204\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9204\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:92219d352bb599869350c810066130f2fb70d7dc&amp;dn=Euro+2012+Group+D+England+v+Ukraine+720p+HD&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&am" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 D组 英格兰vs乌克兰 Group D England v Ukraine 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9204\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60401" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60401.html">
+																									2016年欧洲杯 D组 西班牙vs土耳其 EURO Group D Spain vs Turkey 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:953bb3c46d26b3613dbd22dc3da8f478c97e1b82&amp;dn=UEFA.Euro.2016.Group.D.Spain.vs.Turkey.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.r" rel="nofollow" target="_blank" name=\'magnet60401\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60401\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:953bb3c46d26b3613dbd22dc3da8f478c97e1b82&amp;dn=UEFA.Euro.2016.Group.D.Spain.vs.Turkey.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.r" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 D组 西班牙vs土耳其 EURO Group D Spain vs Turkey " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60401\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.53G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="9205" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9205.html">
+																									2012年欧洲杯 D组 瑞典vs法国 Group D Sweden Vs France 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/DB4F15EE9E043EF9B95096CCD2AD273C49472476.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9205\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:db4f15ee9e043ef9b95096ccd2ad273c49472476&amp;dn=Euro+2012-Group+D-Sweden+Vs+France+%2819.6.2012%29+Full+Match&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.i" rel="nofollow" target="_blank" name=\'magnet9205\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9205\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:db4f15ee9e043ef9b95096ccd2ad273c49472476&amp;dn=Euro+2012-Group+D-Sweden+Vs+France+%2819.6.2012%29+Full+Match&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.i" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 D组 瑞典vs法国 Group D Sweden Vs France " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9205\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>855M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="61367" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61367.html">
+																									2016年欧洲杯 半决赛 葡萄牙vs威尔士  Portugal vs Wales 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=hrltacy&amp;f=UEFA.Euro.2016.Semi.Final.Portugal.vs.Wales.720p.HDTV.x264-VERUM%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61367\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:48411b704f55e38150c6a17a73bb253814251b71&amp;dn=UEFA.Euro.2016.Semi.Final.Portugal.vs.Wales.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%" rel="nofollow" target="_blank" name=\'magnet61367\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61367\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:48411b704f55e38150c6a17a73bb253814251b71&amp;dn=UEFA.Euro.2016.Semi.Final.Portugal.vs.Wales.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 半决赛 葡萄牙vs威尔士  Portugal vs Wales 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61367\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.0G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="61396" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61396.html">
+																									2016年欧洲杯 半决赛 德国vs法国 Germany vs France 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=p729zvy&amp;f=UEFA.Euro.2016.Semi.Final.Germany.vs.France.WEB.h264-OVERTiME%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61396\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3869267f6143a52c3388ac04c51341519d20dd69&amp;dn=UEFA.Euro.2016.Semi.Final.Germany.vs.France.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%" rel="nofollow" target="_blank" name=\'magnet61396\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61396\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3869267f6143a52c3388ac04c51341519d20dd69&amp;dn=UEFA.Euro.2016.Semi.Final.Germany.vs.France.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 半决赛 德国vs法国 Germany vs France " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61396\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.80M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60951" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60951.html">
+																									2016年欧洲杯 1/8决赛 英格兰vs冰岛 England vs Iceland 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=r4yh2jt&amp;f=UEFA.Euro.2016.Round.of.16.England.vs.Iceland.720p.HDTV.x264-VERUM%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60951\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a7a1801f25a011baee4b550b757bc19d17db873e&amp;dn=UEFA.Euro.2016.Round.of.16.England.vs.Iceland.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3" rel="nofollow" target="_blank" name=\'magnet60951\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60951\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a7a1801f25a011baee4b550b757bc19d17db873e&amp;dn=UEFA.Euro.2016.Round.of.16.England.vs.Iceland.720p.HDTV.x264-VERUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/8决赛 英格兰vs冰岛 England vs Iceland " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60951\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.07G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60368" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60368.html">
+																									2016年欧洲杯 C组 乌克兰vs北爱尔兰 EURO Group C Ukraine vs Northern I… 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3e8364f57e2a7546a9bf6ac74969522331782af9&amp;dn=UEFA.Euro.2016.Group.C.Ukraine.vs.Northern.Ireland.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet60368\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60368\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3e8364f57e2a7546a9bf6ac74969522331782af9&amp;dn=UEFA.Euro.2016.Group.C.Ukraine.vs.Northern.Ireland.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 C组 乌克兰vs北爱尔兰 EURO Group C Ukraine vs Northern I… " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60368\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.81G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60367" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60367.html">
+																									2016年欧洲杯 C组 德国vs波兰 EURO Group C Germany vs Poland 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:704aee8c8aac6086b95ffe8ff127532be1aa4b28&amp;dn=UEFA.Euro.2016.Group.C.Germany.vs.Poland.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9" rel="nofollow" target="_blank" name=\'magnet60367\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60367\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:704aee8c8aac6086b95ffe8ff127532be1aa4b28&amp;dn=UEFA.Euro.2016.Group.C.Germany.vs.Poland.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 C组 德国vs波兰 EURO Group C Germany vs Poland " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60367\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.56G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="20936" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20936.html">
+																									2013欧洲冠军杯 UCL 1/4 Dortmund vs Real Madrid  多特蒙德vs皇马 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/C23807F0031B30367E79AEA60355F9479F5C59AF.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'20936\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c23807f0031b30367e79aea60355f9479f5c59af&amp;dn=UCL+-+Borussia+Dortmund+vs+Real+Madrid+720p+24.04.2013+SKY&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.isto" rel="nofollow" target="_blank" name=\'magnet20936\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'20936\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c23807f0031b30367e79aea60355f9479f5c59af&amp;dn=UCL+-+Borussia+Dortmund+vs+Real+Madrid+720p+24.04.2013+SKY&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.isto" rel="nofollow" name=\'miurl\' filename="2013欧洲冠军杯 UCL 1/4 Dortmund vs Real Madrid  多特蒙德vs皇马 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'20936\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="9079" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9079.html">
+																									2012年欧洲杯 C组 意大利vs克罗地亚 Euro.Group.C.Italia.vs.Croacia 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/20CE4BCC8FDC9D1045580AA602C0130344B15473.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9079\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:20ce4bcc8fdc9d1045580aa602c0130344b15473&amp;dn=Euro.2012.Group.C.Italia.vs.Croacia.HQ.x264.30fps&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6" rel="nofollow" target="_blank" name=\'magnet9079\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9079\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:20ce4bcc8fdc9d1045580aa602c0130344b15473&amp;dn=Euro.2012.Group.C.Italia.vs.Croacia.HQ.x264.30fps&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 C组 意大利vs克罗地亚 Euro.Group.C.Italia.vs.Croacia " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9079\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="9078" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9078.html">
+																									2012年欧洲杯 C组 西班牙vs爱尔兰 EURO Group C Spain.vs.Ireland 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/D2417D1A382AF21B16FAE5ECE896E067695C8F9D.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9078\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d2417d1a382af21b16fae5ece896e067695c8f9d&amp;dn=Euro.2012.Group.C.Spain.vs.Republic.of.Ireland.14.06.2012&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istol" rel="nofollow" target="_blank" name=\'magnet9078\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9078\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d2417d1a382af21b16fae5ece896e067695c8f9d&amp;dn=Euro.2012.Group.C.Spain.vs.Republic.of.Ireland.14.06.2012&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istol" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 C组 西班牙vs爱尔兰 EURO Group C Spain.vs.Ireland " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9078\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>812M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20862" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20862.html">
+																									2013欧洲冠军杯 UCL 1/4 Bayern vs Barcelona 拜仁vs巴萨 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/9F06FF4BDEEF72AD2322B06E0406D68AE71525E3.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'20862\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9f06ff4bdeef72ad2322b06e0406d68ae71525e3&amp;dn=UCL.2013.SF.1leg.%2823+apr%29.Bayern.vs.Barcelona.720p.50fps&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.is" rel="nofollow" target="_blank" name=\'magnet20862\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'20862\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9f06ff4bdeef72ad2322b06e0406d68ae71525e3&amp;dn=UCL.2013.SF.1leg.%2823+apr%29.Bayern.vs.Barcelona.720p.50fps&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.is" rel="nofollow" name=\'miurl\' filename="2013欧洲冠军杯 UCL 1/4 Bayern vs Barcelona 拜仁vs巴萨 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'20862\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="9055" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9055.html">
+																									2012年欧洲杯 B组 德国vs荷兰 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/2AD818C33CC9F853F6D063CAF814662BED8B5646.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9055\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2AD818C33CC9F853F6D063CAF814662BED8B5646&amp;dn=UEFA.Euro.2012.Group.B.Netherlands.vs.Germany.720p.HDTV.x264-ANGELiC%20%5bPublicHD%5d&amp;tr=http%3a//fr33dom.h33t.com%3a3310/announce" rel="nofollow" target="_blank" name=\'magnet9055\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9055\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2AD818C33CC9F853F6D063CAF814662BED8B5646&amp;dn=UEFA.Euro.2012.Group.B.Netherlands.vs.Germany.720p.HDTV.x264-ANGELiC%20%5bPublicHD%5d&amp;tr=http%3a//fr33dom.h33t.com%3a3310/announce" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 B组 德国vs荷兰 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9055\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="8997" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8997.html">
+																									2012年欧洲杯 D组 乌克兰vs瑞典 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/5AEB6DF7086444C21C55F5C8B39D1BFC7BBC10E4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8997\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5AEB6DF7086444C21C55F5C8B39D1BFC7BBC10E4&amp;dn=%5b%20www.Speed.Cd%20%5d%20-%20UEFA.Euro.2012.Group.D.Ukraine.vs.Sweden.720p.HDTV.x264-ANGELiC&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" target="_blank" name=\'magnet8997\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8997\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5AEB6DF7086444C21C55F5C8B39D1BFC7BBC10E4&amp;dn=%5b%20www.Speed.Cd%20%5d%20-%20UEFA.Euro.2012.Group.D.Ukraine.vs.Sweden.720p.HDTV.x264-ANGELiC&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 D组 乌克兰vs瑞典 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8997\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="8995" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8995.html">
+																									2012年欧洲杯 D组 法国vs英格兰 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/A7FE0DD267116F6320478BA936C7C651E28A7755.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8995\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:A7FE0DD267116F6320478BA936C7C651E28A7755&amp;dn=%5b%20www.Speed.Cd%20%5d%20-%20UEFA.Euro.2012.Group.D.France.vs.England.720p.HDTV.x264-ANGELiC&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" target="_blank" name=\'magnet8995\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8995\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:A7FE0DD267116F6320478BA936C7C651E28A7755&amp;dn=%5b%20www.Speed.Cd%20%5d%20-%20UEFA.Euro.2012.Group.D.France.vs.England.720p.HDTV.x264-ANGELiC&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 D组 法国vs英格兰 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8995\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="8993" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8993.html">
+																									2012年欧洲杯 C组 西班牙vs意大利 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/7986183CA794F60F711A54D2F5447B25853A4F26.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8993\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7986183ca794f60f711a54d2f5447b25853a4f26&amp;dn=+Euro+2012+Group+C+Spain+v+Italy+720p+HD++&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp" rel="nofollow" target="_blank" name=\'magnet8993\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8993\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7986183ca794f60f711a54d2f5447b25853a4f26&amp;dn=+Euro+2012+Group+C+Spain+v+Italy+720p+HD++&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 C组 西班牙vs意大利 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8993\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="61105" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61105.html">
+																									2016年欧洲杯 1/4决赛 威尔士vs比利时 Poland vs Portugal 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=musy63e&amp;f=UEFA.Euro.2016.Quarter.Final.Wales.vs.Belgium.WEB.h264-OVERTiME%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61105\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b4860a738927125ba38de0aa84aa43b144a603d8&amp;dn=UEFA.Euro.2016.Quarter.Final.Wales.vs.Belgium.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2" rel="nofollow" target="_blank" name=\'magnet61105\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61105\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b4860a738927125ba38de0aa84aa43b144a603d8&amp;dn=UEFA.Euro.2016.Quarter.Final.Wales.vs.Belgium.WEB.h264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 1/4决赛 威尔士vs比利时 Poland vs Portugal " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61105\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.88G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-07-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60574" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60574.html">
+																									2016年欧洲杯 B组 俄罗斯vs威尔士 EURO Group B Russia vs Wales 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2c2b442b9a2b99a08fa6e42bc1f8f4d9ae91fee7&amp;dn=UEFA.Euro.2016.Group.B.Russia.vs.Wales.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.r" rel="nofollow" target="_blank" name=\'magnet60574\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60574\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2c2b442b9a2b99a08fa6e42bc1f8f4d9ae91fee7&amp;dn=UEFA.Euro.2016.Group.B.Russia.vs.Wales.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.r" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 B组 俄罗斯vs威尔士 EURO Group B Russia vs Wales " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60574\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.92G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="8996" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8996.html">
+																									2012年欧洲杯 D组 乌克兰vs瑞典 UEFA Euro 2012 Group D Ukraine vs Sweden...											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/EF6D3AEB5874A28CD8556F6E1C19808402C779AE.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8996\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ef6d3aeb5874a28cd8556f6e1c19808402c779ae&amp;dn=UEFA.Euro.2012.Group.D.Ukraine.vs.Sweden.HDTV.XviD-AFG&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.i" rel="nofollow" target="_blank" name=\'magnet8996\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8996\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ef6d3aeb5874a28cd8556f6e1c19808402c779ae&amp;dn=UEFA.Euro.2012.Group.D.Ukraine.vs.Sweden.HDTV.XviD-AFG&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.i" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 D组 乌克兰vs瑞典 UEFA Euro 2012 Group D Ukraine vs Sweden..." target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8996\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="8994" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/8994.html">
+																									2012年欧洲杯 D组 法国vs英格兰 UEFA Euro 2012 France.vs.England 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/737F2ADFE5E0BF7F118C86BA2275F45063E32B21.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'8994\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:737F2ADFE5E0BF7F118C86BA2275F45063E32B21&amp;dn=Euro.2012.Group.D.France.vs.England.06.11.2012&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" target="_blank" name=\'magnet8994\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'8994\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:737F2ADFE5E0BF7F118C86BA2275F45063E32B21&amp;dn=Euro.2012.Group.D.France.vs.England.06.11.2012&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 D组 法国vs英格兰 UEFA Euro 2012 France.vs.England " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'8994\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="17688" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17688.html">
+																									欧洲冠军联赛 2013 02 14 皇马vs曼联 720p 央视国语 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=350399&amp;uk=489997851" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'17688\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60663" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60663.html">
+																									2016年欧洲杯 E组 意大利vs爱尔兰 Euro Group Italy vs Republic of Irel… 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ukvmn7x&amp;f=UEFA.Euro.2016.Group.E.Italy.vs.Republic.of.Ireland.WEB.x264-OVERTiME%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60663\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:377c58202268903a53bc3030ba233844f5dd9016&amp;dn=UEFA.Euro.2016.Group.E.Italy.vs.Republic.of.Ireland.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=ud" rel="nofollow" target="_blank" name=\'magnet60663\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60663\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:377c58202268903a53bc3030ba233844f5dd9016&amp;dn=UEFA.Euro.2016.Group.E.Italy.vs.Republic.of.Ireland.WEB.x264-OVERTiME%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=ud" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 E组 意大利vs爱尔兰 Euro Group Italy vs Republic of Irel… " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60663\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.69G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60349" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60349.html">
+																									2016年欧洲杯 A组 法国vs阿尔巴尼亚 EURO Group A France vs Albania 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:BDAAA6A68C4A8214969D16C27A5D31D1010123A2&amp;dn=uefa+euro+2016+group+a+france+vs+albania+720p+hdtv+hevc+x265+rmteam+720p+hevc&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;t" rel="nofollow" target="_blank" name=\'magnet60349\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60349\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:BDAAA6A68C4A8214969D16C27A5D31D1010123A2&amp;dn=uefa+euro+2016+group+a+france+vs+albania+720p+hdtv+hevc+x265+rmteam+720p+hevc&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;t" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 A组 法国vs阿尔巴尼亚 EURO Group A France vs Albania " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60349\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.34G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="60348" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60348.html">
+																									2016年欧洲杯 C组 乌克兰vs北爱尔兰 EURO Group C Ukraine vs Northern I… 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:CD6A19D50A357A61511E2BCA6F57B8837A85A7C2&amp;dn=uefa+euro+2016+group+c+ukraine+vs+northern+ireland+720p+hdtv+hevc+x265+rmteam+720p+hevc&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fanno" rel="nofollow" target="_blank" name=\'magnet60348\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60348\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:CD6A19D50A357A61511E2BCA6F57B8837A85A7C2&amp;dn=uefa+euro+2016+group+c+ukraine+vs+northern+ireland+720p+hdtv+hevc+x265+rmteam+720p+hevc&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fanno" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 C组 乌克兰vs北爱尔兰 EURO Group C Ukraine vs Northern I… " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60348\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.34G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60347" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60347.html">
+																									2016年欧洲杯 B组 英格兰vs威尔士 EURO Group B England vs Wales 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:FAC1F52C6E742E1CC4B1E8855D5233E9257EAA2B&amp;dn=uefa+euro+2016+group+b+england+vs+wales+720p+hdtv+x264+angelic+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A%" rel="nofollow" target="_blank" name=\'magnet60347\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60347\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:FAC1F52C6E742E1CC4B1E8855D5233E9257EAA2B&amp;dn=uefa+euro+2016+group+b+england+vs+wales+720p+hdtv+x264+angelic+rartv&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%2Fannounce&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A%" rel="nofollow" name=\'miurl\' filename="2016年欧洲杯 B组 英格兰vs威尔士 EURO Group B England vs Wales " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60347\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.33G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="9149" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/9149.html">
+																									2012年欧洲杯 B组 葡萄牙vs荷兰 EURO Group B Portugal Vs Holland 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/49E64BE5B6788DC45B507E2272476332318F863A.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'9149\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:49e64be5b6788dc45b507e2272476332318f863a&amp;dn=Euro+2012-Group+B-Portugal+Vs+Holland+%2817.6.2012%29+Full+Match&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracke" rel="nofollow" target="_blank" name=\'magnet9149\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'9149\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:49e64be5b6788dc45b507e2272476332318f863a&amp;dn=Euro+2012-Group+B-Portugal+Vs+Holland+%2817.6.2012%29+Full+Match&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracke" rel="nofollow" name=\'miurl\' filename="2012年欧洲杯 B组 葡萄牙vs荷兰 EURO Group B Portugal Vs Holland " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'9149\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>765M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-06-18</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,379,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,379);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,379);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,379);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

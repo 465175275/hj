@@ -1,0 +1,1345 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:07:05 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=df60315b4959efd6dea656e1cb8114a7b1509534424; expires=Thu, 01-Nov-18 11:07:04 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e636b92d07790-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>白公主 The White Princess-白公主下载-白公主全集下载-The White Princess下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="白公主,The White Princess,白公主下载,白公主全集下载,白公主高清下载,白公主迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;Starz过去宣布为迷你剧《白王后TheWhiteQueen》拍摄续篇《白公主TheWhitePrincess》；根据PhilippaGregory所写的同名小说及部份《TheCousins’War》的内容，《白公主》同样是以女性角度，描述在英格兰玫瑰战争中的事。这部8集迷你剧已正在拍摄。&amp;nbsp;&lt;/p&gt;&lt;p&" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1356;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FThe.White.Princess.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FThe.White.Princess.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1356;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">白公主 The White Princess-白公主下载-白公主全集下载-The White Princess下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i1.piimg.com/588755/6caa0d39cd5cfb86.png" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i1.piimg.com/588755/6caa0d39cd5cfb86.png";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周一</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：剧情类</span>						
+						<span>最后更新：2017-08-31 08:40</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1356.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">116</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>Starz过去宣布为迷你剧《白王后 The White Queen》拍摄续篇《白公主 The White Princess》；根据Philippa Gregory所写的同名小说及部份《The Cousins’ War》的内容，《白公主》同样是以女性角度，描述在英格兰玫瑰战争中的事。这部8集迷你剧已正在拍摄。&nbsp;</p><p>《出轨的爱人 Doctor Foster》的Jodie Comer饰演标题人物白公主 - 伊丽莎白公主/Elizabeth of York。而演出过《权力的游戏 Game of Thrones》的Michelle Fairley加盟饰演Margaret Beaufort，亨利七世的母亲；她是玫瑰战争中，令亨利七世得到英格兰王位的关键人物。她是慈善家﹑教会恩人，但亦是个凶手，她深知得到王位与令都铎王朝能保存下去是两回事，尤其是约克的对手不断成功的暗算他们。&nbsp;</p><p><br/></p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="82786" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/82786.html">
+																									白公主 The White Princess S01E08 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pLg97Ur" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'82786\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:22454725738EF64BA6107B8E78C797FA39EC52FD&amp;dn=The.White.Princess.S01E08.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet82786\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'82786\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.White.Princess.S01E08.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|964955550|E98B7557EE1AC068C770097786E21DB5|h=2XU7IT54AQOMI3I6C3BLMKER3PLFZMWA|/" rel="nofollow" target="_blank" name=\'ed2k82786\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'82786\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:22454725738EF64BA6107B8E78C797FA39EC52FD&amp;dn=The.White.Princess.S01E08.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E08 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'82786\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>920M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-06-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="82641" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/82641.html">
+																									白公主 The White Princess S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVLZb19" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'82641\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=wil2prg&amp;f=The.White.Princess.S01E08.720p.WEBRip.x264-MOROSE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'82641\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b952bb3add13fd03b2d98aa48fe0d92bfec7b00f&amp;dn=The.White.Princess.S01E08.720p.WEBRip.x264-MOROSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet82641\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'82641\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b952bb3add13fd03b2d98aa48fe0d92bfec7b00f&amp;dn=The.White.Princess.S01E08.720p.WEBRip.x264-MOROSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'82641\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.01G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-06-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="82640" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/82640.html">
+																									白公主 The White Princess S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1boHpvJp" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'82640\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=7zdrspa&amp;f=The.White.Princess.S01E08.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'82640\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ca6a47acaedd241a647c7abaedfa6ced2b96acff&amp;dn=The.White.Princess.S01E08.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet82640\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'82640\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ca6a47acaedd241a647c7abaedfa6ced2b96acff&amp;dn=The.White.Princess.S01E08.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'82640\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>514M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-06-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="82525" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/82525.html">
+																									白公主 The White Princess S01E07 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bYSgVG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'82525\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5B71DECA167307CA6AE77933B46A6AB4933EF10C&amp;dn=The.White.Princess.S01E07.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet82525\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'82525\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.White.Princess.S01E07.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|931314380|B39069D4BC20B3A8F28C051AF9B90D4D|h=ACFIMQCGTLTAI3JILPSR2F6Q4FR4UXUX|/" rel="nofollow" target="_blank" name=\'ed2k82525\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'82525\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:5B71DECA167307CA6AE77933B46A6AB4933EF10C&amp;dn=The.White.Princess.S01E07.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E07 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'82525\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>888M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-06-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="82327" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/82327.html">
+																									白公主 The White Princess S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dFu0789" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'82327\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=vkntyeg&amp;f=The.White.Princess.S01E07.720p.WEBRip.x264-MOROSE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'82327\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7758bad2300745f4f96fae564e4e485e4b1b324c&amp;dn=The.White.Princess.S01E07.720p.WEBRip.x264-MOROSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet82327\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'82327\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7758bad2300745f4f96fae564e4e485e4b1b324c&amp;dn=The.White.Princess.S01E07.720p.WEBRip.x264-MOROSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'82327\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.59G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="82326" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/82326.html">
+																									白公主 The White Princess S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qXAIUio" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'82326\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=zwk514q&amp;f=The.White.Princess.S01E07.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'82326\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:13894f226cfe81cda4cfbdb2093c63f18b6fa941&amp;dn=The.White.Princess.S01E07.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet82326\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'82326\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:13894f226cfe81cda4cfbdb2093c63f18b6fa941&amp;dn=The.White.Princess.S01E07.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'82326\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>494M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="82183" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/82183.html">
+																									白公主 The White Princess S01E06 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qYhmN7Y" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'82183\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3E53A4FFD5907730CE6AF55FB38DED7B9AD95C4E&amp;dn=The.White.Princess.S01E06.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet82183\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'82183\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.White.Princess.S01E06.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|912896993|08B482519515A5E292C02FC45167EA34|h=OC2UI7F54GFAVDE7TRZFLRFRM3JGYXA2|/" rel="nofollow" target="_blank" name=\'ed2k82183\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'82183\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:3E53A4FFD5907730CE6AF55FB38DED7B9AD95C4E&amp;dn=The.White.Princess.S01E06.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E06 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'82183\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>870M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="81920" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81920.html">
+																									白公主 The White Princess S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIkMDGa" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81920\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=y153xv2&amp;f=The.White.Princess.S01E06.PROPER.720p.HDTV.x264-BATV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'81920\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e9e2c43c637c5bc4b4fd43b5a138c16cb67b8977&amp;dn=The.White.Princess.S01E06.PROPER.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet81920\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81920\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e9e2c43c637c5bc4b4fd43b5a138c16cb67b8977&amp;dn=The.White.Princess.S01E06.PROPER.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81920\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.42G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="81919" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81919.html">
+																									白公主 The White Princess S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVcDfE3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81919\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=4wlcb2o&amp;f=The.White.Princess.S01E06.PROPER.HDTV.x264-BATV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'81919\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0267d2a4de53916a1c6d455978601f60cb1726d8&amp;dn=The.White.Princess.S01E06.PROPER.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3" rel="nofollow" target="_blank" name=\'magnet81919\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81919\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0267d2a4de53916a1c6d455978601f60cb1726d8&amp;dn=The.White.Princess.S01E06.PROPER.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81919\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>437M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="82521" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/82521.html">
+																									白公主 The White Princess S01E05 720P 尤尼控领域											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1skXbE3r" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'82521\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://www.ynkon.com/forum.php?mod=attachment&amp;aid=MzM1NzV8Yzk3N2ZkNWN8MTQ5NjI4OTUwNHwwfDc3MTQ%3D" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'82521\' alt=\'BT美剧片源下载\'>
+											</a>																																								
+																					<a style="display:none;" href="http://www.ynkon.com/forum.php?mod=attachment&amp;aid=MzM1NzV8Yzk3N2ZkNWN8MTQ5NjI4OTUwNHwwfDc3MTQ%3D" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E05 720P 尤尼控领域" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'82521\' alt=\'小米路由器远程下载\'></a>
+										</td>
+										<td></td>
+										<td>611M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-06-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="81547" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81547.html">
+																									白公主 The White Princess S01E05 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dF7XcsT" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81547\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:DACB6CBFB13D5DD55FBCC809DC4C5EE477EFA2FF&amp;dn=The.White.Princess.S01E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet81547\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81547\' alt=\'迅雷高清美剧下载\'></a>																				<a style="display:none;" href="ed2k://|file|The.White.Princess.S01E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|959966694|BE1EC322E62BFAC704FB3AE8422461E3|h=LGC6NZVPAXP3Y7LOQENSBBKTSYDCRWUI|/" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'81547\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:DACB6CBFB13D5DD55FBCC809DC4C5EE477EFA2FF&amp;dn=The.White.Princess.S01E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E05 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81547\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>915M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="81415" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81415.html">
+																									白公主 The White Princess S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eSzh8n4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81415\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=1rzlk5v&amp;f=The.White.Princess.S01E05.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'81415\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:214ce3bdd3524428f50fc47f0c9c7c3b0fb55d71&amp;dn=The.White.Princess.S01E05.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" target="_blank" name=\'magnet81415\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81415\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:214ce3bdd3524428f50fc47f0c9c7c3b0fb55d71&amp;dn=The.White.Princess.S01E05.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81415\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.16G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="81414" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81414.html">
+																									白公主 The White Princess S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i5p7Xyt" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81414\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=5hoywjk&amp;f=The.White.Princess.S01E05.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'81414\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4015f2fbb066ada9c219e049adc31808c1e4a05d&amp;dn=The.White.Princess.S01E05.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet81414\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81414\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4015f2fbb066ada9c219e049adc31808c1e4a05d&amp;dn=The.White.Princess.S01E05.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81414\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>466M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="82522" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/82522.html">
+																									白公主 The White Princess S01E04 720P 尤尼控领域											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c9zkkQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'82522\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:F3B34A76CB2D16FEEDFFD55B1270CAE9C4F9B505&amp;dn=%E7%99%BD%E5%85%AC%E4%B8%BBS01E04" rel="nofollow" target="_blank" name=\'magnet82522\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'82522\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:F3B34A76CB2D16FEEDFFD55B1270CAE9C4F9B505&amp;dn=%E7%99%BD%E5%85%AC%E4%B8%BBS01E04" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E04 720P 尤尼控领域" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'82522\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>884M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-06-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="81116" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81116.html">
+																									白公主 The White Princess S01E04 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jIn3Nfg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81116\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:DA2856525AF06296D623DE8D19D4B08DE9E33F13&amp;dn=The.White.Princess.S01E04.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet81116\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81116\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.White.Princess.S01E04.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|909696857|32E1727AF27A76EFEE8B96CB084A357D|h=ZEMOHO74TDYUBYZN375VT2ZYW6HCFSQT|/" rel="nofollow" target="_blank" name=\'ed2k81116\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'81116\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:DA2856525AF06296D623DE8D19D4B08DE9E33F13&amp;dn=The.White.Princess.S01E04.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E04 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81116\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>867M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80866" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80866.html">
+																									白公主 The White Princess S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eStH6XO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80866\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=qocdyes&amp;f=The.White.Princess.S01E04.PROPER.720p.HDTV.x264-BATV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80866\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4fa6fc907e4da86b8cd25f54c04defee3c64b9a8&amp;dn=The.White.Princess.S01E04.PROPER.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet80866\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80866\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4fa6fc907e4da86b8cd25f54c04defee3c64b9a8&amp;dn=The.White.Princess.S01E04.PROPER.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80866\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.27G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80865" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80865.html">
+																									白公主 The White Princess S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hszdgHY" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80865\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=2nor1ah&amp;f=The.White.Princess.S01E04.PROPER.HDTV.x264-BATV%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80865\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:32c4d96424d74fe6b2aa60906855bd2df8819eef&amp;dn=The.White.Princess.S01E04.PROPER.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3" rel="nofollow" target="_blank" name=\'magnet80865\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80865\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:32c4d96424d74fe6b2aa60906855bd2df8819eef&amp;dn=The.White.Princess.S01E04.PROPER.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80865\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>384M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80780" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80780.html">
+																									白公主 The White Princess S01E03 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kUXSwRl" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80780\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:330C7263BAC04A5019AE71DB047A0A7DD6FDC1B7&amp;dn=The.White.Princess.S01E03.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet80780\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80780\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.White.Princess.S01E03.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|938663292|D875BB8A72C73DA3CA56B764839AA3E0|h=DC6WMXGXLVGYDU472ITTOYD7E5ZJDS3B|/" rel="nofollow" target="_blank" name=\'ed2k80780\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'80780\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:330C7263BAC04A5019AE71DB047A0A7DD6FDC1B7&amp;dn=The.White.Princess.S01E03.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E03 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80780\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>895M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80537" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80537.html">
+																									白公主 The White Princess S01E03 720P 尤尼控领域											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jHJbvDG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80537\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:16D48D221046E131B4AF07FFE05136B1DB4654E9&amp;dn=%E7%99%BD%E5%85%AC%E4%B8%BBS01E03" rel="nofollow" target="_blank" name=\'magnet80537\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80537\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:16D48D221046E131B4AF07FFE05136B1DB4654E9&amp;dn=%E7%99%BD%E5%85%AC%E4%B8%BBS01E03" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E03 720P 尤尼控领域" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80537\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>719M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80302" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80302.html">
+																									白公主 The White Princess S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i5iLHXV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80302\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=i9va38w&amp;f=The.White.Princess.S01E03.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80302\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:fe95f45703f93ac472b6111d8d6d3ed98d6a127d&amp;dn=The.White.Princess.S01E03.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" target="_blank" name=\'magnet80302\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80302\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fe95f45703f93ac472b6111d8d6d3ed98d6a127d&amp;dn=The.White.Princess.S01E03.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80302\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.55G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80301" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80301.html">
+																									白公主 The White Princess S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qXTEziW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80301\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=2wjbcnm&amp;f=The.White.Princess.S01E03.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80301\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:96b0fb1f589829a281f059f601ffefd9f80d5cf7&amp;dn=The.White.Princess.S01E03.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80301\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80301\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:96b0fb1f589829a281f059f601ffefd9f80d5cf7&amp;dn=The.White.Princess.S01E03.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80301\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>466M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80779" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80779.html">
+																									白公主 The White Princess S01E02 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hrLhlcC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80779\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:69754F13A5D0F47391FB1546C0C451822993FE8E&amp;dn=The.White.Princess.S01E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" target="_blank" name=\'magnet80779\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80779\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.White.Princess.S01E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0.mp4|874144278|847F979544A94F2DAFF24E593DDEDB4F|h=ULCPGUHWIEQQJIPCFVGEXBB5UH3QNZUN|/" rel="nofollow" target="_blank" name=\'ed2k80779\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'80779\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:69754F13A5D0F47391FB1546C0C451822993FE8E&amp;dn=The.White.Princess.S01E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E02 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80779\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>833M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79986" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79986.html">
+																									白公主 The White Princess S01E02 720P 尤尼控领域											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eRWGvei" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79986\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://www.ynkon.com/forum.php?mod=attachment&amp;aid=MzMxMzZ8Y2Q5ZTg5NTZ8MTQ5MzEzODE0M3wzOTIwNHw3NzE0" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79986\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ED5323AB7BA46CD07664FED6B610A0D69BC54C50&amp;dn=%E7%99%BD%E5%85%AC%E4%B8%BBS01E02" rel="nofollow" target="_blank" name=\'magnet79986\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79986\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ED5323AB7BA46CD07664FED6B610A0D69BC54C50&amp;dn=%E7%99%BD%E5%85%AC%E4%B8%BBS01E02" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E02 720P 尤尼控领域" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79986\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>700M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79792" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79792.html">
+																									白公主 The White Princess S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYRS35E" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79792\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=68mtnkh&amp;f=The.White.Princess.S01E02.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79792\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:549e65d7ef9855a35c395132b62ef9e82a93d39b&amp;dn=The.White.Princess.S01E02.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet79792\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79792\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:549e65d7ef9855a35c395132b62ef9e82a93d39b&amp;dn=The.White.Princess.S01E02.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79792\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.38G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79791" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79791.html">
+																									白公主 The White Princess S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1slpqFUH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79791\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=tqpmius&amp;f=The.White.Princess.S01E02.HDTV.x264-FUM%5Bettv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79791\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7c7ec40b1a6e76cfc3569d7552ecc89dd64ee967&amp;dn=The.White.Princess.S01E02.HDTV.x264-FUM%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79791\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79791\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7c7ec40b1a6e76cfc3569d7552ecc89dd64ee967&amp;dn=The.White.Princess.S01E02.HDTV.x264-FUM%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79791\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>405M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79985" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79985.html">
+																									白公主 The White Princess S01E01 720P 尤尼控领域											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o8TYaSi" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79985\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://www.ynkon.com/forum.php?mod=attachment&amp;aid=MzI5MjR8NWQzZmM1OTB8MTQ5MzEzODE0M3wzOTIwNHw3NzE0" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79985\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:14024F63A37E7A7CFD1B62C0F1AF8D72D9DA4E12&amp;dn=%E7%99%BD%E5%85%AC%E4%B8%BBS01E01" rel="nofollow" target="_blank" name=\'magnet79985\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79985\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:14024F63A37E7A7CFD1B62C0F1AF8D72D9DA4E12&amp;dn=%E7%99%BD%E5%85%AC%E4%B8%BBS01E01" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E01 720P 尤尼控领域" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79985\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>878M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79524" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79524.html">
+																									白公主 The White Princess S01E01 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1slW9KBj" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79524\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>908M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79371" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79371.html">
+																									白公主 The White Princess S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1sl99dP7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79371\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=5vpet7m&amp;f=The.White.Princess.S01E01.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79371\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4952061ab52baea8ececcf9499b12dbc471c8aba&amp;dn=The.White.Princess.S01E01.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" target="_blank" name=\'magnet79371\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79371\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4952061ab52baea8ececcf9499b12dbc471c8aba&amp;dn=The.White.Princess.S01E01.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79371\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.36G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79370" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79370.html">
+																									白公主 The White Princess S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1geEwYCN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79370\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=w7uite6&amp;f=The.White.Princess.S01E01.WEBRip.X264-DEFLATE%5Bettv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79370\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0cd0670cec7456d551294c9baa922a22f6ba0138&amp;dn=The.White.Princess.S01E01.WEBRip.X264-DEFLATE%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet79370\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79370\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0cd0670cec7456d551294c9baa922a22f6ba0138&amp;dn=The.White.Princess.S01E01.WEBRip.X264-DEFLATE%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="白公主 The White Princess S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79370\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>522M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-18</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=194186&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(194186,1356,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1356);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1356);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1356);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

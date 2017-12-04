@@ -1,0 +1,1323 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 10:59:22 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=dc00d0d94b15153580dea323b62833a051509533961; expires=Thu, 01-Nov-18 10:59:21 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e581da5da228e-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>寻 Looking-寻下载-寻全集下载-Looking下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="寻,Looking,寻下载,寻全集下载,寻高清下载,寻迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;　　《寻》是讲述三个同志好友在现代旧金山完全不加过滤的性与生活。友情也许是他们的共性，但每个人都行走在完全不同的人生道路上。29岁的帕特里克（乔纳森·格罗夫JonathanGroff饰）是电玩设计师，受前男友订婚消息的刺激，决定重回拍拖市场；31岁的奥古斯丁（弗兰克·J·阿尔瓦雷斯FrankieJ.Alvarez饰）是知名艺术家，他需要考虑" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 731;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FLooking.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FLooking.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 731;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">寻 Looking-寻下载-寻全集下载-Looking下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i2.muimg.com/588755/7fd18b8c74e439fb.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i2.muimg.com/588755/7fd18b8c74e439fb.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周一</span>
+						<span>状态：被砍</span>
+						<span class="greybg">分类：剧情类</span>						
+						<span>最后更新：2016-08-23 06:02</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/731.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">389</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>　　《寻》是讲述三个同志好友在现代旧金山完全不加过滤的性与生活。友情也许是他们的共性，但每个人都行走在完全不同的人生道路上。29岁的帕特里克（乔纳森·格罗夫 Jonathan Groff 饰）是电玩设计师，受前男友订婚消息的刺激，决定重回拍拖市场；31岁的奥古斯丁（弗兰克·J·阿尔瓦雷斯 Frankie J. Alvarez 饰）是知名艺术家，他需要考虑是否结束放纵、和男友履行一夫一夫制；39岁的多姆（穆雷·巴特利特 Murray Bartlett 饰）一直在做餐厅侍应，经受着中年危机和爱情无望的双重打击。三个人的故事交叉进行，他们都在寻找快乐、寻找亲密，同时也在面对所有同志都需要面对的选择和决定...... 
+《寻》是美国HBO台2014年最新同志剧，讲述美国西海岸的同志生活，全部在旧金山实景拍摄。该剧导演是《周末时光》的安德鲁·海格，制片人是开发了《兄弟姐妹》的戴维·马歇尔·格兰特。HBO预订了首季8集，定在1月19日接档《都市女孩》。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="2">
+																			第2季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="-1">
+																			其它																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="38135" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38135.html">
+																									寻 looking 2015 S02E10 720p QAF中文站 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kT1Oaph" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38135\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2015.S02E10.720p.HDTV.x264.AAC-QaFoNE.mkv|524973436|7D56C2B63D10B10E235D362CD5ADAC13|h=KLTRUKCZZTDRHJDWZ2BPZRFYJ725Y4SR|/" rel="nofollow" target="_blank" name=\'ed2k38135\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'38135\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://www.400gb.com/file/89743019" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'38135\' alt=\'其他\'></a>
+																					<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2015.S02E10.720p.HDTV.x264.AAC-QaFoNE.mkv|524973436|7D56C2B63D10B10E235D362CD5ADAC13|h=KLTRUKCZZTDRHJDWZ2BPZRFYJ725Y4SR|/" rel="nofollow" name=\'miurl\' filename="寻 looking 2015 S02E10 720p QAF中文站 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38135\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>500M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37254" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37254.html">
+																									寻 Looking S02E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c0m2Nug" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37254\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0533d821b1153548c077351f22bfcfc9d7f48c14&amp;dn=Looking.S02E10.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet37254\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37254\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0533d821b1153548c077351f22bfcfc9d7f48c14&amp;dn=Looking.S02E10.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37254\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>534M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37253" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37253.html">
+																									寻 Looking S02E10 季终 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/16P6CQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37253\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:bf9723e12473516cd267c787c06ca40b21011a57&amp;dn=Looking.S02E10.HDTV.x264-ASAP%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet37253\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37253\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:bf9723e12473516cd267c787c06ca40b21011a57&amp;dn=Looking.S02E10.HDTV.x264-ASAP%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E10 季终 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37253\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>177M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38134" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38134.html">
+																									寻 looking 2015 S02E09 720p QAF中文站 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/init?shareid=668062316&amp;uk=273347893" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38134\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2014.S02E09.720p.HDTV.x264.AC3-QaFoNE.mkv|525190558|805AF5070ED9286E489429A8DFEA3559|h=FMAS4ACWUGQ7SNPBMB5AR3OCCTZPTSGP|/" rel="nofollow" target="_blank" name=\'ed2k38134\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'38134\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://www.400gb.com/file/89750868" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'38134\' alt=\'其他\'></a>
+																					<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2014.S02E09.720p.HDTV.x264.AC3-QaFoNE.mkv|525190558|805AF5070ED9286E489429A8DFEA3559|h=FMAS4ACWUGQ7SNPBMB5AR3OCCTZPTSGP|/" rel="nofollow" name=\'miurl\' filename="寻 looking 2015 S02E09 720p QAF中文站 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38134\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>500M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36838" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36838.html">
+																									寻 Looking S02E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnlOCs3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36838\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f113bbbb31ca9446a69083376cb717e4a05e21b8&amp;dn=Looking.S02E09.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet36838\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36838\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f113bbbb31ca9446a69083376cb717e4a05e21b8&amp;dn=Looking.S02E09.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36838\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>534M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="36837" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36837.html">
+																									寻 Looking S02E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1feYXg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36837\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:a3544333903525747987136d09a62ab72f44c7b6&amp;dn=Looking.S02E09.HDTV.x264-ASAP%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%" rel="nofollow" target="_blank" name=\'magnet36837\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36837\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a3544333903525747987136d09a62ab72f44c7b6&amp;dn=Looking.S02E09.HDTV.x264-ASAP%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36837\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>174M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37197" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37197.html">
+																									寻 Looking S02E08 720p QAF中文站 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2015.S02E08.720p.HDTV.x264.AAC-QaFoNE.mkv|524889563|F461854099A0451CD8CFC8C09FB8B883|h=PWUMCLFXWGX7TM23XOYAC3LBE2PDUNEY|/" rel="nofollow" target="_blank" name=\'ed2k37197\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'37197\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://www.400gb.com/file/88227795" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'37197\' alt=\'其他\'></a>
+																					<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2015.S02E08.720p.HDTV.x264.AAC-QaFoNE.mkv|524889563|F461854099A0451CD8CFC8C09FB8B883|h=PWUMCLFXWGX7TM23XOYAC3LBE2PDUNEY|/" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E08 720p QAF中文站 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37197\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>500M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="36393" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36393.html">
+																									寻 Looking S02E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntBSwrB" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36393\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:575f7d1d0c3e4d44c708a0b718f17266a911634d&amp;dn=Looking.S02E08.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet36393\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36393\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:575f7d1d0c3e4d44c708a0b718f17266a911634d&amp;dn=Looking.S02E08.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36393\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>566M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36392" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36392.html">
+																									寻 Looking S02E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c0hc8ww" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36392\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:982fe152a94e4767d56e029f4e78a567f76643e3&amp;dn=Looking.S02E08.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3" rel="nofollow" target="_blank" name=\'magnet36392\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36392\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:982fe152a94e4767d56e029f4e78a567f76643e3&amp;dn=Looking.S02E08.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36392\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>176M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="36773" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36773.html">
+																									寻 Looking S02E07 720p QAF中文站 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjsN00d" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36773\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2014.S02E07.720p.HDTV.x264.qafone|525309792|4D7F8D5156C837345C1300CDC513400A|h=HH2SGHR3NUF6TOB2AL5FNR36ZXXQIGUP|/" rel="nofollow" target="_blank" name=\'ed2k36773\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'36773\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://www.400gb.com/file/87827975" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'36773\' alt=\'其他\'></a>
+																					<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2014.S02E07.720p.HDTV.x264.qafone|525309792|4D7F8D5156C837345C1300CDC513400A|h=HH2SGHR3NUF6TOB2AL5FNR36ZXXQIGUP|/" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E07 720p QAF中文站 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36773\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>500M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35945" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35945.html">
+																									寻 Looking S02E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1wF1Yu" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35945\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1380c08d6235c8bdc0415dc0ade23febb991c030&amp;dn=Looking.S02E07.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet35945\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35945\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1380c08d6235c8bdc0415dc0ade23febb991c030&amp;dn=Looking.S02E07.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35945\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>914M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35944" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35944.html">
+																									寻 Looking S02E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgMJ3xY" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35944\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f5f187cfe9c1d68378ce4c4c63b853155b72aad0&amp;dn=Looking.S02E07.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet35944\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35944\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f5f187cfe9c1d68378ce4c4c63b853155b72aad0&amp;dn=Looking.S02E07.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35944\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>236M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36512" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36512.html">
+																									寻 Looking S02E06 720p QAF中文站 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWqh7pa" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36512\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2014.S02E06.720p.HDTV.x264.AAC-QaFoNE.mkv|525167059|A94D2EB0217F5BCB384594FE04D3EAF3|h=WMZBLAAZDPMNPUDUK6THV45TUOSFF6NF|/" rel="nofollow" target="_blank" name=\'ed2k36512\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'36512\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://www.400gb.com/file/87300156" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'36512\' alt=\'其他\'></a>
+																					<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2014.S02E06.720p.HDTV.x264.AAC-QaFoNE.mkv|525167059|A94D2EB0217F5BCB384594FE04D3EAF3|h=WMZBLAAZDPMNPUDUK6THV45TUOSFF6NF|/" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E06 720p QAF中文站 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36512\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>500M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35496" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35496.html">
+																									寻 Looking S02E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQ8Iwls" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35496\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fe2758941702696a022deb5a534b39272584c69d&amp;dn=Looking.S02E06.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet35496\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35496\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fe2758941702696a022deb5a534b39272584c69d&amp;dn=Looking.S02E06.720p.HDTV.x264-IMMERSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35496\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>589M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35495" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35495.html">
+																									寻 Looking S02E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mg86elq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35495\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:54YHKBHLQNX7NNAIPE774FLYYZVABXKO&amp;dn=Looking.S02E06.HDTV.x264-ASAP&amp;tr=udp://open.demonii.com:80&amp;tr=udp://tracker.coppersurfer.tk:80&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://exodus.desync.com:6969" rel="nofollow" target="_blank" name=\'magnet35495\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35495\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:54YHKBHLQNX7NNAIPE774FLYYZVABXKO&amp;dn=Looking.S02E06.HDTV.x264-ASAP&amp;tr=udp://open.demonii.com:80&amp;tr=udp://tracker.coppersurfer.tk:80&amp;tr=udp://tracker.leechers-paradise.org:6969&amp;tr=udp://exodus.desync.com:6969" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35495\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>201M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35771" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35771.html">
+																									寻 Looking S02E05 720p QAF中文站 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kT9ojT9" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35771\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2014.S02E05.720p.HDTV.x264.AAC-QaFoNE.mkv|525283957|3CDCCEE5DA91FC771FF89845DCB9D07A|h=K2IKWZOQJ6T6LOWAJQAUCMDK4FR5DAAA|/" rel="nofollow" target="_blank" name=\'ed2k35771\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'35771\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://www.400gb.com/file/86129628" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'35771\' alt=\'其他\'></a>
+																					<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2014.S02E05.720p.HDTV.x264.AAC-QaFoNE.mkv|525283957|3CDCCEE5DA91FC771FF89845DCB9D07A|h=K2IKWZOQJ6T6LOWAJQAUCMDK4FR5DAAA|/" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E05 720p QAF中文站 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35771\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>500M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-02-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="35095" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35095.html">
+																									寻 Looking S02E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6ys4w6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35095\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:04a2de7ec70c17321c29f719f5ee1ba5f2ac17f6&amp;dn=Looking.S02E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet35095\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35095\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:04a2de7ec70c17321c29f719f5ee1ba5f2ac17f6&amp;dn=Looking.S02E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35095\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>923M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35094" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35094.html">
+																									寻 Looking S02E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTuuO9T" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35094\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ea094f5b1f9efeac92d470ec48c70c300194cce8&amp;dn=Looking+S02E05+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet35094\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35094\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ea094f5b1f9efeac92d470ec48c70c300194cce8&amp;dn=Looking+S02E05+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35094\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>231M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="34870" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34870.html">
+																									寻 Looking S02E04 720p QAF中文站 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjui7db" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34870\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2014.S02E04.720p.HDTV.x264.AAC-QaFoNE.mkv|524068829|9268C0AE863F0B26A186F9DD07150BC7|h=MZ4RQ335KJJOIWJ3WHPULVWXQW3Y2GDV|/" rel="nofollow" target="_blank" name=\'ed2k34870\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'34870\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://www.400gb.com/file/85039629" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'34870\' alt=\'其他\'></a>
+																					<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2014.S02E04.720p.HDTV.x264.AAC-QaFoNE.mkv|524068829|9268C0AE863F0B26A186F9DD07150BC7|h=MZ4RQ335KJJOIWJ3WHPULVWXQW3Y2GDV|/" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E04 720p QAF中文站 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34870\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>499M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-02-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34605" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34605.html">
+																									寻 Looking S02E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgmRfMo" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34605\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3169d49e2a3f8c5a861a232cb2bca4e55f45e1b2&amp;dn=Looking.S02E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet34605\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34605\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3169d49e2a3f8c5a861a232cb2bca4e55f45e1b2&amp;dn=Looking.S02E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34605\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>899M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="34604" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34604.html">
+																									寻 Looking S02E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bn4eycf" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34604\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1da6625a0c474405e34ae781384ae7207699aadb&amp;dn=Looking.S02E04.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet34604\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34604\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1da6625a0c474405e34ae781384ae7207699aadb&amp;dn=Looking.S02E04.HDTV.x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34604\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>226M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34101" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34101.html">
+																									寻 Looking S02E03 720p QAF中文站 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjjYJ17" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34101\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2014.S02E03.720p.HDTV.x264.AAC-QaFoNE.mkv|525038654|5EF0D14248CB425623A4DF7338418052|h=ZNDJ633GKTJD4CTOY7JG2SV2MTOYVJCK|/" rel="nofollow" target="_blank" name=\'ed2k34101\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'34101\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://www.400gb.com/file/83923558" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'34101\' alt=\'其他\'></a>
+																					<a style="display:none;" href="ed2k://|file|[%E5%AF%BB].Looking.2014.S02E03.720p.HDTV.x264.AAC-QaFoNE.mkv|525038654|5EF0D14248CB425623A4DF7338418052|h=ZNDJ633GKTJD4CTOY7JG2SV2MTOYVJCK|/" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E03 720p QAF中文站 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34101\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>500M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-01-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="33735" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33735.html">
+																									寻 Looking S02E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntOcymP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33735\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8089c3ae341d0dfa32002dad066139a5f4f96d14&amp;dn=Looking.S02E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet33735\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33735\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8089c3ae341d0dfa32002dad066139a5f4f96d14&amp;dn=Looking.S02E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33735\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>899M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33734" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33734.html">
+																									寻 Looking S02E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o67LsTG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33734\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f7874316f44e3931ece9a5d82b496e2183dc13d0&amp;dn=Looking+S02E03+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet33734\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33734\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f7874316f44e3931ece9a5d82b496e2183dc13d0&amp;dn=Looking+S02E03+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33734\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>229M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="33757" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33757.html">
+																									寻 Looking S02E02 720p QAF中文站 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bngxtp1" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33757\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		<a style="display:none;" href="http://www.400gb.com/file/83151199" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'33757\' alt=\'其他\'></a>
+										
+										</td>
+										<td></td>
+										<td>500M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-01-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33371" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33371.html">
+																									寻 Looking S02E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdKkE6v" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33371\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b11896f716b58672bb01194678be645c9bbe48d4&amp;dn=Looking.S02E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet33371\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33371\' alt=\'迅雷高清美剧下载\'></a>																				<a style="display:none;" href="http://cloud.pptv.com/v3/share/am4b4ARB" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'33371\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:b11896f716b58672bb01194678be645c9bbe48d4&amp;dn=Looking.S02E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33371\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>835M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="33370" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33370.html">
+																									寻 Looking S02E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jG5R0to" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33370\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:bbf0a570123ef66e3be0a308199a27745a2e9880&amp;dn=Looking+S02E02+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet33370\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33370\' alt=\'迅雷高清美剧下载\'></a>																				<a style="display:none;" href="http://cloud.pptv.com/v3/share/am4bxYTh" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'33370\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:bbf0a570123ef66e3be0a308199a27745a2e9880&amp;dn=Looking+S02E02+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33370\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>206M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33756" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33756.html">
+																									寻 Looking S02E01 720p QAF中文站 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjwPQyx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33756\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>500M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-01-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="32987" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32987.html">
+																									寻 Looking S02E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i37pjnR" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32987\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:a437c4ca4e1e48df99ee39fb3e9c7a1ffd7dbc0d&amp;dn=Looking.S02E01.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet32987\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32987\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a437c4ca4e1e48df99ee39fb3e9c7a1ffd7dbc0d&amp;dn=Looking.S02E01.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32987\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>835M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="32986" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32986.html">
+																									寻 Looking S02E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTFYB3L" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32986\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f5cff724e70fbcd0fda8760636f751ed8df607b1&amp;dn=Looking+S02E01+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet32986\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32986\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f5cff724e70fbcd0fda8760636f751ed8df607b1&amp;dn=Looking+S02E01+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="寻 Looking S02E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32986\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>234M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-12</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=1643293&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(1643293,731,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,731);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,731);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,731);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

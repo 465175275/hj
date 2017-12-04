@@ -1,0 +1,1164 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:06:14 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d27a30e10c341bb9dbf50426056ae4d371509534373; expires=Thu, 01-Nov-18 11:06:13 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e622bc5940d5b-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>博世 Bosch-博世下载-博世全集下载-Bosch下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="博世,Bosch,博世下载,博世全集下载,博世高清下载,博世迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;该剧根据系列小说《City&amp;nbsp;of&amp;nbsp;Bones》、《The&amp;nbsp;Concrete&amp;nbsp;Blonde》和《Echo&amp;nbsp;Park》改编，故事描述洛杉矶警署资深命案侦探Harry&amp;nbsp;Bosch（Titus&amp;nbsp;Welliver）一方面全力追" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 785;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FBosch.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FBosch.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 785;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">博世 Bosch-博世下载-博世全集下载-Bosch下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/51a51e15f9303df8.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/51a51e15f9303df8.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：随机</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：罪案类</span>						
+						<span>最后更新：2017-04-27 22:06</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/785.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">128</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>	该剧根据系列小说《City&nbsp;of&nbsp;Bones》、《The&nbsp;Concrete&nbsp;Blonde》和《Echo&nbsp;Park》改编，故事描述洛杉矶警署资深命案侦探Harry&nbsp;Bosch（Titus&nbsp;Welliver）一方面全力追踪谋杀一个13岁男孩的凶手，一方面自己将面临审判。谋杀男孩的凶手被抓获后很爽快地承认了自己的罪行，但他却神奇地逃脱了警方的看押，在洛杉矶城中大开杀戒。Bosch和这个凶手展开一场猫鼠游戏，但这个凶手不停嘲弄Bosch，「维护正义」逐渐变成了私人情仇。这起案件令Bosch埋藏已久的秘密历史曝光，也让他和前妻及14岁的女儿的关系变得更加复杂。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="3">
+																			第3季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="2">
+																			第2季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="1">
+																			第1季																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="80157" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80157.html">
+																									博世 Bosch  S03E10 本季终 720p 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://btcache.me/torrent/6BB0C8186F92F11E774DD1A8D2C988A4E97B7DB4" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80157\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6bb0c8186f92f11e774dd1a8d2c988a4e97b7db4&amp;dn=Bosch.S03E10.End.720p.AC3.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" target="_blank" name=\'magnet80157\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80157\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Bosch.S03E10.End.720p.AC3.NOAD.DJZMZ.mkv|1037352863|4A8FBC114DE150FED019C579527F0A1C|h=TFS6OYCV5LCYDAIYMHTKDPOCI3JL3CZQ|/" rel="nofollow" target="_blank" name=\'ed2k80157\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'80157\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="https://djzmzfile.ctfile.com/fs/12076190-199952065" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'80157\' alt=\'其他\'></a>
+										<a style="display:none;" href="magnet:?xt=urn:btih:6bb0c8186f92f11e774dd1a8d2c988a4e97b7db4&amp;dn=Bosch.S03E10.End.720p.AC3.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E10 本季终 720p 大家字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80157\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>998M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79737" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79737.html">
+																									博世 Bosch  S03E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYru0Du" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79737\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=winxv7u&amp;f=Bosch.S03E10.The.Sea.King.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79737\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:893c9752e6d9173b3526fabd43cb311effa18ac6&amp;dn=Bosch.S03E10.The.Sea.King.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9." rel="nofollow" target="_blank" name=\'magnet79737\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79737\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:893c9752e6d9173b3526fabd43cb311effa18ac6&amp;dn=Bosch.S03E10.The.Sea.King.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9." rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79737\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.43G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80156" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80156.html">
+																									博世 Bosch  S03E09 720p 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://btcache.me/torrent/9A640FF00C38498DA89BAF273A06FE5349AC77E6" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80156\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9a640ff00c38498da89baf273a06fe5349ac77e6&amp;dn=Bosch.S03E09.720p.AC3.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" target="_blank" name=\'magnet80156\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80156\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Bosch.S03E09.720p.AC3.NOAD.DJZMZ.mkv|991338148|363988F3D9C4E23B29DD1C39DF183044|/" rel="nofollow" target="_blank" name=\'ed2k80156\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'80156\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:9a640ff00c38498da89baf273a06fe5349ac77e6&amp;dn=Bosch.S03E09.720p.AC3.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E09 720p 大家字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80156\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>982M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79736" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79736.html">
+																									博世 Bosch  S03E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIRy7mY" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79736\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=8bh1or7&amp;f=Bosch.S03E09.Clear.Shot.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79736\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e4bac7dd87d5ebab179a3248098c486d3a98397c&amp;dn=Bosch.S03E09.Clear.Shot.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.ra" rel="nofollow" target="_blank" name=\'magnet79736\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79736\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e4bac7dd87d5ebab179a3248098c486d3a98397c&amp;dn=Bosch.S03E09.Clear.Shot.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.ra" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79736\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.63G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79982" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79982.html">
+																									博世 Bosch  S03E08 720p 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://btcache.me/torrent/096D2F9B6B8BE06AC7FE71689CEBC241D008D0E9" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79982\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:096d2f9b6b8be06ac7fe71689cebc241d008d0e9&amp;dn=Bosch.S03E08.720p.AC3.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" target="_blank" name=\'magnet79982\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79982\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Bosch.S03E08.720p.AC3.NOAD.DJZMZ.mkv|861983854|24CB1E037E2E1D914E7A8F03AA832C41|/" rel="nofollow" target="_blank" name=\'ed2k79982\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79982\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:096d2f9b6b8be06ac7fe71689cebc241d008d0e9&amp;dn=Bosch.S03E08.720p.AC3.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E08 720p 大家字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79982\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>783M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79735" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79735.html">
+																									博世 Bosch  S03E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1camh10" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79735\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=n2lfu91&amp;f=Bosch.S03E08.Aye.Papi.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79735\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e4559ef61663c88b15f585b43b44f6d59c1629c4&amp;dn=Bosch.S03E08.Aye.Papi.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" target="_blank" name=\'magnet79735\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79735\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e4559ef61663c88b15f585b43b44f6d59c1629c4&amp;dn=Bosch.S03E08.Aye.Papi.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79735\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.21G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79981" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79981.html">
+																									博世 Bosch  S03E07 720p 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://btcache.me/torrent/1568B73D804A344918F34BC0E55111DE467CF0FF" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79981\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1568b73d804a344918f34bc0e55111de467cf0ff&amp;dn=Bosch.S03E07.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" target="_blank" name=\'magnet79981\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79981\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Bosch.S03E07.720p.AAC.NOAD.DJZMZ.mkv|714223577|2D2D1D33411711ADCA3C31CC56C873AD|/" rel="nofollow" target="_blank" name=\'ed2k79981\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79981\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:1568b73d804a344918f34bc0e55111de467cf0ff&amp;dn=Bosch.S03E07.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E07 720p 大家字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79981\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>783M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79734" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79734.html">
+																									博世 Bosch  S03E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i57hOn7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79734\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=9lm2rxh&amp;f=Bosch.S03E07.Right.Play.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79734\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ec694ea75ea6dfb84d34a3db9aa98e20992b22ea&amp;dn=Bosch.S03E07.Right.Play.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.ra" rel="nofollow" target="_blank" name=\'magnet79734\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79734\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ec694ea75ea6dfb84d34a3db9aa98e20992b22ea&amp;dn=Bosch.S03E07.Right.Play.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.ra" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79734\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.07G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79978" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79978.html">
+																									博世 Bosch  S03E06 720p 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://btcache.me/torrent/2BD36D423A1F9C7FE003C637A21BCA0C2BF3D9FB" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79978\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2bd36d423a1f9c7fe003c637a21bca0c2bf3d9fb&amp;dn=Bosch.S03E06.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" target="_blank" name=\'magnet79978\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79978\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Bosch.S03E06.720p.AAC.NOAD.DJZMZ.mkv|797654848|A121FD6171E480D4D0F07C20B2D57D95|/" rel="nofollow" target="_blank" name=\'ed2k79978\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79978\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:2bd36d423a1f9c7fe003c637a21bca0c2bf3d9fb&amp;dn=Bosch.S03E06.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E06 720p 大家字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79978\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>784M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79733" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79733.html">
+																									博世 Bosch  S03E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jI9h98y" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79733\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=rb36dy1&amp;f=Bosch.S03E06.Birdland.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79733\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b05220d251d4264ebbbe83703b2f929637526183&amp;dn=Bosch.S03E06.Birdland.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" target="_blank" name=\'magnet79733\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79733\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b05220d251d4264ebbbe83703b2f929637526183&amp;dn=Bosch.S03E06.Birdland.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79733\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.51G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79977" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79977.html">
+																									博世 Bosch  S03E05 720p 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://btcache.me/torrent/AED3F77D3106F866DB7577381B00708706552EB7" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79977\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:aed3f77d3106f866db7577381b00708706552eb7&amp;dn=Bosch.S03E05.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" target="_blank" name=\'magnet79977\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79977\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Bosch.S03E05.720p.AAC.NOAD.DJZMZ.mkv|850490147|9BE2487DB91C4ECB04A73EF2B9882A5E|/" rel="nofollow" target="_blank" name=\'ed2k79977\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79977\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:aed3f77d3106f866db7577381b00708706552eb7&amp;dn=Bosch.S03E05.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E05 720p 大家字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79977\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>735M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79732" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79732.html">
+																									博世 Bosch  S03E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eR17ZYq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79732\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=tfbsiz2&amp;f=Bosch.S03E05.Blood.Under.The.Bridge.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79732\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7c60c14cdde39523f21943240827d0a2075a7589&amp;dn=Bosch.S03E05.Blood.Under.The.Bridge.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet79732\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79732\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7c60c14cdde39523f21943240827d0a2075a7589&amp;dn=Bosch.S03E05.Blood.Under.The.Bridge.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79732\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.18G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80087" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80087.html">
+																									博世 Bosch  S03E04 720p 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://btcache.me/torrent/9B63E385A07E6B67B61856C42D3860927E660A79" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80087\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9b63e385a07e6b67b61856c42d3860927e660a79&amp;dn=Bosch.S03E04.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" target="_blank" name=\'magnet80087\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80087\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Bosch.S03E04.720p.AAC.NOAD.DJZMZ.mkv|791957319|53C76846F2513240C50C79A47216EB12|/" rel="nofollow" target="_blank" name=\'ed2k80087\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'80087\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:9b63e385a07e6b67b61856c42d3860927e660a79&amp;dn=Bosch.S03E04.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E04 720p 大家字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80087\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>802M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79731" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79731.html">
+																									博世 Bosch  S03E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eR8Z5Xw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79731\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=hq975zl&amp;f=Bosch.S03E04.El.Compadre.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79731\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7ed005310341735ed70a343f0996f97eb6ff582d&amp;dn=Bosch.S03E04.El.Compadre.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.r" rel="nofollow" target="_blank" name=\'magnet79731\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79731\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7ed005310341735ed70a343f0996f97eb6ff582d&amp;dn=Bosch.S03E04.El.Compadre.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.r" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79731\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.82G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79976" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79976.html">
+																									博世 Bosch  S03E03 720p 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://btcache.me/torrent/51AFDA37AEE0C3DC6D0DD764DD95436080838F7D" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79976\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:51afda37aee0c3dc6d0dd764dd95436080838f7d&amp;dn=Bosch.S03E03.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" target="_blank" name=\'magnet79976\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79976\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Bosch.S03E03.720p.AAC.NOAD.DJZMZ.mkv|858593648|2E3D226EAE626D47250874852DC111A9|/" rel="nofollow" target="_blank" name=\'ed2k79976\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79976\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:51afda37aee0c3dc6d0dd764dd95436080838f7d&amp;dn=Bosch.S03E03.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E03 720p 大家字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79976\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>751M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79730" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79730.html">
+																									博世 Bosch  S03E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1ccTTXO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79730\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=k6i5lst&amp;f=Bosch.S03E03.God.Sees.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79730\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f28d6eae95fff51802537d9f5f1f4e0ecb219fed&amp;dn=Bosch.S03E03.God.Sees.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" target="_blank" name=\'magnet79730\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79730\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f28d6eae95fff51802537d9f5f1f4e0ecb219fed&amp;dn=Bosch.S03E03.God.Sees.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79730\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.53G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79911" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79911.html">
+																									博世 Bosch  S03E02 720p 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://btcache.me/torrent/50EF7C5791C9A0E1E9071D0FD44C888F01E576B4" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79911\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:50ef7c5791c9a0e1e9071d0fd44c888f01e576b4&amp;dn=Bosch.S03E02.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" target="_blank" name=\'magnet79911\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79911\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Bosch.S03E02.720p.AAC.NOAD.DJZMZ.mkv|852159098|652DA2C7CABA8399945B56A60E64428C|/" rel="nofollow" target="_blank" name=\'ed2k79911\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79911\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:50ef7c5791c9a0e1e9071d0fd44c888f01e576b4&amp;dn=Bosch.S03E02.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E02 720p 大家字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79911\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>720M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79729" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79729.html">
+																									博世 Bosch  S03E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2J3pYw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79729\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=gny6qjz&amp;f=Bosch.S03E02.The.Four.Last.Things.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79729\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6460889080fb606eb0f4777e2cff447ada2e9b4b&amp;dn=Bosch.S03E02.The.Four.Last.Things.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet79729\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79729\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6460889080fb606eb0f4777e2cff447ada2e9b4b&amp;dn=Bosch.S03E02.The.Four.Last.Things.720p.AMZN.WEBRip.DD5.1.x264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79729\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.41G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79910" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79910.html">
+																									博世 Bosch  S03E01 720p 大家字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://btcache.me/torrent/E87893F853FA1F7ABBA60AE314CDB7A08E42E129" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79910\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e87893f853fa1f7abba60ae314cdb7a08e42e129&amp;dn=Bosch.S03E01.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" target="_blank" name=\'magnet79910\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79910\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Bosch.S03E01.720p.AAC.NOAD.DJZMZ.mkv|899258146|F44B4F77227F0133E0FA3D1A62090362|/" rel="nofollow" target="_blank" name=\'ed2k79910\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79910\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:e87893f853fa1f7abba60ae314cdb7a08e42e129&amp;dn=Bosch.S03E01.720p.AAC.NOAD.DJZMZ.mkv&amp;tr=udp://tracker.pirateparty.gr:6969/announce" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E01 720p 大家字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79910\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>561M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79666" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79666.html">
+																									博世 Bosch  S03E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jH4hDzC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79666\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=q6bcra8&amp;f=Bosch.S03E01.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79666\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1704ef574aababb4e402edaabfa12eecec791de0&amp;dn=Bosch.S03E01.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79666\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79666\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1704ef574aababb4e402edaabfa12eecec791de0&amp;dn=Bosch.S03E01.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="博世 Bosch  S03E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79666\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.10G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-21</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=415865&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(415865,785,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,785);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,785);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,785);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

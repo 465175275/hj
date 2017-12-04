@@ -1,0 +1,1141 @@
+'HTTP/1.1 200 OK
+Date: Tue, 07 Nov 2017 10:03:02 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d14e665aa47f1f99f84f1d97ebfb4515a1510048982; expires=Wed, 07-Nov-18 10:03:02 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b9f75daf0939384-SJC
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>每日秀 The daily show-每日秀下载-每日秀全集下载-The daily show下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="每日秀,The daily show,每日秀下载,每日秀全集下载,每日秀高清下载,每日秀迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;每日秀Thedailyshow首播：美国喜剧中心频道(ComedyCentral)周一~周四晚11点。时长：30分钟《每日秀》，又称《囧司徒每日秀》（TheDailyShowwithJonStewart），1996年9月1日首播至今已近14年，是美国影响力最大的喜剧脱口秀之一。《每日秀》的定位是恶搞新闻，形式上更像传统的新闻节目，主持人说的" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 106;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FThe%2520daily%2520show.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FThe%2520daily%2520show.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 106;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">每日秀 The daily show-每日秀下载-每日秀全集下载-The daily show下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i1.piimg.com/588755/08b6c2a6a3ab7292.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i1.piimg.com/588755/08b6c2a6a3ab7292.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：随机</span>
+						<span>状态：<font color="#5cb1c5">播出中</font></span>
+						<span class="greybg">分类：脱口秀</span>						
+						<span>最后更新：2017-11-07 15:09</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/106.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">883</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>	每日秀 The daily show	 首播：美国喜剧中心频道(Comedy Central) 周一~周四晚11点。时长：30分钟《每日秀》，又称《囧司徒每日秀》（The Daily Show with Jon Stewart），1996年9月1日首播至今已近14年，是美国影响力最大的喜剧脱口秀之一。《每日秀》的定位是恶搞新闻，形式上更像传统的新闻节目，主持人说的过程中穿插着“新闻记者”解说的电视画面。另外，《每日秀》还会邀请名人嘉宾或者政客来到现场，挑选最热的新闻或者政治事件进行评述，这个自然也是以恶搞为基调。难能可贵的是，乔不但能在恶搞新闻中加入轻松笑料，更多时候体现的是一种发人深思的幽默。从2001年开始得到电视艾美奖的青睐，迄今为止共得过15次艾美奖提名，其中7次获奖。	15年囧叔辞职，南非小子特雷弗·诺亚接任。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+																		<td id="seasoninfo" colspan="8"></td>							</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="91625" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/91625.html">
+																									每日秀 The Daily Show 2017 11 06 Jeff Flake											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i4SHjVZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'91625\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=hzmgs4r&amp;f=The.Daily.Show.2017.11.06.Jeff.Flake.EXTENDED.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'91625\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d66ccb68df048a7da247af043fc59cba9e316b9a&amp;dn=The.Daily.Show.2017.11.06.Jeff.Flake.EXTENDED.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9" rel="nofollow" target="_blank" name=\'magnet91625\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'91625\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d66ccb68df048a7da247af043fc59cba9e316b9a&amp;dn=The.Daily.Show.2017.11.06.Jeff.Flake.EXTENDED.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 11 06 Jeff Flake" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'91625\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>358M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-11-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="91118" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/91118.html">
+																									每日秀 The Daily Show 2017 10 30 Ta Nehisi Coates											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c23yIAG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'91118\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=3pt2aul&amp;f=The.Daily.Show.2017.10.30.Ta.Nehisi.Coates.EXTENDED.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'91118\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="https://rarbg.is/download.php?id=3pt2aul&amp;f=The.Daily.Show.2017.10.30.Ta.Nehisi.Coates.EXTENDED.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" name=\'magnet91118\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'91118\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="https://rarbg.is/download.php?id=3pt2aul&amp;f=The.Daily.Show.2017.10.30.Ta.Nehisi.Coates.EXTENDED.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 10 30 Ta Nehisi Coates" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'91118\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>264M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="90843" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90843.html">
+																									每日秀 The Daily Show 2017 10 26 Miles Teller											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIxgDWM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90843\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=cketn9w&amp;f=The.Daily.Show.2017.10.26.Miles.Teller.EXTENDED.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90843\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9e5dd5ec3c29204f2f8c07ecae23fee06affbede&amp;dn=The.Daily.Show.2017.10.26.Miles.Teller.EXTENDED.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" target="_blank" name=\'magnet90843\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90843\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9e5dd5ec3c29204f2f8c07ecae23fee06affbede&amp;dn=The.Daily.Show.2017.10.26.Miles.Teller.EXTENDED.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 10 26 Miles Teller" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90843\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>256M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="90753" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90753.html">
+																									每日秀 The Daily Show 2017 10 25 Maggie Gyllenhaal											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o8QeEVo" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90753\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=pyczodx&amp;f=The.Daily.Show.2017.10.25.Maggie.Gyllenhaal.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90753\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:235a912475fce6375469b4e2c4efbf1c0b3dabbb&amp;dn=The.Daily.Show.2017.10.25.Maggie.Gyllenhaal.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.r" rel="nofollow" target="_blank" name=\'magnet90753\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90753\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:235a912475fce6375469b4e2c4efbf1c0b3dabbb&amp;dn=The.Daily.Show.2017.10.25.Maggie.Gyllenhaal.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.r" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 10 25 Maggie Gyllenhaal" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90753\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>239M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="90655" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90655.html">
+																									每日秀 The Daily Show 2017 10 23 Khizr Kha											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bpyGKFH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90655\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=w1dz64i&amp;f=The.Daily.Show.2017.10.23.Khizr.Khan.HDTV.x264-CROOKS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90655\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0adce49f2150488f8fa7a49dd6e41862459cf759&amp;dn=The.Daily.Show.2017.10.23.Khizr.Khan.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" target="_blank" name=\'magnet90655\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90655\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0adce49f2150488f8fa7a49dd6e41862459cf759&amp;dn=The.Daily.Show.2017.10.23.Khizr.Khan.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 10 23 Khizr Kha" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90655\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>143M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="90400" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90400.html">
+																									每日秀 The Daily Show 2017 10 19 Vic Mensa											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mhDaZig" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90400\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=3oktzg8&amp;f=The.Daily.Show.2017.10.19.Vic.Mensa.HDTV.x264-CROOKS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90400\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ecabfacadee6ac1186ac694fd2cca9cae8ea2574&amp;dn=The.Daily.Show.2017.10.19.Vic.Mensa.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet90400\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90400\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ecabfacadee6ac1186ac694fd2cca9cae8ea2574&amp;dn=The.Daily.Show.2017.10.19.Vic.Mensa.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 10 19 Vic Mensa" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90400\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>186M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="90313" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90313.html">
+																									每日秀 The Daily Show 2017 10 18 Lena Waithe											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1slkaRjJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90313\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=hfulrmq&amp;f=The.Daily.Show.2017.10.18.Lena.Waithe.HDTV.x264-CROOKS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90313\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:252b59cf1105de33cd316756d66e336ce2f46ed4&amp;dn=The.Daily.Show.2017.10.18.Lena.Waithe.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rar" rel="nofollow" target="_blank" name=\'magnet90313\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90313\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:252b59cf1105de33cd316756d66e336ce2f46ed4&amp;dn=The.Daily.Show.2017.10.18.Lena.Waithe.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rar" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 10 18 Lena Waithe" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90313\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>189M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="90258" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90258.html">
+																									每日秀 The Daily Show 2017 10 17 Arne Duncan											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hrUecNM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90258\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=3kymesw&amp;f=The.Daily.Show.2017.10.17.Arne.Duncan.HDTV.x264-CROOKS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90258\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:72096fe353ba0a38d3d48d0e0e04cb5adca429b2&amp;dn=The.Daily.Show.2017.10.17.Arne.Duncan.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rar" rel="nofollow" target="_blank" name=\'magnet90258\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90258\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:72096fe353ba0a38d3d48d0e0e04cb5adca429b2&amp;dn=The.Daily.Show.2017.10.17.Arne.Duncan.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rar" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 10 17 Arne Duncan" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90258\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>178M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="90163" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90163.html">
+																									每日秀 The Daily Show 2017 10 16 Common											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2IXaZe" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90163\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=32uymr9&amp;f=The.Daily.Show.2017.10.16.Common.HDTV.x264-CROOKS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90163\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:8c9ef9bfee37f1c789c4cd330f7ae142cd6dfda2&amp;dn=The.Daily.Show.2017.10.16.Common.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet90163\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90163\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8c9ef9bfee37f1c789c4cd330f7ae142cd6dfda2&amp;dn=The.Daily.Show.2017.10.16.Common.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 10 16 Common" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90163\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>198M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="89261" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89261.html">
+																									每日秀 The Daily Show 2017 10 05 Kenya Barris											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nu8o47R" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89261\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=io64kg5&amp;f=The.Daily.Show.2017.10.05.Kenya.Barris.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89261\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:276b6b3c9892d4a1a771b88d2c4043f162626eda&amp;dn=The.Daily.Show.2017.10.05.Kenya.Barris.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" target="_blank" name=\'magnet89261\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89261\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:276b6b3c9892d4a1a771b88d2c4043f162626eda&amp;dn=The.Daily.Show.2017.10.05.Kenya.Barris.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 10 05 Kenya Barris" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89261\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>279M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="89188" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89188.html">
+																									每日秀 The Daily Show 2017 10 04 John Hodgman											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVFuze3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89188\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=qsvecaj&amp;f=The.Daily.Show.2017.10.04.John.Hodgman.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89188\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a2679702f52f9bed3cfb5e6af7cca90ba2401450&amp;dn=The.Daily.Show.2017.10.04.John.Hodgman.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" target="_blank" name=\'magnet89188\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89188\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a2679702f52f9bed3cfb5e6af7cca90ba2401450&amp;dn=The.Daily.Show.2017.10.04.John.Hodgman.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg." rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 10 04 John Hodgman" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89188\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>262M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="89109" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89109.html">
+																									每日秀 The Daily Show 2017 10 03 David Muir											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nvzbiQl" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89109\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=fyj4c6g&amp;f=The.Daily.Show.2017.10.03.David.Muir.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89109\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:33fa3f3f77f58a8e3f77c48ad60033228ab50ad4&amp;dn=The.Daily.Show.2017.10.03.David.Muir.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet89109\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89109\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:33fa3f3f77f58a8e3f77c48ad60033228ab50ad4&amp;dn=The.Daily.Show.2017.10.03.David.Muir.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 10 03 David Muir" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89109\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>250M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="89043" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89043.html">
+																									每日秀 The Daily Show 2017 10 02 Robin Thede											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=cfj289t&amp;f=The.Daily.Show.2017.10.02.Robin.Thede.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89043\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9c4c520280a86a9615395fa8405ac219816ce746&amp;dn=The.Daily.Show.2017.10.02.Robin.Thede.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" target="_blank" name=\'magnet89043\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89043\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9c4c520280a86a9615395fa8405ac219816ce746&amp;dn=The.Daily.Show.2017.10.02.Robin.Thede.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 10 02 Robin Thede" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89043\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>235M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-10-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="88734" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88734.html">
+																									每日秀 The Daily Show 2017 09 28 Craig Robinson											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1boCCsI7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88734\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=7vcdrho&amp;f=The.Daily.Show.2017.09.28.Craig.Robinson.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88734\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e7fded147720c82ecc3a298b693868e3d3c354d0&amp;dn=The.Daily.Show.2017.09.28.Craig.Robinson.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" target="_blank" name=\'magnet88734\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88734\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e7fded147720c82ecc3a298b693868e3d3c354d0&amp;dn=The.Daily.Show.2017.09.28.Craig.Robinson.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 09 28 Craig Robinson" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88734\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>240M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="88660" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88660.html">
+																									每日秀 The Daily Show 2017 09 27 America Ferrera											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dFCiz0t" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88660\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=n2zxqje&amp;f=The.Daily.Show.2017.09.27.America.Ferrera.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88660\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ac1d1b631f25a437986c811b1b60afc4856c33c2&amp;dn=The.Daily.Show.2017.09.27.America.Ferrera.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rar" rel="nofollow" target="_blank" name=\'magnet88660\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88660\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ac1d1b631f25a437986c811b1b60afc4856c33c2&amp;dn=The.Daily.Show.2017.09.27.America.Ferrera.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rar" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 09 27 America Ferrera" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88660\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>273M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="88583" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88583.html">
+																									每日秀 The Daily Show 2017 09 26 Kathryn Mile											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o87gmxk" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88583\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=12ohcna&amp;f=The.Daily.Show.2017.09.26.Kathryn.Miles.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88583\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c43ed5ee372ddf311186c67596dffcd001c71ce1&amp;dn=The.Daily.Show.2017.09.26.Kathryn.Miles.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet88583\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88583\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c43ed5ee372ddf311186c67596dffcd001c71ce1&amp;dn=The.Daily.Show.2017.09.26.Kathryn.Miles.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 09 26 Kathryn Mile" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88583\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>246M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="88505" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88505.html">
+																									每日秀 The Daily Show 2017 09 25 Katy Tur											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1slqLhZR" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88505\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=u4otn7f&amp;f=The.Daily.Show.2017.09.25.Katy.Tur.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88505\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:be9bfd4863fb46f97e2f4208a5ec5c3bcceb1d5f&amp;dn=The.Daily.Show.2017.09.25.Katy.Tur.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3" rel="nofollow" target="_blank" name=\'magnet88505\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88505\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:be9bfd4863fb46f97e2f4208a5ec5c3bcceb1d5f&amp;dn=The.Daily.Show.2017.09.25.Katy.Tur.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 09 25 Katy Tur" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88505\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>303M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="88290" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88290.html">
+																									每日秀 The Daily Show 2017 09 21 Bill Gates											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1skKqPf3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88290\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=8e12sa6&amp;f=The.Daily.Show.2017.09.21.Bill.Gates.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88290\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ca60026636dd7d3dd9a2dcc1093a630b0c5f6ba3&amp;dn=The.Daily.Show.2017.09.21.Bill.Gates.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" target="_blank" name=\'magnet88290\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88290\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ca60026636dd7d3dd9a2dcc1093a630b0c5f6ba3&amp;dn=The.Daily.Show.2017.09.21.Bill.Gates.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 09 21 Bill Gates" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88290\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>304M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="88224" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88224.html">
+																									每日秀 The Daily Show 2017 09 20 Ellen Pao											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1boWo72R" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88224\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=tz1f537&amp;f=The.Daily.Show.2017.09.20.Ellen.Pao.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88224\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:cd333b0805335989915c045ebe09521b3e9f2028&amp;dn=The.Daily.Show.2017.09.20.Ellen.Pao.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" target="_blank" name=\'magnet88224\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88224\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cd333b0805335989915c045ebe09521b3e9f2028&amp;dn=The.Daily.Show.2017.09.20.Ellen.Pao.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 09 20 Ellen Pao" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88224\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>255M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="88164" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88164.html">
+																									每日秀 The Daily Show 2017 09 19 Olivia Munn											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1skRcsSt" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88164\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=r3y9mf6&amp;f=The.Daily.Show.2017.09.19.Olivia.Munn.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88164\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:745e8f47b2da80eef453ab787adfb347e973f70c&amp;dn=The.Daily.Show.2017.09.19.Olivia.Munn.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" target="_blank" name=\'magnet88164\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88164\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:745e8f47b2da80eef453ab787adfb347e973f70c&amp;dn=The.Daily.Show.2017.09.19.Olivia.Munn.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" name=\'miurl\' filename="每日秀 The Daily Show 2017 09 19 Olivia Munn" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88164\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>272M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-20</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+									<tr bgcolor="#ffffff">
+												<td colspan="8"  height="30" style="padding-top:8px;"><ul class="pagination">  <li class="active"><span>1</span><li><li><a class="num" href="/index.php/meiju/index/engename/The+daily+show/p/2.html">2</a></li><li><a class="num" href="/index.php/meiju/index/engename/The+daily+show/p/3.html">3</a></li><li><a class="num" href="/index.php/meiju/index/engename/The+daily+show/p/4.html">4</a></li><li><a class="num" href="/index.php/meiju/index/engename/The+daily+show/p/5.html">5</a></li><li><a class="num" href="/index.php/meiju/index/engename/The+daily+show/p/6.html">6</a></li><li><a class="num" href="/index.php/meiju/index/engename/The+daily+show/p/7.html">7</a></li><li><a class="num" href="/index.php/meiju/index/engename/The+daily+show/p/8.html">8</a></li><li><a class="num" href="/index.php/meiju/index/engename/The+daily+show/p/9.html">9</a></li><li><a class="num" href="/index.php/meiju/index/engename/The+daily+show/p/10.html">10</a></li><li><a class="num" href="/index.php/meiju/index/engename/The+daily+show/p/11.html">11</a></li> <li><a class="next" href="/index.php/meiju/index/engename/The+daily+show/p/2.html">>></a></li> <li><a class="end" href="/index.php/meiju/index/engename/The+daily+show/p/58.html">58</a></li></ul></td>
+											</tr>					</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,106,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,106);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,106);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,106);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

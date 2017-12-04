@@ -1,0 +1,1133 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:07:58 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d1e14ba1fd2d03d8b08fbf15443d885d51509534477; expires=Thu, 01-Nov-18 11:07:57 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e64b654807790-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>科尔伯特报告 The Colbert Report-科尔伯特报告下载-科尔伯特报告全集下载-The Colbert Report下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="科尔伯特报告,The Colbert Report,科尔伯特报告下载,科尔伯特报告全集下载,科尔伯特报告高清下载,科尔伯特报告迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;美国脱口秀节目《科尔伯特报告》（TheColbertReport）是2003年开始播出的一档高收视脱口秀节目。由StephenColbert主持，在ComedyCentral周一至周四晚播出。该节目是TheDailySho" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 107;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FThe.Colbert.Report.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FThe.Colbert.Report.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 107;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">科尔伯特报告 The Colbert Report-科尔伯特报告下载-科尔伯特报告全集下载-The Colbert Report下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/0c9a876d44a51aab.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/0c9a876d44a51aab.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：随机</span>
+						<span>状态：剧终</span>
+						<span class="greybg">分类：喜剧类</span>						
+						<span>最后更新：2014-12-19 16:37</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/107.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">105</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 美国脱口秀节目《科尔伯特报告》（The Colbert Report）是2003年开始播出的一档高收视脱口秀节目。由Stephen Colbert主持，在Comedy Central周一至周四晚播出。该节目是The Daily Show衍生而来，很多方面和The Daily Show相似，主要区别在于主持人的言辞更加犀利、语速快、音量大、富有激情，站在共和党的立场（Daily Show是民主党），主持人的人气更高。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+																		<td id="seasoninfo" colspan="8"></td>							</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="32336" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32336.html">
+																									科尔伯特报告 The Colbert Report 2014 12 18 720p											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i35mCM5" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32336\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/A33B928946402CB0B907B3A3DD916B1993BA56D4" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'32336\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a33b928946402cb0b907b3a3dd916b1993ba56d4&amp;dn=The.Colbert.Report.2014.12.18.Grimmy.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11." rel="nofollow" target="_blank" name=\'magnet32336\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32336\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a33b928946402cb0b907b3a3dd916b1993ba56d4&amp;dn=The.Colbert.Report.2014.12.18.Grimmy.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11." rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 18 720p" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32336\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>750M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="32335" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32335.html">
+																									科尔伯特报告 The Colbert Report 2014 12 18 剧终											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3svwaD" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32335\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/723B11BD8CE713940ABC0BD28CA83090BC9E4D5E" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'32335\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:723b11bd8ce713940abc0bd28ca83090bc9e4d5e&amp;dn=The.Colbert.Report.2014.12.18.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" target="_blank" name=\'magnet32335\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32335\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:723b11bd8ce713940abc0bd28ca83090bc9e4d5e&amp;dn=The.Colbert.Report.2014.12.18.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 18 剧终" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32335\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>213M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="32294" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32294.html">
+																									科尔伯特报告 The Colbert Report 2014 12 17 Phil Klay											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1tV6Lg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32294\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/21B6DA7382852E288C2723794AA013FD5EA0C86D" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'32294\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:21b6da7382852e288c2723794aa013fd5ea0c86d&amp;dn=The+Colbert+Report+2014+12+17+Phil+Klay+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rar" rel="nofollow" target="_blank" name=\'magnet32294\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32294\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:21b6da7382852e288c2723794aa013fd5ea0c86d&amp;dn=The+Colbert+Report+2014+12+17+Phil+Klay+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rar" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 17 Phil Klay" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32294\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>227M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="32259" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32259.html">
+																									科尔伯特报告 The Colbert Report 2014 12 16 Kendrick Lamar											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bn5yOqV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32259\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/EC2EC2745E0244A00837BFD8879C7FF65083E54D" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'32259\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ec2ec2745e0244a00837bfd8879c7ff65083e54d&amp;dn=The+Colbert+Report+2014+12+16+Kendrick+Lamar+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F1" rel="nofollow" target="_blank" name=\'magnet32259\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32259\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ec2ec2745e0244a00837bfd8879c7ff65083e54d&amp;dn=The+Colbert+Report+2014+12+16+Kendrick+Lamar+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F1" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 16 Kendrick Lamar" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32259\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>194M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="32202" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32202.html">
+																									科尔伯特报告 The Colbert Report 2014 12 15 Seth Rogen											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjjX3U9" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32202\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/09E1987BE75CA9E5DD766971D15E5F632715E4DC" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'32202\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:09e1987be75ca9e5dd766971d15e5f632715e4dc&amp;dn=The.Colbert.Report.2014.12.15.Seth.Rogen.HDTV.x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.ra" rel="nofollow" target="_blank" name=\'magnet32202\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32202\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:09e1987be75ca9e5dd766971d15e5f632715e4dc&amp;dn=The.Colbert.Report.2014.12.15.Seth.Rogen.HDTV.x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.ra" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 15 Seth Rogen" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32202\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>169M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="32014" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32014.html">
+																									科尔伯特报告 The Colbert Report 2014 12 11 霍比特人3											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgA6bEw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32014\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/C69F322317C92B96F94B51CAB69120BBC00FA7B0" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'32014\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c69f322317c92b96f94b51cab69120bbc00fa7b0&amp;dn=The+Colbert+Report+2014+12+11+The+Hobbit-Battle+of+the+Five+Armies+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A271" rel="nofollow" target="_blank" name=\'magnet32014\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32014\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c69f322317c92b96f94b51cab69120bbc00fa7b0&amp;dn=The+Colbert+Report+2014+12+11+The+Hobbit-Battle+of+the+Five+Armies+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A271" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 11 霍比特人3" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32014\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>194M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="31953" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31953.html">
+																									科尔伯特报告 The Colbert Report 2014 12 10 Sarah Koenig											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jG00DpW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31953\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/1530DFA07BAB6C5209D618A8E54FC53A554F9584" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31953\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1530dfa07bab6c5209d618a8e54fc53a554f9584&amp;dn=The+Colbert+Report+2014+12+10+Sarah+Koenig+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11." rel="nofollow" target="_blank" name=\'magnet31953\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31953\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1530dfa07bab6c5209d618a8e54fc53a554f9584&amp;dn=The+Colbert+Report+2014+12+10+Sarah+Koenig+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11." rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 10 Sarah Koenig" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31953\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>192M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="31885" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31885.html">
+																									科尔伯特报告 The Colbert Report 2014 12 09 James Corden											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQeUdWI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31885\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/01F731C493086CD021DA2656ADD0DC1341B29F25" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31885\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:01f731c493086cd021da2656add0dc1341b29f25&amp;dn=The+Colbert+Report+2014+12+09+James+Corden+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11." rel="nofollow" target="_blank" name=\'magnet31885\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31885\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:01f731c493086cd021da2656add0dc1341b29f25&amp;dn=The+Colbert+Report+2014+12+09+James+Corden+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11." rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 09 James Corden" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31885\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>192M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="31831" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31831.html">
+																									科尔伯特报告 The Colbert Report 2014 12 08 Barack Obama 奥观海											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTrBeGf" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31831\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/DE3E7E4D54B7E5E05AD5D1809B1D6D1BE349F004.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31831\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:de3e7e4d54b7e5e05ad5d1809b1d6d1be349f004&amp;dn=The+Colbert+Report+2014+12+08+Barack+Obama+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11." rel="nofollow" target="_blank" name=\'magnet31831\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31831\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:de3e7e4d54b7e5e05ad5d1809b1d6d1be349f004&amp;dn=The+Colbert+Report+2014+12+08+Barack+Obama+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11." rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 08 Barack Obama 奥观海" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31831\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>192M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="31627" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31627.html">
+																									科尔伯特报告 The Colbert Report 2014 12 04 Paul Farmer											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c0ivR6C" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31627\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/DE0EF61D92596C3139E06D51639F6DEA00ED23C8.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31627\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:de0ef61d92596c3139e06d51639f6dea00ed23c8&amp;dn=The+Colbert+Report+2014+12+04+Paul+Farmer+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.r" rel="nofollow" target="_blank" name=\'magnet31627\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31627\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:de0ef61d92596c3139e06d51639f6dea00ed23c8&amp;dn=The+Colbert+Report+2014+12+04+Paul+Farmer+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.r" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 04 Paul Farmer" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31627\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>175M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="31571" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31571.html">
+																									科尔伯特报告 The Colbert Report 2014 12 03 Christopher Nolan											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJG5ulH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31571\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/55640945BB341C347F20C3DE33D486A96F59219A.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31571\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:55640945bb341c347f20c3de33d486a96f59219a&amp;dn=The+Colbert+Report+2014+12+03+Christopher+Nolan+HDTV+x264-W4F%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" target="_blank" name=\'magnet31571\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31571\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:55640945bb341c347f20c3de33d486a96f59219a&amp;dn=The+Colbert+Report+2014+12+03+Christopher+Nolan+HDTV+x264-W4F%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 03 Christopher Nolan" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31571\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>158M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="31512" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31512.html">
+																									科尔伯特报告 The Colbert Report 2014 12 02 Tony Bennett											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/16MvQu" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31512\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://zoink.it/torrent/4046AB6A271285E95BD87BB1E6CA912A76353AB8.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31512\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:IBDKW2RHCKC6SW6YPOY6NSURFJ3DKOVY&amp;dn=The.Colbert.Report.2014.12.02.Tony.Bennett.HDTV.x264-BATV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demo" rel="nofollow" target="_blank" name=\'magnet31512\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31512\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:IBDKW2RHCKC6SW6YPOY6NSURFJ3DKOVY&amp;dn=The.Colbert.Report.2014.12.02.Tony.Bennett.HDTV.x264-BATV&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demo" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 02 Tony Bennett" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31512\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>210M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="31462" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31462.html">
+																									科尔伯特报告 The Colbert Report 2014 12 01 Senator John McCain											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjlZaJ7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31462\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/903F5EBA4760778598FC03A7F941D95DAEE53C8F.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31462\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:903f5eba4760778598fc03a7f941d95daee53c8f&amp;dn=The.Colbert.Report.2014.12.01.Senator.John.McCain.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2" rel="nofollow" target="_blank" name=\'magnet31462\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31462\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:903f5eba4760778598fc03a7f941d95daee53c8f&amp;dn=The.Colbert.Report.2014.12.01.Senator.John.McCain.HDTV.x264-W4F%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 12 01 Senator John McCain" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31462\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>157M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="31015" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31015.html">
+																									科尔伯特报告 The Colbert Report 2014 11 20 Jon Stewart											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGl7gbk" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31015\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://zoink.it/torrent/04E431BA10B5B21D2D6CB87E86BD21D4039C1CC4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31015\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ATSDDOQQWWZB2LLMXB7INPJB2QBZYHGE&amp;dn=The.Colbert.Report.2014.11.20.Jon.Stewart.HDTV.x264-CROOKS&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.dem" rel="nofollow" target="_blank" name=\'magnet31015\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31015\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ATSDDOQQWWZB2LLMXB7INPJB2QBZYHGE&amp;dn=The.Colbert.Report.2014.11.20.Jon.Stewart.HDTV.x264-CROOKS&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.dem" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 11 20 Jon Stewart" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31015\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>170M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="30926" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30926.html">
+																									科尔伯特报告 The Colbert Report 2014 11 19 Toni Morrison											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hq5nXqc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30926\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/89381AFB877E028F56042787474E96C756B359D8.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30926\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:89381afb877e028f56042787474e96c756b359d8&amp;dn=The.Colbert.Report.2014.11.19.Toni.Morrison.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" target="_blank" name=\'magnet30926\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30926\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:89381afb877e028f56042787474e96c756b359d8&amp;dn=The.Colbert.Report.2014.11.19.Toni.Morrison.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 11 19 Toni Morrison" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30926\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>165M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="30891" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30891.html">
+																									科尔伯特报告 The Colbert Report 2014 11 18 Eva Longoria											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdCbBmN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30891\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/11EC6F35EBECB938335B7E3C92C69722600124AA.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30891\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:11ec6f35ebecb938335b7e3c92c69722600124aa&amp;dn=The.Colbert.Report.2014.11.18.Eva.Longoria.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11." rel="nofollow" target="_blank" name=\'magnet30891\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30891\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:11ec6f35ebecb938335b7e3c92c69722600124aa&amp;dn=The.Colbert.Report.2014.11.18.Eva.Longoria.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11." rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 11 18 Eva Longoria" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30891\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>162M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="30823" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30823.html">
+																									科尔伯特报告 The Colbert Report 2014 11 13 Jennifer Lawrence											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3iRpKp" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30823\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://zoink.it/torrent/B7F39A387D8ECC7C0718BF7D434AA4F0F4CBB431.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30823\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:W7ZZUOD5R3GHYBYYX56UGSVE6D2MXNBR&amp;dn=The.Colbert.Report.2014.11.13.Jennifer.Lawrence.HDTV.x264-CROOKS&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://op" rel="nofollow" target="_blank" name=\'magnet30823\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30823\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:W7ZZUOD5R3GHYBYYX56UGSVE6D2MXNBR&amp;dn=The.Colbert.Report.2014.11.13.Jennifer.Lawrence.HDTV.x264-CROOKS&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://op" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 11 13 Jennifer Lawrence" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30823\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>170M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="30592" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30592.html">
+																									科尔伯特报告 The Colbert Report 2014 11 13 Jennifer Lawrence											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jG43KLg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30592\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/D56D0C2B78ECF39B3FF7A843CF9D639A2F87F494.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30592\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d56d0c2b78ecf39b3ff7a843cf9d639a2f87f494&amp;dn=The.Colbert.Report.2014.11.13.Jennifer.Lawrence.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%" rel="nofollow" target="_blank" name=\'magnet30592\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30592\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d56d0c2b78ecf39b3ff7a843cf9d639a2f87f494&amp;dn=The.Colbert.Report.2014.11.13.Jennifer.Lawrence.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 11 13 Jennifer Lawrence" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30592\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>157M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="30401" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30401.html">
+																									科尔伯特报告 The Colbert Report 2014 11 10 Andy Cohen											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3oWHYP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30401\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/5DF9D76B27283A219DD4268C4EA38AB1758E8CA8.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30401\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5df9d76b27283a219dd4268c4ea38ab1758e8ca8&amp;dn=The.Colbert.Report.2014.11.10.Andy.Cohen.HDTV.x264-BATV%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" target="_blank" name=\'magnet30401\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30401\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5df9d76b27283a219dd4268c4ea38ab1758e8ca8&amp;dn=The.Colbert.Report.2014.11.10.Andy.Cohen.HDTV.x264-BATV%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 11 10 Andy Cohen" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30401\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>198M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="30182" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30182.html">
+																									科尔伯特报告 The Colbert Report 2014 11 05 Kirsten Gillibrand											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnixpwz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30182\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/0B33679DA06A86C50F565ED0EBFEEFBEB92604DE.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30182\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0b33679da06a86c50f565ed0ebfeefbeb92604de&amp;dn=The.Colbert.Report.2014.11.05.Kirsten.Gillibrand.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F" rel="nofollow" target="_blank" name=\'magnet30182\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30182\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0b33679da06a86c50f565ed0ebfeefbeb92604de&amp;dn=The.Colbert.Report.2014.11.05.Kirsten.Gillibrand.HDTV.x264-aAF%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F" rel="nofollow" name=\'miurl\' filename="科尔伯特报告 The Colbert Report 2014 11 05 Kirsten Gillibrand" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30182\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>148M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-07</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+									<tr bgcolor="#ffffff">
+												<td colspan="8"  height="30" style="padding-top:8px;"><ul class="pagination">  <li class="active"><span>1</span><li><li><a class="num" href="/index.php/meiju/index/engename/The.Colbert.Report/p/2.html">2</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Colbert.Report/p/3.html">3</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Colbert.Report/p/4.html">4</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Colbert.Report/p/5.html">5</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Colbert.Report/p/6.html">6</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Colbert.Report/p/7.html">7</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Colbert.Report/p/8.html">8</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Colbert.Report/p/9.html">9</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Colbert.Report/p/10.html">10</a></li><li><a class="num" href="/index.php/meiju/index/engename/The.Colbert.Report/p/11.html">11</a></li> <li><a class="next" href="/index.php/meiju/index/engename/The.Colbert.Report/p/2.html">>></a></li> <li><a class="end" href="/index.php/meiju/index/engename/The.Colbert.Report/p/19.html">19</a></li></ul></td>
+											</tr>					</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,107,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,107);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,107);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,107);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

@@ -1,0 +1,1151 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 09:22:37 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=dd4971a599a70018e7666b144897ced3a1509528157; expires=Thu, 01-Nov-18 09:22:37 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6dca66f5b2773c-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>纪录片频道 Documentary-纪录片频道下载-纪录片频道全集下载-Documentary下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="纪录片频道,Documentary,纪录片频道下载,纪录片频道全集下载,纪录片频道高清下载,纪录片频道迅雷下载"/>
+	  <meta name="description" content="本站的纪录片14年9月16日后都放在此频道，归纳国家地理频道，历史频道，BBC频道。" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 645;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FDocumentary.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FDocumentary.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 645;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">纪录片频道 Documentary-纪录片频道下载-纪录片频道全集下载-Documentary下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i1.piimg.com/588755/f34dda4d11ba446d.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i1.piimg.com/588755/f34dda4d11ba446d.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周日</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：</span>						
+						<span>最后更新：2017-10-29 11:59</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/645.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">2136</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						本站的纪录片14年9月16日后都放在此频道，归纳国家地理频道，历史频道，BBC频道。                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+																		<td id="seasoninfo" colspan="8"></td>							</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="90962" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90962.html">
+																									碧昂丝 柠檬水 Beyoncé 2016 LEMONADE 720p HDTV Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1skU2qxn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90962\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%BA%AA%E5%BD%95%E7%89%87/Beyonc%C3%A9.2016.LEMONADE.The.Visual.Album.720p.HDTV.450MB.GoenWae.720p-muxed.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90962\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:BNSCXFU3HOK4T5K45XVTOQGGVULF6W3E&amp;dn=Beyonc%C3%A9.2016.LEMONADE.The.Visual.Album.720p.HDTV.450MB.GoenWae.720p-muxed.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fan" rel="nofollow" target="_blank" name=\'magnet90962\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90962\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|Beyonc%C3%A9.2016.LEMONADE.The.Visual.Album.720p.HDTV.450MB.GoenWae.720p-muxed.mp4|825127501|D74945B58812D818E2C13DDA16D5C9FF|h=UP4MR36AVDALNX7OE43VBGXFMNX5RYMO|/" rel="nofollow" target="_blank" name=\'ed2k90962\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'90962\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:BNSCXFU3HOK4T5K45XVTOQGGVULF6W3E&amp;dn=Beyonc%C3%A9.2016.LEMONADE.The.Visual.Album.720p.HDTV.450MB.GoenWae.720p-muxed.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fan" rel="nofollow" name=\'miurl\' filename="碧昂丝 柠檬水 Beyoncé 2016 LEMONADE 720p HDTV Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90962\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>uepd</td>
+										<td>786M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="90755" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90755.html">
+																									只是先出生的我 #2 720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ge9NFkn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90755\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E5%8F%AA%E6%98%AF%E5%85%88%E5%87%BA%E7%94%9F%E7%9A%84%E6%88%91/%E5%8F%AA%E6%98%AF%E5%85%88%E5%87%BA%E7%94%9F%E7%9A%84%E6%88%91%2302.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90755\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7O36WC65DAFV2NZTOW4ISE74V3CGLPF7&amp;dn=%E5%8F%AA%E6%98%AF%E5%85%88%E5%87%BA%E7%94%9F%E7%9A%84%E6%88%91%2302.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&amp" rel="nofollow" target="_blank" name=\'magnet90755\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90755\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%8F%AA%E6%98%AF%E5%85%88%E5%87%BA%E7%94%9F%E7%9A%84%E6%88%91#02.mp4|576753292|08760FE8F7B7ED7E2F30AE11EBA02F7F|h=4I7GSDYDWDYSSFO7U6MWYNZBYSFJB43Z|/" rel="nofollow" target="_blank" name=\'ed2k90755\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'90755\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:7O36WC65DAFV2NZTOW4ISE74V3CGLPF7&amp;dn=%E5%8F%AA%E6%98%AF%E5%85%88%E5%87%BA%E7%94%9F%E7%9A%84%E6%88%91%2302.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&amp" rel="nofollow" name=\'miurl\' filename="只是先出生的我 #2 720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90755\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>fzpz</td>
+										<td>550M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="90573" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90573.html">
+																									印度之旅 Joanna Lumley‘s India 3of3 720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1boT86bP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90573\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%BA%AA%E5%BD%95%E7%89%87/%E5%8D%B0%E5%BA%A6%E4%B9%8B%E6%97%851.Joanna.Lumleys.India.3of3.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90573\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ROGFMLQOP5LO5LIMUUDJOXAA3P3C52CN&amp;dn=%E5%8D%B0%E5%BA%A6%E4%B9%8B%E6%97%851.Joanna.Lumleys.India.3of3.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open" rel="nofollow" target="_blank" name=\'magnet90573\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90573\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%8D%B0%E5%BA%A6%E4%B9%8B%E6%97%851.Joanna.Lumleys.India.3of3.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|572870168|109B5C9EE506D724B41D6F4D88E47822|h=LOQYXPSCLQ4BEF3WNUJ4BTUEUGPD7OUJ|/" rel="nofollow" target="_blank" name=\'ed2k90573\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'90573\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:ROGFMLQOP5LO5LIMUUDJOXAA3P3C52CN&amp;dn=%E5%8D%B0%E5%BA%A6%E4%B9%8B%E6%97%851.Joanna.Lumleys.India.3of3.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open" rel="nofollow" name=\'miurl\' filename="印度之旅 Joanna Lumley‘s India 3of3 720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90573\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>hjw1</td>
+										<td>546M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="90297" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/90297.html">
+																									只是先出生的我 #1 720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dFGnoQX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'90297\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E5%8F%AA%E6%98%AF%E5%85%88%E5%87%BA%E7%94%9F%E7%9A%84%E6%88%91/%E5%8F%AA%E6%98%AF%E5%85%88%E5%87%BA%E7%94%9F%E7%9A%84%E6%88%91%2301.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'90297\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ZT22PH7IB6MPUHR4UQ4CBM4GEFQ6AHYJ&amp;dn=%E5%8F%AA%E6%98%AF%E5%85%88%E5%87%BA%E7%94%9F%E7%9A%84%E6%88%91%2301.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&amp" rel="nofollow" target="_blank" name=\'magnet90297\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'90297\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%8F%AA%E6%98%AF%E5%85%88%E5%87%BA%E7%94%9F%E7%9A%84%E6%88%91#01.mp4|751694934|ACE3BFD5086C9C2249904CB0AE6ACFC8|h=JZN3AHTMEMMC67J4ZKLHB2XKDUIOCDQE|/" rel="nofollow" target="_blank" name=\'ed2k90297\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'90297\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:ZT22PH7IB6MPUHR4UQ4CBM4GEFQ6AHYJ&amp;dn=%E5%8F%AA%E6%98%AF%E5%85%88%E5%87%BA%E7%94%9F%E7%9A%84%E6%88%91%2301.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&amp" rel="nofollow" name=\'miurl\' filename="只是先出生的我 #1 720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'90297\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>conb</td>
+										<td>716M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="89742" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89742.html">
+																									緊急救命＃05 720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gfNAuuZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89742\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%B4%A7%E6%80%A5%E6%95%91%E5%91%BD/%E7%B7%8A%E6%80%A5%E6%95%91%E5%91%BD%EF%BC%83%EF%BC%90%EF%BC%95%20.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89742\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5GQ7674UZDAGFZPY54NKQUUKN7HJAFII&amp;dn=%E7%B7%8A%E6%80%A5%E6%95%91%E5%91%BD%EF%BC%83%EF%BC%90%EF%BC%95%20.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&amp;t" rel="nofollow" target="_blank" name=\'magnet89742\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89742\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%B7%8A%E6%80%A5%E6%95%91%E5%91%BD%EF%BC%83%EF%BC%90%EF%BC%95%20.mp4|1042614926|F28847CE89662E021AAE51AEA4DEA866|h=6VGNLEAPTKJWNXA2WW7KOLICCYQXBTIC|/" rel="nofollow" target="_blank" name=\'ed2k89742\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'89742\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:5GQ7674UZDAGFZPY54NKQUUKN7HJAFII&amp;dn=%E7%B7%8A%E6%80%A5%E6%95%91%E5%91%BD%EF%BC%83%EF%BC%90%EF%BC%95%20.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&amp;t" rel="nofollow" name=\'miurl\' filename="緊急救命＃05 720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89742\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>965b</td>
+										<td>994M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="89418" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89418.html">
+																									印度之旅 Joanna Lumley‘s India 2of3 720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eSpgpMU" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89418\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%BA%AA%E5%BD%95%E7%89%87/%E4%B9%94%E5%AE%89%E5%A8%9C%E7%9A%84%E5%8D%B0%E5%BA%A6%E4%B9%8B%E6%97%852.Joanna.Lumleys.India%202of3.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89418\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:THJ3TRUXQB55IO257BUI2LYZG3TDN6ET&amp;dn=%E4%B9%94%E5%AE%89%E5%A8%9C%E7%9A%84%E5%8D%B0%E5%BA%A6%E4%B9%8B%E6%97%852.Joanna.Lumleys.India%202of3.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounc" rel="nofollow" target="_blank" name=\'magnet89418\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89418\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E4%B9%94%E5%AE%89%E5%A8%9C%E7%9A%84%E5%8D%B0%E5%BA%A6%E4%B9%8B%E6%97%852.Joanna.Lumleys.India%202of3.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|576241346|7B6288A48E2D82A39FA9590E108E2C15|h=LWRZXNH534ZBOASVO344N3G4C3KWVCZH|/" rel="nofollow" target="_blank" name=\'ed2k89418\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'89418\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:THJ3TRUXQB55IO257BUI2LYZG3TDN6ET&amp;dn=%E4%B9%94%E5%AE%89%E5%A8%9C%E7%9A%84%E5%8D%B0%E5%BA%A6%E4%B9%8B%E6%97%852.Joanna.Lumleys.India%202of3.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounc" rel="nofollow" name=\'miurl\' filename="印度之旅 Joanna Lumley‘s India 2of3 720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89418\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>5ahz</td>
+										<td>549M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="89078" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89078.html">
+																									爆笑虫子 Larva 1080p 2017.9 合集 Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mhS9fAw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89078\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%88%86%E7%AC%91%E8%99%AB%E5%AD%90/%E7%88%86%E7%AC%91%E8%99%AB%E5%AD%90.LARVA%20-%20MITE%20-%20Cartoon%20Movie%20-%20Cartoons%20For%20Children%20-%20Larva%20Cartoon%20-%20LARVA%20Official.1080p-Orange%E5%AD" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89078\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:TBRNQBPWJSA6FKWUHLWOB4W75ZEECRGM&amp;dn=%E7%88%86%E7%AC%91%E8%99%AB%E5%AD%90.LARVA%20-%20MITE%20-%20Cartoon%20Movie%20-%20Cartoons%20For%20Children%20-%20Larva%20Cartoon%20-%20LARVA%20Official.1080p-Orange%E5%AD%97%E5%B9%95%E7%BB%84.m" rel="nofollow" target="_blank" name=\'magnet89078\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89078\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%88%86%E7%AC%91%E8%99%AB%E5%AD%90.LARVA%20-%20MITE%20-%20Cartoon%20Movie%20-%20Cartoons%20For%20Children%20-%20Larva%20Cartoon%20-%20LARVA%20Official.1080p-Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|572204736|846436A5F6073FC3D9ADD8F0FE1F2B34|h=B7MJKY5FEIY6B36IPZ7CDODYUACP6AHQ|/" rel="nofollow" target="_blank" name=\'ed2k89078\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'89078\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:TBRNQBPWJSA6FKWUHLWOB4W75ZEECRGM&amp;dn=%E7%88%86%E7%AC%91%E8%99%AB%E5%AD%90.LARVA%20-%20MITE%20-%20Cartoon%20Movie%20-%20Cartoons%20For%20Children%20-%20Larva%20Cartoon%20-%20LARVA%20Official.1080p-Orange%E5%AD%97%E5%B9%95%E7%BB%84.m" rel="nofollow" name=\'miurl\' filename="爆笑虫子 Larva 1080p 2017.9 合集 Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89078\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>jlc1</td>
+										<td>545M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="89018" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/89018.html">
+																									印度之旅 Joanna Lumley‘s India 1of3 720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hsb4GxI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'89018\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%BA%AA%E5%BD%95%E7%89%87/%E5%8D%B0%E5%BA%A6%E4%B9%8B%E6%97%851.Joanna.Lumleys.India.1of3.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'89018\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4SK562J5IC2DQNNQC5PIGON7LAYY5PWJ&amp;dn=%E5%8D%B0%E5%BA%A6%E4%B9%8B%E6%97%851.Joanna.Lumleys.India.1of3.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open" rel="nofollow" target="_blank" name=\'magnet89018\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'89018\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%8D%B0%E5%BA%A6%E4%B9%8B%E6%97%851.Joanna.Lumleys.India.1of3.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|575249378|6D9504EDE8756B466E63A0E0706A1A38|h=LN5PAHFBVYLRU56SCJWXMIFNVI4YJEKM|/" rel="nofollow" target="_blank" name=\'ed2k89018\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'89018\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:4SK562J5IC2DQNNQC5PIGON7LAYY5PWJ&amp;dn=%E5%8D%B0%E5%BA%A6%E4%B9%8B%E6%97%851.Joanna.Lumleys.India.1of3.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open" rel="nofollow" name=\'miurl\' filename="印度之旅 Joanna Lumley‘s India 1of3 720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'89018\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>rz8x</td>
+										<td>548M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-10-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="88544" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88544.html">
+																									环球一星期 7jours sur la planete S01 Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ccwAtg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88544\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%8E%AF%E7%90%83%E4%B8%80%E6%98%9F%E6%9C%9F/%E7%8E%AF%E7%90%83%E4%B8%80%E6%98%9F%E6%9C%9F%20S01%20%E6%B5%81%E6%B5%AA%E5%84%BF%E7%AB%A5%20Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88544\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6PMVWFI3P36HUGFUNKS5BEALDAX5XJCD&amp;dn=%E7%8E%AF%E7%90%83%E4%B8%80%E6%98%9F%E6%9C%9F%20S01%20%E6%B5%81%E6%B5%AA%E5%84%BF%E7%AB%A5%20Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=" rel="nofollow" target="_blank" name=\'magnet88544\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88544\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%8E%AF%E7%90%83%E4%B8%80%E6%98%9F%E6%9C%9F%20S01%20%E6%B5%81%E6%B5%AA%E5%84%BF%E7%AB%A5%20Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|53416177|2D2DD6065B736CBEC69917D75427991B|h=U3WEQMG6YUYG4HCGUSRLUGLSETQSN7YG|/" rel="nofollow" target="_blank" name=\'ed2k88544\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'88544\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:6PMVWFI3P36HUGFUNKS5BEALDAX5XJCD&amp;dn=%E7%8E%AF%E7%90%83%E4%B8%80%E6%98%9F%E6%9C%9F%20S01%20%E6%B5%81%E6%B5%AA%E5%84%BF%E7%AB%A5%20Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=" rel="nofollow" name=\'miurl\' filename="环球一星期 7jours sur la planete S01 Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88544\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>u47d</td>
+										<td>50.9M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="88543" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88543.html">
+																									环球一星期 7jours sur la planete S02 Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ccwAtg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88543\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%8E%AF%E7%90%83%E4%B8%80%E6%98%9F%E6%9C%9F/%E7%8E%AF%E7%90%83%E4%B8%80%E6%98%9F%E6%9C%9F%20S02%20%E6%9C%AA%E6%9D%A5%E5%86%9C%E5%9C%BA%20Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88543\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:CQ4OJFH7EXHGK7GIG63RFKXXKQ7JZRIG&amp;dn=%E7%8E%AF%E7%90%83%E4%B8%80%E6%98%9F%E6%9C%9F%20S02%20%E6%9C%AA%E6%9D%A5%E5%86%9C%E5%9C%BA%20Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=" rel="nofollow" target="_blank" name=\'magnet88543\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88543\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%8E%AF%E7%90%83%E4%B8%80%E6%98%9F%E6%9C%9F%20S02%20%E6%9C%AA%E6%9D%A5%E5%86%9C%E5%9C%BA%20Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|99541268|F4AF83881474831850FFDC01919D859E|h=QD2SKNX36PMCQWFAXJIQPIDX6F2PMR7U|/" rel="nofollow" target="_blank" name=\'ed2k88543\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'88543\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:CQ4OJFH7EXHGK7GIG63RFKXXKQ7JZRIG&amp;dn=%E7%8E%AF%E7%90%83%E4%B8%80%E6%98%9F%E6%9C%9F%20S02%20%E6%9C%AA%E6%9D%A5%E5%86%9C%E5%9C%BA%20Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&amp;tr=" rel="nofollow" name=\'miurl\' filename="环球一星期 7jours sur la planete S02 Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88543\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>u47d</td>
+										<td>94.9M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="88472" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88472.html">
+																									迈克尔摩尔深入川普之地 Michael Moore in TrumpLand 2016 720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hsb4sHe" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88472\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%BA%AA%E5%BD%95%E7%89%87/%E8%BF%88%E5%85%8B%E5%B0%94%E6%91%A9%E5%B0%94%E6%B7%B1%E5%85%A5%E5%B7%9D%E6%99%AE%E4%B9%8B%E5%9C%B0.Michael.Moore.in.TrumpLand.2016.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torre" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88472\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:BLLSG6D4WQEF2XS4KJCM7VKEMHAYVQMJ&amp;dn=%E8%BF%88%E5%85%8B%E5%B0%94%E6%91%A9%E5%B0%94%E6%B7%B1%E5%85%A5%E5%B7%9D%E6%99%AE%E4%B9%8B%E5%9C%B0.Michael.Moore.in.TrumpLand.2016.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2F" rel="nofollow" target="_blank" name=\'magnet88472\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88472\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E8%BF%88%E5%85%8B%E5%B0%94%E6%91%A9%E5%B0%94%E6%B7%B1%E5%85%A5%E5%B7%9D%E6%99%AE%E4%B9%8B%E5%9C%B0.Michael.Moore.in.TrumpLand.2016.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|1128217223|023D165BFABBEA8D7A26346FD6F4AC72|h=2METRIAJ6BMA3P7VFE5EGM2LCW3Q5U5Q|/" rel="nofollow" target="_blank" name=\'ed2k88472\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'88472\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:BLLSG6D4WQEF2XS4KJCM7VKEMHAYVQMJ&amp;dn=%E8%BF%88%E5%85%8B%E5%B0%94%E6%91%A9%E5%B0%94%E6%B7%B1%E5%85%A5%E5%B7%9D%E6%99%AE%E4%B9%8B%E5%9C%B0.Michael.Moore.in.TrumpLand.2016.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4&amp;tr=udp%3A%2F%2F" rel="nofollow" name=\'miurl\' filename="迈克尔摩尔深入川普之地 Michael Moore in TrumpLand 2016 720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88472\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>igds</td>
+										<td>1.05G</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="88355" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88355.html">
+																									坚忍号：沙克尔顿的传奇南极远征 The Endurance: Shackleton\'s Legendary Antarc...											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eRC5QW6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88355\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e4a7962c3327b4c7c9045e0800e76ec1c67ffb97&amp;tr=udp://9.rarbg.to:2710/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=http://tr.cili001.com:8070/announce&amp;tr=http://tracker.trackerfix.com:80/announce&amp;tr=udp://open.demonii" rel="nofollow" target="_blank" name=\'magnet88355\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88355\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E5%9D%9A%E5%BF%8D%E5%8F%B7%EF%BC%9A%E6%B2%99%E5%85%8B%E5%B0%94%E9%A1%BF%E7%9A%84%E4%BC%A0%E5%A5%87%E5%8D%97%E6%9E%81%E8%BF%9C%E5%BE%81.The.Endurance.Shackletons.Legendary.Antarctic.Expedition.2000.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.DVDrip-LOT.mp4|583485405|8a92126b6038bbcda556a69914658753|h=cxmzuyyzpufnck3xkyop4tli45y3g3kc|/" rel="nofollow" target="_blank" name=\'ed2k88355\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'88355\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:e4a7962c3327b4c7c9045e0800e76ec1c67ffb97&amp;tr=udp://9.rarbg.to:2710/announce&amp;tr=udp://9.rarbg.me:2710/announce&amp;tr=http://tr.cili001.com:8070/announce&amp;tr=http://tracker.trackerfix.com:80/announce&amp;tr=udp://open.demonii" rel="nofollow" name=\'miurl\' filename="坚忍号：沙克尔顿的传奇南极远征 The Endurance: Shackleton\'s Legendary Antarc..." target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88355\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>556M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87531" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87531.html">
+																									BBC 关于未来你必须知道的十件事 Things You Need to Know About the Future 7...											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1sl19117" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87531\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/BBC.Horizon.2017.10.%E5%85%B3%E4%BA%8E%E6%9C%AA%E6%9D%A5%E4%BD%A0%E5%BF%85%E9%A1%BB%E7%9F%A5%E9%81%93%E7%9A%84%E5%8D%81%E4%BB%B6%E4%BA%8B.Things.You.Need.to.Know.About.the.Future.720p.Orang" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87531\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ED55AC061A141EF3738294F574E44CBB7A17E184&amp;dn=BBC.Horizon.2017.10.%e5%85%b3%e4%ba%8e%e6%9c%aa%e6%9d%a5%e4%bd%a0%e5%bf%85%e9%a1%bb%e7%9f%a5%e9%81%93%e7%9a%84%e5%8d%81%e4%bb%b6%e4%ba%8b.Things.You.Need.to.Know.About.the.Future.720p.Or" rel="nofollow" target="_blank" name=\'magnet87531\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87531\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|BBC.Horizon.2017.10.%E5%85%B3%E4%BA%8E%E6%9C%AA%E6%9D%A5%E4%BD%A0%E5%BF%85%E9%A1%BB%E7%9F%A5%E9%81%93%E7%9A%84%E5%8D%81%E4%BB%B6%E4%BA%8B.Things.You.Need.to.Know.About.the.Future.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|733363550|6559ABF7C923494940D613CE4A6E7F93|h=YF44PNYTSBQPCLIYKCMP7X4NJEAYJD6I|/" rel="nofollow" target="_blank" name=\'ed2k87531\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'87531\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:ED55AC061A141EF3738294F574E44CBB7A17E184&amp;dn=BBC.Horizon.2017.10.%e5%85%b3%e4%ba%8e%e6%9c%aa%e6%9d%a5%e4%bd%a0%e5%bf%85%e9%a1%bb%e7%9f%a5%e9%81%93%e7%9a%84%e5%8d%81%e4%bb%b6%e4%ba%8b.Things.You.Need.to.Know.About.the.Future.720p.Or" rel="nofollow" name=\'miurl\' filename="BBC 关于未来你必须知道的十件事 Things You Need to Know About the Future 7..." target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87531\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>699M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="87528" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87528.html">
+																									泰国：地球上的赤道天堂 Thailand: Earth\'s Tropical Paradise 3of3 720p Or...											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c1KGAoK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87528\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/BBC.Thailand.Earths.Tropical.Paradise.3of3.Orange%E5%AD%97%E5%B9%95%E7%BB%84.720p.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87528\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:218AC25F488B77BBE185E58644B0C93977AD5B0D&amp;dn=BBC.Thailand.Earths.Tropical.Paradise.3of3.Orange%e5%ad%97%e5%b9%95%e7%bb%84.720p.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.publicbt.co" rel="nofollow" target="_blank" name=\'magnet87528\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87528\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|BBC.Thailand.Earths.Tropical.Paradise.3of3.Orange%E5%AD%97%E5%B9%95%E7%BB%84.720p.mp4|1499172368|85E41300DB687A35BB5EF14F8295430A|h=K2WKG7MCXDMFGIJU367LU5XB6XH7BVNN|/" rel="nofollow" target="_blank" name=\'ed2k87528\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'87528\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:218AC25F488B77BBE185E58644B0C93977AD5B0D&amp;dn=BBC.Thailand.Earths.Tropical.Paradise.3of3.Orange%e5%ad%97%e5%b9%95%e7%bb%84.720p.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.publicbt.co" rel="nofollow" name=\'miurl\' filename="泰国：地球上的赤道天堂 Thailand: Earth\'s Tropical Paradise 3of3 720p Or..." target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87528\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.4G</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87317" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87317.html">
+																									抽象: 设计的艺术 Abstract: The Art of Design S01E08 1080p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVIa3CN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87317\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/%E6%8A%BD%E8%B1%A1%EF%BC%9A%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF.Abstract.The.Art.of.Design.S01E08.1080p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87317\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:B395523B999F3D4AD76D65ED77D422381BEFC4FA&amp;dn=%e6%8a%bd%e8%b1%a1%ef%bc%9a%e8%ae%be%e8%ae%a1%e7%9a%84%e8%89%ba%e6%9c%af.Abstract.The.Art.of.Design.S01E08.1080p.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbitt" rel="nofollow" target="_blank" name=\'magnet87317\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87317\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%8A%BD%E8%B1%A1%EF%BC%9A%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF.Abstract.The.Art.of.Design.S01E08.1080p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|811453119|331AEB4FCF4E8E02A70D152F73D36441|h=UB32WRPQNIYLL2NZ4JXJMBECO7MWVV4Y|/" rel="nofollow" target="_blank" name=\'ed2k87317\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'87317\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:B395523B999F3D4AD76D65ED77D422381BEFC4FA&amp;dn=%e6%8a%bd%e8%b1%a1%ef%bc%9a%e8%ae%be%e8%ae%a1%e7%9a%84%e8%89%ba%e6%9c%af.Abstract.The.Art.of.Design.S01E08.1080p.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbitt" rel="nofollow" name=\'miurl\' filename="抽象: 设计的艺术 Abstract: The Art of Design S01E08 1080p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87317\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>773M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="87316" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87316.html">
+																									抽象: 设计的艺术 Abstract: The Art of Design S01E08 720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kVIa3CN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87316\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/%E6%8A%BD%E8%B1%A1%EF%BC%9A%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF.Abstract.The.Art.of.Design.S01E08.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'87316\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:F30B043D03ECD07284F309AA000496B58027F0A2&amp;dn=%e6%8a%bd%e8%b1%a1%ef%bc%9a%e8%ae%be%e8%ae%a1%e7%9a%84%e8%89%ba%e6%9c%af.Abstract.The.Art.of.Design.S01E08.720p.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbitto" rel="nofollow" target="_blank" name=\'magnet87316\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87316\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%8A%BD%E8%B1%A1%EF%BC%9A%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF.Abstract.The.Art.of.Design.S01E08.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|405365265|5E4DA7840D257EF5FCB00CE05CFB42AE|h=JNS7IBHRY5LHNASKCFHF36XYAHC5FYXO|/" rel="nofollow" target="_blank" name=\'ed2k87316\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'87316\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:F30B043D03ECD07284F309AA000496B58027F0A2&amp;dn=%e6%8a%bd%e8%b1%a1%ef%bc%9a%e8%ae%be%e8%ae%a1%e7%9a%84%e8%89%ba%e6%9c%af.Abstract.The.Art.of.Design.S01E08.720p.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbitto" rel="nofollow" name=\'miurl\' filename="抽象: 设计的艺术 Abstract: The Art of Design S01E08 720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87316\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>386M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86642" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86642.html">
+																									抽象: 设计的艺术 Abstract: The Art of Design S01E07 1080p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i46YmyD" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86642\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/%E6%8A%BD%E8%B1%A1%EF%BC%9A%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF.Abstract.The.Art.of.Design.S01E07.1080p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86642\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1204F4509AA52B9026B4AF857A0D6B301527C399&amp;dn=%e6%8a%bd%e8%b1%a1%ef%bc%9a%e8%ae%be%e8%ae%a1%e7%9a%84%e8%89%ba%e6%9c%af.Abstract.The.Art.of.Design.S01E07.1080p.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com" rel="nofollow" target="_blank" name=\'magnet86642\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86642\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%8A%BD%E8%B1%A1%EF%BC%9A%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF.Abstract.The.Art.of.Design.S01E07.1080p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|914095388|03C970F3312FD6B79FE0237E1371EC38|h=MJF2LR2RJHHXPJKBH4SZ37I4ZVOODRQM|/" rel="nofollow" target="_blank" name=\'ed2k86642\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'86642\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:1204F4509AA52B9026B4AF857A0D6B301527C399&amp;dn=%e6%8a%bd%e8%b1%a1%ef%bc%9a%e8%ae%be%e8%ae%a1%e7%9a%84%e8%89%ba%e6%9c%af.Abstract.The.Art.of.Design.S01E07.1080p.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com" rel="nofollow" name=\'miurl\' filename="抽象: 设计的艺术 Abstract: The Art of Design S01E07 1080p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86642\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>872M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86641" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86641.html">
+																									抽象: 设计的艺术 Abstract: The Art of Design S01E07 720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pKIrvsf" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86641\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/%E6%8A%BD%E8%B1%A1%EF%BC%9A%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF.Abstract.The.Art.of.Design.S01E07.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86641\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:C3AA937B9461D382C9EB71896B75EC418333C879&amp;dn=%e6%8a%bd%e8%b1%a1%ef%bc%9a%e8%ae%be%e8%ae%a1%e7%9a%84%e8%89%ba%e6%9c%af.Abstract.The.Art.of.Design.S01E07.720p.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%" rel="nofollow" target="_blank" name=\'magnet86641\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86641\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%8A%BD%E8%B1%A1%EF%BC%9A%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF.Abstract.The.Art.of.Design.S01E07.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|467661679|77544FDB56402F03357D627BF17CCBE4|h=RFK3VAKI74DTQCTV3MB2UIYO2M24EMKJ|/" rel="nofollow" target="_blank" name=\'ed2k86641\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'86641\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:C3AA937B9461D382C9EB71896B75EC418333C879&amp;dn=%e6%8a%bd%e8%b1%a1%ef%bc%9a%e8%ae%be%e8%ae%a1%e7%9a%84%e8%89%ba%e6%9c%af.Abstract.The.Art.of.Design.S01E07.720p.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%" rel="nofollow" name=\'miurl\' filename="抽象: 设计的艺术 Abstract: The Art of Design S01E07 720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86641\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>446M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="85946" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85946.html">
+																									抽象: 设计的艺术 Abstract: The Art of Design S01E06 720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c1T2pQo" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85946\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E6%8A%BD%E8%B1%A1%EF%BC%9A%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF.Abstract.The.Art.of.Design.S01E06.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85946\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:718D6341C493D41FF5DF498695258107362B379B&amp;dn=%e6%8a%bd%e8%b1%a1%ef%bc%9a%e8%ae%be%e8%ae%a1%e7%9a%84%e8%89%ba%e6%9c%af.Abstract.The.Art.of.Design.S01E06.720p.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%" rel="nofollow" target="_blank" name=\'magnet85946\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85946\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%8A%BD%E8%B1%A1%EF%BC%9A%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF.Abstract.The.Art.of.Design.S01E06.720p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|483163300|CFD3B7DE14AC82011175D0D3E1B01D27|h=PCQB26VG3CKPCHJKLDGM2QP4SFT3YR22|/" rel="nofollow" target="_blank" name=\'ed2k85946\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'85946\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:718D6341C493D41FF5DF498695258107362B379B&amp;dn=%e6%8a%bd%e8%b1%a1%ef%bc%9a%e8%ae%be%e8%ae%a1%e7%9a%84%e8%89%ba%e6%9c%af.Abstract.The.Art.of.Design.S01E06.720p.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%" rel="nofollow" name=\'miurl\' filename="抽象: 设计的艺术 Abstract: The Art of Design S01E06 720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85946\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>461M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="85945" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/85945.html">
+																									抽象: 设计的艺术 Abstract: The Art of Design S01E06 1080p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1miA5xlm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'85945\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E6%8A%BD%E8%B1%A1%EF%BC%9A%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF.Abstract.The.Art.of.Design.S01E06.1080p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'85945\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ED4E1A87EA43357D6C851D1C2E00A3736E12099F&amp;dn=%e6%8a%bd%e8%b1%a1%ef%bc%9a%e8%ae%be%e8%ae%a1%e7%9a%84%e8%89%ba%e6%9c%af.Abstract.The.Art.of.Design.S01E06.1080p.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com" rel="nofollow" target="_blank" name=\'magnet85945\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'85945\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%8A%BD%E8%B1%A1%EF%BC%9A%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%89%BA%E6%9C%AF.Abstract.The.Art.of.Design.S01E06.1080p.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|912592432|A3D5F69B63436FD6922A2B20991CF203|h=ALD7DZG6XCYGTC7ER7HLKC4P22EES7X3|/" rel="nofollow" target="_blank" name=\'ed2k85945\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'85945\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:ED4E1A87EA43357D6C851D1C2E00A3736E12099F&amp;dn=%e6%8a%bd%e8%b1%a1%ef%bc%9a%e8%ae%be%e8%ae%a1%e7%9a%84%e8%89%ba%e6%9c%af.Abstract.The.Art.of.Design.S01E06.1080p.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com" rel="nofollow" name=\'miurl\' filename="抽象: 设计的艺术 Abstract: The Art of Design S01E06 1080p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'85945\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>870M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-10</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+									<tr bgcolor="#ffffff">
+												<td colspan="8"  height="30" style="padding-top:8px;"><ul class="pagination">  <li class="active"><span>1</span><li><li><a class="num" href="/index.php/meiju/index/engename/Documentary/p/2.html">2</a></li><li><a class="num" href="/index.php/meiju/index/engename/Documentary/p/3.html">3</a></li><li><a class="num" href="/index.php/meiju/index/engename/Documentary/p/4.html">4</a></li><li><a class="num" href="/index.php/meiju/index/engename/Documentary/p/5.html">5</a></li><li><a class="num" href="/index.php/meiju/index/engename/Documentary/p/6.html">6</a></li><li><a class="num" href="/index.php/meiju/index/engename/Documentary/p/7.html">7</a></li> <li><a class="next" href="/index.php/meiju/index/engename/Documentary/p/2.html">>></a></li> </ul></td>
+											</tr>					</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=746385&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(746385,645,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,645);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,645);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,645);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

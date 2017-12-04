@@ -1,0 +1,1059 @@
+'HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2017 02:55:56 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d271717a9f17576dc4c31fe71265ce3961510109756; expires=Thu, 08-Nov-18 02:55:56 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3ba5419990617790-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>平地风云 In Plain Sight-平地风云下载-平地风云全集下载-In PlainSight下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="平地风云,In PlainSight,平地风云下载,平地风云全集下载,平地风云高清下载,平地风云迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;除了FBI，还有什么警察也是不能随便暴露身份的？新一辑美剧《InPlainSight》（暂译“平地风云”）的题材选择了比较冷门的“保护证人组”美国法警的故事，在以往的电视电影里，这是一个“很没用”总是败事有余的小组，不是经常暴露自己的地点就是被罪犯轻松就干掉，现在终于有一部职业剧为他们打翻身仗了。剧中，法警身兼保镖与保姆双职，不仅要保护证人" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 101;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FIn%2520PlainSight.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FIn%2520PlainSight.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 101;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">平地风云 In Plain Sight-平地风云下载-平地风云全集下载-In PlainSight下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/26fb2c400b47c14c.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/26fb2c400b47c14c.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周六</span>
+						<span>状态：剧终</span>
+						<span class="greybg">分类：悬疑类</span>						
+						<span>最后更新：2012-05-05 18:29</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/101.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">3</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>
+			
+			除了FBI，还有什么警察也是不能随便暴露身份的？新一辑美剧《In Plain Sight》（暂译“平地风云”）的题材选择了比较冷门的“保护证人组”美国法警的故事，在以往的电视电影里，这是一个“很没用”总是败事有余的小组，不是经常暴露自己的地点就是被罪犯轻松就干掉，现在终于有一部职业剧为他们打翻身仗了。剧中，法警身兼保镖与保姆双职，不仅要保护证人的人身安全，而且污点证人就是上帝，不管提出什么无理条件，比如要求免费隆胸、包二奶，都要一一满足，只要他们答应指证罪犯，由此引出不少啼笑皆非的搞笑情节。　　USA电视台关于证人保护小组的犯罪题材新剧《In Plain Sight》6月1日(星期日)首播就赢得了开门红，收视率达450万。这是USA电视台继《4400超能人》之后收视率最高的电视剧。去年夏天该电视台的《Burn Notice》首播收视率达到400万，而去年十月首播NBC《法律与秩序：犯罪倾向》平均收视率为380万。《In Plain Sight》由玛丽?迈克考麦克(Mary McCormack)领衔，她在片中饰演一位在美国新墨西哥州的大城市阿尔伯克基保护证人的美国司法执行官。　　USA NETWORK送走了”4400超能人”，关闭了”死亡地带”，迎来了一位天不怕、地不怕的美女警探－－6月USA将播出最新的原创电视剧《就在眼前》（In Plain Sight）。　　该剧由Mary McCormack、Lesley Ann Warren和Frederick Weller主演，故事将聚焦美国司法界常见且极其重要的联邦证人保护计划。该剧基本在新墨西哥州的Albuquerque城拍摄（终于跳离了逢罪案剧则”纽约”、”洛杉矶”、”旧金山”和”西雅图”的老传统……），首集为两小时连播，一共13集。　　女主角　Mary Shannon　　强硬、性感、聪慧的Mary Shannon (Mary McCormack扮演) 是一名联邦警官，隶属于高度机密的联邦证人保护计划行动组 (WITSEC) ，负责转移、安置、保护重要的联邦证人。这些证人有的是投案自首的职业罪犯，更多的是无辜平民，因为意外或者巧合而目睹了犯罪发生的过程。坏人不惜一切代价要取他们的性命，Mary的任务就是阻止这种悲剧的发生。然而在工作焦头烂额的同时，为了不走漏消息，她还必须对家人和朋友严格保密。一旦有人知道了她的身份，和她相关的所有人－－甚至包括她自己－－都将有生命危险。　　不过，这份多事的工作还是时常影响Mary的私人生活。为了帮助自己所 ”负责” 的联邦证人，她必须和他们走得很近，所扮演的身份也越来越多－－母亲，心理医生、好朋友、婚礼伴娘、牧师、犹太学者、婚姻顾问、招聘代理人、保镖……偶尔还会客串一下命案侦探。　　对Mary那位神经兮兮的母亲Jinx和到处惹是生非的妹妹Brandi来说，Mary的工作是那么悠闲－－她每天只要和长相英俊的搭挡Marshall到法院里 ”闲逛” 一趟，给法官先生抛个媚眼，领取一张搜查令，然后照本子办事就行了。而对Mary来说，不能将自己的心里话说给别人听，别提有多难受了！可说到底，她宁愿一切保持现状－－她可不希望有人来担心她的工作，不管是上班时间还是下班时间！　　Mary Shannon这个角色是USA电视网最擅长塑造的一类女性形象：勇猛、坚强、嘴硬心软、很能适应环境。			
+			
+			
+			
+			
+			</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="5">
+																			第5季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="7940" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/7940.html">
+																									平地风云 In Plain Sight S05E08 720p 全剧终 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/826D1B53EF747DB0C999E988BC92B8D284B3BDBF.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'7940\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:826D1B53EF747DB0C999E988BC92B8D284B3BDBF&amp;dn=In.Plain.Sight.S05E08.720p.HDTV.x264-2HD%20%5bPublicHD%5d&amp;tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" target="_blank" name=\'magnet7940\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'7940\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:826D1B53EF747DB0C999E988BC92B8D284B3BDBF&amp;dn=In.Plain.Sight.S05E08.720p.HDTV.x264-2HD%20%5bPublicHD%5d&amp;tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E08 720p 全剧终 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'7940\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>960M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-05-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="7939" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/7939.html">
+																									平地风云 In Plain Sight S05E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/528EF9B9C4B1E828A409062AFD1A54D78E691FA7.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'7939\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:KKHPTOOEWHUCRJAJAYVP2GSU26HGSH5H&amp;dn=In.Plain.Sight.S05E08.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet7939\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'7939\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:KKHPTOOEWHUCRJAJAYVP2GSU26HGSH5H&amp;dn=In.Plain.Sight.S05E08.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'7939\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>324M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-05-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="7682" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/7682.html">
+																									平地风云 In Plain Sight S05E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>847M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-04-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="7681" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/7681.html">
+																									平地风云 In Plain Sight S05E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/4C34BD75FA7EA5F9B89866F3BEA0D96C23E68DBA.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'7681\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:JQ2L25P2P2S7TOEYM3Z35IGZNQR6NDN2&amp;dn=In.Plain.Sight.S05E07.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet7681\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'7681\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:JQ2L25P2P2S7TOEYM3Z35IGZNQR6NDN2&amp;dn=In.Plain.Sight.S05E07.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'7681\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>291M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-04-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="7476" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/7476.html">
+																									平地风云 In Plain Sight S05E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/EDFE98538B21994AF177BC52C686EB78351EE0B5.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'7476\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:EDFE98538B21994AF177BC52C686EB78351EE0B5&amp;dn=%5bttmeiju.com%5dIn.Plain.Sight.S05E06.720p.HDTV.x264-IMMERSE&amp;tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" target="_blank" name=\'magnet7476\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'7476\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:EDFE98538B21994AF177BC52C686EB78351EE0B5&amp;dn=%5bttmeiju.com%5dIn.Plain.Sight.S05E06.720p.HDTV.x264-IMMERSE&amp;tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'7476\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-04-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="7475" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/7475.html">
+																									平地风云 In Plain Sight S05E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/6C7242EF932C73ACD3D6872EC8E6983197CEC709.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'7475\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:NRZEF34TFRZ2ZU6WQ4XMRZUYGGL45RYJ&amp;dn=In.Plain.Sight.S05E06.HDTV.x264-ASAP&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet7475\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'7475\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:NRZEF34TFRZ2ZU6WQ4XMRZUYGGL45RYJ&amp;dn=In.Plain.Sight.S05E06.HDTV.x264-ASAP&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'7475\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>328M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-04-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="7244" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/7244.html">
+																									平地风云 In Plain Sight S05E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/148E85F0D2CD7A190021444C169FFDD568BB2B25.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'7244\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:148E85F0D2CD7A190021444C169FFDD568BB2B25&amp;dn=%5b%20www.Speed.Cd%20%5d%20-%20In.Plain.Sight.S05E05.720p.HDTV.x264-IMMERSE&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" target="_blank" name=\'magnet7244\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'7244\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:148E85F0D2CD7A190021444C169FFDD568BB2B25&amp;dn=%5b%20www.Speed.Cd%20%5d%20-%20In.Plain.Sight.S05E05.720p.HDTV.x264-IMMERSE&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'7244\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>978M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-04-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="7243" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/7243.html">
+																									平地风云 In Plain Sight S05E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/ECE5958508AB586A0BE6EFFA9876782AEC2235D3.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'7243\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5TSZLBIIVNMGUC7G575JQ5TYFLWCENOT&amp;dn=In.Plain.Sight.S05E05.HDTV.x264-ASAP&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet7243\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'7243\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5TSZLBIIVNMGUC7G575JQ5TYFLWCENOT&amp;dn=In.Plain.Sight.S05E05.HDTV.x264-ASAP&amp;tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'7243\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>315M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-04-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="6995" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/6995.html">
+																									平地风云 In Plain Sight S05E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/6710118135D7076864DA94F21E977065F10F09CF.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'6995\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6710118135D7076864DA94F21E977065F10F09CF&amp;dn=%5b%20www.Speed.Cd%20%5d%20-%20In.Plain.Sight.S05E04.720p.HDTV.x264-IMMERSE&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" target="_blank" name=\'magnet6995\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'6995\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6710118135D7076864DA94F21E977065F10F09CF&amp;dn=%5b%20www.Speed.Cd%20%5d%20-%20In.Plain.Sight.S05E04.720p.HDTV.x264-IMMERSE&amp;tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'6995\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-04-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="6994" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/6994.html">
+																									平地风云 In Plain Sight S05E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/EFCC5F8D9B710BD91C26CC983BC19EB53FC1C357.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'6994\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9E73D067959863197B6A5B685F0C8370A83E43F1&amp;dn=Grimm.1x16.(HDTV-x264-LOL)&amp;tr=http://tracker.ccc.de/announce&amp;tr=udp://tracker.ccc.de:80/announce&amp;tr=http://tracker.publicbt.com:80/announce&amp;tr=http://exodus.desync.com/an" rel="nofollow" target="_blank" name=\'magnet6994\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'6994\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9E73D067959863197B6A5B685F0C8370A83E43F1&amp;dn=Grimm.1x16.(HDTV-x264-LOL)&amp;tr=http://tracker.ccc.de/announce&amp;tr=udp://tracker.ccc.de:80/announce&amp;tr=http://tracker.publicbt.com:80/announce&amp;tr=http://exodus.desync.com/an" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'6994\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>347M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-04-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="6775" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/6775.html">
+																									平地风云 In Plain Sight S05E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/CA64B489AA1703C3E3F1F09E590D50BB6D120939.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'6775\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:CA64B489AA1703C3E3F1F09E590D50BB6D120939&dn=%5b%20www.Speed.Cd%20%5d%20-%20In.Plain.Sight.S05E03.720p.HDTV.x264-IMMERSE&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" target="_blank" name=\'magnet6775\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'6775\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:CA64B489AA1703C3E3F1F09E590D50BB6D120939&dn=%5b%20www.Speed.Cd%20%5d%20-%20In.Plain.Sight.S05E03.720p.HDTV.x264-IMMERSE&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'6775\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-03-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="6774" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/6774.html">
+																									平地风云 In Plain Sight S05E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/0DA555B8B3751331987335091E4AD7C5725DCA46.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'6774\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:BWSVLOFTOUJTDGDTGUER4SWXYVZF3SSG&dn=In.Plain.Sight.S05E03.HDTV.x264-ASAP&tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet6774\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'6774\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:BWSVLOFTOUJTDGDTGUER4SWXYVZF3SSG&dn=In.Plain.Sight.S05E03.HDTV.x264-ASAP&tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'6774\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>346M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-03-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="6550" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/6550.html">
+																									平地风云 In Plain Sight S05E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/C0EAEE1AE7F0F49C17A222F3D168BC495A02B01F.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'6550\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:C0EAEE1AE7F0F49C17A222F3D168BC495A02B01F&dn=%5b%20www.Speed.Cd%20%5d%20-%20In.Plain.Sight.S05E02.720p.HDTV.x264-IMMERSE&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" target="_blank" name=\'magnet6550\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'6550\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:C0EAEE1AE7F0F49C17A222F3D168BC495A02B01F&dn=%5b%20www.Speed.Cd%20%5d%20-%20In.Plain.Sight.S05E02.720p.HDTV.x264-IMMERSE&tr=http%3a//tracker.thepiratebay.org/announce" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'6550\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-03-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="6549" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/6549.html">
+																									平地风云 In Plain Sight S05E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/FA54D59696E61AC83C2DA588584D12AD6E075CA4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'6549\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:FA54D59696E61AC83C2DA588584D12AD6E075CA4&dn=In.Plain.Sight.S05E02.Four.Marshalls.and.a.Baby.HDTV.XviD-FQM.avi&tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" target="_blank" name=\'magnet6549\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'6549\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:FA54D59696E61AC83C2DA588584D12AD6E075CA4&dn=In.Plain.Sight.S05E02.Four.Marshalls.and.a.Baby.HDTV.XviD-FQM.avi&tr=udp%3a//tracker.openbittorrent.com%3a80" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'6549\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>350M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-03-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="6322" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/6322.html">
+																									平地风云 In Plain Sight S05E01 PROPER 720p 修正版 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>924M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-03-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="6321" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/6321.html">
+																									平地风云 In Plain Sight S05E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/AF5F0D8DB63A54863E04632CFE6867CF15260FDE.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'6321\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:V5PQ3DNWHJKIMPQEMMWP42DHZ4KSMD66&dn=In.Plain.Sight.S05E01.HDTV.x264-ASAP&tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" target="_blank" name=\'magnet6321\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'6321\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:V5PQ3DNWHJKIMPQEMMWP42DHZ4KSMD66&dn=In.Plain.Sight.S05E01.HDTV.x264-ASAP&tr=udp://tracker.openbittorrent.com:80/" rel="nofollow" name=\'miurl\' filename="平地风云 In Plain Sight S05E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'6321\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>314M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-03-17</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=310905&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(310905,101,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,101);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,101);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,101);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

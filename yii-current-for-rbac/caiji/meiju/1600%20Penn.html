@@ -1,0 +1,1606 @@
+'HTTP/1.1 200 OK
+Date: Wed, 08 Nov 2017 03:23:27 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=da468208291d00ac06880e8f4d332077c1510111407; expires=Thu, 08-Nov-18 03:23:27 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3ba569e6430278e0-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>总统一家 1600 Penn-总统一家下载-总统一家全集下载-1600 Penn下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="总统一家,1600 Penn,总统一家下载,总统一家全集下载,总统一家高清下载,总统一家迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;&amp;nbsp;&amp;nbsp;Gilchrist一家和普通的美国家庭一样，也要面对日常琐事的烦恼。例如：已经长大成人的孩子被迫搬回家里；还没成年的孩子比他们的老师还要聪明；一个继母（JennaElfman）拼命想要赢得四个继子继女的信任和尊重。这个家庭中有爱，有幽默，也有一点点疯狂。总而言之，和别人没什么不同。除了一件事……他们住" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 465;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2F1600%2520Penn.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2F1600%2520Penn.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 465;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">总统一家 1600 Penn-总统一家下载-总统一家全集下载-1600 Penn下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/8aa19163a4740b7f.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/8aa19163a4740b7f.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周五</span>
+						<span>状态：被砍</span>
+						<span class="greybg">分类：喜剧类</span>						
+						<span>最后更新：2013-03-31 12:24</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/465.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">3</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>
+			
+			
+			
+			
+			&nbsp; &nbsp; Gilchrist一家和普通的美国家庭一样，也要面对日常琐事的烦恼。例如：已经长大成人的孩子被迫搬回家里；还没成年的孩子比他们的老师还要聪明；一个继母（Jenna Elfman）拼命想要赢得四个继子继女的信任和尊重。这个家庭中有爱，有幽默，也有一点点疯狂。总而言之，和别人没什么不同。除了一件事……他们住在一栋十分特别的房子里，整个地球上仅此一家——白宫！&nbsp; &nbsp; 无论是招待外国权贵、夜里偷偷溜出去玩耍、应付情窦初开的恋情，还是「灭火」——既有象征意义的，也有事实上的——Gilchrist家总是忙得手脚不停。总统的长子Skip（Josh Gad）既是一个让白宫管理层头疼的「负担」，但同时也是维系所有家庭成员感情的唯一「纽带」。总统Dale本人（Bill Pullman）很清楚管理国家并非易事，但更清楚唯一比管理国家更艰难的事情是管理一个家庭。他曾在军队中服役，所以打算用军人的强硬作风来管理家庭，但这一招不一定管用！第一夫人Emily来自工薪阶层，对平民百姓的生活颇为了解。她不是总统的原配夫人，因此她渴望赢得四个继子继女的信任和尊重。Martha MacIsaac扮演总统的长女Becca，追求完美，成就非凡，曾帮助日理万机的父亲照顾弟妹们长大。Amara Miller扮演总统的另一个女儿。Benjamin Stockham扮演总统的小儿子Xander，性格叛逆至极。Andre Holland扮演白宫新闻秘书Marshall Malloy。&nbsp; &nbsp; &nbsp; &nbsp;摘自天涯小筑			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="19767" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19767.html">
+																									总统一家 1600 Penn S01E13 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/772A4A445FA7D8D71417C9592F0E648679E73E18.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19767\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:O4VEURC7U7MNOFAXZFMS6DTEQZ46OPQY&amp;dn=1600.Penn.S01E13.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" target="_blank" name=\'magnet19767\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19767\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:O4VEURC7U7MNOFAXZFMS6DTEQZ46OPQY&amp;dn=1600.Penn.S01E13.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E13 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19767\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>670M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="19661" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19661.html">
+																									总统一家 1600 Penn S01E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/5C09DCE783481B1334E2F1201BE974EF84FDDB64.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19661\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5c09dce783481b1334e2f1201be974ef84fddb64&amp;dn=1600.Penn.S01E13.720p.HDTV.X264-DIMENSION&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;" rel="nofollow" target="_blank" name=\'magnet19661\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19661\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5c09dce783481b1334e2f1201be974ef84fddb64&amp;dn=1600.Penn.S01E13.720p.HDTV.X264-DIMENSION&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19661\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>599M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="19660" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19660.html">
+																									总统一家 1600 Penn S01E13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=521124&amp;uk=573958930" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'19660\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/6BA39B2AF569B208A08D6C81BDB678668993C6DC.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19660\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:NORZWKXVNGZARIENNSA33NTYM2EZHRW4&amp;dn=1600+Penn+S01E13+HDTV+x264-LOL[ettv]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=http://fr33do" rel="nofollow" target="_blank" name=\'magnet19660\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19660\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:NORZWKXVNGZARIENNSA33NTYM2EZHRW4&amp;dn=1600+Penn+S01E13+HDTV+x264-LOL[ettv]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=http://fr33do" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E13 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19660\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>176M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="19766" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19766.html">
+																									总统一家 1600 Penn S01E12 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/0CA0377A59627571FB0C3EB4B89FD70B7C018992.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19766\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:BSQDO6SZMJ2XD6YMH22LRH6XBN6ADCMS&amp;dn=1600.Penn.S01E12.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" target="_blank" name=\'magnet19766\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19766\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:BSQDO6SZMJ2XD6YMH22LRH6XBN6ADCMS&amp;dn=1600.Penn.S01E12.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E12 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19766\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>733M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="19659" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19659.html">
+																									总统一家 1600 Penn S01E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/B32B9158A19C3EC04D7C8F300AD4AD68297DA7CB.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19659\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b32b9158a19c3ec04d7c8f300ad4ad68297da7cb&amp;dn=1600.Penn.S01E12.720p.HDTV.X264-DIMENSION&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;" rel="nofollow" target="_blank" name=\'magnet19659\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19659\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b32b9158a19c3ec04d7c8f300ad4ad68297da7cb&amp;dn=1600.Penn.S01E12.720p.HDTV.X264-DIMENSION&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19659\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>551M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="19658" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19658.html">
+																									总统一家 1600 Penn S01E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=521044&amp;uk=573958930" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'19658\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/346068BEF0E53DF705DEDDEFD22B412426F8AAB9.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19658\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:GRQGRPXQ4U67OBO63XX5EK2BEQTPRKVZ&amp;dn=1600.Penn.S01E12.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet19658\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19658\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:GRQGRPXQ4U67OBO63XX5EK2BEQTPRKVZ&amp;dn=1600.Penn.S01E12.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19658\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>179M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="19427" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19427.html">
+																									总统一家 1600 Penn S01E11 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/CA92C1F42415EEC5D85B6CD0B8B79AE3260CEEDC.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19427\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ZKJMD5BECXXMLWC3NTILRN424MTAZ3W4&amp;dn=1600.Penn.S01E11.Dinner.Bath.Puzzle.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbitto" rel="nofollow" target="_blank" name=\'magnet19427\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19427\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ZKJMD5BECXXMLWC3NTILRN424MTAZ3W4&amp;dn=1600.Penn.S01E11.Dinner.Bath.Puzzle.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbitto" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E11 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19427\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>670M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="19357" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19357.html">
+																									总统一家 1600 Penn S01E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/A2E2BAC7EEB07281E5DF58B060299FBF428A1426.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19357\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ULRLVR7OWBZIDZO7LCYGAKM7X5BIUFBG&amp;dn=1600.Penn.S01E11.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" target="_blank" name=\'magnet19357\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19357\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ULRLVR7OWBZIDZO7LCYGAKM7X5BIUFBG&amp;dn=1600.Penn.S01E11.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19357\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>436M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="19356" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19356.html">
+																									总统一家 1600 Penn S01E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=510928&amp;uk=808807295" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'19356\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/C44F0ABA07C1A9CA55D53DF420104B07A439EF5E.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19356\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:YRHQVOQHYGU4UVOVHX2CAECLA6SDT326&amp;dn=1600.Penn.S01E11.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet19356\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19356\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:YRHQVOQHYGU4UVOVHX2CAECLA6SDT326&amp;dn=1600.Penn.S01E11.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19356\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>134M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="19426" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19426.html">
+																									总统一家 1600 Penn S01E10 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/2731D5B3111D4E6E07FDB97765D18A7320A04D64.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19426\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:E4Y5LMYRDVHG4B75XF3WLUMKOMQKATLE&amp;dn=1600.Penn.S01E10.The.Short.Happy.Life.of.Reba.Cadbury.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp:/" rel="nofollow" target="_blank" name=\'magnet19426\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19426\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:E4Y5LMYRDVHG4B75XF3WLUMKOMQKATLE&amp;dn=1600.Penn.S01E10.The.Short.Happy.Life.of.Reba.Cadbury.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp:/" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E10 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19426\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>707M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="19355" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19355.html">
+																									总统一家 1600 Penn S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/C716E00F3672F2AE68069B153114E0D580113976.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19355\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:Y4LOADZWOLZK42AGTMKTCFHA2WABCOLW&amp;dn=1600.Penn.S01E10.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" target="_blank" name=\'magnet19355\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19355\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:Y4LOADZWOLZK42AGTMKTCFHA2WABCOLW&amp;dn=1600.Penn.S01E10.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19355\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>466M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="19354" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19354.html">
+																									总统一家 1600 Penn S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=510861&amp;uk=808807295" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'19354\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/09C901BF0BFA89B018A0818D0449CE10423C4286.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19354\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:BHEQDPYL7KE3AGFAQGGQISOOCBBDYQUG&amp;dn=1600.Penn.S01E10.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet19354\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19354\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:BHEQDPYL7KE3AGFAQGGQISOOCBBDYQUG&amp;dn=1600.Penn.S01E10.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19354\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>145M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="19017" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19017.html">
+																									总统一家 1600 Penn S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/CDB13D05731F9604FE68A577646182433EC3D3BD.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19017\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ZWYT2BLTD6LAJ7TIUV3WIYMCIM7MHU55&amp;dn=1600.Penn.S01E09.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" target="_blank" name=\'magnet19017\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19017\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ZWYT2BLTD6LAJ7TIUV3WIYMCIM7MHU55&amp;dn=1600.Penn.S01E09.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19017\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>430M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="19016" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19016.html">
+																									总统一家 1600 Penn S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://urlxf.qq.com/?UZvi6n6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'19016\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/6FF0A5B0E36664F10AD93D181EFAE9F64EFDB495.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19016\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:N7YKLMHDMZSPCCWZHUMB56XJ6ZHP3NEV&amp;dn=1600.Penn.S01E09.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet19016\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19016\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:N7YKLMHDMZSPCCWZHUMB56XJ6ZHP3NEV&amp;dn=1600.Penn.S01E09.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19016\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>135M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18867" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18867.html">
+																									总统一家 1600 Penn S01E08 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/28CB2523AC2F29E9034B8F030152803F2E07581E.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18867\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:FDFSKI5MF4U6SA2LR4BQCUUAH4XAOWA6&amp;dn=1600.Penn.S01E08.720p.WEB-DL.H.264.DD5.1-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" target="_blank" name=\'magnet18867\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18867\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:FDFSKI5MF4U6SA2LR4BQCUUAH4XAOWA6&amp;dn=1600.Penn.S01E08.720p.WEB-DL.H.264.DD5.1-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E08 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18867\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>707M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="18716" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18716.html">
+																									总统一家 1600 Penn S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/620F8AF61D15FCACB2CEBDE91411493438EAF129.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18716\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:620f8af61d15fcacb2cebde91411493438eaf129&amp;dn=1600.Penn.S01E08.720p.HDTV.X264-DIMENSION&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;" rel="nofollow" target="_blank" name=\'magnet18716\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18716\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|1600.Penn.S01E08.Live.From.The.Lincoln.Bedroom.720p.HDTV.x264-DIMENSION.mkv|570466405|8C1D2B359E4527CE74CD0F834D93B7FB|h=BFEOETRLQXGPIY4L3IPNBPOYKT7IYQBP|/" rel="nofollow" target="_blank" name=\'ed2k18716\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18716\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:620f8af61d15fcacb2cebde91411493438eaf129&amp;dn=1600.Penn.S01E08.720p.HDTV.X264-DIMENSION&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18716\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>544M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18715" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18715.html">
+																									总统一家 1600 Penn S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=318383&amp;uk=2838870940" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'18715\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/A8AFC901F2EE7DBEF4AB17C3E752A217A07BB98E.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18715\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:VCX4SAPS5Z6355FLC7B6OUVCC6QHXOMO&amp;dn=1600.Penn.S01E08.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet18715\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18715\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|1600.Penn.S01E08.Live.From.The.Lincoln.Bedroom.HDTV.x264-LOL.mp4|171146703|9DCF9519FFAE4B20C96D97E0DBE33A84|h=BGPSIPURZJY2O4YP3V4SITZNPHCA3IBY|/" rel="nofollow" target="_blank" name=\'ed2k18715\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18715\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:VCX4SAPS5Z6355FLC7B6OUVCC6QHXOMO&amp;dn=1600.Penn.S01E08.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18715\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>163M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="18446" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18446.html">
+																									总统一家 1600 Penn S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/B8EACB57724BF3730ACED338012F521B056D2D3C.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18446\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:XDVMWV3SJPZXGCWO2M4ACL2SDMCW2LJ4&amp;dn=1600.Penn.S01E07.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" target="_blank" name=\'magnet18446\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18446\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|1600.Penn.S01E07.To.The.Ranch.720p.HDTV.x264-DIMENSION.mkv|625015558|49A5D3527381816DCE77E0BB803B4E41|h=H2HVJEFF5P76G2GIY4AWX74DDMMO6YNC|/" rel="nofollow" target="_blank" name=\'ed2k18446\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18446\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:XDVMWV3SJPZXGCWO2M4ACL2SDMCW2LJ4&amp;dn=1600.Penn.S01E07.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18446\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>596M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18445" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18445.html">
+																									总统一家 1600 Penn S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=333068&amp;uk=2822068684" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'18445\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/FA447ACFA43D50D6785D2302E1EE6A818C6FD1A4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18445\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7JCHVT5EHVINM6C5EMBOD3TKQGGG7UNE&amp;dn=1600.Penn.S01E07.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet18445\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18445\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|1600.Penn.S01E07.To.The.Ranch.HDTV.x264-LOL.mp4|195338587|505E461A2C9A1EA4D35C685DE6763CFA|h=BQL2F5V5SBQPZGLQG72KSEQIZEO5JAV3|/" rel="nofollow" target="_blank" name=\'ed2k18445\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18445\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:7JCHVT5EHVINM6C5EMBOD3TKQGGG7UNE&amp;dn=1600.Penn.S01E07.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18445\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>186M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="18091" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18091.html">
+																									总统一家 1600 Penn S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/BC1D9FB87E36B52140D3233D8C54B5875E92F88A.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18091\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:XQOZ7OD6G22SCQGTEM6YYVFVQ5PJF6EK&amp;dn=1600.Penn.S01E06.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" target="_blank" name=\'magnet18091\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18091\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|1600.Penn.S01E06.Skip.The.Tour.720p.HDTV.x264-DIMENSION.mkv|565346256|33D9D6E5C8599270964C2371A1E177D1|h=XHCCVCSPQQ3YZPGKLCVJNUYJT37IUXIK|/" rel="nofollow" target="_blank" name=\'ed2k18091\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18091\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:XQOZ7OD6G22SCQGTEM6YYVFVQ5PJF6EK&amp;dn=1600.Penn.S01E06.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18091\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>539M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="17757" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17757.html">
+																									总统一家 1600 Penn S01E06 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=302515&amp;uk=1093978278" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17757\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:UGGXAJZABMEZV27WKRPXWS3INDYWL2DV&amp;dn=1600.Penn.S01E06.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" target="_blank" name=\'magnet17757\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17757\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:UGGXAJZABMEZV27WKRPXWS3INDYWL2DV&amp;dn=1600.Penn.S01E06.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E06 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17757\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>718M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="18090" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18090.html">
+																									总统一家 1600 Penn S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=301132&amp;uk=1932833328" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'18090\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/2E95AE90FE6B03178D1827FAE4BB82A718760993.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18090\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:F2K25EH6NMBRPDIYE75OJO4CU4MHMCMT&amp;dn=1600.Penn.S01E06.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet18090\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18090\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|1600.Penn.S01E06.Skip.The.Tour.HDTV.x264-LOL.mp4|176634272|0EC43F6F5D85DB7B5273D35BE3D9C698|h=DTM6ZEGYLE4JAN2O2IPY7BWMFTGDWFEJ|/" rel="nofollow" target="_blank" name=\'ed2k18090\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18090\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:F2K25EH6NMBRPDIYE75OJO4CU4MHMCMT&amp;dn=1600.Penn.S01E06.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18090\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>168M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="17430" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17430.html">
+																									总统一家 1600 Penn S01E05 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/9D6307949F070DE1EEF54A8DC80AB190FCB856E0.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17430\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:TVRQPFE7A4G6D3XVJKG4QCVRSD6LQVXA&amp;dn=1600.Penn.S01E05.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" target="_blank" name=\'magnet17430\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17430\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:TVRQPFE7A4G6D3XVJKG4QCVRSD6LQVXA&amp;dn=1600.Penn.S01E05.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E05 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17430\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>699M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="17319" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17319.html">
+																									总统一家 1600 Penn S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/A7B04B7424ACE356330C8040FEB95B9FCB4A899A.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17319\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:U6YEW5BEVTRVMMYMQBAP5OK3T7FUVCM2&amp;dn=1600+Penn+S01E05+720p+HDTV+X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" target="_blank" name=\'magnet17319\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17319\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|1600.Penn.S01E05.Frosting.Nixon.720p.HDTV.x264-DIMENSION.mkv|550021583|032C82F4B509F2D6E64340BEBCE0F018|h=FS4GRX7ZIIOQWJ6QGASPB6O5TZYQQOMY|/" rel="nofollow" target="_blank" name=\'ed2k17319\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'17319\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:U6YEW5BEVTRVMMYMQBAP5OK3T7FUVCM2&amp;dn=1600+Penn+S01E05+720p+HDTV+X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17319\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>524M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="17318" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17318.html">
+																									总统一家 1600 Penn S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=252550&amp;uk=3258193002" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'17318\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/4C73904D53444DF2F72EE8EEF03F0F2C1A82DB77.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17318\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:JRZZATKTIRG7F5ZO5DXPAPYPFQNIFW3X&amp;dn=1600.Penn.S01E05.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet17318\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17318\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|1600.Penn.S01E05.Frosting.Nixon.HDTV.x264-LOL.mp4|168249362|199DC2D50FDED0ED64737A6D76CFCB5F|h=H4XJTP6XO55245IT643MLDRUBHKQTKVT|/" rel="nofollow" target="_blank" name=\'ed2k17318\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'17318\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:JRZZATKTIRG7F5ZO5DXPAPYPFQNIFW3X&amp;dn=1600.Penn.S01E05.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17318\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>160M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="16666" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16666.html">
+																									总统一家 1600 Penn S01E04 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=228062&amp;uk=3006539948" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'16666\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/695FC90B022986D47A0D51CA1946004C09AA2DEC.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16666\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:NFP4SCYCFGDNI6QNKHFBSRQAJQE2ULPM&amp;dn=1600.Penn.S01E04.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" target="_blank" name=\'magnet16666\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16666\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:NFP4SCYCFGDNI6QNKHFBSRQAJQE2ULPM&amp;dn=1600.Penn.S01E04.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E04 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16666\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>687M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="16606" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16606.html">
+																									总统一家 1600 Penn S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/624CE3C8B440F402E206B206E6573307B9684175.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16606\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:MJGOHSFUID2AFYQGWIDOMVZTA64WQQLV&amp;dn=1600.Penn.S01E04.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" target="_blank" name=\'magnet16606\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16606\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|1600.Penn.S01E04.720p.HDTV.x264-DIMENSION.mkv|554599265|A02428F34E02EEA334CD3B7039954B92|h=4C5JGT5JJGL25NB2PKO4H4J2R6Y5FOX5|/" rel="nofollow" target="_blank" name=\'ed2k16606\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'16606\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:MJGOHSFUID2AFYQGWIDOMVZTA64WQQLV&amp;dn=1600.Penn.S01E04.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16606\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>528M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="16605" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16605.html">
+																									总统一家 1600 Penn S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=203599&amp;uk=1664361648" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'16605\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/E2403844986753378A56368B16F340C55088947E.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16605\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4JADQREYM5JTPCSWG2FRN42AYVIIRFD6&amp;dn=1600.Penn.S01E04.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet16605\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16605\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|1600.Penn.S01E04.HDTV.x264-LOL.mp4|167905504|5D8E515425344FB236BE13D8088C6F0A|h=SYSSYGSJW4SZZ2SG5FTBZD6SXDD22IBO|/" rel="nofollow" target="_blank" name=\'ed2k16605\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'16605\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:4JADQREYM5JTPCSWG2FRN42AYVIIRFD6&amp;dn=1600.Penn.S01E04.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16605\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>160M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="16349" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16349.html">
+																									总统一家 1600 Penn S01E03 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/0AAB85F4EEFEBBBAB78E3F1E6B81A225DEC7CEB4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16349\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:BKVYL5HO7253VN4OH4PGXANCEXPMPTVU&amp;dn=1600.Penn.S01E03.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" target="_blank" name=\'magnet16349\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16349\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:BKVYL5HO7253VN4OH4PGXANCEXPMPTVU&amp;dn=1600.Penn.S01E03.720p.WEB-DL.DD5.1.H.264-TVSmash+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announ" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E03 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16349\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>714M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="16295" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16295.html">
+																									总统一家 1600 Penn S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/5DF657264427A976C4C614B028ED62B89202BEF7.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16295\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5DF657264427A976C4C614B028ED62B89202BEF7&amp;dn=1600+penn+s01e03+720p+hdtv+x264+dimension&amp;tr=udp%3A%2F%2Ffr33domtracker.h33t.com%3A3310%2Fannounce" rel="nofollow" target="_blank" name=\'magnet16295\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16295\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5DF657264427A976C4C614B028ED62B89202BEF7&amp;dn=1600+penn+s01e03+720p+hdtv+x264+dimension&amp;tr=udp%3A%2F%2Ffr33domtracker.h33t.com%3A3310%2Fannounce" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16295\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>516M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="16294" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16294.html">
+																									总统一家 1600 Penn S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=195083&amp;uk=3627326358" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'16294\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/6B6528221D8C4B19579EE183613B488AD5D5CB1F.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16294\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:NNSSQIQ5RRFRSV464GBWCO2IRLK5LSY7&amp;dn=1600.Penn.S01E03.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet16294\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16294\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:NNSSQIQ5RRFRSV464GBWCO2IRLK5LSY7&amp;dn=1600.Penn.S01E03.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16294\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>153M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="15993" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15993.html">
+																									总统一家 1600 Penn S01E02 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/452AF6A6799CF6625AC8273595F34FA3D92D4705.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15993\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:452af6a6799cf6625ac8273595f34fa3d92d4705&amp;dn=1600.Penn.S01E02.720p.WEB-DL.DD5.1.H.264-TVSmash+%5BPublicHD%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker" rel="nofollow" target="_blank" name=\'magnet15993\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15993\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:452af6a6799cf6625ac8273595f34fa3d92d4705&amp;dn=1600.Penn.S01E02.720p.WEB-DL.DD5.1.H.264-TVSmash+%5BPublicHD%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E02 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15993\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>693M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="15945" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15945.html">
+																									总统一家 1600 Penn S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/4F8B9E55C377BDA960A3CDB4A3F6D1DA7DAE88D2.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15945\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:J6FZ4VODO662SYFDZW2KH5WR3J625CGS&amp;dn=1600.Penn.S01E02.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" target="_blank" name=\'magnet15945\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15945\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:J6FZ4VODO662SYFDZW2KH5WR3J625CGS&amp;dn=1600.Penn.S01E02.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15945\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>559M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="15944" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15944.html">
+																									总统一家 1600 Penn S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=188845&amp;uk=1530173890" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'15944\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/5A0A8D84C40E4158FDD2B23F8B29FB9758A3735E.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15944\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:LIFI3BGEBZAVR7OSWI7YWKP3S5MKG426&amp;dn=1600.Penn.S01E02.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet15944\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15944\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:LIFI3BGEBZAVR7OSWI7YWKP3S5MKG426&amp;dn=1600.Penn.S01E02.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15944\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>181M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="15469" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15469.html">
+																									总统一家 1600 Penn S01E01 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/A144633E29016605507D37DC88A3BC08442AA3B0.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15469\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:UFCGGPRJAFTAKUD5G7OIRI54BBCCVI5Q&amp;dn=1600.Penn.S01E01.720p.WEB-DL.DD5.1.H.264-NTb+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&a" rel="nofollow" target="_blank" name=\'magnet15469\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15469\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:UFCGGPRJAFTAKUD5G7OIRI54BBCCVI5Q&amp;dn=1600.Penn.S01E01.720p.WEB-DL.DD5.1.H.264-NTb+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&a" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E01 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15469\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>690M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="15394" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15394.html">
+																									总统一家 1600 Penn S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/32FD241678DEED91949CC1DD3B4E5437ABD02C09.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15394\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:GL6SIFTY33WZDFE4YHOTWTSUG6V5ALAJ&amp;dn=1600.Penn.S01E01.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" target="_blank" name=\'magnet15394\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15394\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:GL6SIFTY33WZDFE4YHOTWTSUG6V5ALAJ&amp;dn=1600.Penn.S01E01.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15394\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>484M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="15588" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15588.html">
+																									总统一家 1600 Penn S01E01 HR-HDTV 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=184576&amp;uk=1613281824&amp;third=0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'15588\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>236M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2012-12-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="15587" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15587.html">
+																									总统一家 1600 Penn S01E01 480p 电波字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=184574&amp;uk=1613281824&amp;third=0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'15587\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>138M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2012-12-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="15393" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/15393.html">
+																									总统一家 1600 Penn S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=156039&amp;uk=707521111" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'15393\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/E0076B86A06027CE33CC8E240CB877FFBE567C5C.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'15393\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4ADWXBVAMAT44M6MRYSAZODX767FM7C4&amp;dn=1600.Penn.S01E01.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet15393\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'15393\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4ADWXBVAMAT44M6MRYSAZODX767FM7C4&amp;dn=1600.Penn.S01E01.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="总统一家 1600 Penn S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'15393\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>166M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2012-12-18</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,465,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,465);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,465);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,465);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

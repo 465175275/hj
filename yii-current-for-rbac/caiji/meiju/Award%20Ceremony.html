@@ -1,0 +1,1133 @@
+'HTTP/1.1 200 OK
+Date: Tue, 07 Nov 2017 10:14:46 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d5362c125cde9d7b2af7586c5fe4dced11510049685; expires=Wed, 07-Nov-18 10:14:45 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Set-Cookie: PHPSESSID=tjiqe0qp5tf2umc2dnv2bcmo00; expires=Wed, 22-Nov-2017 10:14:45 GMT; Max-Age=1296000; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: private
+Pragma: no-cache
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b9f8704258493fc-SJC
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>颁奖典礼 Award Ceremony-颁奖典礼下载-颁奖典礼全集下载-Award Ceremony下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="颁奖典礼,Award Ceremony,颁奖典礼下载,颁奖典礼全集下载,颁奖典礼高清下载,颁奖典礼迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;这里放置各种颁奖典礼&lt;/p&gt;" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 197;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FAward%2520Ceremony.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FAward%2520Ceremony.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 197;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">颁奖典礼 Award Ceremony-颁奖典礼下载-颁奖典礼全集下载-Award Ceremony下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i1.piimg.com/588755/7a14c7a99ca6d5c2.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i1.piimg.com/588755/7a14c7a99ca6d5c2.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：随机</span>
+						<span>状态：<font color="#5cb1c5">播出中</font></span>
+						<span class="greybg">分类：</span>						
+						<span>最后更新：2017-09-20 10:14</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/197.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">483</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>这里放置各种颁奖典礼</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+																		<td id="seasoninfo" colspan="8"></td>							</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="88117" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88117.html">
+																									第69届艾美奖颁奖典礼 The 69th Annual Emmy Awards 2017											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1miedFFq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88117\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=klno36v&amp;f=The.69th.Annual.Primetime.Emmy.Awards.2017.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88117\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2a43a39e6211d9e33e983ac7d123604f3b53ccbe&amp;dn=The.69th.Annual.Primetime.Emmy.Awards.2017.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.ra" rel="nofollow" target="_blank" name=\'magnet88117\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88117\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2a43a39e6211d9e33e983ac7d123604f3b53ccbe&amp;dn=The.69th.Annual.Primetime.Emmy.Awards.2017.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.ra" rel="nofollow" name=\'miurl\' filename="第69届艾美奖颁奖典礼 The 69th Annual Emmy Awards 2017" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88117\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.43G</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="88116" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/88116.html">
+																									第69届艾美奖颁奖典礼 The 69th Annual Emmy Awards 2017 720p											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hsCHGYK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'88116\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=4gh6saw&amp;f=The.69th.Annual.Primetime.Emmy.Awards.2017.720p.WEB.x264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'88116\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1c9a8eda8284a6270f4d6d0032f750dc01d35aad&amp;dn=The.69th.Annual.Primetime.Emmy.Awards.2017.720p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" target="_blank" name=\'magnet88116\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'88116\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1c9a8eda8284a6270f4d6d0032f750dc01d35aad&amp;dn=The.69th.Annual.Primetime.Emmy.Awards.2017.720p.WEB.x264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" name=\'miurl\' filename="第69届艾美奖颁奖典礼 The 69th Annual Emmy Awards 2017 720p" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'88116\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.37G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-09-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="81076" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81076.html">
+																									2017年MTV电影电视颁奖典礼 2017 MTV Movie and TV Awards											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1skWuDWh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81076\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=sqvyzhn&amp;f=2017.MTV.Movie.and.TV.Awards.2017.HDTV.x264-W4F%5Bettv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'81076\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:bc04d3475669af3b5988b0a78d5b3fa4c6b58c3f&amp;dn=2017.MTV.Movie.and.TV.Awards.2017.HDTV.x264-W4F%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" target="_blank" name=\'magnet81076\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81076\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:bc04d3475669af3b5988b0a78d5b3fa4c6b58c3f&amp;dn=2017.MTV.Movie.and.TV.Awards.2017.HDTV.x264-W4F%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A" rel="nofollow" name=\'miurl\' filename="2017年MTV电影电视颁奖典礼 2017 MTV Movie and TV Awards" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81076\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>625M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="75495" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75495.html">
+																									第89届奥斯卡金像奖颁奖典礼 The 89th Annual Academy Awards 2017 720p											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i5gaszr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75495\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ewthmuc&amp;f=The.89th.Annual.Academy.Awards.2017.720p.HDTV.x264-PLUTONiUM%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75495\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5fa21edb20bf2e374637b0711ad75345ede37f09&amp;dn=The.89th.Annual.Academy.Awards.2017.720p.HDTV.x264-PLUTONiUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" target="_blank" name=\'magnet75495\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75495\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5fa21edb20bf2e374637b0711ad75345ede37f09&amp;dn=The.89th.Annual.Academy.Awards.2017.720p.HDTV.x264-PLUTONiUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" name=\'miurl\' filename="第89届奥斯卡金像奖颁奖典礼 The 89th Annual Academy Awards 2017 720p" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75495\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.74G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="75494" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75494.html">
+																									第89届奥斯卡金像奖颁奖典礼 The 89th Annual Academy Awards 2017											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mi0ncNm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75494\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=whfr1qp&amp;f=The.89th.Annual.Academy.Awards.2017.HDTV.x264-PLUTONiUM%5Bettv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75494\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:13b5c2888e1ecd7e0347c2823cbe00da84edacfb&amp;dn=The.89th.Annual.Academy.Awards.2017.HDTV.x264-PLUTONiUM%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rar" rel="nofollow" target="_blank" name=\'magnet75494\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75494\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:13b5c2888e1ecd7e0347c2823cbe00da84edacfb&amp;dn=The.89th.Annual.Academy.Awards.2017.HDTV.x264-PLUTONiUM%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rar" rel="nofollow" name=\'miurl\' filename="第89届奥斯卡金像奖颁奖典礼 The 89th Annual Academy Awards 2017" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75494\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.08G</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="75441" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75441.html">
+																									第89届奥斯卡红毯秀 Oscars Opening Ceremony The Red Carpet 2017 720p											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2ACJXQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75441\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=zcp6f9a&amp;f=The.Oscars.Opening.Ceremony.Live.From.the.Red.Carpet.2017.720p.HDTV.x264-CROOKS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75441\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6160eb928accd5ad61b30ca3ec36a9ccab4ee148&amp;dn=The.Oscars.Opening.Ceremony.Live.From.the.Red.Carpet.2017.720p.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710" rel="nofollow" target="_blank" name=\'magnet75441\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75441\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6160eb928accd5ad61b30ca3ec36a9ccab4ee148&amp;dn=The.Oscars.Opening.Ceremony.Live.From.the.Red.Carpet.2017.720p.HDTV.x264-CROOKS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710" rel="nofollow" name=\'miurl\' filename="第89届奥斯卡红毯秀 Oscars Opening Ceremony The Red Carpet 2017 720p" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75441\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.65G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="75440" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/75440.html">
+																									第89届奥斯卡红毯秀 Oscars Opening Ceremony The Red Carpet 2017											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mi7E8vm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'75440\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=nmsd14p&amp;f=The.Oscars.Opening.Ceremony.Live.From.The.Red.Carpet.2017.HDTV.x264-PLUTONiUM%5Bettv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'75440\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:66146fd7ab8781d489c1841b328e5a34778723b2&amp;dn=The.Oscars.Opening.Ceremony.Live.From.The.Red.Carpet.2017.HDTV.x264-PLUTONiUM%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&am" rel="nofollow" target="_blank" name=\'magnet75440\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'75440\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:66146fd7ab8781d489c1841b328e5a34778723b2&amp;dn=The.Oscars.Opening.Ceremony.Live.From.The.Red.Carpet.2017.HDTV.x264-PLUTONiUM%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&am" rel="nofollow" name=\'miurl\' filename="第89届奥斯卡红毯秀 Oscars Opening Ceremony The Red Carpet 2017" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'75440\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>530M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="74337" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74337.html">
+																									第59届格莱美奖颁奖典礼 The 59th Annual Grammy Awards 720p											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=hxrov5u&amp;f=The.59th.Annual.Grammy.Awards.720p.HDTV.DD5.1.x264-Jumpman%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'74337\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1124141d3bd04d1b493d46954e96d3e333c6fba3&amp;dn=The.59th.Annual.Grammy.Awards.720p.HDTV.DD5.1.x264-Jumpman%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9" rel="nofollow" target="_blank" name=\'magnet74337\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74337\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1124141d3bd04d1b493d46954e96d3e333c6fba3&amp;dn=The.59th.Annual.Grammy.Awards.720p.HDTV.DD5.1.x264-Jumpman%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9" rel="nofollow" name=\'miurl\' filename="第59届格莱美奖颁奖典礼 The 59th Annual Grammy Awards 720p" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74337\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>4.02G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="74325" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74325.html">
+																									第70届英国电影学院奖 The British Academy Film Awards 2017 720p											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2suYRY" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'74325\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=6egv2kh&amp;f=The.British.Academy.Film.Awards.2017.720p.HDTV.x264-PLUTONiUM%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'74325\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:8d4930b01425dbf4214f1d00dff2922b438552fb&amp;dn=The.British.Academy.Film.Awards.2017.720p.HDTV.x264-PLUTONiUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%" rel="nofollow" target="_blank" name=\'magnet74325\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74325\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8d4930b01425dbf4214f1d00dff2922b438552fb&amp;dn=The.British.Academy.Film.Awards.2017.720p.HDTV.x264-PLUTONiUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%" rel="nofollow" name=\'miurl\' filename="第70届英国电影学院奖 The British Academy Film Awards 2017 720p" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74325\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.22G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="74324" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/74324.html">
+																									第70届英国电影学院奖 The British Academy Film Awards 2017											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dFf1Kp7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'74324\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=kb6pgl7&amp;f=The.British.Academy.Film.Awards.2017.HDTV.x264-PLUTONiUM%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'74324\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5781445362ca6ad2d3a27dfe33a0e2c22e9ead06&amp;dn=The.British.Academy.Film.Awards.2017.HDTV.x264-PLUTONiUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.r" rel="nofollow" target="_blank" name=\'magnet74324\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'74324\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5781445362ca6ad2d3a27dfe33a0e2c22e9ead06&amp;dn=The.British.Academy.Film.Awards.2017.HDTV.x264-PLUTONiUM%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.r" rel="nofollow" name=\'miurl\' filename="第70届英国电影学院奖 The British Academy Film Awards 2017" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'74324\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>498M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-02-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="71918" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/71918.html">
+																									第74届金球奖颁奖典礼 The 74th Annual Golden Globe Awards 2017 720p											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1sl2Ijal" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'71918\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=9hzjiq5&amp;f=The.74th.Annual.Golden.Globe.Awards.2017.Ceremony.720p.HDTV.x264-NOGRP%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'71918\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ace4e4f6405dc835f7701c79d81873e0866f121f&amp;dn=The.74th.Annual.Golden.Globe.Awards.2017.Ceremony.720p.HDTV.x264-NOGRP%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=u" rel="nofollow" target="_blank" name=\'magnet71918\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'71918\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ace4e4f6405dc835f7701c79d81873e0866f121f&amp;dn=The.74th.Annual.Golden.Globe.Awards.2017.Ceremony.720p.HDTV.x264-NOGRP%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=u" rel="nofollow" name=\'miurl\' filename="第74届金球奖颁奖典礼 The 74th Annual Golden Globe Awards 2017 720p" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'71918\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.65G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-01-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="64512" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/64512.html">
+																									第68届艾美奖颁奖典礼 The 68th Annual Emmy Awards 2016											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eRViDP4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'64512\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:a1c60307279513bf6c8628a6cee613323fa708a7&amp;dn=The.68th.Annual.Primetime.Emmy.Awards.2016.HDTV.x264-ALTEREGO%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" target="_blank" name=\'magnet64512\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'64512\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a1c60307279513bf6c8628a6cee613323fa708a7&amp;dn=The.68th.Annual.Primetime.Emmy.Awards.2016.HDTV.x264-ALTEREGO%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2" rel="nofollow" name=\'miurl\' filename="第68届艾美奖颁奖典礼 The 68th Annual Emmy Awards 2016" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'64512\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>870M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-09-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="64510" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/64510.html">
+																									第68届艾美奖颁奖典礼 The 68th Annual Emmy Awards 2016 720p											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o7EDoL0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'64510\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=uph69qf&amp;f=The.68th.Annual.Primetime.Emmy.Awards.2016.720p.HDTV.x264-ALTEREGO%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'64510\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9ed791d845fea6789e3030b3cde9fb3443976445&amp;dn=The.68th.Annual.Primetime.Emmy.Awards.2016.720p.HDTV.x264-ALTEREGO%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3" rel="nofollow" target="_blank" name=\'magnet64510\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'64510\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.68th.Annual.Primetime.Emmy.Awards.2016.720p.HDTV.x264-ALTEREGO.mkv|3346401317|7C7FD7E8BA9650E1B25084F1163C78F0|h=J27YJQM4ZT7SCYNXJWKHPQFVQEBKBIYI|/" rel="nofollow" target="_blank" name=\'ed2k64510\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'64510\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:9ed791d845fea6789e3030b3cde9fb3443976445&amp;dn=The.68th.Annual.Primetime.Emmy.Awards.2016.720p.HDTV.x264-ALTEREGO%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3" rel="nofollow" name=\'miurl\' filename="第68届艾美奖颁奖典礼 The 68th Annual Emmy Awards 2016 720p" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'64510\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.12G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-09-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="62871" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62871.html">
+																									2016里约奥运会开幕式 Rio Summer Olympics 2016 BBC Opening											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ea330a45bfe7e4f596ddd6ec11d0a7762f2cc34a&amp;dn=Rio.Summer.Olympics.2016.BBC.Opening.Ceremony.WEB.h264-ROFL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F" rel="nofollow" target="_blank" name=\'magnet62871\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62871\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ea330a45bfe7e4f596ddd6ec11d0a7762f2cc34a&amp;dn=Rio.Summer.Olympics.2016.BBC.Opening.Ceremony.WEB.h264-ROFL%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F" rel="nofollow" name=\'miurl\' filename="2016里约奥运会开幕式 Rio Summer Olympics 2016 BBC Opening" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62871\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.13G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-08-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="60198" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/60198.html">
+																									2016男士选择大奖 Spike TV 2016 Guys Choice Awards 720p											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bo4fb1l" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'60198\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=428qhbj&amp;f=2016.Guys.Choice.Awards.Perfect.10.720p.SPIK.WEBRip.AAC2.0.H.264-BTW%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'60198\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a35dc80c87bdc269dc7e8987e7284a15f0d6a5c7&amp;dn=2016.Guys.Choice.Awards.Perfect.10.720p.SPIK.WEBRip.AAC2.0.H.264-BTW%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet60198\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'60198\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a35dc80c87bdc269dc7e8987e7284a15f0d6a5c7&amp;dn=2016.Guys.Choice.Awards.Perfect.10.720p.SPIK.WEBRip.AAC2.0.H.264-BTW%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="2016男士选择大奖 Spike TV 2016 Guys Choice Awards 720p" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'60198\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.69G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-06-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="59298" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/59298.html">
+																									2016美国公告牌音乐大奖颁奖礼 The 2016 Billboard Music Awards											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c2jt0Da" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'59298\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=7na39e8&amp;f=The.2016.Billboard.Music.Awards.HDTV.x264-ALTEREGO%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'59298\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2daa26a9b19096ec410e321a7583bc17bb2197d5&amp;dn=The.2016.Billboard.Music.Awards.HDTV.x264-ALTEREGO%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" target="_blank" name=\'magnet59298\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'59298\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2daa26a9b19096ec410e321a7583bc17bb2197d5&amp;dn=The.2016.Billboard.Music.Awards.HDTV.x264-ALTEREGO%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" name=\'miurl\' filename="2016美国公告牌音乐大奖颁奖礼 The 2016 Billboard Music Awards" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'59298\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.30G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="54348" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/54348.html">
+																									第88届奥斯卡金像奖颁奖典礼 The 88th Annual Academy Awards 2016 720p											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gea8IgN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'54348\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:518444d526f52ad3bfcb624fa1d7afb06de22076&amp;dn=The.88th.Annual.Academy.Awards.2016.720p.HDTV.x264-C4TV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.ra" rel="nofollow" target="_blank" name=\'magnet54348\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'54348\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:518444d526f52ad3bfcb624fa1d7afb06de22076&amp;dn=The.88th.Annual.Academy.Awards.2016.720p.HDTV.x264-C4TV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.ra" rel="nofollow" name=\'miurl\' filename="第88届奥斯卡金像奖颁奖典礼 The 88th Annual Academy Awards 2016 720p" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'54348\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.73G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-02-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="54347" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/54347.html">
+																									第88届奥斯卡金像奖颁奖典礼 The 88th Annual Academy Awards 2016											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sk0C9L7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'54347\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:392f16889533f0898ed58fd231b31bc81a97a4d9&amp;dn=The.88th.Annual.Academy.Awards.2016.HDTV.x264-C4TV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" target="_blank" name=\'magnet54347\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'54347\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:392f16889533f0898ed58fd231b31bc81a97a4d9&amp;dn=The.88th.Annual.Academy.Awards.2016.HDTV.x264-C4TV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.t" rel="nofollow" name=\'miurl\' filename="第88届奥斯卡金像奖颁奖典礼 The 88th Annual Academy Awards 2016" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'54347\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.03G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-02-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="54345" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/54345.html">
+																									第88届奥斯卡红毯秀 Oscars Opening Ceremony The Red  Carpet 2016 720p											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pKk1Jdh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'54345\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:24f217ebfae32f823e790d62709d32243bf29b30&amp;dn=Oscars.Opening.Ceremony.Live.From.The.Red.Carpet.2016.720p.HDTV.x264-C4TV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;t" rel="nofollow" target="_blank" name=\'magnet54345\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'54345\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:24f217ebfae32f823e790d62709d32243bf29b30&amp;dn=Oscars.Opening.Ceremony.Live.From.The.Red.Carpet.2016.720p.HDTV.x264-C4TV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;t" rel="nofollow" name=\'miurl\' filename="第88届奥斯卡红毯秀 Oscars Opening Ceremony The Red  Carpet 2016 720p" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'54345\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.02G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-02-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="54344" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/54344.html">
+																									第88届奥斯卡红毯秀 Oscars Opening Ceremony The Red  Carpet 2016											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kUc20p5" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'54344\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d1fc4f736686ee221515fe64aeb99ccc6af8dfe2&amp;dn=Oscars.Opening.Ceremony.Live.From.The.Red.Carpet.2016.HDTV.x264-C4TV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet54344\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'54344\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d1fc4f736686ee221515fe64aeb99ccc6af8dfe2&amp;dn=Oscars.Opening.Ceremony.Live.From.The.Red.Carpet.2016.HDTV.x264-C4TV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="第88届奥斯卡红毯秀 Oscars Opening Ceremony The Red  Carpet 2016" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'54344\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>786M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-02-29</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+									<tr bgcolor="#ffffff">
+												<td colspan="8"  height="30" style="padding-top:8px;"><ul class="pagination">  <li class="active"><span>1</span><li><li><a class="num" href="/index.php/meiju/index/engename/Award+Ceremony/p/2.html">2</a></li><li><a class="num" href="/index.php/meiju/index/engename/Award+Ceremony/p/3.html">3</a></li><li><a class="num" href="/index.php/meiju/index/engename/Award+Ceremony/p/4.html">4</a></li><li><a class="num" href="/index.php/meiju/index/engename/Award+Ceremony/p/5.html">5</a></li><li><a class="num" href="/index.php/meiju/index/engename/Award+Ceremony/p/6.html">6</a></li><li><a class="num" href="/index.php/meiju/index/engename/Award+Ceremony/p/7.html">7</a></li><li><a class="num" href="/index.php/meiju/index/engename/Award+Ceremony/p/8.html">8</a></li><li><a class="num" href="/index.php/meiju/index/engename/Award+Ceremony/p/9.html">9</a></li> <li><a class="next" href="/index.php/meiju/index/engename/Award+Ceremony/p/2.html">>></a></li> </ul></td>
+											</tr>					</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,197,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,197);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,197);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,197);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

@@ -1,0 +1,1590 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:16:02 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=dc9fa11c153a7e33d2a6a5d920ad5c20d1509534961; expires=Thu, 01-Nov-18 11:16:01 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e7087e62d5390-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>麻烦满屋 Crowded-麻烦满屋下载-麻烦满屋全集下载-Crowded下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="麻烦满屋,Crowded,麻烦满屋下载,麻烦满屋全集下载,麻烦满屋高清下载,麻烦满屋迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;由《热力克利夫兰HotInCleveland》团队SuzanneMartinand和HazyMills打造的多镜头喜剧。讲述Mike和Martina为了抚养儿女，过了20年的无性无酒的生活后，终于可以投身这花花世界做一对花花蝴蝶。但是意想不到的是，两个的女儿突然搬回家里住。更不幸的是，Mike的父母也要搬过来说要颐享天年。本来空荡的家又挤满" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1003;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FCrowded.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FCrowded.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1003;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">麻烦满屋 Crowded-麻烦满屋下载-麻烦满屋全集下载-Crowded下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/036a424c639fe51e.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/036a424c639fe51e.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周三</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：喜剧类</span>						
+						<span>最后更新：2016-10-09 17:27</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1003.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">36</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>				由《热力克利夫兰 Hot In Cleveland》团队Suzanne Martinand和Hazy Mills打造的多镜头喜剧。讲述Mike和Martina为了抚养儿女，过了20年的无性无酒的生活后，终于可以投身这花花世界做一对花花蝴蝶。但是意 想不到的是，两个的女儿突然搬回家里住。更不幸的是，Mike的父母也要搬过来说要颐享天年。本来空荡的家又挤满了人。 
+Patrick Warburton扮演丈夫Mike Gunn﹑Carrie Preston扮演妻子 Martina Gunn﹑Miranda Cosgrove扮演小女儿Shea, 天体物理学博士，想成为宇航员，有点不善社交﹑Mia Serafino扮演大女儿Stella，是一名有魅力但演艺事业不顺的演员。		</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="63076" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/63076.html">
+																									麻烦满屋 Crowded S01E13 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1miFB6pa" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'63076\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg4MDd8YzY1ZTJmOTl8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'63076\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:8710114A327FD34637A24E0EEFF4A23CB5ECEE27" rel="nofollow" target="_blank" name=\'magnet63076\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'63076\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8710114A327FD34637A24E0EEFF4A23CB5ECEE27" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E13 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'63076\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>363M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-08-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="59214" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/59214.html">
+																									麻烦满屋 Crowded S01E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kUSQfzx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'59214\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=6qw7g2d&amp;f=Crowded.S01E13.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'59214\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:620629f8b93dca4ef6a78ad820ea4602e75b6e41&amp;dn=Crowded.S01E13.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet59214\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'59214\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:620629f8b93dca4ef6a78ad820ea4602e75b6e41&amp;dn=Crowded.S01E13.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'59214\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>415M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="59213" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/59213.html">
+																									麻烦满屋 Crowded S01E13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c2blTAg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'59213\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=nvpmrgu&amp;f=Crowded.S01E13.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'59213\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f8222ac13e2f0753d02fb90b5f872df2af38ff2c&amp;dn=Crowded.S01E13.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet59213\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'59213\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f8222ac13e2f0753d02fb90b5f872df2af38ff2c&amp;dn=Crowded.S01E13.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E13 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'59213\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>115M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="63045" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/63045.html">
+																									麻烦满屋 Crowded S01E12 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i5K1t5r" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'63045\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg4MDZ8MjlhNGMyZDR8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'63045\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:072F24DFB69389D2D5D60002F37AA41BB01C24CC" rel="nofollow" target="_blank" name=\'magnet63045\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'63045\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:072F24DFB69389D2D5D60002F37AA41BB01C24CC" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E12 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'63045\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>394M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-08-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="58821" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/58821.html">
+																									麻烦满屋 Crowded S01E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dFx4hzF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'58821\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=cywk8dr&amp;f=Crowded.S01E12.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'58821\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:cf3c50fe2e334bbc6cb7418904ed9f006d57aca4&amp;dn=Crowded.S01E12.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet58821\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'58821\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cf3c50fe2e334bbc6cb7418904ed9f006d57aca4&amp;dn=Crowded.S01E12.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'58821\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>551M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="58820" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/58820.html">
+																									麻烦满屋 Crowded S01E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bpJmVZD" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'58820\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=xsknd4c&amp;f=Crowded.S01E12.HDTV.x264-FLEET%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'58820\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:48756c1b0e516d30684648d3f1e9e4c260c815a7&amp;dn=Crowded.S01E12.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet58820\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'58820\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:48756c1b0e516d30684648d3f1e9e4c260c815a7&amp;dn=Crowded.S01E12.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'58820\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>156M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="62599" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62599.html">
+																									麻烦满屋 Crowded S01E11 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2825079092&amp;uk=2808485736" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62599\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg4MDV8NjBkYjhiN2R8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62599\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:61C28DB46BF999491255AAA0B8FE3E38FAC6790D" rel="nofollow" target="_blank" name=\'magnet62599\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62599\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:61C28DB46BF999491255AAA0B8FE3E38FAC6790D" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E11 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62599\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>344M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-08-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="58383" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/58383.html">
+																									麻烦满屋 Crowded S01E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pKLpLqj" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'58383\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fb1a13e2b02560cd14a122ee0a6958603e2d1075&amp;dn=Crowded.S01E11.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet58383\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'58383\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fb1a13e2b02560cd14a122ee0a6958603e2d1075&amp;dn=Crowded.S01E11.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'58383\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>392M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="58382" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/58382.html">
+																									麻烦满屋 Crowded S01E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1cLq4lo" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'58382\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9d5d79fab4a3d7dafd6076f9d473f7b7fab85aa7&amp;dn=Crowded.S01E11.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet58382\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'58382\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9d5d79fab4a3d7dafd6076f9d473f7b7fab85aa7&amp;dn=Crowded.S01E11.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'58382\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>108M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="62277" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/62277.html">
+																									麻烦满屋 Crowded S01E10 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1906318759&amp;uk=1163567481" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'62277\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg4MDR8OTJhNzkzMzl8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'62277\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:A75CCF78851850C52E06368D101EDC5339145BE9" rel="nofollow" target="_blank" name=\'magnet62277\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'62277\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:A75CCF78851850C52E06368D101EDC5339145BE9" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E10 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'62277\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>405M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="57918" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57918.html">
+																									麻烦满屋 Crowded S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bphs84B" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'57918\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:45c7460aeb3f4a63e5d698b03fdf159ac55ba86b&amp;dn=Crowded.S01E10.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet57918\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57918\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:45c7460aeb3f4a63e5d698b03fdf159ac55ba86b&amp;dn=Crowded.S01E10.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57918\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>457M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="57917" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57917.html">
+																									麻烦满屋 Crowded S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dFBGBxn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'57917\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d3546815e7e2c2bbc043f76acb50048c14fe6816&amp;dn=Crowded.S01E10.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet57917\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57917\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d3546815e7e2c2bbc043f76acb50048c14fe6816&amp;dn=Crowded.S01E10.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57917\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>125M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-05-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="61878" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61878.html">
+																									麻烦满屋 Crowded S01E09 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3922455535&amp;uk=2808485736" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61878\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg4MDN8NGUyNjliNDd8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61878\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:79F5FE6EB7DA61923338BC933A2AB18AB2CA1F86" rel="nofollow" target="_blank" name=\'magnet61878\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61878\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:79F5FE6EB7DA61923338BC933A2AB18AB2CA1F86" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E09 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61878\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>409M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="57403" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57403.html">
+																									麻烦满屋 Crowded S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSwLhmE" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'57403\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:acd98a55d5835fabff4f52ddc55d7d39501eec9f&amp;dn=Crowded.S01E09.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet57403\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57403\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:acd98a55d5835fabff4f52ddc55d7d39501eec9f&amp;dn=Crowded.S01E09.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57403\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>127M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="57402" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57402.html">
+																									麻烦满屋 Crowded S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i5fectB" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'57402\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:acd98a55d5835fabff4f52ddc55d7d39501eec9f&amp;dn=Crowded.S01E09.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet57402\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57402\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:acd98a55d5835fabff4f52ddc55d7d39501eec9f&amp;dn=Crowded.S01E09.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57402\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>127M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="61741" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61741.html">
+																									麻烦满屋 Crowded S01E08 720p x字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=1397092053&amp;uk=2808485736" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61741\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg4MDJ8NDQ0ZWU2YzN8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61741\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:79F5FE6EB7DA61923338BC933A2AB18AB2CA1F86" rel="nofollow" target="_blank" name=\'magnet61741\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61741\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:79F5FE6EB7DA61923338BC933A2AB18AB2CA1F86" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E08 720p x字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61741\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>430M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="57292" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57292.html">
+																									麻烦满屋 Crowded S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d12bb5e1c5b51e29ca0b62788b0eb12bcbbb97a4&amp;dn=Crowded.S01E08.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet57292\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57292\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d12bb5e1c5b51e29ca0b62788b0eb12bcbbb97a4&amp;dn=Crowded.S01E08.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57292\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>484M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="57291" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57291.html">
+																									麻烦满屋 Crowded S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b12a062170f4e1ddb1d93af7ccd18bb1c91c5c47&amp;dn=Crowded.S01E08.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet57291\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57291\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b12a062170f4e1ddb1d93af7ccd18bb1c91c5c47&amp;dn=Crowded.S01E08.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57291\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>140M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="61515" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61515.html">
+																									麻烦满屋 Crowded S01E07 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3850145410&amp;uk=2808485736" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61515\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg4MDF8MmM5NjJmYmJ8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61515\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:DA8EBC8C42BF1711CA806D9C1BE1D5AB9A590273" rel="nofollow" target="_blank" name=\'magnet61515\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61515\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:DA8EBC8C42BF1711CA806D9C1BE1D5AB9A590273" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E07 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61515\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>397M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="57290" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57290.html">
+																									麻烦满屋 Crowded S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f06f4149411d46837376d971466a19c89dd5b200&amp;dn=Crowded.S01E07.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet57290\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57290\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f06f4149411d46837376d971466a19c89dd5b200&amp;dn=Crowded.S01E07.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57290\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>450M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="57289" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57289.html">
+																									麻烦满屋 Crowded S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:121d913c5e9bb55dc650e2db1c662a83869e7413&amp;dn=Crowded.S01E07.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet57289\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57289\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:121d913c5e9bb55dc650e2db1c662a83869e7413&amp;dn=Crowded.S01E07.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57289\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>128M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="61514" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61514.html">
+																									麻烦满屋 Crowded S01E06 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=4122247912&amp;uk=2808485736" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61514\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg4MDB8ZGNjNTIxYmF8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61514\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7738A4A5BC33B1AD7AA0666AC4A84763490E6C68" rel="nofollow" target="_blank" name=\'magnet61514\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61514\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7738A4A5BC33B1AD7AA0666AC4A84763490E6C68" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E06 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61514\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>402M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="57288" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57288.html">
+																									麻烦满屋 Crowded S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:423f54a6434c60df2b8bfa63a9532068b9dd6d1a&amp;dn=Crowded.S01E06.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet57288\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57288\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:423f54a6434c60df2b8bfa63a9532068b9dd6d1a&amp;dn=Crowded.S01E06.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57288\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>450M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="57287" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/57287.html">
+																									麻烦满屋 Crowded S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e884f4cd48a24a5bd4d8f71900869e7b8c1ff1d7&amp;dn=Crowded.S01E06.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet57287\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'57287\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e884f4cd48a24a5bd4d8f71900869e7b8c1ff1d7&amp;dn=Crowded.S01E06.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'57287\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>129M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="61512" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61512.html">
+																									麻烦满屋 Crowded S01E05 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3023333436&amp;uk=2808485736" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61512\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg3OTl8MzM5Y2FhNDN8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61512\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:B9C48AA97E641041CE2B4E6021ED99CFAB4F4E7B" rel="nofollow" target="_blank" name=\'magnet61512\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61512\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:B9C48AA97E641041CE2B4E6021ED99CFAB4F4E7B" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E05 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61512\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>507M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="56415" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56415.html">
+																									麻烦满屋 Crowded S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1boB3gS3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'56415\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fcf20dc32409646c91b1f318c447192b37215e0f&amp;dn=Crowded.S01E05.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet56415\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56415\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fcf20dc32409646c91b1f318c447192b37215e0f&amp;dn=Crowded.S01E05.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56415\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>557M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-04</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="56414" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/56414.html">
+																									麻烦满屋 Crowded S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1slDsGMT" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'56414\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:37d52a01071f565de99d9e831b263cc2b60a8cbd&amp;dn=Crowded.S01E05.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet56414\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'56414\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:37d52a01071f565de99d9e831b263cc2b60a8cbd&amp;dn=Crowded.S01E05.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'56414\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>162M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-04-04</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="61511" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61511.html">
+																									麻烦满屋 Crowded S01E04 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=2369122461&amp;uk=2808485736" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61511\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg3OTh8ZDFmYmQ2ZTB8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61511\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3F0F8126BB150F6B04FD8913469860C17DD2AD5F" rel="nofollow" target="_blank" name=\'magnet61511\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61511\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3F0F8126BB150F6B04FD8913469860C17DD2AD5F" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E04 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61511\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>401M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="55992" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/55992.html">
+																									麻烦满屋 Crowded S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nuWgTuh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'55992\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5a5954b80d80a7517fd0bab0c4864adedd482735&amp;dn=Crowded.S01E04.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet55992\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'55992\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5a5954b80d80a7517fd0bab0c4864adedd482735&amp;dn=Crowded.S01E04.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'55992\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>449M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-03-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="55991" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/55991.html">
+																									麻烦满屋 Crowded S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i4883Tb" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'55991\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:cac1243ea342c4a86141d02a2bac150a45e8aaac&amp;dn=Crowded.S01E04.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet55991\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'55991\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cac1243ea342c4a86141d02a2bac150a45e8aaac&amp;dn=Crowded.S01E04.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'55991\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>136M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-03-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="61510" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61510.html">
+																									麻烦满屋 Crowded S01E03 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=4291886255&amp;uk=1163567481" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61510\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg3OTd8ZjRmZmI2NTF8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61510\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:A1CC9202E54840E8940C341D89876A7019F1C4AD" rel="nofollow" target="_blank" name=\'magnet61510\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61510\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:A1CC9202E54840E8940C341D89876A7019F1C4AD" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E03 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61510\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>387M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="55587" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/55587.html">
+																									麻烦满屋 Crowded S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o72S7O2" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'55587\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:28a729fcb80fb5208740930f980b9f58de00eef0&amp;dn=Crowded.S01E03.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet55587\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'55587\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:28a729fcb80fb5208740930f980b9f58de00eef0&amp;dn=Crowded.S01E03.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'55587\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>440M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-03-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="55874" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/55874.html">
+																									麻烦满屋 Crowded S01E03 720P 极光字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pKNUIAv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'55874\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.acfun.tv/v/ac2622544" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'55874\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>255M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-03-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="55586" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/55586.html">
+																									麻烦满屋 Crowded S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGNJni2" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'55586\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f602ecac102ee53e98d2641d223db491ffe10dbb&amp;dn=Crowded.S01E03.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet55586\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'55586\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f602ecac102ee53e98d2641d223db491ffe10dbb&amp;dn=Crowded.S01E03.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'55586\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>124M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-03-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="61509" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61509.html">
+																									麻烦满屋 Crowded S01E02 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=39571355&amp;uk=1163567481" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61509\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg3OTZ8YWZiMTM1MWV8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61509\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:EEC9E9AF037F497F3351702B1580219F52235BB3" rel="nofollow" target="_blank" name=\'magnet61509\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61509\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:EEC9E9AF037F497F3351702B1580219F52235BB3" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E02 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61509\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>406M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="55339" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/55339.html">
+																									麻烦满屋 Crowded S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pKm979D" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'55339\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:61efc7aa4d3e118cf359f6eb0e0a2dcc1f8f5876&amp;dn=Crowded.S01E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet55339\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'55339\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:61efc7aa4d3e118cf359f6eb0e0a2dcc1f8f5876&amp;dn=Crowded.S01E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'55339\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>457M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-03-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="55603" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/55603.html">
+																									麻烦满屋 Crowded S01E02 720P 极光字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bomtoSZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'55603\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.acfun.tv/v/ac2613532" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'55603\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>258M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-03-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="55338" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/55338.html">
+																									麻烦满屋 Crowded S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mhhpSyG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'55338\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e66d9afbe5714bc0cfea7a6881bd86ed5b543879&amp;dn=Crowded.S01E02.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet55338\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'55338\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e66d9afbe5714bc0cfea7a6881bd86ed5b543879&amp;dn=Crowded.S01E02.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'55338\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>139M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-03-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="61508" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/61508.html">
+																									麻烦满屋 Crowded S01E01 720p X字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=729870509&amp;uk=2808485736" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'61508\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://bbs.ncar.cc/forum.php?mod=attachment&amp;aid=NDg3OTV8YzliMmI5MGJ8MTQ3NjAwMzc1NHwwfDI4MjM5" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'61508\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5B29D395770A3766463B96F553DA0D6B9E6CE28F" rel="nofollow" target="_blank" name=\'magnet61508\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'61508\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5B29D395770A3766463B96F553DA0D6B9E6CE28F" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E01 720p X字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'61508\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>510M</td>
+										<td>720p</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-07-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="55337" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/55337.html">
+																									麻烦满屋 Crowded S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bocPpXP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'55337\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:09744e41a2f379d0a63397da56f6f8c5986edc56&amp;dn=Crowded.S01E01.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet55337\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'55337\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:09744e41a2f379d0a63397da56f6f8c5986edc56&amp;dn=Crowded.S01E01.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="麻烦满屋 Crowded S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'55337\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>665M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-03-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="55602" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/55602.html">
+																									麻烦满屋 Crowded S01E01 720P 极光字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i4wWLj3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'55602\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																																								<a style="display:none;" href="http://www.acfun.tv/v/ac2613485" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'55602\' alt=\'在线\'></a>										
+										
+										</td>
+										<td></td>
+										<td>175M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-03-20</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,1003,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1003);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1003);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1003);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

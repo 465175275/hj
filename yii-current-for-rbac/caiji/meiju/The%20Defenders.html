@@ -1,0 +1,1718 @@
+'HTTP/1.1 200 OK
+Date: Tue, 07 Nov 2017 10:02:02 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=dcc930d7e36a6b2773a4f936a033f0c191510048921; expires=Wed, 07-Nov-18 10:02:01 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b9f746047097930-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>捍卫者联盟 The Defenders-捍卫者联盟下载-捍卫者联盟全集下载-The Defenders下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="捍卫者联盟,The Defenders,捍卫者联盟下载,捍卫者联盟全集下载,捍卫者联盟高清下载,捍卫者联盟迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;　漫威将和Netflix合作，共同开发4部原创真人超级英雄剧集和1部迷你剧，将按顺序拍摄超胆侠（Daredevil）、杰茜卡·琼斯（JessicaJones）、铁拳（IronFist）和卢克·凯奇（LukeCage）这四位超级英雄的相关故事。最后还会拍摄1部类似于“复仇者联盟”故事的迷你剧，将四位超级英雄集结，命名为《捍卫者联盟》（TheD" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1448;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FThe%2520Defenders.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FThe%2520Defenders.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1448;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">捍卫者联盟 The Defenders-捍卫者联盟下载-捍卫者联盟全集下载-The Defenders下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i1.fuimg.com/588755/ff0ec931f1d2dc85.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i1.fuimg.com/588755/ff0ec931f1d2dc85.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周六</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：科幻类</span>						
+						<span>最后更新：2017-10-09 17:39</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1448.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">1183</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>　漫威将和Netflix合作，共同开发4部原创真人超级英雄剧集和1部迷你剧，将按顺序拍摄超胆侠（Daredevil）、杰茜卡·琼斯（Jessica Jones）、铁拳（Iron Fist）和卢克·凯奇（Luke Cage）这四位超级英雄的相关故事。最后还会拍摄1部类似于“复仇者联盟”故事的迷你剧，将四位超级英雄集结，命名为《捍卫者联盟》（The Defenders）。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="87381" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87381.html">
+												<font style="color:red;font-weight:bold;">捍卫者联盟 The Defenders S01E08 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1geBMSXP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87381\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ADFF165B0C81DF168A94D9F9FF023984E4459A42&amp;amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E08.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;amp" rel="nofollow" target="_blank" name=\'magnet87381\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87381\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ADFF165B0C81DF168A94D9F9FF023984E4459A42&amp;amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E08.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;amp" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E08 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87381\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>810M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86776" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86776.html">
+																									捍卫者联盟 The Defenders S01E08  1080P  Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pLv7ktP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86776\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E08.The.Defenders.1080p.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86776\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:BDB7BA47D723DFFD1DED5359DAD0C822F6EE3C2F&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E08.The.Defenders.1080p.mp4&amp;tr=udp%3a%2f%2ftracker.openbitto" rel="nofollow" target="_blank" name=\'magnet86776\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86776\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E08.The.Defenders.1080p.mp4|1338814323|B5735A0B7F39A6FEBD1BBB5BF4673ABF|h=JKYA7LM6J2B3GKENTQ3TKTCSILESRF37|/" rel="nofollow" target="_blank" name=\'ed2k86776\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'86776\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:BDB7BA47D723DFFD1DED5359DAD0C822F6EE3C2F&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E08.The.Defenders.1080p.mp4&amp;tr=udp%3a%2f%2ftracker.openbitto" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E08  1080P  Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86776\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.25G</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86622" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86622.html">
+												<font style="color:red;font-weight:bold;">捍卫者联盟 The Defenders S01E08 720p 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pLNrq0j" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86622\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:259F6DD5F82658391FAA37236CEB6D5511B6D2D4&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E08.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fa" rel="nofollow" target="_blank" name=\'magnet86622\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86622\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:259F6DD5F82658391FAA37236CEB6D5511B6D2D4&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E08.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fa" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E08 720p 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86622\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>643M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86488" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86488.html">
+																									捍卫者联盟 The Defenders S01E08 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=if36cjb&amp;f=Marvels.The.Defenders.S01E08.1080p.WEB.x264-JAWN%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86488\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:8eac4d01083f5b181c111fed9ad08eb2b0b218eb&amp;dn=Marvels.The.Defenders.S01E08.1080p.WEB.x264-JAWN%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" target="_blank" name=\'magnet86488\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86488\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8eac4d01083f5b181c111fed9ad08eb2b0b218eb&amp;dn=Marvels.The.Defenders.S01E08.1080p.WEB.x264-JAWN%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E08 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86488\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.57G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86459" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86459.html">
+																									捍卫者联盟 The Defenders S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2mzEHq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86459\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=nmf8ers&amp;f=Marvels.The.Defenders.S01E08.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86459\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:abe6df2928766e3e9c02c289866dd86e25a0a13b&amp;dn=Marvels.The.Defenders.S01E08.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet86459\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86459\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:abe6df2928766e3e9c02c289866dd86e25a0a13b&amp;dn=Marvels.The.Defenders.S01E08.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86459\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.39G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86456" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86456.html">
+																									捍卫者联盟 The Defenders S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bDXVoq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86456\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=kniepmd&amp;f=Marvels.The.Defenders.S01E08.WEB.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86456\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:d2dbb3171eb69f6ebf5f714a4bebcb792495e93b&amp;dn=Marvels.The.Defenders.S01E08.WEB.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet86456\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86456\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d2dbb3171eb69f6ebf5f714a4bebcb792495e93b&amp;dn=Marvels.The.Defenders.S01E08.WEB.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86456\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>370M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87246" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87246.html">
+												<font style="color:red;font-weight:bold;">捍卫者联盟 The Defenders S01E07 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1geJUnb9" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87246\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:D9D433B2100B9A9D57248DD132F5F0A67F20ADC1&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E07.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" target="_blank" name=\'magnet87246\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87246\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:D9D433B2100B9A9D57248DD132F5F0A67F20ADC1&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E07.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E07 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87246\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>577M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86777" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86777.html">
+																									捍卫者联盟 The Defenders S01E07  1080P  Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pLv7ktP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86777\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E07.Fish.In.The.Jailhouse.1080p.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86777\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:8F151F71FE95B7518CA5A94FD064117B8143036B&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E07.Fish.In.The.Jailhouse.1080p.mp4&amp;tr=udp%3a%2f%2ftracker.o" rel="nofollow" target="_blank" name=\'magnet86777\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86777\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E07.Fish.In.The.Jailhouse.1080p.mp4|1131457332|A30B0C0161993B8E8C95FB65907743D0|h=IEMZOGCDMS2DVKB3ZRCLUZ6RQ5LNF2HU|/" rel="nofollow" target="_blank" name=\'ed2k86777\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'86777\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:8F151F71FE95B7518CA5A94FD064117B8143036B&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E07.Fish.In.The.Jailhouse.1080p.mp4&amp;tr=udp%3a%2f%2ftracker.o" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E07  1080P  Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86777\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.05G</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86616" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86616.html">
+												<font style="color:red;font-weight:bold;">捍卫者联盟 The Defenders S01E07 720p 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hsORymw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86616\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:EE21ECFDECD9FFEDF7016C7F88E07D588599A74E&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E07.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fa" rel="nofollow" target="_blank" name=\'magnet86616\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86616\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:EE21ECFDECD9FFEDF7016C7F88E07D588599A74E&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E07.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fa" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E07 720p 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86616\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>581M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86487" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86487.html">
+																									捍卫者联盟 The Defenders S01E07 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=kahoxbp&amp;f=Marvels.The.Defenders.S01E07.1080p.WEB.x264-JAWN%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86487\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ee912f96262a7eff51ab347ed58ea947d9426a6c&amp;dn=Marvels.The.Defenders.S01E07.1080p.WEB.x264-JAWN%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" target="_blank" name=\'magnet86487\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86487\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ee912f96262a7eff51ab347ed58ea947d9426a6c&amp;dn=Marvels.The.Defenders.S01E07.1080p.WEB.x264-JAWN%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E07 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86487\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.30G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86455" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86455.html">
+																									捍卫者联盟 The Defenders S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i5IJAqp" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86455\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=wtsy2qn&amp;f=Marvels.The.Defenders.S01E07.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86455\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:26c2f88df69e490d5b8676152cc94bc554fc1f55&amp;dn=Marvels.The.Defenders.S01E07.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet86455\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86455\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:26c2f88df69e490d5b8676152cc94bc554fc1f55&amp;dn=Marvels.The.Defenders.S01E07.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86455\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.24G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86454" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86454.html">
+																									捍卫者联盟 The Defenders S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jI9UftW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86454\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=x81s2wy&amp;f=Marvels.The.Defenders.S01E07.WEB.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86454\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:812caff475236ccf1c84f892f8f457bc196493cf&amp;dn=Marvels.The.Defenders.S01E07.WEB.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet86454\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86454\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:812caff475236ccf1c84f892f8f457bc196493cf&amp;dn=Marvels.The.Defenders.S01E07.WEB.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86454\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>296M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87213" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87213.html">
+												<font style="color:red;font-weight:bold;">捍卫者联盟 The Defenders S01E06 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dEBmLnr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87213\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2C17C680C5B07702D52A538CEE1DFA9C68A312E1&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E06.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" target="_blank" name=\'magnet87213\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87213\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2C17C680C5B07702D52A538CEE1DFA9C68A312E1&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E06.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E06 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87213\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td>yojc</td>
+										<td>754M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86778" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86778.html">
+																									捍卫者联盟 The Defenders S01E06  1080P  Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pLv7ktP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86778\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E06.Ashes.Ashesr.1080p.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86778\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:94D23B746E1731CE542577F311B91F8465768B48&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E06.Ashes.Ashesr.1080p.mp4&amp;tr=udp%3a%2f%2ftracker.openbittor" rel="nofollow" target="_blank" name=\'magnet86778\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86778\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E08.The.Defenders.1080p.mp4|1338814323|B5735A0B7F39A6FEBD1BBB5BF4673ABF|h=JKYA7LM6J2B3GKENTQ3TKTCSILESRF37|/" rel="nofollow" target="_blank" name=\'ed2k86778\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'86778\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:94D23B746E1731CE542577F311B91F8465768B48&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E06.Ashes.Ashesr.1080p.mp4&amp;tr=udp%3a%2f%2ftracker.openbittor" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E06  1080P  Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86778\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.22G</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86567" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86567.html">
+												<font style="color:red;font-weight:bold;">捍卫者联盟 The Defenders S01E06 720p 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eSiseNg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86567\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:545A51BBB6B079E442EAE30B546B336EA1B40BD3&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E06.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fa" rel="nofollow" target="_blank" name=\'magnet86567\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86567\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:545A51BBB6B079E442EAE30B546B336EA1B40BD3&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E06.720p-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fpt.lax.mx%3a80%2fa" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E06 720p 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86567\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>628M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86486" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86486.html">
+																									捍卫者联盟 The Defenders S01E06 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=cpdft5h&amp;f=Marvels.The.Defenders.S01E06.1080p.WEB.x264-JAWN%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86486\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:10b4b6fbb96268e85884415b07bb02b5c996e2e0&amp;dn=Marvels.The.Defenders.S01E06.1080p.WEB.x264-JAWN%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" target="_blank" name=\'magnet86486\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86486\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:10b4b6fbb96268e85884415b07bb02b5c996e2e0&amp;dn=Marvels.The.Defenders.S01E06.1080p.WEB.x264-JAWN%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E06 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86486\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.41G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86453" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86453.html">
+																									捍卫者联盟 The Defenders S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bpJBOmV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86453\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=ln8p2sm&amp;f=Marvels.The.Defenders.S01E06.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86453\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f624dc36f2ae0be6016fd36274ec91d9dfa9bc7e&amp;dn=Marvels.The.Defenders.S01E06.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet86453\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86453\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f624dc36f2ae0be6016fd36274ec91d9dfa9bc7e&amp;dn=Marvels.The.Defenders.S01E06.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86453\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.36G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86452" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86452.html">
+																									捍卫者联盟 The Defenders S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qYnxowk" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86452\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=6ploat2&amp;f=Marvels.The.Defenders.S01E06.WEB.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86452\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:fe49fd430fe81e7fd28367f74a6dac353caee3a5&amp;dn=Marvels.The.Defenders.S01E06.WEB.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet86452\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86452\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fe49fd430fe81e7fd28367f74a6dac353caee3a5&amp;dn=Marvels.The.Defenders.S01E06.WEB.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86452\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>333M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87165" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87165.html">
+												<font style="color:red;font-weight:bold;">捍卫者联盟 The Defenders S01E05 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1slRr3g5" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87165\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6E7106E6473793863AA401E3D2E1FE7CA3005236&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E05.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" target="_blank" name=\'magnet87165\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87165\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6E7106E6473793863AA401E3D2E1FE7CA3005236&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E05.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E05 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87165\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>618M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86676" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86676.html">
+																									捍卫者联盟 The Defenders S01E05  1080P  Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c4KXbg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86676\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E05.Take.Shelter.1080p.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86676\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:45EE99ED4CE430CD2107DF02D29F37E5756B6BD9&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E05.Take.Shelter.1080p.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3" rel="nofollow" target="_blank" name=\'magnet86676\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86676\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E05.Take.Shelter.1080p.mp4|1231175386|E10CF140D160F9842F3103124A9266D5|h=UQDBVAQ4H4NPSF6MBKCTUZ5V233W5MPD|/" rel="nofollow" target="_blank" name=\'ed2k86676\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'86676\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:45EE99ED4CE430CD2107DF02D29F37E5756B6BD9&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E05.Take.Shelter.1080p.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E05  1080P  Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86676\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.15G</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86485" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86485.html">
+																									捍卫者联盟 The Defenders S01E05 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=agz7pjc&amp;f=Marvels.The.Defenders.S01E05.1080p.WEB.x264-JAWN%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86485\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:bb402bab7f43b4b3a82630c8cfce2682b93c6612&amp;dn=Marvels.The.Defenders.S01E05.1080p.WEB.x264-JAWN%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" target="_blank" name=\'magnet86485\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86485\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:bb402bab7f43b4b3a82630c8cfce2682b93c6612&amp;dn=Marvels.The.Defenders.S01E05.1080p.WEB.x264-JAWN%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E05 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86485\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.28G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86451" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86451.html">
+																									捍卫者联盟 The Defenders S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1slNmXOT" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86451\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=2qw3xlz&amp;f=Marvels.The.Defenders.S01E05.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86451\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b7223f3b4a3cff2965e6c35f35397ff7e4843fc0&amp;dn=Marvels.The.Defenders.S01E05.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet86451\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86451\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b7223f3b4a3cff2965e6c35f35397ff7e4843fc0&amp;dn=Marvels.The.Defenders.S01E05.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86451\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.27G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86450" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86450.html">
+																									捍卫者联盟 The Defenders S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i48ucpJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86450\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=as9gkoe&amp;f=Marvels.The.Defenders.S01E05.WEB.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86450\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:1d5665bfc83776c3095b1958cba71a9f84b8fb7a&amp;dn=Marvels.The.Defenders.S01E05.WEB.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet86450\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86450\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1d5665bfc83776c3095b1958cba71a9f84b8fb7a&amp;dn=Marvels.The.Defenders.S01E05.WEB.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86450\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>328M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="87164" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87164.html">
+												<font style="color:red;font-weight:bold;">捍卫者联盟 The Defenders S01E04 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dFcphQx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87164\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:B7EAF1B7C240A770821226D4E45E1091DC9873F2&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E04.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" target="_blank" name=\'magnet87164\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87164\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:B7EAF1B7C240A770821226D4E45E1091DC9873F2&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E04.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E04 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87164\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>474M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-09-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86613" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86613.html">
+																									捍卫者联盟 The Defenders S01E04 1080p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1ctp9nC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86613\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E04.Royal.Dragon.1080p(1).mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86613\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:D41294BDF3D6C8AF478397AC94388B5E7F3099B4&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E04.Royal.Dragon.1080p%281%29.mp4&amp;tr=http%3a%2f%2fp4p.arenab" rel="nofollow" target="_blank" name=\'magnet86613\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86613\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E04.Royal.Dragon.1080p(1).mp4|1138353596|933F8F19370150F5792E00AC8A867A23|h=T7YMM5WFVFFEYSX45Q67GZ4AEG5Y4DIB|/" rel="nofollow" target="_blank" name=\'ed2k86613\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'86613\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:D41294BDF3D6C8AF478397AC94388B5E7F3099B4&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E04.Royal.Dragon.1080p%281%29.mp4&amp;tr=http%3a%2f%2fp4p.arenab" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E04 1080p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86613\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.06G</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86484" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86484.html">
+																									捍卫者联盟 The Defenders S01E04 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=q491a7o&amp;f=Marvels.The.Defenders.S01E04.1080p.WEB.x264-JAWN%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86484\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c007c548dab9d2a94102f57ed92111b3e706ef46&amp;dn=Marvels.The.Defenders.S01E04.1080p.WEB.x264-JAWN%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" target="_blank" name=\'magnet86484\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86484\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c007c548dab9d2a94102f57ed92111b3e706ef46&amp;dn=Marvels.The.Defenders.S01E04.1080p.WEB.x264-JAWN%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E04 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86484\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.08G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86458" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86458.html">
+																									捍卫者联盟 The Defenders S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i5GbLtj" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86458\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=5h2wp9l&amp;f=Marvels.The.Defenders.S01E04.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86458\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:cd316691a8612d57592d4e6007e92564751373d4&amp;dn=Marvels.The.Defenders.S01E04.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet86458\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86458\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cd316691a8612d57592d4e6007e92564751373d4&amp;dn=Marvels.The.Defenders.S01E04.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86458\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>0.99G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86449" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86449.html">
+																									捍卫者联盟 The Defenders S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1geG58oN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86449\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=2yh8txg&amp;f=Marvels.The.Defenders.S01E04.WEB.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86449\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5e15d1a14e8d6a6b0c5a2a0873381e88c96a5421&amp;dn=Marvels.The.Defenders.S01E04.WEB.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet86449\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86449\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5e15d1a14e8d6a6b0c5a2a0873381e88c96a5421&amp;dn=Marvels.The.Defenders.S01E04.WEB.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86449\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>237M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="87051" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/87051.html">
+												<font style="color:red;font-weight:bold;">捍卫者联盟 The Defenders S01E03 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kVutABX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'87051\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:33BE7EBEAE7AF1E18FA2233BE44DC8E990270CB6&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E03.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" target="_blank" name=\'magnet87051\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'87051\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:33BE7EBEAE7AF1E18FA2233BE44DC8E990270CB6&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E03.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E03 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'87051\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>691M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86612" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86612.html">
+																									捍卫者联盟 The Defenders S01E03 1080p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dFIRV6D" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86612\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%A7%8D%E5%AD%90/%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E03.Worst.Behavior.1080p(1).mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86612\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:338422D03934E2428C84D44367B8E698FF224F79&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E03.Worst.Behavior.1080p%281%29.mp4&amp;tr=http%3a%2f%2fp4p.aren" rel="nofollow" target="_blank" name=\'magnet86612\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86612\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E03.Worst.Behavior.1080p(1).mp4|1493413775|49821F9EE412922A114158E54929E1C3|h=YIM6KJM66T7LH546MV4ZQCVAD6X5MXGA|/" rel="nofollow" target="_blank" name=\'ed2k86612\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'86612\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:338422D03934E2428C84D44367B8E698FF224F79&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E03.Worst.Behavior.1080p%281%29.mp4&amp;tr=http%3a%2f%2fp4p.aren" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E03 1080p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86612\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.39G</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86483" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86483.html">
+																									捍卫者联盟 The Defenders S01E03 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=qnjsb9u&amp;f=Marvels.The.Defenders.S01E03.1080p.WEB.x264-JAWN%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86483\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b490215d8e31322eb43f9532d57667a2ab4d9f8a&amp;dn=Marvels.The.Defenders.S01E03.1080p.WEB.x264-JAWN%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" target="_blank" name=\'magnet86483\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86483\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b490215d8e31322eb43f9532d57667a2ab4d9f8a&amp;dn=Marvels.The.Defenders.S01E03.1080p.WEB.x264-JAWN%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E03 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86483\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.73G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86448" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86448.html">
+																									捍卫者联盟 The Defenders S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2KpJoc" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86448\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=h8xvu6p&amp;f=Marvels.The.Defenders.S01E03.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86448\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4b83ab5673882436e244e7c2420ab2931f84a589&amp;dn=Marvels.The.Defenders.S01E03.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet86448\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86448\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4b83ab5673882436e244e7c2420ab2931f84a589&amp;dn=Marvels.The.Defenders.S01E03.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86448\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.52G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86447" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86447.html">
+																									捍卫者联盟 The Defenders S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfIhItt" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86447\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=tqmc16d&amp;f=Marvels.The.Defenders.S01E03.WEB.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86447\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:65a2c4075daee858b8039f32a89515b2d21d2926&amp;dn=Marvels.The.Defenders.S01E03.WEB.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet86447\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86447\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:65a2c4075daee858b8039f32a89515b2d21d2926&amp;dn=Marvels.The.Defenders.S01E03.WEB.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86447\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>404M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86873" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86873.html">
+												<font style="color:red;font-weight:bold;">捍卫者联盟 The Defenders S01E02 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i55SQSd" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86873\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:88CEADEFC94808421CA9DFCFBB41D85A4DB4FCD7&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E02.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" target="_blank" name=\'magnet86873\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86873\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:88CEADEFC94808421CA9DFCFBB41D85A4DB4FCD7&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E02.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E02 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86873\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>500M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86504" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86504.html">
+																									捍卫者联盟 The Defenders S01E02  1080p  Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mhDDADa" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86504\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%BE%8E%E5%89%A7/%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F/%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E02.The.H.Word.1080p." rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86504\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:20AEEB7BF4E837618B7DB54B6086139819C29EC0&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E02.The.H.Word.1080p.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1" rel="nofollow" target="_blank" name=\'magnet86504\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86504\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E3%80%90Orange%E5%AD%97%E5%B9%95%E7%BB%84%E3%80%91%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F.Marvels.The.Defenders.S01E02.The.H.Word.1080p.mp4|1163484521|37F8D50A7BC29791F9BC4DA89F7AFB8C|h=QAMYLBX6PHZBWF2WB5NRBG4OVIOJIJNN|/" rel="nofollow" target="_blank" name=\'ed2k86504\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'86504\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:20AEEB7BF4E837618B7DB54B6086139819C29EC0&amp;dn=%e3%80%90Orange%e5%ad%97%e5%b9%95%e7%bb%84%e3%80%91%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E02.The.H.Word.1080p.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E02  1080p  Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86504\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.08G</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86482" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86482.html">
+																									捍卫者联盟 The Defenders S01E02 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=2hzngc3&amp;f=Marvels.The.Defenders.S01E02.1080p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86482\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:18f2cc44ebc9f3f6f422ad93bd914ea439d52c60&amp;dn=Marvels.The.Defenders.S01E02.1080p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" target="_blank" name=\'magnet86482\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86482\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:18f2cc44ebc9f3f6f422ad93bd914ea439d52c60&amp;dn=Marvels.The.Defenders.S01E02.1080p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E02 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86482\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>2.50G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86444" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86444.html">
+																									捍卫者联盟 The Defenders S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nuQ2IX7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86444\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=teq1klj&amp;f=Marvels.The.Defenders.S01E02.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86444\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a65724792a7edd2881e580420e3965ff8728d7a4&amp;dn=Marvels.The.Defenders.S01E02.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet86444\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86444\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a65724792a7edd2881e580420e3965ff8728d7a4&amp;dn=Marvels.The.Defenders.S01E02.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86444\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.10G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86446" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86446.html">
+																									捍卫者联盟 The Defenders S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hrQCWOs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86446\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=a49l5p1&amp;f=Marvels.The.Defenders.S01E02.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86446\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4fe209d55fa884501635e35a35bd11ecfd1c7ae9&amp;dn=Marvels.The.Defenders.S01E02.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet86446\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86446\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4fe209d55fa884501635e35a35bd11ecfd1c7ae9&amp;dn=Marvels.The.Defenders.S01E02.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86446\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>379M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86753" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86753.html">
+												<font style="color:red;font-weight:bold;">捍卫者联盟 The Defenders S01E01 720p精校版 天天美剧字幕组</font>
+																							</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dFlIf7N" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86753\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:EF71B8CDA3E27B4205689D6EE7BBD4A66EF6D471&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E01.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" target="_blank" name=\'magnet86753\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86753\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:EF71B8CDA3E27B4205689D6EE7BBD4A66EF6D471&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f.Marvels.The.Defenders.S01E01.720p%e7%b2%be%e6%a0%a1%e7%89%88-%e5%a4%a9%e5%a4%a9%e7%be%8e%e5%89%a7%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E01 720p精校版 天天美剧字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86753\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>705M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86463" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86463.html">
+																									捍卫者联盟 The Defenders S01E01 720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1czuYS2" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86463\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%BE%8E%E5%89%A7/%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F/%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F%20.The%20Defenders%20.S01E01%20.720p%20.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86463\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:DB5763BBF59FCB880995C4850D9D39945620217A&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f%20.The%20Defenders%20.S01E01%20.720p%20.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&amp;tr=h" rel="nofollow" target="_blank" name=\'magnet86463\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86463\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F%20.The%20Defenders%20.S01E01%20.720p%20.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|686381100|CE9FBC77D8D36468E3523D47CEAEE662|h=5NTBQ2Q7JG6VBXQJY22AJTG7GKNTPSEP|/" rel="nofollow" target="_blank" name=\'ed2k86463\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'86463\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:DB5763BBF59FCB880995C4850D9D39945620217A&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f%20.The%20Defenders%20.S01E01%20.720p%20.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&amp;tr=h" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E01 720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86463\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>654M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86471" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86471.html">
+																									捍卫者联盟 The Defenders S01E01  1080P  Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfEdZMz" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86471\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%BE%8E%E5%89%A7/%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F/%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F%20.The%20Defenders%20.S01E01%20.1080p%20.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86471\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:FF7B8B5D36EAA3E9A79E2907072F5C14BA7DBFBE&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f%20.The%20Defenders%20.S01E01%20.1080p%20.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&amp;tr=" rel="nofollow" target="_blank" name=\'magnet86471\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86471\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E6%8D%8D%E5%8D%AB%E8%80%85%E8%81%94%E7%9B%9F%20.The%20Defenders%20.S01E01%20.1080p%20.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|1908087804|47B58F54BF456EB6C10013F013601367|h=RAYESNREQLMHH6XTBOQMB7YMGX3XB472|/" rel="nofollow" target="_blank" name=\'ed2k86471\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'86471\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:FF7B8B5D36EAA3E9A79E2907072F5C14BA7DBFBE&amp;dn=%e6%8d%8d%e5%8d%ab%e8%80%85%e8%81%94%e7%9b%9f%20.The%20Defenders%20.S01E01%20.1080p%20.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&amp;tr=" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E01  1080P  Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86471\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.78G</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86481" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86481.html">
+																									捍卫者联盟 The Defenders S01E01 1080p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=isx8ok7&amp;f=Marvels.The.Defenders.S01E01.1080p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86481\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:f180501c00874c8de12d6f093f75fa7c7fd5840d&amp;dn=Marvels.The.Defenders.S01E01.1080p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" target="_blank" name=\'magnet86481\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86481\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f180501c00874c8de12d6f093f75fa7c7fd5840d&amp;dn=Marvels.The.Defenders.S01E01.1080p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarb" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E01 1080p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86481\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>3.44G</td>
+										<td>1080p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="86405" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86405.html">
+																									捍卫者联盟 The Defenders S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o7CT5we" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86405\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=fjmh49z&amp;f=Marvels.The.Defenders.S01E01.720p.WEBRip.x264-STRiFE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86405\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:cb0bd3c1e51400fd1cb38c7cec04a8b2eafe0fe7&amp;dn=Marvels.The.Defenders.S01E01.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" target="_blank" name=\'magnet86405\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86405\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cb0bd3c1e51400fd1cb38c7cec04a8b2eafe0fe7&amp;dn=Marvels.The.Defenders.S01E01.720p.WEBRip.x264-STRiFE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86405\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.51G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="86445" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/86445.html">
+																									捍卫者联盟 The Defenders S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bOhqIq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'86445\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.is/download.php?id=htiykws&amp;f=Marvels.The.Defenders.S01E01.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'86445\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:78e85774c1a20c3e9c810cc4a70f71abea2b33ea&amp;dn=Marvels.The.Defenders.S01E01.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet86445\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'86445\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:78e85774c1a20c3e9c810cc4a70f71abea2b33ea&amp;dn=Marvels.The.Defenders.S01E01.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="捍卫者联盟 The Defenders S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'86445\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>441M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-08-18</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=745790&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(745790,1448,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1448);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1448);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1448);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

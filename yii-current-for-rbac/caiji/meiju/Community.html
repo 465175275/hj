@@ -1,0 +1,1499 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 10:59:11 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d7ff1b2c1d667cc4bcb2344df73a7604f1509533951; expires=Thu, 01-Nov-18 10:59:11 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e57da431020ea-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>废柴联盟 Community-废柴联盟下载-废柴联盟全集下载-Community下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="废柴联盟,Community,废柴联盟下载,废柴联盟全集下载,废柴联盟高清下载,废柴联盟迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;Greendale社区大学的学生有些「特殊」。这倒不是说他们身体上有什么缺陷，而是因为他们的构成千奇百怪－－有高中时代的「差生」，有刚刚离婚的家庭主妇，还有「活到老学到老」的老人。没有了象牙塔的神圣感，社区大学圆了这些人的「高等教育」梦。故事的主人公是一位说话节奏很快的律师（JoelMcHale扮演），他本来有大学文凭，但那文凭却阴差阳错地" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 230;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FCommunity.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FCommunity.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 230;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">废柴联盟 Community-废柴联盟下载-废柴联盟全集下载-Community下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/32029ae8adb354d9.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/32029ae8adb354d9.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周三</span>
+						<span>状态：剧终</span>
+						<span class="greybg">分类：喜剧类</span>						
+						<span>最后更新：2017-01-13 14:24</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/230.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">403</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>Greendale社区大学的学生有些「特殊」。这倒不是说他们身体上有什么缺陷，而是因为他们的构成千奇百怪－－有高中时代的「差生」，有刚刚离婚的家庭主妇，还有「活到老学到老」的老人。没有了象牙塔的神圣感，社区大学圆了这些人的「高等教育」梦。
+故事的主人公是一位说话节奏很快的律师（Joel McHale扮演），他本来有大学文凭，但那文凭却阴差阳错地作废了。不可能回学校重新念书，他选择加入社区大学。思想活跃的他很快结交了一群好友，并在他们当中组织了一个学习研讨会。事实上，他们对彼此的了解，可能比对书本和作业的了解更深刻，更有价值。
+人生苦短，莫荒废了好年华，这就是本剧要告诉我们的。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="6">
+																			第6季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="4">
+																			第4季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="3">
+																			第3季																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="41049" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41049.html">
+																									废柴联盟 Community S06E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nt1M2hV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'41049\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ee77690a97260efa3c1840a8d51b6bc71e42b559&amp;dn=Community.S06E13.720p.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet41049\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'41049\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ee77690a97260efa3c1840a8d51b6bc71e42b559&amp;dn=Community.S06E13.720p.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41049\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>635M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-06-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="41048" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41048.html">
+																									废柴联盟 Community S06E13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJMbl5h" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'41048\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3556ac3cb37cd106224a006bc82cdeb113b289ba&amp;dn=Community.S06E13.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet41048\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'41048\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3556ac3cb37cd106224a006bc82cdeb113b289ba&amp;dn=Community.S06E13.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E13 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41048\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>181M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-06-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40880" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40880.html">
+																									废柴联盟 Community S06E12 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jG4AeSu" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40880\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:28033b3ad5bbb0262573720360f38d835a5f472a&amp;dn=Community.S06E12.Wedding.Videography.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%" rel="nofollow" target="_blank" name=\'magnet40880\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40880\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:28033b3ad5bbb0262573720360f38d835a5f472a&amp;dn=Community.S06E12.Wedding.Videography.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E12 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40880\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>833M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40820" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40820.html">
+																									废柴联盟 Community S06E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1ntijuaP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40820\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:17e6dce861d07dac3b2dd06d61323ade96412a53&amp;dn=Community.S06E12.720p.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40820\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40820\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:17e6dce861d07dac3b2dd06d61323ade96412a53&amp;dn=Community.S06E12.720p.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40820\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>863M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40819" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40819.html">
+																									废柴联盟 Community S06E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqgrCHm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40819\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8f156a7c859f1409b14173a325aee611c12f3d34&amp;dn=Community.S06E12.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40819\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40819\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8f156a7c859f1409b14173a325aee611c12f3d34&amp;dn=Community.S06E12.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40819\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>248M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40669" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40669.html">
+																									废柴联盟 Community S06E11 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgIIW3Y" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40669\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c1e4e91f4e915ce57e420ebc95dd7e86b49546c2&amp;dn=Community.S06E11.Modern.Espionage.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%" rel="nofollow" target="_blank" name=\'magnet40669\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40669\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c1e4e91f4e915ce57e420ebc95dd7e86b49546c2&amp;dn=Community.S06E11.Modern.Espionage.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E11 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40669\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>899M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40576" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40576.html">
+																									废柴联盟 Community S06E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWzDR6s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40576\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:34b1e877f296dc550cd251836892aed926840c8e&amp;dn=Community.S06E11.720p.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40576\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40576\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:34b1e877f296dc550cd251836892aed926840c8e&amp;dn=Community.S06E11.720p.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40576\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>756M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40575" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40575.html">
+																									废柴联盟 Community S06E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kT8B61T" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40575\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fa1df2233c58c786fb15075b72fdb5b61737ec7e&amp;dn=Community.S06E11.WEBRip.x264-TASTETV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40575\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40575\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fa1df2233c58c786fb15075b72fdb5b61737ec7e&amp;dn=Community.S06E11.WEBRip.x264-TASTETV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40575\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>222M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40359" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40359.html">
+																									废柴联盟 Community S06E10 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bn2LXsN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40359\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5abeec0079c21aae5ea1ca168fb6cc6fdb2aa39e&amp;dn=Community.S06E10.Basic.RV.Repair.and.Palmistry.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;" rel="nofollow" target="_blank" name=\'magnet40359\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40359\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5abeec0079c21aae5ea1ca168fb6cc6fdb2aa39e&amp;dn=Community.S06E10.Basic.RV.Repair.and.Palmistry.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E10 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40359\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>818M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40172" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40172.html">
+																									废柴联盟 Community S06E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTgkWrP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40172\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d24574a2b14abdc58f50dbd24332644645523519&amp;dn=Community.S06E10.720p.WEBRip.x264-TASTETV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40172\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40172\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d24574a2b14abdc58f50dbd24332644645523519&amp;dn=Community.S06E10.720p.WEBRip.x264-TASTETV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40172\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>585M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40171" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40171.html">
+																									废柴联盟 Community S06E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQrQzgm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40171\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d5845b26b49f36000b66b30ea77cf83cecd9b0ba&amp;dn=Community.S06E10.WEBRip.x264-TASTETV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40171\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40171\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d5845b26b49f36000b66b30ea77cf83cecd9b0ba&amp;dn=Community.S06E10.WEBRip.x264-TASTETV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40171\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>172M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39858" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39858.html">
+																									废柴联盟 Community S06E09 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1oA4cY" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39858\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:95871835aa630ec7d53e628150a37154a1afb193&amp;dn=Community.S06E09.Grifting.101.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9." rel="nofollow" target="_blank" name=\'magnet39858\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39858\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:95871835aa630ec7d53e628150a37154a1afb193&amp;dn=Community.S06E09.Grifting.101.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9." rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E09 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39858\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>911M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39743" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39743.html">
+																									废柴联盟 Community S06E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c0xtQpy" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39743\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5c47edce878838ea053ad6c890e202d0e8dd7285&amp;dn=Community.S06E09.720p.WEBRip.x264-TASTETV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&" rel="nofollow" target="_blank" name=\'magnet39743\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39743\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5c47edce878838ea053ad6c890e202d0e8dd7285&amp;dn=Community.S06E09.720p.WEBRip.x264-TASTETV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39743\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>712M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39742" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39742.html">
+																									废柴联盟 Community S06E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJ7MIIR" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39742\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:fa93a42843e8a9021d18156ee602ea7d8e659541&amp;dn=Community.S06E09.WEBRip.x264-TASTETV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;t" rel="nofollow" target="_blank" name=\'magnet39742\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39742\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fa93a42843e8a9021d18156ee602ea7d8e659541&amp;dn=Community.S06E09.WEBRip.x264-TASTETV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;t" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39742\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>211M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39491" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39491.html">
+																									废柴联盟 Community S06E08 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gd5uXHL" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39491\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:221cea9ebcd1c8a391e528bac0ebdb2432c7cc47&amp;dn=Community.S06E08.Intro.to.Recycled.Cinema.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=ud" rel="nofollow" target="_blank" name=\'magnet39491\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39491\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:221cea9ebcd1c8a391e528bac0ebdb2432c7cc47&amp;dn=Community.S06E08.Intro.to.Recycled.Cinema.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=ud" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E08 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39491\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>885M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39358" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39358.html">
+																									废柴联盟 Community S06E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQdCCDG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39358\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5bb7f0d150558dde19cdea7763343cfdfa5b5f3a&amp;dn=Community.S06E08.720p.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp" rel="nofollow" target="_blank" name=\'magnet39358\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39358\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5bb7f0d150558dde19cdea7763343cfdfa5b5f3a&amp;dn=Community.S06E08.720p.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39358\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>722M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39357" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39357.html">
+																									废柴联盟 Community S06E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGh8nFw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39357\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ccfd9be539b99b6fa82d95188a9e9760721ba438&amp;dn=Community.S06E08.Intro.to.Recycled.Cinema.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F" rel="nofollow" target="_blank" name=\'magnet39357\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39357\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ccfd9be539b99b6fa82d95188a9e9760721ba438&amp;dn=Community.S06E08.Intro.to.Recycled.Cinema.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39357\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>223M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39220" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39220.html">
+																									废柴联盟 Community S06E07 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qW5I0X2" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39220\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d51dd44be70b081458ca1d8faee07e0da3f0f538&amp;dn=Community.S06E07.Advanced.Safety.Feature.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet39220\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39220\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d51dd44be70b081458ca1d8faee07e0da3f0f538&amp;dn=Community.S06E07.Advanced.Safety.Feature.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E07 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39220\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>903M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38976" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38976.html">
+																									废柴联盟 Community S06E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWLXnlE" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38976\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:14101803d6aac2d639da094f930e711eb11f3f77&amp;dn=Community.S06E07.720p.WEBRip.x264-TASTETV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&" rel="nofollow" target="_blank" name=\'magnet38976\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38976\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:14101803d6aac2d639da094f930e711eb11f3f77&amp;dn=Community.S06E07.720p.WEBRip.x264-TASTETV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38976\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>677M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38975" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38975.html">
+																									废柴联盟 Community S06E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3tfnsL" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38975\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:200597f447474cf1ba28cf7a27cfb30878016b61&amp;dn=Community.S06E07.Advanced.Safety.Features.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F" rel="nofollow" target="_blank" name=\'magnet38975\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38975\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:200597f447474cf1ba28cf7a27cfb30878016b61&amp;dn=Community.S06E07.Advanced.Safety.Features.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38975\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>205M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38974" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38974.html">
+																									废柴联盟 Community S06E06 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJjzBsv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38974\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4ace0f9aa112a286cf3aa4c8b6f73053c6970c3f&amp;dn=Community.S06E06.Basic.Email.Security.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" target="_blank" name=\'magnet38974\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38974\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4ace0f9aa112a286cf3aa4c8b6f73053c6970c3f&amp;dn=Community.S06E06.Basic.Email.Security.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E06 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38974\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>860M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38551" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38551.html">
+																									废柴联盟 Community S06E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6iLyVw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38551\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c782b5ee82526a5250907008789e7905cad79d49&amp;dn=Community.S06E06.720p.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp" rel="nofollow" target="_blank" name=\'magnet38551\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38551\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c782b5ee82526a5250907008789e7905cad79d49&amp;dn=Community.S06E06.720p.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38551\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>673M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38550" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38550.html">
+																									废柴联盟 Community S06E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1GZNDO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38550\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:963eb44514008b71be671b8ea43c0cc314d6562e&amp;dn=Community+S06E06+WEBRip+x264-TASTETV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr" rel="nofollow" target="_blank" name=\'magnet38550\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38550\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:963eb44514008b71be671b8ea43c0cc314d6562e&amp;dn=Community+S06E06+WEBRip+x264-TASTETV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38550\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>198M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38370" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38370.html">
+																									废柴联盟 Community S06E05 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qW3FVju" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38370\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:845383734b8891db8f4d688ea164b7e1b1f1961f&amp;dn=Community.S06E05.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" target="_blank" name=\'magnet38370\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38370\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:845383734b8891db8f4d688ea164b7e1b1f1961f&amp;dn=Community.S06E05.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A27" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E05 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38370\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>908M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38137" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38137.html">
+																									废柴联盟 Community S06E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o63dUf4" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38137\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:96fa8820baf60476331db9b4bbe53523e1481d77&amp;dn=Community.S06E05.INTERNAL.720p.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me" rel="nofollow" target="_blank" name=\'magnet38137\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38137\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:96fa8820baf60476331db9b4bbe53523e1481d77&amp;dn=Community.S06E05.INTERNAL.720p.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38137\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>660M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38136" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38136.html">
+																									废柴联盟 Community S06E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jG1Qj7g" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38136\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8c7581c1b0a1ea41271d6db4deb46d8f56026610&amp;dn=Community.S06E05.WEBRip.x264-FUM%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet38136\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38136\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8c7581c1b0a1ea41271d6db4deb46d8f56026610&amp;dn=Community.S06E05.WEBRip.x264-FUM%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38136\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>196M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37964" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37964.html">
+																									废柴联盟 Community S06E04 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWypVly" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37964\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4a098f117561e3be450241d7802fba17059bb915&amp;dn=Community.S06E04.Queer.Studies.and.Advanced.Waxing.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&" rel="nofollow" target="_blank" name=\'magnet37964\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37964\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4a098f117561e3be450241d7802fba17059bb915&amp;dn=Community.S06E04.Queer.Studies.and.Advanced.Waxing.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E04 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37964\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>957M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37774" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37774.html">
+																									废柴联盟 Community S06E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWE4S5e" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37774\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ffc15f8198bf4f5a418e04f4c87dc7185fdbdf33&amp;dn=Community.S06E04.INTERNAL.720p.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me" rel="nofollow" target="_blank" name=\'magnet37774\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37774\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ffc15f8198bf4f5a418e04f4c87dc7185fdbdf33&amp;dn=Community.S06E04.INTERNAL.720p.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37774\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>713M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37773" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37773.html">
+																									废柴联盟 Community S06E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGj8Yii" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37773\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:84f37fd2ff26c0654ea45b5b572731d8acdcd39b&amp;dn=Community.S06E04.Queer.Studies.and.Advanced.Waxing.REPACK.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp" rel="nofollow" target="_blank" name=\'magnet37773\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37773\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:84f37fd2ff26c0654ea45b5b572731d8acdcd39b&amp;dn=Community.S06E04.Queer.Studies.and.Advanced.Waxing.REPACK.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37773\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>211M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37570" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37570.html">
+																									废柴联盟 Community S06E03 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bn4LQH5" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37570\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:789216d6f2b6f9bce3fc7623e5f1712a21d3bcd5&amp;dn=Community.S06E03.Basic.Crisis.Room.Decorum.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=u" rel="nofollow" target="_blank" name=\'magnet37570\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37570\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:789216d6f2b6f9bce3fc7623e5f1712a21d3bcd5&amp;dn=Community.S06E03.Basic.Crisis.Room.Decorum.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=u" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E03 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37570\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>766M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37363" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37363.html">
+																									废柴联盟 Community S06E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTyzKUj" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37363\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:837f08ca806333da000a4718c400f985cd84840e&amp;dn=Community.S06E03.720p.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" target="_blank" name=\'magnet37363\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37363\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:837f08ca806333da000a4718c400f985cd84840e&amp;dn=Community.S06E03.720p.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37363\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>533M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37362" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37362.html">
+																									废柴联盟 Community S06E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQvmjEM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37362\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:DE96BA8A7A2931E58B8F3CAA75241E126F0611C2&amp;dn=community+s06e03+basic+crisis+room+decorum+webrip+x264+fum+ettv&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" rel="nofollow" target="_blank" name=\'magnet37362\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37362\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:DE96BA8A7A2931E58B8F3CAA75241E126F0611C2&amp;dn=community+s06e03+basic+crisis+room+decorum+webrip+x264+fum+ettv&amp;tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.com%3A1337" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37362\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>138M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36973" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36973.html">
+																									废柴联盟 Community S06E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgoohuC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36973\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0a05fd39bc795763d684f3d8da32007e1b05ba19&amp;dn=Community.S06E02.INTERNAL.720p.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me" rel="nofollow" target="_blank" name=\'magnet36973\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36973\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0a05fd39bc795763d684f3d8da32007e1b05ba19&amp;dn=Community.S06E02.INTERNAL.720p.WebRip.x264-FiHTV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36973\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>712M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37229" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37229.html">
+																									废柴联盟 Community S06E02 1080p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqf8WOO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37229\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d222d0b56fd077e6226f3bb105fbdff5e52d0a0c&amp;dn=Community.S06E02.Lawnmower.Maintenance.and.Postnatal.Care.1080p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me" rel="nofollow" target="_blank" name=\'magnet37229\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37229\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d222d0b56fd077e6226f3bb105fbdff5e52d0a0c&amp;dn=Community.S06E02.Lawnmower.Maintenance.and.Postnatal.Care.1080p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E02 1080p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37229\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.03G</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36972" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36972.html">
+																									废柴联盟 Community S06E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWn0a0s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36972\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:11bd8fcf815a5e973fdb2d6bc3619d6f9952e1db&amp;dn=Community+S06E02+Lawnmower+Maintenance+and+Postnatal+Care+WebRip+x264-FiHTV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;" rel="nofollow" target="_blank" name=\'magnet36972\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36972\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:11bd8fcf815a5e973fdb2d6bc3619d6f9952e1db&amp;dn=Community+S06E02+Lawnmower+Maintenance+and+Postnatal+Care+WebRip+x264-FiHTV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36972\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>210M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37228" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37228.html">
+																									废柴联盟 Community S06E01 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqrepMW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37228\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:dbc86ccaaa3de2dea6953fbe5c5f69c205d6522d&amp;dn=Community.S06E01.Ladders.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarb" rel="nofollow" target="_blank" name=\'magnet37228\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37228\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:dbc86ccaaa3de2dea6953fbe5c5f69c205d6522d&amp;dn=Community.S06E01.Ladders.720p.WEB-DL.DD5.1.H.264-NTb%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarb" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E01 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37228\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>858M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="36971" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36971.html">
+																									废柴联盟 Community S06E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDxVNNj" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36971\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:d54f7c2ab7f4b3c96c64a12cb9ba97e6910da556&amp;dn=Community.S06E01.720p.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" target="_blank" name=\'magnet36971\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36971\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:d54f7c2ab7f4b3c96c64a12cb9ba97e6910da556&amp;dn=Community.S06E01.720p.WEBRip.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36971\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>645M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="36970" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/36970.html">
+																									废柴联盟 Community S06E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i35povr" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'36970\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6700ea14404be0f03b91ed748789ad5ec593f02f&amp;dn=Community+S06E01+Ladders+WebRip+x264-FiHTV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" target="_blank" name=\'magnet36970\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'36970\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6700ea14404be0f03b91ed748789ad5ec593f02f&amp;dn=Community+S06E01+Ladders+WebRip+x264-FiHTV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&a" rel="nofollow" name=\'miurl\' filename="废柴联盟 Community S06E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'36970\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>202M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-18</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=1442408&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(1442408,230,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,230);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,230);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,230);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

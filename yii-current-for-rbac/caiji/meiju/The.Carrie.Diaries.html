@@ -1,0 +1,1596 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:19:48 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d9a8602ca1a390ec6ba30d8fec545476c1509535188; expires=Thu, 01-Nov-18 11:19:48 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e7610841c22f4-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>凯莉日记 The Carrie Diaries-凯莉日记下载-凯莉日记全集下载-The Carrie Diaries下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="凯莉日记,The Carrie Diaries,凯莉日记下载,凯莉日记全集下载,凯莉日记高清下载,凯莉日记迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;　　该剧是《欲望都市》（SexandtheCity）的正统前传，故事描述《欲望都市》主人公之一CarrieBradshaw（AnnaSophiaRobb）的高中岁月（上世纪八十年代）－－爱情、性、友情、亲情、高中学习和曼哈顿的交际场是她生活的全部。StefaniaOwen扮演Carrie的妹妹Dorrit，14岁的叛逆少女：染了头发，被警察" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 477;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FThe.Carrie.Diaries.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FThe.Carrie.Diaries.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 477;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">凯莉日记 The Carrie Diaries-凯莉日记下载-凯莉日记全集下载-The Carrie Diaries下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/c206b10fc1a18c05.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/c206b10fc1a18c05.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周六</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：喜剧类</span>						
+						<span>最后更新：2013-04-11 13:06</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/477.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">22</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>
+			
+			
+			
+			　　该剧是《欲望都市》（Sex and the City）的正统前传，故事描述《欲望都市》主人公之一Carrie Bradshaw（AnnaSophia Robb）的高中岁月（上世纪八十年代）－－爱情、性、友情、亲情、高中学习和曼哈顿的交际场是她生活的全部。Stefania Owen扮演Carrie的妹妹Dorrit，14岁的叛逆少女：染了头发，被警察逮捕，而且很善于在别人面前演戏。她所做的一切都是为了获得别人的「关注」，提高自己的影响力。Katie Findlay扮演Carrie年纪最大的好友Maggie Landers，一个典型的小镇女孩，是当地警长的女儿，渴望有一天离开小镇到外面去闯荡，但又不知道自己离开以后能干些什么。Ellen Wong扮演Carrie的死党Jill Thompson，人送外号「老鼠」。她对Carrie很忠诚，为人很阳光，也很务实。Austin Butler扮演男主人公Sebastian Kydd，他的到来将搅乱学校里平静的气氛。			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="20240" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20240.html">
+																									凯莉日记 The Carrie Diaries S01E13 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/CD879994B25AB9532FE3D3B7D1C6E73A379A626F.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'20240\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ZWDZTFFSLK4VGL7D2O35DRXHHI3ZUYTP&amp;dn=The.Carrie.Diaries.S01E13.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" target="_blank" name=\'magnet20240\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'20240\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ZWDZTFFSLK4VGL7D2O35DRXHHI3ZUYTP&amp;dn=The.Carrie.Diaries.S01E13.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E13 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'20240\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="20122" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20122.html">
+																									凯莉日记 The Carrie Diaries S01E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/D740DBD8EA757B46B52898F57A7D571970A54978.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'20122\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:25ANXWHKOV5UNNJITD2XU7KXDFYKKSLY&amp;dn=The.Carrie.Diaries.S01E13.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet20122\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'20122\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:25ANXWHKOV5UNNJITD2XU7KXDFYKKSLY&amp;dn=The.Carrie.Diaries.S01E13.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'20122\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>922M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="20121" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/20121.html">
+																									凯莉日记 The Carrie Diaries S01E13 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=412741&amp;uk=271985734" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'20121\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/92AD26D87FE349F81958A409FDEA1843E16CF8DF.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'20121\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:SKWSNWD74NE7QGKYUQE732QYIPQWZ6G7&amp;dn=The.Carrie.Diaries.S01E13.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet20121\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'20121\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:SKWSNWD74NE7QGKYUQE732QYIPQWZ6G7&amp;dn=The.Carrie.Diaries.S01E13.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E13 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'20121\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>267M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="19880" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19880.html">
+																									凯莉日记 The Carrie Diaries S01E12 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/8AD27AA81D500EAEE6A87EE6A4B7B3D0DB95A0A9.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19880\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:RLJHVKA5KAHK5ZVIP3TKJN5T2DNZLIFJ&amp;dn=The.Carrie.Diaries.S01E12.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" target="_blank" name=\'magnet19880\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19880\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:RLJHVKA5KAHK5ZVIP3TKJN5T2DNZLIFJ&amp;dn=The.Carrie.Diaries.S01E12.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E12 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19880\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="19801" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19801.html">
+																									凯莉日记 The Carrie Diaries S01E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/12A07FA6A8FE232E79A59316749982464D2E35BD.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19801\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:CKQH7JVI7YRS46NFSMLHJGMCIZGS4NN5&amp;dn=The.Carrie.Diaries.S01E12.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet19801\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19801\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:CKQH7JVI7YRS46NFSMLHJGMCIZGS4NN5&amp;dn=The.Carrie.Diaries.S01E12.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19801\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>903M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="19800" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19800.html">
+																									凯莉日记 The Carrie Diaries S01E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=408915&amp;uk=3526691891" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'19800\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/49B16059F463A2E2C8C40F076D5491AC9393CED8.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19800\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:JGYWAWPUMOROFSGEB4DW2VERVSJZHTWY&amp;dn=The.Carrie.Diaries.S01E12.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet19800\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19800\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:JGYWAWPUMOROFSGEB4DW2VERVSJZHTWY&amp;dn=The.Carrie.Diaries.S01E12.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19800\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>262M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-04-02</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="19592" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19592.html">
+																									凯莉日记 The Carrie Diaries S01E11 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/8F00C27DB59F2A468B980C57776BECC98FA1EA50.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19592\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:R4AME7NVT4VENC4YBRLXO27MZGH2D2SQ&amp;dn=The.Carrie.Diaries.S01E11.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" target="_blank" name=\'magnet19592\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19592\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:R4AME7NVT4VENC4YBRLXO27MZGH2D2SQ&amp;dn=The.Carrie.Diaries.S01E11.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E11 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19592\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="19498" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19498.html">
+																									凯莉日记 The Carrie Diaries S01E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/3AB40FC1A8C82701A019EB96FB8A15343F6665F1.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19498\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:HK2A7QNIZATQDIAZ5OLPXCQVGQ7WMZPR&amp;dn=The.Carrie.Diaries.S01E11.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet19498\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19498\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:HK2A7QNIZATQDIAZ5OLPXCQVGQ7WMZPR&amp;dn=The.Carrie.Diaries.S01E11.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19498\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>964G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="19497" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19497.html">
+																									凯莉日记 The Carrie Diaries S01E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=347665&amp;uk=3879043689" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'19497\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/B1D8D74F17EC4520F844A6C050C0EA9346F42519.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19497\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:WHMNOTYX5RCSB6CEU3AFBQHKSNDPIJIZ&amp;dn=The+Carrie+Diaries+S01E11+HDTV+x264-LOL[ettv]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=http" rel="nofollow" target="_blank" name=\'magnet19497\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19497\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:WHMNOTYX5RCSB6CEU3AFBQHKSNDPIJIZ&amp;dn=The+Carrie+Diaries+S01E11+HDTV+x264-LOL[ettv]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=http" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19497\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>287M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="19284" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19284.html">
+																									凯莉日记 The Carrie Diaries S01E10 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/B008251ADD22697F78A59CA16BF9ACF4570B1514.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19284\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:WAECKGW5EJUX66FFTSQWX6NM6RLQWFIU&amp;dn=The.Carrie.Diaries.S01E10.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" target="_blank" name=\'magnet19284\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19284\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:WAECKGW5EJUX66FFTSQWX6NM6RLQWFIU&amp;dn=The.Carrie.Diaries.S01E10.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E10 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19284\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="19182" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19182.html">
+																									凯莉日记 The Carrie Diaries S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/B80D7BFE1B738060AB6D848FEC3A733E8014863E.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19182\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:XAGXX7Q3OOAGBK3NQSH6YOTTH2ABJBR6&amp;dn=The.Carrie.Diaries.S01E10.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet19182\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19182\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:XAGXX7Q3OOAGBK3NQSH6YOTTH2ABJBR6&amp;dn=The.Carrie.Diaries.S01E10.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19182\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>981M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="19181" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/19181.html">
+																									凯莉日记 The Carrie Diaries S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=511178&amp;uk=2100659800" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'19181\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/EA346BF0A03BA428C0BB650F2CBAB4C13F3A1D7F.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'19181\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:5I2GX4FAHOSCRQF3MUHSZOVUYE7TUHL7&amp;dn=The+Carrie+Diaries+S01E10+HDTV+x264-LOL[ettv]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=http" rel="nofollow" target="_blank" name=\'magnet19181\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'19181\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5I2GX4FAHOSCRQF3MUHSZOVUYE7TUHL7&amp;dn=The+Carrie+Diaries+S01E10+HDTV+x264-LOL[ettv]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=http" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'19181\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>291M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18979" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18979.html">
+																									凯莉日记 The Carrie Diaries S01E09 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																																																		
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="18888" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18888.html">
+																									凯莉日记 The Carrie Diaries S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/FF762AA3AFF0BBD4486826526824C35D773F45CF.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18888\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:753CVI5P6C55ISDIEZJGQJGDLV3T6ROP&amp;dn=The.Carrie.Diaries.S01E09.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet18888\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18888\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:753CVI5P6C55ISDIEZJGQJGDLV3T6ROP&amp;dn=The.Carrie.Diaries.S01E09.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18888\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>942M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18887" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18887.html">
+																									凯莉日记 The Carrie Diaries S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=306684&amp;uk=1630885252" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'18887\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/BB8D5F5A6C8198F8DF8CA1DDC8AD7A0B342B1E97.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18887\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:XOGV6WTMQGMPRX4MUHO4RLL2BM2CWHUX&amp;dn=The.Carrie.Diaries.S01E09.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet18887\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18887\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:XOGV6WTMQGMPRX4MUHO4RLL2BM2CWHUX&amp;dn=The.Carrie.Diaries.S01E09.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18887\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>291M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="18654" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18654.html">
+																									凯莉日记 The Carrie Diaries S01E08 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/35BB082F1AE5E38589E5F79F617B7DC700C1A9DB.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18654\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:GW5QQLY24XRYLCPF66PWC635Y4AMDKO3&amp;dn=The.Carrie.Diaries.S01E08.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" target="_blank" name=\'magnet18654\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18654\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:GW5QQLY24XRYLCPF66PWC635Y4AMDKO3&amp;dn=The.Carrie.Diaries.S01E08.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E08 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18654\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18582" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18582.html">
+																									凯莉日记 The Carrie Diaries S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/A25541AB338A56176D450C708412D35E0A617AC3.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18582\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:UJKUDKZTRJLBO3KFBRYIIEWTLYFGC6WD&amp;dn=The.Carrie.Diaries.S01E08.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet18582\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18582\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Carrie.Diaries.S01E08.Hush.Hush.720p.HDTV.x264-DIMENSION.mkv|1072957647|6997B5008770E7D0434E61A3C52E2713|h=MWJPE55EEBOQUJRD3MXNK5DIMG5S6TUQ|/" rel="nofollow" target="_blank" name=\'ed2k18582\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18582\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:UJKUDKZTRJLBO3KFBRYIIEWTLYFGC6WD&amp;dn=The.Carrie.Diaries.S01E08.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18582\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="18581" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18581.html">
+																									凯莉日记 The Carrie Diaries S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=366261&amp;uk=1714760180" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'18581\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/5B1B69FFCE8A89E4ABE5D5FFC6FAE34F821E70E0.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18581\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:LMNWT76ORKE6JK7F2X74N6XDJ6BB44HA&amp;dn=The.Carrie.Diaries.S01E08.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet18581\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18581\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Carrie.Diaries.S01E08.Hush.Hush.HDTV.x264-LOL.mp4|322488543|EE87798013A098222C3A9C48BCD13090|h=V4N7HJ23Y62HLAXKNCKUB3DQ72PFC5EN|/" rel="nofollow" target="_blank" name=\'ed2k18581\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18581\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:LMNWT76ORKE6JK7F2X74N6XDJ6BB44HA&amp;dn=The.Carrie.Diaries.S01E08.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18581\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>307M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-03-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18419" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18419.html">
+																									凯莉日记 The Carrie Diaries S01E07 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/C44AC5639A08BA0729ED5B220EA1178CA12A5950.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18419\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:YRFMKY42BC5AOKPNLMRA5IIXRSQSUWKQ&amp;dn=The.Carrie.Diaries.S01E07.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" target="_blank" name=\'magnet18419\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18419\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:YRFMKY42BC5AOKPNLMRA5IIXRSQSUWKQ&amp;dn=The.Carrie.Diaries.S01E07.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E07 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18419\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="18274" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18274.html">
+																									凯莉日记 The Carrie Diaries S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/241045E17EFB8715D2B0BAC3DB982E43CA76A96B.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18274\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:EQIELYL67ODRLUVQXLB5XGBOIPFHNKLL&amp;dn=The.Carrie.Diaries.S01E07.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet18274\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18274\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Carrie.Diaries.S01E07.Caught.720p.HDTV.x264-DIMENSION.mkv|1004537567|B2BE8AE3E68752FE3AD7D125C6003989|h=PXUSRUXBW7RIUL35KVEQ56CFSEW4UZHD|/" rel="nofollow" target="_blank" name=\'ed2k18274\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18274\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:EQIELYL67ODRLUVQXLB5XGBOIPFHNKLL&amp;dn=The.Carrie.Diaries.S01E07.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18274\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>958M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="18273" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18273.html">
+																									凯莉日记 The Carrie Diaries S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=292202&amp;uk=2587209182" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'18273\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/A19134B9D769CF578F32607FAAB5BA660FD388DB.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18273\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:UGITJOOXNHHVPDZSMB72VNN2MYH5HCG3&amp;dn=The.Carrie.Diaries.S01E07.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet18273\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18273\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Carrie.Diaries.S01E07.Caught.HDTV.x264-LOL.mp4|292517725|DA692A4AD1AE81B6EA0067DA46D37680|h=Q2LBCKOQUIAPZTJFO4NSPQF63UWXFNHC|/" rel="nofollow" target="_blank" name=\'ed2k18273\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'18273\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:UGITJOOXNHHVPDZSMB72VNN2MYH5HCG3&amp;dn=The.Carrie.Diaries.S01E07.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18273\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>279M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="18003" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/18003.html">
+																									凯莉日记 The Carrie Diaries S01E06 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/05A49BB8E88281842D1C2C28030DE3A39AE38707.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'18003\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:AWSJXOHIQKAYILI4FQUAGDPDUONOHBYH&amp;dn=The.Carrie.Diaries.S01E06.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" target="_blank" name=\'magnet18003\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'18003\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:AWSJXOHIQKAYILI4FQUAGDPDUONOHBYH&amp;dn=The.Carrie.Diaries.S01E06.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E06 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'18003\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="17901" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17901.html">
+																									凯莉日记 The Carrie Diaries S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/79C296EC9393079D05D8D149219FCE1B6371217F.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17901\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:PHBJN3ETSMDZ2BOY2FESDH6ODNRXCIL7&amp;dn=The.Carrie.Diaries.S01E06.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet17901\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17901\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Carrie.Diaries.S01E06.Endgame.720p.HDTV.x264-DIMENSION.mkv|991032641|77AE626824F03989BCAF037DB4AC7A5C|h=YDGCXZONOEVMFPAFADL3DJ5UUCYADSEA|/" rel="nofollow" target="_blank" name=\'ed2k17901\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'17901\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:PHBJN3ETSMDZ2BOY2FESDH6ODNRXCIL7&amp;dn=The.Carrie.Diaries.S01E06.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17901\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>945M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="17900" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17900.html">
+																									凯莉日记 The Carrie Diaries S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=282885&amp;uk=590671872" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'17900\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/608F507E6F9F05F5DE2BFEFABF333F11BC3F9B1D.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17900\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:MCHVA7TPT4C7LXRL735L6MZ7CG6D7GY5&amp;dn=The.Carrie.Diaries.S01E06.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet17900\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17900\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Carrie.Diaries.S01E06.Endgame.HDTV.x264-LOL.mp4|284194094|E10E81852F13460D2EC699EAE19385DD|h=D6RKAGYC3ABH5F3SCVMFVU6Z2LUZETP6|/" rel="nofollow" target="_blank" name=\'ed2k17900\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'17900\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:MCHVA7TPT4C7LXRL735L6MZ7CG6D7GY5&amp;dn=The.Carrie.Diaries.S01E06.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17900\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>271M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="17593" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17593.html">
+																									凯莉日记 The Carrie Diaries S01E05 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/362391177F743441F860E538A2496A53CACD9FED.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17593\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:GYRZCF37OQ2ED6DA4U4KESLKKPFM3H7N&amp;dn=The.Carrie.Diaries.S01E05.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" target="_blank" name=\'magnet17593\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17593\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:GYRZCF37OQ2ED6DA4U4KESLKKPFM3H7N&amp;dn=The.Carrie.Diaries.S01E05.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E05 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17593\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="17518" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17518.html">
+																									凯莉日记 The Carrie Diaries S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/995154EFC9DFA09853737FF9EF154B77A3E63A85.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17518\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:TFIVJ36J36QJQU3TP7466FKLO6R6MOUF&amp;dn=The.Carrie.Diaries.S01E05.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet17518\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17518\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Carrie.Diaries.S01E05.Dangerous.Territory.720p.HDTV.x264-DIMENSION.mkv|992720496|DE0F1B02D662967E7DA05200DDD80097|h=57RTJSF5VIXMIPX4MZKSYKSQ427YC4MU|/" rel="nofollow" target="_blank" name=\'ed2k17518\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'17518\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:TFIVJ36J36QJQU3TP7466FKLO6R6MOUF&amp;dn=The.Carrie.Diaries.S01E05.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17518\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>946M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="17517" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17517.html">
+																									凯莉日记 The Carrie Diaries S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=257129&amp;uk=1530167325" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'17517\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/C111CF73547DB7D80EB580489162ABE4DE5FEEB3.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17517\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:YEI4642UPW35QDVVQBEJCYVL4TPF73VT&amp;dn=The.Carrie.Diaries.S01E05.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet17517\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17517\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Carrie.Diaries.S01E05.Dangerous.Territory.HDTV.x264-LOL.mp4|286830147|5A0E9258CF5FF33236D4B4DFA66410C2|h=IUA25D32NVXETMSCBSPHA2TW5JXIHVG7|/" rel="nofollow" target="_blank" name=\'ed2k17517\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'17517\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:YEI4642UPW35QDVVQBEJCYVL4TPF73VT&amp;dn=The.Carrie.Diaries.S01E05.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17517\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>273M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="17241" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17241.html">
+																									凯莉日记 The Carrie Diaries S01E04 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/40EAE178279ECD6266176056B9263C59E5B15789.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17241\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:IDVOC6BHT3GWEZQXMBLLSJR4LHS3CV4J&amp;dn=The.Carrie.Diaries.S01E04.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" target="_blank" name=\'magnet17241\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17241\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:IDVOC6BHT3GWEZQXMBLLSJR4LHS3CV4J&amp;dn=The.Carrie.Diaries.S01E04.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E04 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17241\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="17147" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17147.html">
+																									凯莉日记 The Carrie Diaries S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/E77CCC094CA607121CCBFDB88815ECDC088EAB62.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17147\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:456MYCKMUYDREHGL7W4IQFPM3QEI5K3C&amp;dn=The+Carrie+Diaries+S01E04+720p+HDTV+X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet17147\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17147\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Carrie.Diaries.S01E04.Fright.Night.720p.HDTV.x264-DIMENSION.mkv|962987953|BBBD43867472D25AA3005D6866E94057|h=QRZOHYUNREH7JJMZO4ISSJ3YFN4NQAKT|/" rel="nofollow" target="_blank" name=\'ed2k17147\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'17147\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:456MYCKMUYDREHGL7W4IQFPM3QEI5K3C&amp;dn=The+Carrie+Diaries+S01E04+720p+HDTV+X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17147\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>918M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="17146" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/17146.html">
+																									凯莉日记 The Carrie Diaries S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=248715&amp;uk=2905873019" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'17146\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/77FA9FC4305E464D1BF52AE220BAB4FCE4652C9A.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'17146\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:O75J7RBQLZDE2G7VFLRCBOVU7TSGKLE2&amp;dn=The.Carrie.Diaries.S01E04.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet17146\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'17146\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Carrie.Diaries.S01E04.Fright.Night.HDTV.x264-LOL.mp4|284383580|4F5F8D0547758C03E895ED5D42A728A1|h=F43HYWQ2XL6HMCAPMQKTVLO5MV5BUMK6|/" rel="nofollow" target="_blank" name=\'ed2k17146\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'17146\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:O75J7RBQLZDE2G7VFLRCBOVU7TSGKLE2&amp;dn=The.Carrie.Diaries.S01E04.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'17146\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>271M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-02-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="16881" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16881.html">
+																									凯莉日记 The Carrie Diaries S01E03 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/60D1C647344FF0D928EA7DBDD6C96963CD5088B6.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16881\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:MDI4MRZUJ7YNSKHKPW65NSLJMPGVBCFW&amp;dn=The.Carrie.Diaries.S01E03.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" target="_blank" name=\'magnet16881\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16881\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:MDI4MRZUJ7YNSKHKPW65NSLJMPGVBCFW&amp;dn=The.Carrie.Diaries.S01E03.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E03 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16881\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="16799" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16799.html">
+																									凯莉日记 The Carrie Diaries S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://torrage.com/torrent/405B22260BE1A81C9E1BC0C8D821D0AE92F6C1DD.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16799\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:IBNSEJQL4GUBZHQ3YDENQIOQV2JPNQO5&amp;dn=The.Carrie.Diaries.S01E03.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet16799\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16799\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Carrie.Diaries.S01E03.Read.Before.Use.720p.HDTV.x264-DIMENSION.mkv|1089505659|73ABC2D4AD6BFC2AB3B828D9E4072EF4|h=73G6QEJIS7WCQ4TSPW7JFVTMLGKRMEDC|/" rel="nofollow" target="_blank" name=\'ed2k16799\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'16799\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:IBNSEJQL4GUBZHQ3YDENQIOQV2JPNQO5&amp;dn=The.Carrie.Diaries.S01E03.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16799\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="16798" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16798.html">
+																									凯莉日记 The Carrie Diaries S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=190276&amp;uk=2318711132" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'16798\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrage.com/torrent/75758D088BB60517FF58100FD15FD34E6B8BD1B7.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16798\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:OV2Y2CELWYCRP72YCAH5CX6TJZVYXUNX&amp;dn=The.Carrie.Diaries.S01E03.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet16798\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16798\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Carrie.Diaries.S01E03.Read.Before.Use.HDTV.x264-LOL.mp4|331252699|FA614F7BBFAFA987506A984157395758|h=OI3XAAVNOGA6ZUNXQULJZHBAGXPHJ4TI|/" rel="nofollow" target="_blank" name=\'ed2k16798\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'16798\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:OV2Y2CELWYCRP72YCAH5CX6TJZVYXUNX&amp;dn=The.Carrie.Diaries.S01E03.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16798\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>315M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-29</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="16534" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16534.html">
+																									凯莉日记 The Carrie Diaries S01E02 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/CFE0A1492D5DC2351324A6A1496B7C2D32EB2DC6.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16534\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:Z7QKCSJNLXBDKEZEU2QUS234FUZOWLOG&amp;dn=The.Carrie.Diaries.S01E02.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" target="_blank" name=\'magnet16534\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16534\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:Z7QKCSJNLXBDKEZEU2QUS234FUZOWLOG&amp;dn=The.Carrie.Diaries.S01E02.720p.WEB-DL.DD5.1.H.264-KiNGS+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E02 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16534\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="16455" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16455.html">
+																									凯莉日记 The Carrie Diaries S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/3FB2250CDA73EDD1C5F8ABB1405E27474BFA6263.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16455\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:H6ZCKDG2OPW5DRPYVOYUAXRHI5F7UYTD&amp;dn=The.Carrie.Diaries.S01E02.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet16455\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16455\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:H6ZCKDG2OPW5DRPYVOYUAXRHI5F7UYTD&amp;dn=The.Carrie.Diaries.S01E02.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16455\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="16454" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16454.html">
+																									凯莉日记 The Carrie Diaries S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=206407&amp;uk=2251597495" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'16454\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/2F3FDD8A42FA64440E0C06EACE94215DE26040D2.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16454\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2f3fdd8a42fa64440e0c06eace94215de26040d2&amp;dn=The+Carrie+Diaries+S01E02+HDTV+XviD-AFG%5Bettv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6" rel="nofollow" target="_blank" name=\'magnet16454\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16454\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2f3fdd8a42fa64440e0c06eace94215de26040d2&amp;dn=The+Carrie+Diaries+S01E02+HDTV+XviD-AFG%5Bettv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16454\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>330M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="16199" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16199.html">
+																									凯莉日记 The Carrie Diaries S01E01 720p WEB-DL 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/8F62427B4ABEBA5DF1D137A316DBFE58B5860901.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16199\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:8f62427b4abeba5df1d137a316dbfe58b5860901&amp;dn=The.Carrie.Diaries.S01E01.720p.WEB-DL.DD5.1.H.264-KiNGS+%5BPublicH&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" target="_blank" name=\'magnet16199\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16199\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8f62427b4abeba5df1d137a316dbfe58b5860901&amp;dn=The.Carrie.Diaries.S01E01.720p.WEB-DL.DD5.1.H.264-KiNGS+%5BPublicH&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftrac" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E01 720p WEB-DL " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16199\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="16111" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16111.html">
+																									凯莉日记 The Carrie Diaries S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+										<a style="display:none;" href="http://zoink.it/torrent/4E7775606D88F7ECC294502F3E6B4A38CEDE8154.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16111\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:JZ3XKYDNRD36ZQUUKAXT422KHDHN5AKU&amp;dn=The.Carrie.Diaries.S01E01.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" target="_blank" name=\'magnet16111\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16111\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:JZ3XKYDNRD36ZQUUKAXT422KHDHN5AKU&amp;dn=The.Carrie.Diaries.S01E01.720p.HDTV.X264-DIMENSION+[PublicHD]&amp;tr=udp://tracker.publichd.eu/announce&amp;tr=udp://tracker.1337x.org:80/announce&amp;tr=udp://tracker.openbittorrent.com:80/anno" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16111\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="16110" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/16110.html">
+																									凯莉日记 The Carrie Diaries S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=192346&amp;uk=875833059" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'16110\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/5FB4B28D538DEAE8450223D4B625E6478F1D3769.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'16110\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:L62LFDKTRXVOQRICEPKLMJPGI6HR2N3J&amp;dn=The.Carrie.Diaries.S01E01.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" target="_blank" name=\'magnet16110\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'16110\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:L62LFDKTRXVOQRICEPKLMJPGI6HR2N3J&amp;dn=The.Carrie.Diaries.S01E01.HDTV.x264-LOL&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80" rel="nofollow" name=\'miurl\' filename="凯莉日记 The Carrie Diaries S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'16110\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>380M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2013-01-15</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=374398&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(374398,477,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,477);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,477);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,477);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

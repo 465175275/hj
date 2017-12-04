@@ -1,0 +1,1625 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:02:35 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d39a07634add4987a00638b6845db9a531509534155; expires=Thu, 01-Nov-18 11:02:35 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e5cd6729020ea-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>纽约屁民 Animals-纽约屁民下载-纽约屁民全集下载-Animals下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="纽约屁民,Animals,纽约屁民下载,纽约屁民全集下载,纽约屁民高清下载,纽约屁民迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;&lt;spanstyle=&quot;font-family:Verdana,Arial,&amp;#39;microsoftyahei&amp;#39;,宋体;font-size:14px;line-height:28px;background-color:#FFFFFF;&quot;&gt;纽约是世界上最不宜居的城市之一，这里也是许多" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 979;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FAnimals.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FAnimals.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 979;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">纽约屁民 Animals-纽约屁民下载-纽约屁民全集下载-Animals下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i2.muimg.com/588755/8382c87c850469ae.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i2.muimg.com/588755/8382c87c850469ae.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周六</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：动画类</span>						
+						<span>最后更新：2017-08-27 23:28</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/979.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">208</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p><span style="font-family:Verdana, Arial, &#39;microsoft yahei&#39;, 宋体;font-size:14px;line-height:28px;background-color:#FFFFFF;">纽约是世界上最不宜居的城市之一，这里也是许多动物的家……许多「遭到压迫和蹂躏」的动物。这里有失恋的老鼠、对性别存在疑问的鸽子、正在经历中年危机的臭虫、性欲冲动的乌龟、。该剧借动物的形象来描述人类自己的问题：尴尬的闲聊，道德的模糊感，对非人生物存在的漠视</span></p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="2">
+																			第2季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="1">
+																			第1季																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="84447" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/84447.html">
+																									纽约屁民 Animals  S02E10  720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1qXAfkdA" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'84447\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%BE%8E%E5%89%A7/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E10.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'84447\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:750287797A8D9C6A1B4764BA325DAA7D7D57A236&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E10.720P.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&amp;tr=http%3a%2f%2ftracker.dler.org%3" rel="nofollow" target="_blank" name=\'magnet84447\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'84447\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E10.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|344713065|958BC6F348121013B3456FB4825DE371|h=GEMSSGUYT5FOBDTXPSSH2AIPFDNONIOK|/" rel="nofollow" target="_blank" name=\'ed2k84447\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'84447\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:750287797A8D9C6A1B4764BA325DAA7D7D57A236&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E10.720P.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&amp;tr=http%3a%2f%2ftracker.dler.org%3" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E10  720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'84447\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>328M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-07-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="82741" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/82741.html">
+																									纽约屁民 Animals  S02E10 720p End 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1miwoBAo" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'82741\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:2e452b1f73c379df1a0d291ca0977244a2790b49&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet82741\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'82741\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%5B%E6%9C%AC%E5%AD%A3%E7%BB%88%5D%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91.Animals.S02E10.720p.WEB.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|188898939|2f63dc6fff0231d41be35dea9fe2b618|h=rxotivptt46sgjztimafvp2tkfafhtr6|/" rel="nofollow" target="_blank" name=\'ed2k82741\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'82741\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:2e452b1f73c379df1a0d291ca0977244a2790b49&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E10 720p End 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'82741\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>180M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-06-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="81872" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81872.html">
+																									纽约屁民 Animals  S02E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1boQIa8R" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81872\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=q5g81xo&amp;f=Animals.S02E10.720p.HDTV.x264-AVS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'81872\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:19de50c5243d6c41c3305e2a4db787d6cd281a64&amp;dn=Animals.S02E10.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet81872\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81872\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:19de50c5243d6c41c3305e2a4db787d6cd281a64&amp;dn=Animals.S02E10.720p.HDTV.x264-AVS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81872\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>330M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="81871" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81871.html">
+																									纽约屁民 Animals  S02E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o7W1qQI" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81871\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=u6shg8x&amp;f=Animals.S02E10.HDTV.x264-SVA%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'81871\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:696030263c4a5f0f6b043504b7315fbb359d918a&amp;dn=Animals.S02E10.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet81871\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81871\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:696030263c4a5f0f6b043504b7315fbb359d918a&amp;dn=Animals.S02E10.HDTV.x264-SVA%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81871\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>95.2G</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="82312" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/82312.html">
+																									纽约屁民 Animals  S02E09  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o8E0VG2" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'82312\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%BE%8E%E5%89%A7/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91.Animals.S02E09.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'82312\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:62EEC9944713372DE3FB07E58185D61851C51732&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91.Animals.S02E09.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&amp;tr=http%3a%2f%2ftracker.dler.org%3a696" rel="nofollow" target="_blank" name=\'magnet82312\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'82312\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91.Animals.S02E09.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|339894120|178AA94E65F105CADBBE61FDA37946A4|h=HZAVQWAKVC52V2DKV4HWSGSJ6ARFNUFZ|/" rel="nofollow" target="_blank" name=\'ed2k82312\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'82312\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:62EEC9944713372DE3FB07E58185D61851C51732&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91.Animals.S02E09.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&amp;tr=http%3a%2f%2ftracker.dler.org%3a696" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E09  720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'82312\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>324M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="82165" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/82165.html">
+																									纽约屁民 Animals  S02E09 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c14vBkW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'82165\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:547554ab1e62f77a48b983dd3f1aa64ef5bd08d4&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet82165\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'82165\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91.Animals.S02E09.720p.WEB.x264-%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|262005557|5b0253e84dd9dedb5fd9cca052ad791e|h=znzv276j7lxrhj32rrwhnjtiwjzyk76u|/" rel="nofollow" target="_blank" name=\'ed2k82165\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'82165\' alt=\'ed2k高清片源\'></a>										<a style="display:none;" href="http://www.acfun.cn/v/ac3735496_9" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'82165\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:547554ab1e62f77a48b983dd3f1aa64ef5bd08d4&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E09 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'82165\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>250M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="81372" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81372.html">
+																									纽约屁民 Animals  S02E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kUVlfjL" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81372\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=rfgl4mx&amp;f=Animals.S02E09.720p.WEB.h264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'81372\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="https://rarbg.to/download.php?id=rfgl4mx&amp;f=Animals.S02E09.720p.WEB.h264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" name=\'magnet81372\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81372\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="https://rarbg.to/download.php?id=rfgl4mx&amp;f=Animals.S02E09.720p.WEB.h264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81372\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>453M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="81371" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81371.html">
+																									纽约屁民 Animals  S02E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i5MbSBN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81371\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ye316kv&amp;f=Animals.S02E09.WEB.h264-TBS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'81371\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:cc58c8181462fce1b6e8ccb7047751963634ee5c&amp;dn=Animals.S02E09.WEB.h264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet81371\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81371\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cc58c8181462fce1b6e8ccb7047751963634ee5c&amp;dn=Animals.S02E09.WEB.h264-TBS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81371\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>265M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="81743" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81743.html">
+																									纽约屁民 Animals  S02E08 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qYdOAW8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81743\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:bde84a389acf94f7bb577756bffff2052d809018&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet81743\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81743\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91.Animals.S02E08.720p.WEBrip.x264-%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|208811340|28e08da9e86a29bb592a61613eedc796|h=b525x6sdlsxonnyj3ep47p3uugtnejts|/" rel="nofollow" target="_blank" name=\'ed2k81743\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'81743\' alt=\'ed2k高清片源\'></a>										<a style="display:none;" href="http://www.acfun.cn/v/ac3735496_8" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'81743\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:bde84a389acf94f7bb577756bffff2052d809018&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E08 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81743\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>199M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="81639" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81639.html">
+																									纽约屁民 Animals  S02E08  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1geBaEVD" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81639\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%BE%8E%E5%89%A7/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E08.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'81639\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:87429022113CCDF6D1668174DE550BD51CABFE63&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E08.720P.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&amp;tr=http%3a%2f%2ftracker.dler.org%3" rel="nofollow" target="_blank" name=\'magnet81639\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81639\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E08.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|411812600|7E847A8238C953C4CCF431D4AFA4E7F0|h=OTSGCOG2XIKORI3NSFNSVLI2RSOXIV2L|/" rel="nofollow" target="_blank" name=\'ed2k81639\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'81639\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:87429022113CCDF6D1668174DE550BD51CABFE63&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E08.720P.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&amp;tr=http%3a%2f%2ftracker.dler.org%3" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E08  720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81639\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>392M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80739" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80739.html">
+																									纽约屁民 Animals  S02E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1pLI1H0J" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80739\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=jynu13o&amp;f=Animals.S02E08.720p.WEBRip.x264-MOROSE%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80739\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6827239d48469dea6efb91f690f8beb3444aa1b2&amp;dn=Animals.S02E08.720p.WEBRip.x264-MOROSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80739\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80739\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6827239d48469dea6efb91f690f8beb3444aa1b2&amp;dn=Animals.S02E08.720p.WEBRip.x264-MOROSE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80739\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>305M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80738" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80738.html">
+																									纽约屁民 Animals  S02E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o8t1oWM" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80738\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=vpe8rso&amp;f=Animals.S02E08.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80738\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6242939d7be400645cc8ada05d88e78b5a1fc06f&amp;dn=Animals.S02E08.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80738\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80738\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6242939d7be400645cc8ada05d88e78b5a1fc06f&amp;dn=Animals.S02E08.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80738\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>233M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-05-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="81586" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81586.html">
+																									纽约屁民 Animals  S02E07  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c18ySYs" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81586\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%BE%8E%E5%89%A7/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E07.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84..mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'81586\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:706432CB312D6C60906A616CCC1FFC390AD2D7B2&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E07.720P.Orange%e5%ad%97%e5%b9%95%e7%bb%84..mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&amp;tr=http%3a%2f%2ftracker.dler.org%" rel="nofollow" target="_blank" name=\'magnet81586\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81586\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E07.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84..mp4|449550441|46D3726545ADA826AFE0733F11030D49|h=6ITPDSMZF6BE5OLCUJMW2PX6AKZYHFIL|/" rel="nofollow" target="_blank" name=\'ed2k81586\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'81586\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:706432CB312D6C60906A616CCC1FFC390AD2D7B2&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E07.720P.Orange%e5%ad%97%e5%b9%95%e7%bb%84..mp4&amp;tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&amp;tr=http%3a%2f%2ftracker.dler.org%" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E07  720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81586\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>428M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="81169" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/81169.html">
+																									纽约屁民 Animals  S02E07 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gfegEcF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'81169\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c70edd83e8eb4854bb1dedd78bdccaec23201121&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet81169\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'81169\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91.Animals.S02E07.720p.WEBrip.x264-%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|224647140|7a585088311faed3026e9e18e0fd2e92|h=uu66mnf27uhykqdgpwgfnqqj27gmhae3|/" rel="nofollow" target="_blank" name=\'ed2k81169\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'81169\' alt=\'ed2k高清片源\'></a>										<a style="display:none;" href="http://www.acfun.cn/v/ac3735496_7" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'81169\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:c70edd83e8eb4854bb1dedd78bdccaec23201121&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E07 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'81169\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>214M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80277" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80277.html">
+																									纽约屁民 Animals  S02E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2b4w72" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80277\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=82yvfpq&amp;f=Animals.S02E07.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80277\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4005ac59babca23872ae4ee96bad3906ce2a2290&amp;dn=Animals.S02E07.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80277\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80277\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4005ac59babca23872ae4ee96bad3906ce2a2290&amp;dn=Animals.S02E07.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80277\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>376M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-30</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80276" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80276.html">
+																									纽约屁民 Animals  S02E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c1HR2U0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80276\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=i6lp2nw&amp;f=Animals.S02E07.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'80276\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:ccdca0ba2f715f76e187a52f4fccf55eb4057d4f&amp;dn=Animals.S02E07.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet80276\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80276\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ccdca0ba2f715f76e187a52f4fccf55eb4057d4f&amp;dn=Animals.S02E07.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80276\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>110M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-30</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80723" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80723.html">
+																									纽约屁民 Animals  S02E06 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/init?shareid=1337389509&amp;uk=3506733271" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80723\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:b1a289c76192885571f6af146e24602b1946fa47&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet80723\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80723\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91.Animals.S02E06.720p.WEBrip.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|213863126|fb6e3b0ecac98f99c008b345e6a59ccc|h=zz3refvabwosnis7evgzmwdrp5raknqj|/" rel="nofollow" target="_blank" name=\'ed2k80723\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'80723\' alt=\'ed2k高清片源\'></a>										<a style="display:none;" href="http://www.acfun.cn/v/ac3735496_6" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'80723\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:b1a289c76192885571f6af146e24602b1946fa47&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E06 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80723\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>204M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80359" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80359.html">
+																									纽约屁民 Animals  S02E06 720P Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/share/link?shareid=3464999148&amp;uk=1199195641" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80359\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E06.720.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|258012814|B9CDBCFB048EEFB47124DD828E69448B|h=DCNDKH7YLQQRMFI7FFHM6WH66O54PHXF|/" rel="nofollow" target="_blank" name=\'ed2k80359\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'80359\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E06.720.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'80359\' alt=\'其他\'></a>
+																					<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E06.720.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|258012814|B9CDBCFB048EEFB47124DD828E69448B|h=DCNDKH7YLQQRMFI7FFHM6WH66O54PHXF|/" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E06 720P Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80359\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>246M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79674" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79674.html">
+																									纽约屁民 Animals  S02E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1mhClire" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79674\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=kzjhx85&amp;f=Animals.S02E06.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79674\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2ea68abbeb16a82385992337ebd8b84d897160b0&amp;dn=Animals.S02E06.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79674\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79674\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2ea68abbeb16a82385992337ebd8b84d897160b0&amp;dn=Animals.S02E06.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79674\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>361M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-23</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79673" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79673.html">
+																									纽约屁民 Animals  S02E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfij0R5" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79673\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=kih4xbt&amp;f=Animals.S02E06.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79673\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c5c9c8350a32dc16233753146064f08e48ae6aa3&amp;dn=Animals.S02E06.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79673\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79673\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c5c9c8350a32dc16233753146064f08e48ae6aa3&amp;dn=Animals.S02E06.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79673\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>104M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-23</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="80497" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80497.html">
+																									纽约屁民 Animals  S02E05  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o86YdZ0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80497\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E05.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|369837209|7398B154944142639D69A3C7A96E4ECD|h=7EBP22PKFNS2APR5JVASXBUULPUJ4NVG|/" rel="nofollow" target="_blank" name=\'ed2k80497\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'80497\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E05.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'80497\' alt=\'其他\'></a>
+																					<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E05.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|369837209|7398B154944142639D69A3C7A96E4ECD|h=7EBP22PKFNS2APR5JVASXBUULPUJ4NVG|/" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E05  720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80497\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>352M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-05-02</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="80250" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/80250.html">
+																									纽约屁民 Animals  S02E05 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jIoPodo" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'80250\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:dff56289cb9648a5eb2e731b2a0c6fc127d0ce07&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet80250\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'80250\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91.Animals.S02E05.720p.HDTV.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|336498080|d1c496d6eede382a16a8624cc36f2e50|h=qlem3br4pedl3bcdb6rzadxjgel4kjn7|/" rel="nofollow" target="_blank" name=\'ed2k80250\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'80250\' alt=\'ed2k高清片源\'></a>										<a style="display:none;" href="http://www.acfun.cn/v/ac3735496_5" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'80250\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:dff56289cb9648a5eb2e731b2a0c6fc127d0ce07&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E05 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'80250\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>320M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79154" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79154.html">
+																									纽约屁民 Animals  S02E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c1JSFeg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79154\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=asnbtvd&amp;f=Animals.S02E05.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79154\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:319fbb94c8e81de7a697d0f7e6332ccea1632b15&amp;dn=Animals.S02E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79154\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79154\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:319fbb94c8e81de7a697d0f7e6332ccea1632b15&amp;dn=Animals.S02E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79154\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>473M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79153" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79153.html">
+																									纽约屁民 Animals  S02E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1kUGq8Tp" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79153\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=4ymlzq5&amp;f=Animals.S02E05.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79153\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:cf8161920908998b78a26fb984cd60d923f8856d&amp;dn=Animals.S02E05.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet79153\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79153\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cf8161920908998b78a26fb984cd60d923f8856d&amp;dn=Animals.S02E05.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79153\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>144M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79420" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79420.html">
+																									纽约屁民 Animals  S02E04 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qY8ViIo" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79420\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6627db306a580a4af9ffe8f4b560c7cc2ac4077a&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet79420\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79420\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91.Animals.S02E04.720p.HDTV.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|374466182|2cb9bd62dad74fd1334cddfb5f04bbb3|h=nos4v27xgdzmjl5hawfsa7inb5b75toh|/" rel="nofollow" target="_blank" name=\'ed2k79420\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79420\' alt=\'ed2k高清片源\'></a>										<a style="display:none;" href="http://www.acfun.cn/v/ac3735496_4" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'79420\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:6627db306a580a4af9ffe8f4b560c7cc2ac4077a&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E04 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79420\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>357M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-18</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="79105" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79105.html">
+																									纽约屁民 Animals  S02E04  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nv3BuHF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79105\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%BE%8E%E5%89%A7/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E04.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'79105\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:870EBBD28A327D9F6FB51DEEE84FBC66E633F9DA&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E04.720P.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=http%3a%2f%2fp4p.arenab" rel="nofollow" target="_blank" name=\'magnet79105\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79105\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E04.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|312005353|30CD827ED43D9B055D4B5291088123E6|h=KQYE6DOJL2UMOTN6ZQOZD6XNHCAWY4D2|/" rel="nofollow" target="_blank" name=\'ed2k79105\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79105\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E04.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'79105\' alt=\'其他\'></a>
+										<a style="display:none;" href="magnet:?xt=urn:btih:870EBBD28A327D9F6FB51DEEE84FBC66E633F9DA&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E04.720P.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=http%3a%2f%2fp4p.arenab" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E04  720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79105\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>297M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="78599" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78599.html">
+																									纽约屁民 Animals  S02E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1geHKoPP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78599\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=gontapf&amp;f=Animals.S02E04.720p.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78599\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7b5ba50035fbf6d869f8c9f2fb58f5e02a49cbb6&amp;dn=Animals.S02E04.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet78599\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78599\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7b5ba50035fbf6d869f8c9f2fb58f5e02a49cbb6&amp;dn=Animals.S02E04.720p.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78599\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>558M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="78598" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78598.html">
+																									纽约屁民 Animals  S02E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hsMImPm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78598\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=lue426i&amp;f=Animals.S02E04.HDTV.x264-FLEET%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78598\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7b62d44f81362098f859a7305c3cd432f209d196&amp;dn=Animals.S02E04.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet78598\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78598\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7b62d44f81362098f859a7305c3cd432f209d196&amp;dn=Animals.S02E04.HDTV.x264-FLEET%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78598\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>150M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="79039" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/79039.html">
+																									纽约屁民 Animals  S02E03 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kVPZVkN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'79039\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c4dfce7a28ec6c8fc8b56ab8e34157392595df17&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet79039\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'79039\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91.Animals.S02E03.720p.WEB-DL.x264.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|236748552|6cd07ef92295c451b2916114dcd455e1|h=f6dcjt2rc23wrb5omysp6ebvr27p3d3c|/" rel="nofollow" target="_blank" name=\'ed2k79039\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'79039\' alt=\'ed2k高清片源\'></a>										<a style="display:none;" href="http://www.acfun.cn/v/ac3735496_3" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'79039\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:c4dfce7a28ec6c8fc8b56ab8e34157392595df17&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E03 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'79039\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>226M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="78356" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78356.html">
+																									纽约屁民 Animals  S02E03  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jHEqgsQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78356\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%BE%8E%E5%89%A7/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E03.Orange%E5%AD%97%E5%B9%95%E7%BB%84.%E7%AE%80%E4%BD%93%26%E8%8B%B1%E6%96%87.720p.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'78356\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:09315414664197CE0FD949A23F93A803E9EFA3C2&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E03.Orange%e5%ad%97%e5%b9%95%e7%bb%84.%e7%ae%80%e4%bd%93%26%e8%8b%b1%e6%96%87.720p.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2" rel="nofollow" target="_blank" name=\'magnet78356\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78356\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E03.Orange%E5%AD%97%E5%B9%95%E7%BB%84.%E7%AE%80%E4%BD%93&amp;%E8%8B%B1%E6%96%87.720p.mp4|242974665|7957361C32CB88D09F64CD63A3940DA5|h=LUTSW4OGE6J6LVPTTGTLTOCHX462JGGV|/" rel="nofollow" target="_blank" name=\'ed2k78356\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'78356\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E03.Orange%E5%AD%97%E5%B9%95%E7%BB%84.%E7%AE%80%E4%BD%93%26%E8%8B%B1%E6%96%87.720p.mp4" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'78356\' alt=\'其他\'></a>
+										<a style="display:none;" href="magnet:?xt=urn:btih:09315414664197CE0FD949A23F93A803E9EFA3C2&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E03.Orange%e5%ad%97%e5%b9%95%e7%bb%84.%e7%ae%80%e4%bd%93%26%e8%8b%b1%e6%96%87.720p.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E03  720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78356\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>231M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="77965" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77965.html">
+																									纽约屁民 Animals  S02E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bpy5wvX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77965\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=zte2yh7&amp;f=Animals.S02E03.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77965\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:2c9d3c888a4ea0783370b56b6b5cfae5fcf69e61&amp;dn=Animals.S02E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77965\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77965\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:2c9d3c888a4ea0783370b56b6b5cfae5fcf69e61&amp;dn=Animals.S02E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77965\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>426M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77964" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77964.html">
+																									纽约屁民 Animals  S02E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nuXM8YX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77964\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=z5anwsp&amp;f=Animals.S02E03.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77964\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e823e53893a03d4a8719841018313356239c5daa&amp;dn=Animals.S02E03.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77964\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77964\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e823e53893a03d4a8719841018313356239c5daa&amp;dn=Animals.S02E03.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77964\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>122M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-04-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="78432" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/78432.html">
+																									纽约屁民 Animals  S02E02 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1boMBSvl" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'78432\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8416b9e9ef142ee809ee77a889e0c7e66f5a22c9&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet78432\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'78432\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91.Animals.S02E02.720p.WEB-DL.%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD-Fantopia.mp4|230438302|7c94e5b92fadd3f5677bddc211872ac9|h=ylhnz2n43gipxrio4ybjxo5ghg2ldqxl|/" rel="nofollow" target="_blank" name=\'ed2k78432\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'78432\' alt=\'ed2k高清片源\'></a>										<a style="display:none;" href="http://www.acfun.cn/v/ac3616182" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'78432\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:8416b9e9ef142ee809ee77a889e0c7e66f5a22c9&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E02 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'78432\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>219M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-04-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77612" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77612.html">
+																									纽约屁民 Animals  S02E02  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1cxRlZg" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77612\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%BE%8E%E5%89%A7/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E02.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77612\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:9CD4A3C67D32D86F93A578EFD62D32740EE53F4D&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E02.720P.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.ope" rel="nofollow" target="_blank" name=\'magnet77612\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77612\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E02.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|218736757|45021A264552C10D8086F3C19B324D86|h=SAQLMVPJNZAW7E72OFNOQHVYIQO5FGGQ|/" rel="nofollow" target="_blank" name=\'ed2k77612\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'77612\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E02.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'77612\' alt=\'其他\'></a>
+										<a style="display:none;" href="magnet:?xt=urn:btih:9CD4A3C67D32D86F93A578EFD62D32740EE53F4D&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E02.720P.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.ope" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E02  720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77612\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>208M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-03-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="77611" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77611.html">
+																									纽约屁民 Animals  S02E02  1080p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jIQHizO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77611\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://222.186.169.20:8080/%E7%A7%8D%E5%AD%90/%E7%BE%8E%E5%89%A7/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E02.1080P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77611\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:560B79BA3A335EF33646E09119CC146BB0D67A03&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E02.1080P.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.op" rel="nofollow" target="_blank" name=\'magnet77611\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77611\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E02.1080P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4|334755360|44CEF78DAFF76A6F30675E98B250056E|h=BRQEP6OOSR76KBSBUZHV2ZOFA4QAMWZA|/" rel="nofollow" target="_blank" name=\'ed2k77611\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'77611\' alt=\'ed2k高清片源\'></a>																				<a style="display:none;" href="http://222.186.169.20:8080/%E8%B5%84%E6%BA%90/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91/%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E02.1080P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mp4" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'77611\' alt=\'其他\'></a>
+										<a style="display:none;" href="magnet:?xt=urn:btih:560B79BA3A335EF33646E09119CC146BB0D67A03&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E02.1080P.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mp4&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.op" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E02  1080p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77611\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>319M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-03-27</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77429" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77429.html">
+																									纽约屁民 Animals  S02E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1nvnvppB" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77429\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=3mv2kgs&amp;f=Animals.S02E02.720p.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77429\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:a3825e2da0954a5e62693ff3f607e2648130637b&amp;dn=Animals.S02E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77429\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77429\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a3825e2da0954a5e62693ff3f607e2648130637b&amp;dn=Animals.S02E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77429\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>390M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-25</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="77428" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77428.html">
+																									纽约屁民 Animals  S02E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1jIt6Z2m" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77428\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ctvz6xs&amp;f=Animals.S02E02.HDTV.x264-KILLERS%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'77428\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:700e7c482eecda7b860434ea3fa717e1b3b2d176&amp;dn=Animals.S02E02.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet77428\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77428\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:700e7c482eecda7b860434ea3fa717e1b3b2d176&amp;dn=Animals.S02E02.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77428\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>113M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-25</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="77748" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/77748.html">
+																									纽约屁民 Animals  S02E01 720p 翻托邦字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gfkPTf1" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'77748\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:73f7cb174fb4400ee0a637b5b7a2bdc38f121b8e&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" target="_blank" name=\'magnet77748\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'77748\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91.Animals.S02E01.720p.WEB-DL.x264-%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95-Fantopia.mp4|267788685|72f15b572d33af8f34796f60e53ec525|h=p4iuoz3tr6fxcmt67w3kcfp3xiq2u62j|/" rel="nofollow" target="_blank" name=\'ed2k77748\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'77748\' alt=\'ed2k高清片源\'></a>										<a style="display:none;" href="http://www.acfun.cn/v/ac3616182" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'77748\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:73f7cb174fb4400ee0a637b5b7a2bdc38f121b8e&amp;tr=http://tracker.openbittorrent.com/announce&amp;tr=udp://tracker.openbittorrent.com:80/announce&amp;tr=udp://tr.cili001.com:6666/announce&amp;tr=http://tracker.publicbt.com/announce&amp;t" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E01 720p 翻托邦字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'77748\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>255M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-03-29</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="76969" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76969.html">
+																									纽约屁民 Animals  S02E01  720p Orange字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nuMW5ip" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'76969\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3EB50C76FDDC72CE582C4F652A983B5F3E0640AD&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E01.720P.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mkv&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.ope" rel="nofollow" target="_blank" name=\'magnet76969\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76969\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%BA%BD%E7%BA%A6%E5%B1%81%E6%B0%91Animals.S02E01.720P.Orange%E5%AD%97%E5%B9%95%E7%BB%84.mkv|234850718|92FFC7F36589A596740D3B6A9B8CB32D|h=VKIV2QK5ZACZZD2WTB7EXY4MYDRSKW7Z|/" rel="nofollow" target="_blank" name=\'ed2k76969\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'76969\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:3EB50C76FDDC72CE582C4F652A983B5F3E0640AD&amp;dn=%e7%ba%bd%e7%ba%a6%e5%b1%81%e6%b0%91Animals.S02E01.720P.Orange%e5%ad%97%e5%b9%95%e7%bb%84.mkv&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.ope" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E01  720p Orange字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76969\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>223M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2017-03-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="76881" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76881.html">
+																									纽约屁民 Animals  S02E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1gfkPrgv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'76881\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=2gpq45i&amp;f=Animals.S02E01.Episode.Eleven.Rats.720p.HBO.WEBRip.AAC2.0.H264-monkee%5Brartv%5D-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'76881\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:8af1bb6a16df0e2f15cf7d4ad549999d9ebc65e6&amp;dn=Animals.S02E01.Episode.Eleven.Rats.720p.HBO.WEBRip.AAC2.0.H264-monkee%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=ud" rel="nofollow" target="_blank" name=\'magnet76881\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76881\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8af1bb6a16df0e2f15cf7d4ad549999d9ebc65e6&amp;dn=Animals.S02E01.Episode.Eleven.Rats.720p.HBO.WEBRip.AAC2.0.H264-monkee%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=ud" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76881\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>480M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-18</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="76880" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/76880.html">
+																									纽约屁民 Animals  S02E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eRPS8KE" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'76880\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=d3lxq1y&amp;f=Animals.S02E01.WEBRip.x264-RARBG-[rarbg.to].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'76880\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:28333cd6627ffeefbfdb0b0b7728470a444fd611&amp;dn=Animals.S02E01.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet76880\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'76880\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:28333cd6627ffeefbfdb0b0b7728470a444fd611&amp;dn=Animals.S02E01.WEBRip.x264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="纽约屁民 Animals  S02E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'76880\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>243M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2017-03-18</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,979,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,979);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,979);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,979);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

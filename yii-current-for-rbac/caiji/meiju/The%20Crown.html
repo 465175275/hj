@@ -1,0 +1,1608 @@
+'HTTP/1.1 200 OK
+Date: Tue, 07 Nov 2017 10:03:03 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d42669ec91320c387cef46091e91796e61510048983; expires=Wed, 07-Nov-18 10:03:03 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b9f75e206a878bc-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>王冠 The Crown-王冠下载-王冠全集下载-The Crown下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+	  <meta name="keywords" content="王冠,The Crown,王冠下载,王冠全集下载,王冠高清下载,王冠迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;马特·史密斯和约翰·利斯高加盟Netflix剧集《王冠》(TheCrown，暂译)，二人分别饰演菲利普亲王和丘吉尔。剧集剧本由《女王》编剧彼得·摩根创作，首播集由《时时刻刻》导演史蒂芬·戴德利执导，讲述伊丽莎白二世与丘吉尔在二战后，重塑英伦的故事。之前确定由克莱尔·福伊出演伊丽莎白二世。&lt;/p&gt;" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=14">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+        <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 1204;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FThe%2520Crown.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fwww.ttmeiju.vip%2Fmeiju%2FThe%2520Crown.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 1204;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">王冠 The Crown-王冠下载-王冠全集下载-The Crown下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.nbimg.com/588755/2c563b61bf4b8309.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.nbimg.com/588755/2c563b61bf4b8309.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：随机</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：</span>						
+						<span>最后更新：2017-10-18 08:26</span>
+						<span class="greybg">回归：2017-12-09</span>
+						<span>倒计时：32天</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/1204.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">879</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>马特·史密斯和约翰·利斯高加盟Netflix剧集《王冠》(The Crown，暂译)，二人分别饰演菲利普亲王和丘吉尔。剧集剧本由《女王》编剧彼得·摩根创作，首播集由《时时刻刻》导演史蒂芬·戴德利执导，讲述伊丽莎白二世与丘吉尔在二战后，重塑英伦的故事。之前确定由克莱尔·福伊出演伊丽莎白二世。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="70027" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/70027.html">
+																									王冠 The Crown S01E10 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kVNRg9L" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'70027\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E10.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|474470293|B16EE9CD672272860A6203F1A26B5E2D|h=JHQ6GFG6E3WPRIU7XY4XWCUSLIPRP2WD|/" rel="nofollow" target="_blank" name=\'ed2k70027\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'70027\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E10.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|474470293|B16EE9CD672272860A6203F1A26B5E2D|h=JHQ6GFG6E3WPRIU7XY4XWCUSLIPRP2WD|/" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E10 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'70027\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>452.5M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68128" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68128.html">
+																									王冠 The Crown S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bYbjd0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68128\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ftpukwm&amp;f=The.Crown.S01E10.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68128\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c060821e566a184091cefac60e44710af1aabb2b&amp;dn=The.Crown.S01E10.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68128\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68128\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c060821e566a184091cefac60e44710af1aabb2b&amp;dn=The.Crown.S01E10.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68128\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.00G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68127" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68127.html">
+																									王冠 The Crown S01E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1boPlBS7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68127\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=u6dbra4&amp;f=The.Crown.S01E10.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68127\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3fbe1e86ad7053a17e2184ae37580a21454c90da&amp;dn=The.Crown.S01E10.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68127\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68127\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3fbe1e86ad7053a17e2184ae37580a21454c90da&amp;dn=The.Crown.S01E10.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68127\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>289M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69791" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69791.html">
+																									王冠 The Crown S01E09 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sltSy0d" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69791\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E09.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|487523042|AB7317F530CD338069CB28D70F78CB75|h=CRERUH2BTNYXQVCENEY2OPXBRH2JQVWV|/" rel="nofollow" target="_blank" name=\'ed2k69791\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'69791\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E09.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|487523042|AB7317F530CD338069CB28D70F78CB75|h=CRERUH2BTNYXQVCENEY2OPXBRH2JQVWV|/" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E09 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69791\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>464.9M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-12-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68364" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68364.html">
+																									王冠 The Crown S01E09 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i4ITWEh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68364\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:C3E8E00E4DE4704C38CED4DE449EA077898B66E0&amp;dn=The.Crown.S01E09.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" target="_blank" name=\'magnet68364\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68364\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:C3E8E00E4DE4704C38CED4DE449EA077898B66E0&amp;dn=The.Crown.S01E09.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E09 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68364\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>941M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-11</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68126" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68126.html">
+																									王冠 The Crown S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dF82Neh" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68126\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=tkwljn7&amp;f=The.Crown.S01E09.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68126\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b4aa96711799a764cd8104251feb91716d7f887f&amp;dn=The.Crown.S01E09.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68126\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68126\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b4aa96711799a764cd8104251feb91716d7f887f&amp;dn=The.Crown.S01E09.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68126\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.08G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68125" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68125.html">
+																									王冠 The Crown S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1hrRJlKK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68125\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=39dr1pl&amp;f=The.Crown.S01E09.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68125\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:cf53ad9aa6f0883e1ef24b47f044a366316def27&amp;dn=The.Crown.S01E09.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68125\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68125\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:cf53ad9aa6f0883e1ef24b47f044a366316def27&amp;dn=The.Crown.S01E09.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68125\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>308M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69554" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69554.html">
+																									王冠 The Crown S01E08 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qXBoXHU" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69554\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E08.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|513091622|F0B8F2CFF9BB9DABB09ECCB9F2CED7AC|h=BL3KMZCLVRDKALHHF4NR5IJD7RV4DBDT|/" rel="nofollow" target="_blank" name=\'ed2k69554\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'69554\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E08.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|513091622|F0B8F2CFF9BB9DABB09ECCB9F2CED7AC|h=BL3KMZCLVRDKALHHF4NR5IJD7RV4DBDT|/" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E08 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69554\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>489.3M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68303" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68303.html">
+																									王冠 The Crown S01E08 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1geVPmqJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68303\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9D969A4F37FED8877B527E7E7BA983FA3294E5B5&amp;dn=The.Crown.S01E08.720p.FIX字幕侠%26尤尼控领域" rel="nofollow" target="_blank" name=\'magnet68303\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68303\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9D969A4F37FED8877B527E7E7BA983FA3294E5B5&amp;dn=The.Crown.S01E08.720p.FIX字幕侠%26尤尼控领域" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E08 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68303\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>912M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68124" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68124.html">
+																									王冠 The Crown S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2ge8bY" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68124\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=j4k5ex8&amp;f=The.Crown.S01E08.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68124\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:def8cce4c81f5af648a4ef644eaa3d81089d8176&amp;dn=The.Crown.S01E08.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68124\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68124\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:def8cce4c81f5af648a4ef644eaa3d81089d8176&amp;dn=The.Crown.S01E08.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68124\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.08G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68123" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68123.html">
+																									王冠 The Crown S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bpKcmgZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68123\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=5xd6nho&amp;f=The.Crown.S01E08.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68123\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:feff449724c2f8c79e012112b5b5183c226a74e5&amp;dn=The.Crown.S01E08.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68123\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68123\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:feff449724c2f8c79e012112b5b5183c226a74e5&amp;dn=The.Crown.S01E08.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68123\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>314M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69165" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69165.html">
+																									王冠 The Crown S01E07 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pLJE2Yf" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69165\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E07.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|405520756|0FE2182E7C411AC5EA63EDCBAB3FFA4A|h=4SJMZ576JLCD3RHGSRJRH2FAOLTNHHNI|/" rel="nofollow" target="_blank" name=\'ed2k69165\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'69165\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E07.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|405520756|0FE2182E7C411AC5EA63EDCBAB3FFA4A|h=4SJMZ576JLCD3RHGSRJRH2FAOLTNHHNI|/" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E07 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69165\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>386.7M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68262" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68262.html">
+																									王冠 The Crown S01E07 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qYfGmqK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68262\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1727A77D07D83A62928776B4602F15EB3AC7038D&amp;dn=The.Crown.S01E07.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F.mkv" rel="nofollow" target="_blank" name=\'magnet68262\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68262\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Crown.S01E07.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0&amp;%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F.mkv|957847055|CEADD74992D334184893707D76EEEADB|h=K2GD3PTQ4O6VWLQU6IHEAHL2BXIFKKOA|/" rel="nofollow" target="_blank" name=\'ed2k68262\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'68262\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:1727A77D07D83A62928776B4602F15EB3AC7038D&amp;dn=The.Crown.S01E07.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F.mkv" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E07 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68262\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>913M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68116" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68116.html">
+																									王冠 The Crown S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o7OPl5C" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68116\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=9ycl4i5&amp;f=The.Crown.S01E07.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68116\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0dfc1d279ed87b786058b9b46704c7972c8f77ee&amp;dn=The.Crown.S01E07.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68116\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68116\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0dfc1d279ed87b786058b9b46704c7972c8f77ee&amp;dn=The.Crown.S01E07.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68116\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>986M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68115" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68115.html">
+																									王冠 The Crown S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o8rVzKm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68115\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=h5r39dw&amp;f=The.Crown.S01E07.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68115\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:6000ac4fe1989abe2954bcd0c63bf60e7bbbe514&amp;dn=The.Crown.S01E07.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68115\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68115\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6000ac4fe1989abe2954bcd0c63bf60e7bbbe514&amp;dn=The.Crown.S01E07.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68115\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>263M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="69058" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/69058.html">
+																									王冠 The Crown S01E06 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qXIam8s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'69058\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E06.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|507080061|37C2A53F4F81FA53F225598A66A1B0EF|h=27KD5KJPN5ORL32WLWEKSGXUMKUAAIAL|/" rel="nofollow" target="_blank" name=\'ed2k69058\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'69058\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E06.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|507080061|37C2A53F4F81FA53F225598A66A1B0EF|h=27KD5KJPN5ORL32WLWEKSGXUMKUAAIAL|/" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E06 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'69058\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>483.6M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68173" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68173.html">
+																									王冠 The Crown S01E06 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qYjJRA0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68173\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:778C1D93BFCC169F0D66B1F0CD9A2FD809992BF1&amp;dn=The.Crown.S01E06.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" target="_blank" name=\'magnet68173\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68173\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Crown.S01E06.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0&amp;%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F.mkv|950868377|AFC853EDD8E95977829FA4966D0E3858|h=DBCHRMORHNGHMTGN3DWLJJS62U2JNB3T|/" rel="nofollow" target="_blank" name=\'ed2k68173\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'68173\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:778C1D93BFCC169F0D66B1F0CD9A2FD809992BF1&amp;dn=The.Crown.S01E06.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E06 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68173\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>906M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68112" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68112.html">
+																									王冠 The Crown S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eSBi7Ua" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68112\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=men3fs5&amp;f=The.Crown.S01E06.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68112\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:61abfbd571eaa75991bfecf644ba456cf148b5e3&amp;dn=The.Crown.S01E06.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68112\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68112\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:61abfbd571eaa75991bfecf644ba456cf148b5e3&amp;dn=The.Crown.S01E06.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68112\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.17G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68111" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68111.html">
+																									王冠 The Crown S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1miQ5wN2" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68111\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=toqhlp7&amp;f=The.Crown.S01E06.WEBRip.X264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68111\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e5af16daa1d21fa8a508e1cc9d69162eafbdb877&amp;dn=The.Crown.S01E06.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68111\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68111\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e5af16daa1d21fa8a508e1cc9d69162eafbdb877&amp;dn=The.Crown.S01E06.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68111\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>506M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68620" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68620.html">
+																									王冠 The Crown S01E05 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jIwhEIi" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68620\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E05.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|404815785|55D43C2EC7FCC254E68AA6EC2A07EE23|h=IB63JHJYHK2PFX452OHYRSPEZWMPZBT5|/" rel="nofollow" target="_blank" name=\'ed2k68620\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'68620\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E05.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|404815785|55D43C2EC7FCC254E68AA6EC2A07EE23|h=IB63JHJYHK2PFX452OHYRSPEZWMPZBT5|/" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E05 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68620\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>386.1M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68167" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68167.html">
+																									王冠 The Crown S01E05 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jIbiBRK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68167\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9E05A099D841C00EBC21564DC2C0DF4A67A7BF68&amp;dn=The.Crown.S01E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" target="_blank" name=\'magnet68167\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68167\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Crown.S01E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0&amp;%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F.mkv|902850139|69129001D9757F0C65751E3B2971D025|h=XTZPVBZNTAWDZ4H3HBTOIX3PXWGBTM2Y|/" rel="nofollow" target="_blank" name=\'ed2k68167\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'68167\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:9E05A099D841C00EBC21564DC2C0DF4A67A7BF68&amp;dn=The.Crown.S01E05.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E05 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68167\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>861M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-08</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68110" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68110.html">
+																									王冠 The Crown S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1bpbwQdx" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68110\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=bohkunm&amp;f=The.Crown.S01E05.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68110\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:74846597b502204c344f73b9bb889ba85e51c68d&amp;dn=The.Crown.S01E05.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68110\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68110\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:74846597b502204c344f73b9bb889ba85e51c68d&amp;dn=The.Crown.S01E05.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68110\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>866M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68109" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68109.html">
+																									王冠 The Crown S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1eS3bdvW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68109\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=gmyo736&amp;f=The.Crown.S01E05.WEBRip.X264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68109\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:fdb744023c4b8324d44ae50a83f8f761ed7bdef3&amp;dn=The.Crown.S01E05.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68109\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68109\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:fdb744023c4b8324d44ae50a83f8f761ed7bdef3&amp;dn=The.Crown.S01E05.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68109\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>482M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68122" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68122.html">
+																									王冠 The Crown S01E04 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1nvLdIn3" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68122\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:DFAC552F71A4A6F62FBB95A2BEC688E2058048E5&amp;dn=%5BV2%5DThe.Crown.S01E04.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" target="_blank" name=\'magnet68122\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68122\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|[V2]The.Crown.S01E04.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0&amp;%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F.mkv|945529573|95EF44CC3CE4FD3E6E947B3B9F86B4E3|h=W2EKAUUV6U4HVVGPRZSOBFLEMDLKHNJB|/" rel="nofollow" target="_blank" name=\'ed2k68122\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'68122\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:DFAC552F71A4A6F62FBB95A2BEC688E2058048E5&amp;dn=%5BV2%5DThe.Crown.S01E04.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E04 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68122\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>901M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-08</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68028" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68028.html">
+																									王冠 The Crown S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i5LlPM9" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68028\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=g6b8irl&amp;f=The.Crown.S01E04.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68028\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:38da3198c3752db2e69eb7a65df142100ec30599&amp;dn=The.Crown.S01E04.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68028\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68028\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:38da3198c3752db2e69eb7a65df142100ec30599&amp;dn=The.Crown.S01E04.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68028\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>943M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68027" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68027.html">
+																									王冠 The Crown S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c156HXm" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68027\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=lwx5tq6&amp;f=The.Crown.S01E04.WEBRip.X264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'68027\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:130adf756e2ba28b3c3441f4f30c64223c30a933&amp;dn=The.Crown.S01E04.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet68027\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68027\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:130adf756e2ba28b3c3441f4f30c64223c30a933&amp;dn=The.Crown.S01E04.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68027\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>506M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68185" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68185.html">
+																									王冠 The Crown S01E03 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jICw1ds" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68185\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E03.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|443140451|F62A8055D35C7F3CF74C4621D0BDB1A3|h=LWHLZI7GP3FSIYAQWTZAPU7MDQZMBKTY|/" rel="nofollow" target="_blank" name=\'ed2k68185\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'68185\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E03.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|443140451|F62A8055D35C7F3CF74C4621D0BDB1A3|h=LWHLZI7GP3FSIYAQWTZAPU7MDQZMBKTY|/" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E03 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68185\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>422.6M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68053" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68053.html">
+																									王冠 The Crown S01E03 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1cJyn8a" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68053\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6009DCF4FC849E1367B389A55CE9757B3336AE72&amp;dn=The.Crown.S01E03.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" target="_blank" name=\'magnet68053\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68053\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Crown.S01E03.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0&amp;%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F.mkv|973142025|A707213113F1B6673A9BDE8BAF11BFE0|h=Q3ZUVF5GWIBPYPCO7AHH5KLWQPYQPDFA|/" rel="nofollow" target="_blank" name=\'ed2k68053\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'68053\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:6009DCF4FC849E1367B389A55CE9757B3336AE72&amp;dn=The.Crown.S01E03.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E03 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68053\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>928M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67967" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67967.html">
+																									王冠 The Crown S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1dFHqhXZ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67967\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=ajq75rw&amp;f=The.Crown.S01E03.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67967\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:af08eee5c30bb6cff818bfe4bda11daca31481df&amp;dn=The.Crown.S01E03.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67967\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67967\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:af08eee5c30bb6cff818bfe4bda11daca31481df&amp;dn=The.Crown.S01E03.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67967\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>951M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="67966" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67966.html">
+																									王冠 The Crown S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1skJZqwP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67966\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=1yixtkr&amp;f=The.Crown.S01E03.WEBRip.X264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67966\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:284ee3993503ba7b562a2c18b43eba9a9d598abb&amp;dn=The.Crown.S01E03.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67966\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67966\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:284ee3993503ba7b562a2c18b43eba9a9d598abb&amp;dn=The.Crown.S01E03.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67966\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>519M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68186" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68186.html">
+																									王冠 The Crown S01E02 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jIe61xG" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68186\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E02.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|646748077|110843238C6DB16FB32C120BD6435F4A|h=EL3I6XRHQQ7FKZVCSDT3WBU3AHUV66XP|/" rel="nofollow" target="_blank" name=\'ed2k68186\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'68186\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E02.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|646748077|110843238C6DB16FB32C120BD6435F4A|h=EL3I6XRHQQ7FKZVCSDT3WBU3AHUV66XP|/" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E02 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68186\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>616.8M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68047" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68047.html">
+																									王冠 The Crown S01E02 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i5ltX5r" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68047\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1CFC13B9C49D3747F8A1ED4B761ED403AE9AC71B&amp;dn=The.Crown.S01E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" target="_blank" name=\'magnet68047\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'68047\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|The.Crown.S01E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0&amp;%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F.mkv|1000186792|603707A853F122A7D4EC2BFA1CDC22B8|h=23L4X7ZT6EPO4KM3UFICGWDS5MRQEXGA|/" rel="nofollow" target="_blank" name=\'ed2k68047\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'68047\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:1CFC13B9C49D3747F8A1ED4B761ED403AE9AC71B&amp;dn=The.Crown.S01E02.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E02 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68047\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>953M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67954" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67954.html">
+																									王冠 The Crown S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1o7EFG3C" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67954\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=hozuabj&amp;f=The.Crown.S01E02.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67954\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:c5ad342ab73859773026cd5e060377ba1fc747b2&amp;dn=The.Crown.S01E02.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67954\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67954\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c5ad342ab73859773026cd5e060377ba1fc747b2&amp;dn=The.Crown.S01E02.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67954\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.34G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="67953" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67953.html">
+																									王冠 The Crown S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1i4ITERj" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67953\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=63fjbqn&amp;f=The.Crown.S01E02.WEBRip.X264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67953\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7e94b28950f7f28356e7580aa97d2f12ea9c8116&amp;dn=The.Crown.S01E02.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67953\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67953\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7e94b28950f7f28356e7580aa97d2f12ea9c8116&amp;dn=The.Crown.S01E02.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67953\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>527M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-06</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67964" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67964.html">
+																									王冠 The Crown S01E01 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c2j3o6s" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67964\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0d71a2370b98b6478999d66fe0d4a824800f73a1&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" target="_blank" name=\'magnet67964\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67964\' alt=\'迅雷高清美剧下载\'></a>										<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E01.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95%E7%B2%BE%E8%A3%85%E5%85%B8%E8%97%8F%E7%89%88-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|589925172|4EE6266044ECC890AD8C1C6604FC031B|h=R6FR27E5Q2V2QEVJ64SVPVPDUNCHVHKL|/" rel="nofollow" target="_blank" name=\'ed2k67964\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'67964\' alt=\'ed2k高清片源\'></a>																				
+										<a style="display:none;" href="magnet:?xt=urn:btih:0d71a2370b98b6478999d66fe0d4a824800f73a1&amp;tr.1=http://tracker.openbittorrent.com/announce&amp;tr.2=udp://tracker.openbittorrent.com:80/announce&amp;tr.3=udp://tr.cili001.com:6666/announce&amp;tr.4=http://tracker.publicbt.com/announ" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E01 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67964\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>562.6M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="67892" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67892.html">
+																									王冠 The Crown S01E01 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o7VA822" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67892\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:FAD551C635D90AF85B575D770F9CF68DBB9D9E6F&amp;dn=The.Crown.S01E01.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" target="_blank" name=\'magnet67892\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67892\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:FAD551C635D90AF85B575D770F9CF68DBB9D9E6F&amp;dn=The.Crown.S01E01.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E01 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67892\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>882M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67891" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67891.html">
+																									王冠 S01E01 720p FIX字幕侠											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o7VA822" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67891\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:FAD551C635D90AF85B575D770F9CF68DBB9D9E6F&amp;dn=The.Crown.S01E01.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" target="_blank" name=\'magnet67891\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67891\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:FAD551C635D90AF85B575D770F9CF68DBB9D9E6F&amp;dn=The.Crown.S01E01.720p.FIX%E5%AD%97%E5%B9%95%E4%BE%A0%26%E5%B0%A4%E5%B0%BC%E6%8E%A7%E9%A2%86%E5%9F%9F" rel="nofollow" name=\'miurl\' filename="王冠 S01E01 720p FIX字幕侠" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67891\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>882M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="67894" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67894.html">
+																									王冠 The Crown S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1c2ur7gO" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67894\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=7ft2vdn&amp;f=The.Crown.S01E01.720p.WEBRip.X264-DEFLATE%5Brartv%5D-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67894\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0f87b2f0eb585de22763939c0584ee3244457ab7&amp;dn=The.Crown.S01E01.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67894\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67894\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0f87b2f0eb585de22763939c0584ee3244457ab7&amp;dn=The.Crown.S01E01.720p.WEBRip.X264-DEFLATE%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67894\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.16G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="67893" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/67893.html">
+																									王冠 The Crown S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="https://pan.baidu.com/s/1miLfACK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'67893\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://rarbg.to/download.php?id=e2yl1bj&amp;f=The.Crown.S01E01.WEBRip.X264-RARBG-[rarbg.com].torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'67893\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:e6e3dd654ed6bf76a109a2faf859802e10ff1d81&amp;dn=The.Crown.S01E01.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet67893\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'67893\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e6e3dd654ed6bf76a109a2faf859802e10ff1d81&amp;dn=The.Crown.S01E01.WEBRip.X264-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'67893\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>489M</td>
+										<td>普清</td>
+										<td>
+																																							无字幕										</td>
+										<td>2016-11-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="68361" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68361.html">
+																									王冠 The Crown S01E04 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o8PL8pW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68361\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E04.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|408398052|362689E11DE5739C444599BC9F25D13C|h=JDQDUHCCOJFY4BKAOHDP3URLGVDLXTWK|/" rel="nofollow" target="_blank" name=\'ed2k68361\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'68361\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E04.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|408398052|362689E11DE5739C444599BC9F25D13C|h=JDQDUHCCOJFY4BKAOHDP3URLGVDLXTWK|/" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E04 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68361\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>389.5M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-11</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="68103" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/68103.html">
+																									王冠 The Crown S01E02 720p 深影字幕组											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qYnhAEC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'68103\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																														<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E02.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|646748077|110843238C6DB16FB32C120BD6435F4A|h=EL3I6XRHQQ7FKZVCSDT3WBU3AHUV66XP|/" rel="nofollow" target="_blank" name=\'ed2k68103\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'68103\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E7%8E%8B%E5%86%A0.The.Crown.S01E02.720p.HDTV.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95.mp4|646748077|110843238C6DB16FB32C120BD6435F4A|h=EL3I6XRHQQ7FKZVCSDT3WBU3AHUV66XP|/" rel="nofollow" name=\'miurl\' filename="王冠 The Crown S01E02 720p 深影字幕组" target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'68103\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>616.8M</td>
+										<td>熟肉</td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2016-11-07</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=707696&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></textarea>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(707696,1204,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,1204);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,1204);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,1204);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div class="float_layer" id="miaov_float_layer" style="z-index:10001;">
+       <h2> 
+            <a id="btn_min" href="javascript:;" class="min"></a>
+            <a id="btn_close" href="javascript:;" class="close"></a>
+        </h2>
+        <div class="content2">
+            <div class="wrap2">
+                <p><br/></p><script type="text/javascript" src="//mm.nthtcs.com/k.html?s=2067"></script>            </div>
+        </div>
+    </div><div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            $("#HMRichBox").hide();
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

@@ -1,0 +1,1507 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:13:37 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=df82a9c975a8c0ee85329f8535ff5a7a71509534816; expires=Thu, 01-Nov-18 11:13:36 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e6cfdb7222294-LAX
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>妙医世家 Remedy-妙医世家下载-妙医世家全集下载-Remedy下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="妙医世家,Remedy,妙医世家下载,妙医世家全集下载,妙医世家高清下载,妙医世家迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;　　本剧主人公格里芬·康纳来自一个医生世家。在被医学院开除后他被迫回到布洛威医院成为了一名护理员。而他的父亲、和姐妹分别是这所医院的主任、外科医生和护士。被笼罩在辍学阴霾下的格里芬在这里结识了清洁工、项目经理和运输工人等一系列形形色色的人物。他的新生活也就此开始。&lt;/p&gt;" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 792;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FRemedy.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FRemedy.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 792;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">妙医世家 Remedy-妙医世家下载-妙医世家全集下载-Remedy下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i4.buimg.com/588755/20bbe74acfce0e23.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i4.buimg.com/588755/20bbe74acfce0e23.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周二</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：剧情类</span>						
+						<span>最后更新：2015-06-05 15:24</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/792.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">46</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>　　本剧主人公格里芬·康纳来自一个医生世家。在被医学院开除后他被迫回到布洛威医院成为了一名护理员。而他的父亲、和姐妹分别是这所医院的主任、外科医生和护士。被笼罩在辍学阴霾下的格里芬在这里结识了清洁工、项目经理和运输工人等一系列形形色色的人物。他的新生活也就此开始。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="2">
+																			第2季▼																			
+															</h3>
+															<div class="fenge"></div>	
+															<h3 
+																			onclick="Ajxseason(this)" id="0">
+																			合集																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="40585" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40585.html">
+																									妙医世家 Remedy S02E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c0q8SI8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40585\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:a2d447e5fa38046f753f1b306dbd7c54febb8f08&amp;dn=Remedy.S02E10.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40585\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40585\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a2d447e5fa38046f753f1b306dbd7c54febb8f08&amp;dn=Remedy.S02E10.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40585\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.05G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="41174" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41174.html">
+																									妙医世家 Remedy S02E10 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E10.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|550045912|88689E070459A629A7C9A4D2AE249BE4|h=O4XJDWGAUNFSORGXCZAPO7FDQGHDJJKU|/" rel="nofollow" target="_blank" name=\'ed2k41174\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'41174\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E10.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|550045912|88689E070459A629A7C9A4D2AE249BE4|h=O4XJDWGAUNFSORGXCZAPO7FDQGHDJJKU|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E10 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41174\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>524M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-06-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="41173" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/41173.html">
+																									妙医世家 Remedy S02E10 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E10.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|245126853|D57270F4957085CCF113F6677D63BD98|h=NKSQEW5AWKMLJ2WTLHUFQDFJC4CTUC3Z|/" rel="nofollow" target="_blank" name=\'ed2k41173\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'41173\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E10.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|245126853|D57270F4957085CCF113F6677D63BD98|h=NKSQEW5AWKMLJ2WTLHUFQDFJC4CTUC3Z|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E10 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'41173\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>233M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-06-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40584" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40584.html">
+																									妙医世家 Remedy S02E10 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/10gxiQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40584\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:da118d7a83d36d61875bcf5d82393b112c6efbbb&amp;dn=Remedy.S02E10.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40584\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40584\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:da118d7a83d36d61875bcf5d82393b112c6efbbb&amp;dn=Remedy.S02E10.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E10 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40584\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>316M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40580" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40580.html">
+																									妙医世家 Remedy S02E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3xkqRN" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40580\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c1c6338c6c0a066af6977ac41e072aab3cf82236&amp;dn=Remedy.S02E09.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40580\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40580\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c1c6338c6c0a066af6977ac41e072aab3cf82236&amp;dn=Remedy.S02E09.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40580\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.05G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40824" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40824.html">
+																									妙医世家 Remedy S02E09 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E09.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|549241539|AF2756395094491321B56A8CC23839DF|h=TXSFYCAEVRJJCXVOXFJC3VISCQLV22KI|/" rel="nofollow" target="_blank" name=\'ed2k40824\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'40824\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E09.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|549241539|AF2756395094491321B56A8CC23839DF|h=TXSFYCAEVRJJCXVOXFJC3VISCQLV22KI|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E09 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40824\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>523M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40823" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40823.html">
+																									妙医世家 Remedy S02E09 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E09.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|244778828|5FBE500EE826EB2FBA060E810756AA8C|h=RMZD4M52PLY5IIND3CHYDHCAC63VSYVF|/" rel="nofollow" target="_blank" name=\'ed2k40823\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'40823\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E09.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|244778828|5FBE500EE826EB2FBA060E810756AA8C|h=RMZD4M52PLY5IIND3CHYDHCAC63VSYVF|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E09 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40823\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>233M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40579" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40579.html">
+																									妙医世家 Remedy S02E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i32AbaP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40579\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:6bf94db8186a49baf3e9dccfc211dc670471a185&amp;dn=Remedy.S02E09.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40579\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40579\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:6bf94db8186a49baf3e9dccfc211dc670471a185&amp;dn=Remedy.S02E09.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40579\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>318M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40125" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40125.html">
+																									妙医世家 Remedy S02E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qW9gWxe" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40125\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:f6c149585b948e5c187b7f5f39232c9ddcdc4728&amp;dn=Remedy.S02E08.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40125\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40125\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:f6c149585b948e5c187b7f5f39232c9ddcdc4728&amp;dn=Remedy.S02E08.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40125\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.09G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40354" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40354.html">
+																									妙医世家 Remedy S02E08 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E08.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|549051956|7C1B9A5AC348EFB45A863901BB282DBC|h=BY3UXLSGXJRPAJDGT6SZRPU3JSRTZUNI|/" rel="nofollow" target="_blank" name=\'ed2k40354\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'40354\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E08.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|549051956|7C1B9A5AC348EFB45A863901BB282DBC|h=BY3UXLSGXJRPAJDGT6SZRPU3JSRTZUNI|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E08 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40354\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>523M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-15</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="40353" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40353.html">
+																									妙医世家 Remedy S02E08 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E08.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|244681764|A9466E864EBD9D396DDC2F01FA79CE04|h=SUN7HZ5EDKFRGNGF6N7JIB2UBOXHOD3V|/" rel="nofollow" target="_blank" name=\'ed2k40353\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'40353\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E08.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|244681764|A9466E864EBD9D396DDC2F01FA79CE04|h=SUN7HZ5EDKFRGNGF6N7JIB2UBOXHOD3V|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E08 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40353\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>233M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-15</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="40124" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/40124.html">
+																									妙医世家 Remedy S02E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWwpJ9y" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'40124\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:49d42146de830f7383c5b169790111a27d638504&amp;dn=Remedy.S02E08.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" target="_blank" name=\'magnet40124\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'40124\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:49d42146de830f7383c5b169790111a27d638504&amp;dn=Remedy.S02E08.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'40124\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>323M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39711" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39711.html">
+																									妙医世家 Remedy S02E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqthTT6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39711\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5e6855c471e8c914a8ed74205f924a650d0421d8&amp;dn=Remedy.S02E07.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;t" rel="nofollow" target="_blank" name=\'magnet39711\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39711\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5e6855c471e8c914a8ed74205f924a650d0421d8&amp;dn=Remedy.S02E07.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;t" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39711\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.13G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-05</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39929" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39929.html">
+																									妙医世家 Remedy S02E07 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E07.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|547945277|287A761461E3DCB2F80B27E578087588|h=N5IAKS2YXKNVANU7XBSSMKMJM232WT3I|/" rel="nofollow" target="_blank" name=\'ed2k39929\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39929\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E07.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|547945277|287A761461E3DCB2F80B27E578087588|h=N5IAKS2YXKNVANU7XBSSMKMJM232WT3I|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E07 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39929\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>522M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39928" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39928.html">
+																									妙医世家 Remedy S02E07 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E07.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|244204357|D7312429197848C38CE536204C8B32C9|h=PC6DWBJF5OWXKQ2FQYRI7KQLQ3SYQWPK|/" rel="nofollow" target="_blank" name=\'ed2k39928\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39928\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E07.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|244204357|D7312429197848C38CE536204C8B32C9|h=PC6DWBJF5OWXKQ2FQYRI7KQLQ3SYQWPK|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E07 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39928\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>232M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39710" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39710.html">
+																									妙医世家 Remedy S02E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3L6jBn" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39710\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:1f9f3f9b8f0571d0c3a671807db07ad36cd5379f&amp;dn=Remedy+S02E07+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet39710\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39710\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:1f9f3f9b8f0571d0c3a671807db07ad36cd5379f&amp;dn=Remedy+S02E07+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39710\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>351M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-05-05</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39318" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39318.html">
+																									妙医世家 Remedy S02E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDk0mQH" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39318\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e448dbc63f85c5dd67f70ccdfb8094b3ac0bbe8e&amp;dn=Remedy.S02E06.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;t" rel="nofollow" target="_blank" name=\'magnet39318\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39318\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e448dbc63f85c5dd67f70ccdfb8094b3ac0bbe8e&amp;dn=Remedy.S02E06.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;t" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39318\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.11G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-28</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39927" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39927.html">
+																									妙医世家 Remedy S02E06 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E06.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|548422951|B85AFDFF888C283AC017D04DCEB1E02C|h=DA6JHRRXLJEOGXQPCGA6UR6N7LQRQMGR|/" rel="nofollow" target="_blank" name=\'ed2k39927\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39927\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E06.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|548422951|B85AFDFF888C283AC017D04DCEB1E02C|h=DA6JHRRXLJEOGXQPCGA6UR6N7LQRQMGR|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E06 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39927\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>523M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39926" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39926.html">
+																									妙医世家 Remedy S02E06 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E06.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|244412967|32AD14528A01538ADBCCD37C6C5B83D8|h=QD6EZ3TJMW6ZG66HFKEG2EWZYLMRUFH2|/" rel="nofollow" target="_blank" name=\'ed2k39926\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39926\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E06.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|244412967|32AD14528A01538ADBCCD37C6C5B83D8|h=QD6EZ3TJMW6ZG66HFKEG2EWZYLMRUFH2|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E06 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39926\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>233M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-05-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39317" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39317.html">
+																									妙医世家 Remedy S02E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1o6olEKa" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'39317\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:078815f4459907f84409f569d7d42bcd29efdd9a&amp;dn=Remedy.S02E06.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet39317\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'39317\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:078815f4459907f84409f569d7d42bcd29efdd9a&amp;dn=Remedy.S02E06.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39317\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>337M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-28</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38932" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38932.html">
+																									妙医世家 Remedy S02E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTKL4PL" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38932\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4a99e04db521086747f8ead5303d1900c81d7953&amp;dn=Remedy.S02E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;t" rel="nofollow" target="_blank" name=\'magnet38932\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38932\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4a99e04db521086747f8ead5303d1900c81d7953&amp;dn=Remedy.S02E05.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;t" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38932\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.12G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-21</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="39141" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39141.html">
+																									妙医世家 Remedy S02E05 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E05.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|550658193|7B8B36F86603F8E0B6D83792FD09A878|h=UYEUMRT63GENDJEDC7L4AKYNNU3CZBVD|/" rel="nofollow" target="_blank" name=\'ed2k39141\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39141\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E05.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|550658193|7B8B36F86603F8E0B6D83792FD09A878|h=UYEUMRT63GENDJEDC7L4AKYNNU3CZBVD|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E05 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39141\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>525M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="39140" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/39140.html">
+																									妙医世家 Remedy S02E05 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E05.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|245399091|6B0ADD057625C67CD389C774250496AF|h=IENTS3ZRLZMO4CWCNUNCVQ2Q2A5BD524|/" rel="nofollow" target="_blank" name=\'ed2k39140\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'39140\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E05.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|245399091|6B0ADD057625C67CD389C774250496AF|h=IENTS3ZRLZMO4CWCNUNCVQ2Q2A5BD524|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E05 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'39140\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>234M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38931" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38931.html">
+																									妙医世家 Remedy S02E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1mgrDrlA" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38931\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5ff7b98dc43e6c5fc6e47f9256476293c53c6333&amp;dn=Remedy.S02E05.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet38931\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38931\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5ff7b98dc43e6c5fc6e47f9256476293c53c6333&amp;dn=Remedy.S02E05.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38931\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>340M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-21</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38517" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38517.html">
+																									妙医世家 Remedy S02E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDpPsKp" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38517\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:0dec4f8553b7c62b95bfff60d5f1a66fd4ae1267&amp;dn=Remedy.S02E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;t" rel="nofollow" target="_blank" name=\'magnet38517\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38517\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0dec4f8553b7c62b95bfff60d5f1a66fd4ae1267&amp;dn=Remedy.S02E04.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;t" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38517\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.15G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-14</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38733" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38733.html">
+																									妙医世家 Remedy S02E04 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E04.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|551328928|432C5D3186BA1454F892D0D24C4845F6|h=SAIDSFJR5QZBI2IR2L2WYMHOKUDAHIR3|/" rel="nofollow" target="_blank" name=\'ed2k38733\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'38733\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E04.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|551328928|432C5D3186BA1454F892D0D24C4845F6|h=SAIDSFJR5QZBI2IR2L2WYMHOKUDAHIR3|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E04 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38733\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>525M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-17</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38732" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38732.html">
+																									妙医世家 Remedy S02E04 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E04.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|245713726|A5FB571DC8AE858C866CB95ED576616D|h=SYO7WQ5RUN5UMVLFRRSEDYAUZX2FVH5A|/" rel="nofollow" target="_blank" name=\'ed2k38732\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'38732\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E04.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|245713726|A5FB571DC8AE858C866CB95ED576616D|h=SYO7WQ5RUN5UMVLFRRSEDYAUZX2FVH5A|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E04 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38732\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>234M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-17</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38516" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38516.html">
+																									妙医世家 Remedy S02E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWp2Ur6" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38516\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3aba91f731761c59cc6761404da4e9b6a603cfe2&amp;dn=Remedy+S02E04+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet38516\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38516\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3aba91f731761c59cc6761404da4e9b6a603cfe2&amp;dn=Remedy+S02E04+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38516\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>353M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-14</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38101" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38101.html">
+																									妙医世家 Remedy S02E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdjFxq7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38101\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ec970cbcb7fed66756ddd86193b6581a758c500f&amp;dn=Remedy.S02E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr" rel="nofollow" target="_blank" name=\'magnet38101\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38101\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:ec970cbcb7fed66756ddd86193b6581a758c500f&amp;dn=Remedy.S02E03.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38101\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>1.07G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-07</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38316" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38316.html">
+																									妙医世家 Remedy S02E03 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E03.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|550992744|C6AD6098DCC1EF820DA983E2ED73EA15|h=KWTQQGWEYJIOUANNKRPFUZBPEMXJNI53|/" rel="nofollow" target="_blank" name=\'ed2k38316\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'38316\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E03.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|550992744|C6AD6098DCC1EF820DA983E2ED73EA15|h=KWTQQGWEYJIOUANNKRPFUZBPEMXJNI53|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E03 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38316\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>525M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="38315" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38315.html">
+																									妙医世家 Remedy S02E03 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E03.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|245544033|E09FDD615C79F2050C86D3DCEA48971A|h=ZG2NLMOGBKDTPJMXUVVHRUQ2N76KM4S6|/" rel="nofollow" target="_blank" name=\'ed2k38315\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'38315\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E03.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|245544033|E09FDD615C79F2050C86D3DCEA48971A|h=ZG2NLMOGBKDTPJMXUVVHRUQ2N76KM4S6|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E03 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38315\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>234M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="38100" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/38100.html">
+																									妙医世家 Remedy S02E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3teGvF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'38100\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:36c24d2b7b4247e996d18edeac238b4d5236d935&amp;dn=Remedy.S02E03.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet38100\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'38100\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:36c24d2b7b4247e996d18edeac238b4d5236d935&amp;dn=Remedy.S02E03.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'38100\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>313M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-04-07</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37814" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37814.html">
+																									妙医世家 Remedy S02E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdy8mlX" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37814\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:5a1139c3f33598e01ae111edd30a797e381547fa&amp;dn=Remedy.S02E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr" rel="nofollow" target="_blank" name=\'magnet37814\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37814\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:5a1139c3f33598e01ae111edd30a797e381547fa&amp;dn=Remedy.S02E02.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37814\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>0.99G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-31</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37960" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37960.html">
+																									妙医世家 Remedy S02E02 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E02.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|245647195|568698E479AD1624A3EC980DC11814FD|h=AIGT5IU3BW3GK57HPJLTCZAIDXOT2BP3|/" rel="nofollow" target="_blank" name=\'ed2k37960\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'37960\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E02.HDTVrip.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mp4|245647195|568698E479AD1624A3EC980DC11814FD|h=AIGT5IU3BW3GK57HPJLTCZAIDXOT2BP3|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E02 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37960\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>234M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37959" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37959.html">
+																									妙医世家 Remedy S02E02 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																														<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E02.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|551273480|90B551E780AF5D471137F507C641BECF|h=BFDN6KFU6Z2GHNXZ7GVKCNPJVHCIFLT7|/" rel="nofollow" target="_blank" name=\'ed2k37959\' title=\'ed2k高清片源\'><img  src=\'/Application/Home/View/Public/static/images/ed2k.png\' width="20px" ectype="downnode" name=\'37959\' alt=\'ed2k高清片源\'></a>																				
+																					<a style="display:none;" href="ed2k://|file|%E5%A6%99%E5%8C%BB%E4%B8%96%E5%AE%B6.Remedy.S02E02.576p.HDTV.AC3.x264.%E5%8F%8C%E8%AF%AD%E5%AD%97%E5%B9%95-%E6%B7%B1%E5%BD%B1%E5%AD%97%E5%B9%95%E7%BB%84.mkv|551273480|90B551E780AF5D471137F507C641BECF|h=BFDN6KFU6Z2GHNXZ7GVKCNPJVHCIFLT7|/" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E02 576p 深影字幕组 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37959\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>525M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-04-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37813" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37813.html">
+																									妙医世家 Remedy S02E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdGPhQV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37813\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:8801bb931227d0fc28f726d77e4e08328a18f2a5&amp;dn=Remedy+S02E02+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3" rel="nofollow" target="_blank" name=\'magnet37813\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37813\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:8801bb931227d0fc28f726d77e4e08328a18f2a5&amp;dn=Remedy+S02E02+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37813\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>335M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-31</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37315" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37315.html">
+																									妙医世家 Remedy S02E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1pJ5dnGv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37315\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:4ead7b9d947492fa2985257b894ba72807e97e38&amp;dn=Remedy.S02E01.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" target="_blank" name=\'magnet37315\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37315\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4ead7b9d947492fa2985257b894ba72807e97e38&amp;dn=Remedy.S02E01.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37315\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>922M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="37576" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37576.html">
+																									妙医世家 Remedy S02E01 576p 深影字幕组 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										 
+																																																		<a style="display:none;" href="http://www.400gb.com/file/88989092" target="_blank" rel="nofollow" title=\'其他\'><img  src=\'/Application/Home/View/Public/static/images/other.png\' ectype="downnode" width="20px" name=\'37576\' alt=\'其他\'></a>
+										
+										</td>
+										<td></td>
+										<td>481M</td>
+										<td></td>
+										<td>
+																					<font color="#339999">内嵌双语字幕</font>
+																				</td>
+										<td>2015-03-27</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="37314" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/37314.html">
+																									妙医世家 Remedy S02E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTh4LMJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'37314\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:496fc90eea9cc38e95418722c5a9356a003ef73c&amp;dn=Remedy+S02E01+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2F" rel="nofollow" target="_blank" name=\'magnet37314\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'37314\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:496fc90eea9cc38e95418722c5a9356a003ef73c&amp;dn=Remedy+S02E01+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2F" rel="nofollow" name=\'miurl\' filename="妙医世家 Remedy S02E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'37314\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>295M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-03-24</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(0,792,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,792);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,792);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,792);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'

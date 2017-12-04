@@ -1,0 +1,1272 @@
+'HTTP/1.1 200 OK
+Date: Wed, 01 Nov 2017 11:13:42 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: __cfduid=d8b91f9938d469ac30b6899c5a201303d1509534822; expires=Thu, 01-Nov-18 11:13:42 GMT; path=/; domain=.ttmeiju.vip; HttpOnly
+X-Powered-By: PHP/5.6.31
+Vary: Accept-Encoding
+Server: cloudflare-nginx
+CF-RAY: 3b6e6d20e4d7938a-SJC
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="UTF-8">
+	  <title>木兰尼的人生 Mulaney-木兰尼的人生下载-木兰尼的人生全集下载-Mulaney下载</title>
+	  <meta name="baidu-site-verification" content="CwFuTEIwg7" />
+    
+	  <meta name="keywords" content="木兰尼的人生,Mulaney,木兰尼的人生下载,木兰尼的人生全集下载,木兰尼的人生高清下载,木兰尼的人生迅雷下载"/>
+	  <meta name="description" content="&lt;p&gt;这个项目去年曾是最被人们看好的NBC项目，但令人大跌眼镜的是NBC在电视节目展映周到来之前的最后一周放弃了它。今年早些时候Fox将这个项目收入囊中并直接预订了6集，后来又一口气将订数追加到16集。故事根据《周六夜现场》（SaturdayNightLive）编剧JohnMulaney的个人生活改编（主要描述一群年轻人的生活，大概类似《幸福终点" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/Application/Home/View/Public/static/css/common.css?v=10">
+   <link rel="stylesheet" href="/Application/Home/View/Public/static/css/comment.css?v=12">    
+    <script src="/Application/Home/View/Public/static/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Application/Home/View/Public/static/js/common.js?v=4"></script>
+</head>
+<body>
+
+  <div id="header">
+     <div class="headertop">
+       <a href="/"><img width="163px" height="45px" src="http://i1.buimg.com/588755/14570af72c323f0c.png" alt="天天美剧" class="logo"></a>
+
+        <ul class="menu">
+          <a href="/"><li >首页</li></a>
+          <a href="/latest.html"><li >近日更新</li></a>
+          <a href="/article.html"><li >影评资讯</li></a>
+          <a href="http://www.zaixiantt.com" target="_blank"><li>在线观看</li></a>
+          <a href="/summary.html"><li >排行榜</li></a>
+          <a href="/countdown.html"><li >倒计时</li></a>
+          <a href="/weekcalendar.html"><li >时间表</li></a>
+          <a href="/ttsub.html"><li >天天字幕组</li></a>
+          <a href="http://weibo.com/ttmeiju" rel="nofollow" target="_blank"><li>微博</li></a>
+        </ul>
+      
+        <div class="searchbox">
+            <form action="/index.php/search/index.html" method="get" autocomplete="off" id="searchf" onsubmit="return OKkey();">
+                      <input type="text" name="keyword" size=30 class="ipt" id="keyword" value="">
+                      <input type="submit" class="bt2" value="">
+                      <input type="radio" name="range" id="r1" value="0" checked> 美剧
+                      <input type="radio" id="r2" name="range" value="1"> 种子
+            </form>
+        </div>
+        <script src="/index.php/user/index.html" type="text/javascript" language="javascript"></script>
+     </div>
+
+  </div>
+
+  <div style="margin-top:20px;margin-bottom:20px;">
+    <p><img src="http://i4.nbimg.com/588755/21062b13bbd053c3.jpg" title="1504855931941125.jpg" alt="天天广告.jpg"/></p>  </div>
+
+<div id="wrapper">
+<div class="midder">
+
+<div id="gtop"><a href="#top" target="_self"></a></div>
+
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/base64.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+
+	//初始化剪贴板
+	initclip();
+
+	$("img[ectype=\'clicknode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		var nodetype = $(this).attr(\'nodetype\');
+        var w = window.open();		
+		$.ajax({
+		            url:"/index.php/seed/nodeclick.html",
+		            data:"seedid="+seedid+"&nodetype="+nodetype,
+		            type:\'post\',
+		            cache:false,
+                    success:function(str){
+						//alert(str.replace(/amp;/g, ""));
+						str = str.replace(/amp;/g, "");
+                        w.location = str;
+                    },
+                    error: function(){
+                         w.close();
+                    }
+		}); 
+  	});
+
+	$("img[ectype=\'downnode\']").click(function(){
+		var seedid = $(this).attr(\'name\');
+		$.ajax({
+		            url:"/index.php/seed/ajaxclick.html",
+		            data:"seedid="+seedid,
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+                        return false;
+                    },
+                    error: function(){
+                       return false;
+                    }
+		}); 
+  	});  
+
+	$("a[name=\'miurl\']").each(function() {
+	    var href = $(this).attr("href");
+	    var filename = $(this).attr("filename");
+	    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+	    $(this).attr("href",href)
+	})
+
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+			$(".rightBtn").show();
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();			
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".leftBtn").show();
+    });
+
+	checklogin();
+	loadcomment();
+});
+
+function Ajxseason(element){
+	var season = element.id;
+	var meijuid = 686;
+	var loadsrc = "<tr class=\\"Scontent\\"><td colspan=\\"7\\"><img width=\\"50px;\\" src=\\"/Application/Home/View/Public/static/images/loading.gif\\"></td></tr>";
+	$("#seedlist").html(loadsrc);
+	//alert(meijuid);exit;
+	//sid:季;mid:美剧id
+	$.post("/index.php/meiju/get_episodies.html",{sid:season,mid:meijuid},function(msg){
+		//alert(msg.Html_Seedlist);exit;
+		$("#seasoninfo").html(msg.Html_Season);
+		$("#seedlist").html(msg.Html_Seedlist);
+		//初始化剪贴板
+		initclip();
+
+		$("img[ectype=\'clicknode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			var nodetype = $(this).attr(\'nodetype\');
+			var w = window.open();		
+			$.ajax({
+						url:"/index.php/seed/nodeclick.html",
+						data:"seedid="+seedid+"&nodetype="+nodetype,
+						type:\'post\',
+						cache:false,
+						success:function(str){
+							//alert(str.replace(/amp;/g, ""));
+							str = str.replace(/amp;/g, "");
+							w.location = str;
+						},
+						error: function(){
+							w.close();
+						}
+			}); 
+		});
+
+		$("img[ectype=\'downnode\']").click(function(){
+			var seedid = $(this).attr(\'name\');
+			$.ajax({
+						url:"/index.php/seed/ajaxclick.html",
+						data:"seedid="+seedid,
+						type:\'post\',
+						cache:false,
+						success:function(data){
+							return false;
+						},
+						error: function(){
+							return false;
+						}
+			}); 
+		});
+
+		$("a[name=\'miurl\']").each(function() {
+		    var href = $(this).attr("href");
+		    var filename = $(this).attr("filename");
+		    href = "http://d.miwifi.com/d2r/?url=" + Base64.encodeURI(href)+ "&name="+filename
+		    $(this).attr("href",href)
+		});
+
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".seasonitem h3").length;
+        if(index >= 4)
+        {
+            $(".seasonitem").stop();
+			$(".leftBtn").hide();
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+		$(".rightBtn").show();		
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".seasonitem").stop();
+			$(".rightBtn").hide();
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }else{
+                $(".seasonitem").animate({"margin-left":-index*90},970);
+            }
+        }
+			$(".leftBtn").show();
+    });	  
+
+	},\'json\');
+}
+
+function checklogin(){
+	$.ajax({
+		            url:"/index.php/user/islogin.html",
+		            data:"",
+		            type:\'post\',
+		            cache:false,
+                    success:function(data){
+						if(data==\'\'){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FMulaney.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+						}else{
+							$("td[ectype=\'linklist\'] a").show();
+							return false;
+						}
+                    },
+                    error: function(){
+							$("td[ectype=\'linklist\']").html(\'请在<a href="/index.php/user/login.html?referurl=http%3A%2F%2Fttmeiju.vip%2Fmeiju%2FMulaney.html"><font color="#5cb1c5">登录</font></a>后查看\');
+							return false;
+                    }
+	});	
+}
+
+function initclip(){
+    $(".copyBtn").each(function(index,item){
+		var IDvalue = $(item).attr(\'id\');
+		var clip = null;
+		var clip = new ZeroClipboard.Client();
+		var btnname = $(item).text();
+		clip.setText( \'\' );//清空剪贴板
+		clip.setHandCursor(true);
+		clip.setCSSEffects(true);//启用css
+		clip.addEventListener(\'complete\',function(client, text){
+			alert("已复制至剪贴板！"); 
+		});
+
+		clip.addEventListener(\'mouseDown\', function(client) {
+			var linkurl=\'\';
+			$("#seedlist input:checkbox:checked").each(function(index,item){
+					var ID = $(item).attr(\'value\');
+					var name = IDvalue+ID;
+					var href = $("a[name=\'"+name+"\']").attr("href");
+					if("undefined" != typeof href){
+						linkurl += href+"\\n";
+					}else{
+						return true;
+					}
+			}); 
+			if(linkurl==\'\'){
+					alert("暂无此种类型的下载资源,请选择其它下载方式"); 
+			}else{
+					clip.setText(linkurl);
+			}
+		});
+		clip.glue(IDvalue);
+    });
+
+    var CheckAll=document.getElementById(\'All\');
+    var UnCheck=document.getElementById(\'uncheck\');
+    var seedlist=document.getElementById(\'seedlist\');
+    var CheckBox=seedlist.getElementsByTagName(\'input\');
+
+    CheckAll.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+    };
+
+    UnCheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=false;
+                };
+    };
+
+}
+
+//异步加载评论数据
+function loadcomment(){
+	var mid = 686;
+    var objecttype = 0;	
+	//alert(mid);return false;
+	$.post("/index.php/comment/getcommentlist.html",{object:mid,objtype:objecttype},function(msg){
+		var result = $.parseJSON(msg);
+		$("#totalcount").html(result.total);
+		$("#posts").html(result.commentlist);
+		// $("#seedlist").html(msg.Html_Seedlist);
+	});
+}
+</script>
+<div>
+    <div class="content">
+        <div class="newscontent contentbox">
+            <div class="hd">木兰尼的人生 Mulaney-木兰尼的人生下载-木兰尼的人生全集下载-Mulaney下载</div>
+            <div class="bd">
+                <div>
+                    <div class="seedpic">
+								<img src="http://i2.muimg.com/588755/71cd1a378dd629e4.jpg" id="spic">
+							</div>
+							<script type="text/javascript">
+								var spic = document.getElementById("spic");
+								var ua = navigator.userAgent.toLowerCase();   
+								//alert(ua);   
+								if (ua.indexOf("webkit") > -1){
+									spic.width=438;
+								}else {
+									var img = new Image();
+									img.src = "http://i2.muimg.com/588755/71cd1a378dd629e4.jpg";
+									//alert(img.width + ":" + img.height); 
+									if(img.width>img.height) {spic.width=438;}
+									else {spic.height=438;}
+								}
+							</script>
+                     					 
+                    <div class="seedlink">
+						<span class="greybg">更新日：每周一</span>
+						<span>状态：本季终</span>
+						<span class="greybg">分类：喜剧类</span>						
+						<span>最后更新：2015-02-16 09:03</span>
+						<span class="greybg">回归：暂无</span>
+						<span>倒计时：暂无</span>
+						<span class="greybg">
+						     <div class="bdsharebuttonbox" style="margin-left:45px;">
+                                <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+							 </div>
+                               <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin","douban"]}};with(document)0[(getElementsByTagName(\'head\')[0]||body).appendChild(createElement(\'script\')).src=\'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=\'+~(-new Date()/36e5)];</script>	
+						</span> 
+						<span class="rssdiv">
+							<script src="/index.php/user/rss_status/mid/686.html" type="text/javascript" language="javascript"></script>
+							/已有<font color="red">46</font>人关注
+						</span>
+
+						<div style="margin-top:10px;">
+													</div>
+
+                    </div>
+                    
+                    
+                </div>
+				
+                <div class="newstxt">
+						<p>这个项目去年曾是最被人们看好的NBC项目，但令人大跌眼镜的是NBC在电视节目展映周到来之前的最后一周放弃了它。今年早些时候Fox将这个项目收入囊中并直接预订了6集，后来又一口气将订数追加到16集。故事根据《周六夜现场》（Saturday Night Live）编剧John Mulaney的个人生活改编（主要描述一群年轻人的生活，大概类似《幸福终点站》和《男与女》），并由他亲自创作剧本、亲自演出。Elliott Gould、Nasim Pedrad、Seaton Smith都曾扮演过第一版（NBC版）试映集，此次他们将继续扮演原来的角色。
+
+这部多镜头情景喜剧由获得艾美奖的编剧兼喜剧大师John Mulaney自编自演、自己制片，舆论普遍认为它很有可能成为红极一时的《宋飞正传》（Senfield）的接班人。故事描述一个单口喜剧演员试图追求事业的更高境界。除了自己的努力之外，来自导师和朋友们的大力扶持也是必需的。遗憾的是，他们并不总是给他动力……他们有时会把他弄得晕头转向，甚至拖他的后腿！
+
+John Mulaney是一位29岁的喜剧演员，多年来一直从事单口喜剧表演。他不想继续这样默默无闻，他渴望在事业上获得更大的突破。喜剧界的传奇人物、著名游戏节目主持人Lou Cannon（艾美奖得主Martin Short）决定雇佣Mulaney在自己的创作团队中担任一名编剧，Mulaney的人生和命运因此发生了「翻天覆地」的变化。Lou或许是Mulaney进入高调节目领域的「跳板」，但这个喜欢以自我为中心的大腕同样是Mulaney的噩梦。
+
+无论如何，这份工作还是提供了Mulaney渴望的一切。但他真的能圆梦吗？他将付出怎样的代价？如果他选择退出，会发生什么？如果他选择留下来，又会发生什么？Lou能为他打开成功之门吗？带着这些疑问，Mulaney开始了紧张的新工作，但内心的负罪感依然让他寝食难安——他始终觉得自己不该离开两个好朋友兼室友：Jane（Nasim Pedrad），一个经常会受到伤害，而且人生没有明确目标的私人训练师，在生活中处处追求公平正义……特别是在爱情问题上；Motif（Seaton Smith），一个精力充沛的喜剧演员，与Mulaney简直没有任何相似之处——除了他们都在单口喜剧界混饭吃之外。他们共同的朋友Andre Van Horn（Zack Pearlman）是一位有信托基金做保证的、衣食无忧的富家公子，性格顽固，精力充沛，总是在最糟糕的时刻出现在Mulaney的生活中。他做任何事情都喜欢冠冕堂皇，大操大办，说话也喜欢说大话。
+
+当身边被灾难和混乱包围时，Mulaney还有一个避难的好去处——那就是他的邻居Oscar（奥斯卡奖提名获得者Elliott Gould）。这位71岁的同性恋老人一辈子都在纽约生活，没有什么场面是他没见过的。Oscar固执己见、举止优雅、和蔼可亲、充满智慧，但他有时候爱和别人吵架。总体而言，当Mulaney感觉自己的人生偏离方向的时候，他总是会及时提出颇有见解的忠告，帮助Mulaney找到正确的目标。
+
+该剧的核心思想在于人们对待各种生活烦恼的态度：忽视它们，盼望它们「快点消失」是一件很容易的事情，但要勇敢地面对他们、正确地解决它们却非常困难。</p>                </div>
+
+				<div class="meijuadp">
+							<p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=3219&extra=page%3D1" target="_blank" textvalue="站长推荐→能高速下载度盘的神器！"><span style="color: rgb(255, 0, 0); font-size: 18px;"><strong>站长推荐→能高速下载度盘的神器！</strong></span></a></p>						</div>
+                <div class="seedlistdiv">
+						<table class="latesttable" cellpadding="0" cellspacing="0">
+							<tr class="Stitle">
+								<td id="seasoninfo" colspan="8">
+											<span class="rightBtn">◂</span>
+											<div class="seasondiv">
+												<div class="seasonitem">
+																										<h3 
+																			class="curseason" id="1">
+																			第1季▼																			
+															</h3>
+															<div class="fenge"></div>	
+																											</div>
+											</div>
+																						
+										</td>
+															</tr>
+
+							<tr class="Shead">
+										<td width="4%" align="center">选择</td>
+										
+										<td width="44%" align="left">名字</td>
+										<td align="left" width="15%">下载</td>
+										<td width="6%">提取码</td>
+										<td width="6%">大小</td>
+										<td width="5%">制式</td>
+										<td width="10%">字幕下载<a id="zimulink" target="_blank"></a></td>
+										<td width="15%">发布时间</td>
+							</tr>
+							<tbody id="seedlist">
+																<tr class="Scontent1" >
+									<td><input value="35080" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35080.html">
+																									木兰尼的人生 Mulaney S01E13 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqmt1mW" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35080\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9189a0974c382a907111286ebc56624c14a4fa22&amp;dn=Mulaney.S01E13.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet35080\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35080\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9189a0974c382a907111286ebc56624c14a4fa22&amp;dn=Mulaney.S01E13.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E13 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35080\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>593M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-16</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="35079" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/35079.html">
+																									木兰尼的人生 Mulaney S01E13 季终 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQnJ7eq" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'35079\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:a79eddb460288685fb8c64da7eb6f52504732f7d&amp;dn=Mulaney+S01E13+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet35079\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'35079\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:a79eddb460288685fb8c64da7eb6f52504732f7d&amp;dn=Mulaney+S01E13+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E13 季终 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'35079\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>175M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-16</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="34610" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34610.html">
+																									木兰尼的人生 Mulaney S01E12 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jG5mbMe" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34610\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:c83098c60abd92c8f0722b9e65c80969b6ccad48&amp;dn=Mulaney.S01E12.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet34610\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34610\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:c83098c60abd92c8f0722b9e65c80969b6ccad48&amp;dn=Mulaney.S01E12.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E12 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34610\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>966M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-09</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="34609" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/34609.html">
+																									木兰尼的人生 Mulaney S01E12 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqovkIK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'34609\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:340a4080a17c7d2b89aa73e06be660e863682c8e&amp;dn=Mulaney+S01E12+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet34609\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'34609\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:340a4080a17c7d2b89aa73e06be660e863682c8e&amp;dn=Mulaney+S01E12+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E12 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'34609\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>227M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-02-09</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="33718" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33718.html">
+																									木兰尼的人生 Mulaney S01E11 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kT1LNSV" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33718\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:e87c3f90de502a65e533698d5a985b4fc43c00d2&amp;dn=Mulaney.S01E11.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" target="_blank" name=\'magnet33718\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33718\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:e87c3f90de502a65e533698d5a985b4fc43c00d2&amp;dn=Mulaney.S01E11.720p.HDTV.x264-KILLERS%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;t" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E11 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33718\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>569M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-26</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33717" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33717.html">
+																									木兰尼的人生 Mulaney S01E11 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWjuIUK" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33717\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:75a6810ee5b5a5b6476ae2a38f854240dd40ef51&amp;dn=Mulaney+S01E11+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" target="_blank" name=\'magnet33717\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33717\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:75a6810ee5b5a5b6476ae2a38f854240dd40ef51&amp;dn=Mulaney+S01E11+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E11 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33717\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>174M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-26</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="33352" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33352.html">
+																									木兰尼的人生 Mulaney S01E10 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjI4xU9" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33352\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:ed4a9a35bcca9e09540c3d80fed92e21c373ee45&amp;dn=Mulaney.S01E10.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=ud" rel="nofollow" target="_blank" name=\'magnet33352\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33352\' alt=\'迅雷高清美剧下载\'></a>																				<a style="display:none;" href="http://cloud.pptv.com/v3/share/am4b046D" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'33352\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:ed4a9a35bcca9e09540c3d80fed92e21c373ee45&amp;dn=Mulaney.S01E10.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=ud" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E10 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33352\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>570M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-19</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="33351" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/33351.html">
+																									木兰尼的人生 Mulaney S01E10 PROPER 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1sjG20XJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'33351\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:AEHV6LYCFDSKJVRNKXXC4AWHBIELBH2N&amp;dn=Mulaney.S01E10.PROPER.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp:" rel="nofollow" target="_blank" name=\'magnet33351\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'33351\' alt=\'迅雷高清美剧下载\'></a>																				<a style="display:none;" href="http://cloud.pptv.com/v3/share/am4bi1uW" target="_blank" rel="noreferrer" title=\'美剧在线播放\'><img src=\'/Application/Home/View/Public/static/images/zx.png\' ectype="downnode" width="20px" name=\'33351\' alt=\'在线\'></a>										
+										<a style="display:none;" href="magnet:?xt=urn:btih:AEHV6LYCFDSKJVRNKXXC4AWHBIELBH2N&amp;dn=Mulaney.S01E10.PROPER.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp:" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E10 PROPER " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'33351\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>198M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-19</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="32973" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32973.html">
+																									木兰尼的人生 Mulaney S01E09 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1qWmckW0" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32973\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:9f4d544b6453b826ea33ef3ac87ff9fc8f21abfa&amp;dn=Mulaney.S01E09.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=ud" rel="nofollow" target="_blank" name=\'magnet32973\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32973\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:9f4d544b6453b826ea33ef3ac87ff9fc8f21abfa&amp;dn=Mulaney.S01E09.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=ud" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E09 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32973\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>551M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-12</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="32972" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32972.html">
+																									木兰尼的人生 Mulaney S01E09 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTsrYXD" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32972\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+																				<a style="display:none;" href="magnet:?xt=urn:btih:3a9aea71a9bd9805166777d59e9edad175d141b4&amp;dn=Mulaney+S01E09+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2" rel="nofollow" target="_blank" name=\'magnet32972\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32972\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3a9aea71a9bd9805166777d59e9edad175d141b4&amp;dn=Mulaney+S01E09+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E09 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32972\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>167M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2015-01-12</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="32452" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32452.html">
+																									木兰尼的人生 Mulaney S01E08 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDzpmd7" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32452\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/ABBBF2A9170115C3FB590772B8C290790CD3DE7F" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'32452\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:abbbf2a9170115c3fb590772b8c290790cd3de7f&amp;dn=Mulaney.S01E08.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=u" rel="nofollow" target="_blank" name=\'magnet32452\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32452\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:abbbf2a9170115c3fb590772b8c290790cd3de7f&amp;dn=Mulaney.S01E08.720p.HDTV.x264-BATV%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=u" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E08 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32452\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>0.98G</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-22</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="32451" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/32451.html">
+																									木兰尼的人生 Mulaney S01E08 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3BYrcT" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'32451\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://torrentcaching.com/156EB8D9948A612D11863C06CC3A1EFAC8064588" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'32451\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:156eb8d9948a612d11863c06cc3a1efac8064588&amp;dn=Mulaney+S01E08+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%" rel="nofollow" target="_blank" name=\'magnet32451\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'32451\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:156eb8d9948a612d11863c06cc3a1efac8064588&amp;dn=Mulaney+S01E08+HDTV+x264-BATV%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E08 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'32451\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>232M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-22</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="31389" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31389.html">
+																									木兰尼的人生 Mulaney S01E07 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c0nf1ba" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31389\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/59C00A13A09E804A4E238137123E78D464BF6889.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31389\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:59c00a13a09e804a4e238137123e78d464bf6889&amp;dn=Mulaney.S01E07.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp" rel="nofollow" target="_blank" name=\'magnet31389\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31389\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:59c00a13a09e804a4e238137123e78d464bf6889&amp;dn=Mulaney.S01E07.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E07 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31389\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>981M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-01</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="31388" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31388.html">
+																									木兰尼的人生 Mulaney S01E07 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jGh37fC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31388\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/422EE73F2EFEF148FD5A8B37A799D2F60B84B678.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31388\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:422ee73f2efef148fd5a8b37a799d2f60b84b678&amp;dn=Mulaney+S01E07+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp" rel="nofollow" target="_blank" name=\'magnet31388\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31388\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:422ee73f2efef148fd5a8b37a799d2f60b84b678&amp;dn=Mulaney+S01E07+HDTV+x264-KILLERS%5Bettv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E07 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31388\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>222M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-12-01</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="31118" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31118.html">
+																									木兰尼的人生 Mulaney S01E06 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1c06IhTQ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31118\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/85566DF27230AD09E697BE9B2B5D1215D9B4C9D5.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31118\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:85566df27230ad09e697be9b2b5d1215d9b4c9d5&amp;dn=Mulaney.S01E06.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp" rel="nofollow" target="_blank" name=\'magnet31118\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31118\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:85566df27230ad09e697be9b2b5d1215d9b4c9d5&amp;dn=Mulaney.S01E06.720p.HDTV.X264-DIMENSION%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E06 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31118\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>952M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-24</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="31117" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/31117.html">
+																									木兰尼的人生 Mulaney S01E06 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1hqj9vKw" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'31117\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/4170A65F1CF2F1774EEE3682FEC3765459556DA4.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'31117\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:4170a65f1cf2f1774eee3682fec3765459556da4&amp;dn=Mulaney+S01E06+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2" rel="nofollow" target="_blank" name=\'magnet31117\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'31117\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:4170a65f1cf2f1774eee3682fec3765459556da4&amp;dn=Mulaney+S01E06+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E06 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'31117\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>190M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-24</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="30301" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30301.html">
+																									木兰尼的人生 Mulaney S01E05 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3mUKOP" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30301\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/699481DD8300C0BEA351F7E24CFF71842C98698C.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30301\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:699481dd8300c0bea351f7e24cff71842c98698c&amp;dn=Mulaney.S01E05.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=ud" rel="nofollow" target="_blank" name=\'magnet30301\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30301\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:699481dd8300c0bea351f7e24cff71842c98698c&amp;dn=Mulaney.S01E05.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=ud" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E05 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30301\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>538M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-10</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="30300" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/30300.html">
+																									木兰尼的人生 Mulaney S01E05 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kT7PzQv" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'30300\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="https://zoink.it/torrent/9659AEFEE0EC5AE1CE82F72BAA57BDFC46467E70.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'30300\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:SZM257XA5RNODTUC64V2UV557RDEM7TQ&amp;dn=Mulaney.S01E05.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp://track" rel="nofollow" target="_blank" name=\'magnet30300\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'30300\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:SZM257XA5RNODTUC64V2UV557RDEM7TQ&amp;dn=Mulaney.S01E05.HDTV.x264-2HD&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.publicbt.com:80&amp;tr=udp://tracker.istole.it:80&amp;tr=udp://open.demonii.com:80&amp;tr=udp://track" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E05 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'30300\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>156M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-10</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="29923" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/29923.html">
+																									木兰尼的人生 Mulaney S01E04 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1i3IcNdF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'29923\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/3FA032C71CFF9E89497BD3025BCD9FE8EBFDE614.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'29923\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:3fa032c71cff9e89497bd3025bcd9fe8ebfde614&amp;dn=Mulaney.S01E04.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&a" rel="nofollow" target="_blank" name=\'magnet29923\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'29923\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:3fa032c71cff9e89497bd3025bcd9fe8ebfde614&amp;dn=Mulaney.S01E04.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&a" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E04 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'29923\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>517M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-03</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="29922" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/29922.html">
+																									木兰尼的人生 Mulaney S01E04 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDrM5nb" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'29922\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/B7F0EC0964443864ADDE459A3E532AB21FDB3ECD.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'29922\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:b7f0ec0964443864adde459a3e532ab21fdb3ecd&amp;dn=Mulaney+S01E04+HDTV+x264-2HD%5Bettv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=" rel="nofollow" target="_blank" name=\'magnet29922\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'29922\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:b7f0ec0964443864adde459a3e532ab21fdb3ecd&amp;dn=Mulaney+S01E04+HDTV+x264-2HD%5Bettv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&amp;tr=" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E04 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'29922\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>184M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-11-03</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="29140" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/29140.html">
+																									木兰尼的人生 Mulaney S01E03 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1jG9mZh8" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'29140\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/EB95F22F92F203152C323B38F47A5EE2A00ADDB0.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'29140\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:eb95f22f92f203152c323b38f47a5ee2a00addb0&amp;dn=Mulaney.S01E03.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=ud" rel="nofollow" target="_blank" name=\'magnet29140\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'29140\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:eb95f22f92f203152c323b38f47a5ee2a00addb0&amp;dn=Mulaney.S01E03.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=ud" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E03 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'29140\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>491M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-10-20</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="29139" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/29139.html">
+																									木兰尼的人生 Mulaney S01E03 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1dDu3ZVF" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'29139\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/7127E91F08D3E50EF6CB0226D2C3A7586B766A52.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'29139\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7127e91f08d3e50ef6cb0226d2c3a7586b766a52&amp;dn=Mulaney+S01E03+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2" rel="nofollow" target="_blank" name=\'magnet29139\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'29139\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7127e91f08d3e50ef6cb0226d2c3a7586b766a52&amp;dn=Mulaney+S01E03+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E03 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'29139\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>143M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-10-20</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="28794" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/28794.html">
+																									木兰尼的人生 Mulaney S01E02 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1kTDo5iJ" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'28794\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/27D37D6647EF49BD4CFD9436C369E8A2CFFCABF1.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'28794\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:27d37d6647ef49bd4cfd9436c369e8a2cffcabf1&amp;dn=Mulaney.S01E02.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=ud" rel="nofollow" target="_blank" name=\'magnet28794\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'28794\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:27d37d6647ef49bd4cfd9436c369e8a2cffcabf1&amp;dn=Mulaney.S01E02.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=ud" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E02 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'28794\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>661M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-10-13</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="28793" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/28793.html">
+																									木兰尼的人生 Mulaney S01E02 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1gdoupf9" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'28793\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="magnet:?xt=urn:btih:284b0f2deac150f7751372db78b195154b8605a4&amp;dn=Mulaney+S01E02+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'28793\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:284b0f2deac150f7751372db78b195154b8605a4&amp;dn=Mulaney+S01E02+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2" rel="nofollow" target="_blank" name=\'magnet28793\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'28793\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:284b0f2deac150f7751372db78b195154b8605a4&amp;dn=Mulaney+S01E02+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E02 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'28793\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>165M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-10-13</td>
+									</tr> 
+								<tr class="Scontent1" >
+									<td><input value="28423" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/28423.html">
+																									木兰尼的人生 Mulaney S01E01 720p 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1eQIiqNC" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'28423\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/0815A3B6BBB54A849B6820FACE10C32DEF6C6E08.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'28423\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:0815a3b6bbb54a849b6820face10c32def6c6e08&amp;dn=Mulaney.S01E01.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&a" rel="nofollow" target="_blank" name=\'magnet28423\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'28423\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:0815a3b6bbb54a849b6820face10c32def6c6e08&amp;dn=Mulaney.S01E01.720p.HDTV.x264-2HD%5Brartv%5D&amp;tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&amp;tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&amp;tr=udp%3A%2F%2Ftracker.istole.it%3A6969&a" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E01 720p " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'28423\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>579M</td>
+										<td>720p</td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-10-06</td>
+									</tr> 
+								<tr class="Scontent" >
+									<td><input value="28422" type="checkbox"></td>
+										
+										<td align="left">
+											<a href="/seed/28422.html">
+																									木兰尼的人生 Mulaney S01E01 											</a>
+										</td>
+										<td ectype="linklist" align="left" style="padding:0px;">
+										<a style="display:none;" href="http://pan.baidu.com/s/1bnlezcb" rel="nofollow" target="_blank" title=\'百度云盘下载\'><img ectype="downnode" name=\'28422\' src=\'/Application/Home/View/Public/static/images/bd.png\' width="20px" alt=\'百度云盘\'></a> 
+										<a style="display:none;" href="http://zoink.it/torrent/7ACE7A80853BF076960CA1B79D11A6A98D6EAF44.torrent" rel="nofollow" target="_blank" title=\'BT美剧片源下载\'>
+												<img src=\'/Application/Home/View/Public/static/images/bt.png\' ectype="downnode" width="20px" name=\'28422\' alt=\'BT美剧片源下载\'>
+											</a>										<a style="display:none;" href="magnet:?xt=urn:btih:7ace7a80853bf076960ca1b79d11a6a98d6eaf44&amp;dn=Mulaney+S01E01+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2" rel="nofollow" target="_blank" name=\'magnet28422\' title=\'迅雷高清美剧下载\'>
+												<img  src=\'http://i1.nbimg.com/588755/ebb2c4faae441e92.png\' width="20px" ectype="downnode" name=\'28422\' alt=\'迅雷高清美剧下载\'></a>																														
+										<a style="display:none;" href="magnet:?xt=urn:btih:7ace7a80853bf076960ca1b79d11a6a98d6eaf44&amp;dn=Mulaney+S01E01+HDTV+x264-2HD%5Bettv%5D&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710&amp;tr=udp%3A%2F%2F11.rarbg.me%3A80&amp;tr=udp%3A%2" rel="nofollow" name=\'miurl\' filename="木兰尼的人生 Mulaney S01E01 " target=\'_blank\' title=\'小米路由器远程下载\'><img  src=\'/Application/Home/View/Public/static/images/mi.png\' ectype="downnode" name=\'28422\' alt=\'小米路由器远程下载\'></a>
+										
+										</td>
+										<td></td>
+										<td>183M</td>
+										<td></td>
+										<td>
+																																							无字幕										</td>
+										<td>2014-10-06</td>
+									</tr> 
+															</tbody>
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>选   择:</span>
+											<input type="button" id="All" value="全选" />
+											<input type="button" id="uncheck" value="取消"/>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="28" class="media-control" colspan="7" align="left">
+											<span>批量下载:</span> 
+											<a class="copyBtn" id="ed2k">电驴</a> <a class="copyBtn" id="magnet">迅雷</a>
+										</td>
+									</tr>
+
+														</table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--底部评论区-->
+<!--<div style="width:100%;">
+		<span id="counter-box">
+			<div class="global-nav">
+				<ul>
+					<li><h4><e id="totalcount"></e>条评论。</h4></li>
+				</ul>
+			</div>
+		</span>
+
+		<span id="post-box">
+			<div class="uyanpost">
+				<div class="resetbox sectionbox">
+					<div id="errormsg" class="rompt">
+						<span>
+							<p id="errorinfo"></p>
+							<a href="javascript:;" onclick="postTip();"></a>
+							<div class="claer"></div>
+						</span>
+					</div>
+					<div class="blockbox">
+						<div class="blockhead">
+							<div class="headimg">
+								<img src="http://bbs.ttmeiju.vip/uc_server/avatar.php?uid=1287005&size=middle">
+							</div>
+						</div>
+						<div class="postarea">
+							<div class="postwrap postborder">
+								<div class="wraparea">
+									<div class="textareawrap" id="textareawrap">
+										<textarea maxlength="500" id="uyanmessage" class="textareastyle inputdefaultcolor"></text</div>
+									</div>
+								</div>
+							</div>
+							<div id="sociallogin" class="Social-Login">
+								<div class="Login">
+									<h6 id="nicknamemsg" style="float:right;">发布前先在头部右侧进行登录</h6>
+									<span style="float:right;" class="Login-border">
+										<a id="postsubmit" href="javascript:;" class="btn" onclick="post(1287005,686,0);"></a>
+									</span>
+								</div>
+								<div class="claer"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+
+		<div class="nav">
+			<div class="nav-left" onmouseover="listMenu();" onmouseout="listMenu();">
+				<span>
+					<b id="sorttxt">最新评论</b>
+					<input type="hidden" id="sortid"/>
+					<i class="downicon" id="arrowstatus"></i>
+				</span>
+				<ul class="nav-menu nav-menu-left" id="commentmenu" style="display:none;">
+					<li>
+						<a class="on" href="javascript:;" onclick="getSort(this,1,0,686);">最新评论</a>
+					</li>
+					<li><a href="javascript:;" onclick="getSort(this,2,0,686);">最早评论</a></li>
+					<li><a href="javascript:;" onclick="getSort(this,3,0,686);">最热评论</a></li>
+				</ul>
+			</div>
+			<div class="claer"></div>
+		</div>
+		
+		<span id="posts">
+			<img width="50px;" src="/Application/Home/View/Public/static/images/loading.gif">
+		</span>
+</div>-->
+</div>
+<script type="text/javascript" src="/Application/Home/View/Public/static/js/comment.js?v=49"></script>
+<!--下面是对联广告的html代码结构-->
+<div class="duilian duilian_left">
+        <div class="duilian_con">
+            <p><img src="http://i1.nbimg.com/588755/dd3ca8af1823eef5.jpg" title="1504683103840916.jpg" alt="微信图片_20170906153123.jpg"/></p>        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><div class="duilian duilian_right" style="display:none;">
+        <div class="duilian_con" style="width:180px;">
+            <div class="mb-img fl clearfix">
+                <div id="mb-ibox" class="mb-ibox fl">
+                    <p><img src="http://i2.cfimg.com/588755/f6cb66b784eeab4e.jpg" title="1508982615785489.jpg" alt="7店广告.jpg"/></p>                </div>
+            </div>
+        </div>
+        <a href="#" class="duilian_close">X关闭</a>
+    </div><!--底部右下角-->
+<div id="footer">
+    <!-- <script src="http://pv.sohu.com/cityjson" type="text/javascript"></script> -->
+    <script>
+    (function() {
+        //向右按钮点击事件
+        var index = 0;
+        var liLen;
+        $(".rightBtn").click(function() {
+            index++;
+            liLen = $(".catelist ul li").length - 3;
+            if (index >= liLen) {
+                $(".catelist ul").stop();
+                index = liLen;
+            } else {
+                if (index == 1) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //向左按钮点击事件
+        $(".leftBtn").click(function() {
+            if (index == 0) {
+                $(".catelist ul").stop();
+            } else {
+                index--;
+                if (index == 0) {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                } else {
+                    $(".catelist ul").animate({ "margin-left": -index * 153 }, 660);
+                }
+            }
+        });
+
+        //点击换一批按钮
+        $("a[ectype=\'reflash\']").click(function() {
+            var name = $(this).attr(\'name\');
+            var pagenum = $(this).attr(\'page\');
+            var id = $(this).attr(\'id\');
+            $.post("/index.php/index/reflash.html", { cid: name, page: pagenum, sortid: id }, function(msg) {
+                if (msg == \'\') {
+                    alert(\'暂无更多资源\');
+                    $("a[ectype=\'reflash\']").attr(\'page\', 0);
+                } else {
+                    $("#ctspan" + id).html(msg);
+                    $("a[ectype=\'reflash\']").attr(\'page\', Number(pagenum) + 1);
+                }
+            });
+
+        })
+
+        /*对联广告*/
+        var duilian_close = $("a.duilian_close");
+        var duilian_left = $("div.duilian_left");
+        var duilian_right = $("div.duilian_right");
+        var screen_w = screen.width;
+        if (screen_w > 1024) {
+            duilian_left.show();
+            duilian_right.show();
+        }
+        duilian_close.click(function() {
+            $(this).parent().hide();
+            return false;
+        });
+        /*右下角广告*/
+        var oDiv = document.getElementById(\'miaov_float_layer\');
+        // if((returnCitySN.cid).substr(0,3) == "410"){
+        //     $("#miaov_float_layer .wrap2 img").attr(\'src\',\'http://i4.buimg.com/588755/ba83266942fc5444.jpg\');
+        // }
+        // $("#miaov_float_layer .wrap2").show();
+        var oBtnMin = document.getElementById(\'btn_min\');
+        var oBtnClose = document.getElementById(\'btn_close\');
+        var oDivContent = oDiv.getElementsByTagName(\'div\')[0];
+
+        var iMaxHeight = 0;
+
+        var isIE6 = window.navigator.userAgent.match(/MSIE 6/ig) && !window.navigator.userAgent.match(/MSIE 7|8/ig);
+
+        oDiv.style.display = \'block\';
+        iMaxHeight = oDivContent.offsetHeight;
+
+        if (isIE6) {
+            oDiv.style.position = \'absolute\';
+            repositionAbsolute();
+            miaovAddEvent(window, \'scroll\', repositionAbsolute);
+            miaovAddEvent(window, \'resize\', repositionAbsolute);
+        } else {
+            oDiv.style.position = \'fixed\';
+            repositionFixed();
+            miaovAddEvent(window, \'resize\', repositionFixed);
+        }
+
+        oBtnMin.timer = null;
+        oBtnMin.isMax = true;
+        oBtnMin.onclick = function() {
+            startMove
+                (
+                    oDivContent, (this.isMax = !this.isMax) ? iMaxHeight : 0,
+                    function() {
+                        oBtnMin.className = oBtnMin.className == \'min\' ? \'max\' : \'min\';
+                    }
+                );
+        };
+
+        oBtnClose.onclick = function() {
+            oDiv.style.display = \'none\';
+            oDiv.innerHTML = "";
+        };
+
+    })();
+    </script>
+    <div style="margin-top:30px;margin-bottom:25px;">
+        <p><a href="http://bbs.ttmeiju.vip/forum.php?mod=viewthread&tid=894" target="_blank"><img src="http://i4.nbimg.com/588755/bd8edfca09ddfe73.jpg" title="1504592988235406.jpg" alt="招聘.jpg"/></a></p>    </div>
+    <div id="footer_top">
+        <p class="good_link">
+            <a href="/">天天美剧</a>　|
+            <a href="http://bbs.ttmeiju.vip/forum.php?mod=forumdisplay&fid=37" target="_blank">站长留言</a>　|
+            <a href="/about-3.html">联系我们</a>
+        </p>
+    </div>
+    <div class="copyright">
+        <p id="copyright">
+            Powered by ttmeiju.vip <em title="20170410">2.1</em> &copy; 2011-2017<br>
+            Tec By <a href="http://www.bf361.com" target="_blank">dawnpeak</a>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?b173122a0f5eae3f22f6ff0c7fe6d701";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </p>
+    </div>
+</div>
+</div>
+<!--footer end-->
+</body>
+
+</html>'
