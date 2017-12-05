@@ -220,7 +220,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <td ectype="linklist" align="left" style="padding:0px;">
                             <?php $urls=json_decode($val['urls'],true)?>
                             <?php foreach ($urls as $k=>$v){?>
-                                <a style="" href="<?=$v?>" data-mid="<?=$info['mid']?>" data-did="<?=$val['did']?>" class="download_meiju" rel="nofollow" target="_blank" title="<?php
+                                <a style="" href="<?=str_replace("\'","",$v)?>" data-mid="<?=$info['mid']?>" data-did="<?=$val['did']?>" class="download_meiju" rel="nofollow" target="_blank" title="<?php
                                 if($k=='baidu'){echo "百度云盘";}
                                 elseif ($k=='mi'){
                                     echo "小米路由器远程";
@@ -241,9 +241,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         </td>
                         <td><?=$val['password']?></td>
                         <td><?=$val['size']?></td>
-                        <td><?=$val['password']?></td>
+                        <td><?=$val['standard']?></td>
                         <td>
-                            <?=$val['password']?>
+                            <?=$val['subtitle']?>
                         </td>
                         <td><?=$val['create_time']?></td>
                     </tr>

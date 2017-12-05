@@ -29,7 +29,7 @@ class CollectionController extends CommonController
     {
         $searchModel = new Meiju();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        return $this->render('/Collection/index', [
+        return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
@@ -49,7 +49,7 @@ class CollectionController extends CommonController
             Yii::$app->request->setQueryParams(array_merge(Yii::$app->request->queryParams, ['MeijuDetial' => ['mid' => $mid]]));
         }
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        return $this->render('/Collection/meijuList', [
+        return $this->render('meijuList', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
@@ -370,7 +370,7 @@ class CollectionController extends CommonController
     {
         set_time_limit(0);
         //采集最近2天的
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 3; $i++) {
             $date = date("Y-m-d", strtotime("-{$i} day"));
             $file = Yii::$app->getBasePath() . $this->meiju_path . "/news/{$date}.html";
                         if (in_array($i,[0,1,2,3]) || !is_file($file)) {

@@ -148,7 +148,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <span class="greybg">下载链接（Download Link）：
 
                         <?php foreach (json_decode($info['urls'],true) as $key=>$val){?>
-                            <a style="" href="<?=$val?>"  data-mid="<?=$info['mid']?>" data-did="<?=$info['did']?>" class="download_meiju" rel="nofollow" target="_blank"
+                            <a style="" href="<?=str_replace("\'","",$val)?>"  data-mid="<?=$info['mid']?>" data-did="<?=$info['did']?>" class="download_meiju" rel="nofollow" target="_blank"
                                title="<?php
                                if($key=='baidu'){echo "百度云盘";}
                                elseif ($key=='mi'){
@@ -164,6 +164,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                }else{
                                    echo "其他";
                                } ?>下载">
+
                                     <img ectype="downnode" src="/images/<?=$key?>.png" width="20px">
                             </a>
                         <?php } ?>
@@ -172,7 +173,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <span class="greybg">名字：<?=$info['title_cn']?> <?=$info['title_en']?> <?=$info['title']?></span>
                     <span>发布时间：<?=$info['create_time']?></span>
                     <span class="greybg">回归：<?=$info['back_time']?></span>
-                    <span>大小：<?=$info['back_time']?></span>
+                    <span>大小：<?=$info['size']?></span>
                     <span class="greybg">
 						     <div class="bdsharebuttonbox bdshare-button-style1-16" style="margin-left:45px;" data-bd-bind="1511165844243">
                                 <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
