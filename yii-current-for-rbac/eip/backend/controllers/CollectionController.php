@@ -80,7 +80,7 @@ class CollectionController extends CommonController
 
         $auth = Yii::$app->authManager;
 
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+        if ($model->load(Yii::$app->request->post())) {
             /*获取数据*/
             $model->update_at = time();
             if ($model->save(false)) {
