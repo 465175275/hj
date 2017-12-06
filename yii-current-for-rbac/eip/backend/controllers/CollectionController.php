@@ -82,7 +82,6 @@ class CollectionController extends CommonController
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             /*获取数据*/
-            $post = Yii::$app->request->post();
             $model->update_at = time();
             if ($model->save(false)) {
                 Yii::$app->session->setFlash('info', '修改成功');

@@ -39,6 +39,7 @@ use yii\widgets\ActiveForm;
                     <div class="box-body">
 
                         <?php $form = ActiveForm::begin(); ?>
+                        <input type="hidden" name="_csrf" value="<?=Yii::$app->request->csrfToken?>" />
                         <?= $form->field($model, 'title_cn')->textInput() ?>
                         <?= $form->field($model, 'title_en')->textInput() ?>
                         <?= $form->field($model, 'update_status')->textInput() ?>
