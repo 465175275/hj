@@ -44,7 +44,7 @@ class Meiju extends \yii\db\ActiveRecord
             [['mid', 'tid', 'click_num','subscription_num', 'update_at'], 'integer'],
             ['title_en','required','message'=>'名字不能为空','on'=>['create','update']],
             ['img','required','message'=>'主图不能为空','on'=>['create','update']],
-            [['title_cn', 'title_en', 'update_status', 'update_day','type'], 'safe'],
+            [['title_cn', 'title_en', 'update_status', 'update_day','type','Introduction','img','back_status','back_time'], 'safe'],
 
         ];
     }
