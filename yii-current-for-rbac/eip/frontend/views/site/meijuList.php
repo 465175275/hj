@@ -256,25 +256,5 @@ $this->params['breadcrumbs'][] = $this->title;
 
 </div>
 
-<script>
-    $(function(){
-        var season=$(".curseason").data("season");
-        $(".season_"+season).show();
-
-        $(".season").click(function(){
-            if($(this).hasClass('curseason')==false){
-                $(".curseason").find(".checked").hide();
-                var season=$(".curseason").data("season");
-                $(".curseason").removeClass('curseason');
-                $(".season_"+season).hide();
-
-                $(this).find(".checked").show();
-                $(this).addClass('curseason');
-                season=$(this).data("season");
-                $(".season_"+season).show();
-            }
-        })
-    })
-</script>
 
 

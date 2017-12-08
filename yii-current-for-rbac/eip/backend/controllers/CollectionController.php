@@ -4,6 +4,8 @@ namespace backend\controllers;
 
 use common\models\Meiju;
 use common\models\MeijuDetial;
+use common\models\MeijuHot;
+use common\models\News;
 use Yii;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -80,7 +82,7 @@ class CollectionController extends CommonController
 
         $auth = Yii::$app->authManager;
 
-        if ($model->load(Yii::$app->request->post())) {
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             /*获取数据*/
             $model->update_at = time();
             if ($model->save(false)) {
@@ -251,15 +253,13 @@ class CollectionController extends CommonController
         $data = curl_exec($curl);
         $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
-        if($httpCode==404){
+        if ($httpCode == 404) {
             return false;
         }
         // 关闭URL请求
         curl_close($curl);
         return $data;
     }
-
-
 
 
     /**
@@ -286,7 +286,7 @@ class CollectionController extends CommonController
     {
         $meijuModel = new Meiju();
         $data = $this->read_caij_detail($url);
-        if(!$data || $meijuModel->findOne(['tid'=>$data['data']["mid"]])){
+        if (!$data || $meijuModel->findOne(['tid' => $data['data']["mid"]])) {
             return true;
         }
         /*实例化authManager类*/
@@ -307,11 +307,11 @@ class CollectionController extends CommonController
         $meijuModel->click_num = 0;
         $meijuModel->url = $url;
         $meijuModel->update_at = time();
-        $r=[];
+        $r = [];
         $tr = Yii::$app->db->beginTransaction();
         try {
             if ($meijuModel->save(false)) {
-                $mid= Yii::$app->db->getLastInsertID();
+                $mid = Yii::$app->db->getLastInsertID();
                 foreach ($data['detail'] as $val) {
                     $MeijuDetialModel = new MeijuDetial();
                     $MeijuDetialModel->scenario = 'create';
@@ -326,9 +326,9 @@ class CollectionController extends CommonController
                     $MeijuDetialModel->standard = $val['standard'];
                     $MeijuDetialModel->create_time = $val['create_time'];
                     $MeijuDetialModel->update_at = $meijuModel->update_at;
-                    $r[]=$MeijuDetialModel->save(false);
+                    $r[] = $MeijuDetialModel->save(false);
                 }
-                if(in_array(false,$r)){
+                if (in_array(false, $r)) {
                     throw new \Exception();
                 }
                 $tr->commit();
@@ -339,7 +339,6 @@ class CollectionController extends CommonController
         } catch (\Exception $e) {
 
             $tr->rollBack();
-            echo $e->getMessage();exit;
             return false;
         }
     }
@@ -356,7 +355,7 @@ class CollectionController extends CommonController
             if (!is_file($file)) {
                 $url = $this->host_list . $i . "html";
                 $p = $this->curl($url);
-                $p!=false && $this->file_put($p, $file);
+                $p != false && $this->file_put($p, $file);
             }
 
         }
@@ -369,19 +368,29 @@ class CollectionController extends CommonController
     {
         set_time_limit(0);
         //采集最近2天的
-        for ($i = 0; $i < 3; $i++) {
-            $date = date("Y-m-d", strtotime("-{$i} day"));
-            $file = Yii::$app->getBasePath() . $this->meiju_path . "/news/{$date}.html";
-                        if (in_array($i,[0,1,2,3]) || !is_file($file)) {
-                            $url = $this->host_detail . "/latest-{$i}.html";
-                            $p = $this->curl($url);
-                            $p!=false && $this->file_put($p, $file);
-                            echo $file."--------->".$url."<br>";
-                        }
-            if(is_file($file)){
-                $this->saveLast($file);
-            }
+                for ($i = 0; $i < 3; $i++) {
+                    $date = date("Y-m-d", strtotime("-{$i} day"));
+                    $file = Yii::$app->getBasePath() . $this->meiju_path . "/news/{$date}.html";
+                                if (in_array($i,[0,1,2,3]) || !is_file($file)) {
+                                    $url = $this->host_detail . "/latest-{$i}.html";
+                                    $p = $this->curl($url);
+                                    $p!=false && $this->file_put($p, $file);
+                                    echo $file."--------->".$url."<br>";
+                                }
+                    if(is_file($file)){
+                        $this->saveLast($file);
+                    }
 
+                }
+
+        //采集影评资讯
+        $file = Yii::$app->getBasePath() . $this->meiju_path . "/index-." . date("Ymd") . ".html";
+        if (!is_file($file)) {
+            $html = $this->curl($this->host_detail);
+            $html != false && $this->file_put($html, $file);
+        }
+        if (is_file($file)) {
+            $this->saveIndex($file);
         }
     }
 
@@ -424,7 +433,7 @@ class CollectionController extends CommonController
     {
         $file = Yii::$app->getBasePath() . $this->meiju_path . $url;
         $data = $this->curl($this->host_detail . $url);
-        $data!=false && $this->file_put($data, $file);
+        $data != false && $this->file_put($data, $file);
     }
 
     /**
@@ -528,7 +537,7 @@ class CollectionController extends CommonController
         $pattern = "/<script src=\"\/index.php\/user\/rss_status\/mid\/(.*).html\" type=\"text\/javascript\" language=\"javascript\"><\/script>/iUs";
         preg_match_all($pattern, $html, $mid);
         $data['mid'] = $mid && isset($mid[1][0]) ? $mid[1][0] : '';//天天ID
-        if(!$data['mid']){
+        if (!$data['mid']) {
             return false;
         }
 
@@ -695,13 +704,12 @@ class CollectionController extends CommonController
                 $row['title'] = $title[1][0];
                 $row['season'] = 0;
                 $row['name'] = '高清电影';
-            }else if($row['href'] == "/meiju/Documentary.html"){
+            } else if ($row['href'] == "/meiju/Documentary.html") {
                 $row['title'] = $title[1][0];
                 $row['season'] = 0;
                 $row['name'] = '纪录片频道';
-            }
-            else{
-                $row['name'] = explode(" ",$title[1][0])[0];
+            } else {
+                $row['name'] = explode(" ", $title[1][0])[0];
                 $row['title'] = $title[1][0];
                 $row['season'] = 0;
             }
@@ -757,10 +765,10 @@ class CollectionController extends CommonController
         $data = $this->read_caiji_last($url);
         $MeijuDetial = new MeijuDetial();
         $Meiju = new Meiju();
-        $rs=$ids=[];
+        $rs = $ids = [];
         foreach ($data as $val) {
             $meijus = $Meiju->find()->andFilterWhere(['title_cn' => $val['name']])->one();
-            if(!$meijus){
+            if (!$meijus) {
                 $meijus = $Meiju->find()->andFilterWhere(['url' => $val['href']])->one();
             }
             if ($meijus) {
@@ -772,14 +780,14 @@ class CollectionController extends CommonController
                     $detials->season = $val['season'];
                     $detials->subtitle = $val['subtitle'];
                     $detials->standard = $val['standard'];
-                    $rs[]=$detials->save(false);
+                    $rs[] = $detials->save(false);
                 } else {
                     $MeijuDetial = new MeijuDetial();
                     $MeijuDetial->scenario = 'create';
                     $MeijuDetial->mid = $meijus->mid;
                     $MeijuDetial->title = $val['title'];
                     $MeijuDetial->tdid = $val['tdid'];
-                    $MeijuDetial->season =$val['season'];
+                    $MeijuDetial->season = $val['season'];
                     $MeijuDetial->urls = json_encode($val['urls']);
                     $MeijuDetial->password = $val['password'];
                     $MeijuDetial->size = $val['size'];
@@ -787,10 +795,10 @@ class CollectionController extends CommonController
                     $MeijuDetial->standard = $val['standard'];
                     $MeijuDetial->create_time = date("Y-m-d");
                     $MeijuDetial->update_at = time();
-                    $rs[]=$MeijuDetial->save(false);
-                    $ids[]=Yii::$app->db->getLastInsertID();
+                    $rs[] = $MeijuDetial->save(false);
+                    $ids[] = Yii::$app->db->getLastInsertID();
                 }
-                $meijus->update_time=time();
+                $meijus->update_time = time();
                 $meijus->save(false);
             } else {
                 //重新下载
@@ -799,35 +807,137 @@ class CollectionController extends CommonController
                 } else {
                     $urls = $val['href'];
                 }
-                 //var_dump($val['name']);
-                 // var_dump($urls = $val['href']);
-                 // exit;
+                //var_dump($val['name']);
+                // var_dump($urls = $val['href']);
+                // exit;
                 //var_dump(Yii::$app->getBasePath() . $this->meiju_path . $urls);exit;
 
                 if (!is_file(Yii::$app->getBasePath() . $this->meiju_path . $urls)) {
                     $this->file_get_caiji_detail($urls);
-                    if (!is_file(Yii::$app->getBasePath() . $this->meiju_path . $urls)){
+                    if (!is_file(Yii::$app->getBasePath() . $this->meiju_path . $urls)) {
                         if (strpos($val['href'], "%20") !== false) {
                             $urls = str_replace("%20", ".", $val['href']);
                         }
                     }
 
                 }
-                $rs[]=$r= $this->save($urls);
+                $rs[] = $r = $this->save($urls);
 
             }
 
-            if(in_array(false,$rs)){
+            if (in_array(false, $rs)) {
                 echo $val['name'];
                 var_dump($val);
                 exit;
             }
         }
 
-        echo "完成！<br>";var_dump($rs);
+        echo "完成！<br>";
+        var_dump($rs);
         echo "<br>";
         var_dump($ids);
 
+    }
+
+
+    /**
+     * 采集影评
+     * @param string $url
+     */
+    private function saveIndex($url = '')
+    {
+        $html = file_get_contents($url);
+        //<label class="cnname"><a target="_blank" href="/meiju/Agents.of.S.H.I.E.L.D.html">神盾局特工</a></label>
+        $pattern = "/<label class=\"cnname\"><a target=\"_blank\" href=\"\/meiju\/(.*).html\">(.*)<\/a><\/label>/iUs";
+        preg_match_all($pattern, $html, $arr1);
+
+        $pattern = "/<a target=\"_blank\" href=\"\/seed\/(.*).html\">(.*)<\/a>
+                          <span class=\"dwsum\">下载量:(.*)<\/span>/iUs";
+        preg_match_all($pattern, $html, $arr2);
+
+        $i = 1;
+        if (isset($arr1[2])) {
+            MeijuHot::deleteAll();//清空
+            $meiju = new Meiju();
+            foreach ($arr1[2] as $k => $value) {
+                if ($k > 0 && $k % 2 == 1) {
+                    $meijuHot = new MeijuHot();
+                    $meijuHot->scenario = 'create';
+                    $meijuHot->id = $i;
+                    $meijuHot->title_cn = $value;
+                    $row = $meiju->find()->select(['mid'])->where(['title_cn' => $value])->one();
+                    $meijuHot->mid = $row->mid;
+                    $meijuHot->type = 'hot';
+                    $meijuHot->other = '';
+                    $meijuHot->save(false);
+                    $i++;
+                }
+            }
+        }
+
+        if (isset($arr2[1]) && isset($arr2[2]) && isset($arr2[3])) {
+            $meijuDetial = new MeijuDetial();
+            foreach ($arr2[1] as $k => $value) {
+                $meijuHot = new MeijuHot();
+                $meijuHot->scenario = 'create';
+                $meijuHot->id = $i;
+                $meijuHot->title_cn = $arr2[2][$k];
+                $meijuHot->other = $arr2[3][$k];
+                $row = $meijuDetial->find()->select(['did'])->where(['tdid' => $value])->one();
+                $meijuHot->mid = $row->did;
+                $meijuHot->type = 'down';
+                $meijuHot->save(false);
+                $i++;
+            }
+        }
+
+        $pattern = "/\/article-(.*).html/iUs";
+        preg_match_all($pattern, $html, $arr4);
+        $pattern = "/<div class=\"yplitit\">(.*)<\/div>/iUs";
+        preg_match_all($pattern, $html, $arr5);
+        $pattern = "/<div class=\"ypinfo\">(.*)<\/div>/iUs";
+        preg_match_all($pattern, $html, $arr6);
+        $pattern = "/href=\"\/article-[0-9]+.html\"><img src=\"(.*)\" alt/iUs";
+        preg_match_all($pattern, $html, $img);
+        if (isset($arr4[1]) && isset($arr5[1]) && isset($arr6[1]) && isset($img[1])) {
+            foreach ($arr4[1] as $key => $value) {
+                $news = new News();
+                $row = $news->find()->where(['tnid' => $value])->count();
+                if ($row) {
+                    continue;
+                }
+
+                $file = Yii::$app->getBasePath() . $this->meiju_path . "/news/news-" . $value . ".html";
+                if (!is_file($file)) {
+                    $url = $this->host_detail . $arr4[0][$key];
+                    $new_html = $this->curl($url);
+                    $new_html != false && $this->file_put($new_html, $file);
+                } else {
+                    $new_html = file_get_contents($file);
+                }
+
+                $pattern = "/<div class=\"articlecontent\" style=\"overflow: hidden;\">(.*)<\/div>/iUs";
+                preg_match_all($pattern, $new_html, $arr7);
+                $content = isset($arr7[1][0]) ? str_replace('http://i1.cfimg.com/588755/c52dca44b06a7e66.jpg', '', $arr7[1][0]) : '';
+                $news->scenario = 'create';
+                $news->tnid = $value;
+                $news->title = $arr5[1][$key];
+                $news->summary = $arr6[1][$key];
+                $news->content = $content;
+                $pattern = "/<div class=\"viewico\" style=\"margin-left:10px;\"><\/div><span>(.*)次<\/span>/iUs";
+                preg_match_all($pattern, $new_html, $arr8);
+                $news->click_num = isset($arr8[1][0]) ? $arr8[1][0] : 0;
+                $pattern = "/<div class=\"yingping\">(.*)<\/div>/iUs";
+                preg_match_all($pattern, $new_html, $arr9);
+                $news->type = isset($arr9[1][0]) ? $arr9[1][0] : '';
+                $news->update_at = time();
+
+                $news->img =$img[1][$key];
+                $news->save(false);
+            }
+        }
+
+        exit;
     }
 
 }

@@ -459,9 +459,12 @@ $this->title = '时光美剧';
                     <ul class="secrgdiv">
                         <?php foreach ($clickList as $key=>$val){?>
                         <li>
-                            <a target="_blank" title="<?=$val['title_cn']."  ".$val['title_en']." ".$val['title']?>" href="/index.php?r=site%2Fmeiju-detail&did=<?=$val['did']?>"><?=$val['title_cn']."  ".$val['title_en']." ".$val['title']?> </a>
+                            <a target="_blank" title="<?=$val['title_cn']?>" href="/index.php?r=site%2Fmeiju-detail&did=<?=$val['mid']?>"><?=$val['title_cn']?> </a>
+                            <span class="dwsum">下载量:<?=$val['other']?>
+                            </span>
+                            <!--                            <a target="_blank" title="<?/*=$val['title_cn']."  ".$val['title_en']." ".$val['title']*/?>" href="/index.php?r=site%2Fmeiju-detail&did=<?/*=$val['did']*/?>"><?/*=$val['title_cn']."  ".$val['title_en']." ".$val['title']*/?> </a>
                             <span class="dwsum">下载量:<?php
-                                if($key==0){
+/*                                if($key==0){
                                     echo $val['click_num']+2345;
                                  }elseif($key=1){
                                     echo $val['click_num']+1536;
@@ -475,8 +478,8 @@ $this->title = '时光美剧';
                                     echo $val['click_num']+100;
                                 }
 
-                                ?>
-                            </span>
+                                */?>
+                            </span>-->
                         </li>
                     <?php }?>
                     </ul>        </div>
@@ -490,27 +493,14 @@ $this->title = '时光美剧';
                         <span class="more"><a target="_blank" href="/article.html">更多</a></span>
                     </div>
                     <ul>
+                        <?php foreach ($yinping as $key=>$value){ if($key<5){ ?>
                         <li>
-                            <a target="_blank" href="/article-532.html"><img src="http://i4.cfimg.com/588755/912f26a219e467d2.jpg" alt="怕你们骂我，所以从不敢推荐这种大片！">
-                                <div class="yplitit">怕你们骂我，所以从不敢推荐这种大片！</div></a>
-                            <div class="ypinfo">吃/能吃/怎么吃，亦或是如何吃出新鲜、如何吃出精彩、如何吃出人间烟火味。  关于吃，或许还要从这里寻些滋味儿 ——</div>
-                        </li><li>
-                            <a target="_blank" href="/article-531.html"><img src="http://i2.cfimg.com/588755/96709d48ae186145.jpg" alt="偷内衣的变态死了，可问题解决了么？">
-                                <div class="yplitit">偷内衣的变态死了，可问题解决了么？</div></a>
-                            <div class="ypinfo">我们的生活里有太多这样的悲剧…  碍于面子、害怕麻烦、羞于启齿、不提也罢，这些微小的闪躲就像是白蚁一样，在它出现时就意味着生活可能要溃于蚁穴了。</div>
-                        </li><li>
-                            <a target="_blank" href="/article-530.html"><img src="http://i4.cfimg.com/588755/11b1d5e2a32f6b3f.jpg" alt="豆瓣9.0，去他妈的全世界！">
-                                <div class="yplitit">豆瓣9.0，去他妈的全世界！</div></a>
-                            <div class="ypinfo">最近刷了一部小破剧…   叫它小破剧是因为每集短短20分钟不到，回条信息的功夫就能错过半集剧情。   但正是它的短小，才让我深觉它的精悍。   而且，这部小破剧还有个限制级的名字 ——</div>
-                        </li><li>
-                            <a target="_blank" href="/article-526.html"><img src="http://i4.cfimg.com/588755/cb155af6ce040a3c.jpg" alt="别去刷烂片！这起谋杀43年前就拍到了巅峰！">
-                                <div class="yplitit">别去刷烂片！这起谋杀43年前就拍到了巅峰！</div></a>
-                            <div class="ypinfo">最近一部经典翻拍引起不小的争议…   阿加莎·克里斯蒂的[东方快车谋杀案]云集约翰尼·德普、威廉·达福、朱迪·丹奇等大咔再登大银幕。</div>
-                        </li><li>
-                            <a target="_blank" href="/article-525.html"><img src="http://i2.cfimg.com/588755/0eaff32f56ca346e.jpg" alt="多想做只猫！认识狐朋狗友，挑战冒险猫生…">
-                                <div class="yplitit">多想做只猫！认识狐朋狗友，挑战冒险猫生…</div></a>
-                            <div class="ypinfo">他是只橘猫，出生在破旧的农舍里…</div>
-                        </li>            </ul>
+                            <a target="_blank" href="/new-532.html"><img src="<?=$value['img']?>" alt="<?=$value['title']?>">
+                                <div class="yplitit"><?=$value['title']?></div></a>
+                            <div class="ypinfo"><?=$value['summary']?></div>
+                        </li>
+                        <?php } }?>
+                    </ul>
                 </div>
                 <div class="yp zx">
                     <div class="yptit">
@@ -518,27 +508,14 @@ $this->title = '时光美剧';
                         <span class="more"><a target="_blank" href="/article.html">更多</a></span>
                     </div>
                     <ul>
-                        <li>
-                            <a target="_blank" href="/article-533.html"><img src="http://i4.cfimg.com/588755/517241b447b2e021.jpg" alt="本周回归剧：浴血黑帮 Peaky Blinders S04">
-                                <div class="yplitit">本周回归剧：浴血黑帮 Peaky Blinders S04</div></a>
-                            <div class="ypinfo">在圣诞前夜到来之际，Tommy突然收到一封神秘的来信，信中称剃刀帮正面临被彻底铲除的危险。当敌人步步逼近时，Tommy被迫逃离乡间别墅，返回小石南村的街道，一场血腥的生死之战即将开始。</div>
-                        </li><li>
-                            <a target="_blank" href="/article-529.html"><img src="http://i4.cfimg.com/588755/085f0667d10cd7d6.jpg" alt="11月15日最新资讯">
-                                <div class="yplitit">11月15日最新资讯</div></a>
-                            <div class="ypinfo">根据经典小说改编成电影系列的《指环王》十分成功，而这次剧集版还在初步阶段，编剧﹑制片﹑剧情大纲都没有，不过可知的是这剧是《指环王1：魔戒再现 The Lord of the Rings: The Fellowship of the Ring》的前传。</div>
-                        </li><li>
-                            <a target="_blank" href="/article-528.html"><img src="http://i4.cfimg.com/588755/f0f4499ab26d4668.jpg" alt="本周新剧：高玩救未来 Future Man">
-                                <div class="yplitit">本周新剧：高玩救未来 Future Man</div></a>
-                            <div class="ypinfo">剧本对Josh Futterman进一步描述道：他仍然住在父母家中，在一家名叫「Devlin」的性疾病研究中心当看门人，没有任何前途可言。他的青春期过得很不愉快，因此逐渐丧失了社交能力。他在别人面前总是呆头呆脑，充满自卑心理，而且不敢接触任何女性。</div>
-                        </li><li>
-                            <a target="_blank" href="/article-527.html"><img src="http://i1.cfimg.com/588755/5dada75dcc3d7732.jpg" alt="本周新剧：霍华德庄园 Howards End">
-                                <div class="yplitit">本周新剧：霍华德庄园 Howards End</div></a>
-                            <div class="ypinfo">Starz与BBC合作开发的四集有限剧集《霍华德庄园》根据E.M. Forster的经典小说改编，原著曾多次被改编成影视作品——其中最有名的要数70年代的电影版和1992年Helena Bonham Carter、Emma Thompson、Anthony Hopkins、Vanessa Redgrave主演的电影版（该片还有个好听的译名叫做《此情可问天》）。</div>
-                        </li><li>
-                            <a target="_blank" href="/article-524.html"><img src="http://i1.cfimg.com/588755/65741738944df345.jpg" alt="本周回归剧：炸天女郎 Lady Dynamite S02">
-                                <div class="yplitit">本周回归剧：炸天女郎 Lady Dynamite S02</div></a>
-                            <div class="ypinfo">Maria Bamford将面对人生最大的冒险：爱。Maria决定利用自己小时候学到的东西来应对新的关系，包括自己和家人、朋友……甚至宠物狗的关系。问题是……她学到的那些东西全都是错的！</div>
-                        </li>            </ul>
+                        <?php foreach ($yinping as $key=>$value){ if($key>4){ ?>
+                            <li>
+                                <a target="_blank" href="/new-532.html"><img src="<?=$value['img']?>" alt="<?=$value['title']?>">
+                                    <div class="yplitit"><?=$value['title']?></div></a>
+                                <div class="ypinfo"><?=$value['summary']?></div>
+                            </li>
+                        <?php } }?>
+                             </ul>
                 </div>
             </div>
     </div>
