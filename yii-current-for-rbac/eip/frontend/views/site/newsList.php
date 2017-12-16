@@ -6,140 +6,186 @@ use yii\helpers\Html;
 use yii\widgets\LinkPager;
 use yii\helpers\Url;
 
-$this->title = '排行榜';
+$this->title = '精彩影评';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <style>
-        .latesttable {
-            width: 990px;
-            float: left;
-        }
-        .latesttable .Shead {
-            height: 60px;
-            font-weight: bold;
-        }
-        tr {
-            display: table-row;
-            vertical-align: inherit;
-            border-color: inherit;
-        }
-        td, th {
-            text-align: center;
-            display: table-cell;
-            vertical-align: inherit;
-        }
+<style>
+    ul {
+        list-style: none;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .midder {
+        width: 990px;
+    }
+    .contentbox .news-list li {
+        margin: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eeeeee;
+        float: left;
+    }
+    .contentbox .news-list li .newstit {
+        float: left;
+        width: 100%;
+        height: 40px;
+    }
+    .yingping {
+        background: #54bae2;
+    }
+    .zixun {
+        background: #7bdbb6;
+    }
 
-        .latesttable .Scontent1 {
-            height: 35px;
-            background: #f4f4f4;
-            color: #5c5c5c;
-            line-height: 35px;
-        }
+    .contentbox .news-list li .newstit label, .contentbox .news-list li .newstit a {
+        width: 550px;
+        float: left;
+        height: 18px;
+        font-size: 12px;
+        line-height: 18px;
+        color: #999999;
+        margin-left: 10px;
+        margin-top: -2px;
+        text-align: left;
+    }
+    .yingping, .zixun {
+        float: left;
+        width: 37px;
+        height: 37px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 37px;
+        border-radius: 2px;
+    }
 
-        .latesttable .Scontent {
-            height: 35px;
-        }
+    element.style {
+        width: 200px;
+        height: 112px;
+    }
 
-        .ranktop3 {
-            float: left;
-            width: 310px;
-            height: 260px;
-            background: #ffffff;
-            padding-top: 10px;
-            border-bottom: 30px solid #f4f4f4;
-        }
-        .ranktop3 img {
-            width: 290px;
-            height: 160px;
-        }
-        .ranktop3 .mjtit {
-            float: left;
-            width: 310px;
-            height: 40px;
-            line-height: 40px;
-            text-align: left;
-            font-size: 14px;
-            font-weight: bold;
-            text-indent: 10px;
-            overflow: hidden;
-        }
-        .ranktop3 .mjinfo {
-            width: 240px;
-            height: 20px;
-            line-height: 20px;
-            text-align: left;
-            float: left;
-            color: #99abb7;
-            text-indent: 10px;
-        }
-        .ranktop3 .ranknum {
-            width: 70px;
-            height: 55px;
-            float: left;
-            color: #d3d1d2;
-            font-size: 75px;
-            font-weight: bold;
-            font-style: italic;
-        }
-        div {
-            display: block;
-        }
-    </style>
-    <?php if($pagination->offset==0){ foreach ($data as $key=> $val){ if($key>2) {break;}?>
-    <div class="ranktop3" style="border-left:15px;border-right:15px;">
-        <img src="<?=$val['img']?>">
-        <div class="mjtit">
-            <a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=<?=$val['mid']?>"><?=$val['title_cn']?>&nbsp;<?=$val['title_en']?></a>
+    .contentbox .news-list .cover img {
+        float: left;
+        border-radius: 5px;
+    }
+    img {
+        vertical-align: middle;
+        border: 0px;
+    }
+
+    .contentbox .news-list li .newstit a {
+        font-size: 14px;
+        font-weight: bold;
+        color: #23559a;
+        margin-top: 2px;
+    }
+
+    .contentbox .news-list .contents {
+        float: left;
+        padding-left: 45px;
+        margin-top: 10px;
+        width: 800px;
+    }
+
+    .contentbox .news-list .contents .newsinfo {
+        float: left;
+        width: 460px;
+        height: 112px;
+        margin-left: 15px;
+        text-align: left;
+        color: #000000;
+        font-size: 14px;
+    }
+
+    div {
+        display: block;
+    }
+
+    p {
+        display: block;
+    }
+
+    .contentbox .news-list .views {
+        float: left;
+        height: 20px;
+        padding-left: 45px;
+        margin-top: 10px;
+        width: 605px;
+        color: #999999;
+        text-align: left;
+    }
+    .contentbox .news-list .views .viewico, .ariticle_left .infos .viewico {
+        float: left;
+        margin-top: 6px;
+        width: 15px;
+        height: 11px;
+        background: url(../images/view.png);
+    }
+</style>
+<div>
+    <div id="wrapper">
+        <div class="midder">
+            <div class="contentbox">
+                <ul class="news-list">
+
+                    <?php foreach ($data as $val){?>
+                        <li>
+                            <div class="newstit">
+                                <div class="yingping"><?=$val['type']?></div>
+                                <label>来自：时光美剧</label>
+                                <a href="/index.php?r=site%2Fnew-detail&nid=<?=$val['nid']?>" ectype="clicknode" name="<?=$val['nid']?>" target="_blank"><?=$val['title']?></a>
+                            </div>
+                            <div class="contents">
+                                <div class="cover">
+                                    <a href="/article-563.html" target="_blank"><img style="width: 200px;height: 112px;" src="<?=$val['img']?>"></a>
+                                </div>
+                                <div class="newsinfo">
+                                    <p><?=$val['summary']?>
+                                        <a name="<?=$val['nid']?>" ectype="clicknode" href="/index.php?r=site%2Fnew-detail&nid=<?=$val['nid']?>" target="_blank">显示全部</a></p>
+                                </div>
+                            </div>
+                            <div class="views">
+                                <div class="viewico"></div>3次&nbsp;&nbsp;2017-12-09                                                </div>
+                        </li>
+                    <?php }?>
+
+<!--                    <li>
+                        <div class="newstit">
+                            <div class="yingping">影评</div>
+                            <label>来自：时光美剧</label>
+                            <a href="/article-563.html" ectype="clicknode" name="563" target="_blank">不杀人就等死，这不是游戏而是现实…</a>
+                        </div>
+                        <div class="contents">
+                            <div class="cover">
+                                <a href="/article-563.html" target="_blank"><img style="width: 200px;height: 112px;" src="http://i1.cfimg.com/588755/927abf096d678962.jpg"></a>
+                            </div>
+                            <div class="newsinfo">
+                                <p>一座孤岛   一项游戏   一群玩家  一人生还...<a name="563" ectype="clicknode" href="/article-563.html" target="_blank">显示全部</a></p>
+                            </div>
+                        </div>
+                        <div class="views">
+                            <div class="viewico"></div>3次&nbsp;&nbsp;2017-12-09                                                </div>
+                    </li>-->
+                </ul>
+            </div>
+            <table>
+                <tr>
+                    <td colspan="7">
+                        <?=LinkPager::widget([
+                            'pagination' => $pagination,
+                            'firstPageLabel'=>"First",
+                            'prevPageLabel'=>'Prev',
+                            'nextPageLabel'=>'Next',
+                            'lastPageLabel'=>'Last',
+                        ]);?>
+
+                    </td>
+                </tr>
+            </table>
         </div>
-        <div class="ranknum"><?=$key+1?></div>
-        <div class="mjinfo"><?=$val['type']?> / <?=$val['update_status']?> / 更新日：<?=$val['update_day']?></div>
-        <div class="mjinfo">暂无</div>
     </div>
-    <?php } }?>
 
-
-    <table class="latesttable" cellpadding="0" cellspacing="0" style="margin-top: 15px;">
-        <tbody><tr class="Shead">
-            <td width="5%" align="center">序号</td>
-            <td style="text-align: left">剧名</td>
-            <td width="10%">分类</td>
-            <td width="10%">状态</td>
-            <td width="10%">更新日期</td>
-            <td width="10%">回归时间</td>
-            <td width="10%">最后更新时间</td>
-        </tr>
-
-        <?php foreach ($data as $key=> $val){ if($pagination->offset==0 && $key<3){ continue;}?>
-        <tr class="<?=($key%2==1)? "Scontent1" : "Scontent"?>">
-            <td><?=$pagination->offset+$key+1?></td>
-            <td style="text-align: left">
-                <a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=<?=$val['mid']?>"><?=$val['title_cn']?>&nbsp;&nbsp;<?=$val['title_en']?></a></td>
-            <td>
-                <?=$val['type']?>																	</td>
-            <td><font color="#5cb1c5"><?=$val['update_status']?></font></td>
-            <td><?=$val['update_day']?></td>
-            <td>
-                <?=$val['back_time']?>																	</td>
-            <td>
-            <?=date("Y-m-d",$val['update_time'])?>																</td>
-        </tr>
-        <?php }?>
-        <tr>
-            <td colspan="7">
-                <?=LinkPager::widget([
-                    'pagination' => $pagination,
-                    'firstPageLabel'=>"First",
-                    'prevPageLabel'=>'Prev',
-                    'nextPageLabel'=>'Next',
-                    'lastPageLabel'=>'Last',
-                ]);?>
-
-            </td>
-        </tr>
-        </tbody>
-    </table>
 
 </div>

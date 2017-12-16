@@ -490,12 +490,12 @@ $this->title = '时光美剧';
                 <div class="yp">
                     <div class="yptit">
                         <span>影评</span>
-                        <span class="more"><a target="_blank" href="/article.html">更多</a></span>
+                        <span class="more"><a target="_blank" href="/index.php?r=site%2Fnews">更多</a></span>
                     </div>
                     <ul>
                         <?php foreach ($yinping as $key=>$value){ if($key<5){ ?>
                         <li>
-                            <a target="_blank" href="/new-532.html"><img src="<?=$value['img']?>" alt="<?=$value['title']?>">
+                            <a target="_blank" href="/index.php?r=site%2Fnew-detail&nid=<?=$value['nid']?>"><img src="<?=$value['img']?>" alt="<?=$value['title']?>">
                                 <div class="yplitit"><?=$value['title']?></div></a>
                             <div class="ypinfo"><?=$value['summary']?></div>
                         </li>
@@ -505,12 +505,12 @@ $this->title = '时光美剧';
                 <div class="yp zx">
                     <div class="yptit">
                         <span>资讯</span>
-                        <span class="more"><a target="_blank" href="/article.html">更多</a></span>
+                        <span class="more"><a target="_blank" href="/index.php?r=site%2Fnews">更多</a></span>
                     </div>
                     <ul>
                         <?php foreach ($yinping as $key=>$value){ if($key>4){ ?>
                             <li>
-                                <a target="_blank" href="/new-532.html"><img src="<?=$value['img']?>" alt="<?=$value['title']?>">
+                                <a target="_blank" href="/index.php?r=site%2Fnew-detail&nid=<?=$value['nid']?>"><img src="<?=$value['img']?>" alt="<?=$value['title']?>">
                                     <div class="yplitit"><?=$value['title']?></div></a>
                                 <div class="ypinfo"><?=$value['summary']?></div>
                             </li>

@@ -200,7 +200,7 @@ class SiteController extends Controller
     /**
      * 影评资讯
      */
-    public function actionNewsList(){
+    public function actionNews(){
         //分页读取数据
         $model = News::find();
 
@@ -213,10 +213,20 @@ class SiteController extends Controller
             ->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
-
         return $this->render('newsList', [
             'data' => $model,
             'pagination' => $pagination,
+        ]);
+    }
+
+    /**
+     * 影评资讯
+     */
+    public function actionNewDetail(){
+        $nid = Yii::$app->request->get("nid");
+        $data=News::find()->where(['nid'=>$nid])->one();
+        return $this->render('newDetail', [
+            'data' => $data
         ]);
     }
 

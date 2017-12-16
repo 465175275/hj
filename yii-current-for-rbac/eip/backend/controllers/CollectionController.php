@@ -875,22 +875,6 @@ class CollectionController extends CommonController
             }
         }
 
-        if (isset($arr2[1]) && isset($arr2[2]) && isset($arr2[3])) {
-            $meijuDetial = new MeijuDetial();
-            foreach ($arr2[1] as $k => $value) {
-                $meijuHot = new MeijuHot();
-                $meijuHot->scenario = 'create';
-                $meijuHot->id = $i;
-                $meijuHot->title_cn = $arr2[2][$k];
-                $meijuHot->other = $arr2[3][$k];
-                $row = $meijuDetial->find()->select(['did'])->where(['tdid' => $value])->one();
-                $meijuHot->mid = $row->did;
-                $meijuHot->type = 'down';
-                $meijuHot->save(false);
-                $i++;
-            }
-        }
-
         $pattern = "/\/article-(.*).html/iUs";
         preg_match_all($pattern, $html, $arr4);
         $pattern = "/<div class=\"yplitit\">(.*)<\/div>/iUs";
@@ -934,6 +918,27 @@ class CollectionController extends CommonController
 
                 $news->img =$img[1][$key];
                 $news->save(false);
+            }
+        }
+
+
+        if (isset($arr2[1]) && isset($arr2[2]) && isset($arr2[3])) {
+            $meijuDetial = new MeijuDetial();
+            foreach ($arr2[1] as $k => $value) {
+
+                $row = $meijuDetial->find()->select(['did'])->where(['tdid' => intval($value)])->one();
+                if(!isset($row->did)){
+                    continue;
+                }
+                $meijuHot = new MeijuHot();
+                $meijuHot->scenario = 'create';
+                $meijuHot->id = $i;
+                $meijuHot->title_cn = $arr2[2][$k];
+                $meijuHot->other = $arr2[3][$k];
+                $meijuHot->mid = $row->did;
+                $meijuHot->type = 'down';
+                $meijuHot->save(false);
+                $i++;
             }
         }
 
