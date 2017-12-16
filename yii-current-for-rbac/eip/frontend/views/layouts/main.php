@@ -38,10 +38,8 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => '首页', 'url' => ['/site/index']],
-        ['label' => '最新更新', 'url' => ['/site/news']],
         ['label' => '影评资讯', 'url' => ['/site/news']],
         ['label' => '排行榜', 'url' => ['/site/leaderboards']],
-        ['label' => '倒计时', 'url' => ['/site/countdown']],
         ['label' => '关于时光', 'url' => ['/site/about']],
         ['label' => '微博', 'url' => ['/site/weibo']],
     ];
