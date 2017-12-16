@@ -41,7 +41,6 @@ AppAsset::register($this);
         ['label' => '影评资讯', 'url' => ['/site/news']],
         ['label' => '排行榜', 'url' => ['/site/leaderboards']],
         ['label' => '关于时光', 'url' => ['/site/about']],
-        ['label' => '微博', 'url' => ['/site/weibo']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => '注册', 'url' => ['/site/signup']];

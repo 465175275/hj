@@ -374,17 +374,17 @@ $this->title = '时光美剧';
                 <div class="trailer">
                     <ul>
                         <li>
-                            <a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=1327">
+                            <a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=10">
                                 <img alt="《无耻家庭》第八季清资源已出！" src="http://i4.cfimg.com/588755/5ce3b48f4bceb0f2.jpg">
                                 <div class="tratit">《无耻家庭》第八季高清资源已出！</div>
                             </a>
                         </li><li>
-                            <a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=1309">
+                            <a target="_blank" href="/index.php?r=site%2Fmeiju-list&mid=3">
                                 <img alt="《行尸走肉》第八季高清资源已出！" src="http://i2.cfimg.com/588755/60b52720a9c9411e.jpg">
                                 <div class="tratit">《行尸走肉》第八季第三集高清资源已出！</div>
                             </a>
                         </li><li>
-                            <a target="_blank" href="https://weibo.com/1265416944/FurmNolgq?from=page_1006061265416944_profile&amp;wvr=6&amp;mod=weibotime">
+                            <a target="_blank" href="https://www.ixigua.com/i6499296320174424589/?utm_source=toutiao&utm_medium=feed_stream#mid=7021509600">
                                 <img alt="Netflix年底惊悚新剧《暗黑》首曝【中字】预告片！" src="http://i2.cfimg.com/588755/38115e2ec982d94d.jpg">
                                 <div class="tratit">Netflix年底惊悚新剧《暗黑》首曝【中字】预告片！</div>
                             </a>
