@@ -176,7 +176,7 @@ var sortid = $("#sortid").val();
 
 $(function(){
     $(".articlecontent").find("img").each(function(index,element){
-        if($(this).attr("src").indexOf("www") == -1 ){
+        if($(this).attr("src").indexOf("http:") == -1 ){
              //ttmeiju.vip
             $(this).attr("src","http://www.ttmeiju.vip"+$(this).attr("src"));
         }

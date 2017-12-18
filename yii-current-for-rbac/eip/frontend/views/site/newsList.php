@@ -139,7 +139,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             </div>
                             <div class="contents">
                                 <div class="cover">
-                                    <a href="/article-563.html" target="_blank"><img style="width: 200px;height: 112px;" src="<?=$val['img']?>"></a>
+                                    <a href="/index.php?r=site%2Fnew-detail&nid=<?=$val['nid']?>" target="_blank"><img style="width: 200px;height: 112px;" src="<?=$val['img']?>"></a>
                                 </div>
                                 <div class="newsinfo">
                                     <p><?=$val['summary']?>
