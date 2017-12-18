@@ -72,7 +72,7 @@ AppAsset::register($this);
     $menuItems[] = '<li>
                      <form class="navbar-form navbar-right" action="/index.php?r=site%2Fleaderboards" method="get">
             <div class="input-group">
-                <input type="text" class="form-control" name="name" value="" placeholder="全站搜索">
+                <input type="text" class="form-control" name="name" value="'.(isset($_GET["name"]) ? $_GET["name"] : "").'" placeholder="全站搜索">
                 <span class="input-group-btn">
                     <button type="submit" class="btn btn-default">
                         <i class="fa fa-search">搜索</i>
