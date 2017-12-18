@@ -80,6 +80,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
+       if(isset($_GET['name'])){
+           $this->redirect(array('/site/leaderboards','name'=>$_GET['name']));
+       }
         //本周热播
         /*        $hot=MeijuClickNum::find()->select(["meiju.mid","meiju.title_cn","meiju.title_en","meiju.img","sum(meiju_click_num.click_num) as click_nums"])
                     ->join('LEFT JOIN','meiju','meiju_click_num.mid = meiju.mid')
@@ -177,8 +181,8 @@ class SiteController extends Controller
     {
         //分页读取数据
         $model = Meiju::find();
-        if (isset($_GET['title_en']) && $_GET['title_en']) {
-            $model->andFilterWhere(['like', 'title_en', trim($_GET['title_en'])]);
+        if (isset($_GET['name']) && $_GET['name']) {
+            $model->andFilterWhere(['like', 'title_en', trim($_GET['name'])])->orFilterWhere(['like', 'title_cn', trim($_GET['name'])]);
         }
 
         $pagination = new Pagination([

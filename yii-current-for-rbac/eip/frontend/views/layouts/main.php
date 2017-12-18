@@ -24,6 +24,19 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <script src="/assets/88b1d8db/jquery.js"></script>
+<style>
+    .fa {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .fa-search:before {
+
+    }
+</style>
 <body>
 <?php $this->beginBody() ?>
 
@@ -55,6 +68,20 @@ AppAsset::register($this);
             . Html::endForm()
             . '</li>';
     }
+
+    $menuItems[] = '<li>
+                     <form class="navbar-form navbar-right" action="/index.php?r=site%2Fleaderboards" method="get">
+            <div class="input-group">
+                <input type="text" class="form-control" name="name" value="" placeholder="全站搜索">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-default">
+                        <i class="fa fa-search">搜索</i>
+                    </button>
+                </span>
+            </div>
+          </form>
+                    </li>';
+
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,

@@ -29,6 +29,8 @@ class CollectionController extends CommonController
      */
     public function actionIndex()
     {
+
+
         $searchModel = new Meiju();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         return $this->render('index', [
