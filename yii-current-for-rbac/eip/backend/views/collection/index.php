@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         [
                             'attribute' => 'title_cn',
                             'value' => function ($model, $key, $index, $column) {
-                                return '<a  target="_blank" href="http://www.hj.com/index.php?r=site%2Fmeiju-list&mid='.$key.'">'.$model->title_cn.'</a>';
+                                return '<a  target="_blank" href="/index.php?r=site%2Fmeiju-list&mid='.$key.'">'.$model->title_cn.'</a>';
                             },
                             'format' => 'raw',
                         ],
