@@ -868,7 +868,7 @@ class CollectionController extends CommonController
                     $meijuHot->id = $i;
                     $meijuHot->title_cn = $value;
                     $row = $meiju->find()->select(['mid'])->where(['title_cn' => $value])->one();
-                    $meijuHot->mid = $row->mid;
+                    $meijuHot->mid = $row ? intval($row->mid) : 0;
                     $meijuHot->type = 'hot';
                     $meijuHot->other = '';
                     $meijuHot->save(false);
