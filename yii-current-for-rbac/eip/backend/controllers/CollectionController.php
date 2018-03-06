@@ -66,8 +66,15 @@ class CollectionController extends CommonController
      */
     public function actionCaijiNews()
     {
+        $date=date("Y-m-d");
+        $file = Yii::$app->getBasePath() . $this->meiju_path . "/news/{$date}.html";
+        if(is_file($file)){
+            echo "今天已经采集过了";exit;
+        }
+
         $this->file_get_caiji_last();
-        return $this->redirect(['view']);
+        echo "采集成功";
+        //return $this->redirect(['view']);
     }
 
     /**
