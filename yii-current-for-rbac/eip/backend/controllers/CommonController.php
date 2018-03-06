@@ -21,7 +21,7 @@ class CommonController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error', 'captcha'],
+                        'actions' => ['login', 'error', 'captcha','caiji-news'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
