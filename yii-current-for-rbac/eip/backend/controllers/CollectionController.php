@@ -68,12 +68,14 @@ class CollectionController extends CommonController
     {
         $date=date("Y-m-d");
         $file = Yii::$app->getBasePath() . $this->meiju_path . "/news/{$date}.html";
+        $file_log = Yii::$app->getBasePath() . $this->meiju_path . "/crontab.log";
+        $this->file_put(date("Y-m-d H:i:s")."\n",$file_log,true);
         if(is_file($file)){
             echo "今天已经采集过了";exit;
         }
 
         $this->file_get_caiji_last();
-        echo "采集成功";
+        echo "采集成功";exit;
         //return $this->redirect(['view']);
     }
 
