@@ -14,3 +14,4 @@
 4.配置/common/config/main-local.php的数据库链接。
 （注意：如果是lnmp环境，需要配置.user.ini文件，添加项目根目录权限即可）
 5.访问域名，账号admin,密码admin。
+111
