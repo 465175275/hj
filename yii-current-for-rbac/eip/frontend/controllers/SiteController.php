@@ -249,7 +249,7 @@ class SiteController extends Controller
             $uid = $session->get('__id');
             $subscription = MeijuSubscription::find()->where(['uid' => $uid, 'mid' => $_GET['mid']])->count();
             $data['subscription'] = $subscription ? 1 : 0;
-            $list = MeijuDetial::find()->where(['mid' => $_GET['mid']])->orderBy('create_time DESC')->all();
+            $list = MeijuDetial::find()->where(['mid' => $_GET['mid']])->orderBy('create_time DESC')->asArray()->all();
             //分季
             $season = array_unique(array_column($list, "season"));
             //倒序
