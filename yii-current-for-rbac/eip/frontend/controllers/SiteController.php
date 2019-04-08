@@ -253,6 +253,7 @@ class SiteController extends Controller
             $season = array_unique(array_column($list, "season"));
             //倒序
             arsort($season);
+            var_dump($season);exit;
             return $this->render('meijuList', [
                 'subscription' => $subscription,
                 'info' => $info,
