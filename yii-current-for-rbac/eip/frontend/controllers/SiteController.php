@@ -81,9 +81,9 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-       if(isset($_GET['name'])){
-           $this->redirect(array('/site/leaderboards','name'=>$_GET['name']));
-       }
+        if (isset($_GET['name'])) {
+            $this->redirect(array('/site/leaderboards', 'name' => $_GET['name']));
+        }
         //本周热播
         /*        $hot=MeijuClickNum::find()->select(["meiju.mid","meiju.title_cn","meiju.title_en","meiju.img","sum(meiju_click_num.click_num) as click_nums"])
                     ->join('LEFT JOIN','meiju','meiju_click_num.mid = meiju.mid')
@@ -145,7 +145,7 @@ class SiteController extends Controller
         }
         //影评
         $yinping = News::find()->limit(10)->orderBy("tnid DESC")->all();
-        return $this->render('index', ['type' => $type, 'typeList' => $row, 'tuijian' => $tuijian, 'clickList' => $clickList, 'hot' => $hot,'yinping'=>$yinping]);
+        return $this->render('index', ['type' => $type, 'typeList' => $row, 'tuijian' => $tuijian, 'clickList' => $clickList, 'hot' => $hot, 'yinping' => $yinping]);
     }
 
     /**
@@ -204,7 +204,8 @@ class SiteController extends Controller
     /**
      * 影评资讯
      */
-    public function actionNews(){
+    public function actionNews()
+    {
         //分页读取数据
         $model = News::find();
 
@@ -226,14 +227,14 @@ class SiteController extends Controller
     /**
      * 影评资讯
      */
-    public function actionNewDetail(){
+    public function actionNewDetail()
+    {
         $nid = Yii::$app->request->get("nid");
-        $data=News::find()->where(['nid'=>$nid])->one();
+        $data = News::find()->where(['nid' => $nid])->one();
         return $this->render('newDetail', [
             'data' => $data
         ]);
     }
-
 
 
     /**
@@ -253,7 +254,8 @@ class SiteController extends Controller
             $season = array_unique(array_column($list, "season"));
             //倒序
             arsort($season);
-            var_dump(array_column($list, "season"));exit;
+            var_dump(array_column($list, "season"), $list);
+            exit;
             return $this->render('meijuList', [
                 'subscription' => $subscription,
                 'info' => $info,
