@@ -66,16 +66,18 @@ class CollectionController extends CommonController
      */
     public function actionCaijiNews()
     {
-        $date=date("Y-m-d");
+        $date = date("Y-m-d");
         $file = Yii::$app->getBasePath() . $this->meiju_path . "/news/{$date}.html";
         $file_log = Yii::$app->getBasePath() . $this->meiju_path . "/crontab.log";
-        $this->file_put(date("Y-m-d H:i:s")."\n",$file_log,true);
-        if(is_file($file)){
-            echo "今天已经采集过了";exit;
+        $this->file_put(date("Y-m-d H:i:s") . "\n", $file_log, true);
+        if (is_file($file)) {
+            echo "今天已经采集过了";
+            exit;
         }
 
         $this->file_get_caiji_last();
-        echo "采集成功";exit;
+        echo "采集成功";
+        exit;
         //return $this->redirect(['view']);
     }
 
@@ -365,7 +367,8 @@ class CollectionController extends CommonController
             $file = Yii::$app->getBasePath() . $this->meiju_path . "/list-{$i}.html";
             if (!is_file($file)) {
                 $url = $this->host_list . $i . "html";
-                $p = $this->curl($url);
+                //$p = $this->curl($url);
+                $p = file_get_contents($url);
                 $p != false && $this->file_put($p, $file);
             }
 
@@ -379,25 +382,26 @@ class CollectionController extends CommonController
     {
         set_time_limit(0);
         //采集最近2天的
-                for ($i = 0; $i < 3; $i++) {
-                    $date = date("Y-m-d", strtotime("-{$i} day"));
-                    $file = Yii::$app->getBasePath() . $this->meiju_path . "/news/{$date}.html";
-                                if (in_array($i,[0,1,2,3]) || !is_file($file)) {
-                                    $url = $this->host_detail . "/latest-{$i}.html";
-                                    $p = $this->curl($url);
-                                    $p!=false && $this->file_put($p, $file);
-                                    echo $file."--------->".$url."<br>";
-                                }
-                    if(is_file($file)){
-                        $this->saveLast($file);
-                    }
+        for ($i = 0; $i < 3; $i++) {
+            $date = date("Y-m-d", strtotime("-{$i} day"));
+            $file = Yii::$app->getBasePath() . $this->meiju_path . "/news/{$date}.html";
+            if (in_array($i, [0, 1, 2, 3]) || !is_file($file)) {
+                $url = $this->host_detail . "/latest-{$i}.html";
+                //$p = $this->curl($url);
+                $p = file_get_contents($url);
+                $p != false && $this->file_put($p, $file);
+                echo $file . "--------->" . $url . "<br>";
+            }
+            if (is_file($file)) {
+                $this->saveLast($file);
+            }
 
-                }
+        }
 
         //采集影评资讯
         $file = Yii::$app->getBasePath() . $this->meiju_path . "/index-." . date("Ymd") . ".html";
         if (!is_file($file)) {
-            $html = $this->curl($this->host_detail);
+            $html = file_get_contents($this->host_detail);
             $html != false && $this->file_put($html, $file);
         }
         if (is_file($file)) {
@@ -443,7 +447,8 @@ class CollectionController extends CommonController
     private function file_get_caiji_detail($url)
     {
         $file = Yii::$app->getBasePath() . $this->meiju_path . $url;
-        $data = $this->curl($this->host_detail . $url);
+        //$data = $this->curl($this->host_detail . $url);
+        $data = file_get_contents($this->host_detail . $url);
         $data != false && $this->file_put($data, $file);
     }
 
@@ -460,7 +465,8 @@ class CollectionController extends CommonController
             $file = Yii::$app->getBasePath() . $this->meiju_path . "/list-{$i}.html";
             if (!is_file($file)) {
                 $url = $this->host_list . $i . "html";
-                $p = $this->curl($url);
+                //$p = $this->curl($url);
+                $p = file_get_contents($url);
                 $this->file_put($p, $file);
             }
 
@@ -905,7 +911,8 @@ class CollectionController extends CommonController
                 $file = Yii::$app->getBasePath() . $this->meiju_path . "/news/news-" . $value . ".html";
                 if (!is_file($file)) {
                     $url = $this->host_detail . $arr4[0][$key];
-                    $new_html = $this->curl($url);
+                    //$new_html = $this->curl($url);
+                    $new_html = file_get_contents($url);
                     $new_html != false && $this->file_put($new_html, $file);
                 } else {
                     $new_html = file_get_contents($file);
@@ -927,7 +934,7 @@ class CollectionController extends CommonController
                 $news->type = isset($arr9[1][0]) ? $arr9[1][0] : '';
                 $news->update_at = time();
 
-                $news->img =$img[1][$key];
+                $news->img = $img[1][$key];
                 $news->save(false);
             }
         }
@@ -938,7 +945,7 @@ class CollectionController extends CommonController
             foreach ($arr2[1] as $k => $value) {
 
                 $row = $meijuDetial->find()->select(['did'])->where(['tdid' => intval($value)])->one();
-                if(!isset($row->did)){
+                if (!isset($row->did)) {
                     continue;
                 }
                 $meijuHot = new MeijuHot();
