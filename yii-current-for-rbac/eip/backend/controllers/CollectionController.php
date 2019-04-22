@@ -292,7 +292,6 @@ class CollectionController extends CommonController
     {
         if ($life) {
             $a = file_put_contents($url, var_export($value, true), FILE_APPEND);
-            var_dump($a, $url);
         } else {
             $a = file_put_contents($url, var_export($value, true));
         }
@@ -396,8 +395,6 @@ class CollectionController extends CommonController
             if (in_array($i, [0, 1, 2, 3]) || !is_file($file)) {
                 $url = $this->host_detail . "/latest-{$i}.html";
                 $p = $this->curl($url);
-                var_dump($p);
-                exit;
                 //$p = file_get_contents($url);
                 $p != false && $this->file_put($p, $file);
                 echo $file . "--------->" . $url . "<br>";
