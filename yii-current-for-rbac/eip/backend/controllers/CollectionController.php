@@ -286,6 +286,7 @@ class CollectionController extends CommonController
     {
         if ($life) {
             $a = file_put_contents($url, var_export($value, true), FILE_APPEND);
+            var_dump($a);exit;
         } else {
             $a = file_put_contents($url, var_export($value, true));
         }
