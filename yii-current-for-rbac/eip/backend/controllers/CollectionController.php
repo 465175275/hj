@@ -390,7 +390,8 @@ class CollectionController extends CommonController
             if (in_array($i, [0, 1, 2, 3]) || !is_file($file)) {
                 $url = $this->host_detail . "/latest-{$i}.html";
                 $p = $this->curl($url);
-                //var_dump($p);exit;
+                var_dump($p);
+                exit;
                 //$p = file_get_contents($url);
                 $p != false && $this->file_put($p, $file);
                 echo $file . "--------->" . $url . "<br>";
