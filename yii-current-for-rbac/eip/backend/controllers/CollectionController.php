@@ -262,6 +262,7 @@ class CollectionController extends CommonController
         // 设置cURL 参数，要求结果保存到字符串中还是输出到屏幕上。
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
         // 运行cURL，请求网页
         $data = curl_exec($curl);
         $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
@@ -367,8 +368,8 @@ class CollectionController extends CommonController
             $file = Yii::$app->getBasePath() . $this->meiju_path . "/list-{$i}.html";
             if (!is_file($file)) {
                 $url = $this->host_list . $i . "html";
-                //$p = $this->curl($url);
-                $p = file_get_contents($url);
+                $p = $this->curl($url);
+                //$p = file_get_contents($url);
                 $p != false && $this->file_put($p, $file);
             }
 
@@ -387,8 +388,9 @@ class CollectionController extends CommonController
             $file = Yii::$app->getBasePath() . $this->meiju_path . "/news/{$date}.html";
             if (in_array($i, [0, 1, 2, 3]) || !is_file($file)) {
                 $url = $this->host_detail . "/latest-{$i}.html";
-                //$p = $this->curl($url);
-                $p = file_get_contents($url);
+                $p = $this->curl($url);
+                //var_dump($p);exit;
+                //$p = file_get_contents($url);
                 $p != false && $this->file_put($p, $file);
                 echo $file . "--------->" . $url . "<br>";
             }
@@ -447,8 +449,8 @@ class CollectionController extends CommonController
     private function file_get_caiji_detail($url)
     {
         $file = Yii::$app->getBasePath() . $this->meiju_path . $url;
-        //$data = $this->curl($this->host_detail . $url);
-        $data = file_get_contents($this->host_detail . $url);
+        $data = $this->curl($this->host_detail . $url);
+        //$data = file_get_contents($this->host_detail . $url);
         $data != false && $this->file_put($data, $file);
     }
 
@@ -465,8 +467,8 @@ class CollectionController extends CommonController
             $file = Yii::$app->getBasePath() . $this->meiju_path . "/list-{$i}.html";
             if (!is_file($file)) {
                 $url = $this->host_list . $i . "html";
-                //$p = $this->curl($url);
-                $p = file_get_contents($url);
+                $p = $this->curl($url);
+                //$p = file_get_contents($url);
                 $this->file_put($p, $file);
             }
 
@@ -911,8 +913,8 @@ class CollectionController extends CommonController
                 $file = Yii::$app->getBasePath() . $this->meiju_path . "/news/news-" . $value . ".html";
                 if (!is_file($file)) {
                     $url = $this->host_detail . $arr4[0][$key];
-                    //$new_html = $this->curl($url);
-                    $new_html = file_get_contents($url);
+                    $new_html = $this->curl($url);
+                    //$new_html = file_get_contents($url);
                     $new_html != false && $this->file_put($new_html, $file);
                 } else {
                     $new_html = file_get_contents($file);

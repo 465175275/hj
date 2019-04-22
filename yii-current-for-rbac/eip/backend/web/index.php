@@ -1,7 +1,4 @@
 <?php
-$data=file_get_contents('http://www.ttmeiju.vip/latest-0.html');
-var_dump($data);
-exit;
 
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
