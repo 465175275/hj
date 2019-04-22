@@ -17,8 +17,8 @@ class CollectionController extends CommonController
 {
 
     public $enableCsrfValidation = false;
-    public $host_detail = "http://www.ttmeiju.vip";
-    public $host_list = "http://www.ttmeiju.vip/index.php/summary/index/p/";
+    public $host_detail = "http://www.ttmeiju.me";
+    public $host_list = "http://www.ttmeiju.me/index.php/summary/index/p/";
     public $meiju_path = "/runtime/caiji";
 
     /*登录才有权限访问的方法*/
