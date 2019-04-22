@@ -270,9 +270,14 @@ class CollectionController extends CommonController
         if ($httpCode == 404) {
             return false;
         }
+
+        if ($data === FALSE) {
+            echo 'cURL Error:' . curl_error($curl);
+            exit;
+        }
+
         // 关闭URL请求
         curl_close($curl);
-        var_dump($data);exit;
         return $data;
     }
 
