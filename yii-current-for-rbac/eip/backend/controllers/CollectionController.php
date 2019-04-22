@@ -286,7 +286,7 @@ class CollectionController extends CommonController
     {
         if ($life) {
             $a = file_put_contents($url, var_export($value, true), FILE_APPEND);
-            var_dump($a,$url);exit;
+            var_dump($a, $url);
         } else {
             $a = file_put_contents($url, var_export($value, true));
         }
@@ -404,7 +404,7 @@ class CollectionController extends CommonController
         //采集影评资讯
         $file = Yii::$app->getBasePath() . $this->meiju_path . "/index-." . date("Ymd") . ".html";
         if (!is_file($file)) {
-            $html =$this->curl($this->host_detail);
+            $html = $this->curl($this->host_detail);
             $html != false && $this->file_put($html, $file);
         }
         if (is_file($file)) {
@@ -543,7 +543,7 @@ class CollectionController extends CommonController
         $data = [];
         $detail = [];
         $files = Yii::$app->getBasePath() . $this->meiju_path . $url;
-        $html =$this->file_get_contentss($files);
+        $html = $this->file_get_contentss($files);
 
         //<div class="hd">权力的游戏 Game of Thrones-权力的游戏下载-权力的游戏全集下载-Game of Thrones下载</div>
         $pattern = "/<div class=\"hd\">(.*)<\/div>/iUs";
