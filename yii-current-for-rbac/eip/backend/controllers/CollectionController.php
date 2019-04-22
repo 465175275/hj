@@ -403,7 +403,7 @@ class CollectionController extends CommonController
         //采集影评资讯
         $file = Yii::$app->getBasePath() . $this->meiju_path . "/index-." . date("Ymd") . ".html";
         if (!is_file($file)) {
-            $html = file_get_contents($this->host_detail);
+            $html =$this->file_get_contentss($this->host_detail);
             $html != false && $this->file_put($html, $file);
         }
         if (is_file($file)) {
@@ -472,7 +472,7 @@ class CollectionController extends CommonController
                 $this->file_put($p, $file);
             }
 
-            $html = file_get_contents($file);
+            $html = $this->file_get_contentss($file);
             //1-2-3
             $pattern = "/<div class=\"mjtit\">(.*)<\/div>/iUs";
             preg_match_all($pattern, $html, $string);
@@ -542,7 +542,7 @@ class CollectionController extends CommonController
         $data = [];
         $detail = [];
         $files = Yii::$app->getBasePath() . $this->meiju_path . $url;
-        $html = file_get_contents($files);
+        $html =$this->file_get_contentss($files);
 
         //<div class="hd">权力的游戏 Game of Thrones-权力的游戏下载-权力的游戏全集下载-Game of Thrones下载</div>
         $pattern = "/<div class=\"hd\">(.*)<\/div>/iUs";
@@ -680,7 +680,7 @@ class CollectionController extends CommonController
 
     private function read_caiji_last($url = '')
     {
-        $html = file_get_contents($url);
+        $html = $this->file_get_contentss($url);
         $data = [];
         $pattern = "/<tr class=\"Scontent1\"
                     >(.*)<\/tr>/iUs";
@@ -865,7 +865,7 @@ class CollectionController extends CommonController
      */
     private function saveIndex($url = '')
     {
-        $html = file_get_contents($url);
+        $html = $this->file_get_contentss($url);
         //<label class="cnname"><a target="_blank" href="/meiju/Agents.of.S.H.I.E.L.D.html">神盾局特工</a></label>
         $pattern = "/<label class=\"cnname\"><a target=\"_blank\" href=\"\/meiju\/(.*).html\">(.*)<\/a><\/label>/iUs";
         preg_match_all($pattern, $html, $arr1);
@@ -917,7 +917,7 @@ class CollectionController extends CommonController
                     //$new_html = file_get_contents($url);
                     $new_html != false && $this->file_put($new_html, $file);
                 } else {
-                    $new_html = file_get_contents($file);
+                    $new_html = $this->file_get_contentss($file);
                 }
 
                 $pattern = "/<div class=\"articlecontent\" style=\"overflow: hidden;\">(.*)<\/div>/iUs";
@@ -963,6 +963,18 @@ class CollectionController extends CommonController
         }
 
         exit;
+    }
+
+    private function file_get_contentss($url)
+    {
+        $handle = fopen($url, 'r');
+        $content = '';
+        while (false != ($a = fread($handle, 8080))) {//返回false表示已经读取到文件末尾
+            $content .= $a;
+        }
+
+        fclose($handle);
+        return $content;
     }
 
 }
