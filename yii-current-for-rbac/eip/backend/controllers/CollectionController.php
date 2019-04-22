@@ -403,7 +403,7 @@ class CollectionController extends CommonController
         //采集影评资讯
         $file = Yii::$app->getBasePath() . $this->meiju_path . "/index-." . date("Ymd") . ".html";
         if (!is_file($file)) {
-            $html =$this->file_get_contentss($this->host_detail);
+            $html =$this->curl($this->host_detail);
             $html != false && $this->file_put($html, $file);
         }
         if (is_file($file)) {
