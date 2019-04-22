@@ -268,11 +268,11 @@ class CollectionController extends CommonController
         $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
         if ($httpCode == 404) {
-            var_dump($httpCode . '--', $data);
             return false;
         }
         // 关闭URL请求
         curl_close($curl);
+        var_dump($data);exit;
         return $data;
     }
 
