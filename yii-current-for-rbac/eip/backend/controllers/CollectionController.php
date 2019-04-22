@@ -268,6 +268,7 @@ class CollectionController extends CommonController
         $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
         if ($httpCode == 404) {
+            var_dump($httpCode,$data);
             return false;
         }
         // 关闭URL请求
@@ -390,7 +391,6 @@ class CollectionController extends CommonController
             if (in_array($i, [0, 1, 2, 3]) || !is_file($file)) {
                 $url = $this->host_detail . "/latest-{$i}.html";
                 $p = $this->curl($url);
-                var_dump($p);
                 exit;
                 //$p = file_get_contents($url);
                 $p != false && $this->file_put($p, $file);
